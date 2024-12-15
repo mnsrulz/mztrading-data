@@ -34,7 +34,7 @@ jobs:
         id: create-branch
         run: |
           BRANCH_NAME=$(date +'%Y-%m-%d')
-          git checkout -b "$BRANCH_NAME"
+          # git checkout -b "$BRANCH_NAME"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
 
       - name: Check for file changes
@@ -47,12 +47,12 @@ jobs:
             echo "Changes detected."
           fi
 
-      - name: Commit and push changes
-        if: steps.check-changes.outcome == 'success'
-        run: |
-          git add .
-          git commit -m "Update cboe symbols"
-          git push origin "$branch_name"
+    #   - name: Commit and push changes
+    #     if: steps.check-changes.outcome == 'success'
+    #     run: |
+    #       git add .
+    #       git commit -m "Update cboe symbols"
+    #       git push origin "$branch_name"
 
       - name: Create pull request
         if: steps.check-changes.outcome == 'success'
