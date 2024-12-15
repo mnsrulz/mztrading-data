@@ -96,6 +96,10 @@
         "symbol": "AIR"
     },
     {
+        "name": "Abacus FCF Leaders ETF",
+        "symbol": "ABFL"
+    },
+    {
         "name": "ABACUS LIFE INC CL A",
         "symbol": "ABL"
     },
@@ -885,11 +889,11 @@
     },
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS US MID C",
-        "symbol": "AVMV"
+        "symbol": "AVMC"
     },
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS US MID C",
-        "symbol": "AVMC"
+        "symbol": "AVMV"
     },
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS US SMALL",
@@ -1634,10 +1638,6 @@
     {
         "name": "ATLANTIC UN BANKSHARES CORP COM",
         "symbol": "AUB"
-    },
-    {
-        "name": "ATLANTICA SUSTAINABLE INFR PLC SHS",
-        "symbol": "AY"
     },
     {
         "name": "ATLAS ENERGY SOLUTIONS INC COM NEW",
@@ -2408,7 +2408,7 @@
         "symbol": "BRBS"
     },
     {
-        "name": "BLUEBIRD BIO INC COM",
+        "name": "BLUEBIRD BIO INC COM NEW",
         "symbol": "BLUE"
     },
     {
@@ -5580,24 +5580,12 @@
         "symbol": "FEPI"
     },
     {
-        "name": "ETF OPPORTUNITIES TRUST T REX 2X LONG",
-        "symbol": "TSLT"
-    },
-    {
-        "name": "ETF OPPORTUNITIES TRUST T-REX 2X INVERSE",
-        "symbol": "TSLZ"
-    },
-    {
         "name": "ETF OPPORTUNITIES TRUST TUTTLE CAP DAILY",
         "symbol": "SKRE"
     },
     {
         "name": "ETF SER SOLUTIONS DEFIANCE NEXT GE",
         "symbol": "HDRO"
-    },
-    {
-        "name": "ETF SER SOLUTIONS GRAYSCALE FUTURE",
-        "symbol": "GFOF"
     },
     {
         "name": "ETF SER SOLUTIONS HOYA CAPT HI DIV",
@@ -5874,10 +5862,6 @@
     {
         "name": "FATHOM HOLDINGS INC COM",
         "symbol": "FTHM"
-    },
-    {
-        "name": "FCF US Quality ETF",
-        "symbol": "TTAC"
     },
     {
         "name": "FEDERAL AGRIC MTG CORP CL C",
@@ -9121,11 +9105,11 @@
     },
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LNG SPY",
-        "symbol": "SPYQ"
+        "symbol": "SPYB"
     },
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LNG SPY",
-        "symbol": "SPYB"
+        "symbol": "SPYQ"
     },
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LNG TRI",
@@ -9141,11 +9125,11 @@
     },
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG TR",
-        "symbol": "MQQQ"
+        "symbol": "QQQW"
     },
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG TR",
-        "symbol": "QQQW"
+        "symbol": "MQQQ"
     },
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X SHORT",
@@ -13188,6 +13172,10 @@
         "symbol": "PLMR"
     },
     {
+        "name": "PALVELLA THERAPEUTICS INC",
+        "symbol": "PVLA"
+    },
+    {
         "name": "PAMPA ENERGIA S A SPONS ADR LVL I",
         "symbol": "PAM"
     },
@@ -13540,10 +13528,6 @@
         "symbol": "PDM"
     },
     {
-        "name": "PIERIS PHARMACEUTICALS INC COM NEW",
-        "symbol": "PIRS"
-    },
-    {
         "name": "PILGRIMS PRIDE CORP COM",
         "symbol": "PPC"
     },
@@ -13874,10 +13858,6 @@
     {
         "name": "PROLOGIS INC. COM",
         "symbol": "PLD"
-    },
-    {
-        "name": "PROPERTYGURU GROUP LTD ORD SHS",
-        "symbol": "PGRU"
     },
     {
         "name": "PROPETRO HLDG CORP COM",
@@ -15772,7 +15752,7 @@
         "symbol": "SVOL"
     },
     {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT ROBOCAR DI",
+        "name": "SIMPLIFY VOLT TSLA REVOLUTION",
         "symbol": "VCAR"
     },
     {
@@ -16892,6 +16872,10 @@
         "symbol": "NVDQ"
     },
     {
+        "name": "T-Rex 2X Inverse Tesla Daily Target ETF",
+        "symbol": "TSLZ"
+    },
+    {
         "name": "T-Rex 2X Long Alphabet Daily Target ETF",
         "symbol": "GOOX"
     },
@@ -16922,6 +16906,10 @@
     {
         "name": "T-Rex 2X Long NVIDIA Daily Target ETF",
         "symbol": "NVDX"
+    },
+    {
+        "name": "T-Rex 2X Long Tesla Daily Target ETF",
+        "symbol": "TSLT"
     },
     {
         "name": "T2 BIOSYSTEMS INC COM NEW",
@@ -18221,11 +18209,11 @@
     },
     {
         "name": "VALKYRIE ETF TRUST II COINSHARES VALKY",
-        "symbol": "BTF"
+        "symbol": "WGMI"
     },
     {
         "name": "VALKYRIE ETF TRUST II COINSHARES VALKY",
-        "symbol": "WGMI"
+        "symbol": "BTF"
     },
     {
         "name": "VALLEY NATL BANCORP COM",
