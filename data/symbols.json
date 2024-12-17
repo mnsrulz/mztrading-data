@@ -5936,10 +5936,6 @@
         "symbol": "EWS"
     },
     {
-        "name": "ISHARES INC MSCI TAIWAN ETF",
-        "symbol": "EWT"
-    },
-    {
         "name": "ISHARES TR MSCI UK ETF NEW",
         "symbol": "EWU"
     },
@@ -6238,10 +6234,6 @@
     {
         "name": "FIRST TR EXCH TRD ALPHDX FD II DEV MRK EX US",
         "symbol": "FDT"
-    },
-    {
-        "name": "FIDUS INVT CORP COM",
-        "symbol": "FDUS"
     },
     {
         "name": "FEDERATED HERMES ETF TRUST US STRATEGIC DIV",
@@ -9280,10 +9272,6 @@
         "symbol": "IVR"
     },
     {
-        "name": "ISHARES TR FUTURE METAVERSE",
-        "symbol": "IVRS"
-    },
-    {
         "name": "INVENTRUST PPTYS CORP COM NEW",
         "symbol": "IVT"
     },
@@ -9980,10 +9968,6 @@
         "symbol": "KRYS"
     },
     {
-        "name": "KRANESHARES TRUST KRANESHARES ROCK",
-        "symbol": "KSEA"
-    },
-    {
         "name": "KOHLS CORP COM",
         "symbol": "KSS"
     },
@@ -10014,10 +9998,6 @@
     {
         "name": "KURA ONCOLOGY INC COM",
         "symbol": "KURA"
-    },
-    {
-        "name": "KRANESHARES TRUST KRANESHARES VALU",
-        "symbol": "KVLE"
     },
     {
         "name": "KENVUE INC COM",
@@ -13888,7 +13868,7 @@
         "symbol": "PVL"
     },
     {
-        "name": "PALVELLA THERAPEUTICS INC",
+        "name": "PALVELLA THERAPEUTICS INC NEW COM",
         "symbol": "PVLA"
     },
     {
@@ -18188,7 +18168,7 @@
         "symbol": "VC"
     },
     {
-        "name": "SIMPLIFY VOLT TSLA REVOLUTION",
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
         "symbol": "VCAR"
     },
     {
