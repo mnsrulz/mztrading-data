@@ -568,10 +568,6 @@
         "symbol": "AKRO"
     },
     {
-        "name": "AKOUSTIS TECHNOLOGIES INC COM",
-        "symbol": "AKTS"
-    },
-    {
         "name": "AKOYA BIOSCIENCES INC COM",
         "symbol": "AKYA"
     },
@@ -5936,6 +5932,10 @@
         "symbol": "EWS"
     },
     {
+        "name": "ISHARES INC MSCI TAIWAN ETF",
+        "symbol": "EWT"
+    },
+    {
         "name": "ISHARES TR MSCI UK ETF NEW",
         "symbol": "EWU"
     },
@@ -6234,6 +6234,10 @@
     {
         "name": "FIRST TR EXCH TRD ALPHDX FD II DEV MRK EX US",
         "symbol": "FDT"
+    },
+    {
+        "name": "FIDUS INVT CORP COM",
+        "symbol": "FDUS"
     },
     {
         "name": "FEDERATED HERMES ETF TRUST US STRATEGIC DIV",
@@ -7186,10 +7190,6 @@
     {
         "name": "GENCOR INDS INC COM",
         "symbol": "GENC"
-    },
-    {
-        "name": "GENETIC TECHNOLOGIES LTD SPONSORED ADS",
-        "symbol": "GENE"
     },
     {
         "name": "GENIUS SPORTS LIMITED SHARES CL A",
@@ -9272,6 +9272,10 @@
         "symbol": "IVR"
     },
     {
+        "name": "ISHARES TR FUTURE METAVERSE",
+        "symbol": "IVRS"
+    },
+    {
         "name": "INVENTRUST PPTYS CORP COM NEW",
         "symbol": "IVT"
     },
@@ -9968,6 +9972,10 @@
         "symbol": "KRYS"
     },
     {
+        "name": "KRANESHARES TRUST KRANESHARES ROCK",
+        "symbol": "KSEA"
+    },
+    {
         "name": "KOHLS CORP COM",
         "symbol": "KSS"
     },
@@ -9998,6 +10006,10 @@
     {
         "name": "KURA ONCOLOGY INC COM",
         "symbol": "KURA"
+    },
+    {
+        "name": "KRANESHARES TRUST KRANESHARES VALU",
+        "symbol": "KVLE"
     },
     {
         "name": "KENVUE INC COM",
@@ -10070,10 +10082,6 @@
     {
         "name": "LAKELAND INDS INC COM",
         "symbol": "LAKE"
-    },
-    {
-        "name": "LAMAR ADVERTISING CO NEW CL A",
-        "symbol": "LAMR"
     },
     {
         "name": "GLADSTONE LD CORP COM",
@@ -13210,10 +13218,6 @@
     {
         "name": "PENNANTPARK FLOATING RATE CAP COM",
         "symbol": "PFLT"
-    },
-    {
-        "name": "PERFORMANT HEALTHCARE INC COM",
-        "symbol": "PFMT"
     },
     {
         "name": "PROVIDENT FINL SVCS INC COM",
@@ -19472,7 +19476,7 @@
         "symbol": "XTN"
     },
     {
-        "name": "22ND CENTY GROUP INC COM",
+        "name": "22ND CENTY GROUP INC COM NEW",
         "symbol": "XXII"
     },
     {
