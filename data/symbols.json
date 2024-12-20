@@ -569,7 +569,7 @@
     },
     {
         "name": "AKOUSTIS TECHNOLOGIES INC COM",
-        "symbol": "AKTS"
+        "symbol": "AKTSQ"
     },
     {
         "name": "AKOYA BIOSCIENCES INC COM",
@@ -1076,7 +1076,7 @@
         "symbol": "APT"
     },
     {
-        "name": "APTIV PLC SHS",
+        "name": "APTIV PLC COM SHS",
         "symbol": "APTV"
     },
     {
@@ -4104,10 +4104,6 @@
         "symbol": "CTLP"
     },
     {
-        "name": "CATALENT INC COM",
-        "symbol": "CTLT"
-    },
-    {
         "name": "CTO RLTY GROWTH INC NEW COM",
         "symbol": "CTO"
     },
@@ -5936,6 +5932,10 @@
         "symbol": "EWS"
     },
     {
+        "name": "ISHARES INC MSCI TAIWAN ETF",
+        "symbol": "EWT"
+    },
+    {
         "name": "ISHARES TR MSCI UK ETF NEW",
         "symbol": "EWU"
     },
@@ -6236,6 +6236,10 @@
         "symbol": "FDT"
     },
     {
+        "name": "FIDUS INVT CORP COM",
+        "symbol": "FDUS"
+    },
+    {
         "name": "FEDERATED HERMES ETF TRUST US STRATEGIC DIV",
         "symbol": "FDV"
     },
@@ -6466,10 +6470,6 @@
     {
         "name": "FULGENT GENETICS INC COM",
         "symbol": "FLGT"
-    },
-    {
-        "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN HDG",
-        "symbol": "FLJH"
     },
     {
         "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN ETF",
@@ -7188,10 +7188,6 @@
         "symbol": "GENC"
     },
     {
-        "name": "GENETIC TECHNOLOGIES LTD SPONSORED ADS",
-        "symbol": "GENE"
-    },
-    {
         "name": "GENIUS SPORTS LIMITED SHARES CL A",
         "symbol": "GENI"
     },
@@ -7572,7 +7568,7 @@
         "symbol": "GPN"
     },
     {
-        "name": "GULFPORT ENERGY OPERATING CORP COMMON SHARES",
+        "name": "GULFPORT ENERGY CORP COMMON SHARES",
         "symbol": "GPOR"
     },
     {
@@ -9272,6 +9268,10 @@
         "symbol": "IVR"
     },
     {
+        "name": "ISHARES TR FUTURE METAVERSE",
+        "symbol": "IVRS"
+    },
+    {
         "name": "INVENTRUST PPTYS CORP COM NEW",
         "symbol": "IVT"
     },
@@ -9968,6 +9968,10 @@
         "symbol": "KRYS"
     },
     {
+        "name": "KRANESHARES TRUST KRANESHARES ROCK",
+        "symbol": "KSEA"
+    },
+    {
         "name": "KOHLS CORP COM",
         "symbol": "KSS"
     },
@@ -9998,6 +10002,10 @@
     {
         "name": "KURA ONCOLOGY INC COM",
         "symbol": "KURA"
+    },
+    {
+        "name": "KRANESHARES TRUST KRANESHARES VALU",
+        "symbol": "KVLE"
     },
     {
         "name": "KENVUE INC COM",
@@ -10185,7 +10193,7 @@
     },
     {
         "name": "THE LION ELECTRIC COMPANY COMMON STOCK",
-        "symbol": "LEV"
+        "symbol": "LEVGQ"
     },
     {
         "name": "LEVI STRAUSS & CO NEW CL A COM STK",
@@ -10666,10 +10674,6 @@
     {
         "name": "LISTED FD TR ROUNDHILL MAGNIF",
         "symbol": "MAGS"
-    },
-    {
-        "name": "MAIN STR CAP CORP COM",
-        "symbol": "MAIN"
     },
     {
         "name": "MAMAS CREATIONS INC COM",
@@ -12076,16 +12080,16 @@
         "symbol": "NPCE"
     },
     {
+        "name": "NPK INTERNATIONAL INC COM SHS",
+        "symbol": "NPKI"
+    },
+    {
         "name": "ENPRO INC COM",
         "symbol": "NPO"
     },
     {
         "name": "NET POWER INC COM CL A",
         "symbol": "NPWR"
-    },
-    {
-        "name": "NEWPARK RES INC COM PAR $.01NEW",
-        "symbol": "NR"
     },
     {
         "name": "NATIONAL RESH CORP COM NEW",
@@ -13036,10 +13040,6 @@
         "symbol": "PBYI"
     },
     {
-        "name": "PACCAR INC COM",
-        "symbol": "PCAR"
-    },
-    {
         "name": "PCB BANCORP COM",
         "symbol": "PCB"
     },
@@ -13212,10 +13212,6 @@
         "symbol": "PFLT"
     },
     {
-        "name": "PERFORMANT HEALTHCARE INC COM",
-        "symbol": "PFMT"
-    },
-    {
         "name": "PROVIDENT FINL SVCS INC COM",
         "symbol": "PFS"
     },
@@ -13282,6 +13278,10 @@
     {
         "name": "PHINIA INC COMMON STOCK",
         "symbol": "PHIN"
+    },
+    {
+        "name": "PERFORMANT HEALTHCARE INC COM",
+        "symbol": "PHLT"
     },
     {
         "name": "PULTE GROUP INC COM",
@@ -15820,6 +15820,10 @@
         "symbol": "SMLF"
     },
     {
+        "name": "SEMLER SCIENTIFIC INC COM",
+        "symbol": "SMLR"
+    },
+    {
         "name": "SUMMIT THERAPEUTICS INC COM",
         "symbol": "SMMT"
     },
@@ -17430,10 +17434,6 @@
     {
         "name": "TELESAT CORP CL A & CL B SHS",
         "symbol": "TSAT"
-    },
-    {
-        "name": "TRACTOR SUPPLY CO COM",
-        "symbol": "TSCO"
     },
     {
         "name": "TRINSEO PLC SHS",
@@ -19472,7 +19472,7 @@
         "symbol": "XTN"
     },
     {
-        "name": "22ND CENTY GROUP INC COM",
+        "name": "22ND CENTY GROUP INC COM NEW",
         "symbol": "XXII"
     },
     {
