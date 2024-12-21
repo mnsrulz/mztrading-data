@@ -3240,10 +3240,6 @@
         "symbol": "CGUS"
     },
     {
-        "name": "INVESCO EXCH TRADED FD TR II S&P GBL WATER",
-        "symbol": "CGW"
-    },
-    {
         "name": "TIDAL TR II ROUNDHILL GENER",
         "symbol": "CHAT"
     },
@@ -6472,6 +6468,10 @@
         "symbol": "FLGT"
     },
     {
+        "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN HDG",
+        "symbol": "FLJH"
+    },
+    {
         "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN ETF",
         "symbol": "FLJP"
     },
@@ -6670,10 +6670,6 @@
     {
         "name": "FIRST TR EXCH TRADED FD III PFD SECS INC ETF",
         "symbol": "FPE"
-    },
-    {
-        "name": "FARMLAND PARTNERS INC COM",
-        "symbol": "FPI"
     },
     {
         "name": "FIRST TR EXCHANGE-TRADED FD US EQTY OPPT ETF",
@@ -10676,6 +10672,10 @@
         "symbol": "MAGS"
     },
     {
+        "name": "MAIN STR CAP CORP COM",
+        "symbol": "MAIN"
+    },
+    {
         "name": "MAMAS CREATIONS INC COM",
         "symbol": "MAMA"
     },
@@ -10734,10 +10734,6 @@
     {
         "name": "MEDIAALPHA INC CL A",
         "symbol": "MAX"
-    },
-    {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS BITCOIN STRATEGY",
-        "symbol": "MAXI"
     },
     {
         "name": "MAXEON SOLAR TECHNOLOGIES LTD SHS NEW",
@@ -13040,6 +13036,10 @@
         "symbol": "PBYI"
     },
     {
+        "name": "PACCAR INC COM",
+        "symbol": "PCAR"
+    },
+    {
         "name": "PCB BANCORP COM",
         "symbol": "PCB"
     },
@@ -13322,10 +13322,6 @@
     {
         "name": "POLARIS INC COM",
         "symbol": "PII"
-    },
-    {
-        "name": "INVESCO INDIA EXCHANGE-TRADED INDIA ETF",
-        "symbol": "PIN"
     },
     {
         "name": "PREMIER INC CL A",
@@ -15396,10 +15392,6 @@
         "symbol": "SGDM"
     },
     {
-        "name": "SUPER GROUP SGHC LIMITED ORD SHS",
-        "symbol": "SGHC"
-    },
-    {
         "name": "SIGHT SCIENCES INC COM",
         "symbol": "SGHT"
     },
@@ -16768,10 +16760,6 @@
         "symbol": "TARA"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
-        "symbol": "TARK"
-    },
-    {
         "name": "TARSUS PHARMACEUTICALS INC COM",
         "symbol": "TARS"
     },
@@ -17066,10 +17054,6 @@
     {
         "name": "TIM S A SPONSORED ADR",
         "symbol": "TIMB"
-    },
-    {
-        "name": "TIDAL TR II CLOCKWISE CORE E",
-        "symbol": "TIME"
     },
     {
         "name": "ISHARES TR TIPS BD ETF",
@@ -17436,6 +17420,10 @@
         "symbol": "TSAT"
     },
     {
+        "name": "TRACTOR SUPPLY CO COM",
+        "symbol": "TSCO"
+    },
+    {
         "name": "TRINSEO PLC SHS",
         "symbol": "TSE"
     },
@@ -17512,6 +17500,10 @@
         "symbol": "TT"
     },
     {
+        "name": "SERVICETITAN INC SHS CL A",
+        "symbol": "TTAN"
+    },
+    {
         "name": "TORO CO COM",
         "symbol": "TTC"
     },
@@ -17550,10 +17542,6 @@
     {
         "name": "TILE SHOP HLDGS INC COM",
         "symbol": "TTSH"
-    },
-    {
-        "name": "PROSHARES TR ULSH 20YRTRE NEW",
-        "symbol": "TTT"
     },
     {
         "name": "TAKE-TWO INTERACTIVE SOFTWARE COM",
