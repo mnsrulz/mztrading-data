@@ -440,10 +440,6 @@
         "symbol": "AGQ"
     },
     {
-        "name": "AVANGRID INC COM",
-        "symbol": "AGR"
-    },
-    {
         "name": "ADECOAGRO S A COM",
         "symbol": "AGRO"
     },
@@ -1446,10 +1442,6 @@
     {
         "name": "APTARGROUP INC COM",
         "symbol": "ATR"
-    },
-    {
-        "name": "ATARA BIOTHERAPEUTICS INC COM NEW",
-        "symbol": "ATRA"
     },
     {
         "name": "ATRICURE INC COM",
@@ -3080,10 +3072,6 @@
         "symbol": "CDRE"
     },
     {
-        "name": "CIDARA THERAPEUTICS INC COM NEW",
-        "symbol": "CDTX"
-    },
-    {
         "name": "CDW CORP COM",
         "symbol": "CDW"
     },
@@ -4536,7 +4524,7 @@
         "symbol": "DECK"
     },
     {
-        "name": "ETF SER SOLUTIONS ROUNDHILL ACQUI",
+        "name": "ACQUIRERS DEEP VALUE ETF",
         "symbol": "DEEP"
     },
     {
@@ -4802,10 +4790,6 @@
     {
         "name": "DIGIMARC CORP NEW COM",
         "symbol": "DMRC"
-    },
-    {
-        "name": "DERMTECH INC COM",
-        "symbol": "DMTKQ"
     },
     {
         "name": "GINKGO BIOWORKS HOLDINGS INC CL A NEW",
@@ -6472,6 +6456,10 @@
         "symbol": "FLGT"
     },
     {
+        "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN HDG",
+        "symbol": "FLJH"
+    },
+    {
         "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN ETF",
         "symbol": "FLJP"
     },
@@ -7646,10 +7634,6 @@
     {
         "name": "GRITSTONE BIO INC COM",
         "symbol": "GRTSQ"
-    },
-    {
-        "name": "GALERA THERAPEUTICS INC COM",
-        "symbol": "GRTX"
     },
     {
         "name": "GROWGENERATION CORP COM",
@@ -10676,6 +10660,10 @@
         "symbol": "MAGS"
     },
     {
+        "name": "MAIN STR CAP CORP COM",
+        "symbol": "MAIN"
+    },
+    {
         "name": "MAMAS CREATIONS INC COM",
         "symbol": "MAMA"
     },
@@ -11658,10 +11646,6 @@
     {
         "name": "PROSHARES TR ULTSHT MIDCAP400",
         "symbol": "MZZ"
-    },
-    {
-        "name": "NAAS TECHNOLOGY INC SPONSORED ADS",
-        "symbol": "NAAS"
     },
     {
         "name": "N-ABLE INC COMMON STOCK",
@@ -13040,6 +13024,10 @@
         "symbol": "PBYI"
     },
     {
+        "name": "PACCAR INC COM",
+        "symbol": "PCAR"
+    },
+    {
         "name": "PCB BANCORP COM",
         "symbol": "PCB"
     },
@@ -13866,10 +13854,6 @@
     {
         "name": "PERMIANVILLE RTY TR TR UNIT",
         "symbol": "PVL"
-    },
-    {
-        "name": "PALVELLA THERAPEUTICS INC NEW COM",
-        "symbol": "PVLA"
     },
     {
         "name": "PERELLA WEINBERG PARTNERS CLASS A COM",
@@ -17436,6 +17420,10 @@
         "symbol": "TSAT"
     },
     {
+        "name": "TRACTOR SUPPLY CO COM",
+        "symbol": "TSCO"
+    },
+    {
         "name": "TRINSEO PLC SHS",
         "symbol": "TSE"
     },
@@ -17510,6 +17498,10 @@
     {
         "name": "TRANE TECHNOLOGIES PLC SHS",
         "symbol": "TT"
+    },
+    {
+        "name": "SERVICETITAN INC SHS CL A",
+        "symbol": "TTAN"
     },
     {
         "name": "TORO CO COM",
