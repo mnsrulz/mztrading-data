@@ -40,10 +40,6 @@
         "symbol": "AAPU"
     },
     {
-        "name": "T-Rex 2X Long Apple Daily Target ETF",
-        "symbol": "AAPX"
-    },
-    {
         "name": "AMERICAN ASSETS TR INC COM",
         "symbol": "AAT"
     },
@@ -898,10 +894,6 @@
     {
         "name": "AMAZON COM INC COM",
         "symbol": "AMZN"
-    },
-    {
-        "name": "Kurv Yield Premium Strategy Amazon (AMZN) ETF",
-        "symbol": "AMZP"
     },
     {
         "name": "DIREXION SHS ETF TR DIREXION 2X SHAR",
@@ -4524,7 +4516,7 @@
         "symbol": "DECK"
     },
     {
-        "name": "ACQUIRERS DEEP VALUE ETF",
+        "name": "ETF SER SOLUTIONS ACQUIRERS DEEP V",
         "symbol": "DEEP"
     },
     {
@@ -7494,10 +7486,6 @@
     {
         "name": "CANADA GOOSE HLDGS INC SHS SUB VTG",
         "symbol": "GOOS"
-    },
-    {
-        "name": "T-Rex 2X Long Alphabet Daily Target ETF",
-        "symbol": "GOOX"
     },
     {
         "name": "TIDAL TR II YIELDMAX GOOGL",
@@ -12252,10 +12240,6 @@
         "symbol": "NVDW"
     },
     {
-        "name": "T-Rex 2X Long NVIDIA Daily Target ETF",
-        "symbol": "NVDX"
-    },
-    {
         "name": "TIDAL TR II YIELDMAX NVDA",
         "symbol": "NVDY"
     },
@@ -16812,8 +16796,8 @@
         "symbol": "TCPC"
     },
     {
-        "name": "CONTAINER STORE GROUP INC COM NEW",
-        "symbol": "TCSG"
+        "name": "--Placeholder--",
+        "symbol": "TCSGQ"
     },
     {
         "name": "TUCOWS INC COM NEW",
