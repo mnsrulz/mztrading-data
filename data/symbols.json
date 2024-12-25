@@ -40,6 +40,10 @@
         "symbol": "AAPU"
     },
     {
+        "name": "T-Rex 2X Long Apple Daily Target ETF",
+        "symbol": "AAPX"
+    },
+    {
         "name": "AMERICAN ASSETS TR INC COM",
         "symbol": "AAT"
     },
@@ -458,10 +462,6 @@
     {
         "name": "ARMADA HOFFLER PPTYS INC COM",
         "symbol": "AHH"
-    },
-    {
-        "name": "TIDAL ETF TR NEWDAY OCN HEALT",
-        "symbol": "AHOY"
     },
     {
         "name": "AMERICAN HEALTHCARE REIT INC COM SHS",
@@ -894,6 +894,10 @@
     {
         "name": "AMAZON COM INC COM",
         "symbol": "AMZN"
+    },
+    {
+        "name": "Kurv Yield Premium Strategy Amazon (AMZN) ETF",
+        "symbol": "AMZP"
     },
     {
         "name": "DIREXION SHS ETF TR DIREXION 2X SHAR",
@@ -7488,6 +7492,10 @@
         "symbol": "GOOS"
     },
     {
+        "name": "T-Rex 2X Long Alphabet Daily Target ETF",
+        "symbol": "GOOX"
+    },
+    {
         "name": "TIDAL TR II YIELDMAX GOOGL",
         "symbol": "GOOY"
     },
@@ -10288,10 +10296,6 @@
         "symbol": "LKQ"
     },
     {
-        "name": "LL FLOORING HOLDINGS INC COM",
-        "symbol": "LLFLQ"
-    },
-    {
         "name": "ELI LILLY & CO COM",
         "symbol": "LLY"
     },
@@ -11668,10 +11672,6 @@
         "symbol": "NANR"
     },
     {
-        "name": "DUCKHORN PORTFOLIO INC COM",
-        "symbol": "NAPA"
-    },
-    {
         "name": "INARI MED INC COM",
         "symbol": "NARI"
     },
@@ -12238,6 +12238,10 @@
     {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 1.75X LNG",
         "symbol": "NVDW"
+    },
+    {
+        "name": "T-Rex 2X Long NVIDIA Daily Target ETF",
+        "symbol": "NVDX"
     },
     {
         "name": "TIDAL TR II YIELDMAX NVDA",
@@ -16008,10 +16012,6 @@
         "symbol": "SPBO"
     },
     {
-        "name": "TRUST FOR PROFESSIONAL MANAGER CROSSINGBRDG PRE",
-        "symbol": "SPC"
-    },
-    {
         "name": "VIRGIN GALACTIC HOLDINGS INC COM NEW",
         "symbol": "SPCE"
     },
@@ -16796,7 +16796,7 @@
         "symbol": "TCPC"
     },
     {
-        "name": "--Placeholder--",
+        "name": "CONTAINER STORE GROUP INC COM NEW",
         "symbol": "TCSGQ"
     },
     {
