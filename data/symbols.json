@@ -13156,10 +13156,6 @@
         "symbol": "PFE"
     },
     {
-        "name": "ISHARES TR PFD AND INCM SEC",
-        "symbol": "PFF"
-    },
-    {
         "name": "ETFIS SER TR I VIRTUS INFRCAP",
         "symbol": "PFFA"
     },
@@ -16010,6 +16006,10 @@
     {
         "name": "SPDR SER TR PORTFOLIO CRPORT",
         "symbol": "SPBO"
+    },
+    {
+        "name": "TRUST FOR PROFESSIONAL MANAGER CROSSINGBRDG PRE",
+        "symbol": "SPC"
     },
     {
         "name": "VIRGIN GALACTIC HOLDINGS INC COM NEW",
