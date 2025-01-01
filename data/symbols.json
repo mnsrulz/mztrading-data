@@ -180,10 +180,6 @@
         "symbol": "ACI"
     },
     {
-        "name": "AMERICAN COASTAL INS CORP COM",
-        "symbol": "ACIC"
-    },
-    {
         "name": "ACI WORLDWIDE INC COM",
         "symbol": "ACIW"
     },
@@ -1544,10 +1540,6 @@
         "symbol": "AVGV"
     },
     {
-        "name": "TIDAL TR II DEF DLY TGT AVGO",
-        "symbol": "AVGX"
-    },
-    {
         "name": "ATEA PHARMACEUTICALS INC COM",
         "symbol": "AVIR"
     },
@@ -2024,10 +2016,6 @@
         "symbol": "BGFV"
     },
     {
-        "name": "BEIGENE LTD SPONSORED ADR",
-        "symbol": "BGNE"
-    },
-    {
         "name": "B & G FOODS INC NEW COM",
         "symbol": "BGS"
     },
@@ -2104,7 +2092,7 @@
         "symbol": "BIO"
     },
     {
-        "name": "--Placeholder--",
+        "name": "BIORA THERAPEUTICS INC COM",
         "symbol": "BIORQ"
     },
     {
@@ -2544,10 +2532,6 @@
         "symbol": "BSET"
     },
     {
-        "name": "BRIGHTSPHERE INVT GROUP INC COM",
-        "symbol": "BSIG"
-    },
-    {
         "name": "BLACK STONE MINERALS L P COM UNIT",
         "symbol": "BSM"
     },
@@ -2846,6 +2830,10 @@
     {
         "name": "AVIS BUDGET GROUP COM",
         "symbol": "CAR"
+    },
+    {
+        "name": "CARA THERAPEUTICS INC COM NEW",
+        "symbol": "CARA"
     },
     {
         "name": "CARTER BANKSHARES INC COM NEW",
@@ -4212,10 +4200,6 @@
         "symbol": "CVLC"
     },
     {
-        "name": "COVENANT LOGISTICS GROUP INC CL A",
-        "symbol": "CVLG"
-    },
-    {
         "name": "COMMVAULT SYS INC COM",
         "symbol": "CVLT"
     },
@@ -5124,7 +5108,7 @@
         "symbol": "EAT"
     },
     {
-        "name": "ADVISORS SER TR VEGTECH PLANT B",
+        "name": "VegTech Plant-based Innovation & Climate ETF",
         "symbol": "EATV"
     },
     {
@@ -11424,10 +11408,6 @@
         "symbol": "MSTU"
     },
     {
-        "name": "TIDAL TR II DEF DLY TGT 2X L",
-        "symbol": "MSTX"
-    },
-    {
         "name": "TIDAL TR II YIELDMAX MSTR OP",
         "symbol": "MSTY"
     },
@@ -14254,6 +14234,10 @@
     {
         "name": "ISHARES TR GLOBAL REIT ETF",
         "symbol": "REET"
+    },
+    {
+        "name": "CHICAGO ATLANTIC REAL ESTATE F COM",
+        "symbol": "REFI"
     },
     {
         "name": "RESEARCH FRONTIERS INC COM",
@@ -18136,10 +18120,6 @@
         "symbol": "VC"
     },
     {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
-        "symbol": "VCAR"
-    },
-    {
         "name": "Vanguard ESG U.S. Corporate Bond ETF",
         "symbol": "VCEB"
     },
@@ -18714,10 +18694,6 @@
     {
         "name": "VANGUARD INDEX FDS LARGE CAP ETF",
         "symbol": "VV"
-    },
-    {
-        "name": "VIAD CORP COM",
-        "symbol": "VVI"
     },
     {
         "name": "VALVOLINE INC COM",
