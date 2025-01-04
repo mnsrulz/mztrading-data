@@ -12,6 +12,10 @@
         "symbol": "AAL"
     },
     {
+        "name": "ACADIAN ASSET MANAGEMENT INC COM",
+        "symbol": "AAMI"
+    },
+    {
         "name": "APPLIED OPTOELECTRONICS INC COM",
         "symbol": "AAOI"
     },
@@ -712,7 +716,7 @@
         "symbol": "ALTR"
     },
     {
-        "name": "ALLURION TECHNOLOGIES INC COM SHS",
+        "name": "ALLURION TECHNOLOGIES INC COMMON STOCK",
         "symbol": "ALUR"
     },
     {
@@ -2024,10 +2028,6 @@
         "symbol": "BGFV"
     },
     {
-        "name": "BEIGENE LTD SPONSORED ADR",
-        "symbol": "BGNE"
-    },
-    {
         "name": "B & G FOODS INC NEW COM",
         "symbol": "BGS"
     },
@@ -2104,7 +2104,7 @@
         "symbol": "BIO"
     },
     {
-        "name": "--Placeholder--",
+        "name": "BIORA THERAPEUTICS INC COM",
         "symbol": "BIORQ"
     },
     {
@@ -2544,10 +2544,6 @@
         "symbol": "BSET"
     },
     {
-        "name": "BRIGHTSPHERE INVT GROUP INC COM",
-        "symbol": "BSIG"
-    },
-    {
         "name": "BLACK STONE MINERALS L P COM UNIT",
         "symbol": "BSM"
     },
@@ -2846,6 +2842,10 @@
     {
         "name": "AVIS BUDGET GROUP COM",
         "symbol": "CAR"
+    },
+    {
+        "name": "CARA THERAPEUTICS INC COM NEW",
+        "symbol": "CARA"
     },
     {
         "name": "CARTER BANKSHARES INC COM NEW",
@@ -5124,7 +5124,7 @@
         "symbol": "EAT"
     },
     {
-        "name": "ADVISORS SER TR VEGTECH PLANT B",
+        "name": "VegTech Plant-based Innovation & Climate ETF",
         "symbol": "EATV"
     },
     {
@@ -5978,10 +5978,6 @@
     {
         "name": "EXPONENT INC COM",
         "symbol": "EXPO"
-    },
-    {
-        "name": "EXPRESS INC COM NEW",
-        "symbol": "EXPRQ"
     },
     {
         "name": "EXTRA SPACE STORAGE INC COM",
@@ -9444,8 +9440,8 @@
         "symbol": "JBSS"
     },
     {
-        "name": "JOHN BEAN TECHNOLOGIES CORP COM",
-        "symbol": "JBT"
+        "name": "JBT MAREL CORPORATION COM",
+        "symbol": "JBTM"
     },
     {
         "name": "JOHNSON CTLS INTL PLC SHS",
@@ -11184,10 +11180,6 @@
         "symbol": "MNTK"
     },
     {
-        "name": "MANITEX INTL INC COM",
-        "symbol": "MNTX"
-    },
-    {
         "name": "MONEYHERO LIMITED ORD SHS",
         "symbol": "MNY"
     },
@@ -12588,6 +12580,10 @@
         "symbol": "ONB"
     },
     {
+        "name": "BEIGENE LTD SPONSORED ADS",
+        "symbol": "ONC"
+    },
+    {
         "name": "PROSHARES TR ON-DEMAND ETF",
         "symbol": "OND"
     },
@@ -13664,6 +13660,10 @@
         "symbol": "PRQR"
     },
     {
+        "name": "PURSUIT ATTRACTIONS AND HOSPIT COM",
+        "symbol": "PRSU"
+    },
+    {
         "name": "PROTHENA CORP PLC SHS",
         "symbol": "PRTA"
     },
@@ -14254,6 +14254,10 @@
     {
         "name": "ISHARES TR GLOBAL REIT ETF",
         "symbol": "REET"
+    },
+    {
+        "name": "CHICAGO ATLANTIC REAL ESTATE F COM",
+        "symbol": "REFI"
     },
     {
         "name": "RESEARCH FRONTIERS INC COM",
@@ -16896,6 +16900,10 @@
         "symbol": "TERN"
     },
     {
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
+        "symbol": "TESL"
+    },
+    {
         "name": "TEVA PHARMACEUTICAL INDS LTD SPONSORED ADS",
         "symbol": "TEVA"
     },
@@ -18136,10 +18144,6 @@
         "symbol": "VC"
     },
     {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
-        "symbol": "VCAR"
-    },
-    {
         "name": "Vanguard ESG U.S. Corporate Bond ETF",
         "symbol": "VCEB"
     },
@@ -18714,10 +18718,6 @@
     {
         "name": "VANGUARD INDEX FDS LARGE CAP ETF",
         "symbol": "VV"
-    },
-    {
-        "name": "VIAD CORP COM",
-        "symbol": "VVI"
     },
     {
         "name": "VALVOLINE INC COM",
