@@ -6504,10 +6504,6 @@
         "symbol": "FLYW"
     },
     {
-        "name": "ISHARES INC FRONTIER AND SEL",
-        "symbol": "FM"
-    },
-    {
         "name": "FARMERS & MERCHANTS BANCORP IN COM",
         "symbol": "FMAO"
     },
@@ -7132,10 +7128,6 @@
         "symbol": "GE"
     },
     {
-        "name": "REVELYST INC COM SHS",
-        "symbol": "GEAR"
-    },
-    {
         "name": "GREIF INC CL A",
         "symbol": "GEF"
     },
@@ -7460,7 +7452,7 @@
         "symbol": "GOLLQ"
     },
     {
-        "name": "Strategy Shares Gold-Hedged Bond ETF",
+        "name": "Strategy Shares Gold Enhanced Yield ETF",
         "symbol": "GOLY"
     },
     {
@@ -7914,10 +7906,6 @@
     {
         "name": "HAWAIIAN ELEC INDUSTRIES COM",
         "symbol": "HE"
-    },
-    {
-        "name": "TURTLE BEACH CORP COM NEW",
-        "symbol": "HEAR"
     },
     {
         "name": "WISDOMTREE TR EUROPE HEDGED EQ",
@@ -10510,10 +10498,6 @@
     {
         "name": "LUMEN TECHNOLOGIES INC COM",
         "symbol": "LUMN"
-    },
-    {
-        "name": "LUNA INNOVATIONS INC COM",
-        "symbol": "LUNA"
     },
     {
         "name": "PULMONX CORP COM",
@@ -16746,6 +16730,10 @@
     {
         "name": "BBB FOODS INC CL A COM",
         "symbol": "TBBB"
+    },
+    {
+        "name": "TURTLE BEACH CORP COM NEW",
+        "symbol": "TBCH"
     },
     {
         "name": "PROSHARES TR SHRT 20+YR TRE",
