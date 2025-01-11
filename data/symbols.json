@@ -1276,6 +1276,10 @@
         "symbol": "ASA"
     },
     {
+        "name": "--Placeholder--",
+        "symbol": "ASAIY"
+    },
+    {
         "name": "ASANA INC CL A",
         "symbol": "ASAN"
     },
@@ -7720,7 +7724,7 @@
         "symbol": "GTLS"
     },
     {
-        "name": "GRAY MEDIA INC",
+        "name": "GRAY MEDIA INC COM",
         "symbol": "GTN"
     },
     {
@@ -17034,10 +17038,6 @@
     {
         "name": "TENET HEALTHCARE CORP COM NEW",
         "symbol": "THC"
-    },
-    {
-        "name": "TH INTERNATIONAL LIMITED ORDINARY SHARES",
-        "symbol": "THCH"
     },
     {
         "name": "ISHARES INC MSCI THAILND ETF",
