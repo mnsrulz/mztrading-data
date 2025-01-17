@@ -84,7 +84,7 @@
         "symbol": "ABEV"
     },
     {
-        "name": "Abacus FCF Leaders ETF",
+        "name": "Abacus FCF ETF Trust",
         "symbol": "ABFL"
     },
     {
@@ -726,6 +726,10 @@
     {
         "name": "AUTOLIV INC COM",
         "symbol": "ALV"
+    },
+    {
+        "name": "ALLOVIR INC COM NEW",
+        "symbol": "ALVR"
     },
     {
         "name": "ALX ONCOLOGY HLDGS INC COM",
@@ -7034,10 +7038,6 @@
     {
         "name": "STEALTHGAS INC SHS",
         "symbol": "GASS"
-    },
-    {
-        "name": "GATOS SILVER INC COM",
-        "symbol": "GATO"
     },
     {
         "name": "GATX CORP COM",
@@ -14522,6 +14522,10 @@
     {
         "name": "RADIANT LOGISTICS INC COM",
         "symbol": "RLGT"
+    },
+    {
+        "name": "RLI CORP COM",
+        "symbol": "RLI"
     },
     {
         "name": "RLJ LODGING TR COM",
