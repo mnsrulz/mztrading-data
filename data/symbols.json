@@ -84,7 +84,7 @@
         "symbol": "ABEV"
     },
     {
-        "name": "Abacus FCF Leaders ETF",
+        "name": "Abacus FCF ETF Trust",
         "symbol": "ABFL"
     },
     {
@@ -726,6 +726,10 @@
     {
         "name": "AUTOLIV INC COM",
         "symbol": "ALV"
+    },
+    {
+        "name": "ALLOVIR INC COM NEW",
+        "symbol": "ALVR"
     },
     {
         "name": "ALX ONCOLOGY HLDGS INC COM",
@@ -7036,10 +7040,6 @@
         "symbol": "GASS"
     },
     {
-        "name": "GATOS SILVER INC COM",
-        "symbol": "GATO"
-    },
-    {
         "name": "GATX CORP COM",
         "symbol": "GATX"
     },
@@ -7662,10 +7662,6 @@
     {
         "name": "ISHARES S&P GSCI COMMODITY- IN UNIT BEN INT",
         "symbol": "GSG"
-    },
-    {
-        "name": "GOOSEHEAD INS INC COM CL A",
-        "symbol": "GSHD"
     },
     {
         "name": "GOLDMAN SACHS ETF TR ACTIVEBETA INT",
@@ -10162,10 +10158,6 @@
     {
         "name": "ISHARES INC JP MORGAN EM ETF",
         "symbol": "LEMB"
-    },
-    {
-        "name": "LENNAR CORP CL A",
-        "symbol": "LEN"
     },
     {
         "name": "LESLIES INC COM",
@@ -12824,7 +12816,7 @@
         "symbol": "OUST"
     },
     {
-        "name": "OUTFRONT MEDIA INC COM",
+        "name": "OUTFRONT MEDIA INC COM NEW",
         "symbol": "OUT"
     },
     {
@@ -14522,6 +14514,10 @@
     {
         "name": "RADIANT LOGISTICS INC COM",
         "symbol": "RLGT"
+    },
+    {
+        "name": "RLI CORP COM",
+        "symbol": "RLI"
     },
     {
         "name": "RLJ LODGING TR COM",
@@ -16302,10 +16298,6 @@
     {
         "name": "SPDR SER TR SPDR S&P 500 ETF",
         "symbol": "SPYX"
-    },
-    {
-        "name": "BLOCK INC CL A",
-        "symbol": "SQ"
     },
     {
         "name": "SOCIEDAD QUIMICA Y MINERA DE SPON ADR SER B",
