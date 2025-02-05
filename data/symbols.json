@@ -7612,10 +7612,6 @@
         "symbol": "GSG"
     },
     {
-        "name": "GOOSEHEAD INS INC COM CL A",
-        "symbol": "GSHD"
-    },
-    {
         "name": "GOLDMAN SACHS ETF TR ACTIVEBETA INT",
         "symbol": "GSIE"
     },
@@ -10102,10 +10098,6 @@
     {
         "name": "ISHARES INC JP MORGAN EM ETF",
         "symbol": "LEMB"
-    },
-    {
-        "name": "LENNAR CORP CL A",
-        "symbol": "LEN"
     },
     {
         "name": "LESLIES INC COM",
