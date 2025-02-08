@@ -1732,10 +1732,6 @@
         "symbol": "BALL"
     },
     {
-        "name": "BALLYS CORPORATION COM",
-        "symbol": "BALY"
-    },
-    {
         "name": "BROOKFIELD ASSET MANAGMT LTD CL A LMT VTG SHS",
         "symbol": "BAM"
     },
@@ -1882,10 +1878,6 @@
     {
         "name": "BRINKS CO COM",
         "symbol": "BCO"
-    },
-    {
-        "name": "BRIGHTCOVE INC COM",
-        "symbol": "BCOV"
     },
     {
         "name": "BALCHEM CORP COM",
@@ -2560,10 +2552,6 @@
         "symbol": "BSY"
     },
     {
-        "name": "BIOXCEL THERAPEUTICS INC COM",
-        "symbol": "BTAI"
-    },
-    {
         "name": "BIT DIGITAL INC SHS",
         "symbol": "BTBT"
     },
@@ -3034,10 +3022,6 @@
     {
         "name": "CARDLYTICS INC COM",
         "symbol": "CDLX"
-    },
-    {
-        "name": "AVID BIOSERVICES INC COM",
-        "symbol": "CDMO"
     },
     {
         "name": "CAREDX INC COM",
@@ -10352,6 +10336,10 @@
         "symbol": "LOW"
     },
     {
+        "name": "DORIAN LPG LTD SHS USD",
+        "symbol": "LPG"
+    },
+    {
         "name": "LG DISPLAY CO LTD SPONS ADR REP",
         "symbol": "LPL"
     },
@@ -14746,10 +14734,6 @@
     {
         "name": "REVOLUTION MEDICINES INC COM",
         "symbol": "RVMD"
-    },
-    {
-        "name": "REVANCE THERAPEUTICS INC COM",
-        "symbol": "RVNC"
     },
     {
         "name": "RETRACTABLE TECHNOLOGIES INC COM",
