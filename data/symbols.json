@@ -1732,10 +1732,6 @@
         "symbol": "BALL"
     },
     {
-        "name": "BALLYS CORPORATION COM",
-        "symbol": "BALY"
-    },
-    {
         "name": "BROOKFIELD ASSET MANAGMT LTD CL A LMT VTG SHS",
         "symbol": "BAM"
     },
@@ -1882,10 +1878,6 @@
     {
         "name": "BRINKS CO COM",
         "symbol": "BCO"
-    },
-    {
-        "name": "BRIGHTCOVE INC COM",
-        "symbol": "BCOV"
     },
     {
         "name": "BALCHEM CORP COM",
@@ -3034,10 +3026,6 @@
     {
         "name": "CARDLYTICS INC COM",
         "symbol": "CDLX"
-    },
-    {
-        "name": "AVID BIOSERVICES INC COM",
-        "symbol": "CDMO"
     },
     {
         "name": "CAREDX INC COM",
@@ -10352,6 +10340,10 @@
         "symbol": "LOW"
     },
     {
+        "name": "DORIAN LPG LTD SHS USD",
+        "symbol": "LPG"
+    },
+    {
         "name": "LG DISPLAY CO LTD SPONS ADR REP",
         "symbol": "LPL"
     },
@@ -14748,10 +14740,6 @@
         "symbol": "RVMD"
     },
     {
-        "name": "REVANCE THERAPEUTICS INC COM",
-        "symbol": "RVNC"
-    },
-    {
         "name": "RETRACTABLE TECHNOLOGIES INC COM",
         "symbol": "RVP"
     },
@@ -15860,7 +15848,7 @@
         "symbol": "SNOW"
     },
     {
-        "name": "DBX ETF TR XTRACKERS S&P",
+        "name": "XTRACKERS S&P 500 SCORED & SCR",
         "symbol": "SNPE"
     },
     {
@@ -16494,10 +16482,6 @@
     {
         "name": "SUN CMNTYS INC COM",
         "symbol": "SUI"
-    },
-    {
-        "name": "SUMMIT MATLS INC CL A",
-        "symbol": "SUM"
     },
     {
         "name": "SUNOCO LP/SUNOCO FIN CORP COM UT REP LP",
