@@ -1016,10 +1016,6 @@
         "symbol": "APA"
     },
     {
-        "name": "ARTISAN PARTNERS ASSET MGMT IN CL A",
-        "symbol": "APAM"
-    },
-    {
         "name": "AIR PRODS & CHEMS INC COM",
         "symbol": "APD"
     },
@@ -5580,10 +5576,6 @@
         "symbol": "EQIX"
     },
     {
-        "name": "EQUINOR ASA SPONSORED ADR",
-        "symbol": "EQNR"
-    },
-    {
         "name": "EQUITY RESIDENTIAL SH BEN INT",
         "symbol": "EQR"
     },
@@ -6102,10 +6094,6 @@
     {
         "name": "FIRST TR EXCH TRD ALPHDX FD II CHINA ALPHADEX",
         "symbol": "FCA"
-    },
-    {
-        "name": "FIRST CMNTY BANKSHARES INC VA COM",
-        "symbol": "FCBC"
     },
     {
         "name": "FUELCELL ENERGY INC COM NEW",
@@ -8306,6 +8294,10 @@
     {
         "name": "GLOBAL X FDS GBL X HYDROGEN",
         "symbol": "HYDR"
+    },
+    {
+        "name": "HYDROFARM HLDGS GROUP INC COM",
+        "symbol": "HYFM"
     },
     {
         "name": "ISHARES TR IBOXX HI YD ETF",
