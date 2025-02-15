@@ -6004,10 +6004,6 @@
         "symbol": "EZU"
     },
     {
-        "name": "FORD MTR CO COM",
-        "symbol": "F"
-    },
-    {
         "name": "FIRST ADVANTAGE CORP NEW COM",
         "symbol": "FA"
     },
@@ -6210,10 +6206,6 @@
     {
         "name": "FIRSTENERGY CORP COM",
         "symbol": "FE"
-    },
-    {
-        "name": "5E ADVANCED MATERIALS INC COMMON STOCK",
-        "symbol": "FEAM"
     },
     {
         "name": "FRANKLIN ELEC INC COM",
@@ -8306,6 +8298,10 @@
     {
         "name": "GLOBAL X FDS GBL X HYDROGEN",
         "symbol": "HYDR"
+    },
+    {
+        "name": "HYDROFARM HLDGS GROUP INC COM",
+        "symbol": "HYFM"
     },
     {
         "name": "ISHARES TR IBOXX HI YD ETF",
@@ -12752,10 +12748,6 @@
         "symbol": "OTLK"
     },
     {
-        "name": "OATLY GROUP AB SPONSORED ADS",
-        "symbol": "OTLY"
-    },
-    {
         "name": "OTTER TAIL CORP COM",
         "symbol": "OTTR"
     },
@@ -15504,10 +15496,6 @@
         "symbol": "SILJ"
     },
     {
-        "name": "SILVERCREST METALS INC COM",
-        "symbol": "SILV"
-    },
-    {
         "name": "SILICON MOTION TECHNOLOGY CORP SPONSORED ADR",
         "symbol": "SIMO"
     },
@@ -17234,10 +17222,6 @@
     {
         "name": "TRIPLEPOINT VENTURE GROWTH BDC COM",
         "symbol": "TPVG"
-    },
-    {
-        "name": "TEMPUR SEALY INTL INC COM",
-        "symbol": "TPX"
     },
     {
         "name": "MANAGED PORTFOLIO SERIES TORTOISE NRAM PI",
@@ -19654,10 +19638,6 @@
     {
         "name": "ZUMIEZ INC COM",
         "symbol": "ZUMZ"
-    },
-    {
-        "name": "ZUORA INC COM CL A",
-        "symbol": "ZUO"
     },
     {
         "name": "ZEVRA THERAPEUTICS INC COM NEW",
