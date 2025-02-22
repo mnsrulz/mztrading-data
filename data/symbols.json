@@ -3548,11 +3548,7 @@
         "symbol": "CMTL"
     },
     {
-        "name": "CNA FINL CORP COM",
-        "symbol": "CNA"
-    },
-    {
-        "name": "AMPLIFY ETF TR SEYMOUR CANNBS",
+        "name": "AMPLIFY ETF TR SEYMOUR CANB ETF",
         "symbol": "CNBS"
     },
     {
@@ -6212,7 +6208,7 @@
         "symbol": "FE"
     },
     {
-        "name": "5E ADVANCED MATERIALS INC COMMON STOCK",
+        "name": "5E ADVANCED MATERIALS INC COM NEW",
         "symbol": "FEAM"
     },
     {
@@ -7980,7 +7976,7 @@
         "symbol": "HIBS"
     },
     {
-        "name": "HARTFORD INSURANCE GROUP INC/T",
+        "name": "HARTFORD INSURANCE GROUP INC COM",
         "symbol": "HIG"
     },
     {
@@ -11004,7 +11000,7 @@
         "symbol": "MITT"
     },
     {
-        "name": "AMPLIFY ETF TR AMPLIFY ALTERNAT",
+        "name": "AMPLIFY ETF TR ALTRNTV HARV ETF",
         "symbol": "MJ"
     },
     {
@@ -11624,10 +11620,6 @@
         "symbol": "NANR"
     },
     {
-        "name": "INARI MED INC COM",
-        "symbol": "NARI"
-    },
-    {
         "name": "NORDIC AMERICAN TANKERS LIMITE COM",
         "symbol": "NAT"
     },
@@ -11758,6 +11750,10 @@
     {
         "name": "NEXA RES S A COM",
         "symbol": "NEXA"
+    },
+    {
+        "name": "NEXXEN INTL LTD SHS NEW",
+        "symbol": "NEXN"
     },
     {
         "name": "NEXTDECADE CORP COM",
@@ -12122,10 +12118,6 @@
     {
         "name": "NU SKIN ENTERPRISES INC CL A",
         "symbol": "NUS"
-    },
-    {
-        "name": "NEOS ETF TRUST NASDAQ 100 HDGD",
-        "symbol": "NUSI"
     },
     {
         "name": "NUVATION BIO INC COM CL A",
@@ -13976,6 +13968,10 @@
         "symbol": "QQQE"
     },
     {
+        "name": "NEOS ETF TRUST NASDAQ 100 HDGD",
+        "symbol": "QQQH"
+    },
+    {
         "name": "NEOS ETF TRUST NASDAQ 100 HIGH",
         "symbol": "QQQI"
     },
@@ -14010,10 +14006,6 @@
     {
         "name": "GLOBAL X FDS NASDAQ 100 RIS",
         "symbol": "QRMI"
-    },
-    {
-        "name": "QURATE RETAIL INC COM SER A",
-        "symbol": "QRTEA"
     },
     {
         "name": "QORVO INC COM",
@@ -15348,7 +15340,7 @@
         "symbol": "SGHT"
     },
     {
-        "name": "SOMNIGROUP INTERNATIONAL INC",
+        "name": "SOMNIGROUP INTERNATIONAL INC COM",
         "symbol": "SGI"
     },
     {
@@ -18834,10 +18826,6 @@
     {
         "name": "WORKDAY INC CL A",
         "symbol": "WDAY"
-    },
-    {
-        "name": "WESTERN DIGITAL CORP COM",
-        "symbol": "WDC"
     },
     {
         "name": "WD 40 CO COM",
