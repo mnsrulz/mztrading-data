@@ -9804,10 +9804,6 @@
         "symbol": "KOS"
     },
     {
-        "name": "KARYOPHARM THERAPEUTICS INC COM",
-        "symbol": "KPTI"
-    },
-    {
         "name": "KROGER CO COM",
         "symbol": "KR"
     },
@@ -10312,7 +10308,7 @@
         "symbol": "LOCO"
     },
     {
-        "name": "COMSTOCK INC COM NEW",
+        "name": "COMSTOCK INC COM SHS",
         "symbol": "LODE"
     },
     {
@@ -11836,8 +11832,8 @@
         "symbol": "NKE"
     },
     {
-        "name": "NIKOLA CORP COM NEW",
-        "symbol": "NKLA"
+        "name": "--Placeholder--",
+        "symbol": "NKLAQ"
     },
     {
         "name": "NEKTAR THERAPEUTICS COM",
@@ -12493,7 +12489,7 @@
     },
     {
         "name": "OMEGA THERAPEUTICS INC COMMON STOCK",
-        "symbol": "OMGA"
+        "symbol": "OMGAQ"
     },
     {
         "name": "OWENS & MINOR INC NEW COM",
@@ -14036,7 +14032,7 @@
         "symbol": "QURE"
     },
     {
-        "name": "QVC GROUP INC",
+        "name": "QVC GROUP INC COM SER A",
         "symbol": "QVCGA"
     },
     {
