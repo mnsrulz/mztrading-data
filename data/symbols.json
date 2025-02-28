@@ -48,6 +48,10 @@
         "symbol": "AAPU"
     },
     {
+        "name": "Roundhill AAPL WeeklyPay ETF",
+        "symbol": "AAPW"
+    },
+    {
         "name": "T-Rex 2X Long Apple Daily Target ETF",
         "symbol": "AAPX"
     },
@@ -3516,10 +3520,6 @@
         "symbol": "CMP"
     },
     {
-        "name": "COMPOSECURE INC COM CL A",
-        "symbol": "CMPO"
-    },
-    {
         "name": "CIMPRESS PLC SHS EURO",
         "symbol": "CMPR"
     },
@@ -3674,6 +3674,10 @@
     {
         "name": "COINBASE GLOBAL INC COM CL A",
         "symbol": "COIN"
+    },
+    {
+        "name": "Roundhill COIN WeeklyPay ETF",
+        "symbol": "COIW"
     },
     {
         "name": "COLUMBIA BKG SYS INC COM",
@@ -7856,10 +7860,6 @@
         "symbol": "HCOM"
     },
     {
-        "name": "HASHICORP INC COM CL A",
-        "symbol": "HCP"
-    },
-    {
         "name": "HEALTHCARE SVCS GROUP INC COM",
         "symbol": "HCSG"
     },
@@ -11224,10 +11224,6 @@
         "symbol": "MPC"
     },
     {
-        "name": "MULTIPLAN CORPORATION CL A NEW",
-        "symbol": "MPLN"
-    },
-    {
         "name": "MPLX LP COM UNIT REP LTD",
         "symbol": "MPLX"
     },
@@ -12230,6 +12226,10 @@
     {
         "name": "NAVITAS SEMICONDUCTOR CORP COM",
         "symbol": "NVTS"
+    },
+    {
+        "name": "Roundhill NVDA WeeklyPay ETF",
+        "symbol": "NVW"
     },
     {
         "name": "NORTHWESTERN ENERGY GROUP INC COM NEW",
@@ -13378,6 +13378,10 @@
     {
         "name": "PALANTIR TECHNOLOGIES INC CL A",
         "symbol": "PLTR"
+    },
+    {
+        "name": "Roundhill PLTR WeeklyPay ETF",
+        "symbol": "PLTW"
     },
     {
         "name": "TIDAL TR II YIELDMAX PLTR OP",
@@ -17434,6 +17438,10 @@
     {
         "name": "2SEVENTY BIO INC COMMON STOCK",
         "symbol": "TSVT"
+    },
+    {
+        "name": "Roundhill TSLA WeeklyPay ETF",
+        "symbol": "TSW"
     },
     {
         "name": "TRANE TECHNOLOGIES PLC SHS",
