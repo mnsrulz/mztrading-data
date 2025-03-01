@@ -48,6 +48,10 @@
         "symbol": "AAPU"
     },
     {
+        "name": "Roundhill AAPL WeeklyPay ETF",
+        "symbol": "AAPW"
+    },
+    {
         "name": "T-Rex 2X Long Apple Daily Target ETF",
         "symbol": "AAPX"
     },
@@ -3676,6 +3680,10 @@
         "symbol": "COIN"
     },
     {
+        "name": "Roundhill COIN WeeklyPay ETF",
+        "symbol": "COIW"
+    },
+    {
         "name": "COLUMBIA BKG SYS INC COM",
         "symbol": "COLB"
     },
@@ -4070,6 +4078,10 @@
     {
         "name": "GLOBAL X FDS CLEANTECH ETF",
         "symbol": "CTEC"
+    },
+    {
+        "name": "CLARITEV CORPORATION CL A NEW",
+        "symbol": "CTEV"
     },
     {
         "name": "CYTEK BIOSCIENCES INC COM",
@@ -5116,7 +5128,7 @@
         "symbol": "EAT"
     },
     {
-        "name": "VegTech Plant-based Innovation & Climate ETF",
+        "name": "VegTech Food Innovation & Climate ETF",
         "symbol": "EATV"
     },
     {
@@ -5410,10 +5422,6 @@
     {
         "name": "EMCOR GROUP INC COM",
         "symbol": "EME"
-    },
-    {
-        "name": "EMCORE CORP COM",
-        "symbol": "EMKR"
     },
     {
         "name": "VANECK ETF TRUST JP MRGAN EM LOC",
@@ -6652,10 +6660,6 @@
         "symbol": "FREL"
     },
     {
-        "name": "FREYR BATTERY INC COM NEW",
-        "symbol": "FREY"
-    },
-    {
         "name": "FORGE GLOBAL HOLDINGS INC COM",
         "symbol": "FRGE"
     },
@@ -6804,7 +6808,7 @@
         "symbol": "FTNT"
     },
     {
-        "name": "FIRST TR EXCHANGE-TRADED FD VI NASDAQ BUYWRITE",
+        "name": "FIRST TR EXCHANGE TRADED FD VI NASDAQ BUYWRITE",
         "symbol": "FTQI"
     },
     {
@@ -6852,7 +6856,7 @@
         "symbol": "FUTY"
     },
     {
-        "name": "FIRST TR EXCHANGE-TRADED FD VI DORSEY WRT 5 ETF",
+        "name": "FIRST TR EXCHANGE TRADED FD VI DORSEY WRT 5 ETF",
         "symbol": "FV"
     },
     {
@@ -7856,10 +7860,6 @@
         "symbol": "HCOM"
     },
     {
-        "name": "HASHICORP INC COM CL A",
-        "symbol": "HCP"
-    },
-    {
         "name": "HEALTHCARE SVCS GROUP INC COM",
         "symbol": "HCSG"
     },
@@ -8830,10 +8830,6 @@
     {
         "name": "LISTED FD TR HORIZON KINETICS",
         "symbol": "INFL"
-    },
-    {
-        "name": "INFINERA CORP COM",
-        "symbol": "INFN"
     },
     {
         "name": "INFUSYSTEM HLDGS INC COM",
@@ -11224,10 +11220,6 @@
         "symbol": "MPC"
     },
     {
-        "name": "MULTIPLAN CORPORATION CL A NEW",
-        "symbol": "MPLN"
-    },
-    {
         "name": "MPLX LP COM UNIT REP LTD",
         "symbol": "MPLX"
     },
@@ -11454,10 +11446,6 @@
     {
         "name": "MACOM TECH SOLUTIONS HLDGS INC COM",
         "symbol": "MTSI"
-    },
-    {
-        "name": "MATTERPORT INC COM CL A",
-        "symbol": "MTTR"
     },
     {
         "name": "iShares MSCI USA Momentum Factor ETF",
@@ -12230,6 +12218,10 @@
     {
         "name": "NAVITAS SEMICONDUCTOR CORP COM",
         "symbol": "NVTS"
+    },
+    {
+        "name": "Roundhill NVDA WeeklyPay ETF",
+        "symbol": "NVW"
     },
     {
         "name": "NORTHWESTERN ENERGY GROUP INC COM NEW",
@@ -13378,6 +13370,10 @@
     {
         "name": "PALANTIR TECHNOLOGIES INC CL A",
         "symbol": "PLTR"
+    },
+    {
+        "name": "Roundhill PLTR WeeklyPay ETF",
+        "symbol": "PLTW"
     },
     {
         "name": "TIDAL TR II YIELDMAX PLTR OP",
@@ -14632,7 +14628,7 @@
         "symbol": "RPRX"
     },
     {
-        "name": "RITHM PROPERTY TRUST INC COM",
+        "name": "RITHM PPTY TR INC COM",
         "symbol": "RPT"
     },
     {
@@ -17434,6 +17430,10 @@
     {
         "name": "2SEVENTY BIO INC COMMON STOCK",
         "symbol": "TSVT"
+    },
+    {
+        "name": "Roundhill TSLA WeeklyPay ETF",
+        "symbol": "TSW"
     },
     {
         "name": "TRANE TECHNOLOGIES PLC SHS",
