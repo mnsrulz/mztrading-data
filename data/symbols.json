@@ -7460,6 +7460,10 @@
         "symbol": "GOOY"
     },
     {
+        "name": "Unusual Whales Subversive Republican Trading ETF",
+        "symbol": "GOP"
+    },
+    {
         "name": "GOLD RESOURCE CORP COM",
         "symbol": "GORO"
     },
@@ -9720,7 +9724,7 @@
         "symbol": "KLIC"
     },
     {
-        "name": "KALARIS THERAPEUTICS INC",
+        "name": "KALARIS THERAPEUTICS INC COM",
         "symbol": "KLRS"
     },
     {
@@ -9882,10 +9886,6 @@
     {
         "name": "KIMBELL RTY PARTNERS LP UNIT",
         "symbol": "KRP"
-    },
-    {
-        "name": "Unusual Whales Subversive Republican Trading ETF",
-        "symbol": "KRUZ"
     },
     {
         "name": "KRYSTAL BIOTECH INC COM",
@@ -11588,7 +11588,7 @@
         "symbol": "NABL"
     },
     {
-        "name": "NIAGEN BIOSCIENCE INC",
+        "name": "NIAGEN BIOSCIENCE INC COM NEW",
         "symbol": "NAGE"
     },
     {
@@ -12484,7 +12484,7 @@
         "symbol": "OLPX"
     },
     {
-        "name": "OUTSET MED INC COM",
+        "name": "OUTSET MED INC COM NEW",
         "symbol": "OM"
     },
     {
@@ -16948,7 +16948,7 @@
         "symbol": "THD"
     },
     {
-        "name": "FIRST FINL CORP IND COM",
+        "name": "FIRST FINANCIAL CORP",
         "symbol": "THFF"
     },
     {
