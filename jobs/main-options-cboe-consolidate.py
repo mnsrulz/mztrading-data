@@ -91,7 +91,7 @@ duckdb.sql(f"""
           COPY 
             (SELECT
                 CAST(O.dt as STRING) as dt,
-                O.symbol,
+                P.symbol,
                 round(CAST(P.close as double), 2) as price,
                 round(SUM(IF(option_type = 'C', open_interest * delta, 0))) as call_delta,
                 round(SUM(IF(option_type = 'P', open_interest * abs(delta), 0))) as put_delta,

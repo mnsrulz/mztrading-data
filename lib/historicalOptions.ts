@@ -68,8 +68,9 @@ export const getHistoricalGreeksSummaryDataFromParquet = async (dt: string | und
     const dteFilterExpression = dte ? `AND expiration < date_add(dt, INTERVAL ${dte} DAYS)` : '';  //revisit it to get clarity on adding/subtracting days
     const arrowResult = await conn.send(`
             SELECT
-                dt,
-                option_symbol,
+                CAST(O.dt as STRING) as dt,
+                round(CAST(P.close as double), 2) as price,
+                P.symbol,
                 round(SUM(IF(option_type = 'C', open_interest * delta, 0))) as call_delta,
                 round(SUM(IF(option_type = 'P', open_interest * abs(delta), 0))) as put_delta,
                 round(SUM(IF(option_type = 'C', open_interest * gamma, 0))) as call_gamma,
@@ -82,14 +83,15 @@ export const getHistoricalGreeksSummaryDataFromParquet = async (dt: string | und
                 IF(call_delta = 0 OR put_delta = 0, round(call_delta/put_delta, 2), 0) as call_put_dex_ratio,
                 IF(call_oi=0 OR put_oi = 0, 0, round(call_oi/put_oi, 2)) as call_put_oi_ratio,
                 IF(call_volume = 0 or put_volume = 0, 0, round(call_volume/put_volume, 2)) as call_put_volume_ratio
-            FROM 'db.parquet' 
+            FROM 'db.parquet' O
+            JOIN 'stocks.parquet' P ON O.dt = P.dt AND O.option_symbol = P.symbol
             WHERE 1 = 1
             ${dtFilterExpression}
             ${dteFilterExpression}
-            GROUP BY dt, option_symbol
+            GROUP BY O.dt, P.symbol, P.close
         `);
     return arrowResult.readAll().flatMap(k => k.toArray().map((row) => row.toJSON())) as {
-        option_symbol: string, call_delta: number, put_delta: number, call_gamma: number, put_gamma: number, call_oi: number,
+        symbol: string, call_delta: number, put_delta: number, call_gamma: number, put_gamma: number, call_oi: number,
         put_oi: number, call_volume: number, put_volume: number, call_put_dex_ratio: number, net_gamma: number, call_put_oi_ratio: number, call_put_volume_ratio: number
     }[];
 }

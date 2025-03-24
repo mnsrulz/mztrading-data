@@ -260,7 +260,7 @@ router.get("/", (context) => {
         const result = await getHistoricalGreeksSummaryDataFromParquet(dt, dte);
         if(result.length == 0) throw new Error("No data found for the given date range");
         context.response.body = stringify(result, {columns: Object.keys(result.at(0) || {})});
-        context.response.type = "text/csv";
+        context.response.type = "text/plain";
     })
     .get("/api/options/:symbol/exposure", async (context) => {
         const { symbol } = context.params;
