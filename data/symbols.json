@@ -624,10 +624,6 @@
         "symbol": "ALGN"
     },
     {
-        "name": "ALIGOS THERAPEUTICS INC COM NEW",
-        "symbol": "ALGS"
-    },
-    {
         "name": "ALLEGIANT TRAVEL CO COM",
         "symbol": "ALGT"
     },
@@ -718,10 +714,6 @@
     {
         "name": "ALTO INGREDIENTS INC COM",
         "symbol": "ALTO"
-    },
-    {
-        "name": "ALTAIR ENGR INC COM CL A",
-        "symbol": "ALTR"
     },
     {
         "name": "ALT5 SIGMA CORP COM",
@@ -952,7 +944,7 @@
         "symbol": "ANF"
     },
     {
-        "name": "ANGI INC COM CL A NEW",
+        "name": "ANGI INC CL A NEW",
         "symbol": "ANGI"
     },
     {
@@ -1692,7 +1684,7 @@
         "symbol": "AXTI"
     },
     {
-        "name": "ACUITY BRANDS INC COM",
+        "name": "ACUITY INC COM",
         "symbol": "AYI"
     },
     {
@@ -2110,10 +2102,6 @@
     {
         "name": "BROOKFIELD INFRASTRUCTURE CORP COM SUB VTG A",
         "symbol": "BIPC"
-    },
-    {
-        "name": "ALLBIRDS INC CL A NEW",
-        "symbol": "BIRD"
     },
     {
         "name": "BIRKENSTOCK HOLDING PLC COM SHS",
@@ -2570,10 +2558,6 @@
     {
         "name": "BIT MINING LIMITED SPON ADR",
         "symbol": "BTCM"
-    },
-    {
-        "name": "BIOTRICITY INC COM NEW",
-        "symbol": "BTCY"
     },
     {
         "name": "T-Rex 2X Inverse Bitcoin Daily Target ETF",
@@ -5212,10 +5196,6 @@
         "symbol": "EDOC"
     },
     {
-        "name": "ENDEAVOR GROUP HLDGS INC CL A COM",
-        "symbol": "EDR"
-    },
-    {
         "name": "NEW ORIENTAL ED & TECHNOLOGY G SPON ADR",
         "symbol": "EDU"
     },
@@ -5322,10 +5302,6 @@
     {
         "name": "ELDORADO GOLD CORP NEW COM",
         "symbol": "EGO"
-    },
-    {
-        "name": "EAGLE PHARMACEUTICALS INC COM",
-        "symbol": "EGRX"
     },
     {
         "name": "VAALCO ENERGY INC COM NEW",
@@ -7324,10 +7300,6 @@
         "symbol": "GLRE"
     },
     {
-        "name": "GALECTO INC COM NEW",
-        "symbol": "GLTO"
-    },
-    {
         "name": "CORNING INC COM",
         "symbol": "GLW"
     },
@@ -7458,6 +7430,10 @@
     {
         "name": "TIDAL TR II YIELDMAX GOOGL",
         "symbol": "GOOY"
+    },
+    {
+        "name": "Unusual Whales Subversive Republican Trading ETF",
+        "symbol": "GOP"
     },
     {
         "name": "GOLD RESOURCE CORP COM",
@@ -7714,10 +7690,6 @@
     {
         "name": "TIDAL ETF TR GOTHAM 1000 VALU",
         "symbol": "GVLU"
-    },
-    {
-        "name": "ESS TECH INC COM NEW",
-        "symbol": "GWH"
     },
     {
         "name": "GUIDEWIRE SOFTWARE INC COM",
@@ -9720,7 +9692,7 @@
         "symbol": "KLIC"
     },
     {
-        "name": "KALARIS THERAPEUTICS INC",
+        "name": "KALARIS THERAPEUTICS INC COM",
         "symbol": "KLRS"
     },
     {
@@ -9882,10 +9854,6 @@
     {
         "name": "KIMBELL RTY PARTNERS LP UNIT",
         "symbol": "KRP"
-    },
-    {
-        "name": "Unusual Whales Subversive Republican Trading ETF",
-        "symbol": "KRUZ"
     },
     {
         "name": "KRYSTAL BIOTECH INC COM",
@@ -11588,7 +11556,7 @@
         "symbol": "NABL"
     },
     {
-        "name": "NIAGEN BIOSCIENCE INC",
+        "name": "NIAGEN BIOSCIENCE INC COM NEW",
         "symbol": "NAGE"
     },
     {
@@ -12484,7 +12452,7 @@
         "symbol": "OLPX"
     },
     {
-        "name": "OUTSET MED INC COM",
+        "name": "OUTSET MED INC COM NEW",
         "symbol": "OM"
     },
     {
@@ -12572,7 +12540,7 @@
         "symbol": "ONTO"
     },
     {
-        "name": "ORGANOVO HLDGS INC COM NEW",
+        "name": "ORGANOVO HLDGS INC COM",
         "symbol": "ONVO"
     },
     {
@@ -13548,11 +13516,11 @@
         "symbol": "PRDO"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR FTSE RAFI 1000",
+        "name": "INVESCO EXCHANGE TRADED FD TR RAFI US 1000 ETF",
         "symbol": "PRF"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR FTSE RAFI 1500",
+        "name": "INVESCO EXCHANGE TRADED FD TR RAFI US 1500",
         "symbol": "PRFZ"
     },
     {
@@ -13836,7 +13804,7 @@
         "symbol": "PXE"
     },
     {
-        "name": "INVESCO EXCH TRADED FD TR II FTSE RAFI EMNG",
+        "name": "INVESCO EXCH TRADED FD TR II RAFI EMRGNG MRKT",
         "symbol": "PXH"
     },
     {
@@ -16948,7 +16916,7 @@
         "symbol": "THD"
     },
     {
-        "name": "FIRST FINL CORP IND COM",
+        "name": "FIRST FINANCIAL CORPORATION COM",
         "symbol": "THFF"
     },
     {
@@ -17342,10 +17310,6 @@
     {
         "name": "TRIVAGO N V SPON ADS A SHS N",
         "symbol": "TRVG"
-    },
-    {
-        "name": "TREVENA INC COM",
-        "symbol": "TRVN"
     },
     {
         "name": "TRX GOLD CORPORATION COM",
