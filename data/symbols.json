@@ -624,10 +624,6 @@
         "symbol": "ALGN"
     },
     {
-        "name": "ALIGOS THERAPEUTICS INC COM NEW",
-        "symbol": "ALGS"
-    },
-    {
         "name": "ALLEGIANT TRAVEL CO COM",
         "symbol": "ALGT"
     },
@@ -718,10 +714,6 @@
     {
         "name": "ALTO INGREDIENTS INC COM",
         "symbol": "ALTO"
-    },
-    {
-        "name": "ALTAIR ENGR INC COM CL A",
-        "symbol": "ALTR"
     },
     {
         "name": "ALT5 SIGMA CORP COM",
@@ -952,7 +944,7 @@
         "symbol": "ANF"
     },
     {
-        "name": "ANGI INC COM CL A NEW",
+        "name": "ANGI INC CL A NEW",
         "symbol": "ANGI"
     },
     {
@@ -1188,7 +1180,7 @@
         "symbol": "ARKB"
     },
     {
-        "name": "ARK ETF TR FINTECH INNOVA",
+        "name": "ARK Fintech Innovation ETF",
         "symbol": "ARKF"
     },
     {
@@ -1196,7 +1188,7 @@
         "symbol": "ARKG"
     },
     {
-        "name": "ARK ETF TR INNOVATION ETF",
+        "name": "ARK Innovation ETF",
         "symbol": "ARKK"
     },
     {
@@ -1208,7 +1200,7 @@
         "symbol": "ARKQ"
     },
     {
-        "name": "ARK ETF TR NEXT GNRTN INTER",
+        "name": "ARK Next Generation Internet ETF",
         "symbol": "ARKW"
     },
     {
@@ -1692,7 +1684,7 @@
         "symbol": "AXTI"
     },
     {
-        "name": "ACUITY BRANDS INC COM",
+        "name": "ACUITY INC COM",
         "symbol": "AYI"
     },
     {
@@ -2110,10 +2102,6 @@
     {
         "name": "BROOKFIELD INFRASTRUCTURE CORP COM SUB VTG A",
         "symbol": "BIPC"
-    },
-    {
-        "name": "ALLBIRDS INC CL A NEW",
-        "symbol": "BIRD"
     },
     {
         "name": "BIRKENSTOCK HOLDING PLC COM SHS",
@@ -2572,10 +2560,6 @@
         "symbol": "BTCM"
     },
     {
-        "name": "BIOTRICITY INC COM NEW",
-        "symbol": "BTCY"
-    },
-    {
         "name": "T-Rex 2X Inverse Bitcoin Daily Target ETF",
         "symbol": "BTCZ"
     },
@@ -2666,6 +2650,10 @@
     {
         "name": "THE BALDWIN INSURANCE GRP INC COM CL A",
         "symbol": "BWIN"
+    },
+    {
+        "name": "BOWMAN CONSULTING GROUP LTD COM",
+        "symbol": "BWMN"
     },
     {
         "name": "BETTERWARE DE MEXC S A P I DE SHS",
@@ -3656,6 +3644,10 @@
         "symbol": "COF"
     },
     {
+        "name": "COGENT BIOSCIENCES INC COM",
+        "symbol": "COGT"
+    },
+    {
         "name": "COHERENT CORP COM",
         "symbol": "COHR"
     },
@@ -3986,6 +3978,10 @@
     {
         "name": "CROWN CRAFTS INC COM",
         "symbol": "CRWS"
+    },
+    {
+        "name": "COREWEAVE INC COM CL A",
+        "symbol": "CRWV"
     },
     {
         "name": "VICTORY PORTFOLIOS II VCSHS US SMCP HG",
@@ -4768,10 +4764,6 @@
         "symbol": "DLX"
     },
     {
-        "name": "DESKTOP METAL INC COM CL A",
-        "symbol": "DM"
-    },
-    {
         "name": "DIAMEDICA THERAPEUTICS INC COM NEW",
         "symbol": "DMAC"
     },
@@ -5208,14 +5200,6 @@
         "symbol": "EDIV"
     },
     {
-        "name": "GLOBAL X FDS TELMDC&DIG ETF",
-        "symbol": "EDOC"
-    },
-    {
-        "name": "ENDEAVOR GROUP HLDGS INC CL A COM",
-        "symbol": "EDR"
-    },
-    {
         "name": "NEW ORIENTAL ED & TECHNOLOGY G SPON ADR",
         "symbol": "EDU"
     },
@@ -5322,10 +5306,6 @@
     {
         "name": "ELDORADO GOLD CORP NEW COM",
         "symbol": "EGO"
-    },
-    {
-        "name": "EAGLE PHARMACEUTICALS INC COM",
-        "symbol": "EGRX"
     },
     {
         "name": "VAALCO ENERGY INC COM NEW",
@@ -6058,10 +6038,6 @@
     {
         "name": "GRANITESHARES ETF TR 2X LONG META DAI",
         "symbol": "FBL"
-    },
-    {
-        "name": "FIRST BANCSHARES INC MISS COM",
-        "symbol": "FBMS"
     },
     {
         "name": "FIRST BANCORP N C COM",
@@ -7324,10 +7300,6 @@
         "symbol": "GLRE"
     },
     {
-        "name": "GALECTO INC COM NEW",
-        "symbol": "GLTO"
-    },
-    {
         "name": "CORNING INC COM",
         "symbol": "GLW"
     },
@@ -7458,6 +7430,10 @@
     {
         "name": "TIDAL TR II YIELDMAX GOOGL",
         "symbol": "GOOY"
+    },
+    {
+        "name": "Unusual Whales Subversive Republican Trading ETF",
+        "symbol": "GOP"
     },
     {
         "name": "GOLD RESOURCE CORP COM",
@@ -7716,10 +7692,6 @@
         "symbol": "GVLU"
     },
     {
-        "name": "ESS TECH INC COM NEW",
-        "symbol": "GWH"
-    },
-    {
         "name": "GUIDEWIRE SOFTWARE INC COM",
         "symbol": "GWRE"
     },
@@ -7740,16 +7712,16 @@
         "symbol": "GXC"
     },
     {
+        "name": "GLOBAL X FDS DORSEY WRIGHT",
+        "symbol": "GXDW"
+    },
+    {
         "name": "GLOBAL X FDS GLBX MSCI COLUM",
         "symbol": "GXG"
     },
     {
         "name": "GXO LOGISTICS INCORPORATED COMMON STOCK",
         "symbol": "GXO"
-    },
-    {
-        "name": "GLOBAL X FDS THMATC GWT ETF",
-        "symbol": "GXTG"
     },
     {
         "name": "ARROW ETF TR ARROW DJ GLB YLD",
@@ -7890,6 +7862,10 @@
     {
         "name": "HAWAIIAN ELEC INDUSTRIES COM",
         "symbol": "HE"
+    },
+    {
+        "name": "GLOBAL X FDS HEALTHTECH ETF",
+        "symbol": "HEAL"
     },
     {
         "name": "WISDOMTREE TR EUROPE HEDGED EQ",
@@ -8114,6 +8090,10 @@
     {
         "name": "HOOKIPA PHARMA INC COM NEW",
         "symbol": "HOOK"
+    },
+    {
+        "name": "HOPE BANCORP INC COM",
+        "symbol": "HOPE"
     },
     {
         "name": "ANYWHERE REAL ESTATE INC COM",
@@ -9100,10 +9080,6 @@
         "symbol": "ITB"
     },
     {
-        "name": "INTRA-CELLULAR THERAPIES INC COM",
-        "symbol": "ITCI"
-    },
-    {
         "name": "AMPLIFY ETF TR AMPLIFY BLUESTAR",
         "symbol": "ITEQ"
     },
@@ -9154,10 +9130,6 @@
     {
         "name": "ISHARES TR CORE S&P US VLU",
         "symbol": "IUSV"
-    },
-    {
-        "name": "INTEVAC INC COM",
-        "symbol": "IVAC"
     },
     {
         "name": "ISHARES TR S&P 500 VAL ETF",
@@ -9496,6 +9468,10 @@
         "symbol": "JOE"
     },
     {
+        "name": "JOYY INC ADS REPSTG COM A",
+        "symbol": "JOYY"
+    },
+    {
         "name": "J P MORGAN EXCHANGE TRADED FD DIV RTN EM EQT",
         "symbol": "JPEM"
     },
@@ -9720,7 +9696,7 @@
         "symbol": "KLIC"
     },
     {
-        "name": "KALARIS THERAPEUTICS INC",
+        "name": "KALARIS THERAPEUTICS INC COM",
         "symbol": "KLRS"
     },
     {
@@ -9882,10 +9858,6 @@
     {
         "name": "KIMBELL RTY PARTNERS LP UNIT",
         "symbol": "KRP"
-    },
-    {
-        "name": "Unusual Whales Subversive Republican Trading ETF",
-        "symbol": "KRUZ"
     },
     {
         "name": "KRYSTAL BIOTECH INC COM",
@@ -10800,10 +10772,6 @@
         "symbol": "MDYV"
     },
     {
-        "name": "23ANDME HOLDING CO CL A NEW",
-        "symbol": "ME"
-    },
-    {
         "name": "MAYVILLE ENGR CO INC COM",
         "symbol": "MEC"
     },
@@ -10818,6 +10786,10 @@
     {
         "name": "MONTROSE ENVIRONMENTAL GROUP I COM",
         "symbol": "MEG"
+    },
+    {
+        "name": "23ANDME HOLDING CO CL A NEW",
+        "symbol": "MEHCQ"
     },
     {
         "name": "METHODE ELECTRS INC COM",
@@ -11022,6 +10994,10 @@
     {
         "name": "MELCO RESORTS AND ENTMNT LTD ADR",
         "symbol": "MLCO"
+    },
+    {
+        "name": "MICROALGO INC ORD SHS",
+        "symbol": "MLGO"
     },
     {
         "name": "MUELLER INDS INC COM",
@@ -11588,7 +11564,7 @@
         "symbol": "NABL"
     },
     {
-        "name": "NIAGEN BIOSCIENCE INC",
+        "name": "NIAGEN BIOSCIENCE INC COM NEW",
         "symbol": "NAGE"
     },
     {
@@ -11870,6 +11846,10 @@
     {
         "name": "ANNALY CAPITAL MANAGEMENT INC COM NEW",
         "symbol": "NLY"
+    },
+    {
+        "name": "NEWSMAX INC COM SHS CLASS B",
+        "symbol": "NMAX"
     },
     {
         "name": "NEW MTN FIN CORP COM",
@@ -12204,10 +12184,6 @@
         "symbol": "NVRI"
     },
     {
-        "name": "NEVRO CORP COM",
-        "symbol": "NVRO"
-    },
-    {
         "name": "NOVARTIS AG SPONSORED ADR",
         "symbol": "NVS"
     },
@@ -12400,7 +12376,7 @@
         "symbol": "OGE"
     },
     {
-        "name": "ORGANIGRAM HLDGS INC COM",
+        "name": "ORGANIGRAM GLOBAL INC COM",
         "symbol": "OGI"
     },
     {
@@ -12484,7 +12460,7 @@
         "symbol": "OLPX"
     },
     {
-        "name": "OUTSET MED INC COM",
+        "name": "OUTSET MED INC COM NEW",
         "symbol": "OM"
     },
     {
@@ -12572,7 +12548,7 @@
         "symbol": "ONTO"
     },
     {
-        "name": "ORGANOVO HLDGS INC COM NEW",
+        "name": "ORGANOVO HLDGS INC COM",
         "symbol": "ONVO"
     },
     {
@@ -13548,11 +13524,11 @@
         "symbol": "PRDO"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR FTSE RAFI 1000",
+        "name": "INVESCO EXCHANGE TRADED FD TR RAFI US 1000 ETF",
         "symbol": "PRF"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR FTSE RAFI 1500",
+        "name": "INVESCO EXCHANGE TRADED FD TR RAFI US 1500",
         "symbol": "PRFZ"
     },
     {
@@ -13618,6 +13594,10 @@
     {
         "name": "PROKIDNEY CORP CLASS A ORD SHS",
         "symbol": "PROK"
+    },
+    {
+        "name": "PRAIRIE OPER CO COM",
+        "symbol": "PROP"
     },
     {
         "name": "PROPHASE LABS INC COM",
@@ -13788,10 +13768,6 @@
         "symbol": "PTON"
     },
     {
-        "name": "PACTIV EVERGREEN INC COM",
-        "symbol": "PTVE"
-    },
-    {
         "name": "PUBMATIC INC COM CL A",
         "symbol": "PUBM"
     },
@@ -13836,7 +13812,7 @@
         "symbol": "PXE"
     },
     {
-        "name": "INVESCO EXCH TRADED FD TR II FTSE RAFI EMNG",
+        "name": "INVESCO EXCH TRADED FD TR II RAFI EMRGNG MRKT",
         "symbol": "PXH"
     },
     {
@@ -15004,7 +14980,7 @@
         "symbol": "SBCF"
     },
     {
-        "name": "SPLASH BEVERAGE GROUP INC COM NEW",
+        "name": "SPLASH BEVERAGE GROUP INC COM SHS",
         "symbol": "SBEV"
     },
     {
@@ -15420,7 +15396,7 @@
         "symbol": "SHOO"
     },
     {
-        "name": "SHOPIFY INC CL A",
+        "name": "SHOPIFY INC CL A SUB VTG SHS",
         "symbol": "SHOP"
     },
     {
@@ -16128,6 +16104,10 @@
         "symbol": "SPRX"
     },
     {
+        "name": "ARS PHARMACEUTICALS INC COM",
+        "symbol": "SPRY"
+    },
+    {
         "name": "SPDR SER TR PORTFOLIO SHORT",
         "symbol": "SPSB"
     },
@@ -16496,6 +16476,10 @@
         "symbol": "SUN"
     },
     {
+        "name": "SUNRISE RLTY TR INC COM",
+        "symbol": "SUNS"
+    },
+    {
         "name": "SUPERIOR INDS INTL INC COM",
         "symbol": "SUP"
     },
@@ -16718,10 +16702,6 @@
     {
         "name": "TABOOLA.COM LTD ORD SHS",
         "symbol": "TBLA"
-    },
-    {
-        "name": "TERRITORIAL BANCORP INC COM",
-        "symbol": "TBNK"
     },
     {
         "name": "THERAVANCE BIOPHARMA INC COM",
@@ -16948,7 +16928,7 @@
         "symbol": "THD"
     },
     {
-        "name": "FIRST FINL CORP IND COM",
+        "name": "FIRST FINANCIAL CORPORATION COM",
         "symbol": "THFF"
     },
     {
@@ -17344,8 +17324,8 @@
         "symbol": "TRVG"
     },
     {
-        "name": "TREVENA INC COM",
-        "symbol": "TRVN"
+        "name": "TREVI THERAPEUTICS INC COM",
+        "symbol": "TRVI"
     },
     {
         "name": "TRX GOLD CORPORATION COM",
@@ -18460,10 +18440,6 @@
         "symbol": "VOX"
     },
     {
-        "name": "VOXX INTL CORP CL A",
-        "symbol": "VOXX"
-    },
-    {
         "name": "VOYA FINANCIAL INC COM",
         "symbol": "VOYA"
     },
@@ -18916,7 +18892,7 @@
         "symbol": "WHR"
     },
     {
-        "name": "WIMI HOLOGRAM CLOUD INC SPON ADS CL B",
+        "name": "WIMI HOLOGRAM CLOUD INC SHS CL B",
         "symbol": "WIMI"
     },
     {
@@ -19046,6 +19022,10 @@
     {
         "name": "WARBY PARKER INC CL A COM",
         "symbol": "WRBY"
+    },
+    {
+        "name": "WERIDE INC SPONSORED ADS",
+        "symbol": "WRD"
     },
     {
         "name": "WORTHINGTON STL INC COM SHS",
@@ -19522,10 +19502,6 @@
     {
         "name": "PROSHARES TR SHT FTSE CHIN 50",
         "symbol": "YXI"
-    },
-    {
-        "name": "JOYY INC ADS REPSTG COM A",
-        "symbol": "YY"
     },
     {
         "name": "ZILLOW GROUP INC CL C CAP STK",
