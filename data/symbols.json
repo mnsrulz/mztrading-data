@@ -148,10 +148,6 @@
         "symbol": "ACB"
     },
     {
-        "name": "ACCOLADE INC COM",
-        "symbol": "ACCD"
-    },
-    {
         "name": "ACCO BRANDS CORP COM",
         "symbol": "ACCO"
     },
@@ -2574,6 +2570,10 @@
     {
         "name": "VALKYRIE ETF TRUST II COINSHARES VALKY",
         "symbol": "BTF"
+    },
+    {
+        "name": "VALKYRIE ETF TRUST II COINSHARES VALKY",
+        "symbol": "BTFX"
     },
     {
         "name": "B2GOLD CORP COM",
@@ -5728,6 +5728,10 @@
         "symbol": "EU"
     },
     {
+        "name": "Select STOXX Europe Aerospace & Defense ETF",
+        "symbol": "EUAD"
+    },
+    {
         "name": "ISHARES TR MSCI EURO FL ETF",
         "symbol": "EUFN"
     },
@@ -6228,6 +6232,10 @@
         "symbol": "FET"
     },
     {
+        "name": "Fidelity Ethereum Fund",
+        "symbol": "FETH"
+    },
+    {
         "name": "FIRST TR EXCH TRD ALPHDX FD II EURO ALPHADEX",
         "symbol": "FEUZ"
     },
@@ -6450,6 +6458,10 @@
     {
         "name": "FLOWSERVE CORP COM",
         "symbol": "FLS"
+    },
+    {
+        "name": "VANECK ETF TRUST IG FLOATING RATE",
+        "symbol": "FLTR"
     },
     {
         "name": "FLUTTER ENTMT PLC SHS",
@@ -7504,6 +7516,10 @@
         "symbol": "GPRO"
     },
     {
+        "name": "TIDAL TR II YIELDMAX AI & T",
+        "symbol": "GPTY"
+    },
+    {
         "name": "GRAB HOLDINGS LIMITED CLASS A ORD",
         "symbol": "GRAB"
     },
@@ -8404,6 +8420,10 @@
         "symbol": "IBRX"
     },
     {
+        "name": "IBOTTA INC CLASS A COM SHS",
+        "symbol": "IBTA"
+    },
+    {
         "name": "AMPLIFY ETF TR ONLIN RETL ETF",
         "symbol": "IBUY"
     },
@@ -9050,6 +9070,10 @@
     {
         "name": "ISPIRE TECHNOLOGY INC COM",
         "symbol": "ISPR"
+    },
+    {
+        "name": "ProShares S&P 500 High Income ETF",
+        "symbol": "ISPY"
     },
     {
         "name": "VANECK ETF TRUST ISRAEL ETF",
@@ -9736,6 +9760,10 @@
         "symbol": "KNF"
     },
     {
+        "name": "FIRST TR EXCHANGE TRADED FD VI FIRST TRUST S&P",
+        "symbol": "KNGZ"
+    },
+    {
         "name": "KNOT OFFSHORE PARTNERS LP COM UNITS",
         "symbol": "KNOP"
     },
@@ -10158,6 +10186,10 @@
     {
         "name": "LI AUTO INC SPONSORED ADS",
         "symbol": "LI"
+    },
+    {
+        "name": "LIFE360 INC COM",
+        "symbol": "LIF"
     },
     {
         "name": "LENNOX INTL INC COM",
@@ -13884,6 +13916,10 @@
         "symbol": "QGRO"
     },
     {
+        "name": "WISDOMTREE TR US QUALITY GROW",
+        "symbol": "QGRW"
+    },
+    {
         "name": "PROSHARES TR ULTRASHORT QQQ",
         "symbol": "QID"
     },
@@ -15052,6 +15088,10 @@
         "symbol": "SCHH"
     },
     {
+        "name": "SCHWAB STRATEGIC TR 5 10YR CORP BD",
+        "symbol": "SCHI"
+    },
+    {
         "name": "SCHWAB STRATEGIC TR 1000 INDEX ETF",
         "symbol": "SCHK"
     },
@@ -15332,6 +15372,10 @@
         "symbol": "SGOL"
     },
     {
+        "name": "ISHARES TR 0-3 MNTH TREASRY",
+        "symbol": "SGOV"
+    },
+    {
         "name": "SURGERY PARTNERS INC COM",
         "symbol": "SGRY"
     },
@@ -15370,6 +15414,10 @@
     {
         "name": "SEANERGY MARITIME HLDGS CORP SHS",
         "symbol": "SHIP"
+    },
+    {
+        "name": "GLOBAL X FDS DEFENSE TECH ETF",
+        "symbol": "SHLD"
     },
     {
         "name": "SHOALS TECHNOLOGIES GROUP INC CL A",
@@ -16796,6 +16844,10 @@
         "symbol": "TECS"
     },
     {
+        "name": "TECTONIC THERAPEUTIC INC COM",
+        "symbol": "TECX"
+    },
+    {
         "name": "TELEFONICA S A SPONSORED ADR",
         "symbol": "TEF"
     },
@@ -17180,7 +17232,7 @@
         "symbol": "TPR"
     },
     {
-        "name": "TEMPEST THERAPEUTICS INC COM",
+        "name": "TEMPEST THERAPEUTICS INC COM NEW",
         "symbol": "TPST"
     },
     {
@@ -19152,6 +19204,10 @@
         "symbol": "XBIT"
     },
     {
+        "name": "COLUMBIA ETF TR II EM CORE EX ETF",
+        "symbol": "XCEM"
+    },
+    {
         "name": "Roundhill S&P 500 0DTE Covered Call Strategy ETF",
         "symbol": "XDTE"
     },
@@ -19246,6 +19302,10 @@
     {
         "name": "SELECT SECTOR SPDR TR SBI CONS DISCR",
         "symbol": "XLY"
+    },
+    {
+        "name": "TIDAL TR II DEFIANCE LARGE",
+        "symbol": "XMAG"
     },
     {
         "name": "SPDR SER TR S&P METALS MNG",
