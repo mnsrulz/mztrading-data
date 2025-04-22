@@ -488,7 +488,7 @@
         "symbol": "AIA"
     },
     {
-        "name": "AIX INC SPONSORED ADS",
+        "name": "AIFU INC",
         "symbol": "AIFU"
     },
     {
@@ -3496,10 +3496,6 @@
         "symbol": "CMRE"
     },
     {
-        "name": "CHIMERIX INC COM",
-        "symbol": "CMRX"
-    },
-    {
         "name": "CMS ENERGY CORP COM",
         "symbol": "CMS"
     },
@@ -5444,6 +5440,10 @@
         "symbol": "ENVX"
     },
     {
+        "name": "ENZO BIOCHEM INC COM",
+        "symbol": "ENZB"
+    },
+    {
         "name": "ISHARES TR NEW ZEALAND ETF",
         "symbol": "ENZL"
     },
@@ -5514,10 +5514,6 @@
     {
         "name": "EQUITY BANCSHARES INC COM CL A",
         "symbol": "EQBK"
-    },
-    {
-        "name": "EQUITY COMWLTH COM SH BEN INT",
-        "symbol": "EQC"
     },
     {
         "name": "EQUITABLE HLDGS INC COM",
