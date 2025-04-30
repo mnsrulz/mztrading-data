@@ -488,7 +488,7 @@
         "symbol": "AIA"
     },
     {
-        "name": "AIX INC SPONSORED ADS",
+        "name": "AIFU INC SPONSORED ADS",
         "symbol": "AIFU"
     },
     {
@@ -666,6 +666,10 @@
     {
         "name": "ALLY FINL INC COM",
         "symbol": "ALLY"
+    },
+    {
+        "name": "ALUMIS INC COM",
+        "symbol": "ALMS"
     },
     {
         "name": "ALLIENT INC COM",
@@ -1304,6 +1308,10 @@
         "symbol": "ASLE"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "ASMG"
+    },
+    {
         "name": "ASML HOLDING N V N Y REGISTRY SHS",
         "symbol": "ASML"
     },
@@ -1592,10 +1600,6 @@
         "symbol": "AVT"
     },
     {
-        "name": "AEROVATE THERAPEUTICS INC COM",
-        "symbol": "AVTE"
-    },
-    {
         "name": "AVANTOR INC COM",
         "symbol": "AVTR"
     },
@@ -1710,6 +1714,14 @@
     {
         "name": "BOOZ ALLEN HAMILTON HLDG CORP CL A",
         "symbol": "BAH"
+    },
+    {
+        "name": "BLACKROCK ETF TRUST ISHARES A I INNO",
+        "symbol": "BAI"
+    },
+    {
+        "name": "iShares Advantage Large Cap Income ETF",
+        "symbol": "BALI"
     },
     {
         "name": "BALL CORP COM",
@@ -1916,10 +1928,6 @@
         "symbol": "BEAM"
     },
     {
-        "name": "BEACON ROOFING SUPPLY INC COM",
-        "symbol": "BECN"
-    },
-    {
         "name": "BEAM GLOBAL COM",
         "symbol": "BEEM"
     },
@@ -1938,10 +1946,6 @@
     {
         "name": "BROOKFIELD RENEWABLE CORP CL A EX SUB VTG",
         "symbol": "BEPC"
-    },
-    {
-        "name": "BERRY GLOBAL GROUP INC COM",
-        "symbol": "BERY"
     },
     {
         "name": "LISTED FDS TR ROUNDHILL SPORTS",
@@ -2348,6 +2352,10 @@
         "symbol": "BNT"
     },
     {
+        "name": "BENITEC BIOPHARMA INC COM NEW",
+        "symbol": "BNTC"
+    },
+    {
         "name": "BIONTECH SE SPONSORED ADS",
         "symbol": "BNTX"
     },
@@ -2586,6 +2594,10 @@
     {
         "name": "GLOBAL X FDS CYBRSCURTY ETF",
         "symbol": "BUG"
+    },
+    {
+        "name": "WEBULL CORP ORD SHS",
+        "symbol": "BULL"
     },
     {
         "name": "BURFORD CAP LTD ORD SHS",
@@ -3076,6 +3088,10 @@
         "symbol": "CENX"
     },
     {
+        "name": "CANTOR EQUITY PARTNERS INC SHS CL A",
+        "symbol": "CEP"
+    },
+    {
         "name": "ETF OPPORTUNITIES TRUST REX CRYPTO EQUIT",
         "symbol": "CEPI"
     },
@@ -3090,6 +3106,10 @@
     {
         "name": "CERTARA INC COM",
         "symbol": "CERT"
+    },
+    {
+        "name": "SPDR SERIES TRUST BLOOMBERG ENHNCD",
+        "symbol": "CERY"
     },
     {
         "name": "CEVA INC COM",
@@ -3496,10 +3516,6 @@
         "symbol": "CMRE"
     },
     {
-        "name": "CHIMERIX INC COM",
-        "symbol": "CMRX"
-    },
-    {
         "name": "CMS ENERGY CORP COM",
         "symbol": "CMS"
     },
@@ -3820,6 +3836,10 @@
         "symbol": "CPT"
     },
     {
+        "name": "TIDAL TRUST III USCF DLY TRGT 2X",
+        "symbol": "CPXR"
+    },
+    {
         "name": "CHENIERE ENERGY PARTNERS LP COM UNIT",
         "symbol": "CQP"
     },
@@ -4054,6 +4074,10 @@
     {
         "name": "CANTALOUPE INC COM",
         "symbol": "CTLP"
+    },
+    {
+        "name": "CONTINEUM THERAPEUTICS INC CL A",
+        "symbol": "CTNM"
     },
     {
         "name": "CTO RLTY GROWTH INC NEW COM",
@@ -4480,7 +4504,7 @@
         "symbol": "DE"
     },
     {
-        "name": "EASTERLY GOVT PPTYS INC COM",
+        "name": "EASTERLY GOVT PPTYS INC COM SHS",
         "symbol": "DEA"
     },
     {
@@ -4945,7 +4969,7 @@
     },
     {
         "name": "SOLO BRANDS INC COM CL A",
-        "symbol": "DTC"
+        "symbol": "DTCB"
     },
     {
         "name": "DTE ENERGY CO COM",
@@ -5070,6 +5094,10 @@
     {
         "name": "DYNE THERAPEUTICS INC COM",
         "symbol": "DYN"
+    },
+    {
+        "name": "BLACKROCK ETF TRUST ISHARES US EQUIT",
+        "symbol": "DYNF"
     },
     {
         "name": "ENI S P A SPONSORED ADR",
@@ -5444,6 +5472,10 @@
         "symbol": "ENVX"
     },
     {
+        "name": "ENZO BIOCHEM INC COM",
+        "symbol": "ENZB"
+    },
+    {
         "name": "ISHARES TR NEW ZEALAND ETF",
         "symbol": "ENZL"
     },
@@ -5514,10 +5546,6 @@
     {
         "name": "EQUITY BANCSHARES INC COM CL A",
         "symbol": "EQBK"
-    },
-    {
-        "name": "EQUITY COMWLTH COM SH BEN INT",
-        "symbol": "EQC"
     },
     {
         "name": "EQUITABLE HLDGS INC COM",
@@ -5712,6 +5740,10 @@
         "symbol": "EUAD"
     },
     {
+        "name": "WISDOMTREE TR EURO QTLY DIV GR",
+        "symbol": "EUDG"
+    },
+    {
         "name": "ISHARES TR MSCI EURO FL ETF",
         "symbol": "EUFN"
     },
@@ -5726,6 +5758,10 @@
     {
         "name": "DIREXION SHS ETF TR DLY FTS BUL 3X",
         "symbol": "EURL"
+    },
+    {
+        "name": "WISDOMTREE TR EUR HDG SMLCAP",
+        "symbol": "EUSC"
     },
     {
         "name": "ENTRAVISION COMMUNICATIONS CP CL A",
@@ -6376,6 +6412,14 @@
         "symbol": "FLAX"
     },
     {
+        "name": "FRANKLIN TEMPLETON ETF TR FTSE EUROPE",
+        "symbol": "FLEE"
+    },
+    {
+        "name": "FRANKLIN TEMPLETON ETF TR FRANKLIN FTSE",
+        "symbol": "FLEU"
+    },
+    {
         "name": "FLEX LTD ORD",
         "symbol": "FLEX"
     },
@@ -6384,8 +6428,16 @@
         "symbol": "FLG"
     },
     {
+        "name": "FRANKLIN TEMPLETON ETF TR FTSE GERMANY",
+        "symbol": "FLGR"
+    },
+    {
         "name": "FULGENT GENETICS INC COM",
         "symbol": "FLGT"
+    },
+    {
+        "name": "FRANKLIN TEMPLETON ETF TR FRANKLIN INDIA",
+        "symbol": "FLIN"
     },
     {
         "name": "FRANKLIN TEMPLETON ETF TR FTSE JAPAN HDG",
@@ -6522,6 +6574,10 @@
     {
         "name": "FIDELITY NATIONAL FINANCIAL IN FNF GROUP COM",
         "symbol": "FNF"
+    },
+    {
+        "name": "DIREXION SHS ETF TR DAILY NYSE FANG",
+        "symbol": "FNGG"
     },
     {
         "name": "FINGERMOTION INC COM",
@@ -7284,6 +7340,10 @@
         "symbol": "GLRE"
     },
     {
+        "name": "MONTE ROSA THERAPEUTICS INC COM",
+        "symbol": "GLUE"
+    },
+    {
         "name": "CORNING INC COM",
         "symbol": "GLW"
     },
@@ -7302,6 +7362,10 @@
     {
         "name": "GLOBUS MED INC CL A",
         "symbol": "GMED"
+    },
+    {
+        "name": "T-REX 2X Long GME Daily Target ETF",
+        "symbol": "GMEU"
     },
     {
         "name": "SPDR INDEX SHS FDS ASIA PACIF ETF",
@@ -7452,11 +7516,11 @@
         "symbol": "GPI"
     },
     {
-        "name": "GOLDMAN SACHS ETF TR NASDAQ 100 CORE",
+        "name": "GOLDMAN SACHS NASDAQ-100 PREMI",
         "symbol": "GPIQ"
     },
     {
-        "name": "GOLDMAN SACHS ETF TR S&P 500 CORE PRE",
+        "name": "GOLDMAN SACHS S&P 500 PREMIUM",
         "symbol": "GPIX"
     },
     {
@@ -7712,6 +7776,10 @@
         "symbol": "GYLD"
     },
     {
+        "name": "GYRE THERAPEUTICS INC COM",
+        "symbol": "GYRE"
+    },
+    {
         "name": "HYATT HOTELS CORP COM CL A",
         "symbol": "H"
     },
@@ -7830,10 +7898,6 @@
     {
         "name": "ADVISORSHARES TR RANGER EQUITY BE",
         "symbol": "HDGE"
-    },
-    {
-        "name": "ETF SER SOLUTIONS DEFIANCE NEXT GE",
-        "symbol": "HDRO"
     },
     {
         "name": "HUDSON TECHNOLOGIES INC COM",
@@ -8432,7 +8496,7 @@
         "symbol": "ICOP"
     },
     {
-        "name": "iShares Ultra Short-Term Bond Active ETF",
+        "name": "iShares Ultra Short Duration Bond Active ETF",
         "symbol": "ICSH"
     },
     {
@@ -9340,6 +9404,10 @@
         "symbol": "JBI"
     },
     {
+        "name": "JADE BIOSCIENCES INC COM NEW",
+        "symbol": "JBIO"
+    },
+    {
         "name": "JABIL INC COM",
         "symbol": "JBL"
     },
@@ -10084,6 +10152,10 @@
         "symbol": "LEN"
     },
     {
+        "name": "LENZ THERAPEUTICS INC COM",
+        "symbol": "LENZ"
+    },
+    {
         "name": "LESLIES INC COM",
         "symbol": "LESL"
     },
@@ -10668,6 +10740,10 @@
         "symbol": "MBWM"
     },
     {
+        "name": "MBX BIOSCIENCES INC COM",
+        "symbol": "MBX"
+    },
+    {
         "name": "MOELIS & CO CL A",
         "symbol": "MC"
     },
@@ -10700,7 +10776,7 @@
         "symbol": "MCO"
     },
     {
-        "name": "SERES THERAPEUTICS INC COM",
+        "name": "SERES THERAPEUTICS INC COM NEW",
         "symbol": "MCRB"
     },
     {
@@ -10966,10 +11042,6 @@
     {
         "name": "MCCORMICK & CO INC COM NON VTG",
         "symbol": "MKC"
-    },
-    {
-        "name": "MARKFORGED HOLDING CORPORATION COM NEW",
-        "symbol": "MKFG"
     },
     {
         "name": "MARKEL GROUP INC COM",
@@ -12124,6 +12196,10 @@
         "symbol": "NVDD"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "NVDG"
+    },
+    {
         "name": "GRANITESHARES ETF TR 2X LONG NVDA DAI",
         "symbol": "NVDL"
     },
@@ -12538,10 +12614,6 @@
     {
         "name": "ONTO INNOVATION INC COM",
         "symbol": "ONTO"
-    },
-    {
-        "name": "ORGANOVO HLDGS INC COM",
-        "symbol": "ONVO"
     },
     {
         "name": "OOMA INC COM",
@@ -13482,6 +13554,10 @@
     {
         "name": "ABRDN PLATINUM ETF TRUST PHYSCL PLATM SHS",
         "symbol": "PPLT"
+    },
+    {
+        "name": "PERPETUA RESOURCES CORP COM",
+        "symbol": "PPTA"
     },
     {
         "name": "PERMIAN RESOURCES CORP CLASS A COM",
@@ -15268,6 +15344,10 @@
         "symbol": "SEVN"
     },
     {
+        "name": "SEZZLE INC COM",
+        "symbol": "SEZL"
+    },
+    {
         "name": "STIFEL FINL CORP COM",
         "symbol": "SF"
     },
@@ -15838,6 +15918,10 @@
     {
         "name": "SMITH & NEPHEW PLC SPDN ADR NEW",
         "symbol": "SNN"
+    },
+    {
+        "name": "T-REX 2X Long SNOW Daily Target ETF",
+        "symbol": "SNOU"
     },
     {
         "name": "SNOWFLAKE INC CL A",
@@ -16948,6 +17032,10 @@
         "symbol": "THRM"
     },
     {
+        "name": "BLACKROCK ETF TRUST ISHARES US THEMA",
+        "symbol": "THRO"
+    },
+    {
         "name": "THRYV HLDGS INC COM NEW",
         "symbol": "THRY"
     },
@@ -17362,6 +17450,10 @@
     {
         "name": "TESLA INC COM",
         "symbol": "TSLA"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "TSLG"
     },
     {
         "name": "DIREXION SHS ETF TR DAILY TSLA 2X SH",
@@ -18312,6 +18404,10 @@
         "symbol": "VIV"
     },
     {
+        "name": "VIVOSIM LABS INC COM",
+        "symbol": "VIVS"
+    },
+    {
         "name": "CBOE Volatility Index",
         "symbol": "VIX"
     },
@@ -19200,7 +19296,7 @@
         "symbol": "XES"
     },
     {
-        "name": "X4 PHARMACEUTICALS INC COM",
+        "name": "X4 PHARMACEUTICALS INC COM NEW",
         "symbol": "XFOR"
     },
     {
