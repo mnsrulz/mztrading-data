@@ -7516,11 +7516,11 @@
         "symbol": "GPI"
     },
     {
-        "name": "GOLDMAN SACHS NASDAQ-100 PREMI",
+        "name": "GOLDMAN SACHS ETF TR NASDAQ-100 PREMI",
         "symbol": "GPIQ"
     },
     {
-        "name": "GOLDMAN SACHS S&P 500 PREMIUM",
+        "name": "GOLDMAN SACHS ETF TR S&P 500 PREMIUM",
         "symbol": "GPIX"
     },
     {
@@ -11612,10 +11612,6 @@
         "symbol": "MYRG"
     },
     {
-        "name": "MYT NETHERLANDS PARENT B V ADS",
-        "symbol": "MYTE"
-    },
-    {
         "name": "PROSHARES TR PSHS SH MDCAP400",
         "symbol": "MYY"
     },
@@ -14240,7 +14236,7 @@
         "symbol": "RDNT"
     },
     {
-        "name": "Roundhill Small Cap 0DTE Covered Call Strategy ETF",
+        "name": "Roundhill Russell 2000 0DTE Covered Call Strategy ETF",
         "symbol": "RDTE"
     },
     {
