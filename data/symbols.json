@@ -256,7 +256,7 @@
         "symbol": "ACWX"
     },
     {
-        "name": "ADAPTIMMUNE THERAPEUTICS PLC SPONDS ADR",
+        "name": "ADAPTIMMUNE THERAPEUTICS PLC SPONDS ADS",
         "symbol": "ADAP"
     },
     {
@@ -3488,10 +3488,6 @@
         "symbol": "CMI"
     },
     {
-        "name": "CUMULUS MEDIA INC COM CL A",
-        "symbol": "CMLS"
-    },
-    {
         "name": "COMPASS MINERALS INTL INC COM",
         "symbol": "CMP"
     },
@@ -3700,7 +3696,7 @@
         "symbol": "CON"
     },
     {
-        "name": "GRANITESHARES ETF TR 1X SHORT COIN",
+        "name": "GRANITESHARES 2X SHORT COIN DA",
         "symbol": "CONI"
     },
     {
@@ -4158,10 +4154,6 @@
     {
         "name": "INVESCO EXCH TRADED FD TR II MSCI GBL TIMBR",
         "symbol": "CUT"
-    },
-    {
-        "name": "CUTERA INC COM",
-        "symbol": "CUTRQ"
     },
     {
         "name": "COUSINS PPTYS INC COM NEW",
@@ -10522,6 +10514,10 @@
     {
         "name": "SOUTHWEST AIRLS CO COM",
         "symbol": "LUV"
+    },
+    {
+        "name": "LUXEXPERIENCE BV SPONSORED ADS",
+        "symbol": "LUXE"
     },
     {
         "name": "LULUS FASHION LOUNGE HOLDINGS COM",
