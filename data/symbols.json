@@ -652,10 +652,6 @@
         "symbol": "ALLE"
     },
     {
-        "name": "ALLAKOS INC COM",
-        "symbol": "ALLK"
-    },
-    {
         "name": "ALLOGENE THERAPEUTICS INC COM",
         "symbol": "ALLO"
     },
@@ -1512,6 +1508,10 @@
         "symbol": "AVB"
     },
     {
+        "name": "ARRIVENT BIOPHARMA INC COM",
+        "symbol": "AVBP"
+    },
+    {
         "name": "AMERICAN VANGUARD CORP COM",
         "symbol": "AVD"
     },
@@ -1604,6 +1604,10 @@
         "symbol": "AVTR"
     },
     {
+        "name": "AVALO THERAPEUTICS INC COM NEW",
+        "symbol": "AVTX"
+    },
+    {
         "name": "ANAVEX LIFE SCIENCES CORP COM NEW",
         "symbol": "AVXL"
     },
@@ -1637,7 +1641,7 @@
     },
     {
         "name": "ACCELERATE DIAGNOSTICS INC COM NEW",
-        "symbol": "AXDX"
+        "symbol": "AXDXQ"
     },
     {
         "name": "AXOGEN INC COM",
@@ -1698,6 +1702,10 @@
     {
         "name": "AZZ INC COM",
         "symbol": "AZZ"
+    },
+    {
+        "name": "BARRICK MNG CORP COM SHS",
+        "symbol": "B"
     },
     {
         "name": "BOEING CO COM",
@@ -1866,10 +1874,6 @@
     {
         "name": "ABRDN ETFS BBG INDUSTRL MET",
         "symbol": "BCIM"
-    },
-    {
-        "name": "BRAINSTORM CELL THERAPEUTICS I COM",
-        "symbol": "BCLI"
     },
     {
         "name": "BAYCOM CORP COM",
@@ -3696,7 +3700,7 @@
         "symbol": "CON"
     },
     {
-        "name": "GRANITESHARES 2X SHORT COIN DA",
+        "name": "GRANITESHARES ETF TR 2X SHORT COIN",
         "symbol": "CONI"
     },
     {
@@ -4532,10 +4536,6 @@
         "symbol": "DESK"
     },
     {
-        "name": "DESPEGAR COM CORP ORD SHS",
-        "symbol": "DESP"
-    },
-    {
         "name": "DIMENSIONAL ETF TRUST US REAL ESTATE E",
         "symbol": "DFAR"
     },
@@ -4582,10 +4582,6 @@
     {
         "name": "Davis Select Financial ETF",
         "symbol": "DFNL"
-    },
-    {
-        "name": "DISCOVER FINL SVCS COM",
-        "symbol": "DFS"
     },
     {
         "name": "DIMENSIONAL ETF TRUST US SMALL CAP VAL",
@@ -4726,6 +4722,10 @@
     {
         "name": "DLH HLDGS CORP COM",
         "symbol": "DLHC"
+    },
+    {
+        "name": "GRANITESHARES ETF TR 2X LONG DELL DAI",
+        "symbol": "DLLL"
     },
     {
         "name": "WISDOMTREE TR US LARGECAP DIVD",
@@ -5112,10 +5112,6 @@
         "symbol": "EAT"
     },
     {
-        "name": "VegTech Food Innovation & Climate ETF",
-        "symbol": "EATV"
-    },
-    {
         "name": "EVENTBRITE INC COM CL A",
         "symbol": "EB"
     },
@@ -5370,6 +5366,10 @@
     {
         "name": "COMPANHIA PARANAENSE DE ENERGI SPON ADS",
         "symbol": "ELP"
+    },
+    {
+        "name": "ELICIO THERAPEUTICS INC COM",
+        "symbol": "ELTX"
     },
     {
         "name": "ELEVANCE HEALTH INC COM",
@@ -5628,6 +5628,10 @@
         "symbol": "ESI"
     },
     {
+        "name": "iShares ESG Aware MSCI USA Small-Cap ETF",
+        "symbol": "ESML"
+    },
+    {
         "name": "ESSENT GROUP LTD COM",
         "symbol": "ESNT"
     },
@@ -5752,7 +5756,7 @@
         "symbol": "EURL"
     },
     {
-        "name": "WISDOMTREE TR EUR HDG SMLCAP",
+        "name": "WISDOMTREE TR EUROPEAN OPPORTU",
         "symbol": "EUSC"
     },
     {
@@ -6384,7 +6388,7 @@
         "symbol": "FIX"
     },
     {
-        "name": "FIRST TR EXCHNG TRADED FD VIII TCW OPPORTUNIS",
+        "name": "FIRST TR EXCHNG TRADED FD VIII SMITH OPPORT FXD",
         "symbol": "FIXD"
     },
     {
@@ -7436,10 +7440,6 @@
         "symbol": "GOGO"
     },
     {
-        "name": "BARRICK GOLD CORP COM",
-        "symbol": "GOLD"
-    },
-    {
         "name": "ACUSHNET HLDGS CORP COM",
         "symbol": "GOLF"
     },
@@ -7690,6 +7690,10 @@
     {
         "name": "CHART INDS INC COM",
         "symbol": "GTLS"
+    },
+    {
+        "name": "ZOOMINFO TECHNOLOGIES INC COMMON STOCK",
+        "symbol": "GTM"
     },
     {
         "name": "GRAY MEDIA INC COM",
@@ -8948,6 +8952,10 @@
         "symbol": "INTU"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG INTC DAI",
+        "symbol": "INTW"
+    },
+    {
         "name": "INNOVIVA INC COM",
         "symbol": "INVA"
     },
@@ -10192,14 +10200,6 @@
         "symbol": "LFWD"
     },
     {
-        "name": "LIONS GATE ENTMNT CORP CL A VTG",
-        "symbol": "LGF.A"
-    },
-    {
-        "name": "LIONS GATE ENTMNT CORP CL B NON VTG",
-        "symbol": "LGF.B"
-    },
-    {
         "name": "LGI HOMES INC COM",
         "symbol": "LGIH"
     },
@@ -10250,6 +10250,10 @@
     {
         "name": "LINEAGE INC COM",
         "symbol": "LINE"
+    },
+    {
+        "name": "LIONSGATE STUDIOS CORP COM",
+        "symbol": "LION"
     },
     {
         "name": "GLOBAL X FDS LITHIUM BTRY ETF",
@@ -11044,7 +11048,7 @@
         "symbol": "MKL"
     },
     {
-        "name": "MKS INSTRS INC COM",
+        "name": "MKS INC. COM",
         "symbol": "MKSI"
     },
     {
@@ -11276,7 +11280,7 @@
         "symbol": "MQ"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG TR",
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X INNOVAT",
         "symbol": "MQQQ"
     },
     {
@@ -12488,10 +12492,6 @@
         "symbol": "OKTA"
     },
     {
-        "name": "ONKURE THERAPEUTICS INC COM CL A",
-        "symbol": "OKUR"
-    },
-    {
         "name": "UNIVERSAL DISPLAY CORP COM",
         "symbol": "OLED"
     },
@@ -12660,16 +12660,12 @@
         "symbol": "OPTT"
     },
     {
-        "name": "OSISKO GOLD ROYALTIES LTD COM",
+        "name": "OR ROYALTIES INC. COM SHS",
         "symbol": "OR"
     },
     {
         "name": "ORMAT TECHNOLOGIES INC COM",
         "symbol": "ORA"
-    },
-    {
-        "name": "ORANGE SPONSORED ADR",
-        "symbol": "ORANY"
     },
     {
         "name": "ORCHID IS CAP INC COM NEW",
@@ -12686,10 +12682,6 @@
     {
         "name": "ORGANOGENESIS HLDGS INC COM",
         "symbol": "ORGO"
-    },
-    {
-        "name": "ORGENESIS INC COM",
-        "symbol": "ORGS"
     },
     {
         "name": "OLD REP INTL CORP COM",
@@ -13488,6 +13480,10 @@
         "symbol": "POET"
     },
     {
+        "name": "PONY AI INC SPONSORED ADS",
+        "symbol": "PONY"
+    },
+    {
         "name": "POOL CORP COM",
         "symbol": "POOL"
     },
@@ -13508,7 +13504,7 @@
         "symbol": "POWL"
     },
     {
-        "name": "AMMO INC COM",
+        "name": "OUTDOOR HOLDING CO COM",
         "symbol": "POWW"
     },
     {
@@ -13812,12 +13808,12 @@
         "symbol": "PTMN"
     },
     {
-        "name": "PALATIN TECHNOLOGIES INC COM NEW",
-        "symbol": "PTN"
-    },
-    {
         "name": "PACER FDS TR TRENDPILOT 100",
         "symbol": "PTNQ"
+    },
+    {
+        "name": "PALATIN TECHNOLOGIES INC COM NEW",
+        "symbol": "PTNT"
     },
     {
         "name": "PELOTON INTERACTIVE INC CL A COM",
@@ -14020,7 +14016,7 @@
         "symbol": "QQQM"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LNG TRI",
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X INNOVAT",
         "symbol": "QQQP"
     },
     {
@@ -14564,16 +14560,16 @@
         "symbol": "RNA"
     },
     {
+        "name": "CARTESIAN THERAPEUTICS INC COM NEW",
+        "symbol": "RNAC"
+    },
+    {
         "name": "RINGCENTRAL INC CL A",
         "symbol": "RNG"
     },
     {
         "name": "RANGER ENERGY SVCS INC COM CL A",
         "symbol": "RNGR"
-    },
-    {
-        "name": "RENALYTIX PLC SPON ADS",
-        "symbol": "RNLXY"
     },
     {
         "name": "RENAISSANCERE HLDGS LTD COM",
@@ -14982,10 +14978,6 @@
     {
         "name": "SANMINA CORPORATION COM",
         "symbol": "SANM"
-    },
-    {
-        "name": "S&W SEED CO COM NEW",
-        "symbol": "SANW"
     },
     {
         "name": "SAP SE SPON ADR",
@@ -15688,7 +15680,7 @@
         "symbol": "SLG"
     },
     {
-        "name": "SOL GEL TECHNOLOGIES SHS",
+        "name": "SOL GEL TECHNOLOGIES SHS NEW",
         "symbol": "SLGL"
     },
     {
@@ -17280,7 +17272,7 @@
         "symbol": "TPVG"
     },
     {
-        "name": "MANAGED PORTFOLIO SERIES TORTOISE NRAM PI",
+        "name": "TORTOISE CAPITAL SERIES TRUST NORTH AMERN PIPE",
         "symbol": "TPYP"
     },
     {
@@ -17500,10 +17492,6 @@
         "symbol": "TSSI"
     },
     {
-        "name": "2SEVENTY BIO INC COMMON STOCK",
-        "symbol": "TSVT"
-    },
-    {
         "name": "Roundhill TSLA WeeklyPay ETF",
         "symbol": "TSW"
     },
@@ -17702,10 +17690,6 @@
     {
         "name": "CVR PARTNERS LP COM",
         "symbol": "UAN"
-    },
-    {
-        "name": "AGEAGLE AERIAL SYS INC NEW COM SHS",
-        "symbol": "UAVS"
     },
     {
         "name": "UBER TECHNOLOGIES INC COM",
@@ -17926,10 +17910,6 @@
     {
         "name": "UPWORK INC COM",
         "symbol": "UPWK"
-    },
-    {
-        "name": "UPEXI INC COM NEW",
-        "symbol": "UPXI"
     },
     {
         "name": "GLOBAL X FDS GLOBAL X URANIUM",
@@ -18580,10 +18560,6 @@
         "symbol": "VREX"
     },
     {
-        "name": "VEREN INC COM NEW",
-        "symbol": "VRN"
-    },
-    {
         "name": "VERONA PHARMA PLC SPONSORED ADS",
         "symbol": "VRNA"
     },
@@ -19208,10 +19184,6 @@
         "symbol": "WVE"
     },
     {
-        "name": "WW INTL INC COM",
-        "symbol": "WW"
-    },
-    {
         "name": "WOODWARD INC COM",
         "symbol": "WWD"
     },
@@ -19406,6 +19378,10 @@
     {
         "name": "SPDR SERIES TRUST S&P OILGAS EXP",
         "symbol": "XOP"
+    },
+    {
+        "name": "ENTREPRENEURSHARES SERIES TRUS ERSHARES PRIVATE",
+        "symbol": "XOVR"
     },
     {
         "name": "XP INC CL A",
@@ -19650,10 +19626,6 @@
     {
         "name": "ZHIHU INC SPONSORED ADS",
         "symbol": "ZH"
-    },
-    {
-        "name": "ZOOMINFO TECHNOLOGIES INC COMMON STOCK",
-        "symbol": "ZI"
     },
     {
         "name": "ZIM INTEGRATED SHIPPING SERV SHS",
