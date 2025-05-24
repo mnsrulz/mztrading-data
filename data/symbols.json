@@ -6160,7 +6160,7 @@
         "symbol": "FDIS"
     },
     {
-        "name": "FIRST TR MORNINGSTAR DIVID LEA SHS",
+        "name": "FIRST TR EXCHANGE-TRADED FD SHS",
         "symbol": "FDL"
     },
     {
@@ -6264,7 +6264,7 @@
         "symbol": "FEUZ"
     },
     {
-        "name": "FIRST TR LRGE CP CORE ALPHA FD COM SHS",
+        "name": "FIRST TR EXCHANGE-TRADED ALPHA COM SHS",
         "symbol": "FEX"
     },
     {
@@ -6696,7 +6696,7 @@
         "symbol": "FRHC"
     },
     {
-        "name": "FIRST TR S&P REIT INDEX FD COM",
+        "name": "FIRST TR EXCHANGE-TRADED FD COM",
         "symbol": "FRI"
     },
     {
@@ -6788,7 +6788,7 @@
         "symbol": "FTAI"
     },
     {
-        "name": "FIRST TRUST LRGCP GWT ALPHADEX COM SHS",
+        "name": "FIRST TR EXCHANGE-TRADED ALPHA COM SHS",
         "symbol": "FTC"
     },
     {
@@ -6892,7 +6892,7 @@
         "symbol": "FVCB"
     },
     {
-        "name": "FIRST TR VALUE LINE DIVID INDE SHS",
+        "name": "FIRST TR EXCHANGE-TRADED FD SHS",
         "symbol": "FVD"
     },
     {
@@ -13916,7 +13916,7 @@
         "symbol": "PZZA"
     },
     {
-        "name": "FIRST TR NASDAQ ABA CMNTY BK I UT COM SHS ETF",
+        "name": "FIRST TR EXCHANGE-TRADED FD UT COM SHS ETF",
         "symbol": "QABA"
     },
     {
@@ -14020,7 +14020,7 @@
         "symbol": "QPX"
     },
     {
-        "name": "FIRST TR NAS100 EQ WEIGHTED IX SHS",
+        "name": "FIRST TR EXCHANGE-TRADED FD SHS",
         "symbol": "QQEW"
     },
     {
@@ -14088,7 +14088,7 @@
         "symbol": "QSR"
     },
     {
-        "name": "FIRST TR NASDAQ 100 TECH INDX SHS",
+        "name": "FIRST TR EXCHANGE-TRADED FD SHS",
         "symbol": "QTEC"
     },
     {
@@ -14128,7 +14128,7 @@
         "symbol": "QURE"
     },
     {
-        "name": "QVC GROUP INC COM SER A",
+        "name": "QVC GROUP INC COM SER A NEW",
         "symbol": "QVCGA"
     },
     {
@@ -14514,10 +14514,6 @@
     {
         "name": "RAYMOND JAMES FINL INC COM",
         "symbol": "RJF"
-    },
-    {
-        "name": "ROCKET LAB USA INC COM",
-        "symbol": "RKLB"
     },
     {
         "name": "ROCKET COS INC COM CL A",
@@ -15880,7 +15876,7 @@
         "symbol": "SMSI"
     },
     {
-        "name": "TIDAL TR II DEFIANCE DT 2X S",
+        "name": "TIDAL TR II DEFIANCE DAILY T",
         "symbol": "SMST"
     },
     {
