@@ -1124,7 +1124,7 @@
         "symbol": "ARCT"
     },
     {
-        "name": "ARDENT HEALTH PARTNERS INC COM",
+        "name": "ARDENT HEALTH INC COM",
         "symbol": "ARDT"
     },
     {
@@ -7008,10 +7008,6 @@
         "symbol": "GAMB"
     },
     {
-        "name": "GAN LTD SHS",
-        "symbol": "GAN"
-    },
-    {
         "name": "GAIN THERAPEUTICS INC COM",
         "symbol": "GANX"
     },
@@ -9728,6 +9724,10 @@
         "symbol": "KFY"
     },
     {
+        "name": "KESTREL GROUP LTD COM",
+        "symbol": "KG"
+    },
+    {
         "name": "KINROSS GOLD CORP COM",
         "symbol": "KGC"
     },
@@ -11006,10 +11006,6 @@
     {
         "name": "MOHAWK INDS INC COM",
         "symbol": "MHK"
-    },
-    {
-        "name": "MAIDEN HOLDINGS LTD SHS",
-        "symbol": "MHLD"
     },
     {
         "name": "M/I HOMES INC COM",
@@ -14514,6 +14510,10 @@
     {
         "name": "RAYMOND JAMES FINL INC COM",
         "symbol": "RJF"
+    },
+    {
+        "name": "ROCKET LAB CORP",
+        "symbol": "RKLB"
     },
     {
         "name": "ROCKET COS INC COM CL A",
