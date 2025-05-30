@@ -1340,6 +1340,10 @@
         "symbol": "ASRT"
     },
     {
+        "name": "ASSET ENTITIES INC CL B NEW",
+        "symbol": "ASST"
+    },
+    {
         "name": "ASTEC INDS INC COM",
         "symbol": "ASTE"
     },
@@ -1698,10 +1702,6 @@
     {
         "name": "AZENTA INC COM",
         "symbol": "AZTA"
-    },
-    {
-        "name": "AZUL S A SPONSR ADR PFD",
-        "symbol": "AZUL"
     },
     {
         "name": "AZZ INC COM",
@@ -4558,6 +4558,10 @@
     {
         "name": "DIMENSIONAL ETF TRUST WORLD EX US CORE",
         "symbol": "DFAX"
+    },
+    {
+        "name": "DEFI DEVELOPMENT CORP COM",
+        "symbol": "DFDV"
     },
     {
         "name": "WISDOMTREE TR EUROPE SMCP DV",
@@ -8030,6 +8034,10 @@
     {
         "name": "HIMAX TECHNOLOGIES INC SPONSORED ADR",
         "symbol": "HIMX"
+    },
+    {
+        "name": "TIDAL TR II DEFIANCE DAILY",
+        "symbol": "HIMZ"
     },
     {
         "name": "HIPPO HLDGS INC COM NEW",
