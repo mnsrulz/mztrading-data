@@ -3344,10 +3344,6 @@
         "symbol": "CIVI"
     },
     {
-        "name": "CHECKPOINT THERAPEUTICS INC COM NEW",
-        "symbol": "CKPT"
-    },
-    {
         "name": "COLGATE PALMOLIVE CO COM",
         "symbol": "CL"
     },
@@ -5774,10 +5770,6 @@
     {
         "name": "DIREXION SHS ETF TR DLY FTS BUL 3X",
         "symbol": "EURL"
-    },
-    {
-        "name": "WISDOMTREE TR EUROPEAN OPPORTU",
-        "symbol": "EUSC"
     },
     {
         "name": "ENTRAVISION COMMUNICATIONS CP CL A",
@@ -8376,7 +8368,7 @@
         "symbol": "HYLN"
     },
     {
-        "name": "SPDR SERIES TRUST NUVEEN BLOOMBERG",
+        "name": "SPDR NUVEEN ICE HIGH YIELD MUN",
         "symbol": "HYMB"
     },
     {
@@ -12240,6 +12232,10 @@
         "symbol": "NVDU"
     },
     {
+        "name": "Roundhill NVDA WeeklyPay ETF",
+        "symbol": "NVDW"
+    },
+    {
         "name": "T-Rex 2X Long NVIDIA Daily Target ETF",
         "symbol": "NVDX"
     },
@@ -12290,10 +12286,6 @@
     {
         "name": "NAVITAS SEMICONDUCTOR CORP COM",
         "symbol": "NVTS"
-    },
-    {
-        "name": "Roundhill NVDA WeeklyPay ETF",
-        "symbol": "NVW"
     },
     {
         "name": "NORTHWESTERN ENERGY GROUP INC COM NEW",
@@ -12670,6 +12662,10 @@
     {
         "name": "OPKO HEALTH INC COM",
         "symbol": "OPK"
+    },
+    {
+        "name": "WISDOMTREE EUROPEAN OPPORTUNIT",
+        "symbol": "OPPE"
     },
     {
         "name": "OPERA LTD SPONSORED ADS",
@@ -15496,7 +15492,7 @@
         "symbol": "SHLS"
     },
     {
-        "name": "SPDR SERIES TRUST NUVEEN BLMBRG SH",
+        "name": "SPDR NUVEEN ICE SHORT TERM MUN",
         "symbol": "SHM"
     },
     {
@@ -16624,7 +16620,7 @@
         "symbol": "SURG"
     },
     {
-        "name": "ISHARES TR MSCI USA ESG SLC",
+        "name": "ISHARES ESG OPTIMIZED MSCI USA",
         "symbol": "SUSA"
     },
     {
@@ -17516,6 +17512,10 @@
         "symbol": "TSLT"
     },
     {
+        "name": "Roundhill TSLA WeeklyPay ETF",
+        "symbol": "TSLW"
+    },
+    {
         "name": "SIXTH STREET SPECIALTY LENDING COM",
         "symbol": "TSLX"
     },
@@ -17550,10 +17550,6 @@
     {
         "name": "TSS INC DEL COM",
         "symbol": "TSSI"
-    },
-    {
-        "name": "Roundhill TSLA WeeklyPay ETF",
-        "symbol": "TSW"
     },
     {
         "name": "TRANE TECHNOLOGIES PLC SHS",
