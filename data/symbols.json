@@ -1124,7 +1124,7 @@
         "symbol": "ARCT"
     },
     {
-        "name": "ARDENT HEALTH INC COM",
+        "name": "ARDENT HEALTH INC",
         "symbol": "ARDT"
     },
     {
@@ -2272,10 +2272,6 @@
         "symbol": "BLOK"
     },
     {
-        "name": "BLUEBIRD BIO INC COM NEW",
-        "symbol": "BLUE"
-    },
-    {
         "name": "VANGUARD BD INDEX FDS LONG TERM BOND",
         "symbol": "BLV"
     },
@@ -3342,10 +3338,6 @@
     {
         "name": "CIVITAS RESOURCES INC COM NEW",
         "symbol": "CIVI"
-    },
-    {
-        "name": "CHECKPOINT THERAPEUTICS INC COM NEW",
-        "symbol": "CKPT"
     },
     {
         "name": "COLGATE PALMOLIVE CO COM",
@@ -5344,7 +5336,7 @@
         "symbol": "EIX"
     },
     {
-        "name": "EKSO BIONICS HLDGS INC COM",
+        "name": "EKSO BIONICS HLDGS INC COM NEW",
         "symbol": "EKSO"
     },
     {
@@ -5774,10 +5766,6 @@
     {
         "name": "DIREXION SHS ETF TR DLY FTS BUL 3X",
         "symbol": "EURL"
-    },
-    {
-        "name": "WISDOMTREE TR EUROPEAN OPPORTU",
-        "symbol": "EUSC"
     },
     {
         "name": "ENTRAVISION COMMUNICATIONS CP CL A",
@@ -7936,10 +7924,6 @@
         "symbol": "HEDJ"
     },
     {
-        "name": "H & E EQUIPMENT SERVICES INC COM",
-        "symbol": "HEES"
-    },
-    {
         "name": "iShares Currency Hedged MSCI EAFE ETF",
         "symbol": "HEFA"
     },
@@ -8376,7 +8360,7 @@
         "symbol": "HYLN"
     },
     {
-        "name": "SPDR SERIES TRUST NUVEEN BLOOMBERG",
+        "name": "SPDR SERIES TRUST NUVEEN ICE HIGH",
         "symbol": "HYMB"
     },
     {
@@ -10604,7 +10588,7 @@
         "symbol": "LYB"
     },
     {
-        "name": "LYELL IMMUNOPHARMA INC COM",
+        "name": "LYELL IMMUNOPHARMA INC COM NEW",
         "symbol": "LYEL"
     },
     {
@@ -12240,6 +12224,10 @@
         "symbol": "NVDU"
     },
     {
+        "name": "Roundhill NVDA WeeklyPay ETF",
+        "symbol": "NVDW"
+    },
+    {
         "name": "T-Rex 2X Long NVIDIA Daily Target ETF",
         "symbol": "NVDX"
     },
@@ -12290,10 +12278,6 @@
     {
         "name": "NAVITAS SEMICONDUCTOR CORP COM",
         "symbol": "NVTS"
-    },
-    {
-        "name": "Roundhill NVDA WeeklyPay ETF",
-        "symbol": "NVW"
     },
     {
         "name": "NORTHWESTERN ENERGY GROUP INC COM NEW",
@@ -12670,6 +12654,10 @@
     {
         "name": "OPKO HEALTH INC COM",
         "symbol": "OPK"
+    },
+    {
+        "name": "WISDOMTREE TR EUROPEAN OPPORTU",
+        "symbol": "OPPE"
     },
     {
         "name": "OPERA LTD SPONSORED ADS",
@@ -15496,7 +15484,7 @@
         "symbol": "SHLS"
     },
     {
-        "name": "SPDR SERIES TRUST NUVEEN BLMBRG SH",
+        "name": "SPDR SERIES TRUST NUVEEN ICE SHORT",
         "symbol": "SHM"
     },
     {
@@ -16624,7 +16612,7 @@
         "symbol": "SURG"
     },
     {
-        "name": "ISHARES TR MSCI USA ESG SLC",
+        "name": "ISHARES TR ESG OPTIMIZED",
         "symbol": "SUSA"
     },
     {
@@ -17516,6 +17504,10 @@
         "symbol": "TSLT"
     },
     {
+        "name": "Roundhill TSLA WeeklyPay ETF",
+        "symbol": "TSLW"
+    },
+    {
         "name": "SIXTH STREET SPECIALTY LENDING COM",
         "symbol": "TSLX"
     },
@@ -17550,10 +17542,6 @@
     {
         "name": "TSS INC DEL COM",
         "symbol": "TSSI"
-    },
-    {
-        "name": "Roundhill TSLA WeeklyPay ETF",
-        "symbol": "TSW"
     },
     {
         "name": "TRANE TECHNOLOGIES PLC SHS",
