@@ -1688,6 +1688,10 @@
         "symbol": "AYI"
     },
     {
+        "name": "A2Z CUST2MATE SOLUTIONS CORP COM",
+        "symbol": "AZ"
+    },
+    {
         "name": "AZEK CO INC CL A",
         "symbol": "AZEK"
     },
@@ -3260,7 +3264,7 @@
         "symbol": "CHRD"
     },
     {
-        "name": "COHERUS BIOSCIENCES INC COM",
+        "name": "COHERUS ONCOLOGY INC COM",
         "symbol": "CHRS"
     },
     {
@@ -3354,6 +3358,10 @@
     {
         "name": "COLUMBIA FINL INC COM",
         "symbol": "CLBK"
+    },
+    {
+        "name": "COLOMBIER ACQUISITION CORP II COM SHS CL A",
+        "symbol": "CLBR"
     },
     {
         "name": "CELLEBRITE DI LTD ORDINARY SHARES",
@@ -5520,6 +5528,10 @@
         "symbol": "EPM"
     },
     {
+        "name": "ISHARES TR MSCI POLAND ETF",
+        "symbol": "EPOL"
+    },
+    {
         "name": "ISHARES INC MSCI PAC JP ETF",
         "symbol": "EPP"
     },
@@ -6366,6 +6378,10 @@
     {
         "name": "GLOBAL X FDS FINTECH ETF",
         "symbol": "FINX"
+    },
+    {
+        "name": "FTAI INFRASTRUCTURE INC COMMON STOCK",
+        "symbol": "FIP"
     },
     {
         "name": "FIDELITY NATL INFORMATION SVCS COM",
@@ -8098,6 +8114,10 @@
     {
         "name": "STRATEGY SHS NS 7HANDL IDX",
         "symbol": "HNDL"
+    },
+    {
+        "name": "HINGE HEALTH INC CL A",
+        "symbol": "HNGE"
     },
     {
         "name": "HNI CORP COM",
@@ -11288,7 +11308,7 @@
         "symbol": "MQ"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X INNOVAT",
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
         "symbol": "MQQQ"
     },
     {
@@ -14044,7 +14064,7 @@
         "symbol": "QQQM"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X INNOVAT",
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
         "symbol": "QQQP"
     },
     {
@@ -16304,7 +16324,7 @@
         "symbol": "SPYI"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LNG SPY",
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG SP",
         "symbol": "SPYQ"
     },
     {
@@ -16870,6 +16890,10 @@
     {
         "name": "EXCHANGE LISTED FDS TR CABANA TARGET 10",
         "symbol": "TDSC"
+    },
+    {
+        "name": "FLEXSHARES TR IBOXX 3R TARGT",
+        "symbol": "TDTT"
     },
     {
         "name": "THREDUP INC CL A",
