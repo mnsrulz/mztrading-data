@@ -4048,12 +4048,12 @@
         "symbol": "CSV"
     },
     {
-        "name": "CAPITAL SOUTHWEST CORP COM",
-        "symbol": "CSWC"
+        "name": "CSW INDUSTRIALS INC COM",
+        "symbol": "CSW"
     },
     {
-        "name": "CSW INDUSTRIALS INC COM",
-        "symbol": "CSWI"
+        "name": "CAPITAL SOUTHWEST CORP COM",
+        "symbol": "CSWC"
     },
     {
         "name": "CSX CORP COM",
@@ -7612,7 +7612,7 @@
         "symbol": "GRNT"
     },
     {
-        "name": "TIDAL ETF TR FUNDSTRAT GRANNY",
+        "name": "TIDAL TRUST I FUNDSTRAT GRANNY",
         "symbol": "GRNY"
     },
     {
@@ -7756,7 +7756,7 @@
         "symbol": "GVIP"
     },
     {
-        "name": "TIDAL ETF TR GOTHAM 1000 VALU",
+        "name": "TIDAL TRUST I GOTHAM 1000 VALU",
         "symbol": "GVLU"
     },
     {
@@ -7984,7 +7984,7 @@
         "symbol": "HFFG"
     },
     {
-        "name": "TIDAL ETF TR UNLIMITED HFND",
+        "name": "TIDAL TRUST I UNLIMITED HFND",
         "symbol": "HFND"
     },
     {
@@ -8316,7 +8316,7 @@
         "symbol": "HURN"
     },
     {
-        "name": "HOUSTON AMERN ENERGY CORP COM",
+        "name": "HOUSTON AMERN ENERGY CORP COM SHS",
         "symbol": "HUSA"
     },
     {
@@ -11924,7 +11924,7 @@
         "symbol": "NKLAQ"
     },
     {
-        "name": "NEKTAR THERAPEUTICS COM",
+        "name": "NEKTAR THERAPEUTICS COM NEW",
         "symbol": "NKTR"
     },
     {
@@ -12042,10 +12042,6 @@
     {
         "name": "NOV INC COM",
         "symbol": "NOV"
-    },
-    {
-        "name": "SUNNOVA ENERGY INTL INC. COM",
-        "symbol": "NOVA"
     },
     {
         "name": "NOVANTA INC COM",
@@ -12382,10 +12378,6 @@
     {
         "name": "TIDAL TR II YIELDMAX INNOVAT",
         "symbol": "OARK"
-    },
-    {
-        "name": "OUTBRAIN INC COM",
-        "symbol": "OB"
     },
     {
         "name": "BLUE OWL CAPITAL CORPORATION COM",
@@ -13916,7 +13908,7 @@
         "symbol": "PXJ"
     },
     {
-        "name": "PIXELWORKS INC COM NEW",
+        "name": "PIXELWORKS INC COM",
         "symbol": "PXLW"
     },
     {
@@ -14692,7 +14684,7 @@
         "symbol": "ROST"
     },
     {
-        "name": "TIDAL ETF TR RPAR RISK PARI",
+        "name": "TIDAL TRUST I RPAR RISK PARI",
         "symbol": "RPAR"
     },
     {
@@ -16916,6 +16908,10 @@
         "symbol": "TE"
     },
     {
+        "name": "TEADS HOLDING CO",
+        "symbol": "TEAD"
+    },
+    {
         "name": "ATLASSIAN CORPORATION CL A",
         "symbol": "TEAM"
     },
@@ -17952,7 +17948,7 @@
         "symbol": "UP"
     },
     {
-        "name": "TIDAL ETF TR UPAR ULTRA RISK",
+        "name": "TIDAL TRUST I UPAR ULTRA RISK",
         "symbol": "UPAR"
     },
     {
