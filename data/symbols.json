@@ -3880,6 +3880,10 @@
         "symbol": "CRC"
     },
     {
+        "name": "CIRCLE INTERNET GROUP INC COM CL A",
+        "symbol": "CRCL"
+    },
+    {
         "name": "CRICUT INC COM CL A",
         "symbol": "CRCT"
     },
@@ -4048,12 +4052,12 @@
         "symbol": "CSV"
     },
     {
-        "name": "CAPITAL SOUTHWEST CORP COM",
-        "symbol": "CSWC"
+        "name": "CSW INDUSTRIALS INC COM",
+        "symbol": "CSW"
     },
     {
-        "name": "CSW INDUSTRIALS INC COM",
-        "symbol": "CSWI"
+        "name": "CAPITAL SOUTHWEST CORP COM",
+        "symbol": "CSWC"
     },
     {
         "name": "CSX CORP COM",
@@ -4486,6 +4490,10 @@
     {
         "name": "DIME CMNTY BANCSHARES INC COM",
         "symbol": "DCOM"
+    },
+    {
+        "name": "DIMENSIONAL ETF TRUST US CORE EQUITY 1",
+        "symbol": "DCOR"
     },
     {
         "name": "DELCATH SYS INC COM NEW",
@@ -4962,6 +4970,10 @@
     {
         "name": "DOUBLELINE INCOME SOLUTIONS FD COM",
         "symbol": "DSL"
+    },
+    {
+        "name": "ETF SER SOLUTIONS DISTILLATE SMLMD",
+        "symbol": "DSMC"
     },
     {
         "name": "VIANT TECHNOLOGY INC COM CL A",
@@ -7496,7 +7508,7 @@
         "symbol": "GOOY"
     },
     {
-        "name": "Unusual Whales Subversive Republican Trading ETF",
+        "name": "Tidal Trust I",
         "symbol": "GOP"
     },
     {
@@ -7612,7 +7624,7 @@
         "symbol": "GRNT"
     },
     {
-        "name": "TIDAL ETF TR FUNDSTRAT GRANNY",
+        "name": "TIDAL TRUST I FUNDSTRAT GRANNY",
         "symbol": "GRNY"
     },
     {
@@ -7756,7 +7768,7 @@
         "symbol": "GVIP"
     },
     {
-        "name": "TIDAL ETF TR GOTHAM 1000 VALU",
+        "name": "TIDAL TRUST I GOTHAM 1000 VALU",
         "symbol": "GVLU"
     },
     {
@@ -7844,7 +7856,7 @@
         "symbol": "HASI"
     },
     {
-        "name": "Residential REIT ETF",
+        "name": "Tidal Trust I",
         "symbol": "HAUS"
     },
     {
@@ -7984,7 +7996,7 @@
         "symbol": "HFFG"
     },
     {
-        "name": "TIDAL ETF TR UNLIMITED HFND",
+        "name": "TIDAL TRUST I UNLIMITED HFND",
         "symbol": "HFND"
     },
     {
@@ -8316,7 +8328,7 @@
         "symbol": "HURN"
     },
     {
-        "name": "HOUSTON AMERN ENERGY CORP COM",
+        "name": "HOUSTON AMERN ENERGY CORP COM SHS",
         "symbol": "HUSA"
     },
     {
@@ -9732,6 +9744,10 @@
         "symbol": "KFRC"
     },
     {
+        "name": "KINGSWAY FINL SVCS INC COM NEW",
+        "symbol": "KFS"
+    },
+    {
         "name": "KORN FERRY COM NEW",
         "symbol": "KFY"
     },
@@ -9750,6 +9766,10 @@
     {
         "name": "KRAFT HEINZ CO COM",
         "symbol": "KHC"
+    },
+    {
+        "name": "KRANESHARES TRUST ASIA PACIFIC ETF",
+        "symbol": "KHYB"
     },
     {
         "name": "ORTHOPEDIATRICS CORP COM",
@@ -9962,6 +9982,10 @@
     {
         "name": "KRYSTAL BIOTECH INC COM",
         "symbol": "KRYS"
+    },
+    {
+        "name": "KRANESHARES TRUST HEDGEYE HEDGED E",
+        "symbol": "KSPY"
     },
     {
         "name": "KOHLS CORP COM",
@@ -11312,6 +11336,10 @@
         "symbol": "MQQQ"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG MARA",
+        "symbol": "MRAL"
+    },
+    {
         "name": "EVERSPIN TECHNOLOGIES INC COM",
         "symbol": "MRAM"
     },
@@ -11580,6 +11608,10 @@
         "symbol": "MVIS"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG MRVL",
+        "symbol": "MVLL"
+    },
+    {
         "name": "MV OIL TR TR UNITS",
         "symbol": "MVO"
     },
@@ -11676,7 +11708,7 @@
         "symbol": "NAN"
     },
     {
-        "name": "Unusual Whales Subversive Democratic Trading ETF",
+        "name": "Tidal Trust I",
         "symbol": "NANC"
     },
     {
@@ -11924,7 +11956,7 @@
         "symbol": "NKLAQ"
     },
     {
-        "name": "NEKTAR THERAPEUTICS COM",
+        "name": "NEKTAR THERAPEUTICS COM NEW",
         "symbol": "NKTR"
     },
     {
@@ -12042,10 +12074,6 @@
     {
         "name": "NOV INC COM",
         "symbol": "NOV"
-    },
-    {
-        "name": "SUNNOVA ENERGY INTL INC. COM",
-        "symbol": "NOVA"
     },
     {
         "name": "NOVANTA INC COM",
@@ -12382,10 +12410,6 @@
     {
         "name": "TIDAL TR II YIELDMAX INNOVAT",
         "symbol": "OARK"
-    },
-    {
-        "name": "OUTBRAIN INC COM",
-        "symbol": "OB"
     },
     {
         "name": "BLUE OWL CAPITAL CORPORATION COM",
@@ -13088,7 +13112,7 @@
         "symbol": "PDFS"
     },
     {
-        "name": "PIEDMONT OFFICE REALTY TR INC COM CL A",
+        "name": "PIEDMONT REALTY TRUST INC COM CL A",
         "symbol": "PDM"
     },
     {
@@ -13916,7 +13940,7 @@
         "symbol": "PXJ"
     },
     {
-        "name": "PIXELWORKS INC COM NEW",
+        "name": "PIXELWORKS INC COM",
         "symbol": "PXLW"
     },
     {
@@ -14692,7 +14716,7 @@
         "symbol": "ROST"
     },
     {
-        "name": "TIDAL ETF TR RPAR RISK PARI",
+        "name": "TIDAL TRUST I RPAR RISK PARI",
         "symbol": "RPAR"
     },
     {
@@ -15694,6 +15718,10 @@
     {
         "name": "CHAMPION HOMES INC COM",
         "symbol": "SKY"
+    },
+    {
+        "name": "SKY HARBOUR GROUP CORPORATION COM CL A",
+        "symbol": "SKYH"
     },
     {
         "name": "SKYWATER TECHNOLOGY INC COM",
@@ -16916,6 +16944,10 @@
         "symbol": "TE"
     },
     {
+        "name": "TEADS HLDG CO COM",
+        "symbol": "TEAD"
+    },
+    {
         "name": "ATLASSIAN CORPORATION CL A",
         "symbol": "TEAM"
     },
@@ -17952,7 +17984,7 @@
         "symbol": "UP"
     },
     {
-        "name": "TIDAL ETF TR UPAR ULTRA RISK",
+        "name": "TIDAL TRUST I UPAR ULTRA RISK",
         "symbol": "UPAR"
     },
     {
@@ -17982,6 +18014,10 @@
     {
         "name": "UPWORK INC COM",
         "symbol": "UPWK"
+    },
+    {
+        "name": "UPEXI INC COM NEW",
+        "symbol": "UPXI"
     },
     {
         "name": "GLOBAL X FDS GLOBAL X URANIUM",
@@ -19494,6 +19530,10 @@
     {
         "name": "GLOBAL X FDS S&P 500 RISK",
         "symbol": "XRMI"
+    },
+    {
+        "name": "VOLATILITY SHS TR 2X XRP ETF",
+        "symbol": "XRPT"
     },
     {
         "name": "SPDR SERIES TRUST S&P RETAIL ETF",
