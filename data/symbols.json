@@ -1124,6 +1124,10 @@
         "symbol": "ARCT"
     },
     {
+        "name": "Tradr 2X Long ACHR Daily ETF",
+        "symbol": "ARCX"
+    },
+    {
         "name": "ARDENT HEALTH INC",
         "symbol": "ARDT"
     },
@@ -2896,6 +2900,10 @@
         "symbol": "CBAT"
     },
     {
+        "name": "CRESCENT BIOPHARMA INC. COM",
+        "symbol": "CBIO"
+    },
+    {
         "name": "CBL & ASSOC PPTYS INC COMMON STOCK",
         "symbol": "CBL"
     },
@@ -3286,6 +3294,10 @@
     {
         "name": "CHAMPIONX CORPORATION COM",
         "symbol": "CHX"
+    },
+    {
+        "name": "CHIME FINL INC COM SHS CL A",
+        "symbol": "CHYM"
     },
     {
         "name": "THE CIGNA GROUP COM",
@@ -4358,10 +4370,6 @@
     {
         "name": "DANAOS CORPORATION SHS",
         "symbol": "DAC"
-    },
-    {
-        "name": "DADA NEXUS LTD ADS",
-        "symbol": "DADA"
     },
     {
         "name": "DATA I O CORP COM",
@@ -15096,6 +15104,10 @@
         "symbol": "SBCF"
     },
     {
+        "name": "SHARPLINK GAMING INC COM NEW",
+        "symbol": "SBET"
+    },
+    {
         "name": "SPLASH BEVERAGE GROUP INC COM SHS",
         "symbol": "SBEV"
     },
@@ -17998,6 +18010,10 @@
     {
         "name": "UPSTART HLDGS INC COM",
         "symbol": "UPST"
+    },
+    {
+        "name": "Tradr 2X Long UPST Daily ETF",
+        "symbol": "UPSX"
     },
     {
         "name": "PROSHARES TR PSHS ULTRA UTIL",
