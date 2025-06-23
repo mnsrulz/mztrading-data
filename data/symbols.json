@@ -476,10 +476,6 @@
         "symbol": "AHR"
     },
     {
-        "name": "ASHFORD HOSPITALITY TR INC COM NEW",
-        "symbol": "AHT"
-    },
-    {
         "name": "C3 AI INC CL A",
         "symbol": "AI"
     },
@@ -570,10 +566,6 @@
     {
         "name": "AKERO THERAPEUTICS INC COM",
         "symbol": "AKRO"
-    },
-    {
-        "name": "AKOUSTIS TECHNOLOGIES INC COM",
-        "symbol": "AKTSQ"
     },
     {
         "name": "AKOYA BIOSCIENCES INC COM",
@@ -676,10 +668,6 @@
         "symbol": "ALNY"
     },
     {
-        "name": "ALPINE 4 HOLDINGS INC CL A NEW",
-        "symbol": "ALPP"
-    },
-    {
         "name": "ALARM COM HLDGS INC COM",
         "symbol": "ALRM"
     },
@@ -770,10 +758,6 @@
     {
         "name": "GRANITESHARES ETF TR GRANITE 2X LONG",
         "symbol": "AMDL"
-    },
-    {
-        "name": "GRANITESHARES ETF TR 1X SHORT AMD DLY",
-        "symbol": "AMDS"
     },
     {
         "name": "TIDAL TR II YIELDMAX AMD OPT",
@@ -1266,10 +1250,6 @@
     {
         "name": "ASA GOLD AND PRECIOUS MTLS LMT SHS",
         "symbol": "ASA"
-    },
-    {
-        "name": "SENDAS DISTRIBUIDORA S A SPON ADS",
-        "symbol": "ASAIY"
     },
     {
         "name": "ASANA INC CL A",
@@ -3698,6 +3678,10 @@
     {
         "name": "COLUMBIA SPORTSWEAR CO COM",
         "symbol": "COLM"
+    },
+    {
+        "name": "GLOBAL X FDS GLBX MSCI COLUM",
+        "symbol": "COLO"
     },
     {
         "name": "DIREXION SHS ETF TR AUSPCE CMD STG",
@@ -6332,10 +6316,6 @@
         "symbol": "FGEN"
     },
     {
-        "name": "FUNDAMENTAL GLOBAL INC COM NEW",
-        "symbol": "FGF"
-    },
-    {
         "name": "FIRST TR EXCH TRD ALPHDX FD II GERMANY ALPHA",
         "symbol": "FGM"
     },
@@ -7798,10 +7778,6 @@
     {
         "name": "GLOBAL X FDS DORSEY WRIGHT",
         "symbol": "GXDW"
-    },
-    {
-        "name": "GLOBAL X FDS GLBX MSCI COLUM",
-        "symbol": "GXG"
     },
     {
         "name": "GXO LOGISTICS INCORPORATED COMMON STOCK",
@@ -9966,10 +9942,6 @@
     {
         "name": "KRONOS WORLDWIDE INC COM",
         "symbol": "KRO"
-    },
-    {
-        "name": "KRONOS BIO INC COM",
-        "symbol": "KRON"
     },
     {
         "name": "GLOBAL X FDS GLOBAL X AGTECH",
@@ -18944,10 +18916,6 @@
         "symbol": "WBA"
     },
     {
-        "name": "WisdomTree Battery Value Chain and Innovation Fund",
-        "symbol": "WBAT"
-    },
-    {
         "name": "WARNER BROS DISCOVERY INC COM SER A",
         "symbol": "WBD"
     },
@@ -19350,10 +19318,6 @@
     {
         "name": "XCEL ENERGY INC COM",
         "symbol": "XEL"
-    },
-    {
-        "name": "EXELA TECHNOLOGIES INC COM",
-        "symbol": "XELA"
     },
     {
         "name": "XENON PHARMACEUTICALS INC COM",
