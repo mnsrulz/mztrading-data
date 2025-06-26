@@ -476,10 +476,6 @@
         "symbol": "AHR"
     },
     {
-        "name": "ASHFORD HOSPITALITY TR INC COM NEW",
-        "symbol": "AHT"
-    },
-    {
         "name": "C3 AI INC CL A",
         "symbol": "AI"
     },
@@ -570,10 +566,6 @@
     {
         "name": "AKERO THERAPEUTICS INC COM",
         "symbol": "AKRO"
-    },
-    {
-        "name": "AKOUSTIS TECHNOLOGIES INC COM",
-        "symbol": "AKTSQ"
     },
     {
         "name": "AKOYA BIOSCIENCES INC COM",
@@ -676,10 +668,6 @@
         "symbol": "ALNY"
     },
     {
-        "name": "ALPINE 4 HOLDINGS INC CL A NEW",
-        "symbol": "ALPP"
-    },
-    {
         "name": "ALARM COM HLDGS INC COM",
         "symbol": "ALRM"
     },
@@ -770,10 +758,6 @@
     {
         "name": "GRANITESHARES ETF TR GRANITE 2X LONG",
         "symbol": "AMDL"
-    },
-    {
-        "name": "GRANITESHARES ETF TR 1X SHORT AMD DLY",
-        "symbol": "AMDS"
     },
     {
         "name": "TIDAL TR II YIELDMAX AMD OPT",
@@ -1266,10 +1250,6 @@
     {
         "name": "ASA GOLD AND PRECIOUS MTLS LMT SHS",
         "symbol": "ASA"
-    },
-    {
-        "name": "SENDAS DISTRIBUIDORA S A SPON ADS",
-        "symbol": "ASAIY"
     },
     {
         "name": "ASANA INC CL A",
@@ -2792,6 +2772,10 @@
         "symbol": "CAH"
     },
     {
+        "name": "CARIS LIFE SCIENCES INC COM",
+        "symbol": "CAI"
+    },
+    {
         "name": "CHEESECAKE FACTORY INC COM",
         "symbol": "CAKE"
     },
@@ -3684,6 +3668,10 @@
         "symbol": "COIW"
     },
     {
+        "name": "COCA COLA CONS INC COM",
+        "symbol": "COKE"
+    },
+    {
         "name": "COLUMBIA BKG SYS INC COM",
         "symbol": "COLB"
     },
@@ -3698,6 +3686,10 @@
     {
         "name": "COLUMBIA SPORTSWEAR CO COM",
         "symbol": "COLM"
+    },
+    {
+        "name": "GLOBAL X FDS GLBX MSCI COLUM",
+        "symbol": "COLO"
     },
     {
         "name": "DIREXION SHS ETF TR AUSPCE CMD STG",
@@ -5000,6 +4992,10 @@
         "symbol": "DTCB"
     },
     {
+        "name": "GLOBAL X FDS DATA CTR & DIGIT",
+        "symbol": "DTCR"
+    },
+    {
         "name": "DTE ENERGY CO COM",
         "symbol": "DTE"
     },
@@ -5096,7 +5092,7 @@
         "symbol": "DXJ"
     },
     {
-        "name": "WISDOMTREE TR JPN SCAP HDG EQT",
+        "name": "WISDOMTREE JAPAN OPPORTUNITIES",
         "symbol": "DXJS"
     },
     {
@@ -6330,10 +6326,6 @@
     {
         "name": "FIBROGEN INC COM NEW",
         "symbol": "FGEN"
-    },
-    {
-        "name": "FUNDAMENTAL GLOBAL INC COM NEW",
-        "symbol": "FGF"
     },
     {
         "name": "FIRST TR EXCH TRD ALPHDX FD II GERMANY ALPHA",
@@ -7800,10 +7792,6 @@
         "symbol": "GXDW"
     },
     {
-        "name": "GLOBAL X FDS GLBX MSCI COLUM",
-        "symbol": "GXG"
-    },
-    {
         "name": "GXO LOGISTICS INCORPORATED COMMON STOCK",
         "symbol": "GXO"
     },
@@ -7914,10 +7902,6 @@
     {
         "name": "HUTCHMED CHINA LTD SPONSORED ADS",
         "symbol": "HCM"
-    },
-    {
-        "name": "HARTFORD FDS EXCHANGE TRADED T SCHRODERS COMMOD",
-        "symbol": "HCOM"
     },
     {
         "name": "HEALTHCARE SVCS GROUP INC COM",
@@ -9028,6 +9012,10 @@
         "symbol": "INZY"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG IONQ",
+        "symbol": "IONL"
+    },
+    {
         "name": "IONQ INC COM",
         "symbol": "IONQ"
     },
@@ -9462,6 +9450,10 @@
     {
         "name": "JETBLUE AWYS CORP COM",
         "symbol": "JBLU"
+    },
+    {
+        "name": "JBS N.V. CL A SHS",
+        "symbol": "JBS"
     },
     {
         "name": "SANFILIPPO JOHN B & SON INC COM",
@@ -9966,10 +9958,6 @@
     {
         "name": "KRONOS WORLDWIDE INC COM",
         "symbol": "KRO"
-    },
-    {
-        "name": "KRONOS BIO INC COM",
-        "symbol": "KRON"
     },
     {
         "name": "GLOBAL X FDS GLOBAL X AGTECH",
@@ -10522,10 +10510,6 @@
     {
         "name": "LATTICE SEMICONDUCTOR CORP COM",
         "symbol": "LSCC"
-    },
-    {
-        "name": "LANDSEA HOMES CORP COM",
-        "symbol": "LSEA"
     },
     {
         "name": "LIGHTSPEED COMMERCE INC SUB VTG SHS",
@@ -12220,6 +12204,10 @@
         "symbol": "NUGT"
     },
     {
+        "name": "EXCHANGE TRADED CONCEPTS TRUST RANGE NUCLEAR RE",
+        "symbol": "NUKZ"
+    },
+    {
         "name": "NU SKIN ENTERPRISES INC CL A",
         "symbol": "NUS"
     },
@@ -12348,7 +12336,7 @@
         "symbol": "NWN"
     },
     {
-        "name": "NORTHWEST PIPE CO COM",
+        "name": "NWPX INFRASTRUCTURE INC",
         "symbol": "NWPX"
     },
     {
@@ -13320,10 +13308,6 @@
         "symbol": "PHUN"
     },
     {
-        "name": "PHX MINERALS INC CL A",
-        "symbol": "PHX"
-    },
-    {
         "name": "IMPINJ INC COM",
         "symbol": "PI"
     },
@@ -13416,7 +13400,7 @@
         "symbol": "PLAY"
     },
     {
-        "name": "PLBY GROUP INC COM",
+        "name": "PLAYBOY INC",
         "symbol": "PLBY"
     },
     {
@@ -14470,10 +14454,6 @@
     {
         "name": "ROYAL GOLD INC COM",
         "symbol": "RGLD"
-    },
-    {
-        "name": "REGULUS THERAPEUTICS INC COM",
-        "symbol": "RGLS"
     },
     {
         "name": "REGENXBIO INC COM",
@@ -16488,6 +16468,10 @@
         "symbol": "SSTK"
     },
     {
+        "name": "SUPERIOR INDS INTL INC COM",
+        "symbol": "SSUP"
+    },
+    {
         "name": "STRATASYS LTD SHS",
         "symbol": "SSYS"
     },
@@ -16512,7 +16496,7 @@
         "symbol": "STE"
     },
     {
-        "name": "STEM INC COM",
+        "name": "STEM INC COM NEW",
         "symbol": "STEM"
     },
     {
@@ -16642,10 +16626,6 @@
     {
         "name": "SUNRISE RLTY TR INC COM",
         "symbol": "SUNS"
-    },
-    {
-        "name": "SUPERIOR INDS INTL INC COM",
-        "symbol": "SUP"
     },
     {
         "name": "PROSHARES TR SUPPLY CHAIN LOG",
@@ -18636,6 +18616,10 @@
         "symbol": "VOYA"
     },
     {
+        "name": "VOYAGER TECHNOLOGIES INC COM CL A",
+        "symbol": "VOYG"
+    },
+    {
         "name": "VISHAY PRECISION GROUP INC COM",
         "symbol": "VPG"
     },
@@ -18942,10 +18926,6 @@
     {
         "name": "WALGREENS BOOTS ALLIANCE INC COM",
         "symbol": "WBA"
-    },
-    {
-        "name": "WisdomTree Battery Value Chain and Innovation Fund",
-        "symbol": "WBAT"
     },
     {
         "name": "WARNER BROS DISCOVERY INC COM SER A",
@@ -19350,10 +19330,6 @@
     {
         "name": "XCEL ENERGY INC COM",
         "symbol": "XEL"
-    },
-    {
-        "name": "EXELA TECHNOLOGIES INC COM",
-        "symbol": "XELA"
     },
     {
         "name": "XENON PHARMACEUTICALS INC COM",
