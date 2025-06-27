@@ -888,6 +888,10 @@
         "symbol": "AMZU"
     },
     {
+        "name": "Roundhill AMZN WeeklyPay ETF",
+        "symbol": "AMZW"
+    },
+    {
         "name": "TIDAL TR II YIELDMAX AMZN OP",
         "symbol": "AMZY"
     },
@@ -2458,6 +2462,10 @@
     {
         "name": "BRUKER CORP COM",
         "symbol": "BRKR"
+    },
+    {
+        "name": "Roundhill BRKB WeeklyPay ETF",
+        "symbol": "BRKW"
     },
     {
         "name": "BRILLIANT EARTH GROUP INC CL A COM",
@@ -6604,7 +6612,7 @@
         "symbol": "FNDX"
     },
     {
-        "name": "FIDELITY NATIONAL FINANCIAL IN FNF GROUP COM",
+        "name": "FIDELITY NATIONAL FINANCIAL IN COM SHS",
         "symbol": "FNF"
     },
     {
@@ -8162,6 +8170,10 @@
     {
         "name": "HOOKIPA PHARMA INC COM NEW",
         "symbol": "HOOK"
+    },
+    {
+        "name": "Roundhill HOOD WeeklyPay ETF",
+        "symbol": "HOOW"
     },
     {
         "name": "HOPE BANCORP INC COM",
@@ -10952,6 +10964,10 @@
         "symbol": "METV"
     },
     {
+        "name": "Roundhill META WeeklyPay ETF",
+        "symbol": "METW"
+    },
+    {
         "name": "DIREXION SHS ETF TR DLY MSCI MX 3X",
         "symbol": "MEXX"
     },
@@ -11868,6 +11884,10 @@
         "symbol": "NFLU"
     },
     {
+        "name": "Roundhill NFLX WeeklyPay ETF",
+        "symbol": "NFLW"
+    },
+    {
         "name": "NETFLIX INC COM",
         "symbol": "NFLX"
     },
@@ -12336,7 +12356,7 @@
         "symbol": "NWN"
     },
     {
-        "name": "NWPX INFRASTRUCTURE INC",
+        "name": "NWPX INFRASTRUCTURE INC COM",
         "symbol": "NWPX"
     },
     {
@@ -13400,7 +13420,7 @@
         "symbol": "PLAY"
     },
     {
-        "name": "PLAYBOY INC",
+        "name": "PLAYBOY INC COM",
         "symbol": "PLBY"
     },
     {
@@ -14140,6 +14160,10 @@
         "symbol": "QUBT"
     },
     {
+        "name": "Tradr 2X Long QUBT Daily ETF",
+        "symbol": "QUBX"
+    },
+    {
         "name": "QUICKLOGIC CORP COM NEW",
         "symbol": "QUIK"
     },
@@ -14470,6 +14494,10 @@
     {
         "name": "RIGETTI COMPUTING INC COMMON STOCK",
         "symbol": "RGTI"
+    },
+    {
+        "name": "Tradr 2X Long RGTI Daily ETF",
+        "symbol": "RGTU"
     },
     {
         "name": "RH COM",
@@ -16394,6 +16422,10 @@
     {
         "name": "SSGA ACTIVE ETF TR BLACKSTONE SENR",
         "symbol": "SRLN"
+    },
+    {
+        "name": "SRM ENTERTAINMENT INC COM",
+        "symbol": "SRM"
     },
     {
         "name": "SAREPTA THERAPEUTICS INC COM",
