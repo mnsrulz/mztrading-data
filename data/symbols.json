@@ -452,10 +452,6 @@
         "symbol": "AGRO"
     },
     {
-        "name": "PLAYAGS INC COM",
-        "symbol": "AGS"
-    },
-    {
         "name": "ARGAN INC COM",
         "symbol": "AGX"
     },
@@ -886,6 +882,10 @@
     {
         "name": "DIREXION SHS ETF TR DIREXION 2X SHAR",
         "symbol": "AMZU"
+    },
+    {
+        "name": "Roundhill AMZN WeeklyPay ETF",
+        "symbol": "AMZW"
     },
     {
         "name": "TIDAL TR II YIELDMAX AMZN OP",
@@ -1676,10 +1676,6 @@
         "symbol": "AZ"
     },
     {
-        "name": "AZEK CO INC CL A",
-        "symbol": "AZEK"
-    },
-    {
         "name": "ASTRAZENECA PLC SPONSORED ADR",
         "symbol": "AZN"
     },
@@ -2408,10 +2404,6 @@
         "symbol": "BPOP"
     },
     {
-        "name": "BP PRUDHOE BAY RTY TR UNIT BEN INT",
-        "symbol": "BPT"
-    },
-    {
         "name": "BROADRIDGE FINL SOLUTIONS INC COM",
         "symbol": "BR"
     },
@@ -2458,6 +2450,10 @@
     {
         "name": "BRUKER CORP COM",
         "symbol": "BRKR"
+    },
+    {
+        "name": "Roundhill BRKB WeeklyPay ETF",
+        "symbol": "BRKW"
     },
     {
         "name": "BRILLIANT EARTH GROUP INC CL A COM",
@@ -5092,10 +5088,6 @@
         "symbol": "DXJ"
     },
     {
-        "name": "WISDOMTREE JAPAN OPPORTUNITIES",
-        "symbol": "DXJS"
-    },
-    {
         "name": "DESTINATION XL GROUP INC COM",
         "symbol": "DXLG"
     },
@@ -5834,10 +5826,6 @@
     {
         "name": "EVERGY INC COM",
         "symbol": "EVRG"
-    },
-    {
-        "name": "EVERI HLDGS INC COM",
-        "symbol": "EVRI"
     },
     {
         "name": "EVERTEC INC COM",
@@ -6604,7 +6592,7 @@
         "symbol": "FNDX"
     },
     {
-        "name": "FIDELITY NATIONAL FINANCIAL IN FNF GROUP COM",
+        "name": "FIDELITY NATIONAL FINANCIAL IN COM SHS",
         "symbol": "FNF"
     },
     {
@@ -8162,6 +8150,10 @@
     {
         "name": "HOOKIPA PHARMA INC COM NEW",
         "symbol": "HOOK"
+    },
+    {
+        "name": "Roundhill HOOD WeeklyPay ETF",
+        "symbol": "HOOW"
     },
     {
         "name": "HOPE BANCORP INC COM",
@@ -10952,6 +10944,10 @@
         "symbol": "METV"
     },
     {
+        "name": "Roundhill META WeeklyPay ETF",
+        "symbol": "METW"
+    },
+    {
         "name": "DIREXION SHS ETF TR DLY MSCI MX 3X",
         "symbol": "MEXX"
     },
@@ -11588,7 +11584,7 @@
         "symbol": "MUSA"
     },
     {
-        "name": "MCEWEN MNG INC COM NEW",
+        "name": "MCEWEN INC. COM NEW",
         "symbol": "MUX"
     },
     {
@@ -11866,6 +11862,10 @@
     {
         "name": "T-Rex 2X Long NFLX Daily Target ETF",
         "symbol": "NFLU"
+    },
+    {
+        "name": "Roundhill NFLX WeeklyPay ETF",
+        "symbol": "NFLW"
     },
     {
         "name": "NETFLIX INC COM",
@@ -12336,7 +12336,7 @@
         "symbol": "NWN"
     },
     {
-        "name": "NWPX INFRASTRUCTURE INC",
+        "name": "NWPX INFRASTRUCTURE INC COM",
         "symbol": "NWPX"
     },
     {
@@ -12694,6 +12694,10 @@
     {
         "name": "WISDOMTREE TR EUROPEAN OPPORTU",
         "symbol": "OPPE"
+    },
+    {
+        "name": "WISDOMTREE JAPAN OPPORTUNITIES",
+        "symbol": "OPPJ"
     },
     {
         "name": "OPERA LTD SPONSORED ADS",
@@ -13400,7 +13404,7 @@
         "symbol": "PLAY"
     },
     {
-        "name": "PLAYBOY INC",
+        "name": "PLAYBOY INC COM",
         "symbol": "PLBY"
     },
     {
@@ -14140,6 +14144,10 @@
         "symbol": "QUBT"
     },
     {
+        "name": "Tradr 2X Long QUBT Daily ETF",
+        "symbol": "QUBX"
+    },
+    {
         "name": "QUICKLOGIC CORP COM NEW",
         "symbol": "QUIK"
     },
@@ -14470,6 +14478,10 @@
     {
         "name": "RIGETTI COMPUTING INC COMMON STOCK",
         "symbol": "RGTI"
+    },
+    {
+        "name": "Tradr 2X Long RGTI Daily ETF",
+        "symbol": "RGTU"
     },
     {
         "name": "RH COM",
@@ -15544,10 +15556,6 @@
         "symbol": "SHY"
     },
     {
-        "name": "SHYFT GROUP INC COM",
-        "symbol": "SHYF"
-    },
-    {
         "name": "ISHARES TR 0-5YR HI YL CP",
         "symbol": "SHYG"
     },
@@ -16396,6 +16404,10 @@
         "symbol": "SRLN"
     },
     {
+        "name": "SRM ENTERTAINMENT INC COM",
+        "symbol": "SRM"
+    },
+    {
         "name": "SAREPTA THERAPEUTICS INC COM",
         "symbol": "SRPT"
     },
@@ -16900,7 +16912,7 @@
         "symbol": "TDS"
     },
     {
-        "name": "EXCHANGE LISTED FDS TR CABANA TARGET 10",
+        "name": "EXCHANGE LISTED FUNDS TRUST ET",
         "symbol": "TDSC"
     },
     {
@@ -18144,7 +18156,7 @@
         "symbol": "UTHR"
     },
     {
-        "name": "RBB FD INC US TREAS 30YR BD",
+        "name": "F/M US TREASURY 30 YEAR BOND E",
         "symbol": "UTHY"
     },
     {
@@ -18160,7 +18172,7 @@
         "symbol": "UTSL"
     },
     {
-        "name": "RBB FD INC US TREAS 20YR BD",
+        "name": "F/M US TREASURY 20 YEAR BOND E",
         "symbol": "UTWY"
     },
     {
@@ -19312,7 +19324,7 @@
         "symbol": "XBI"
     },
     {
-        "name": "RBB FD INC US TRSRY 6 MNTH",
+        "name": "F/M US TREASURY 6 MONTH BILL E",
         "symbol": "XBIL"
     },
     {
