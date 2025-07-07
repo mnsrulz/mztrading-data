@@ -324,6 +324,10 @@
         "symbol": "ADVM"
     },
     {
+        "name": "AEBI SCHMIDT HLDG AG COM",
+        "symbol": "AEBI"
+    },
+    {
         "name": "AMEREN CORP COM",
         "symbol": "AEE"
     },
@@ -450,10 +454,6 @@
     {
         "name": "ADECOAGRO S A COM",
         "symbol": "AGRO"
-    },
-    {
-        "name": "PLAYAGS INC COM",
-        "symbol": "AGS"
     },
     {
         "name": "ARGAN INC COM",
@@ -886,6 +886,10 @@
     {
         "name": "DIREXION SHS ETF TR DIREXION 2X SHAR",
         "symbol": "AMZU"
+    },
+    {
+        "name": "Roundhill AMZN WeeklyPay ETF",
+        "symbol": "AMZW"
     },
     {
         "name": "TIDAL TR II YIELDMAX AMZN OP",
@@ -1676,10 +1680,6 @@
         "symbol": "AZ"
     },
     {
-        "name": "AZEK CO INC CL A",
-        "symbol": "AZEK"
-    },
-    {
         "name": "ASTRAZENECA PLC SPONSORED ADR",
         "symbol": "AZN"
     },
@@ -2408,10 +2408,6 @@
         "symbol": "BPOP"
     },
     {
-        "name": "BP PRUDHOE BAY RTY TR UNIT BEN INT",
-        "symbol": "BPT"
-    },
-    {
         "name": "BROADRIDGE FINL SOLUTIONS INC COM",
         "symbol": "BR"
     },
@@ -2460,6 +2456,10 @@
         "symbol": "BRKR"
     },
     {
+        "name": "Roundhill BRKB WeeklyPay ETF",
+        "symbol": "BRKW"
+    },
+    {
         "name": "BRILLIANT EARTH GROUP INC CL A COM",
         "symbol": "BRLT"
     },
@@ -2470,6 +2470,10 @@
     {
         "name": "DUTCH BROS INC CL A",
         "symbol": "BROS"
+    },
+    {
+        "name": "BRIGHTSTAR LOTTERY SHS USD",
+        "symbol": "BRSL"
     },
     {
         "name": "BRIGHTSPIRE CAPITAL INC COM CL A",
@@ -5092,10 +5096,6 @@
         "symbol": "DXJ"
     },
     {
-        "name": "WISDOMTREE JAPAN OPPORTUNITIES",
-        "symbol": "DXJS"
-    },
-    {
         "name": "DESTINATION XL GROUP INC COM",
         "symbol": "DXLG"
     },
@@ -5166,10 +5166,6 @@
     {
         "name": "EMERGENT BIOSOLUTIONS INC COM",
         "symbol": "EBS"
-    },
-    {
-        "name": "ENTERPRISE BANCORP INC MASS COM",
-        "symbol": "EBTC"
     },
     {
         "name": "ECOPETROL S A SPONSORED ADS",
@@ -5656,10 +5652,6 @@
         "symbol": "ESGE"
     },
     {
-        "name": "ENSTAR GROUP LIMITED SHS",
-        "symbol": "ESGR"
-    },
-    {
         "name": "ELEMENT SOLUTIONS INC COM",
         "symbol": "ESI"
     },
@@ -5836,10 +5828,6 @@
         "symbol": "EVRG"
     },
     {
-        "name": "EVERI HLDGS INC COM",
-        "symbol": "EVRI"
-    },
-    {
         "name": "EVERTEC INC COM",
         "symbol": "EVTC"
     },
@@ -6006,10 +5994,6 @@
     {
         "name": "NATIONAL VISION HLDGS INC COM",
         "symbol": "EYE"
-    },
-    {
-        "name": "EYENOVIA INC COM NEW",
-        "symbol": "EYEN"
     },
     {
         "name": "EYEPOINT PHARMACEUTICALS INC COM NEW",
@@ -6604,7 +6588,7 @@
         "symbol": "FNDX"
     },
     {
-        "name": "FIDELITY NATIONAL FINANCIAL IN FNF GROUP COM",
+        "name": "FIDELITY NATIONAL FINANCIAL IN COM SHS",
         "symbol": "FNF"
     },
     {
@@ -8164,6 +8148,10 @@
         "symbol": "HOOK"
     },
     {
+        "name": "Roundhill HOOD WeeklyPay ETF",
+        "symbol": "HOOW"
+    },
+    {
         "name": "HOPE BANCORP INC COM",
         "symbol": "HOPE"
     },
@@ -8386,6 +8374,10 @@
     {
         "name": "HYCROFT MINING HOLDING CORP CL A NEW",
         "symbol": "HYMC"
+    },
+    {
+        "name": "HYPERION DEFI INC COM NEW",
+        "symbol": "HYPD"
     },
     {
         "name": "HYPERFINE INC COM CL A",
@@ -8690,10 +8682,6 @@
     {
         "name": "ISHARES TR ISHS 1-5YR INVS",
         "symbol": "IGSB"
-    },
-    {
-        "name": "INTERNATIONAL GAME TECHNOLOGY SHS USD",
-        "symbol": "IGT"
     },
     {
         "name": "iShares Expanded Tech-Software Sector ETF",
@@ -9006,10 +8994,6 @@
     {
         "name": "INNOVIZ TECHNOLOGIES LTD SHS",
         "symbol": "INVZ"
-    },
-    {
-        "name": "INOZYME PHARMA INC COM",
-        "symbol": "INZY"
     },
     {
         "name": "GRANITESHARES ETF TR 2X LONG IONQ",
@@ -9508,7 +9492,7 @@
         "symbol": "JHML"
     },
     {
-        "name": "JAMES HARDIE INDS PLC SPONSORED ADR",
+        "name": "JAMES HARDIE INDS PLC ORD SHS",
         "symbol": "JHX"
     },
     {
@@ -9550,10 +9534,6 @@
     {
         "name": "SPDR SERIES TRUST BLOOMBERG HIGH Y",
         "symbol": "JNK"
-    },
-    {
-        "name": "JUNIPER NETWORKS INC COM",
-        "symbol": "JNPR"
     },
     {
         "name": "DIREXION SHS ETF TR DAILY JR GLD MIN",
@@ -10952,6 +10932,10 @@
         "symbol": "METV"
     },
     {
+        "name": "Roundhill META WeeklyPay ETF",
+        "symbol": "METW"
+    },
+    {
         "name": "DIREXION SHS ETF TR DLY MSCI MX 3X",
         "symbol": "MEXX"
     },
@@ -11588,7 +11572,7 @@
         "symbol": "MUSA"
     },
     {
-        "name": "MCEWEN MNG INC COM NEW",
+        "name": "MCEWEN INC",
         "symbol": "MUX"
     },
     {
@@ -11866,6 +11850,10 @@
     {
         "name": "T-Rex 2X Long NFLX Daily Target ETF",
         "symbol": "NFLU"
+    },
+    {
+        "name": "Roundhill NFLX WeeklyPay ETF",
+        "symbol": "NFLW"
     },
     {
         "name": "NETFLIX INC COM",
@@ -12336,7 +12324,7 @@
         "symbol": "NWN"
     },
     {
-        "name": "NWPX INFRASTRUCTURE INC",
+        "name": "NWPX INFRASTRUCTURE INC COM",
         "symbol": "NWPX"
     },
     {
@@ -12694,6 +12682,10 @@
     {
         "name": "WISDOMTREE TR EUROPEAN OPPORTU",
         "symbol": "OPPE"
+    },
+    {
+        "name": "WISDOMTREE TR JAPAN OPPORTUNIT",
+        "symbol": "OPPJ"
     },
     {
         "name": "OPERA LTD SPONSORED ADS",
@@ -13152,7 +13144,7 @@
         "symbol": "PEN"
     },
     {
-        "name": "PENGUIN SOLUTIONS INC SHS",
+        "name": "PENGUIN SOLUTIONS INC COM",
         "symbol": "PENG"
     },
     {
@@ -13400,7 +13392,7 @@
         "symbol": "PLAY"
     },
     {
-        "name": "PLAYBOY INC",
+        "name": "PLAYBOY INC COM",
         "symbol": "PLBY"
     },
     {
@@ -13692,7 +13684,7 @@
         "symbol": "PROF"
     },
     {
-        "name": "PROKIDNEY CORP CLASS A ORD SHS",
+        "name": "PROKIDNEY CORP SHS CL A",
         "symbol": "PROK"
     },
     {
@@ -14140,6 +14132,10 @@
         "symbol": "QUBT"
     },
     {
+        "name": "Tradr 2X Long QUBT Daily ETF",
+        "symbol": "QUBX"
+    },
+    {
         "name": "QUICKLOGIC CORP COM NEW",
         "symbol": "QUIK"
     },
@@ -14266,10 +14262,6 @@
     {
         "name": "REDDIT INC CL A",
         "symbol": "RDDT"
-    },
-    {
-        "name": "REDFIN CORP COM",
-        "symbol": "RDFN"
     },
     {
         "name": "READING INTL INC CL A",
@@ -14472,6 +14464,10 @@
         "symbol": "RGTI"
     },
     {
+        "name": "Tradr 2X Long RGTI Daily ETF",
+        "symbol": "RGTU"
+    },
+    {
         "name": "RH COM",
         "symbol": "RH"
     },
@@ -14532,7 +14528,7 @@
         "symbol": "RJF"
     },
     {
-        "name": "ROCKET LAB CORP",
+        "name": "ROCKET LAB CORP COM",
         "symbol": "RKLB"
     },
     {
@@ -15544,10 +15540,6 @@
         "symbol": "SHY"
     },
     {
-        "name": "SHYFT GROUP INC COM",
-        "symbol": "SHYF"
-    },
-    {
         "name": "ISHARES TR 0-5YR HI YL CP",
         "symbol": "SHYG"
     },
@@ -16396,6 +16388,10 @@
         "symbol": "SRLN"
     },
     {
+        "name": "SRM ENTERTAINMENT INC COM",
+        "symbol": "SRM"
+    },
+    {
         "name": "SAREPTA THERAPEUTICS INC COM",
         "symbol": "SRPT"
     },
@@ -16704,10 +16700,6 @@
         "symbol": "SWKS"
     },
     {
-        "name": "SPRINGWORKS THERAPEUTICS INC COM",
-        "symbol": "SWTX"
-    },
-    {
         "name": "SUNCOKE ENERGY INC COM",
         "symbol": "SXC"
     },
@@ -16900,7 +16892,7 @@
         "symbol": "TDS"
     },
     {
-        "name": "EXCHANGE LISTED FDS TR CABANA TARGET 10",
+        "name": "EXCHANGE LISTED FDS TR ETC CABANA TARGT",
         "symbol": "TDSC"
     },
     {
@@ -18940,7 +18932,7 @@
         "symbol": "WBTN"
     },
     {
-        "name": "WALLBOX NV SHS CL A",
+        "name": "WALLBOX NV CLASS A ORD SHS",
         "symbol": "WBX"
     },
     {
