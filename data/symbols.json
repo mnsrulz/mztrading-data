@@ -944,10 +944,6 @@
         "symbol": "ANRO"
     },
     {
-        "name": "ANSYS INC COM",
-        "symbol": "ANSS"
-    },
-    {
         "name": "ANNOVIS BIO INC COM",
         "symbol": "ANVS"
     },
@@ -4989,7 +4985,7 @@
     },
     {
         "name": "SOLO BRANDS INC COM CL A NEW",
-        "symbol": "DTCBD"
+        "symbol": "DTC"
     },
     {
         "name": "GLOBAL X FDS DATA CTR & DIGIT",
@@ -8496,10 +8492,6 @@
         "symbol": "IBUY"
     },
     {
-        "name": "ICAD INC COM NEW",
-        "symbol": "ICAD"
-    },
-    {
         "name": "INTERCONTINENTAL EXCHANGE INC COM",
         "symbol": "ICE"
     },
@@ -11100,7 +11092,7 @@
         "symbol": "MLCO"
     },
     {
-        "name": "MICROALGO INC ORD SHS",
+        "name": "MICROALGO INC SHS CL A",
         "symbol": "MLGO"
     },
     {
@@ -17444,7 +17436,7 @@
         "symbol": "TRNS"
     },
     {
-        "name": "TRON INC",
+        "name": "TRON INC COM",
         "symbol": "TRON"
     },
     {
