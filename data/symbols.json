@@ -1884,10 +1884,6 @@
         "symbol": "BCS"
     },
     {
-        "name": "BRIACELL THERAPEUTICS CORP COM NEW",
-        "symbol": "BCTX"
-    },
-    {
         "name": "BICYCLE THERAPEUTICS PLC SPONSORED ADS",
         "symbol": "BCYC"
     },
@@ -2392,10 +2388,6 @@
         "symbol": "BP"
     },
     {
-        "name": "BLUEPRINT MEDICINES CORP COM",
-        "symbol": "BPMC"
-    },
-    {
         "name": "POPULAR INC COM NEW",
         "symbol": "BPOP"
     },
@@ -2464,7 +2456,7 @@
         "symbol": "BROS"
     },
     {
-        "name": "BRIGHTSTAR LOTTERY SHS USD",
+        "name": "BRIGHTSTAR LOTTERY PLC SHS USD",
         "symbol": "BRSL"
     },
     {
@@ -6044,10 +6036,6 @@
         "symbol": "FANG"
     },
     {
-        "name": "FARO TECHNOLOGIES INC COM",
-        "symbol": "FARO"
-    },
-    {
         "name": "DIREXION SHS ETF TR DLY FIN BULL NEW",
         "symbol": "FAS"
     },
@@ -6146,10 +6134,6 @@
     {
         "name": "FIDELITY COVINGTON TRUST MSCI COMMNTN SVC",
         "symbol": "FCOM"
-    },
-    {
-        "name": "FOCUS UNVL INC COM NEW",
-        "symbol": "FCUV"
     },
     {
         "name": "FREEPORT-MCMORAN INC CL B",
@@ -7950,10 +7934,6 @@
     {
         "name": "GLOBAL X FDS VDEO GAM ESPRT",
         "symbol": "HERO"
-    },
-    {
-        "name": "HESS CORP COM",
-        "symbol": "HES"
     },
     {
         "name": "HESS MIDSTREAM LP CL A SHS",
@@ -9764,10 +9744,6 @@
         "symbol": "KIM"
     },
     {
-        "name": "NEXTDOOR HOLDINGS INC COM CL A",
-        "symbol": "KIND"
-    },
-    {
         "name": "KIRKLANDS INC COM",
         "symbol": "KIRK"
     },
@@ -9790,10 +9766,6 @@
     {
         "name": "KULICKE & SOFFA INDS INC COM",
         "symbol": "KLIC"
-    },
-    {
-        "name": "KALARIS THERAPEUTICS INC COM",
-        "symbol": "KLRS"
     },
     {
         "name": "KALTURA INC COM",
@@ -10194,10 +10166,6 @@
     {
         "name": "CENTRUS ENERGY CORP CL A",
         "symbol": "LEU"
-    },
-    {
-        "name": "THE LION ELECTRIC COMPANY COMMON STOCK",
-        "symbol": "LEVGQ"
     },
     {
         "name": "LEVI STRAUSS & CO NEW CL A COM STK",
@@ -12346,6 +12314,10 @@
     {
         "name": "QUANEX BLDG PRODS CORP COM",
         "symbol": "NX"
+    },
+    {
+        "name": "NEXTDOOR HOLDINGS INC COM CL A",
+        "symbol": "NXDR"
     },
     {
         "name": "NEXPOINT DIVERSIFIED REL ET TR COM NEW",
