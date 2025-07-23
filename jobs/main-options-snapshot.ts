@@ -15,14 +15,21 @@ const data = getOptionsSnapshotSummary();
 const timeoutInMS = 3000;
 const releaseName = Deno.env.get("RELEASE_NAME") ||
     `DEX_GEX_SNAPSHOT_${format(new Date(), "yyyy-MM-dd")}`;
+const forceDayId = Deno.env.get("FORCE_DAY_ID")
+
+forceDayId && console.log(`Force day id for this release: ${forceDayId}`);
+
+console.log(`Generating options snapshot for release: ${releaseName}`);
+
 data[releaseName] = {
-    displayName: format(new Date(), "yyyy-MM-dd"),
+    displayName: forceDayId || format(new Date(), "yyyy-MM-dd"),
     created: new Date(),
+    zipAssetUrl: `${ghRepoBaseUrl}/${releaseName}.zip`,
     symbols: {},
 };
 const currentRelease = data[releaseName];
 
-const latestDateAndSymbols = getCboeLatestDateAndSymbols();
+const latestDateAndSymbols = getCboeLatestDateAndSymbols(forceDayId);
 let totalSymbols = 0;
 let processingCounter = 0;
 if (latestDateAndSymbols && latestDateAndSymbols.latestDate) {
@@ -78,15 +85,11 @@ async function processSymbol(page: Page, allSymbols: string[], symbol: string) {
     currentRelease.symbols[symbol] = {
         dex: {
             sdFileName: `${cleanedSymbol}_DEX_620.png`,
-            hdFileName: `${cleanedSymbol}_DEX_1240.png`,
-            sdAssetUrl: `${ghRepoBaseUrl}/${releaseName}/${cleanedSymbol}_DEX_620.png`,
-            hdAssetUrl: `${ghRepoBaseUrl}/${releaseName}/${cleanedSymbol}_DEX_1240.png`
+            hdFileName: `${cleanedSymbol}_DEX_1240.png`,            
         },
         gex: {
             sdFileName: `${cleanedSymbol}_GEX_620.png`,
-            hdFileName: `${cleanedSymbol}_GEX_1240.png`,
-            sdAssetUrl: `${ghRepoBaseUrl}/${releaseName}/${cleanedSymbol}_GEX_620.png`,
-            hdAssetUrl: `${ghRepoBaseUrl}/${releaseName}/${cleanedSymbol}_GEX_1240.png`
+            hdFileName: `${cleanedSymbol}_GEX_1240.png`           
         }
     }
 

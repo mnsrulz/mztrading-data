@@ -31,13 +31,14 @@ import symbols from "./../data/symbols.json" with {
 
 type OptionsSnapshotSummaryFileType = {
     hdFileName: string;
-    hdAssetUrl: string;
+    hdAssetUrl?: string;
     sdFileName: string;
-    sdAssetUrl: string;
+    sdAssetUrl?: string;
 };
 type OptionsSnapshotSummary = Record<string, {
     displayName: string;
     created: Date | string;
+    zipAssetUrl?: string;
     symbols: Record<string, {
         "gex": OptionsSnapshotSummaryFileType;
         "dex": OptionsSnapshotSummaryFileType;
@@ -135,7 +136,18 @@ export const searchTicker = (q: string) => {
 
 export const CboeOptionsRawSummary = (cboeOptionsSummary as CboeOptionSummaryType[]).map(({ name, optionsAssetUrl }) => ({ name, optionsAssetUrl, dt: name.replace('CBOE_OPTIONS_DATA_', '').substring(0, 10) }));
 
-export const getCboeLatestDateAndSymbols = () => {
+export const getCboeLatestDateAndSymbols = (forceDayId?: string) => {
+    if (forceDayId) {
+        if (optionsRollingSummary.symbolsSummary.some(k => k.dt == forceDayId)) {
+            return {
+                latestDate: forceDayId,
+                symbols: optionsRollingSummary.symbolsSummary.filter(k => k.dt == forceDayId).map(k => k.symbol).slice(0, 30) // Limit to 30 symbols for testing
+            }
+        } else {
+            return null;
+        }
+    }
+
     const latestDate = optionsRollingSummary.symbolsSummary.map(k => k.dt).sort().pop();
     if (latestDate) {
         return {
