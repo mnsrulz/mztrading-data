@@ -2064,6 +2064,10 @@
         "symbol": "BILS"
     },
     {
+        "name": "BOLLINGER INNOVATIONS INC",
+        "symbol": "BINI"
+    },
+    {
         "name": "BIO RAD LABS INC CL A",
         "symbol": "BIO"
     },
@@ -11556,10 +11560,6 @@
         "symbol": "MUFG"
     },
     {
-        "name": "MULLEN AUTOMOTIVE INC COM NEW",
-        "symbol": "MULN"
-    },
-    {
         "name": "PIMCO ETF TR INTER MUN BD ACT",
         "symbol": "MUNI"
     },
@@ -18356,10 +18356,6 @@
         "symbol": "VERU"
     },
     {
-        "name": "VERVE THERAPEUTICS INC COM",
-        "symbol": "VERV"
-    },
-    {
         "name": "VERMILION ENERGY INC COM",
         "symbol": "VET"
     },
@@ -18505,7 +18501,7 @@
     },
     {
         "name": "VELO3D INC COM NEW",
-        "symbol": "VLDX"
+        "symbol": "VLDXD"
     },
     {
         "name": "VALENS SEMICONDUCTOR LTD ORDINARY SHARES",
@@ -18656,7 +18652,7 @@
         "symbol": "VRAR"
     },
     {
-        "name": "VERRICA PHARMACEUTICALS INC COM",
+        "name": "VERRICA PHARMACEUTICALS INC COM SHS",
         "symbol": "VRCA"
     },
     {
