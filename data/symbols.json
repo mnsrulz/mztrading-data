@@ -2064,6 +2064,10 @@
         "symbol": "BILS"
     },
     {
+        "name": "BOLLINGER INNOVATIONS INC COM NEW",
+        "symbol": "BINI"
+    },
+    {
         "name": "BIO RAD LABS INC CL A",
         "symbol": "BIO"
     },
@@ -3260,7 +3264,7 @@
         "symbol": "CHKP"
     },
     {
-        "name": "CHARGEPOINT HOLDINGS INC COM CL A",
+        "name": "CHARGEPOINT HOLDINGS INC COM SHS",
         "symbol": "CHPT"
     },
     {
@@ -4822,10 +4826,6 @@
     {
         "name": "DENALI THERAPEUTICS INC COM",
         "symbol": "DNLI"
-    },
-    {
-        "name": "DANIMER SCIENTIFIC INC COM SHS",
-        "symbol": "DNMRQ"
     },
     {
         "name": "DENISON MINES CORP COM",
@@ -9768,10 +9768,6 @@
         "symbol": "KIM"
     },
     {
-        "name": "KIRKLANDS INC COM",
-        "symbol": "KIRK"
-    },
-    {
         "name": "KKR & CO INC COM",
         "symbol": "KKR"
     },
@@ -11554,10 +11550,6 @@
     {
         "name": "MITSUBISHI UFJ FINL GROUP INC SPONSORED ADS",
         "symbol": "MUFG"
-    },
-    {
-        "name": "MULLEN AUTOMOTIVE INC COM NEW",
-        "symbol": "MULN"
     },
     {
         "name": "PIMCO ETF TR INTER MUN BD ACT",
@@ -16852,6 +16844,10 @@
         "symbol": "TBF"
     },
     {
+        "name": "BRAND HOUSE COLLECTIVE INC/THE",
+        "symbol": "TBHC"
+    },
+    {
         "name": "TRUEBLUE INC COM",
         "symbol": "TBI"
     },
@@ -18356,10 +18352,6 @@
         "symbol": "VERU"
     },
     {
-        "name": "VERVE THERAPEUTICS INC COM",
-        "symbol": "VERV"
-    },
-    {
         "name": "VERMILION ENERGY INC COM",
         "symbol": "VET"
     },
@@ -18505,7 +18497,7 @@
     },
     {
         "name": "VELO3D INC COM NEW",
-        "symbol": "VLDX"
+        "symbol": "VLDXD"
     },
     {
         "name": "VALENS SEMICONDUCTOR LTD ORDINARY SHARES",
@@ -18656,7 +18648,7 @@
         "symbol": "VRAR"
     },
     {
-        "name": "VERRICA PHARMACEUTICALS INC COM",
+        "name": "VERRICA PHARMACEUTICALS INC COM SHS",
         "symbol": "VRCA"
     },
     {
