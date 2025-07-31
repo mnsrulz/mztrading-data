@@ -2492,6 +2492,10 @@
         "symbol": "BROS"
     },
     {
+        "name": "COLUMBUS CIRCLE CAP CORP. I SHS CL A",
+        "symbol": "BRR"
+    },
+    {
         "name": "BRIGHTSTAR LOTTERY PLC SHS USD",
         "symbol": "BRSL"
     },
@@ -2970,10 +2974,6 @@
     {
         "name": "C4 THERAPEUTICS INC COM STK",
         "symbol": "CCCC"
-    },
-    {
-        "name": "COLUMBUS CIRCLE CAP CORP. I SHS CL A",
-        "symbol": "CCCM"
     },
     {
         "name": "CCC INTELLIGENT SOLUTIONS HLD COM",
@@ -8158,6 +8158,10 @@
     {
         "name": "HONEST CO INC COM",
         "symbol": "HNST"
+    },
+    {
+        "name": "VanEck Bitcoin ETF",
+        "symbol": "HODL"
     },
     {
         "name": "HOOKER FURNISHINGS CORPORATION COM",
