@@ -2052,10 +2052,6 @@
         "symbol": "BIDU"
     },
     {
-        "name": "BIGCOMMERCE HLDGS INC COM SER 1",
-        "symbol": "BIGC"
-    },
-    {
         "name": "TIDAL TR II YIELDMAX TRGT12",
         "symbol": "BIGY"
     },
@@ -2490,6 +2486,10 @@
     {
         "name": "DUTCH BROS INC CL A",
         "symbol": "BROS"
+    },
+    {
+        "name": "COLUMBUS CIRCLE CAP CORP. I SHS CL A",
+        "symbol": "BRR"
     },
     {
         "name": "BRIGHTSTAR LOTTERY PLC SHS USD",
@@ -2970,10 +2970,6 @@
     {
         "name": "C4 THERAPEUTICS INC COM STK",
         "symbol": "CCCC"
-    },
-    {
-        "name": "COLUMBUS CIRCLE CAP CORP. I SHS CL A",
-        "symbol": "CCCM"
     },
     {
         "name": "CCC INTELLIGENT SOLUTIONS HLD COM",
@@ -3546,6 +3542,10 @@
     {
         "name": "COMPASS THERAPEUTICS INC COM",
         "symbol": "CMPX"
+    },
+    {
+        "name": "COMMERCE.COM INC",
+        "symbol": "CMRC"
     },
     {
         "name": "COSTAMARE INC SHS",
@@ -8158,6 +8158,10 @@
     {
         "name": "HONEST CO INC COM",
         "symbol": "HNST"
+    },
+    {
+        "name": "VanEck Bitcoin ETF",
+        "symbol": "HODL"
     },
     {
         "name": "HOOKER FURNISHINGS CORPORATION COM",
@@ -15038,10 +15042,6 @@
     {
         "name": "SAFETY INS GROUP INC COM",
         "symbol": "SAFT"
-    },
-    {
-        "name": "SAGE THERAPEUTICS INC COM",
-        "symbol": "SAGE"
     },
     {
         "name": "SONIC AUTOMOTIVE INC CL A",
