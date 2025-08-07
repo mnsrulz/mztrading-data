@@ -2052,10 +2052,6 @@
         "symbol": "BIDU"
     },
     {
-        "name": "BIGCOMMERCE HLDGS INC COM SER 1",
-        "symbol": "BIGC"
-    },
-    {
         "name": "TIDAL TR II YIELDMAX TRGT12",
         "symbol": "BIGY"
     },
@@ -2492,6 +2488,10 @@
         "symbol": "BROS"
     },
     {
+        "name": "COLUMBUS CIRCLE CAP CORP. I SHS CL A",
+        "symbol": "BRR"
+    },
+    {
         "name": "BRIGHTSTAR LOTTERY PLC SHS USD",
         "symbol": "BRSL"
     },
@@ -2622,6 +2622,10 @@
     {
         "name": "WEBULL CORP ORD SHS",
         "symbol": "BULL"
+    },
+    {
+        "name": "T-REX 2X Long BULL Daily Target ETF",
+        "symbol": "BULU"
     },
     {
         "name": "BURFORD CAP LTD ORD SHS",
@@ -2970,10 +2974,6 @@
     {
         "name": "C4 THERAPEUTICS INC COM STK",
         "symbol": "CCCC"
-    },
-    {
-        "name": "COLUMBUS CIRCLE CAP CORP. I SHS CL A",
-        "symbol": "CCCM"
     },
     {
         "name": "CCC INTELLIGENT SOLUTIONS HLD COM",
@@ -3546,6 +3546,10 @@
     {
         "name": "COMPASS THERAPEUTICS INC COM",
         "symbol": "CMPX"
+    },
+    {
+        "name": "COMMERCE.COM INC COM SER 1",
+        "symbol": "CMRC"
     },
     {
         "name": "COSTAMARE INC SHS",
@@ -4784,6 +4788,10 @@
         "symbol": "DKS"
     },
     {
+        "name": "T-REX 2X Long DKNG Daily Target ETF",
+        "symbol": "DKUP"
+    },
+    {
         "name": "DOLBY LABORATORIES INC COM CL A",
         "symbol": "DLB"
     },
@@ -5800,10 +5808,6 @@
         "symbol": "ETU"
     },
     {
-        "name": "E2OPEN PARENT HOLDINGS INC COM CL A",
-        "symbol": "ETWO"
-    },
-    {
         "name": "ENCORE ENERGY CORP COM NEW",
         "symbol": "EU"
     },
@@ -6398,6 +6402,10 @@
     {
         "name": "FIDELITY COVINGTON TRUST MSCI INDL INDX",
         "symbol": "FIDU"
+    },
+    {
+        "name": "FIGMA INC CLASS A COM STK",
+        "symbol": "FIG"
     },
     {
         "name": "FIGS INC CL A",
@@ -8158,6 +8166,10 @@
     {
         "name": "HONEST CO INC COM",
         "symbol": "HNST"
+    },
+    {
+        "name": "VanEck Bitcoin ETF",
+        "symbol": "HODL"
     },
     {
         "name": "HOOKER FURNISHINGS CORPORATION COM",
@@ -10416,10 +10428,6 @@
         "symbol": "LODE"
     },
     {
-        "name": "CONTEXTLOGIC INC CL A NEW",
-        "symbol": "LOGC"
-    },
-    {
         "name": "LOGITECH INTL S A SHS",
         "symbol": "LOGI"
     },
@@ -12306,10 +12314,6 @@
     {
         "name": "TIDAL TR II YIELDMAX NVDA",
         "symbol": "NVDY"
-    },
-    {
-        "name": "NV5 GLOBAL INC COM",
-        "symbol": "NVEE"
     },
     {
         "name": "NAVIGATOR HLDGS LTD SHS",
@@ -15040,10 +15044,6 @@
         "symbol": "SAFT"
     },
     {
-        "name": "SAGE THERAPEUTICS INC COM",
-        "symbol": "SAGE"
-    },
-    {
         "name": "SONIC AUTOMOTIVE INC CL A",
         "symbol": "SAH"
     },
@@ -16289,7 +16289,7 @@
     },
     {
         "name": "SPRUCE BIOSCIENCES INC COM",
-        "symbol": "SPRB"
+        "symbol": "SPRBD"
     },
     {
         "name": "SPRUCE POWER HOLDING CORP COM NEW",
@@ -17180,6 +17180,10 @@
         "symbol": "THTX"
     },
     {
+        "name": "ACUREN CORP COM",
+        "symbol": "TIC"
+    },
+    {
         "name": "MILLICOM INTL CELLULAR S A COM STK",
         "symbol": "TIGO"
     },
@@ -18008,7 +18012,7 @@
         "symbol": "UNH"
     },
     {
-        "name": "UNITI GROUP INC COM",
+        "name": "UNITI GROUP INC COM SHS",
         "symbol": "UNIT"
     },
     {
@@ -19618,6 +19622,10 @@
     {
         "name": "ISHARES TR EXPONENTIAL TECH",
         "symbol": "XT"
+    },
+    {
+        "name": "SPDR SERIES TRUST S&P TELECOM",
+        "symbol": "XTL"
     },
     {
         "name": "SPDR SERIES TRUST S&P TRANSN ETF",
