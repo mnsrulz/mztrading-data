@@ -280,6 +280,10 @@
         "symbol": "ADBE"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "ADBG"
+    },
+    {
         "name": "AGREE RLTY CORP COM",
         "symbol": "ADC"
     },
@@ -326,6 +330,10 @@
     {
         "name": "ADTRAN HOLDINGS INC COM",
         "symbol": "ADTN"
+    },
+    {
+        "name": "ADURO CLEAN TECHNOLOGIES INC COM NEW",
+        "symbol": "ADUR"
     },
     {
         "name": "ADDUS HOMECARE CORP COM",
@@ -538,6 +546,10 @@
     {
         "name": "AIRGAIN INC COM",
         "symbol": "AIRG"
+    },
+    {
+        "name": "FIRST TR EXCHANGE TRADED FD VI RBA INDL ETF",
+        "symbol": "AIRR"
     },
     {
         "name": "AIRSCULPT TECHNOLOGIES INC COM",
@@ -778,6 +790,10 @@
     {
         "name": "ADVANCED MICRO DEVICES INC COM",
         "symbol": "AMD"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "AMDG"
     },
     {
         "name": "GRANITESHARES ETF TR GRANITE 2X LONG",
@@ -1236,6 +1252,10 @@
         "symbol": "ARM"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "ARMG"
+    },
+    {
         "name": "ARAMARK COM",
         "symbol": "ARMK"
     },
@@ -1412,6 +1432,10 @@
         "symbol": "ATAI"
     },
     {
+        "name": "ATOUR LIFESTYLE HLDGS LTD SPONSORED ADS",
+        "symbol": "ATAT"
+    },
+    {
         "name": "ALPHATEC HLDGS INC COM NEW",
         "symbol": "ATEC"
     },
@@ -1570,6 +1594,10 @@
     {
         "name": "AVADEL PHARMACEUTICALS PLC COM SHS",
         "symbol": "AVDL"
+    },
+    {
+        "name": "AMERICAN CENTY ETF TR INTL SMCP VLU",
+        "symbol": "AVDV"
     },
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS EMGMKT",
@@ -2524,6 +2552,10 @@
         "symbol": "BRC"
     },
     {
+        "name": "BLACK ROCK COFFEE BAR INC CL A",
+        "symbol": "BRCB"
+    },
+    {
         "name": "BRC INC COM CL A",
         "symbol": "BRCC"
     },
@@ -2892,6 +2924,10 @@
         "symbol": "CAI"
     },
     {
+        "name": "CALAMOS ETF TR AUTOCALLABLE INC",
+        "symbol": "CAIE"
+    },
+    {
         "name": "CHEESECAKE FACTORY INC COM",
         "symbol": "CAKE"
     },
@@ -3062,6 +3098,10 @@
     {
         "name": "CCC INTELLIGENT SOLUTIONS HLD COM",
         "symbol": "CCCS"
+    },
+    {
+        "name": "CHURCHILL CAP CORP X SHS CL A",
+        "symbol": "CCCX"
     },
     {
         "name": "CAPITAL CLEAN ENERGY CARRIERS COM",
@@ -3790,6 +3830,10 @@
     {
         "name": "COHU INC COM",
         "symbol": "COHU"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "COIG"
     },
     {
         "name": "COINBASE GLOBAL INC COM CL A",
@@ -4656,6 +4700,10 @@
         "symbol": "DBX"
     },
     {
+        "name": "DAKOTA GOLD CORP COM",
+        "symbol": "DC"
+    },
+    {
         "name": "DOCEBO INC COM",
         "symbol": "DCBO"
     },
@@ -4996,7 +5044,7 @@
         "symbol": "DNA"
     },
     {
-        "name": "WISDOMTREE GLOBAL EX-US QUALIT",
+        "name": "WISDOMTREE TR GLOBAL EX US QUA",
         "symbol": "DNL"
     },
     {
@@ -5804,7 +5852,7 @@
         "symbol": "EQTY"
     },
     {
-        "name": "CALIBRE MNG CORP COM",
+        "name": "EQUINOX GOLD CORP COM",
         "symbol": "EQX"
     },
     {
@@ -7548,6 +7596,10 @@
         "symbol": "GIGB"
     },
     {
+        "name": "SPDR INDEX SHS FDS S&P GBLINF ETF",
+        "symbol": "GII"
+    },
+    {
         "name": "G III APPAREL GROUP LTD COM",
         "symbol": "GIII"
     },
@@ -8438,6 +8490,10 @@
     {
         "name": "ROBINHOOD MKTS INC COM CL A",
         "symbol": "HOOD"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "HOOG"
     },
     {
         "name": "HOOKIPA PHARMA INC COM NEW",
@@ -10052,6 +10108,10 @@
         "symbol": "KGC"
     },
     {
+        "name": "KRANESHARES TRUST MSCI CHINA CLEAN",
+        "symbol": "KGRN"
+    },
+    {
         "name": "KODIAK GAS SVCS INC COM",
         "symbol": "KGS"
     },
@@ -10074,6 +10134,10 @@
     {
         "name": "KIMCO RLTY CORP COM",
         "symbol": "KIM"
+    },
+    {
+        "name": "KINGSTONE COS INC COM",
+        "symbol": "KINS"
     },
     {
         "name": "KKR & CO INC COM",
@@ -12048,6 +12112,10 @@
         "symbol": "MZZ"
     },
     {
+        "name": "NANO LABS LTD SHS NEW",
+        "symbol": "NA"
+    },
+    {
         "name": "N-ABLE INC COMMON STOCK",
         "symbol": "NABL"
     },
@@ -13348,6 +13416,10 @@
         "symbol": "PAMC"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "PANG"
+    },
+    {
         "name": "PANGAEA LOGISTICS SOLUTION LTD SHS",
         "symbol": "PANL"
     },
@@ -13702,10 +13774,6 @@
     {
         "name": "PHINIA INC COMMON STOCK",
         "symbol": "PHIN"
-    },
-    {
-        "name": "PERFORMANT HEALTHCARE INC COM",
-        "symbol": "PHLT"
     },
     {
         "name": "PULTE GROUP INC COM",
@@ -14292,6 +14360,10 @@
         "symbol": "PTON"
     },
     {
+        "name": "PATTERN GROUP INC COM SER A",
+        "symbol": "PTRN"
+    },
+    {
         "name": "PUBMATIC INC COM CL A",
         "symbol": "PUBM"
     },
@@ -14350,6 +14422,10 @@
     {
         "name": "PIXELWORKS INC COM",
         "symbol": "PXLW"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "PYPG"
     },
     {
         "name": "PAYPAL HLDGS INC COM",
@@ -14574,6 +14650,10 @@
     {
         "name": "UNIQURE NV SHS",
         "symbol": "QURE"
+    },
+    {
+        "name": "SPDR SERIES TRUST MSCI USA STRTGIC",
+        "symbol": "QUS"
     },
     {
         "name": "QVC GROUP INC COM SER A NEW",
@@ -14864,6 +14944,10 @@
         "symbol": "RFG"
     },
     {
+        "name": "RF INDS LTD COM PAR $0.01",
+        "symbol": "RFIL"
+    },
+    {
         "name": "RAFAEL HLDGS INC COM CL B",
         "symbol": "RFL"
     },
@@ -14954,6 +15038,10 @@
     {
         "name": "RIOT PLATFORMS INC COM",
         "symbol": "RIOT"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "RIOX"
     },
     {
         "name": "RITHM CAPITAL CORP COM NEW",
@@ -17676,6 +17764,10 @@
         "symbol": "TLS"
     },
     {
+        "name": "TIZIANA LIFE SCIENCES LTD COMMON SHARES",
+        "symbol": "TLSA"
+    },
+    {
         "name": "ISHARES TR 20 YR TR BD ETF",
         "symbol": "TLT"
     },
@@ -18062,6 +18154,10 @@
     {
         "name": "TAIWAN SEMICONDUCTOR MFG LTD SPONSORED ADS",
         "symbol": "TSM"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "TSMG"
     },
     {
         "name": "GRANITESHARES ETF TR 2X LONG TSM DAIL",
@@ -19352,6 +19448,10 @@
         "symbol": "VV"
     },
     {
+        "name": "VIVOPOWER INTERNATIONAL PLC SHS NEW",
+        "symbol": "VVPR"
+    },
+    {
         "name": "VALVOLINE INC COM",
         "symbol": "VVV"
     },
@@ -19802,6 +19902,10 @@
     {
         "name": "WAVE LIFE SCIENCES LTD SHS",
         "symbol": "WVE"
+    },
+    {
+        "name": "WW INTL INC COM NEW",
+        "symbol": "WW"
     },
     {
         "name": "WOODWARD INC COM",
