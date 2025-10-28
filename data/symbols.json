@@ -272,8 +272,8 @@
         "symbol": "ADAM"
     },
     {
-        "name": "ADAPTIMMUNE THERAPEUTICS PLC SPONDS ADS",
-        "symbol": "ADAP"
+        "name": "--Placeholder--",
+        "symbol": "ADAPY"
     },
     {
         "name": "ADOBE INC COM",
@@ -1268,6 +1268,10 @@
         "symbol": "ARMU"
     },
     {
+        "name": "Roundhill ARM WeeklyPay ETF",
+        "symbol": "ARMW"
+    },
+    {
         "name": "ARCHROCK INC COM",
         "symbol": "AROC"
     },
@@ -1796,6 +1800,10 @@
         "symbol": "BABA"
     },
     {
+        "name": "Roundhill BABA WeeklyPay ETF",
+        "symbol": "BABW"
+    },
+    {
         "name": "GRANITESHARES ETF TR 2X LONG BABA DAI",
         "symbol": "BABX"
     },
@@ -2224,6 +2232,10 @@
         "symbol": "BITO"
     },
     {
+        "name": "BITWISE FUNDS TRUST CRYPTO INDUSTRY",
+        "symbol": "BITQ"
+    },
+    {
         "name": "GLOBAL X FDS BLOCKCHAIN & BIT",
         "symbol": "BITS"
     },
@@ -2374,6 +2386,10 @@
     {
         "name": "BULLISH ORD SHS",
         "symbol": "BLSH"
+    },
+    {
+        "name": "Tradr 2X Long BLSH Daily ETF",
+        "symbol": "BLSX"
     },
     {
         "name": "VANGUARD BD INDEX FDS LONG TERM BOND",
@@ -3808,6 +3824,10 @@
         "symbol": "CNYA"
     },
     {
+        "name": "EXCHANGE TRADED CONCEPTS TRUST RANGE GLOBAL COA",
+        "symbol": "COAL"
+    },
+    {
         "name": "VITA COCO CO INC COM",
         "symbol": "COCO"
     },
@@ -3948,6 +3968,10 @@
         "symbol": "COST"
     },
     {
+        "name": "Roundhill COST WeeklyPay ETF",
+        "symbol": "COSW"
+    },
+    {
         "name": "COTY INC COM CL A",
         "symbol": "COTY"
     },
@@ -3970,6 +3994,10 @@
     {
         "name": "COYA THERAPEUTICS INC COMMON STOCK",
         "symbol": "COYA"
+    },
+    {
+        "name": "GRANITESHARES ETF TR YIELDBOOST COIN",
+        "symbol": "COYY"
     },
     {
         "name": "CANADIAN PACIFIC KANSAS CITY COM",
@@ -4622,6 +4650,10 @@
     {
         "name": "DOORDASH INC CL A",
         "symbol": "DASH"
+    },
+    {
+        "name": "Tradr 2X Long DASH Daily ETF",
+        "symbol": "DASX"
     },
     {
         "name": "ENDAVA PLC ADS",
@@ -6060,6 +6092,10 @@
         "symbol": "EURL"
     },
     {
+        "name": "ISHARES INC MSCI EQUAL WEITE",
+        "symbol": "EUSA"
+    },
+    {
         "name": "ENTRAVISION COMMUNICATIONS CP CL A",
         "symbol": "EVC"
     },
@@ -6452,6 +6488,10 @@
         "symbol": "FDL"
     },
     {
+        "name": "FIDELITY COVINGTON TRUST LOW VOLITY ETF",
+        "symbol": "FDLO"
+    },
+    {
         "name": "FIDELITY COVINGTON TRUST MOMENTUM FACTR",
         "symbol": "FDMO"
     },
@@ -6672,6 +6712,10 @@
         "symbol": "FIG"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "FIGG"
+    },
+    {
         "name": "FIGURE TECHNOLOGY SOLUTIO COM CL A",
         "symbol": "FIGR"
     },
@@ -6838,6 +6882,10 @@
     {
         "name": "FIREFLY AEROSPACE INC COM",
         "symbol": "FLY"
+    },
+    {
+        "name": "Tradr 2X Long FLY Daily ETF",
+        "symbol": "FLYT"
     },
     {
         "name": "FLYWIRE CORPORATION COM VTG",
@@ -7190,6 +7238,10 @@
     {
         "name": "FORTIVE CORP COM",
         "symbol": "FTV"
+    },
+    {
+        "name": "FIRST TR EXCHANGE TRADED FD VI NASDAQ BK ETF",
+        "symbol": "FTXO"
     },
     {
         "name": "FUBOTV INC COM",
@@ -9384,6 +9436,10 @@
         "symbol": "IONS"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "IONX"
+    },
+    {
         "name": "ISHARES TR GLOBAL 100 ETF",
         "symbol": "IOO"
     },
@@ -9470,6 +9526,10 @@
     {
         "name": "IREN LIMITED ORDINARY SHARES",
         "symbol": "IREN"
+    },
+    {
+        "name": "Tradr 2X Long IREN Daily ETF",
+        "symbol": "IREX"
     },
     {
         "name": "IRON MTN INC DEL COM",
@@ -11912,6 +11972,10 @@
         "symbol": "MSOX"
     },
     {
+        "name": "Tuttle Capital MSTR 0DTE Covered Call ETF",
+        "symbol": "MSTK"
+    },
+    {
         "name": "STRATEGY INC CL A NEW",
         "symbol": "MSTR"
     },
@@ -12804,6 +12868,10 @@
         "symbol": "NVTX"
     },
     {
+        "name": "GRANITESHARES ETF TR YIELDBOOST NVDA",
+        "symbol": "NVYY"
+    },
+    {
         "name": "NORTHWESTERN ENERGY GROUP INC COM NEW",
         "symbol": "NWE"
     },
@@ -12814,6 +12882,10 @@
     {
         "name": "NEWELL BRANDS INC COM",
         "symbol": "NWL"
+    },
+    {
+        "name": "Tradr 2X Long NEM Daily ETF",
+        "symbol": "NWMX"
     },
     {
         "name": "NORTHWEST NAT HLDG CO COM",
@@ -13170,6 +13242,10 @@
     {
         "name": "OPENDOOR TECHNOLOGIES INC COM",
         "symbol": "OPEN"
+    },
+    {
+        "name": "Tradr 2X Long OPEN Daily ETF",
+        "symbol": "OPEX"
     },
     {
         "name": "OPPFI INC COM CL A",
@@ -14630,6 +14706,10 @@
     {
         "name": "RESTAURANT BRANDS INTL INC COM",
         "symbol": "QSR"
+    },
+    {
+        "name": "Tradr 2X Long QS Daily ETF",
+        "symbol": "QSX"
     },
     {
         "name": "FIRST TR EXCHANGE-TRADED FD SHS",
@@ -16972,6 +17052,10 @@
         "symbol": "SRPT"
     },
     {
+        "name": "Tradr 2X Long SRPT Daily ETF",
+        "symbol": "SRPU"
+    },
+    {
         "name": "SCHOLAR ROCK HLDG CORP COM",
         "symbol": "SRRK"
     },
@@ -17972,6 +18056,10 @@
         "symbol": "TQQQ"
     },
     {
+        "name": "GRANITESHARES ETF TR YIELD BOOST QQQ",
+        "symbol": "TQQY"
+    },
+    {
         "name": "TOOTSIE ROLL INDS INC COM",
         "symbol": "TR"
     },
@@ -18208,6 +18296,10 @@
         "symbol": "TSSI"
     },
     {
+        "name": "GRANITESHARES ETF TR YIELDBOOST TSLA",
+        "symbol": "TSYY"
+    },
+    {
         "name": "TRANE TECHNOLOGIES PLC SHS",
         "symbol": "TT"
     },
@@ -18406,6 +18498,10 @@
     {
         "name": "UBER TECHNOLOGIES INC COM",
         "symbol": "UBER"
+    },
+    {
+        "name": "Roundhill UBER WeeklyPay ETF",
+        "symbol": "UBEW"
     },
     {
         "name": "DIREXION SHS ETF TR DAILY ROBOTICS",
@@ -19926,6 +20022,10 @@
     {
         "name": "TERAWULF INC COM",
         "symbol": "WULF"
+    },
+    {
+        "name": "Tradr 2X Long WULF Daily ETF",
+        "symbol": "WULX"
     },
     {
         "name": "WAVE LIFE SCIENCES LTD SHS",
