@@ -44,10 +44,6 @@
         "symbol": "AAPL"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AAPL BULL 2X",
-        "symbol": "AAPU"
-    },
-    {
         "name": "Roundhill AAPL WeeklyPay ETF",
         "symbol": "AAPW"
     },
@@ -624,10 +620,6 @@
         "symbol": "AKBA"
     },
     {
-        "name": "AKERO THERAPEUTICS INC COM",
-        "symbol": "AKRO"
-    },
-    {
         "name": "AIR LEASE CORP CL A",
         "symbol": "AL"
     },
@@ -954,10 +946,6 @@
     {
         "name": "Kurv Yield Premium Strategy Amazon (AMZN) ETF",
         "symbol": "AMZP"
-    },
-    {
-        "name": "DIREXION SHS ETF TR DIREXION 2X SHAR",
-        "symbol": "AMZU"
     },
     {
         "name": "Roundhill AMZN WeeklyPay ETF",
@@ -1670,10 +1658,6 @@
     {
         "name": "ATEA PHARMACEUTICALS INC COM",
         "symbol": "AVIR"
-    },
-    {
-        "name": "DIREXION SHS ETF TR DAILY AVGO BULL",
-        "symbol": "AVL"
     },
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS US LARG",
@@ -2672,7 +2656,7 @@
         "symbol": "BROS"
     },
     {
-        "name": "COLUMBUS CIRCLE CAP CORP. I COM SHS",
+        "name": "PROCAP FINL INC COM SHS",
         "symbol": "BRR"
     },
     {
@@ -4992,10 +4976,6 @@
         "symbol": "DFE"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AEROSPC 3X",
-        "symbol": "DFEN"
-    },
-    {
         "name": "DREAM FINDERS HOMES INC COM CL A",
         "symbol": "DFH"
     },
@@ -5472,10 +5452,6 @@
         "symbol": "DUSA"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY INDL BU 3X",
-        "symbol": "DUSL"
-    },
-    {
         "name": "DIREXION SHS ETF TR DAILY GOLD MINER",
         "symbol": "DUST"
     },
@@ -5838,10 +5814,6 @@
     {
         "name": "E L F BEAUTY INC COM",
         "symbol": "ELF"
-    },
-    {
-        "name": "DIREXION SHS ETF TR DAILY LLY BULL",
-        "symbol": "ELIL"
     },
     {
         "name": "ELECTROMED INC COM",
@@ -6364,7 +6336,7 @@
         "symbol": "EWI"
     },
     {
-        "name": "ISHARES INC MSCI JPN ETF NEW",
+        "name": "ISHARES INC MSCI JAPAN ETF",
         "symbol": "EWJ"
     },
     {
@@ -6492,7 +6464,7 @@
         "symbol": "EYE"
     },
     {
-        "name": "EYEPOINT PHARMACEUTICALS INC COM NEW",
+        "name": "EYEPOINT INC COM NEW",
         "symbol": "EYPT"
     },
     {
@@ -6542,10 +6514,6 @@
     {
         "name": "DIAMONDBACK ENERGY INC COM",
         "symbol": "FANG"
-    },
-    {
-        "name": "DIREXION SHS ETF TR DLY FIN BULL NEW",
-        "symbol": "FAS"
     },
     {
         "name": "FASTENAL CO COM",
@@ -7170,10 +7138,6 @@
     {
         "name": "FIDELITY NATIONAL FINANCIAL IN COM SHS",
         "symbol": "FNF"
-    },
-    {
-        "name": "DIREXION SHS ETF TR DAILY NYSE FANG",
-        "symbol": "FNGG"
     },
     {
         "name": "FINGERMOTION INC COM",
@@ -7824,10 +7788,6 @@
         "symbol": "GGG"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY GOOGL 2X S",
-        "symbol": "GGLL"
-    },
-    {
         "name": "DIREXION SHS ETF TR DAILY GOOGL BR1X",
         "symbol": "GGLS"
     },
@@ -8388,10 +8348,6 @@
         "symbol": "GVIP"
     },
     {
-        "name": "TIDAL TRUST I GOTHAM 1000 VALU",
-        "symbol": "GVLU"
-    },
-    {
         "name": "GUIDEWIRE SOFTWARE INC COM",
         "symbol": "GWRE"
     },
@@ -8636,10 +8592,6 @@
         "symbol": "HI"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY S&P BULL",
-        "symbol": "HIBL"
-    },
-    {
         "name": "DIREXION SHS ETF TR DAILY S&P 500 HI",
         "symbol": "HIBS"
     },
@@ -8798,6 +8750,10 @@
     {
         "name": "Roundhill HOOD WeeklyPay ETF",
         "symbol": "HOOW"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "HOOX"
     },
     {
         "name": "TIDAL TRUST II YIELDMAX HOOD OP",
@@ -9666,6 +9622,14 @@
     {
         "name": "IONIS PHARMACEUTICALS INC COM",
         "symbol": "IONS"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "IONX"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "IONZ"
     },
     {
         "name": "ISHARES TR GLOBAL 100 ETF",
@@ -12208,10 +12172,6 @@
         "symbol": "MSFT"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY MSFT 2X SH",
-        "symbol": "MSFU"
-    },
-    {
         "name": "Roundhill MSFT WeeklyPay ETF",
         "symbol": "MSFW"
     },
@@ -13112,10 +13072,6 @@
         "symbol": "NVDS"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY NVDA 2X SH",
-        "symbol": "NVDU"
-    },
-    {
         "name": "Roundhill NVDA WeeklyPay ETF",
         "symbol": "NVDW"
     },
@@ -13142,6 +13098,10 @@
     {
         "name": "NOVO-NORDISK A S ADR",
         "symbol": "NVO"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DLY TRG",
+        "symbol": "NVOX"
     },
     {
         "name": "ENVIRI CORP COM",
@@ -14620,10 +14580,6 @@
         "symbol": "PRNT"
     },
     {
-        "name": "PROS HOLDINGS INC COM",
-        "symbol": "PRO"
-    },
-    {
         "name": "PROFOUND MED CORP COM NEW",
         "symbol": "PROF"
     },
@@ -14722,6 +14678,10 @@
     {
         "name": "PERSONALIS INC COM",
         "symbol": "PSNL"
+    },
+    {
+        "name": "POLESTAR AUTOMOTIVE HLDG UK SPONSORED ADS",
+        "symbol": "PSNY"
     },
     {
         "name": "PEARSON PLC SPONSORED ADR",
@@ -15456,6 +15416,10 @@
         "symbol": "RGTU"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "RGTX"
+    },
+    {
         "name": "RH COM",
         "symbol": "RH"
     },
@@ -15522,6 +15486,10 @@
     {
         "name": "ROCKET LAB CORP COM",
         "symbol": "RKLB"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "RKLX"
     },
     {
         "name": "ROCKET COS INC COM CL A",
@@ -16008,7 +15976,7 @@
         "symbol": "SAMG"
     },
     {
-        "name": "BANCO SANTANDER S.A. ADR",
+        "name": "BANCO SANTANDER SA ADR",
         "symbol": "SAN"
     },
     {
@@ -17296,10 +17264,6 @@
         "symbol": "SPTS"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY S&P500 2XS",
-        "symbol": "SPUU"
-    },
-    {
         "name": "INVESCO EXCH TRADED FD TR II S&P 500 ENHNCD",
         "symbol": "SPVU"
     },
@@ -18004,10 +17968,6 @@
         "symbol": "TECK"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY TECH BULL 3X",
-        "symbol": "TECL"
-    },
-    {
         "name": "DIREXION SHS ETF TR DAILY TECHNOLOGY",
         "symbol": "TECS"
     },
@@ -18628,10 +18588,6 @@
         "symbol": "TSLG"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY TSLA 2X SH",
-        "symbol": "TSLL"
-    },
-    {
         "name": "INVESTMENT MANAGERS SER TR II TRADR 2X SHORT",
         "symbol": "TSLQ"
     },
@@ -18646,10 +18602,6 @@
     {
         "name": "T-Rex 2X Long Tesla Daily Target ETF",
         "symbol": "TSLT"
-    },
-    {
-        "name": "Azoria TSLA Convexity ETF",
-        "symbol": "TSLV"
     },
     {
         "name": "Roundhill TSLA WeeklyPay ETF",
@@ -18726,6 +18678,10 @@
     {
         "name": "T-REX 2X Long TTD Daily Target ETF",
         "symbol": "TTDU"
+    },
+    {
+        "name": "TOTALENERGIES SE ACT",
+        "symbol": "TTE"
     },
     {
         "name": "TTEC HLDGS INC COM",
@@ -20786,6 +20742,10 @@
     {
         "name": "SPDR SERIES TRUST STATE STREET SPD",
         "symbol": "XTN"
+    },
+    {
+        "name": "TWENTY ONE CAP INC COM SHS CL A",
+        "symbol": "XXI"
     },
     {
         "name": "22ND CENTY GROUP INC COM NEW",
