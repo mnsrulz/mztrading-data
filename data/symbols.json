@@ -52,10 +52,6 @@
         "symbol": "AAPW"
     },
     {
-        "name": "T-Rex 2X Long Apple Daily Target ETF",
-        "symbol": "AAPX"
-    },
-    {
         "name": "AMERICAN ASSETS TR INC COM",
         "symbol": "AAT"
     },
@@ -2292,10 +2288,6 @@
         "symbol": "BITS"
     },
     {
-        "name": "PROSHARES TR ULTRA BITCOIN ET",
-        "symbol": "BITU"
-    },
-    {
         "name": "2x Bitcoin Strategy ETF",
         "symbol": "BITX"
     },
@@ -2384,7 +2376,7 @@
         "symbol": "BLBD"
     },
     {
-        "name": "SIREN ETF TR NSD NXGN ECO ETF",
+        "name": "SIREN NEXGEN ECONOMY ETF",
         "symbol": "BLCN"
     },
     {
@@ -5824,10 +5816,6 @@
         "symbol": "ELME"
     },
     {
-        "name": "COMPANHIA PARANAENSE DE ENERGI SPONSORED ADS",
-        "symbol": "ELP"
-    },
-    {
         "name": "EQUITY LIFESTYLE PPTYS INC COM",
         "symbol": "ELS"
     },
@@ -7216,6 +7204,10 @@
         "symbol": "FPH"
     },
     {
+        "name": "FARMLAND PARTNERS INC COM",
+        "symbol": "FPI"
+    },
+    {
         "name": "Fidelity Real Estate Investment ETF",
         "symbol": "FPRO"
     },
@@ -8072,10 +8064,6 @@
         "symbol": "GOOW"
     },
     {
-        "name": "T-Rex 2X Long Alphabet Daily Target ETF",
-        "symbol": "GOOX"
-    },
-    {
         "name": "TIDAL TRUST II YIELDMAX GOOGL",
         "symbol": "GOOY"
     },
@@ -8576,10 +8564,6 @@
         "symbol": "HFFG"
     },
     {
-        "name": "TIDAL TRUST I UNLIMITED HFND",
-        "symbol": "HFND"
-    },
-    {
         "name": "HERITAGE FINL CORP WASH COM",
         "symbol": "HFWA"
     },
@@ -9040,20 +9024,12 @@
         "symbol": "IART"
     },
     {
-        "name": "INTEGRAL AD SCIENCE HLDNG CORP COM",
-        "symbol": "IAS"
-    },
-    {
         "name": "ISHARES TR US REGNL BKS ETF",
         "symbol": "IAT"
     },
     {
         "name": "ISHARES GOLD TR ISHARES NEW",
         "symbol": "IAU"
-    },
-    {
-        "name": "NEOS Gold High Income ETF",
-        "symbol": "IAUI"
     },
     {
         "name": "ISHARES TR ISHARES BIOTECH",
@@ -10784,10 +10760,6 @@
         "symbol": "LAZ"
     },
     {
-        "name": "LUMINAR TECHNOLOGIES INC COM NEW CL A",
-        "symbol": "LAZR"
-    },
-    {
         "name": "LANDBRIDGE COMPANY LLC CL A",
         "symbol": "LB"
     },
@@ -12080,6 +12052,10 @@
         "symbol": "MQ"
     },
     {
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
+        "symbol": "MQQQ"
+    },
+    {
         "name": "GRANITESHARES ETF TR 2X LONG MARA",
         "symbol": "MRAL"
     },
@@ -12188,10 +12164,6 @@
         "symbol": "MSFW"
     },
     {
-        "name": "T-Rex 2X Long Microsoft Daily Target ETF",
-        "symbol": "MSFX"
-    },
-    {
         "name": "MADISON SQUARE GARDEN ENTMT COM CL A",
         "symbol": "MSGE"
     },
@@ -12254,6 +12226,10 @@
     {
         "name": "M & T BK CORP COM",
         "symbol": "MTB"
+    },
+    {
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS MBS ETF",
+        "symbol": "MTBA"
     },
     {
         "name": "MATCH GROUP INC NEW COM",
@@ -13716,6 +13692,10 @@
         "symbol": "OVLH"
     },
     {
+        "name": "Overlay Shares Short Term Bond ETF",
+        "symbol": "OVT"
+    },
+    {
         "name": "OVINTIV INC COM",
         "symbol": "OVV"
     },
@@ -14082,6 +14062,10 @@
     {
         "name": "PERFORMANCE FOOD GROUP CO COM",
         "symbol": "PFGC"
+    },
+    {
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS SIMPLIFY INTERST",
+        "symbol": "PFIX"
     },
     {
         "name": "PENNANTPARK FLOATING RATE CAP COM",
@@ -15506,6 +15490,10 @@
     {
         "name": "RELMADA THERAPEUTICS INC COM",
         "symbol": "RLMD"
+    },
+    {
+        "name": "Russell 1000 Value Index",
+        "symbol": "RLV"
     },
     {
         "name": "RLX TECHNOLOGY INC SPONSORED ADS",
@@ -17060,10 +17048,6 @@
         "symbol": "SPBO"
     },
     {
-        "name": "TRUST FOR PROFESSIONAL MANAGER CROSSINGBRDG PRE",
-        "symbol": "SPC"
-    },
-    {
         "name": "VIRGIN GALACTIC HOLDINGS INC COM NEW",
         "symbol": "SPCE"
     },
@@ -17290,6 +17274,10 @@
     {
         "name": "SPDR SERIES TRUST STATE STREET SPD",
         "symbol": "SPYM"
+    },
+    {
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG SP",
+        "symbol": "SPYQ"
     },
     {
         "name": "TIDAL TRUST II DEFIANCE S&P 500",
@@ -17784,6 +17772,10 @@
         "symbol": "TARA"
     },
     {
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
+        "symbol": "TARK"
+    },
+    {
         "name": "TARSUS PHARMACEUTICALS INC COM",
         "symbol": "TARS"
     },
@@ -17952,6 +17944,10 @@
         "symbol": "TEM"
     },
     {
+        "name": "Tradr 2X Long TEM Daily ETF",
+        "symbol": "TEMT"
+    },
+    {
         "name": "TSAKOS ENERGY NAVIGATION LTD SHS",
         "symbol": "TEN"
     },
@@ -17970,6 +17966,10 @@
     {
         "name": "TERNS PHARMACEUTICALS INC COM",
         "symbol": "TERN"
+    },
+    {
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
+        "symbol": "TESL"
     },
     {
         "name": "21Shares Ethereum ETF",
@@ -18344,6 +18344,10 @@
         "symbol": "TPICQ"
     },
     {
+        "name": "TEXAS PACIFIC LAND CORPORATION COM",
+        "symbol": "TPL"
+    },
+    {
         "name": "DIREXION SHS ETF TR DAILY TRANS 3X",
         "symbol": "TPOR"
     },
@@ -18658,10 +18662,6 @@
     {
         "name": "TILE SHOP HLDGS INC COM SHS",
         "symbol": "TTSH"
-    },
-    {
-        "name": "PROSHARES TR ULSH 20YRTRE NEW",
-        "symbol": "TTT"
     },
     {
         "name": "TAKE-TWO INTERACTIVE SOFTWARE COM",
@@ -19270,10 +19270,6 @@
     {
         "name": "PROSHARES TR ULTRA XRP ETF",
         "symbol": "UXRP"
-    },
-    {
-        "name": "PROSHARES TR ULTRA FNCLS NEW",
-        "symbol": "UYG"
     },
     {
         "name": "PROSHARES TR ULTRA MATERIALS",
@@ -20696,10 +20692,6 @@
         "symbol": "XXII"
     },
     {
-        "name": "LISTED FDS TR TEUCRIUM 2X LONG",
-        "symbol": "XXRP"
-    },
-    {
         "name": "XYLEM INC COM",
         "symbol": "XYL"
     },
@@ -20922,9 +20914,5 @@
     {
         "name": "ZYMEWORKS INC COM",
         "symbol": "ZYME"
-    },
-    {
-        "name": "ZYNEX INC COM",
-        "symbol": "ZYXI"
     }
 ]
