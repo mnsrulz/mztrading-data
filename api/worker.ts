@@ -124,7 +124,8 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
                     abs(delta) AS abs_delta,
                     abs(strike - OHLC.close) AS price_strike_diff,
                     abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff
-                    FROM '${DATA_DIR}/${symbol}_*.parquet' opdata
+                    --FROM '${DATA_DIR}/${symbol}_*.parquet' opdata
+                    FROM '${DATA_DIR}/symbol=${symbol}/*.parquet' opdata
                     JOIN OHLC ON OHLC.dt = opdata.dt
                     WHERE expiration = '${expiration}' 
                             AND (open_interest > 0 OR bid > 0 OR ask > 0 OR iv > 0)           --JUST TO MAKE SURE NEW CONTRACTS WON'T APPEAR IN THE DATASET WHICH LIKELY REPRESENTED BY 0 OI, bid/ask/iv
