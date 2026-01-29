@@ -416,6 +416,10 @@
         "symbol": "AEVA"
     },
     {
+        "name": "AMERICAN EXCEPTIONALISM ACQUIS ORD CL A",
+        "symbol": "AEXA"
+    },
+    {
         "name": "AUDIOEYE INC COM NEW",
         "symbol": "AEYE"
     },
@@ -666,6 +670,10 @@
     {
         "name": "ALLEGIANT TRAVEL CO COM",
         "symbol": "ALGT"
+    },
+    {
+        "name": "ALLIANCE LAUNDRY HLDGS INC COM",
+        "symbol": "ALH"
     },
     {
         "name": "ALIGNMENT HEALTHCARE INC COM",
@@ -1064,7 +1072,7 @@
         "symbol": "APAM"
     },
     {
-        "name": "AIR PRODS & CHEMS INC COM",
+        "name": "AIR PRODUCTS AND CHEMICALS INC COM",
         "symbol": "APD"
     },
     {
@@ -1400,7 +1408,7 @@
         "symbol": "ASMG"
     },
     {
-        "name": "ASML HOLDING N V N Y REGISTRY SHS",
+        "name": "ASML HLDG NV N Y REGISTRY SHS",
         "symbol": "ASML"
     },
     {
@@ -2540,7 +2548,7 @@
         "symbol": "BNO"
     },
     {
-        "name": "BANK NOVA SCOTIA HALIFAX COM",
+        "name": "BANK NOVA SCOTIA B C COM",
         "symbol": "BNS"
     },
     {
@@ -2774,6 +2782,10 @@
     {
         "name": "B2GOLD CORP COM",
         "symbol": "BTG"
+    },
+    {
+        "name": "BITGO HOLDINGS INC COM SHS CL A",
+        "symbol": "BTGO"
     },
     {
         "name": "BRITISH AMERN TOB PLC SPONSORED ADR",
@@ -3384,7 +3396,7 @@
         "symbol": "CEW"
     },
     {
-        "name": "CF INDS HLDGS INC COM",
+        "name": "CF INDUSTRIES HOLD COM",
         "symbol": "CF"
     },
     {
@@ -4524,6 +4536,10 @@
         "symbol": "CURV"
     },
     {
+        "name": "TRUST FOR PROFESSIONAL MANAGER CROSS BRG ULTRST",
+        "symbol": "CUSD"
+    },
+    {
         "name": "INVESCO EXCHANGE-TRADED FD TR MSCI GBL TIMBR",
         "symbol": "CUT"
     },
@@ -5180,7 +5196,7 @@
         "symbol": "DLTR"
     },
     {
-        "name": "DELUXE CORP COM",
+        "name": "DELUXE CORP MEDIUM TERM NTS COM",
         "symbol": "DLX"
     },
     {
@@ -5832,7 +5848,7 @@
         "symbol": "ELPC"
     },
     {
-        "name": "EQUITY LIFESTYLE PPTYS INC COM",
+        "name": "EQUITY LIFESTYLE PROPERTIES COM",
         "symbol": "ELS"
     },
     {
@@ -7400,7 +7416,7 @@
         "symbol": "FTI"
     },
     {
-        "name": "FLOTEK INDS INC DEL COM NEW",
+        "name": "FLOTEK INDUSTRIES INC COM NEW",
         "symbol": "FTK"
     },
     {
@@ -7868,7 +7884,7 @@
         "symbol": "GINN"
     },
     {
-        "name": "GENERAL MLS INC COM",
+        "name": "GENERAL MILLS INC COM",
         "symbol": "GIS"
     },
     {
@@ -8464,7 +8480,7 @@
         "symbol": "HBAN"
     },
     {
-        "name": "HOME BANCORP INC COM",
+        "name": "HOMEBANCORP INC COM",
         "symbol": "HBCP"
     },
     {
@@ -10560,6 +10576,10 @@
         "symbol": "KOS"
     },
     {
+        "name": "KRANESHARES TRUST 2X LONG PDD DAIL",
+        "symbol": "KPDD"
+    },
+    {
         "name": "KARYOPHARM THERAPEUTICS INC COM NEW",
         "symbol": "KPTI"
     },
@@ -11008,6 +11028,10 @@
         "symbol": "LITS"
     },
     {
+        "name": "Tradr 2X Long LITE Daily ETF",
+        "symbol": "LITX"
+    },
+    {
         "name": "LIVANOVA PLC SHS",
         "symbol": "LIVN"
     },
@@ -11270,6 +11294,10 @@
     {
         "name": "LUCKY STRIKE ENTERTAINMENT COR CL A COM",
         "symbol": "LUCK"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "LULG"
     },
     {
         "name": "LULULEMON ATHLETICA INC COM",
@@ -11644,7 +11672,7 @@
         "symbol": "MDXG"
     },
     {
-        "name": "SPDR S&P MIDCAP 400 ETF TR UTSER1 S&PDCRP",
+        "name": "STATE STR SPDR S&P MIDCAP 400 UTSER1 S&PDCRP",
         "symbol": "MDY"
     },
     {
@@ -12056,6 +12084,10 @@
         "symbol": "MPC"
     },
     {
+        "name": "THEMES ETF TR LEVRG SHS 2X LNG",
+        "symbol": "MPG"
+    },
+    {
         "name": "MPLX LP COM UNIT REP LTD",
         "symbol": "MPLX"
     },
@@ -12094,6 +12126,10 @@
     {
         "name": "MERCURY SYS INC COM",
         "symbol": "MRCY"
+    },
+    {
+        "name": "MEREO BIOPHARMA GROUP PLC SPON ADS",
+        "symbol": "MREO"
     },
     {
         "name": "MERCK & CO INC COM",
@@ -12584,6 +12620,10 @@
         "symbol": "NEM"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "NEMG"
+    },
+    {
         "name": "NEOGENOMICS INC COM NEW",
         "symbol": "NEO"
     },
@@ -12602,6 +12642,10 @@
     {
         "name": "CLOUDFLARE INC CL A COM",
         "symbol": "NET"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "NETG"
     },
     {
         "name": "Tradr 2X Long NET Daily ETF",
@@ -13014,6 +13058,10 @@
     {
         "name": "NUCOR CORP COM",
         "symbol": "NUE"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "NUG"
     },
     {
         "name": "DIREXION SHS ETF TR DLY GOLD INDX 2X",
@@ -13628,6 +13676,10 @@
         "symbol": "ORN"
     },
     {
+        "name": "EA SERIES TRUST MILITIA LONG/SHO",
+        "symbol": "ORR"
+    },
+    {
         "name": "ORRSTOWN FINL SVCS INC COM",
         "symbol": "ORRF"
     },
@@ -13638,6 +13690,10 @@
     {
         "name": "OLD SECOND BANCORP INC DEL COM",
         "symbol": "OSBC"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "OSCG"
     },
     {
         "name": "OSCAR HEALTH INC CL A",
@@ -14828,6 +14884,10 @@
         "symbol": "PXJ"
     },
     {
+        "name": "POLYPID LTD COM",
+        "symbol": "PYPD"
+    },
+    {
         "name": "THEMES ETF TR LEVERAGE SHS 2X",
         "symbol": "PYPG"
     },
@@ -15680,10 +15740,6 @@
         "symbol": "RPT"
     },
     {
-        "name": "REPARE THERAPEUTICS INC COM",
-        "symbol": "RPTX"
-    },
-    {
         "name": "INVESCO EXCHANGE TRADED FD TR S&P500 PUR VAL",
         "symbol": "RPV"
     },
@@ -16088,6 +16144,10 @@
         "symbol": "SBTU"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "symbol": "SBU"
+    },
+    {
         "name": "STARBUCKS CORP COM",
         "symbol": "SBUX"
     },
@@ -16440,10 +16500,6 @@
         "symbol": "SHC"
     },
     {
-        "name": "SOHO HOUSE & CO INC COM CL A",
-        "symbol": "SHCO"
-    },
-    {
         "name": "SHELL PLC SPON ADS",
         "symbol": "SHEL"
     },
@@ -16784,6 +16840,10 @@
         "symbol": "SMCI"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG SMCI DAI",
+        "symbol": "SMCL"
+    },
+    {
         "name": "TIDAL TRUST II DEFIANCE DT 2X L",
         "symbol": "SMCX"
     },
@@ -16958,6 +17018,10 @@
     {
         "name": "TD SYNNEX CORPORATION COM",
         "symbol": "SNX"
+    },
+    {
+        "name": "Tradr 2X Long SNDK Daily ETF",
+        "symbol": "SNXX"
     },
     {
         "name": "SANOFI SA SPONSORED ADR",
@@ -17186,6 +17250,10 @@
     {
         "name": "SIRIUSPOINT LTD COM",
         "symbol": "SPNT"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "SPOG"
     },
     {
         "name": "SPOK HLDGS INC COM",
@@ -17986,6 +18054,10 @@
     {
         "name": "TERADYNE INC COM",
         "symbol": "TER"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "TERG"
     },
     {
         "name": "TERNS PHARMACEUTICALS INC COM",
@@ -19812,6 +19884,10 @@
         "symbol": "VSH"
     },
     {
+        "name": "VERSANT MEDIA GROUP INC COM CL A",
+        "symbol": "VSNT"
+    },
+    {
         "name": "VANECK SOLANA TR COM SHS BEN INT",
         "symbol": "VSOL"
     },
@@ -19930,6 +20006,10 @@
     {
         "name": "V2X INC COM",
         "symbol": "VVX"
+    },
+    {
+        "name": "VISIONWAVE HOLDINGS INC COM",
+        "symbol": "VWAV"
     },
     {
         "name": "VANGUARD INTL EQUITY INDEX FDS FTSE EMR MKT ETF",
@@ -20064,6 +20144,10 @@
         "symbol": "WDC"
     },
     {
+        "name": "Tradr 2X Long WDC Daily ETF",
+        "symbol": "WDCX"
+    },
+    {
         "name": "WD 40 CO COM",
         "symbol": "WDFC"
     },
@@ -20120,7 +20204,7 @@
         "symbol": "WEX"
     },
     {
-        "name": "WELLS FARGO CO NEW COM",
+        "name": "WELLS FARGO & CO COM",
         "symbol": "WFC"
     },
     {
