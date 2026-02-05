@@ -56,6 +56,10 @@
         "symbol": "AAPX"
     },
     {
+        "name": "AARDVARK THERAPEUTICS INC COM",
+        "symbol": "AARD"
+    },
+    {
         "name": "AMERICAN ASSETS TR INC COM",
         "symbol": "AAT"
     },
@@ -246,6 +250,10 @@
     {
         "name": "ACNB CORP COM",
         "symbol": "ACNB"
+    },
+    {
+        "name": "ASCENT INDUSTRIES CO COM",
+        "symbol": "ACNT"
     },
     {
         "name": "ACRES COMMERCIAL REALTY CORP COM NEW",
@@ -1288,7 +1296,7 @@
         "symbol": "ARMG"
     },
     {
-        "name": "ARAMARK COM",
+        "name": "ARAMARK HOLDINGS CORP COM",
         "symbol": "ARMK"
     },
     {
@@ -1708,6 +1716,10 @@
         "symbol": "AVPT"
     },
     {
+        "name": "ANTERIS TECHNOLOGIES GLOBAL COM",
+        "symbol": "AVR"
+    },
+    {
         "name": "AMERICAN CENTY ETF TR AVANTIS US SMALL",
         "symbol": "AVSC"
     },
@@ -1770,10 +1782,6 @@
     {
         "name": "AXOGEN INC COM",
         "symbol": "AXGN"
-    },
-    {
-        "name": "AMERICAN AXLE & MFG HLDGS INC COM",
-        "symbol": "AXL"
     },
     {
         "name": "AXON ENTERPRISE INC COM",
@@ -4732,7 +4740,7 @@
         "symbol": "DAKT"
     },
     {
-        "name": "DELTA AIR LINES INC DEL COM NEW",
+        "name": "DELTA AIR LINES INC COM NEW",
         "symbol": "DAL"
     },
     {
@@ -4842,6 +4850,10 @@
     {
         "name": "DOCGO INC COM",
         "symbol": "DCGO"
+    },
+    {
+        "name": "DAUCH CORPORATION",
+        "symbol": "DCH"
     },
     {
         "name": "DONALDSON INC COM",
@@ -5468,12 +5480,64 @@
         "symbol": "DVAX"
     },
     {
+        "name": "WEBS ETF TR INDUSTRIALS XLI",
+        "symbol": "DVIN"
+    },
+    {
         "name": "DEVON ENERGY CORP NEW COM",
         "symbol": "DVN"
     },
     {
+        "name": "WEBS ETF TR QQQ DEFINED VOLA",
+        "symbol": "DVQQ"
+    },
+    {
+        "name": "WEBS ETF TR REAL ESTATE XLRE",
+        "symbol": "DVRE"
+    },
+    {
         "name": "DOLLY VARDEN SILVER CORP COM NO PAR",
         "symbol": "DVS"
+    },
+    {
+        "name": "WEBS ETF TR SPY DEFINED VOL",
+        "symbol": "DVSP"
+    },
+    {
+        "name": "WEBS ETF TR UTILITIES XLU",
+        "symbol": "DVUT"
+    },
+    {
+        "name": "WEBS ETF TR MATERIALS XLB",
+        "symbol": "DVXB"
+    },
+    {
+        "name": "WEBS ETF TR COMMCTN SRVC XLC",
+        "symbol": "DVXC"
+    },
+    {
+        "name": "WEBS ETF TR ENERGY XLE DEFIN",
+        "symbol": "DVXE"
+    },
+    {
+        "name": "WEBS ETF TR FINANCIAL XLF DE",
+        "symbol": "DVXF"
+    },
+    {
+        "name": "WEBS ETF TR TECHNOLOGY XLK D",
+        "symbol": "DVXK"
+    },
+    {
+        "name": "WEBS ETF TR CONSUMER STAPLES",
+        "symbol": "DVXP"
+    },
+    {
+        "name": "WEBS ETF TR HEALTH CARE XLV",
+        "symbol": "DVXV"
+    },
+    {
+        "name": "WEBS ETF TR CONSMR DISCRTNRY",
+        "symbol": "DVXY"
     },
     {
         "name": "ISHARES TR SELECT DIVID ETF",
@@ -6292,7 +6356,7 @@
         "symbol": "EVMT"
     },
     {
-        "name": "EVERCORE INC CLASS A",
+        "name": "EVERCORE PARTNERS INC CLASS A",
         "symbol": "EVR"
     },
     {
@@ -7680,6 +7744,10 @@
         "symbol": "GDEN"
     },
     {
+        "name": "GRAYSCALE DOGECOIN TR ETF SHS",
+        "symbol": "GDOG"
+    },
+    {
         "name": "GREEN DOT CORP CL A",
         "symbol": "GDOT"
     },
@@ -7928,12 +7996,12 @@
         "symbol": "GLNG"
     },
     {
-        "name": "GLOBANT S A COM",
-        "symbol": "GLOB"
+        "name": "GRAYSCALE CHAINLINK TR ETF SHS",
+        "symbol": "GLNK"
     },
     {
-        "name": "Goldman Sachs ActiveBeta World Low Vol Plus Equity ETF",
-        "symbol": "GLOV"
+        "name": "GLOBANT S A COM",
+        "symbol": "GLOB"
     },
     {
         "name": "GLOBAL PARTNERS LP COM UNITS",
@@ -8300,6 +8368,10 @@
         "symbol": "GSOL"
     },
     {
+        "name": "Goldman Sachs ActiveBeta World Equity ETF",
+        "symbol": "GSWO"
+    },
+    {
         "name": "Tradr 2X Long GS Daily ETF",
         "symbol": "GSX"
     },
@@ -8402,6 +8474,10 @@
     {
         "name": "GXO LOGISTICS INCORPORATED COMMON STOCK",
         "symbol": "GXO"
+    },
+    {
+        "name": "GRAYSCALE XRP TR ETF SHS",
+        "symbol": "GXRP"
     },
     {
         "name": "ARROW ETF TR ARROW DJ GLB YLD",
@@ -9734,6 +9810,10 @@
     {
         "name": "IRIDIUM COMMUNICATIONS INC COM",
         "symbol": "IRDM"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "IRE"
     },
     {
         "name": "IREN LIMITED ORDINARY SHARES",
@@ -12352,6 +12432,10 @@
         "symbol": "MUFG"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG MU DAILY",
+        "symbol": "MULL"
+    },
+    {
         "name": "PIMCO ETF TR INTER MUN BD ACT",
         "symbol": "MUNI"
     },
@@ -12618,6 +12702,10 @@
     {
         "name": "NEONODE INC COM PAR",
         "symbol": "NEON"
+    },
+    {
+        "name": "NEOVOLTA INC COM",
+        "symbol": "NEOV"
     },
     {
         "name": "Roundhill Video Games ETF",
@@ -12948,7 +13036,7 @@
         "symbol": "NRIX"
     },
     {
-        "name": "NATURAL RESOURCE PARTNERS L P COM UNIT LTD PAR",
+        "name": "NATURAL RESOURCE PARTNERS LP COM UNIT LTD PAR",
         "symbol": "NRP"
     },
     {
@@ -14904,6 +14992,10 @@
         "symbol": "QBTX"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "QBTZ"
+    },
+    {
         "name": "FIRST TR EXCHANGE-TRADED FD NAS CLNEDG GREEN",
         "symbol": "QCLN"
     },
@@ -15282,6 +15374,10 @@
     {
         "name": "RADWARE LTD ORD",
         "symbol": "RDWR"
+    },
+    {
+        "name": "T-REX 2X Long RDW Daily Target ETF",
+        "symbol": "RDWU"
     },
     {
         "name": "DR REDDYS LABS LTD ADR",
@@ -16540,6 +16636,10 @@
         "symbol": "SID"
     },
     {
+        "name": "SIDUS SPACE INC CL A COM NEW",
+        "symbol": "SIDU"
+    },
+    {
         "name": "SIFY TECHNOLOGIES LTD SPONSORED ADR",
         "symbol": "SIFY"
     },
@@ -17018,6 +17118,10 @@
     {
         "name": "GLOBAL X FDS SOCIAL MED ETF",
         "symbol": "SOCL"
+    },
+    {
+        "name": "FRANKLIN SOLANA TR EXCHANGE TRD FD",
+        "symbol": "SOEZ"
     },
     {
         "name": "SOFI TECHNOLOGIES INC COM",
@@ -18820,6 +18924,10 @@
         "symbol": "TXRH"
     },
     {
+        "name": "TEXAS CAPITAL FUNDS TRUST TEXAS CAP TEX EQ",
+        "symbol": "TXS"
+    },
+    {
         "name": "TEXTRON INC COM",
         "symbol": "TXT"
     },
@@ -19324,7 +19432,7 @@
         "symbol": "UVSP"
     },
     {
-        "name": "UNIVERSAL CORP VA COM",
+        "name": "UNIVERSAL CORP VA MTNS BK ENT COM",
         "symbol": "UVV"
     },
     {
@@ -19466,6 +19574,10 @@
     {
         "name": "VENU HLDG CORP COM",
         "symbol": "VENU"
+    },
+    {
+        "name": "VEON LTD SPONSORED ADS",
+        "symbol": "VEON"
     },
     {
         "name": "VERA THERAPEUTICS INC CL A",
@@ -20714,6 +20826,10 @@
     {
         "name": "VOLATILITY SHS TR 2X XRP ETF",
         "symbol": "XRPT"
+    },
+    {
+        "name": "FRANKLIN XRP TRUST FRANKLIN XRP ETF",
+        "symbol": "XRPZ"
     },
     {
         "name": "SPDR SERIES TRUST STATE STREET SPD",
