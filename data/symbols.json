@@ -9616,6 +9616,10 @@
         "symbol": "INFL"
     },
     {
+        "name": "INFLEQTION INC",
+        "symbol": "INFQ"
+    },
+    {
         "name": "INFUSYSTEM HLDGS INC COM",
         "symbol": "INFU"
     },
@@ -17066,6 +17070,10 @@
     {
         "name": "SIMILARWEB LTD SHS",
         "symbol": "SMWB"
+    },
+    {
+        "name": "SMX SEC MATTERS PLC ORD SHS NEW",
+        "symbol": "SMX"
     },
     {
         "name": "Tradr 2X Short SMR Daily ETF",
