@@ -1184,7 +1184,7 @@
         "symbol": "AR"
     },
     {
-        "name": "ACCURAY INC COM",
+        "name": "ACCURAY INC DEL COM",
         "symbol": "ARAY"
     },
     {
@@ -1306,10 +1306,6 @@
     {
         "name": "ARAMARK HOLDINGS CORP COM",
         "symbol": "ARMK"
-    },
-    {
-        "name": "ARIS MNG CORP COM",
-        "symbol": "ARMN"
     },
     {
         "name": "T-REX 2X Long ARM Daily Target ETF",
@@ -2216,7 +2212,7 @@
         "symbol": "BHF"
     },
     {
-        "name": "BHP GROUP LTD SPONSORED ADS",
+        "name": "BHP BILLITON LIMITED SPONSORED ADS",
         "symbol": "BHP"
     },
     {
@@ -12692,7 +12688,7 @@
         "symbol": "NDAQ"
     },
     {
-        "name": "NOODLES & CO COM CL A",
+        "name": "NOODLES & CO CL A NEW",
         "symbol": "NDLS"
     },
     {
@@ -14072,7 +14068,7 @@
         "symbol": "PBI"
     },
     {
-        "name": "PETROLEO BRASILEIRO SA PETROBR SPONSORED ADR",
+        "name": "PETROLEO BRASILEIRO S A SPONSORED ADR",
         "symbol": "PBR"
     },
     {
@@ -18220,7 +18216,7 @@
         "symbol": "TFC"
     },
     {
-        "name": "TFI INTL INC COM",
+        "name": "TRANSFORCE INC COM",
         "symbol": "TFII"
     },
     {
@@ -19950,10 +19946,6 @@
     {
         "name": "VERA BRADLEY INC COM",
         "symbol": "VRA"
-    },
-    {
-        "name": "GLIMPSE GROUP INC COM",
-        "symbol": "VRAR"
     },
     {
         "name": "VERRICA PHARMACEUTICALS INC COM SHS",
