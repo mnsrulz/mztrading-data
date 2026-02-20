@@ -1256,6 +1256,10 @@
         "symbol": "ARI"
     },
     {
+        "name": "ARIS MINING CORPORATION COM",
+        "symbol": "ARIS"
+    },
+    {
         "name": "ARK 21Shares Bitcoin ETF",
         "symbol": "ARKB"
     },
@@ -1602,10 +1606,6 @@
     {
         "name": "AURA BIOSCIENCES INC COM",
         "symbol": "AURA"
-    },
-    {
-        "name": "Tradr 2X Long AUR Daily ETF",
-        "symbol": "AURU"
     },
     {
         "name": "AUTOLUS THERAPEUTICS PLC SPON ADS",
@@ -5024,7 +5024,7 @@
         "symbol": "DFUV"
     },
     {
-        "name": "DOLLAR GEN CORP NEW COM",
+        "name": "DOLLAR GEN CORP COM",
         "symbol": "DG"
     },
     {
@@ -7840,7 +7840,7 @@
         "symbol": "GENI"
     },
     {
-        "name": "GEO GROUP INC NEW COM",
+        "name": "GEO GROUP INC COM",
         "symbol": "GEO"
     },
     {
@@ -7906,6 +7906,10 @@
     {
         "name": "GOGORO INC ORDINARY SHARES",
         "symbol": "GGR"
+    },
+    {
+        "name": "GLIMPSE GROUP INC COM",
+        "symbol": "GGRP"
     },
     {
         "name": "GUARDANT HEALTH INC COM",
@@ -8394,10 +8398,6 @@
     {
         "name": "Goldman Sachs ActiveBeta World Equity ETF",
         "symbol": "GSWO"
-    },
-    {
-        "name": "Tradr 2X Long GS Daily ETF",
-        "symbol": "GSX"
     },
     {
         "name": "INVESCO ACTIVELY MANAGED EXCHA ULTRA SHRT DUR",
@@ -8982,6 +8982,10 @@
     {
         "name": "HERSHEY CO COM",
         "symbol": "HSY"
+    },
+    {
+        "name": "HEARTFLOW INC COM",
+        "symbol": "HTFL"
     },
     {
         "name": "HERCULES CAPITAL INC COM",
@@ -10448,6 +10452,10 @@
         "symbol": "KCE"
     },
     {
+        "name": "Kurv Copper & Mining Enhanced Income ETF",
+        "symbol": "KCOP"
+    },
+    {
         "name": "KYNDRYL HLDGS INC COMMON STOCK",
         "symbol": "KD"
     },
@@ -11220,6 +11228,10 @@
         "symbol": "LNZA"
     },
     {
+        "name": "MANHATTAN BRDG CAP INC COM",
+        "symbol": "LOAN"
+    },
+    {
         "name": "LOAR HOLDINGS INC COM SHS",
         "symbol": "LOAR"
     },
@@ -11482,10 +11494,6 @@
     {
         "name": "LYFT INC CL A COM",
         "symbol": "LYFT"
-    },
-    {
-        "name": "Tradr 2X Long LYFT Daily ETF",
-        "symbol": "LYFX"
     },
     {
         "name": "LLOYDS BANKING GROUP PLC SPONSORED ADR",
@@ -11868,7 +11876,7 @@
         "symbol": "MFIC"
     },
     {
-        "name": "MEDALLION FINL CORP COM",
+        "name": "MEDALLION FINANCIAL CORP COM",
         "symbol": "MFIN"
     },
     {
@@ -12756,10 +12764,6 @@
         "symbol": "NETG"
     },
     {
-        "name": "Tradr 2X Long NET Daily ETF",
-        "symbol": "NETX"
-    },
-    {
         "name": "NEWMARKET CORP COM",
         "symbol": "NEU"
     },
@@ -13194,6 +13198,10 @@
     {
         "name": "NUVALENT INC COM",
         "symbol": "NUVL"
+    },
+    {
+        "name": "NOVA MINERALS LTD SPONSORED ADS",
+        "symbol": "NVA"
     },
     {
         "name": "NOVAVAX INC COM NEW",
@@ -17840,6 +17848,10 @@
         "symbol": "SUSB"
     },
     {
+        "name": "SUZANO S A SPON ADS",
+        "symbol": "SUZ"
+    },
+    {
         "name": "iShares US Small Cap Value Factor ETF",
         "symbol": "SVAL"
     },
@@ -18984,7 +18996,7 @@
         "symbol": "TYD"
     },
     {
-        "name": "TYLER TECHNOLOGIES INC COM",
+        "name": "TYLER TEX INDPT SCH DIST COM",
         "symbol": "TYL"
     },
     {
@@ -19024,7 +19036,7 @@
         "symbol": "UAMY"
     },
     {
-        "name": "CVR PARTNERS LP COM",
+        "name": "CVR PARTNERS LP/CVR NITROGEN COM",
         "symbol": "UAN"
     },
     {
@@ -20858,6 +20870,10 @@
     {
         "name": "GLOBAL X FDS S&P 500 RISK",
         "symbol": "XRMI"
+    },
+    {
+        "name": "BITWISE XRP ETF BENEFICIAL INT",
+        "symbol": "XRP"
     },
     {
         "name": "CANARY XRP ETF SHS",
