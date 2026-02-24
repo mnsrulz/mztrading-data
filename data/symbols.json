@@ -128,7 +128,7 @@
         "symbol": "ABSI"
     },
     {
-        "name": "ABBOTT LABS COM",
+        "name": "ABBOTT LABORATORIES COM",
         "symbol": "ABT"
     },
     {
@@ -3076,7 +3076,7 @@
         "symbol": "CAPR"
     },
     {
-        "name": "AVIS BUDGET GROUP COM",
+        "name": "AVIS BUDGET GROUP INC COM",
         "symbol": "CAR"
     },
     {
@@ -3248,7 +3248,7 @@
         "symbol": "CCO"
     },
     {
-        "name": "COGENT COMMUNICATIONS HLDGS IN COM NEW",
+        "name": "COGENT COMM HOLDINGS INC COM NEW",
         "symbol": "CCOI"
     },
     {
@@ -3690,10 +3690,6 @@
     {
         "name": "CLEARPOINT NEURO INC COM",
         "symbol": "CLPT"
-    },
-    {
-        "name": "CELLECTAR BIOSCIENCES INC COM NEW",
-        "symbol": "CLRB"
     },
     {
         "name": "CELESTICA INC COM",
@@ -5920,10 +5916,6 @@
         "symbol": "ELVN"
     },
     {
-        "name": "ELEVRA LITHIUM LTD SPONSORED ADS",
-        "symbol": "ELVR"
-    },
-    {
         "name": "EMERA INC COM",
         "symbol": "EMA"
     },
@@ -7228,7 +7220,7 @@
         "symbol": "FNDX"
     },
     {
-        "name": "FIDELITY NATIONAL FINANCIAL IN COM SHS",
+        "name": "FIDELITY NATL FINL INC COM SHS",
         "symbol": "FNF"
     },
     {
@@ -7382,10 +7374,6 @@
     {
         "name": "PRIMIS FINANCIAL CORP COM",
         "symbol": "FRST"
-    },
-    {
-        "name": "FORESIGHT AUTONOMOUS HLDGS LTD SPONSORED ADR",
-        "symbol": "FRSX"
     },
     {
         "name": "FEDERAL RLTY INVT TR NEW SH BEN INT NEW",
@@ -8086,10 +8074,6 @@
     {
         "name": "GOLDEN MATRIX GROUP INC COM",
         "symbol": "GMGI"
-    },
-    {
-        "name": "GLOBAL MED REIT INC COM NEW",
-        "symbol": "GMRE"
     },
     {
         "name": "GENIE ENERGY LTD CL B",
@@ -9368,6 +9352,10 @@
         "symbol": "IFGL"
     },
     {
+        "name": "INVESCO EXCHANGE-TRADED FD TR BLOOMBERG ENHANC",
+        "symbol": "IFLN"
+    },
+    {
         "name": "iShares U.S. Infrastructure ETF",
         "symbol": "IFRA"
     },
@@ -9562,6 +9550,10 @@
     {
         "name": "IMMUNIC INC COM",
         "symbol": "IMUX"
+    },
+    {
+        "name": "INVESCO INDIA EXCHANGE-TRADED INDIA ETF",
+        "symbol": "IMVP"
     },
     {
         "name": "IMMUNOVANT INC COM",
@@ -10912,7 +10904,7 @@
         "symbol": "LASR"
     },
     {
-        "name": "LAUREATE EDUCATION INC COMMON STOCK",
+        "name": "LAUREATE ED INC COMMON STOCK",
         "symbol": "LAUR"
     },
     {
@@ -11224,10 +11216,6 @@
         "symbol": "LNTH"
     },
     {
-        "name": "LANZATECH GLOBAL INC COM NEW",
-        "symbol": "LNZA"
-    },
-    {
         "name": "MANHATTAN BRDG CAP INC COM",
         "symbol": "LOAN"
     },
@@ -11434,10 +11422,6 @@
     {
         "name": "LUXEXPERIENCE BV SPONSORED ADS",
         "symbol": "LUXE"
-    },
-    {
-        "name": "LULUS FASHION LOUNGE HOLDINGS COM NEW",
-        "symbol": "LVLU"
     },
     {
         "name": "LIVEONE INC COM NEW",
@@ -13460,10 +13444,6 @@
         "symbol": "OEF"
     },
     {
-        "name": "ORION ENERGY SYS INC COM NEW",
-        "symbol": "OESX"
-    },
-    {
         "name": "S&P 100 index American-style",
         "symbol": "OEX"
     },
@@ -14332,10 +14312,6 @@
         "symbol": "PHAT"
     },
     {
-        "name": "INVESCO EXCHANGE-TRADED FD TR FNDMNTL HY CRP",
-        "symbol": "PHB"
-    },
-    {
         "name": "KONINKLIJKE PHILIPS N V NY REGIS SHS NEW",
         "symbol": "PHG"
     },
@@ -14382,10 +14358,6 @@
     {
         "name": "POLARIS INC COM",
         "symbol": "PII"
-    },
-    {
-        "name": "INVESCO INDIA EXCHANGE-TRADED INDIA ETF",
-        "symbol": "PIN"
     },
     {
         "name": "ALPINE INCOME PPTY TR INC COM",
@@ -15254,6 +15226,10 @@
     {
         "name": "QVC GROUP INC COM SER A NEW",
         "symbol": "QVCGA"
+    },
+    {
+        "name": "INVESCO EXCHANGE-TRADED FD TR S&P 500 CONCENTR",
+        "symbol": "QVMT"
     },
     {
         "name": "SPDR INDEX SHS FDS STATE STREET SPD",
@@ -16996,7 +16972,7 @@
         "symbol": "SMDV"
     },
     {
-        "name": "SUMITOMO MITSUI FINL GROUP INC SPONSORED ADR",
+        "name": "SUMITOMO MITSUI FIN GRP INC SPONSORED ADR",
         "symbol": "SMFG"
     },
     {
@@ -17452,10 +17428,6 @@
         "symbol": "SPUU"
     },
     {
-        "name": "INVESCO EXCHANGE-TRADED FD TR S&P 500 ENHNCD",
-        "symbol": "SPVU"
-    },
-    {
         "name": "SPORTSMANS WHSE HLDGS INC COM",
         "symbol": "SPWH"
     },
@@ -17624,7 +17596,7 @@
         "symbol": "SSL"
     },
     {
-        "name": "SS&C TECHNOLOGIES HLDGS INC COM",
+        "name": "SS&C TECH HLDGS COM",
         "symbol": "SSNC"
     },
     {
@@ -18576,10 +18548,6 @@
         "symbol": "TPH"
     },
     {
-        "name": "TPI COMPOSITES INC COM",
-        "symbol": "TPICQ"
-    },
-    {
         "name": "TEXAS PACIFIC LAND CORPORATION COM",
         "symbol": "TPL"
     },
@@ -18996,7 +18964,7 @@
         "symbol": "TYD"
     },
     {
-        "name": "TYLER TEX INDPT SCH DIST COM",
+        "name": "TYLER TECHNOLOGIES INC COM",
         "symbol": "TYL"
     },
     {
@@ -19960,10 +19928,6 @@
         "symbol": "VRA"
     },
     {
-        "name": "VERRICA PHARMACEUTICALS INC COM SHS",
-        "symbol": "VRCA"
-    },
-    {
         "name": "VIRIDIAN THERAPEUTICS INC COM",
         "symbol": "VRDN"
     },
@@ -20870,6 +20834,10 @@
     {
         "name": "GLOBAL X FDS S&P 500 RISK",
         "symbol": "XRMI"
+    },
+    {
+        "name": "CHIRON REAL ESTATE INC COM NEW",
+        "symbol": "XRN"
     },
     {
         "name": "BITWISE XRP ETF BENEFICIAL INT",
