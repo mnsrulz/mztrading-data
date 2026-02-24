@@ -12,7 +12,7 @@ console.log(`Parsing csv...`);
 
 const parseData = parse(symobolsText, {
     trimLeadingSpace: true,
-    columns: ["name", "symbol", "description", "temp"],
+    columns: ["name", "symbol", "description", "temp", "temp2"],
     skipFirstRow: true,
     strip: true,
 });
