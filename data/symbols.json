@@ -1512,10 +1512,6 @@
         "symbol": "ATEX"
     },
     {
-        "name": "ADTALEM GLOBAL ED INC COM",
-        "symbol": "ATGE"
-    },
-    {
         "name": "AUTOHOME INC SP ADS RP CL A",
         "symbol": "ATHM"
     },
@@ -5076,7 +5072,7 @@
         "symbol": "DHX"
     },
     {
-        "name": "SPDR DOW JONES INDL AVERAGE UT SER 1",
+        "name": "STATE STREET SPDR DOW JONES IN",
         "symbol": "DIA"
     },
     {
@@ -8624,7 +8620,7 @@
         "symbol": "HDV"
     },
     {
-        "name": "HAWAIIAN ELEC INDUSTRIES COM",
+        "name": "HAWAIIAN ELEC INDS INC MTN BE COM",
         "symbol": "HE"
     },
     {
@@ -11046,10 +11042,6 @@
     {
         "name": "LIFEVANTAGE CORP COM NEW",
         "symbol": "LFVN"
-    },
-    {
-        "name": "LIFEWARD LTD SHS",
-        "symbol": "LFWD"
     },
     {
         "name": "LGI HOMES INC COM",
@@ -16052,10 +16044,6 @@
         "symbol": "RYAN"
     },
     {
-        "name": "RYERSON HLDG CORP COM",
-        "symbol": "RYI"
-    },
-    {
         "name": "GLOBAL X FDS RUSSELL 2000",
         "symbol": "RYLD"
     },
@@ -17360,10 +17348,6 @@
         "symbol": "SPMO"
     },
     {
-        "name": "Invesco S&P 500 Minimum Variance ETF",
-        "symbol": "SPMV"
-    },
-    {
         "name": "SIRIUSPOINT LTD COM",
         "symbol": "SPNT"
     },
@@ -18596,7 +18580,7 @@
         "symbol": "TREE"
     },
     {
-        "name": "TREX CO INC COM",
+        "name": "TREX INC COM",
         "symbol": "TREX"
     },
     {
