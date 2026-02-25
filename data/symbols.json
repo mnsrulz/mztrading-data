@@ -1792,7 +1792,7 @@
         "symbol": "AXS"
     },
     {
-        "name": "AXSOME THERAPEUTICS INC COM",
+        "name": "AXSOME THERAPEUTICS INC. COM",
         "symbol": "AXSM"
     },
     {
@@ -3580,7 +3580,7 @@
         "symbol": "CIEN"
     },
     {
-        "name": "CIPHER MINING INC COM",
+        "name": "CIPHER DIGITAL INC",
         "symbol": "CIFR"
     },
     {
@@ -4608,6 +4608,10 @@
         "symbol": "CVS"
     },
     {
+        "name": "COVISTA INC COM",
+        "symbol": "CVSA"
+    },
+    {
         "name": "CHEVRON CORPORATION COM",
         "symbol": "CVX"
     },
@@ -5072,7 +5076,7 @@
         "symbol": "DHX"
     },
     {
-        "name": "STATE STREET SPDR DOW JONES IN",
+        "name": "STATE STR SPDR DOW JONES INDL UT SER 1",
         "symbol": "DIA"
     },
     {
@@ -11044,6 +11048,10 @@
         "symbol": "LFVN"
     },
     {
+        "name": "LIFEWARD LTD SHS",
+        "symbol": "LFWD"
+    },
+    {
         "name": "LGI HOMES INC COM",
         "symbol": "LGIH"
     },
@@ -11870,10 +11878,6 @@
     {
         "name": "MGE ENERGY INC COM",
         "symbol": "MGEE"
-    },
-    {
-        "name": "MAGIC SOFTWARE ENTERPRISES LTD ORD",
-        "symbol": "MGIC"
     },
     {
         "name": "VANGUARD WORLD FD MEGA GRWTH IND",
@@ -16060,6 +16064,10 @@
         "symbol": "RYTM"
     },
     {
+        "name": "RYERSON HLDG CORP COM",
+        "symbol": "RYZ"
+    },
+    {
         "name": "INVESCO EXCHANGE TRADED FD TR S&P SML600 GWT",
         "symbol": "RZG"
     },
@@ -17944,7 +17952,7 @@
         "symbol": "TAK"
     },
     {
-        "name": "TAL EDUCATION GROUP SPONSORED ADS",
+        "name": "TAL ED GROUP SPONSORED ADS",
         "symbol": "TAL"
     },
     {
@@ -18228,7 +18236,7 @@
         "symbol": "TGNA"
     },
     {
-        "name": "TRANSPORTADORA DE GAS SUR SPONSORED ADS B",
+        "name": "TRANSPORTADORA DE GAS DEL SUR SPONSORED ADS B",
         "symbol": "TGS"
     },
     {
