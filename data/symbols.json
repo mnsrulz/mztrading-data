@@ -688,7 +688,7 @@
         "symbol": "ALHC"
     },
     {
-        "name": "ALIGHT INC COM CL A",
+        "name": "FOLEY TRASIMENE ACQUISTN CORP COM CL A",
         "symbol": "ALIT"
     },
     {
@@ -2500,7 +2500,7 @@
         "symbol": "BMNU"
     },
     {
-        "name": "BANK MONTREAL QUE COM",
+        "name": "BANK MONTREAL MEDIUM COM",
         "symbol": "BMO"
     },
     {
@@ -3100,10 +3100,6 @@
         "symbol": "CASH"
     },
     {
-        "name": "CASI PHARMACEUTICALS INC ORD SHS",
-        "symbol": "CASI"
-    },
-    {
         "name": "CASEYS GEN STORES INC COM",
         "symbol": "CASY"
     },
@@ -3580,7 +3576,7 @@
         "symbol": "CIEN"
     },
     {
-        "name": "CIPHER DIGITAL INC",
+        "name": "CIPHER DIGITAL INC COM",
         "symbol": "CIFR"
     },
     {
@@ -4194,10 +4190,6 @@
     {
         "name": "CALIFORNIA RES CORP COM STOCK",
         "symbol": "CRC"
-    },
-    {
-        "name": "PROSHARES TR ULTRA CRCL",
-        "symbol": "CRCA"
     },
     {
         "name": "T-REX 2X Inverse CRCL Daily Target ETF",
@@ -6500,7 +6492,7 @@
         "symbol": "EXK"
     },
     {
-        "name": "EXLSERVICE HOLDINGS INC COM",
+        "name": "EXLSERVICE HLDGS INC COM",
         "symbol": "EXLS"
     },
     {
@@ -8952,7 +8944,7 @@
         "symbol": "HSDT"
     },
     {
-        "name": "HENRY SCHEIN INC COM",
+        "name": "SCHEIN HENRY INC COM",
         "symbol": "HSIC"
     },
     {
@@ -15696,7 +15688,7 @@
         "symbol": "RM"
     },
     {
-        "name": "RE MAX HLDGS INC CL A",
+        "name": "RE/MAX HLDGS INC CL A",
         "symbol": "RMAX"
     },
     {
@@ -15718,10 +15710,6 @@
     {
         "name": "ROCKWELL MED INC COM NEW",
         "symbol": "RMTI"
-    },
-    {
-        "name": "AVIDITY BIOSCIENCES INC COM",
-        "symbol": "RNA"
     },
     {
         "name": "CARTESIAN THERAPEUTICS INC COM NEW",
@@ -16532,7 +16520,7 @@
         "symbol": "SFM"
     },
     {
-        "name": "SIMMONS 1ST NATL CORP CL A $1 PAR",
+        "name": "SIMMONS FIRST NATL CORP CL A $1 PAR",
         "symbol": "SFNC"
     },
     {
@@ -16656,7 +16644,7 @@
         "symbol": "SHYG"
     },
     {
-        "name": "SI-BONE INC COM",
+        "name": "SI BONE INC COM",
         "symbol": "SIBN"
     },
     {
@@ -21102,10 +21090,6 @@
     {
         "name": "ZSCALER INC COM",
         "symbol": "ZS"
-    },
-    {
-        "name": "PROSHARES TR II ULTRA SHORT SILV",
-        "symbol": "ZSL"
     },
     {
         "name": "ZTO EXPRESS CAYMAN INC SPONSORED ADS A",
