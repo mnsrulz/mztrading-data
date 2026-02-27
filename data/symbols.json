@@ -808,6 +808,10 @@
         "symbol": "AMBP"
     },
     {
+        "name": "AMBIQ MICRO INC COMMON STOCK",
+        "symbol": "AMBQ"
+    },
+    {
         "name": "AMBER INTL HLDG LTD SPON ADS NEW",
         "symbol": "AMBR"
     },
@@ -1102,6 +1106,10 @@
     {
         "name": "AMPHENOL CORP CL A",
         "symbol": "APH"
+    },
+    {
+        "name": "T-REX 2X Long APH Daily Target ETF",
+        "symbol": "APHU"
     },
     {
         "name": "AGORA INC ADS",
@@ -1414,6 +1422,10 @@
     {
         "name": "AERSALE CORPORATION COM",
         "symbol": "ASLE"
+    },
+    {
+        "name": "AVINO SILVER & GOLD MINES LTD COM",
+        "symbol": "ASM"
     },
     {
         "name": "ASSEMBLY BIOSCIENCES INC COM NEW",
@@ -3700,6 +3712,10 @@
         "symbol": "CLSX"
     },
     {
+        "name": "Tradr 2X Short CLSK Daily ETF",
+        "symbol": "CLSZ"
+    },
+    {
         "name": "CLARIVATE PLC ORD SHS",
         "symbol": "CLVT"
     },
@@ -3930,6 +3946,10 @@
     {
         "name": "COHU INC COM",
         "symbol": "COHU"
+    },
+    {
+        "name": "Tradr 2X Long COHR Daily ETF",
+        "symbol": "COHX"
     },
     {
         "name": "THEMES ETF TR LEVERAGE SHARES",
@@ -4190,6 +4210,10 @@
     {
         "name": "CALIFORNIA RES CORP COM STOCK",
         "symbol": "CRC"
+    },
+    {
+        "name": "PROSHARES TR ULTRA CRCL NEW",
+        "symbol": "CRCA"
     },
     {
         "name": "T-REX 2X Inverse CRCL Daily Target ETF",
@@ -5904,6 +5928,10 @@
         "symbol": "ELV"
     },
     {
+        "name": "ELECTROVAYA INC COM NEW",
+        "symbol": "ELVA"
+    },
+    {
         "name": "ENLIVEN THERAPEUTICS INC COM",
         "symbol": "ELVN"
     },
@@ -6898,6 +6926,10 @@
     {
         "name": "FG NEXUS INC. COM",
         "symbol": "FGNX"
+    },
+    {
+        "name": "T-REX 2X Long FIGR Daily Target ETF",
+        "symbol": "FGRU"
     },
     {
         "name": "FIRST HAWAIIAN INC COM",
@@ -8788,7 +8820,7 @@
         "symbol": "HLX"
     },
     {
-        "name": "HONDA MOTOR LTD ADR ECH CNV IN 3",
+        "name": "HONDA MOTOR CO LTD ADR ECH CNV IN 3",
         "symbol": "HMC"
     },
     {
@@ -11012,6 +11044,10 @@
         "symbol": "LEU"
     },
     {
+        "name": "Tradr 2X Long LEU Daily ETF",
+        "symbol": "LEUX"
+    },
+    {
         "name": "LEVI STRAUSS & CO NEW CL A COM STK",
         "symbol": "LEVI"
     },
@@ -12532,7 +12568,7 @@
         "symbol": "MYPS"
     },
     {
-        "name": "MYR GROUP INC DEL COM",
+        "name": "MYR GROUP INC COM",
         "symbol": "MYRG"
     },
     {
@@ -14152,7 +14188,7 @@
         "symbol": "PECO"
     },
     {
-        "name": "PUBLIC SVC ENTERPRISE GRP INC COM",
+        "name": "PUBLIC SVC ENTERPRISE GROUP COM",
         "symbol": "PEG"
     },
     {
@@ -16496,10 +16532,6 @@
         "symbol": "SEZL"
     },
     {
-        "name": "STIFEL FINL CORP COM",
-        "symbol": "SF"
-    },
-    {
         "name": "SERVISFIRST BANCSHARES INC COM",
         "symbol": "SFBS"
     },
@@ -16884,6 +16916,10 @@
         "symbol": "SLS"
     },
     {
+        "name": "SOLARIS RES INC COM NEW",
+        "symbol": "SLSR"
+    },
+    {
         "name": "ISHARES SILVER TR ISHARES",
         "symbol": "SLV"
     },
@@ -17166,10 +17202,6 @@
     {
         "name": "SOLSTICE ADVANCED MATLS INC COM SHS",
         "symbol": "SOLS"
-    },
-    {
-        "name": "VOLATILITY SHS TR 2X SOLANA ETF",
-        "symbol": "SOLT"
     },
     {
         "name": "SOLVENTUM CORP COM SHS",
@@ -18512,6 +18544,10 @@
         "symbol": "TOUR"
     },
     {
+        "name": "Roundhill S&P 500 Target 10 Managed Distribution ETF",
+        "symbol": "TPAY"
+    },
+    {
         "name": "TURNING PT BRANDS INC COM",
         "symbol": "TPB"
     },
@@ -19104,7 +19140,7 @@
         "symbol": "UHS"
     },
     {
-        "name": "UNIVERSAL HEALTH RLTY INCOME T SH BEN INT",
+        "name": "UNIVERSAL HEALTH RLTY INCOME SH BEN INT",
         "symbol": "UHT"
     },
     {
@@ -19582,6 +19618,10 @@
     {
         "name": "VELOCITY FINL INC COM",
         "symbol": "VEL"
+    },
+    {
+        "name": "VELO3D INC COM NEW",
+        "symbol": "VELO"
     },
     {
         "name": "VENU HLDG CORP COM",
@@ -20380,6 +20420,10 @@
         "symbol": "WLKP"
     },
     {
+        "name": "WEALTHFRONT CORP COM",
+        "symbol": "WLTH"
+    },
+    {
         "name": "WILEY JOHN & SONS INC CL A",
         "symbol": "WLY"
     },
@@ -20836,10 +20880,6 @@
         "symbol": "XRPR"
     },
     {
-        "name": "VOLATILITY SHS TR 2X XRP ETF",
-        "symbol": "XRPT"
-    },
-    {
         "name": "FRANKLIN XRP TRUST FRANKLIN XRP ETF",
         "symbol": "XRPZ"
     },
@@ -21090,6 +21130,10 @@
     {
         "name": "ZSCALER INC COM",
         "symbol": "ZS"
+    },
+    {
+        "name": "PROSHARES TR II ULTRA SHORT SILV",
+        "symbol": "ZSL"
     },
     {
         "name": "ZTO EXPRESS CAYMAN INC SPONSORED ADS A",
