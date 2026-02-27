@@ -8,7 +8,7 @@ import delay from "https://esm.sh/delay@7.0.0/index.js";
 const MATRIX_ID = Deno.env.get("MATRIX_ID");
 const dataFolder = `temp/options-snapshots/batch-${MATRIX_ID}`;
 await ensureDir(dataFolder);
-const timeoutInMS = 10000;
+const timeoutInMS = 3000;
 const batchFileName = Deno.env.get("BATCH_FILE");
 
 if (!batchFileName) {
@@ -66,6 +66,8 @@ for (const symbol of symbols) {
             console.log(`Closed browser after error...`);
             throw err;
         }
+    }, {
+        retries: 3
     }).catch((err) => {
         failedSymbols.push(symbol);
         console.error(`❌ Failed to process symbol ${symbol} after multiple attempts: ${(err as Error).message}`);
@@ -104,6 +106,10 @@ async function processSymbol(symbol: string) {
         // await page.waitForSelector('');
 
         console.log(`📷 ${symbol} - Taking screenshot and saving to ${path}`);
+        
+        await page.waitForNetworkIdle({
+            timeout: timeoutInMS
+        });
 
         await delay(250); // slight delay to ensure rendering is complete (hopefully)
         await page.screenshot({

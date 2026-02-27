@@ -38,7 +38,7 @@ jobs:
       batches: ${{ steps.make_batches.outputs.batches }}
     env:
       FORCE_DAY_ID: ${{ github.event.inputs.forceDayId }}
-      BATCH_CHUNK_SIZE: 100
+      BATCH_CHUNK_SIZE: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
