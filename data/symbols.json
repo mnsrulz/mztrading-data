@@ -524,12 +524,12 @@
         "symbol": "AHCO"
     },
     {
-        "name": "ARMADA HOFFLER PPTYS INC COM",
-        "symbol": "AHH"
-    },
-    {
         "name": "AMERICAN HEALTHCARE REIT INC COM SHS",
         "symbol": "AHR"
+    },
+    {
+        "name": "AH REALTY TRUST INC",
+        "symbol": "AHRT"
     },
     {
         "name": "C3 AI INC CL A",
@@ -632,7 +632,7 @@
         "symbol": "AKAM"
     },
     {
-        "name": "AKEBIA THERAPEUTICS INC COM",
+        "name": "AKEBIA THREAPEUTICS INC COM",
         "symbol": "AKBA"
     },
     {
@@ -948,7 +948,7 @@
         "symbol": "AMTX"
     },
     {
-        "name": "AMERICAN WOODMARK CORPORATION COM",
+        "name": "AMERICAN WOODMARK CORP COM",
         "symbol": "AMWD"
     },
     {
@@ -3396,7 +3396,7 @@
         "symbol": "CERT"
     },
     {
-        "name": "SPDR SERIES TRUST BLOOMBERG ENHNCD",
+        "name": "STATE STREET SPDR BLOOMBERG EN",
         "symbol": "CERY"
     },
     {
@@ -6276,10 +6276,6 @@
         "symbol": "ETHW"
     },
     {
-        "name": "ETHZILLA CORPORATION COM SHS",
-        "symbol": "ETHZ"
-    },
-    {
         "name": "EATON CORP PLC SHS",
         "symbol": "ETN"
     },
@@ -7360,10 +7356,6 @@
         "symbol": "FREL"
     },
     {
-        "name": "FORGE GLOBAL HOLDINGS INC COM SHS",
-        "symbol": "FRGE"
-    },
-    {
         "name": "FREEDOM HOLDING CORP COM",
         "symbol": "FRHC"
     },
@@ -7374,6 +7366,10 @@
     {
         "name": "FERMI INC COM",
         "symbol": "FRMI"
+    },
+    {
+        "name": "FORUM MARKETS INC",
+        "symbol": "FRMM"
     },
     {
         "name": "Fidelity Clean Energy ETF",
@@ -15748,6 +15744,10 @@
         "symbol": "RMTI"
     },
     {
+        "name": "ATRIUM THERAPEUTICS INC COM",
+        "symbol": "RNA"
+    },
+    {
         "name": "CARTESIAN THERAPEUTICS INC COM NEW",
         "symbol": "RNAC"
     },
@@ -16532,6 +16532,10 @@
         "symbol": "SEZL"
     },
     {
+        "name": "STIFEL FINL CORP COM",
+        "symbol": "SF"
+    },
+    {
         "name": "SERVISFIRST BANCSHARES INC COM",
         "symbol": "SFBS"
     },
@@ -17202,6 +17206,10 @@
     {
         "name": "SOLSTICE ADVANCED MATLS INC COM SHS",
         "symbol": "SOLS"
+    },
+    {
+        "name": "VOLATILITY SHS TR 2X SOLANA ETF",
+        "symbol": "SOLT"
     },
     {
         "name": "SOLVENTUM CORP COM SHS",
@@ -20878,6 +20886,10 @@
     {
         "name": "REX-Osprey XRP ETF",
         "symbol": "XRPR"
+    },
+    {
+        "name": "VOLATILITY SHS TR 2X XRP ETF",
+        "symbol": "XRPT"
     },
     {
         "name": "FRANKLIN XRP TRUST FRANKLIN XRP ETF",
