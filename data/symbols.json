@@ -528,7 +528,7 @@
         "symbol": "AHR"
     },
     {
-        "name": "AH REALTY TRUST INC",
+        "name": "AH RLTY TR INC COM",
         "symbol": "AHRT"
     },
     {
@@ -652,7 +652,7 @@
         "symbol": "ALC"
     },
     {
-        "name": "ALDEYRA THERAPEUTICS INC COM",
+        "name": "ALDEXA THERAPEUTICS INC COM",
         "symbol": "ALDX"
     },
     {
@@ -3208,7 +3208,7 @@
         "symbol": "CCB"
     },
     {
-        "name": "CAPITAL CITY BK GROUP INC COM",
+        "name": "CAPITAL CITY BANK COM",
         "symbol": "CCBG"
     },
     {
@@ -3396,7 +3396,7 @@
         "symbol": "CERT"
     },
     {
-        "name": "STATE STREET SPDR BLOOMBERG EN",
+        "name": "SPDR SERIES TRUST STATE STRET SPDR",
         "symbol": "CERY"
     },
     {
@@ -4900,7 +4900,7 @@
         "symbol": "DD"
     },
     {
-        "name": "3-D SYS CORP DEL COM NEW",
+        "name": "3D SYS CORP DEL COM NEW",
         "symbol": "DDD"
     },
     {
@@ -7368,7 +7368,7 @@
         "symbol": "FRMI"
     },
     {
-        "name": "FORUM MARKETS INC",
+        "name": "FORUM MARKETS INC COM SHS",
         "symbol": "FRMM"
     },
     {
@@ -8090,10 +8090,6 @@
     {
         "name": "SPDR INDEX SHS FDS STATE STREET SPD",
         "symbol": "GMF"
-    },
-    {
-        "name": "GOLDEN MATRIX GROUP INC COM",
-        "symbol": "GMGI"
     },
     {
         "name": "GENIE ENERGY LTD CL B",
@@ -8912,7 +8908,7 @@
         "symbol": "HPK"
     },
     {
-        "name": "HUDSON PAC PPTYS INC COM",
+        "name": "HUDSON PACIFIC PROPERTIES INC COM",
         "symbol": "HPP"
     },
     {
@@ -12172,7 +12168,7 @@
         "symbol": "MORT"
     },
     {
-        "name": "MOSAIC CO NEW COM",
+        "name": "MOSAIC CO COM",
         "symbol": "MOS"
     },
     {
@@ -13980,7 +13976,7 @@
         "symbol": "PALL"
     },
     {
-        "name": "PAMPA ENERGIA S A SPONS ADR LVL I",
+        "name": "PAMPA ENERGIA SA SPONS ADR LVL I",
         "symbol": "PAM"
     },
     {
@@ -14628,7 +14624,7 @@
         "symbol": "PPA"
     },
     {
-        "name": "PURPLE BIOTECH LTD SPONSORED ADR",
+        "name": "PURPLE BIOTECH LTD SPONSORED ADS",
         "symbol": "PPBT"
     },
     {
@@ -18738,10 +18734,6 @@
     {
         "name": "GRANITESHARES ETF TR 2X SHORT TSLA DA",
         "symbol": "TSDD"
-    },
-    {
-        "name": "TRINSEO PLC SHS",
-        "symbol": "TSE"
     },
     {
         "name": "TOWER SEMICONDUCTOR LTD SHS NEW",
