@@ -10368,7 +10368,7 @@
         "symbol": "JQUA"
     },
     {
-        "name": "JAMES RIV GROUP HOLDINGS INC COM SHS",
+        "name": "JAMES RIV GROUP LTD COM SHS",
         "symbol": "JRVR"
     },
     {
@@ -12236,6 +12236,10 @@
         "symbol": "MRCY"
     },
     {
+        "name": "MERIDIAN HOLDINGS INC COM",
+        "symbol": "MRDN"
+    },
+    {
         "name": "MEREO BIOPHARMA GROUP PLC SPON ADS",
         "symbol": "MREO"
     },
@@ -12680,7 +12684,7 @@
         "symbol": "NBTB"
     },
     {
-        "name": "NORWEGIAN CRUISE LINE HLDG LTD SHS",
+        "name": "NORWEGIAN CRUISE LINE HLDGS LT SHS",
         "symbol": "NCLH"
     },
     {
@@ -14516,7 +14520,7 @@
         "symbol": "PLTY"
     },
     {
-        "name": "PLUG POWER INC COM NEW",
+        "name": "PLUG PWR INC COM NEW",
         "symbol": "PLUG"
     },
     {
@@ -15294,10 +15298,6 @@
     {
         "name": "RAPPORT THERAPEUTICS INC COM",
         "symbol": "RAPP"
-    },
-    {
-        "name": "RAPT THERAPEUTICS INC COM NEW",
-        "symbol": "RAPT"
     },
     {
         "name": "ULTRAGENYX PHARMACEUTICAL INC COM",
@@ -17816,7 +17816,7 @@
         "symbol": "SUPL"
     },
     {
-        "name": "SUPERNUS PHARMACEUTICALS INC COM",
+        "name": "SUPERNUS PHARMACEUTICALS COM",
         "symbol": "SUPN"
     },
     {
