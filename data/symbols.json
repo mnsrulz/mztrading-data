@@ -36,7 +36,7 @@
         "symbol": "AAPB"
     },
     {
-        "name": "DIREXION DAILY AAPL BEAR 1X ET",
+        "name": "DIREXION SHS ETF TR DAILY AAPL BR 1X",
         "symbol": "AAPD"
     },
     {
@@ -44,7 +44,7 @@
         "symbol": "AAPL"
     },
     {
-        "name": "DIREXION DAILY AAPL BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY AAPL BULL 2X",
         "symbol": "AAPU"
     },
     {
@@ -832,7 +832,7 @@
         "symbol": "AMD"
     },
     {
-        "name": "DIREXION DAILY AMD BEAR 1X ETF",
+        "name": "DIREXION SHS ETF TR DLY AMD BEAR 1X",
         "symbol": "AMDD"
     },
     {
@@ -964,7 +964,7 @@
         "symbol": "AMZA"
     },
     {
-        "name": "DIREXION DAILY AMZN BEAR 1X ET",
+        "name": "DIREXION SHS ETF TR DLY AMZN BEAR 1X",
         "symbol": "AMZD"
     },
     {
@@ -976,7 +976,7 @@
         "symbol": "AMZP"
     },
     {
-        "name": "DIREXION DAILY AMZN BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY AMZN BULL 2X",
         "symbol": "AMZU"
     },
     {
@@ -1684,7 +1684,7 @@
         "symbol": "AVIR"
     },
     {
-        "name": "DIREXION DAILY AVGO BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY AVGO BULL 2X",
         "symbol": "AVL"
     },
     {
@@ -5488,6 +5488,10 @@
         "symbol": "DUSL"
     },
     {
+        "name": "DIREXION SHS ETF TR DAILY GOLD MINER",
+        "symbol": "DUST"
+    },
+    {
         "name": "DOUBLEVERIFY HLDGS INC COM",
         "symbol": "DV"
     },
@@ -5896,7 +5900,7 @@
         "symbol": "ELF"
     },
     {
-        "name": "DIREXION DAILY LLY BULL 2X ETF",
+        "name": "DIREXION SHS ETF TR DLY LLY BULL 2X",
         "symbol": "ELIL"
     },
     {
@@ -7900,11 +7904,11 @@
         "symbol": "GGG"
     },
     {
-        "name": "DIREXION DAILY GOOGL BULL 2X E",
+        "name": "DIREXION SHS ETF TR DLY GOOGL BUL 2X",
         "symbol": "GGLL"
     },
     {
-        "name": "DIREXION DAILY GOOGL BEAR 1X E",
+        "name": "DIREXION SHS ETF TR DLY GOOGL BR 1X",
         "symbol": "GGLS"
     },
     {
@@ -8718,6 +8722,10 @@
     {
         "name": "DIREXION SHS ETF TR DAILY S&P BULL",
         "symbol": "HIBL"
+    },
+    {
+        "name": "DIREXION SHS ETF TR DAILY S&P 500 HI",
+        "symbol": "HIBS"
     },
     {
         "name": "HARTFORD INSURANCE GROUP INC COM",
@@ -10230,6 +10238,10 @@
     {
         "name": "JD.COM INC SPON ADS CL A",
         "symbol": "JD"
+    },
+    {
+        "name": "DIREXION SHS ETF TR DAILY JUNIOR GOL",
+        "symbol": "JDST"
     },
     {
         "name": "JEFFERIES FINANCIAL GROUP INC COM",
@@ -11836,7 +11848,7 @@
         "symbol": "METC"
     },
     {
-        "name": "DIREXION DAILY META BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY META BULL 2X",
         "symbol": "METU"
     },
     {
@@ -12296,7 +12308,7 @@
         "symbol": "MSDL"
     },
     {
-        "name": "DIREXION DAILY MSFT BEAR 1X ET",
+        "name": "DIREXION SHS ETF TR DLY MSFT BEAR 1X",
         "symbol": "MSFD"
     },
     {
@@ -12312,7 +12324,7 @@
         "symbol": "MSFT"
     },
     {
-        "name": "DIREXION DAILY MSFT BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY MSFT BULL 2X",
         "symbol": "MSFU"
     },
     {
@@ -12872,10 +12884,6 @@
         "symbol": "NICE"
     },
     {
-        "name": "NINE ENERGY SERVICE INC COM",
-        "symbol": "NINEQ"
-    },
-    {
         "name": "NIO INC SPON ADS",
         "symbol": "NIO"
     },
@@ -13216,7 +13224,7 @@
         "symbol": "NVDA"
     },
     {
-        "name": "DIREXION DAILY NVDA BEAR 1X ET",
+        "name": "DIREXION SHS ETF TR DLY NVDA BEAR 1X",
         "symbol": "NVDD"
     },
     {
@@ -13236,7 +13244,7 @@
         "symbol": "NVDS"
     },
     {
-        "name": "DIREXION DAILY NVDA BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY NVDA BULL 2X",
         "symbol": "NVDU"
     },
     {
@@ -14476,7 +14484,7 @@
         "symbol": "PLSE"
     },
     {
-        "name": "DIREXION DAILLY PLTR BEAR 1X E",
+        "name": "DIREXION DAILY PLTR BEAR 1X ET",
         "symbol": "PLTD"
     },
     {
@@ -14496,7 +14504,7 @@
         "symbol": "PLTR"
     },
     {
-        "name": "DIREXION DAILY PLTR BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY PLTR BULL 2X",
         "symbol": "PLTU"
     },
     {
@@ -14868,7 +14876,7 @@
         "symbol": "PST"
     },
     {
-        "name": "EVERPURE INC",
+        "name": "EVERPURE INC CL A",
         "symbol": "PSTG"
     },
     {
@@ -15128,7 +15136,7 @@
         "symbol": "QQQA"
     },
     {
-        "name": "DIREXION NASDAQ-100 EQUAL WEIG",
+        "name": "DIREXION SHS ETF TR NASDAQ 100 EQ WT",
         "symbol": "QQQE"
     },
     {
@@ -17236,6 +17244,10 @@
         "symbol": "SOXQ"
     },
     {
+        "name": "DIREXION SHS ETF TR DAILY SEMICONDUC",
+        "symbol": "SOXS"
+    },
+    {
         "name": "ISHARES TR ISHARES SEMICDTR",
         "symbol": "SOXX"
     },
@@ -18580,6 +18592,10 @@
         "symbol": "TQQY"
     },
     {
+        "name": "TOOTSIE ROLL INDS INC COM",
+        "symbol": "TR"
+    },
+    {
         "name": "REPOSITRAK INC COM NEW",
         "symbol": "TRAK"
     },
@@ -18740,7 +18756,7 @@
         "symbol": "TSLG"
     },
     {
-        "name": "DIREXION DAILY TSLA BULL 2X ET",
+        "name": "DIREXION SHS ETF TR DLY TSLA BULL 2X",
         "symbol": "TSLL"
     },
     {
@@ -18750,6 +18766,10 @@
     {
         "name": "GRANITESHARES ETF TR 2X LONG TSLA DAI",
         "symbol": "TSLR"
+    },
+    {
+        "name": "DIREXION SHS ETF TR DLY TSLA BEAR 1X",
+        "symbol": "TSLS"
     },
     {
         "name": "T-Rex 2X Long Tesla Daily Target ETF",
