@@ -81309,5 +81309,6 @@
             "symbol": "XSP",
             "dt": "2026-03-06"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-03-06/options_cboe_oi_anomaly.parquet"
 }
