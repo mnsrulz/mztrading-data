@@ -81613,5 +81613,6 @@
             "symbol": "ZS",
             "dt": "2026-03-11"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-03-11/options_cboe_oi_anomaly.parquet"
 }
