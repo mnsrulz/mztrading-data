@@ -36,7 +36,7 @@
         "symbol": "AAPB"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY AAPL BR 1X",
+        "name": "DIREXION SHARES ETF TRUST DAILY AAPL BR 1X",
         "symbol": "AAPD"
     },
     {
@@ -44,7 +44,7 @@
         "symbol": "AAPL"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AAPL BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY AAPL BULL 2X",
         "symbol": "AAPU"
     },
     {
@@ -832,7 +832,7 @@
         "symbol": "AMD"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AMD BEAR 1X",
+        "name": "DIREXION SHARES ETF TRUST DLY AMD BEAR 1X",
         "symbol": "AMDD"
     },
     {
@@ -964,7 +964,7 @@
         "symbol": "AMZA"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AMZN BEAR 1X",
+        "name": "DIREXION SHARES ETF TRUST DLY AMZN BEAR 1X",
         "symbol": "AMZD"
     },
     {
@@ -976,7 +976,7 @@
         "symbol": "AMZP"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AMZN BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY AMZN BULL 2X",
         "symbol": "AMZU"
     },
     {
@@ -1160,10 +1160,6 @@
         "symbol": "APPS"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG",
-        "symbol": "APPX"
-    },
-    {
         "name": "ALPHA PRO TECH LTD COM",
         "symbol": "APT"
     },
@@ -1176,7 +1172,7 @@
         "symbol": "APYX"
     },
     {
-        "name": "ALGONQUIN PWR UTILS CORP COM",
+        "name": "ALGONQUIN POWER & UTILITIES CO COM",
         "symbol": "AQN"
     },
     {
@@ -1684,7 +1680,7 @@
         "symbol": "AVIR"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AVGO BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY AVGO BULL 2X",
         "symbol": "AVL"
     },
     {
@@ -1952,7 +1948,7 @@
         "symbol": "BBBY"
     },
     {
-        "name": "ETFIS SER TR I VIRTUS LIFESC CT",
+        "name": "ETFIS SER TR I VIRTUS BIOTECH C",
         "symbol": "BBC"
     },
     {
@@ -2444,6 +2440,10 @@
         "symbol": "BLKB"
     },
     {
+        "name": "BILLIONTOONE INC CL A",
+        "symbol": "BLLN"
+    },
+    {
         "name": "BLOOMIN BRANDS INC COM",
         "symbol": "BLMN"
     },
@@ -2716,7 +2716,7 @@
         "symbol": "BRZE"
     },
     {
-        "name": "DIREXION SHS ETF TR BRZ BL 2X SHS",
+        "name": "DIREXION SHARES ETF TRUST DAILY MSCI BRAZI",
         "symbol": "BRZU"
     },
     {
@@ -3492,7 +3492,7 @@
         "symbol": "CHAT"
     },
     {
-        "name": "DIREXION SHS ETF TR CSI 300 BULL2X",
+        "name": "DIREXION SHARES ETF TRUST DAILY CSI 300 CH",
         "symbol": "CHAU"
     },
     {
@@ -3988,7 +3988,7 @@
         "symbol": "COLO"
     },
     {
-        "name": "DIREXION SHS ETF TR AUSPCE CMD STG",
+        "name": "DIREXION SHARES ETF TRUST AUSPCE CMD STG",
         "symbol": "COM"
     },
     {
@@ -4244,10 +4244,6 @@
         "symbol": "CRDO"
     },
     {
-        "name": "Tradr 2X Long CRDO Daily ETF",
-        "symbol": "CRDU"
-    },
-    {
         "name": "CRESUD S A C I F Y A SPONSORED ADR",
         "symbol": "CRESY"
     },
@@ -4286,10 +4282,6 @@
     {
         "name": "CRITICAL METALS CORP PUBCO ORD SHS",
         "symbol": "CRML"
-    },
-    {
-        "name": "Tradr 2X Long CRML Daily ETF",
-        "symbol": "CRMX"
     },
     {
         "name": "CERENCE INC COM",
@@ -4540,7 +4532,7 @@
         "symbol": "CURB"
     },
     {
-        "name": "DIREXION SHS ETF TR HEALTHCARE BUL",
+        "name": "DIREXION SHARES ETF TRUST DAILY HEALTHCARE",
         "symbol": "CURE"
     },
     {
@@ -4656,7 +4648,7 @@
         "symbol": "CWCO"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY CSI 2X SH",
+        "name": "DIREXION SHARES ETF TRUST DAILY CSI CHINA",
         "symbol": "CWEB"
     },
     {
@@ -4988,7 +4980,7 @@
         "symbol": "DFE"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY AEROSPC 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY AEROSPACE",
         "symbol": "DFEN"
     },
     {
@@ -5328,7 +5320,7 @@
         "symbol": "DPRO"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY REGIONAL",
+        "name": "DIREXION SHARES ETF TRUST DAILY REGIONAL B",
         "symbol": "DPST"
     },
     {
@@ -5360,7 +5352,7 @@
         "symbol": "DRIO"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY S&P OIL GAS",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P OIL &",
         "symbol": "DRIP"
     },
     {
@@ -5372,7 +5364,7 @@
         "symbol": "DRLL"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY REAL EST B",
+        "name": "DIREXION SHARES ETF TRUST DAILY REAL ESTAT",
         "symbol": "DRN"
     },
     {
@@ -5392,7 +5384,7 @@
         "symbol": "DRUP"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY REAL ESTAT",
+        "name": "DIREXION SHARES ETF TRUST DAILY REAL ESTAT",
         "symbol": "DRV"
     },
     {
@@ -5484,11 +5476,11 @@
         "symbol": "DUSA"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY INDL BU 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY INDUSTRIAL",
         "symbol": "DUSL"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY GOLD MINER",
+        "name": "DIREXION SHARES ETF TRUST DAILY GOLD MINER",
         "symbol": "DUST"
     },
     {
@@ -5628,7 +5620,7 @@
         "symbol": "DYNF"
     },
     {
-        "name": "ENI S P A SPONSORED ADR",
+        "name": "ENI SPA SPONSORED ADR",
         "symbol": "E"
     },
     {
@@ -5646,10 +5638,6 @@
     {
         "name": "BRINKER INTL INC COM",
         "symbol": "EAT"
-    },
-    {
-        "name": "EVENTBRITE INC COM CL A",
-        "symbol": "EB"
     },
     {
         "name": "EBAY INC. COM",
@@ -5716,7 +5704,7 @@
         "symbol": "EDAP"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY EMG MK BL 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY MSCI EMERG",
         "symbol": "EDC"
     },
     {
@@ -5736,7 +5724,7 @@
         "symbol": "EDV"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY MSCI EMER",
+        "name": "DIREXION SHARES ETF TRUST DAILY MSCI EMERG",
         "symbol": "EDZ"
     },
     {
@@ -5900,7 +5888,7 @@
         "symbol": "ELF"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY LLY BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY LLY BULL 2X",
         "symbol": "ELIL"
     },
     {
@@ -6160,11 +6148,11 @@
         "symbol": "ERO"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY ENRGY BULL2X",
+        "name": "DIREXION SHARES ETF TRUST DAILY ENERGY BUL",
         "symbol": "ERX"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY ENERGY BEA",
+        "name": "DIREXION SHARES ETF TRUST DAILY ENERGY BEA",
         "symbol": "ERY"
     },
     {
@@ -6332,7 +6320,7 @@
         "symbol": "EUO"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY FTS BUL 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY FTSE EUROP",
         "symbol": "EURL"
     },
     {
@@ -6604,7 +6592,7 @@
         "symbol": "FANG"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY FIN BULL NEW",
+        "name": "DIREXION SHARES ETF TRUST DAILY FINANCIAL",
         "symbol": "FAS"
     },
     {
@@ -6616,7 +6604,7 @@
         "symbol": "FATE"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY FINL BEAR",
+        "name": "DIREXION SHARES ETF TRUST DAILY FINANCIAL",
         "symbol": "FAZ"
     },
     {
@@ -7244,7 +7232,7 @@
         "symbol": "FNF"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY NYSE FANG",
+        "name": "DIREXION SHARES ETF TRUST DAILY NYSE FANG",
         "symbol": "FNGG"
     },
     {
@@ -7904,11 +7892,11 @@
         "symbol": "GGG"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY GOOGL BUL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY GOOGL BUL 2X",
         "symbol": "GGLL"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY GOOGL BR 1X",
+        "name": "DIREXION SHARES ETF TRUST DLY GOOGL BR 1X",
         "symbol": "GGLS"
     },
     {
@@ -7942,6 +7930,10 @@
     {
         "name": "GLOBAL INDUSTRIAL COMPANY COM",
         "symbol": "GIC"
+    },
+    {
+        "name": "REX Growth & Income Universe ETF",
+        "symbol": "GIF"
     },
     {
         "name": "GOLDMAN SACHS ETF TR ACCESS INVT GR",
@@ -8452,7 +8444,7 @@
         "symbol": "GURU"
     },
     {
-        "name": "DIREXION SHS ETF TR OIL GAS BL 2X SH",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P OIL &",
         "symbol": "GUSH"
     },
     {
@@ -8720,11 +8712,11 @@
         "symbol": "HHH"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY S&P BULL",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 HI",
         "symbol": "HIBL"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY S&P 500 HI",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 HI",
         "symbol": "HIBS"
     },
     {
@@ -9576,7 +9568,7 @@
         "symbol": "IMVT"
     },
     {
-        "name": "INTERNATIONAL MNY EXPRESS INC COM",
+        "name": "INTERNATIONAL MONEY EXPRESS COM",
         "symbol": "IMXI"
     },
     {
@@ -9608,7 +9600,7 @@
         "symbol": "INDI"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY MSCI INDIA",
+        "name": "DIREXION SHARES ETF TRUST DAILY MSCI INDIA",
         "symbol": "INDL"
     },
     {
@@ -9862,10 +9854,6 @@
     {
         "name": "IREN LIMITED ORDINARY SHARES",
         "symbol": "IREN"
-    },
-    {
-        "name": "Tradr 2X Long IREN Daily ETF",
-        "symbol": "IREX"
     },
     {
         "name": "Tradr 2X Short IREN Daily ETF",
@@ -10240,7 +10228,7 @@
         "symbol": "JD"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY JUNIOR GOL",
+        "name": "DIREXION SHARES ETF TRUST DAILY JUNIOR GOL",
         "symbol": "JDST"
     },
     {
@@ -10324,12 +10312,8 @@
         "symbol": "JNK"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY JR GLD MIN",
+        "name": "DIREXION SHARES ETF TRUST DAILY JUNIOR GOL",
         "symbol": "JNUG"
-    },
-    {
-        "name": "Tradr 2X Long JOBY Daily ETF",
-        "symbol": "JOBX"
     },
     {
         "name": "JOBY AVIATION INC COMMON STOCK",
@@ -10868,16 +10852,12 @@
         "symbol": "LAB"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY S&P BIOTEC",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P BIOTEC",
         "symbol": "LABD"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY S&P BIOTCH",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P BIOTEC",
         "symbol": "LABU"
-    },
-    {
-        "name": "Tradr 2X Long ALAB Daily ETF",
-        "symbol": "LABX"
     },
     {
         "name": "LITHIUM AMERS CORP NEW COM SHS",
@@ -11596,6 +11576,10 @@
         "symbol": "MARO"
     },
     {
+        "name": "Roundhill Space & Technology ETF",
+        "symbol": "MARS"
+    },
+    {
         "name": "MASCO CORP COM",
         "symbol": "MAS"
     },
@@ -11848,7 +11832,7 @@
         "symbol": "METC"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY META BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY META BULL 2X",
         "symbol": "METU"
     },
     {
@@ -11860,7 +11844,7 @@
         "symbol": "METW"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY MSCI MX 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY MSCI MEXIC",
         "symbol": "MEXX"
     },
     {
@@ -11956,7 +11940,7 @@
         "symbol": "MIDD"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY MIDCAP ETF3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY MID CAP BU",
         "symbol": "MIDU"
     },
     {
@@ -12308,7 +12292,7 @@
         "symbol": "MSDL"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY MSFT BEAR 1X",
+        "name": "DIREXION SHARES ETF TRUST DLY MSFT BEAR 1X",
         "symbol": "MSFD"
     },
     {
@@ -12324,7 +12308,7 @@
         "symbol": "MSFT"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY MSFT BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY MSFT BULL 2X",
         "symbol": "MSFU"
     },
     {
@@ -12588,7 +12572,7 @@
         "symbol": "NAGE"
     },
     {
-        "name": "DBX ETF TR DALY HOM B&S BUL",
+        "name": "DIREXION SHARES ETF TRUST DAILY HOMEBUILDE",
         "symbol": "NAIL"
     },
     {
@@ -13180,7 +13164,7 @@
         "symbol": "NUG"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY GOLD INDX 2X",
+        "name": "DIREXION SHARES ETF TRUST DAILY GOLD MINER",
         "symbol": "NUGT"
     },
     {
@@ -13224,7 +13208,7 @@
         "symbol": "NVDA"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY NVDA BEAR 1X",
+        "name": "DIREXION SHARES ETF TRUST DLY NVDA BEAR 1X",
         "symbol": "NVDD"
     },
     {
@@ -13244,7 +13228,7 @@
         "symbol": "NVDS"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY NVDA BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY NVDA BULL 2X",
         "symbol": "NVDU"
     },
     {
@@ -13682,10 +13666,6 @@
     {
         "name": "OPENDOOR TECHNOLOGIES INC COM",
         "symbol": "OPEN"
-    },
-    {
-        "name": "Tradr 2X Long OPEN Daily ETF",
-        "symbol": "OPEX"
     },
     {
         "name": "OPPFI INC COM CL A",
@@ -14484,7 +14464,7 @@
         "symbol": "PLSE"
     },
     {
-        "name": "DIREXION DAILY PLTR BEAR 1X ET",
+        "name": "DIREXION SHARES ETF TRUST DAILY PLTR BR1X",
         "symbol": "PLTD"
     },
     {
@@ -14504,7 +14484,7 @@
         "symbol": "PLTR"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY PLTR BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY PLTR BULL 2X",
         "symbol": "PLTU"
     },
     {
@@ -14956,6 +14936,10 @@
         "symbol": "PVL"
     },
     {
+        "name": "PALVELLA THERAPEUTICS INC NEW COM",
+        "symbol": "PVLA"
+    },
+    {
         "name": "PERELLA WEINBERG PARTNERS CLASS A COM",
         "symbol": "PWP"
     },
@@ -15136,7 +15120,7 @@
         "symbol": "QQQA"
     },
     {
-        "name": "DIREXION SHS ETF TR NASDAQ 100 EQ WT",
+        "name": "DIREXION SHARES ETF TRUST NASDAQ 100 EQ WT",
         "symbol": "QQQE"
     },
     {
@@ -15500,7 +15484,7 @@
         "symbol": "RES"
     },
     {
-        "name": "DIREXION SHS ETF TR RETAIL BULL 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY RETAIL BUL",
         "symbol": "RETL"
     },
     {
@@ -15582,10 +15566,6 @@
     {
         "name": "RIGETTI COMPUTING INC COMMON STOCK",
         "symbol": "RGTI"
-    },
-    {
-        "name": "Tradr 2X Long RGTI Daily ETF",
-        "symbol": "RGTU"
     },
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY",
@@ -15976,7 +15956,7 @@
         "symbol": "RVP"
     },
     {
-        "name": "REVIVA PHARMACEUTCLS HLDGS INC COM",
+        "name": "REVIVA PHARMACEUTCLS HLDGS INC COM NEW",
         "symbol": "RVPH"
     },
     {
@@ -17236,7 +17216,7 @@
         "symbol": "SOUN"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY SCOND 3XBU",
+        "name": "DIREXION SHARES ETF TRUST DAILY SEMICONDUC",
         "symbol": "SOXL"
     },
     {
@@ -17244,7 +17224,7 @@
         "symbol": "SOXQ"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY SEMICONDUC",
+        "name": "DIREXION SHARES ETF TRUST DAILY SEMICONDUC",
         "symbol": "SOXS"
     },
     {
@@ -17280,7 +17260,7 @@
         "symbol": "SPCX"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY S&P500 BR 1X",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BE",
         "symbol": "SPDN"
     },
     {
@@ -17436,7 +17416,7 @@
         "symbol": "SPTS"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY S&P500 2XS",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BU",
         "symbol": "SPUU"
     },
     {
@@ -17452,7 +17432,7 @@
         "symbol": "SPXC"
     },
     {
-        "name": "DIREXION SHS ETF TR DRX S&P500BULL",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BU",
         "symbol": "SPXL"
     },
     {
@@ -17460,7 +17440,7 @@
         "symbol": "SPXN"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY S&P 500 B",
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BE",
         "symbol": "SPXS"
     },
     {
@@ -18140,11 +18120,11 @@
         "symbol": "TECK"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY TECH BULL 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY TECHNOLOGY",
         "symbol": "TECL"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY TECHNOLOGY",
+        "name": "DIREXION SHARES ETF TRUST DAILY TECHNOLOGY",
         "symbol": "TECS"
     },
     {
@@ -18296,6 +18276,10 @@
         "symbol": "THO"
     },
     {
+        "name": "THERMON GROUP HLDGS INC COM",
+        "symbol": "THR"
+    },
+    {
         "name": "GENTHERM INC COM",
         "symbol": "THRM"
     },
@@ -18440,7 +18424,7 @@
         "symbol": "TME"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY 20+ YEAR T",
+        "name": "DIREXION SHARES ETF TRUST DLY 20 YR TRESUR",
         "symbol": "TMF"
     },
     {
@@ -18464,11 +18448,11 @@
         "symbol": "TMUS"
     },
     {
-        "name": "DIREXION SHS ETF TR 20YR TRES BEAR",
+        "name": "DIREXION SHARES ETF TRUST DAILY 20 YR TREA",
         "symbol": "TMV"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY SMCAP BULL3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY SMALL CAP",
         "symbol": "TNA"
     },
     {
@@ -18568,7 +18552,7 @@
         "symbol": "TPL"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY TRANS 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY TRANSPORTA",
         "symbol": "TPOR"
     },
     {
@@ -18608,7 +18592,7 @@
         "symbol": "TRDA"
     },
     {
-        "name": "LENDINGTREE INC NEW COM",
+        "name": "LENDINGTREE INC COM",
         "symbol": "TREE"
     },
     {
@@ -18756,7 +18740,7 @@
         "symbol": "TSLG"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY TSLA BULL 2X",
+        "name": "DIREXION SHARES ETF TRUST DLY TSLA BULL 2X",
         "symbol": "TSLL"
     },
     {
@@ -18766,10 +18750,6 @@
     {
         "name": "GRANITESHARES ETF TR 2X LONG TSLA DAI",
         "symbol": "TSLR"
-    },
-    {
-        "name": "DIREXION SHS ETF TR DLY TSLA BEAR 1X",
-        "symbol": "TSLS"
     },
     {
         "name": "T-Rex 2X Long Tesla Daily Target ETF",
@@ -18976,7 +18956,7 @@
         "symbol": "TXT"
     },
     {
-        "name": "DIREXION SHS ETF TR 7 10YR TRES BULL",
+        "name": "DIREXION SHARES ETF TRUST DAILY 710 YEAR T",
         "symbol": "TYD"
     },
     {
@@ -18988,7 +18968,7 @@
         "symbol": "TYLG"
     },
     {
-        "name": "DIREXION SHS ETF TR 7 10YR TRES BEAR",
+        "name": "DIREXION SHARES ETF TRUST DAILY 710 YEAR T",
         "symbol": "TYO"
     },
     {
@@ -18996,7 +18976,7 @@
         "symbol": "TYRA"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY SM CP BEAR",
+        "name": "DIREXION SHARES ETF TRUST DAILY SMALL CAP",
         "symbol": "TZA"
     },
     {
@@ -19032,7 +19012,7 @@
         "symbol": "UBEW"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY ROBOTICS",
+        "name": "DIREXION SHARES ETF TRUST DAILY ROBOTICS A",
         "symbol": "UBOT"
     },
     {
@@ -19230,10 +19210,6 @@
     {
         "name": "UNITY BANCORP INC COM",
         "symbol": "UNTY"
-    },
-    {
-        "name": "Tradr 2X Long U Daily ETF",
-        "symbol": "UNX"
     },
     {
         "name": "URBAN ONE INC CL A SHS",
@@ -19448,7 +19424,7 @@
         "symbol": "UTL"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY UTLTIES 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY UTILITIES",
         "symbol": "UTSL"
     },
     {
@@ -19916,6 +19892,10 @@
         "symbol": "VOX"
     },
     {
+        "name": "VOX ROYALTY CORP COM",
+        "symbol": "VOXR"
+    },
+    {
         "name": "VOYA FINANCIAL INC COM",
         "symbol": "VOYA"
     },
@@ -20208,7 +20188,7 @@
         "symbol": "WAL"
     },
     {
-        "name": "DIREXION SHS ETF TR DLY CNMSR BULL",
+        "name": "DIREXION SHARES ETF TRUST DAILY CONSUMER D",
         "symbol": "WANT"
     },
     {
@@ -20296,7 +20276,7 @@
         "symbol": "WEAV"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY DJ BULL",
+        "name": "DIREXION SHARES ETF TRUST DAILY DOW JONES",
         "symbol": "WEBL"
     },
     {
@@ -20960,7 +20940,7 @@
         "symbol": "YALA"
     },
     {
-        "name": "DIREXION SHS ETF TR DAILY FTSE CHINA",
+        "name": "DIREXION SHARES ETF TRUST DAILY FTSE CHINA",
         "symbol": "YANG"
     },
     {
@@ -20992,7 +20972,7 @@
         "symbol": "YEXT"
     },
     {
-        "name": "DIREXION SHS ETF TR DL FTSE BULL 3X",
+        "name": "DIREXION SHARES ETF TRUST DAILY FTSE CHINA",
         "symbol": "YINN"
     },
     {
