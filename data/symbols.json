@@ -1160,6 +1160,10 @@
         "symbol": "APPS"
     },
     {
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG",
+        "symbol": "APPX"
+    },
+    {
         "name": "ALPHA PRO TECH LTD COM",
         "symbol": "APT"
     },
@@ -1208,7 +1212,7 @@
         "symbol": "ARCC"
     },
     {
-        "name": "ARCOS DORADOS HOLDINGS INC SHS CLASS -A -",
+        "name": "ARCOS DORADOS HLDGS INC SHS CLASS -A -",
         "symbol": "ARCO"
     },
     {
@@ -4200,7 +4204,7 @@
         "symbol": "CRBG"
     },
     {
-        "name": "CORBUS PHARMACEUTICALS HLDGS I COM NEW",
+        "name": "CORBUS PHARMACEUTICALS HLDGS COM NEW",
         "symbol": "CRBP"
     },
     {
@@ -4244,6 +4248,10 @@
         "symbol": "CRDO"
     },
     {
+        "name": "Tradr 2X Long CRDO Daily ETF",
+        "symbol": "CRDU"
+    },
+    {
         "name": "CRESUD S A C I F Y A SPONSORED ADR",
         "symbol": "CRESY"
     },
@@ -4282,6 +4290,10 @@
     {
         "name": "CRITICAL METALS CORP PUBCO ORD SHS",
         "symbol": "CRML"
+    },
+    {
+        "name": "Tradr 2X Long CRML Daily ETF",
+        "symbol": "CRMX"
     },
     {
         "name": "CERENCE INC COM",
@@ -7564,10 +7576,6 @@
         "symbol": "FVRR"
     },
     {
-        "name": "FORWARD INDS INC N Y COM NEW",
-        "symbol": "FWDI"
-    },
-    {
         "name": "LIBERTY MEDIA CORP DEL COM LBTY ONE S A",
         "symbol": "FWONA"
     },
@@ -8040,7 +8048,7 @@
         "symbol": "GLPI"
     },
     {
-        "name": "GREENLIGHT CAPITAL RE LTD CLASS A",
+        "name": "GREENLIGHT CAP RE LTD CLASS A",
         "symbol": "GLRE"
     },
     {
@@ -9856,6 +9864,10 @@
         "symbol": "IREN"
     },
     {
+        "name": "Tradr 2X Long IREN Daily ETF",
+        "symbol": "IREX"
+    },
+    {
         "name": "Tradr 2X Short IREN Daily ETF",
         "symbol": "IREZ"
     },
@@ -10314,6 +10326,10 @@
     {
         "name": "DIREXION SHARES ETF TRUST DAILY JUNIOR GOL",
         "symbol": "JNUG"
+    },
+    {
+        "name": "Tradr 2X Long JOBY Daily ETF",
+        "symbol": "JOBX"
     },
     {
         "name": "JOBY AVIATION INC COMMON STOCK",
@@ -10858,6 +10874,10 @@
     {
         "name": "DIREXION SHARES ETF TRUST DAILY S&P BIOTEC",
         "symbol": "LABU"
+    },
+    {
+        "name": "Tradr 2X Long ALAB Daily ETF",
+        "symbol": "LABX"
     },
     {
         "name": "LITHIUM AMERS CORP NEW COM SHS",
@@ -13668,6 +13688,10 @@
         "symbol": "OPEN"
     },
     {
+        "name": "Tradr 2X Long OPEN Daily ETF",
+        "symbol": "OPEX"
+    },
+    {
         "name": "OPPFI INC COM CL A",
         "symbol": "OPFI"
     },
@@ -15568,6 +15592,10 @@
         "symbol": "RGTI"
     },
     {
+        "name": "Tradr 2X Long RGTI Daily ETF",
+        "symbol": "RGTU"
+    },
+    {
         "name": "TIDAL TRUST II DEFIANCE DAILY",
         "symbol": "RGTX"
     },
@@ -16176,10 +16204,6 @@
         "symbol": "SATS"
     },
     {
-        "name": "CASSAVA SCIENCES INC COM",
-        "symbol": "SAVA"
-    },
-    {
         "name": "SAFE BULKERS INC COM",
         "symbol": "SB"
     },
@@ -16196,7 +16220,7 @@
         "symbol": "SBCF"
     },
     {
-        "name": "SHARPLINK INC",
+        "name": "SHARPLINK INC COM NEW",
         "symbol": "SBET"
     },
     {
@@ -18752,6 +18776,10 @@
         "symbol": "TSLR"
     },
     {
+        "name": "DIREXION SHARES ETF TRUST DLY TSLA BEAR 1X",
+        "symbol": "TSLS"
+    },
+    {
         "name": "T-Rex 2X Long Tesla Daily Target ETF",
         "symbol": "TSLT"
     },
@@ -19210,6 +19238,10 @@
     {
         "name": "UNITY BANCORP INC COM",
         "symbol": "UNTY"
+    },
+    {
+        "name": "Tradr 2X Long U Daily ETF",
+        "symbol": "UNX"
     },
     {
         "name": "URBAN ONE INC CL A SHS",
