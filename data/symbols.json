@@ -652,7 +652,7 @@
         "symbol": "ALC"
     },
     {
-        "name": "ALDEXA THERAPEUTICS INC COM",
+        "name": "ALDEYRA THERAPEUTICS INC COM",
         "symbol": "ALDX"
     },
     {
@@ -2468,10 +2468,6 @@
         "symbol": "BLSH"
     },
     {
-        "name": "Tradr 2X Long BLSH Daily ETF",
-        "symbol": "BLSX"
-    },
-    {
         "name": "VANGUARD BD INDEX FDS LONG TERM BOND",
         "symbol": "BLV"
     },
@@ -3350,10 +3346,6 @@
     {
         "name": "CELSIUS HLDGS INC COM NEW",
         "symbol": "CELH"
-    },
-    {
-        "name": "Tradr 2X Long CELH Daily ETF",
-        "symbol": "CELT"
     },
     {
         "name": "CELULARITY INC CL A NEW",
@@ -4782,10 +4774,6 @@
     {
         "name": "DOORDASH INC CL A",
         "symbol": "DASH"
-    },
-    {
-        "name": "Tradr 2X Long DASH Daily ETF",
-        "symbol": "DASX"
     },
     {
         "name": "ENDAVA PLC ADS",
@@ -7880,6 +7868,10 @@
         "symbol": "GFF"
     },
     {
+        "name": "GOLD FIELDS LTD SPONSORED ADR",
+        "symbol": "GFI"
+    },
+    {
         "name": "GFL ENVIRONMENTAL INC SUB VTG SHS",
         "symbol": "GFL"
     },
@@ -10496,10 +10488,6 @@
         "symbol": "KEP"
     },
     {
-        "name": "KRANESHARES TRUST EUROPEAN CARBON",
-        "symbol": "KEUA"
-    },
-    {
         "name": "KIRBY CORP COM",
         "symbol": "KEX"
     },
@@ -10588,12 +10576,8 @@
         "symbol": "KLTR"
     },
     {
-        "name": "KLX ENERGY SERVICS HOLDNGS INC COM NEW",
+        "name": "KLX ENERGY SERVICES HOLDINGS COM NEW",
         "symbol": "KLXE"
-    },
-    {
-        "name": "KRANESHARES TRUST GLOBAL LUXURY ID",
-        "symbol": "KLXY"
     },
     {
         "name": "KIMBERLY-CLARK CORP COM",
@@ -10970,10 +10954,6 @@
     {
         "name": "LCI INDS COM",
         "symbol": "LCII"
-    },
-    {
-        "name": "Tradr 2X Short LCID Daily ETF",
-        "symbol": "LCIZ"
     },
     {
         "name": "BLACKROCK ETF TRUST ISHARES WORLD EX",
@@ -19788,6 +19768,10 @@
         "symbol": "VIV"
     },
     {
+        "name": "VIVOPOWER PLC",
+        "symbol": "VIVO"
+    },
+    {
         "name": "CBOE Volatility Index",
         "symbol": "VIX"
     },
@@ -20134,10 +20118,6 @@
     {
         "name": "VANGUARD INDEX FDS LARGE CAP ETF",
         "symbol": "VV"
-    },
-    {
-        "name": "VIVOPOWER INTERNATIONAL PLC SHS NEW",
-        "symbol": "VVPR"
     },
     {
         "name": "VALVOLINE INC COM",
