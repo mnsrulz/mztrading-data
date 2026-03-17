@@ -1316,10 +1316,6 @@
         "symbol": "ARMK"
     },
     {
-        "name": "T-REX 2X Long ARM Daily Target ETF",
-        "symbol": "ARMU"
-    },
-    {
         "name": "Roundhill ARM WeeklyPay ETF",
         "symbol": "ARMW"
     },
@@ -1810,10 +1806,6 @@
     {
         "name": "AXT INC COM",
         "symbol": "AXTI"
-    },
-    {
-        "name": "T-REX 2X Long AXON Daily Target ETF",
-        "symbol": "AXUP"
     },
     {
         "name": "ACUITY INC COM",
@@ -2376,10 +2368,6 @@
         "symbol": "BKNG"
     },
     {
-        "name": "T-REX 2X Long BKNG Daily Target ETF",
-        "symbol": "BKNU"
-    },
-    {
         "name": "BAKER HUGHES COMPANY CL A",
         "symbol": "BKR"
     },
@@ -2846,10 +2834,6 @@
     {
         "name": "WEBULL CORP ORD SHS",
         "symbol": "BULL"
-    },
-    {
-        "name": "T-REX 2X Long BULL Daily Target ETF",
-        "symbol": "BULU"
     },
     {
         "name": "BURFORD CAPITAL LIMITED ORD SHS",
@@ -3656,7 +3640,7 @@
         "symbol": "CLH"
     },
     {
-        "name": "CLEARSIGN TECHNOLOGIES CORP COM",
+        "name": "CLEARSIGN TECHNOLOGIES CORP COM NEW",
         "symbol": "CLIR"
     },
     {
@@ -5152,10 +5136,6 @@
         "symbol": "DKS"
     },
     {
-        "name": "T-REX 2X Long DKNG Daily Target ETF",
-        "symbol": "DKUP"
-    },
-    {
         "name": "DOLBY LABORATORIES INC COM CL A",
         "symbol": "DLB"
     },
@@ -6270,10 +6250,6 @@
     {
         "name": "ETORO GROUP LTD SHS CL A",
         "symbol": "ETOR"
-    },
-    {
-        "name": "T-Rex 2X Inverse Ether Daily Target ETF",
-        "symbol": "ETQ"
     },
     {
         "name": "ENTERGY CORP NEW COM",
@@ -8572,7 +8548,7 @@
         "symbol": "HBM"
     },
     {
-        "name": "HORIZON BANCORP INC COM",
+        "name": "HORIZON BANCORP IND COM",
         "symbol": "HBNC"
     },
     {
@@ -14968,10 +14944,6 @@
         "symbol": "PXH"
     },
     {
-        "name": "T-REX 2X Long UPXI Daily Target ETF",
-        "symbol": "PXIU"
-    },
-    {
         "name": "INVESCO EXCHANGE TRADED FD TR OIL & GAS SERVIC",
         "symbol": "PXJ"
     },
@@ -15074,10 +15046,6 @@
     {
         "name": "PROSHARES TR ULTRASHORT QQQ",
         "symbol": "QID"
-    },
-    {
-        "name": "QUIPT HOME MEDICAL CORP COM",
-        "symbol": "QIPT"
     },
     {
         "name": "PROSHARES TR PSHS ULTRA QQQ",
@@ -19768,7 +19736,7 @@
         "symbol": "VIV"
     },
     {
-        "name": "VIVOPOWER PLC",
+        "name": "VIVOPOWER PLC SHS NEW",
         "symbol": "VIVO"
     },
     {
