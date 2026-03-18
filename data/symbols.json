@@ -476,6 +476,10 @@
         "symbol": "AGGY"
     },
     {
+        "name": "AUREUS GREENWAY HLDGS INC COM",
+        "symbol": "AGH"
+    },
+    {
         "name": "ALAMOS GOLD INC COM CL A",
         "symbol": "AGI"
     },
@@ -3400,10 +3404,6 @@
         "symbol": "CFG"
     },
     {
-        "name": "CONFLUENT INC CLASS A COM",
-        "symbol": "CFLT"
-    },
-    {
         "name": "VICTORY PORTFOLIOS II VCSHS US 500 ENH",
         "symbol": "CFO"
     },
@@ -4000,10 +4000,6 @@
         "symbol": "COO"
     },
     {
-        "name": "TRAEGER INC COMMON STOCK",
-        "symbol": "COOK"
-    },
-    {
         "name": "CONOCOPHILLIPS COM",
         "symbol": "COP"
     },
@@ -4440,7 +4436,7 @@
         "symbol": "CTLP"
     },
     {
-        "name": "CYTOMX THERAPEUTICS INC COM",
+        "name": "CYTOMX THERAPEUTICS INC. COM",
         "symbol": "CTMX"
     },
     {
@@ -12016,6 +12012,10 @@
         "symbol": "MLYS"
     },
     {
+        "name": "MINIMED GROUP INC COM",
+        "symbol": "MMED"
+    },
+    {
         "name": "MARCUS & MILLICHAP INC COM",
         "symbol": "MMI"
     },
@@ -12484,7 +12484,7 @@
         "symbol": "MWA"
     },
     {
-        "name": "MAGNACHIP SEMICONDUCTOR CORP N COM",
+        "name": "MAGNACHIP SEMICONDUCTOR CORP COM",
         "symbol": "MX"
     },
     {
@@ -13894,6 +13894,10 @@
     {
         "name": "PAN AMERN SILVER CORP COM",
         "symbol": "PAAS"
+    },
+    {
+        "name": "T-REX 2X Long PAAS Daily Target ETF",
+        "symbol": "PAAU"
     },
     {
         "name": "PACIFIC BIOSCIENCES CALIF INC COM",
@@ -17064,6 +17068,10 @@
         "symbol": "SNDR"
     },
     {
+        "name": "T-REX 2X Long SNDK Daily Target ETF",
+        "symbol": "SNDU"
+    },
+    {
         "name": "SYNDAX PHARMACEUTICALS INC COM",
         "symbol": "SNDX"
     },
@@ -17226,6 +17234,10 @@
     {
         "name": "VIRGIN GALACTIC HOLDINGS INC COM NEW",
         "symbol": "SPCE"
+    },
+    {
+        "name": "Tuttle Capital Space Industry Income Blast ETF",
+        "symbol": "SPCI"
     },
     {
         "name": "COLLABORATIVE INVESTMNT SER TR THE SPAC AND NEW",
@@ -19674,6 +19686,10 @@
     {
         "name": "VANGUARD WORLD FD HEALTH CAR ETF",
         "symbol": "VHT"
+    },
+    {
+        "name": "VIA TRANSN INC COM CL A",
+        "symbol": "VIA"
     },
     {
         "name": "VIAVI SOLUTIONS INC COM",
