@@ -4000,6 +4000,10 @@
         "symbol": "COO"
     },
     {
+        "name": "TRAEGER INC COM NEW",
+        "symbol": "COOK"
+    },
+    {
         "name": "CONOCOPHILLIPS COM",
         "symbol": "COP"
     },
@@ -4768,7 +4772,7 @@
         "symbol": "DAWN"
     },
     {
-        "name": "DEUTSCHE BANK A G NAMEN AKT",
+        "name": "DEUTSCHE BK AG NAMEN AKT",
         "symbol": "DB"
     },
     {
@@ -8708,10 +8712,6 @@
         "symbol": "HIMX"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY",
-        "symbol": "HIMZ"
-    },
-    {
         "name": "HIPPO HLDGS INC COM NEW",
         "symbol": "HIPO"
     },
@@ -8846,10 +8846,6 @@
     {
         "name": "Roundhill HOOD WeeklyPay ETF",
         "symbol": "HOOW"
-    },
-    {
-        "name": "TIDAL TRUST II DEFIANCE DAILY",
-        "symbol": "HOOX"
     },
     {
         "name": "TIDAL TRUST II YIELDMAX HOOD OP",
@@ -9730,10 +9726,6 @@
     {
         "name": "IONIS PHARMACEUTICALS INC COM",
         "symbol": "IONS"
-    },
-    {
-        "name": "TIDAL TRUST II DEFIANCE DAILY",
-        "symbol": "IONX"
     },
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY T",
@@ -12338,10 +12330,6 @@
     {
         "name": "Roundhill MSTR WeeklyPay ETF",
         "symbol": "MSTW"
-    },
-    {
-        "name": "TIDAL TRUST II DEF DLY TGT 2X L",
-        "symbol": "MSTX"
     },
     {
         "name": "TIDAL TRUST II YIELDMAX MSTR OP",
@@ -15548,10 +15536,6 @@
         "symbol": "RGTU"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY",
-        "symbol": "RGTX"
-    },
-    {
         "name": "TIDAL TRUST II DEFIANCE DLY TRG",
         "symbol": "RGTZ"
     },
@@ -15598,10 +15582,6 @@
     {
         "name": "RIOT PLATFORMS INC COM",
         "symbol": "RIOT"
-    },
-    {
-        "name": "TIDAL TRUST II DEFIANCE DAILY T",
-        "symbol": "RIOX"
     },
     {
         "name": "RITHM CAPITAL CORP COM NEW",
@@ -16926,10 +16906,6 @@
     {
         "name": "GRANITESHARES ETF TR 2X LONG SMCI DAI",
         "symbol": "SMCL"
-    },
-    {
-        "name": "TIDAL TRUST II DEFIANCE DT 2X L",
-        "symbol": "SMCX"
     },
     {
         "name": "TIDAL TRUST II YIELDMAX SMCI",
@@ -18328,7 +18304,7 @@
         "symbol": "TK"
     },
     {
-        "name": "TURKCELL ILETISIM HIZMETLERI SPON ADR NEW",
+        "name": "TURKCELL ILETISIM SPON ADR NEW",
         "symbol": "TKC"
     },
     {
