@@ -3124,7 +3124,7 @@
         "symbol": "CAVA"
     },
     {
-        "name": "CHUBB LIMITED COM",
+        "name": "CHUBB LTD SWITZ COM",
         "symbol": "CB"
     },
     {
@@ -8712,6 +8712,10 @@
         "symbol": "HIMX"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "HIMZ"
+    },
+    {
         "name": "HIPPO HLDGS INC COM NEW",
         "symbol": "HIPO"
     },
@@ -8846,6 +8850,10 @@
     {
         "name": "Roundhill HOOD WeeklyPay ETF",
         "symbol": "HOOW"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "HOOX"
     },
     {
         "name": "TIDAL TRUST II YIELDMAX HOOD OP",
@@ -9729,6 +9737,10 @@
     },
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "IONX"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
         "symbol": "IONZ"
     },
     {
@@ -9810,10 +9822,6 @@
     {
         "name": "IRIDIUM COMMUNICATIONS INC COM",
         "symbol": "IRDM"
-    },
-    {
-        "name": "TIDAL TRUST II DEFIANCE DAILY T",
-        "symbol": "IRE"
     },
     {
         "name": "IREN LIMITED ORDINARY SHARES",
@@ -12332,6 +12340,10 @@
         "symbol": "MSTW"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "MSTX"
+    },
+    {
         "name": "TIDAL TRUST II YIELDMAX MSTR OP",
         "symbol": "MSTY"
     },
@@ -12778,10 +12790,6 @@
     {
         "name": "NOVAGOLD RESOURCES INC COM NEW",
         "symbol": "NG"
-    },
-    {
-        "name": "NEW GOLD INC CDA COM",
-        "symbol": "NGD"
     },
     {
         "name": "NERVGEN PHARMA CORP COM",
@@ -13698,14 +13706,6 @@
     {
         "name": "ORACLE CORP COM",
         "symbol": "ORCL"
-    },
-    {
-        "name": "TIDAL TRUST II DEFIANCE DAILY",
-        "symbol": "ORCX"
-    },
-    {
-        "name": "ORIGIN MATERIALS INC COM",
-        "symbol": "ORGN"
     },
     {
         "name": "ORGANOGENESIS HLDGS INC COM",
@@ -15536,6 +15536,10 @@
         "symbol": "RGTU"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "RGTX"
+    },
+    {
         "name": "TIDAL TRUST II DEFIANCE DLY TRG",
         "symbol": "RGTZ"
     },
@@ -15582,6 +15586,10 @@
     {
         "name": "RIOT PLATFORMS INC COM",
         "symbol": "RIOT"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "RIOX"
     },
     {
         "name": "RITHM CAPITAL CORP COM NEW",
@@ -16906,6 +16914,10 @@
     {
         "name": "GRANITESHARES ETF TR 2X LONG SMCI DAI",
         "symbol": "SMCL"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "SMCX"
     },
     {
         "name": "TIDAL TRUST II YIELDMAX SMCI",
