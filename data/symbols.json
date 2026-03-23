@@ -3276,6 +3276,10 @@
         "symbol": "CDE"
     },
     {
+        "name": "COEUR MNG INC COM NEW",
+        "symbol": "CDE"
+    },
+    {
         "name": "MORGAN STANLEY ETF TRUST CALVERT US LRGCP",
         "symbol": "CDEI"
     },
@@ -5322,10 +5326,6 @@
     {
         "name": "DARDEN RESTAURANTS INC COM",
         "symbol": "DRI"
-    },
-    {
-        "name": "DARIOHEALTH CORP COM",
-        "symbol": "DRIO"
     },
     {
         "name": "DIREXION SHARES ETF TRUST DAILY S&P OIL &",
@@ -8172,10 +8172,6 @@
         "symbol": "GOVT"
     },
     {
-        "name": "GREENPOWER MTR CO INC COM",
-        "symbol": "GP"
-    },
-    {
         "name": "GENUINE PARTS CO COM",
         "symbol": "GPC"
     },
@@ -9236,7 +9232,7 @@
         "symbol": "IDGT"
     },
     {
-        "name": "INTELLICHECK INC COM NEW",
+        "name": "INTELLICHECK MOBILISA INC COM NEW",
         "symbol": "IDN"
     },
     {
@@ -9822,6 +9818,10 @@
     {
         "name": "IRIDIUM COMMUNICATIONS INC COM",
         "symbol": "IRDM"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "IRE"
     },
     {
         "name": "IREN LIMITED ORDINARY SHARES",
@@ -11620,10 +11620,6 @@
         "symbol": "MBOT"
     },
     {
-        "name": "MARFRIG GLOBAL FOODS SA SPONSORED ADR",
-        "symbol": "MBRFY"
-    },
-    {
         "name": "Cboe Mini Bitcoin Index",
         "symbol": "MBTX"
     },
@@ -11966,10 +11962,6 @@
     {
         "name": "MARKETAXESS HLDGS INC COM",
         "symbol": "MKTX"
-    },
-    {
-        "name": "MOUNT LOGAN CAP INC COM",
-        "symbol": "MLCI"
     },
     {
         "name": "MELCO RESORTS AND ENTMNT LTD ADR",
@@ -13504,7 +13496,7 @@
         "symbol": "OLED"
     },
     {
-        "name": "OLLIES BARGAIN OUTLET HLDGS IN COM",
+        "name": "OLLIES BARGAIN OUTLET HLDGS COM",
         "symbol": "OLLI"
     },
     {
@@ -13648,10 +13640,6 @@
         "symbol": "OPFI"
     },
     {
-        "name": "OFFICE PPTYS INCOME TR COM SHS BEN INT",
-        "symbol": "OPITQ"
-    },
-    {
         "name": "OPKO HEALTH INC COM",
         "symbol": "OPK"
     },
@@ -13706,6 +13694,14 @@
     {
         "name": "ORACLE CORP COM",
         "symbol": "ORCL"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "ORCX"
+    },
+    {
+        "name": "ORIGIN MATERIALS INC COM",
+        "symbol": "ORGN"
     },
     {
         "name": "ORGANOGENESIS HLDGS INC COM",
@@ -16388,10 +16384,6 @@
         "symbol": "SEA"
     },
     {
-        "name": "VIVID SEATS INC COM CL A",
-        "symbol": "SEAT"
-    },
-    {
         "name": "Main Sector Rotation ETF",
         "symbol": "SECT"
     },
@@ -18204,10 +18196,6 @@
         "symbol": "TGLS"
     },
     {
-        "name": "TEGNA INC COM",
-        "symbol": "TGNA"
-    },
-    {
         "name": "TRANSPORTADORA DE GAS DEL SUR SPONSORED ADS B",
         "symbol": "TGS"
     },
@@ -18482,6 +18470,10 @@
     {
         "name": "ISHARES TR TOP 20 U S STOCK",
         "symbol": "TOPT"
+    },
+    {
+        "name": "Roundhill WeeklyPay Universe ETF",
+        "symbol": "TOPW"
     },
     {
         "name": "TORO CORP COM",
@@ -20434,10 +20426,6 @@
     {
         "name": "WORTHINGTON ENTERPRISES INC COM",
         "symbol": "WOR"
-    },
-    {
-        "name": "Roundhill WeeklyPay Universe ETF",
-        "symbol": "WPAY"
     },
     {
         "name": "WP CAREY INC COM",
