@@ -3276,10 +3276,6 @@
         "symbol": "CDE"
     },
     {
-        "name": "COEUR MNG INC COM NEW",
-        "symbol": "CDE"
-    },
-    {
         "name": "MORGAN STANLEY ETF TRUST CALVERT US LRGCP",
         "symbol": "CDEI"
     },
@@ -6452,10 +6448,6 @@
         "symbol": "EWZS"
     },
     {
-        "name": "EXACT SCIENCES CORP COM",
-        "symbol": "EXAS"
-    },
-    {
         "name": "EXELON CORP COM",
         "symbol": "EXC"
     },
@@ -7490,10 +7482,6 @@
     {
         "name": "FIRST TR EXCHANGE TRADED FD VI NASDAQ BK ETF",
         "symbol": "FTXO"
-    },
-    {
-        "name": "FUBOTV INC CLASS A COM SHS",
-        "symbol": "FUBO"
     },
     {
         "name": "FULLER H B CO COM",
@@ -14976,7 +14964,7 @@
         "symbol": "QBTX"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
         "symbol": "QBTZ"
     },
     {
@@ -18472,7 +18460,7 @@
         "symbol": "TOPT"
     },
     {
-        "name": "Roundhill WeeklyPay Universe ETF",
+        "name": "Roundhill Top WeeklyPay ETF",
         "symbol": "TOPW"
     },
     {
