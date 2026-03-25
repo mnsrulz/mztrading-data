@@ -688,7 +688,7 @@
         "symbol": "ALHC"
     },
     {
-        "name": "FOLEY TRASIMENE ACQUISTN CORP COM CL A",
+        "name": "ALIGHT INC COM CL A",
         "symbol": "ALIT"
     },
     {
@@ -7484,6 +7484,10 @@
         "symbol": "FTXO"
     },
     {
+        "name": "FUBOTV INC COM NEW CL A",
+        "symbol": "FUBO"
+    },
+    {
         "name": "FULLER H B CO COM",
         "symbol": "FUL"
     },
@@ -12700,6 +12704,10 @@
         "symbol": "NERD"
     },
     {
+        "name": "NATIONAL ENERGY SERVICES REUNI SHS",
+        "symbol": "NESR"
+    },
+    {
         "name": "CLOUDFLARE INC CL A COM",
         "symbol": "NET"
     },
@@ -14320,7 +14328,7 @@
         "symbol": "PINS"
     },
     {
-        "name": "PIPER SANDLER COMPANIES COM",
+        "name": "PIPER SANDLER COMPANIES COM NEW",
         "symbol": "PIPR"
     },
     {
@@ -14882,6 +14890,10 @@
     {
         "name": "PROPETRO HLDG CORP COM",
         "symbol": "PUMP"
+    },
+    {
+        "name": "HYPERLIQUID STRATEGIES INC COM",
+        "symbol": "PURR"
     },
     {
         "name": "PVH CORPORATION COM",
@@ -16114,6 +16126,10 @@
     {
         "name": "STANDARDAERO INC COM",
         "symbol": "SARO"
+    },
+    {
+        "name": "STRIVE INC VAR RAT SER A PR",
+        "symbol": "SATA"
     },
     {
         "name": "SATELLOGIC INC COM CL A",
@@ -17734,6 +17750,10 @@
     {
         "name": "SUNOCO LP/SUNOCO FIN CORP COM UT REP LP",
         "symbol": "SUN"
+    },
+    {
+        "name": "SUNBELT RENTALS HOLDINGS INC SHS",
+        "symbol": "SUNB"
     },
     {
         "name": "SUNRISE RLTY TR INC COM",
