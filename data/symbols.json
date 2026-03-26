@@ -204,7 +204,7 @@
         "symbol": "ACHR"
     },
     {
-        "name": "ACHIEVE LIFE SCIENCES INC COM",
+        "name": "ACHIEVE LIFE SCIENCE INC COM",
         "symbol": "ACHV"
     },
     {
@@ -12480,14 +12480,6 @@
         "symbol": "MXCT"
     },
     {
-        "name": "MSCI Emerging Markets Index",
-        "symbol": "MXEA"
-    },
-    {
-        "name": "MSCI Emerging Markets Index",
-        "symbol": "MXEF"
-    },
-    {
         "name": "ISHARES TR GLOBAL MATER ETF",
         "symbol": "MXI"
     },
@@ -12962,10 +12954,6 @@
     {
         "name": "NOMAD FOODS LTD USD ORD SHS",
         "symbol": "NOMD"
-    },
-    {
-        "name": "FISCALNOTE HOLDINGS INC CL A NEW",
-        "symbol": "NOTE"
     },
     {
         "name": "INOTIV INC COM",
@@ -17956,10 +17944,6 @@
         "symbol": "TARS"
     },
     {
-        "name": "TASKUS INC CLASS A COM",
-        "symbol": "TASK"
-    },
-    {
         "name": "BBB FOODS INC CL A COM",
         "symbol": "TBBB"
     },
@@ -20192,7 +20176,7 @@
         "symbol": "WB"
     },
     {
-        "name": "WARNER BROS DISCOVERY INC COM SER A",
+        "name": "DISCOVERY GLOBAL HOLDINGS INC COM SER A",
         "symbol": "WBD"
     },
     {
