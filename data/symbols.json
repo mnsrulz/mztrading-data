@@ -372,10 +372,6 @@
         "symbol": "ADUS"
     },
     {
-        "name": "ADVANTAGE SOLUTIONS INC COM CL A",
-        "symbol": "ADV"
-    },
-    {
         "name": "AMEREN CORP COM",
         "symbol": "AEE"
     },
@@ -3712,10 +3708,6 @@
         "symbol": "CM"
     },
     {
-        "name": "CAMBIUM NETWORKS CORP SHS",
-        "symbol": "CMBM"
-    },
-    {
         "name": "CMB.TECH NV SHS",
         "symbol": "CMBT"
     },
@@ -4428,7 +4420,7 @@
         "symbol": "CTEV"
     },
     {
-        "name": "CONTANGO ORE INC COM",
+        "name": "CONTANGO SILVER & GOLD INC",
         "symbol": "CTGO"
     },
     {
@@ -5478,10 +5470,6 @@
     {
         "name": "WEBS ETF TR REAL ESTATE XLRE",
         "symbol": "DVRE"
-    },
-    {
-        "name": "DOLLY VARDEN SILVER CORP COM NO PAR",
-        "symbol": "DVS"
     },
     {
         "name": "WEBS ETF TR SPY DEFINED VOL",
@@ -8772,7 +8760,7 @@
         "symbol": "HMC"
     },
     {
-        "name": "HARMONY GOLD MINING CO LTD SPONSORED ADR",
+        "name": "HARMONY GOLD MNG LTD SPONSORED ADR",
         "symbol": "HMY"
     },
     {
@@ -17944,6 +17932,10 @@
         "symbol": "TARS"
     },
     {
+        "name": "TASKUS INC CLASS A COM",
+        "symbol": "TASK"
+    },
+    {
         "name": "BBB FOODS INC CL A COM",
         "symbol": "TBBB"
     },
@@ -21106,9 +21098,5 @@
     {
         "name": "ZYMEWORKS INC COM",
         "symbol": "ZYME"
-    },
-    {
-        "name": "ZYNEX INC COM",
-        "symbol": "ZYXIQ"
     }
 ]
