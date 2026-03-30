@@ -372,6 +372,10 @@
         "symbol": "ADUS"
     },
     {
+        "name": "ADVANTAGE SOLUTIONS INC COM NEW CL A",
+        "symbol": "ADV"
+    },
+    {
         "name": "AMEREN CORP COM",
         "symbol": "AEE"
     },
@@ -3708,6 +3712,10 @@
         "symbol": "CM"
     },
     {
+        "name": "CAMBIUM NETWORKS CORP SHS",
+        "symbol": "CMBMF"
+    },
+    {
         "name": "CMB.TECH NV SHS",
         "symbol": "CMBT"
     },
@@ -4420,7 +4428,7 @@
         "symbol": "CTEV"
     },
     {
-        "name": "CONTANGO SILVER & GOLD INC",
+        "name": "CONTANGO SILVER & GOLD INC COM",
         "symbol": "CTGO"
     },
     {
@@ -18512,7 +18520,7 @@
         "symbol": "TPVG"
     },
     {
-        "name": "TORTOISE CAPITAL SERIES TRUST NORTH AMERN PIPE",
+        "name": "TORTOISE NORTH AMERICAN PIPELI",
         "symbol": "TPYP"
     },
     {
@@ -20168,7 +20176,7 @@
         "symbol": "WB"
     },
     {
-        "name": "DISCOVERY GLOBAL HOLDINGS INC COM SER A",
+        "name": "WARNER BROS DISCOVERY INC COM SER A",
         "symbol": "WBD"
     },
     {
