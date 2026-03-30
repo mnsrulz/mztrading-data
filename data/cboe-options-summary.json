@@ -1793,5 +1793,10 @@
         "name": "DATA_2026-03-27",
         "optionsAssetUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-03-27/options_data.parquet",
         "stocksAssetUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-03-27/stock_data.parquet"
+    },
+    {
+        "name": "DATA_2026-03-30",
+        "optionsAssetUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-03-30/options_data.parquet",
+        "stocksAssetUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-03-30/stock_data.parquet"
     }
 ]
