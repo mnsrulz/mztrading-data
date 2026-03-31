@@ -28,6 +28,10 @@
         "symbol": "AAON"
     },
     {
+        "name": "Tradr 2X Long AAOI Daily ETF",
+        "symbol": "AAOX"
+    },
+    {
         "name": "ADVANCE AUTO PARTS INC COM",
         "symbol": "AAP"
     },
@@ -486,10 +490,6 @@
     {
         "name": "AGIOS PHARMACEUTICALS INC COM",
         "symbol": "AGIO"
-    },
-    {
-        "name": "AGILON HEALTH INC COM",
-        "symbol": "AGL"
     },
     {
         "name": "FEDERAL AGRIC MTG CORP CL C",
@@ -970,6 +970,10 @@
     {
         "name": "AMAZON COM INC COM",
         "symbol": "AMZN"
+    },
+    {
+        "name": "Tradr 2X Short AMZN Daily ETF",
+        "symbol": "AMZO"
     },
     {
         "name": "Kurv Yield Premium Strategy Amazon (AMZN) ETF",
@@ -1612,7 +1616,7 @@
         "symbol": "AURA"
     },
     {
-        "name": "AUTOLUS THERAPEUTICS PLC SPON ADS",
+        "name": "AUTOLUS THERAPEUTICS LTD SPON ADS",
         "symbol": "AUTL"
     },
     {
@@ -1986,14 +1990,6 @@
     {
         "name": "BEACON FINANCIAL CORP. COM",
         "symbol": "BBT"
-    },
-    {
-        "name": "BROOKFIELD BUSINESS PARTNERS L UNIT LTD L P",
-        "symbol": "BBU"
-    },
-    {
-        "name": "BROOKFIELD BUSINESS CORP CL A EXC SUB VTG",
-        "symbol": "BBUC"
     },
     {
         "name": "BANCO BILBAO VIZCAYA ARGENTARI SPONSORED ADR",
@@ -8764,6 +8760,10 @@
         "symbol": "HLX"
     },
     {
+        "name": "Tradr 2X Long HL Daily ETF",
+        "symbol": "HLXX"
+    },
+    {
         "name": "HONDA MOTOR CO LTD ADR ECH CNV IN 3",
         "symbol": "HMC"
     },
@@ -9166,6 +9166,10 @@
     {
         "name": "AMPLIFY ETF TR ONLIN RETL ETF",
         "symbol": "IBUY"
+    },
+    {
+        "name": "Tradr 2X Long IBM Daily ETF",
+        "symbol": "IBX"
     },
     {
         "name": "INTERCONTINENTAL EXCHANGE INC COM",
@@ -18520,7 +18524,7 @@
         "symbol": "TPVG"
     },
     {
-        "name": "TORTOISE NORTH AMERICAN PIPELI",
+        "name": "TORTOISE CAPITAL SERIES TRUST NORTH AMRCN PIPE",
         "symbol": "TPYP"
     },
     {
