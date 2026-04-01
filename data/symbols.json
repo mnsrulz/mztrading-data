@@ -492,6 +492,10 @@
         "symbol": "AGIO"
     },
     {
+        "name": "AGILON HEALTH INC COM NEW",
+        "symbol": "AGL"
+    },
+    {
         "name": "FEDERAL AGRIC MTG CORP CL C",
         "symbol": "AGM"
     },
@@ -1170,10 +1174,6 @@
     {
         "name": "ALPHA PRO TECH LTD COM",
         "symbol": "APT"
-    },
-    {
-        "name": "APTIV PLC COM SHS",
-        "symbol": "APTV"
     },
     {
         "name": "APYX MEDICAL CORPORATION COM",
@@ -1912,10 +1912,6 @@
         "symbol": "BAP"
     },
     {
-        "name": "BARK INC COM",
-        "symbol": "BARK"
-    },
-    {
         "name": "ATLANTA BRAVES HLDGS INC COM SER A",
         "symbol": "BATRA"
     },
@@ -1990,6 +1986,10 @@
     {
         "name": "BEACON FINANCIAL CORP. COM",
         "symbol": "BBT"
+    },
+    {
+        "name": "BROOKFIELD BUSINESS CORP CL A SUB VTG SH",
+        "symbol": "BBUC"
     },
     {
         "name": "BANCO BILBAO VIZCAYA ARGENTARI SPONSORED ADR",
@@ -4416,7 +4416,7 @@
         "symbol": "CTBI"
     },
     {
-        "name": "GLOBAL X FDS CLEANTECH ETF NW",
+        "name": "GLOBAL X CLIMATETECH ETF",
         "symbol": "CTEC"
     },
     {
@@ -6850,10 +6850,6 @@
     {
         "name": "INNOVATOR ETFS TRUST IBD 50 ETF",
         "symbol": "FFTY"
-    },
-    {
-        "name": "FIRST FNDTN INC COM",
-        "symbol": "FFWM"
     },
     {
         "name": "F&G ANNUITIES & LIFE INC COMMON STOCK",
@@ -13582,10 +13578,6 @@
     {
         "name": "ON HLDG AG NAMEN AKT A",
         "symbol": "ONON"
-    },
-    {
-        "name": "ON24 INC COM",
-        "symbol": "ONTF"
     },
     {
         "name": "ONTO INNOVATION INC COM",
