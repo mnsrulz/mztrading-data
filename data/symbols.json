@@ -212,7 +212,7 @@
         "symbol": "ACHV"
     },
     {
-        "name": "ALBERTSONS COS INC COMMON STOCK",
+        "name": "ALBERTSONS COMPANIES INC COMMON STOCK",
         "symbol": "ACI"
     },
     {
@@ -1176,6 +1176,10 @@
         "symbol": "APT"
     },
     {
+        "name": "APTIV PLC COM SHS",
+        "symbol": "APTV"
+    },
+    {
         "name": "APYX MEDICAL CORPORATION COM",
         "symbol": "APYX"
     },
@@ -1912,6 +1916,10 @@
         "symbol": "BAP"
     },
     {
+        "name": "BARK INC COM NEW",
+        "symbol": "BARK"
+    },
+    {
         "name": "ATLANTA BRAVES HLDGS INC COM SER A",
         "symbol": "BATRA"
     },
@@ -2414,10 +2422,6 @@
     {
         "name": "BIOLIFE SOLUTIONS INC COM NEW",
         "symbol": "BLFS"
-    },
-    {
-        "name": "BLUE FOUNDRY BANCORP COM",
-        "symbol": "BLFY"
     },
     {
         "name": "BLACKROCK INC COM",
@@ -4416,7 +4420,7 @@
         "symbol": "CTBI"
     },
     {
-        "name": "GLOBAL X CLIMATETECH ETF",
+        "name": "GLOBAL X FDS CLIMATETECH ETF",
         "symbol": "CTEC"
     },
     {
@@ -7388,6 +7392,10 @@
         "symbol": "FSTR"
     },
     {
+        "name": "FIRSTSUN CAP BANCORP COM",
+        "symbol": "FSUN"
+    },
+    {
         "name": "FIRSTSERVICE CORP NEW COM",
         "symbol": "FSV"
     },
@@ -7950,10 +7958,6 @@
     {
         "name": "SPDR GOLD TR GOLD SHS",
         "symbol": "GLD"
-    },
-    {
-        "name": "GREAT LAKES DREDGE & DOCK CORP COM",
-        "symbol": "GLDD"
     },
     {
         "name": "Roundhill Gold WeeklyPay ETF",
@@ -13724,10 +13728,6 @@
         "symbol": "ORRF"
     },
     {
-        "name": "ONESTREAM INC CL A",
-        "symbol": "OS"
-    },
-    {
         "name": "OLD SECOND BANCORP INC DEL COM",
         "symbol": "OSBC"
     },
@@ -16796,7 +16796,7 @@
         "symbol": "SLGN"
     },
     {
-        "name": "STANDARD LITHIUM LTD COM",
+        "name": "STANDARD LITHIUM CORP COM",
         "symbol": "SLI"
     },
     {
