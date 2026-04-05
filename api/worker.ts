@@ -1,8 +1,11 @@
 import { z } from "https://esm.sh/zod@4.2.1";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
+import prettyBytes from "https://esm.sh/pretty-bytes@7.1.0";
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import Pusher from 'https://esm.sh/pusher@5.3.2';
+import lz from "https://esm.sh/lz-string@1.5.0";
+
 const pusher = Pusher.forURL(Deno.env.get('PUSHER_URI') || '');
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
 const pusherClient = new PusherJS(Deno.env.get('PUSHER_APP_KEY') || '', {
@@ -140,7 +143,7 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='P') AS pp
                 FROM M
-                ${ mode == 'strike' ? '' : 'WHERE rn = 1'}
+                ${mode == 'strike' ? '' : 'WHERE rn = 1'}
             ) t`;
 
             //log the time it took to complete it
@@ -155,13 +158,8 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
             hasError = true;
         }
 
-        await pusher.trigger(channelName, `worker-response-${requestId}`, {
-            requestId: requestId,
-            hasError,
-            value: rows
-        });
-
-        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`, );
+        await publish(requestId, hasError, rows);
+        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
 
     } catch (error) {
         logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
@@ -227,21 +225,27 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
             logger.error(`error occurred while processing request: ${err}`);
             hasError = true;
         }
-
-        await pusher.trigger(channelName, `worker-response-${requestId}`, {
-            requestId: requestId,
-            hasError,
-            value: rows
-        });
-
-        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`, );
+        await publish(requestId, hasError, rows);
+        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
 
     } catch (error) {
         logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
     }
 };
 
+async function publish(requestId: string, hasError: boolean, rows: any) {
+    const payload = {
+        requestId: requestId,
+        hasError,
+        value: rows
+    };
+    const packed = lz.compress(JSON.stringify(payload));
+    const packedData = {
+        d: packed,
+    };
 
+    await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
+}
 
 function shutdown() {
     logger.info(`shutting down...`);
