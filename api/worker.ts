@@ -244,6 +244,8 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
         d: packed,
     };
 
+    logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
+
     await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
 }
 
