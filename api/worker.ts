@@ -3,6 +3,37 @@ import { z } from "https://esm.sh/zod@4.2.1";
 import delay from "https://esm.sh/delay@7.0.0";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
+import Pusher from 'https://esm.sh/pusher-js@8.5.0';
+import PusherSS from 'https://esm.sh/pusher@5.3.2';
+
+const ps = PusherSS.forURL(Deno.env.get('PUSHER_URI') || '');
+const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
+const pusher = new Pusher(Deno.env.get('PUSHER_APP_KEY') || '', {
+    cluster: Deno.env.get('PUSHER_APP_CLUSTER') || 'us2',
+});
+
+const channel = pusher.subscribe(channelName);
+
+channel.bind('volatility-query', async (d: {requestId: string})=> {
+    try {
+        logger.info(`Received volatility-query event with data: ${JSON.stringify(d)}`);
+        const result = channel.trigger(`volatility-response-${d.requestId}`, {})
+        logger.info(`Triggered volatility-response-${d.requestId} with result: ${JSON.stringify(result)}`);
+    } catch (error) {
+        logger.error(`Error handling volatility-query event: ${JSON.stringify(error)}`);
+        try {
+            await ps.trigger(channelName, `volatility-response-${d.requestId}`, {});
+            logger.info(`Triggered volatility-response-${d.requestId} via PusherSS`);
+        } catch (error) {
+            logger.error(`Error triggering volatility-response via PusherSS: ${JSON.stringify(error)}`);
+        }
+    }
+});
+
+channel.bind('options-stat-query', (d: {requestId: string})=> {
+    logger.info(`Received options-stat-query event with data: ${JSON.stringify(d)}`);
+});
+
 const socketUrl = `https://mztrading-socket.deno.dev`
 const DATA_DIR = Deno.env.get("DATA_DIR") || '/data/w2-output-flat';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || '/data/ohlc';
