@@ -132,13 +132,13 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
                 )
                 SELECT 
                     array_agg(DISTINCT dt ORDER BY dt) AS dt,
-                    array_agg(close ORDER BY dt) FILTER (WHERE option_type='C') AS close,
-                    array_agg(iv30 ORDER BY dt) FILTER (WHERE option_type='C') AS iv30,
-                    array_agg(iv_percentile ORDER BY dt) FILTER (WHERE option_type='C') AS iv_percentile,
-                    array_agg(iv ORDER BY dt) FILTER (WHERE option_type='C') AS cv,
-                    array_agg(iv ORDER BY dt) FILTER (WHERE option_type='P') AS pv,
-                    array_agg(mid_price ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
-                    array_agg(mid_price ORDER BY dt) FILTER (WHERE option_type='P') AS pp
+                    array_agg(close AS DECIMAL(10, 2) ORDER BY dt) FILTER (WHERE option_type='C') AS close,
+                    array_agg(iv30 AS DECIMAL(10, 4) ORDER BY dt) FILTER (WHERE option_type='C') AS iv30,
+                    array_agg(iv_percentile AS DECIMAL(10, 4) ORDER BY dt) FILTER (WHERE option_type='C') AS iv_percentile,
+                    array_agg(iv AS DECIMAL(10, 4) ORDER BY dt) FILTER (WHERE option_type='C') AS cv,
+                    array_agg(iv AS DECIMAL(10, 4) ORDER BY dt) FILTER (WHERE option_type='P') AS pv,
+                    array_agg(mid_price AS DECIMAL(10, 2) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
+                    array_agg(mid_price AS DECIMAL(10, 2) ORDER BY dt) FILTER (WHERE option_type='P') AS pp
                 FROM M
                 ${ mode == 'strike' ? '' : 'WHERE rn = 1'}
             ) t`;
