@@ -262,6 +262,7 @@ function shutdown() {
 channel.bind('volatility-query', handleVolatilityMessage);
 channel.bind('options-stat-query', handleOptionsStatsMessage);
 
+logger.info(`Worker is listening for messages on channel ${channelName}...`);
 
 Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
