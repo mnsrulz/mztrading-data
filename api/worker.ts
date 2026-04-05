@@ -1,39 +1,15 @@
-import { io } from "https://esm.sh/socket.io-client@4.8.1";
 import { z } from "https://esm.sh/zod@4.2.1";
-import delay from "https://esm.sh/delay@7.0.0";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
-import Pusher from 'https://esm.sh/pusher-js@8.4.0';
-import PusherSS from 'https://esm.sh/pusher@5.3.2';
-const ps = PusherSS.forURL(Deno.env.get('PUSHER_URI') || '');
+import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
+import Pusher from 'https://esm.sh/pusher@5.3.2';
+const pusher = Pusher.forURL(Deno.env.get('PUSHER_URI') || '');
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
-const pusher = new Pusher(Deno.env.get('PUSHER_APP_KEY') || '', {
+const pusherClient = new PusherJS(Deno.env.get('PUSHER_APP_KEY') || '', {
     cluster: Deno.env.get('PUSHER_APP_CLUSTER') || 'us2',
 });
 
-const channel = pusher.subscribe(channelName);
-
-channel.bind('volatility-query', async (d: {requestId: string})=> {
-    try {
-        logger.info(`Received volatility-query event with data: ${JSON.stringify(d)}`);
-        const result = channel.trigger(`volatility-response-${d.requestId}`, {})
-        logger.info(`Triggered volatility-response-${d.requestId} with result: ${JSON.stringify(result)}`);
-    } catch (error) {
-        logger.error(`Error handling volatility-query event: ${JSON.stringify(error)}`);
-        try {
-            await ps.trigger(channelName, `volatility-response-${d.requestId}`, {});
-            logger.info(`Triggered volatility-response-${d.requestId} via PusherSS`);
-        } catch (error) {
-            logger.error(`Error triggering volatility-response via PusherSS: ${JSON.stringify(error)}`);
-        }
-    }
-});
-
-channel.bind('options-stat-query', (d: {requestId: string})=> {
-    logger.info(`Received options-stat-query event with data: ${JSON.stringify(d)}`);
-});
-
-const socketUrl = `https://mztrading-socket.deno.dev`
+const channel = pusherClient.subscribe(channelName);
 const DATA_DIR = Deno.env.get("DATA_DIR") || '/data/w2-output-flat';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || '/data/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
@@ -50,28 +26,6 @@ const stream = pretty({
 const logger = pino({
     level: LOG_LEVEL
 }, stream);
-
-const socket = io(socketUrl, {
-    reconnectionDelayMax: 10000,
-    transports: ['websocket']
-});
-
-socket.on("connect", () => {
-    logger.info(`Connected to the server! Socket ID: ${socket.id}`);
-
-    socket.emit("register-worker", {});
-    startWorker();
-    logger.info("Client started, waiting for requests...");
-
-});
-
-socket.on("disconnect", () => {
-    logger.debug("disconnection");
-});
-
-socket.on("hello", (args) => {
-    logger.debug(`hello response: ${JSON.stringify(args)}`);
-});
 
 const WorkerRequestSchema = z.object({
     requestType: z.enum(["volatility-query", "options-stat-query"]),
@@ -200,7 +154,8 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
             logger.error(`error occurred while processing request: ${err}`);
             hasError = true;
         }
-        socket.emit(`worker-response`, {
+
+        await pusher.trigger(channelName, `worker-response-${requestId}`, {
             requestId: requestId,
             hasError,
             value: rows
@@ -272,7 +227,8 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
             logger.error(`error occurred while processing request: ${err}`);
             hasError = true;
         }
-        socket.emit(`worker-response`, {
+
+        await pusher.trigger(channelName, `worker-response-${requestId}`, {
             requestId: requestId,
             hasError,
             value: rows
@@ -285,68 +241,21 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
     }
 };
 
-let abortController = new AbortController();
-socket.on("worker-notification", () => {
-    logger.debug("Worker notification received.");
-    abortController.abort();
-});
 
-socket.on("register-worker-success", a => { logger.debug(`worker registration succeeded, : ${JSON.stringify(a)}`) })
-
-socket.on("reconnect_attempt", (attempt) => {
-    logger.debug(`Reconnection attempt #${attempt}`);
-});
-
-socket.on("reconnect", () => {
-    logger.debug(`Reconnected successfully! Socket ID: ${socket.id}`);
-    socket.emit("register-worker", {});
-});
-
-let isWorkerStarted = false;
-async function startWorker() {
-    if (isWorkerStarted) return;
-    isWorkerStarted = true;
-    while (true) {
-        try {
-            logger.debug("Requesting work item from server...");
-            const item = await socket.timeout(3000).emitWithAck("receive-message");
-            if (item) {
-                const parsed = WorkerRequestSchema.parse(item); //will add more handlers here later
-                if (parsed.requestType === "volatility-query") {
-                    await handleVolatilityMessage({ ...parsed.data, requestId: parsed.requestId });
-                    continue;   //let's ask another item right away
-                } else if (parsed.requestType === "options-stat-query") {
-                    await handleOptionsStatsMessage({ ...parsed.data, requestId: parsed.requestId });
-                    continue;   //let's ask another item right away
-                } else {
-                    logger.warn(`Unknown request type: ${parsed.requestType}`);
-                }
-            } else {
-                logger.debug("No work items available, waiting for notification...");
-            }
-        } catch (error) {
-            logger.error(`Error handling worker request: ${JSON.stringify(error)}`);
-        }
-
-        //may be we will explore async events later, but for now let's use abort controller signal.
-        await delay(30000, { signal: abortController.signal }).catch(() => { logger.debug('signal must have aborted this') });
-        abortController = new AbortController();
-    }
-}
 
 function shutdown() {
     logger.info(`shutting down...`);
-
-    socket.removeAllListeners();
-    socket.disconnect();
-
-    // Give socket.io time to close cleanly
+    channel.disconnect();
     setTimeout(() => {
         Deno.exit(0);
     }, 100);
 
     logger.info("will shut down in 100ms")
 }
+
+channel.bind('volatility-query', handleVolatilityMessage);
+channel.bind('options-stat-query', handleOptionsStatsMessage);
+
 
 Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
