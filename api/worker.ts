@@ -5,6 +5,7 @@ import prettyBytes from "https://esm.sh/pretty-bytes@7.1.0";
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import Pusher from 'https://esm.sh/pusher@5.3.2';
 import lz from "https://esm.sh/lz-string@1.5.0";
+import pako from 'https://esm.sh/pako@2.1.0';
 
 const pusher = Pusher.forURL(Deno.env.get('PUSHER_URI') || '');
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
@@ -18,6 +19,7 @@ const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || '/data/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
+import { Buffer } from "node:buffer";
 
 const stream = pretty({
     singleLine: true,
@@ -239,7 +241,8 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
         hasError,
         value: rows
     };
-    const packed = lz.compressToBase64(JSON.stringify(payload));
+    //const packed = lz.compressToBase64(JSON.stringify(payload));
+    const packed = Buffer.from(pako.deflate(JSON.stringify(payload))).toString("base64");
     const packedData = {
         d: packed,
     };
