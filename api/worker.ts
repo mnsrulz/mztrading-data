@@ -239,7 +239,7 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
         hasError,
         value: rows
     };
-    const packed = lz.compress(JSON.stringify(payload));
+    const packed = lz.compressToBase64(JSON.stringify(payload));
     const packedData = {
         d: packed,
     };
