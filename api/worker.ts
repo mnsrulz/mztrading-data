@@ -209,10 +209,10 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
                     array_agg(options_count ORDER BY dt) FILTER (WHERE option_type='C') AS options_count,
                     array_agg(total_oi ORDER BY dt) FILTER (WHERE option_type='C') AS co,
                     array_agg(total_oi ORDER BY dt) FILTER (WHERE option_type='P') AS po,
-                    array_agg(total_price ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
-                    array_agg(total_price ORDER BY dt) FILTER (WHERE option_type='P') AS pp,
-                    array_agg(total_delta ORDER BY dt) FILTER (WHERE option_type='C') AS cd,
-                    array_agg(total_delta ORDER BY dt) FILTER (WHERE option_type='P') AS pd
+                    array_agg(CAST(total_price AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
+                    array_agg(CAST(total_price AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='P') AS pp,
+                    array_agg(CAST(total_delta AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='C') AS cd,
+                    array_agg(CAST(total_delta AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='P') AS pd
                 FROM M
             ) t`;
 
