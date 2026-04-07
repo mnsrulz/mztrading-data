@@ -299,9 +299,7 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 
     await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
 
-    await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload), {
-        EX: 30  // set expiration to 30 seconds
-    });
+    await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
 function shutdown() {
