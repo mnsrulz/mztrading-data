@@ -7,6 +7,10 @@ import Pusher from 'https://esm.sh/pusher@5.3.2';
 import lz from "https://esm.sh/lz-string@1.5.0";
 import pako from 'https://esm.sh/pako@2.1.0';
 
+import { createClient } from "npm:redis@^4.5";
+import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
+import { Buffer } from "node:buffer";
+
 const pusher = Pusher.forURL(Deno.env.get('PUSHER_URI') || '');
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
 const pusherClient = new PusherJS(Deno.env.get('PUSHER_APP_KEY') || '', {
@@ -18,8 +22,19 @@ const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
-import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
-import { Buffer } from "node:buffer";
+const REDIS_URI = Deno.env.get('REDIS_URI');
+
+const redisClient = createClient({
+    url: REDIS_URI,
+});
+
+try {
+    await redisClient.connect();
+    console.log("Connected to Redis");    
+} catch (error) {
+    console.error("Failed to connect to Redis:", error);
+    Deno.exit(1);
+}
 
 const stream = pretty({
     singleLine: true,
@@ -283,6 +298,10 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
     logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
 
     await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
+
+    await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload), {
+        EX: 30  // set expiration to 30 seconds
+    });
 }
 
 function shutdown() {
