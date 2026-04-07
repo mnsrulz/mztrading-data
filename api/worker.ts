@@ -124,13 +124,10 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
         const connection = await instance.connect();
         stack.defer(() => connection.closeSync());
         const strikeFilter = mode == 'strike' ? ` AND strike = ${strike}` : '';
-        let partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
+        const partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
         let rows = [];
         let hasError = false;
         const useRollingExpiry = expiryMode === 'rolling';
-        if (useRollingExpiry) {
-            partitionOrderColumn = `dte, ${partitionOrderColumn}`
-        }
         try {
 
             const queryToExecute = `
