@@ -298,8 +298,13 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
     // logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
 
     // await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
-
-    await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
+    
+    //just for sending the notification to the client, the client will fetch the data from redis
+    //need to find a way to make this more efficient.
+    await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload));
+    
+    await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
+    //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
 function shutdown() {
