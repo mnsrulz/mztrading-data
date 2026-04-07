@@ -1,4 +1,4 @@
-import { z } from "https://esm.sh/zod@4.2.1";
+import { z } from "https://esm.sh/zod@4.3.6";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
 import prettyBytes from "https://esm.sh/pretty-bytes@7.1.0";
@@ -14,8 +14,8 @@ const pusherClient = new PusherJS(Deno.env.get('PUSHER_APP_KEY') || '', {
 });
 
 const channel = pusherClient.subscribe(channelName);
-const DATA_DIR = Deno.env.get("DATA_DIR") || '/data/w2-output-flat';
-const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || '/data/ohlc';
+const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
+const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
@@ -53,11 +53,26 @@ const BaseSchema = {
 
     lookbackDays: z.number().int().positive(),
 
-    expiration: z.string()
-        .regex(/^\d{4}-\d{2}-\d{2}$/, "Expiration must be YYYY-MM-DD format"),
-
     requestId: z.uuid(),
 };
+
+const FixedExpirySchema = z.object({
+    expiryMode: z.literal("fixed").optional(),
+    expiration: z.string()
+        .regex(/^\d{4}-\d{2}-\d{2}$/, "Expiration must be YYYY-MM-DD"),
+    dte: z.undefined().optional()
+});
+
+const RollingExpirySchema = z.object({
+    expiryMode: z.literal("rolling"),
+    dte: z.number().int().positive(),
+    expiration: z.undefined().optional()
+});
+
+const ExpirySchema = z.discriminatedUnion("expiryMode", [
+    FixedExpirySchema,
+    RollingExpirySchema
+]);
 
 // delta mode
 const DeltaModeSchema = z.object({
@@ -83,11 +98,14 @@ const AtmModeSchema = z.object({
     delta: z.null().optional(),
 });
 
-export const OptionsVolRequestSchema = z.discriminatedUnion("mode", [
-    DeltaModeSchema,
-    StrikeModeSchema,
-    AtmModeSchema
-]);
+export const OptionsVolRequestSchema = z.intersection(
+    ExpirySchema, 
+    z.discriminatedUnion("mode", [
+        DeltaModeSchema,
+        StrikeModeSchema,
+        AtmModeSchema
+    ])
+);
 
 type OptionsVolRequest = z.infer<typeof OptionsVolRequestSchema>;
 type OptionsStatsRequest = z.infer<typeof OptionsStatsSchema>;
@@ -97,7 +115,7 @@ type OptionsStatsRequest = z.infer<typeof OptionsStatsSchema>;
 */
 const handleVolatilityMessage = async (args: OptionsVolRequest) => {
     try {
-        const { symbol, lookbackDays, delta, expiration, mode, strike, requestId } = OptionsVolRequestSchema.parse(args);
+        const { symbol, lookbackDays, delta, expiration, mode, strike, requestId, dte, expiryMode } = OptionsVolRequestSchema.parse(args);
 
         logger.info(`Worker volatility request received: ${JSON.stringify(args)}`);
         using stack = new DisposableStack();
@@ -106,9 +124,13 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
         const connection = await instance.connect();
         stack.defer(() => connection.closeSync());
         const strikeFilter = mode == 'strike' ? ` AND strike = ${strike}` : '';
-        const partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
+        let partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
         let rows = [];
         let hasError = false;
+        const useRollingExpiry = expiryMode === 'rolling';
+        if (useRollingExpiry) {
+            partitionOrderColumn = `dte, ${partitionOrderColumn}`
+        }
         try {
 
             const queryToExecute = `
@@ -123,20 +145,28 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
                     OHLC.close, OHLC.iv30, OHLC.iv_percentile,
                     abs(delta) AS abs_delta,
                     abs(strike - OHLC.close) AS price_strike_diff,
-                    abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff
+                    abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff,
+                    DATE_DIFF('day', opdata.dt, expiration) AS dte
                     --FROM '${DATA_DIR}/${symbol}_*.parquet' opdata
                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet' opdata
                     JOIN OHLC ON OHLC.dt = opdata.dt
-                    WHERE expiration = '${expiration}' 
-                            AND (open_interest > 0 OR bid > 0 OR ask > 0 OR iv > 0)           --JUST TO MAKE SURE NEW CONTRACTS WON'T APPEAR IN THE DATASET WHICH LIKELY REPRESENTED BY 0 OI, bid/ask/iv
-                            AND OHLC.dt >= current_date - ${lookbackDays} ${strikeFilter} 
+                    WHERE 1 = 1 
+                        AND (open_interest > 0 OR bid > 0 OR ask > 0 OR iv > 0)           --JUST TO MAKE SURE NEW CONTRACTS WON'T APPEAR IN THE DATASET WHICH LIKELY REPRESENTED BY 0 OI, bid/ask/iv
+                        AND OHLC.dt >= current_date - ${lookbackDays} ${strikeFilter} 
+                ), J AS (
+                    SELECT *,
+                    ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY dte ASC) AS dte_rn
+                    FROM I
+                    WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
                 ), M AS (
                     SELECT *,
                     ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY ${partitionOrderColumn} ASC) AS rn
-                    FROM I
+                    FROM J
+                    ${useRollingExpiry ? 'WHERE dte_rn = 1' : ''}
                 )
                 SELECT 
                     array_agg(DISTINCT dt ORDER BY dt) AS dt,
+                    --array_agg(expiration ORDER BY dt) FILTER (WHERE option_type='C') AS expiration,
                     array_agg(CAST(close AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS close,
                     array_agg(CAST(iv30 AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv30,
                     array_agg(CAST(iv_percentile AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv_percentile,
@@ -164,6 +194,7 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
 
     } catch (error) {
+        console.error(error);
         logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
     }
 };
@@ -269,3 +300,17 @@ logger.info(`Worker is listening for messages on channel ${channelName}...`);
 
 Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
+
+// For debugging in local env.
+// handleVolatilityMessage({
+//     symbol: "COIN",
+//     lookbackDays: 90,
+//     delta: 25,
+//     expiration: "2026-04-17",
+//     // expiryMode: "fixed",
+//     // expiryMode: "rolling",
+//     // dte : 7,
+//     mode: "delta",
+//     //expiryMode: "rolling",
+//     requestId: crypto.randomUUID()
+// })
