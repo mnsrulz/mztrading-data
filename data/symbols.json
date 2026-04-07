@@ -1952,10 +1952,6 @@
         "symbol": "BBBY"
     },
     {
-        "name": "BED BATH & BEYOND INC COM",
-        "symbol": "BBBY"
-    },
-    {
         "name": "ETFIS SER TR I VIRTUS BIOTECH C",
         "symbol": "BBC"
     },
@@ -2024,7 +2020,7 @@
         "symbol": "BC"
     },
     {
-        "name": "BIOATLA INC COM",
+        "name": "BIOATLA INC COM NEW",
         "symbol": "BCAB"
     },
     {
@@ -5306,6 +5302,10 @@
     {
         "name": "DAQO NEW ENERGY CORP SPNSRD ADS NEW",
         "symbol": "DQ"
+    },
+    {
+        "name": "Roundhill Memory ETF",
+        "symbol": "DRAM"
     },
     {
         "name": "DRDGOLD LIMITED SPON ADR REPSTG",
@@ -10440,7 +10440,7 @@
         "symbol": "KE"
     },
     {
-        "name": "KEEL INFRASTRUCTURE CORP",
+        "name": "KEEL INFRASTRUCTURE CORP COM SHS",
         "symbol": "KEEL"
     },
     {
@@ -13382,6 +13382,10 @@
     {
         "name": "OLD DOMINION FREIGHT LINE INC COM",
         "symbol": "ODFL"
+    },
+    {
+        "name": "VEGASHARES ETF TRUS SPX NDX RTY PREM",
+        "symbol": "ODTE"
     },
     {
         "name": "OSISKO DEVELOPMENT CORP COM NEW",
@@ -17206,10 +17210,6 @@
     {
         "name": "Tuttle Capital Space Industry Income Blast ETF",
         "symbol": "SPCI"
-    },
-    {
-        "name": "COLLABORATIVE INVESTMNT SER TR THE SPAC AND NEW",
-        "symbol": "SPCX"
     },
     {
         "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BE",
