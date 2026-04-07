@@ -124,10 +124,13 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
         const connection = await instance.connect();
         stack.defer(() => connection.closeSync());
         const strikeFilter = mode == 'strike' ? ` AND strike = ${strike}` : '';
-        const partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
+        let partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
         let rows = [];
         let hasError = false;
         const useRollingExpiry = expiryMode === 'rolling';
+        if (useRollingExpiry) {
+            partitionOrderColumn = `dte ASC, ${partitionOrderColumn}`
+        }
         try {
 
             const queryToExecute = `
@@ -158,8 +161,9 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
                 ), M AS (
                     SELECT *,
                     ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY ${partitionOrderColumn} ASC) AS rn
-                    FROM J
-                    ${useRollingExpiry ? 'WHERE dte_rn = 1' : ''}
+                    FROM I
+                    WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
+                    --${useRollingExpiry ? 'WHERE dte_rn = 1' : ''}
                 )
                 SELECT 
                     array_agg(DISTINCT dt ORDER BY dt) AS dt,
@@ -172,7 +176,8 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='P') AS pp
                 FROM M
-                ${mode == 'strike' ? '' : 'WHERE rn = 1'}
+                WHERE rn = 1
+                --${mode == 'strike' ? '' : 'WHERE rn = 1'}
             ) t`;
 
             //log the time it took to complete it
