@@ -290,14 +290,14 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
         value: rows
     };
     //const packed = lz.compressToBase64(JSON.stringify(payload));
-    const packed = Buffer.from(pako.deflate(JSON.stringify(payload))).toString("base64");
-    const packedData = {
-        d: packed,
-    };
+    // const packed = Buffer.from(pako.deflate(JSON.stringify(payload))).toString("base64");
+    // const packedData = {
+    //     d: packed,
+    // };
 
-    logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
+    // logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
 
-    await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
+    // await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
 
     await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
