@@ -8808,10 +8808,6 @@
         "symbol": "HOII"
     },
     {
-        "name": "HOLOGIC INC COM",
-        "symbol": "HOLX"
-    },
-    {
         "name": "HOME BANCSHARES INC COM",
         "symbol": "HOMB"
     },
@@ -16520,7 +16516,7 @@
         "symbol": "SGOL"
     },
     {
-        "name": "ISHARES TR 0-3 MNTH TREASRY",
+        "name": "ISHARES TR 0-3 MTH TREASURY",
         "symbol": "SGOV"
     },
     {
@@ -16988,10 +16984,6 @@
         "symbol": "SMU"
     },
     {
-        "name": "T-REX 2X Long SMR Daily Target ETF",
-        "symbol": "SMUP"
-    },
-    {
         "name": "SIMILARWEB LTD SHS",
         "symbol": "SMWB"
     },
@@ -17210,6 +17202,10 @@
     {
         "name": "Tuttle Capital Space Industry Income Blast ETF",
         "symbol": "SPCI"
+    },
+    {
+        "name": "COLLABORATIVE INVESTMNT SER TR THE SPAC AND NEW",
+        "symbol": "SPCK"
     },
     {
         "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BE",
