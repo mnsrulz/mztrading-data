@@ -27,14 +27,9 @@ const REDIS_URI = Deno.env.get('REDIS_URI');
 const redisClient = createClient({
     url: REDIS_URI,
 });
-
-try {
-    await redisClient.connect();
-    console.log("Connected to Redis");    
-} catch (error) {
-    console.error("Failed to connect to Redis:", error);
-    Deno.exit(1);
-}
+const redisPubSubClient = redisClient.duplicate();
+await redisClient.connect();
+await redisPubSubClient.connect();
 
 const stream = pretty({
     singleLine: true,
@@ -304,6 +299,8 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
     await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload));
     
     await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
+
+    await redisPubSubClient.publish('worker-response', JSON.stringify(payload));    //this is for publishing the message so any subscriber can listen to.
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
