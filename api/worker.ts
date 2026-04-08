@@ -10,6 +10,9 @@ import pako from 'https://esm.sh/pako@2.1.0';
 import { createClient } from "npm:redis@^4.5";
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
 import { Buffer } from "node:buffer";
+import Emittery from 'https://esm.sh/emittery@2.0.0';
+
+const emitter = new Emittery();
 
 const pusher = Pusher.forURL(Deno.env.get('PUSHER_URI') || '');
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
@@ -28,7 +31,7 @@ const redisClient = createClient({
     url: REDIS_URI,
 });
 const redisPubSubClient = redisClient.duplicate();
-await redisClient.connect();
+//await redisClient.connect();
 await redisPubSubClient.connect();
 
 const stream = pretty({
@@ -109,7 +112,7 @@ const AtmModeSchema = z.object({
 });
 
 export const OptionsVolRequestSchema = z.intersection(
-    ExpirySchema, 
+    ExpirySchema,
     z.discriminatedUnion("mode", [
         DeltaModeSchema,
         StrikeModeSchema,
@@ -293,12 +296,12 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
     // logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
 
     // await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
-    
+
     //just for sending the notification to the client, the client will fetch the data from redis
     //need to find a way to make this more efficient.
-    await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload));
-    
-    await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
+    //await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload));
+
+    //await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
 
     await redisPubSubClient.publish('worker-response', JSON.stringify(payload));    //this is for publishing the message so any subscriber can listen to.
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
@@ -307,7 +310,7 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 function shutdown() {
     logger.info(`shutting down...`);
     channel.disconnect();
-    redisClient.quit();
+    //await redisClient.quit();
     redisPubSubClient.quit();
     setTimeout(() => {
         Deno.exit(0);
@@ -318,6 +321,15 @@ function shutdown() {
 
 channel.bind('volatility-query', handleVolatilityMessage);
 channel.bind('options-stat-query', handleOptionsStatsMessage);
+
+emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
+emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
+
+await redisPubSubClient.subscribe('worker-request', (message) => {
+    logger.info(`Received message from Redis on worker-request channel`);
+    const data = JSON.parse(message) as { requestType: string };
+    emitter.emit(data.requestType, data);
+});
 
 logger.info(`Worker is listening for messages on channel ${channelName}...`);
 
