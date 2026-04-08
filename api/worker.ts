@@ -307,6 +307,8 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 function shutdown() {
     logger.info(`shutting down...`);
     channel.disconnect();
+    redisClient.quit();
+    redisPubSubClient.quit();
     setTimeout(() => {
         Deno.exit(0);
     }, 100);
