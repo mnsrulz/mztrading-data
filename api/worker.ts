@@ -27,12 +27,12 @@ const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const REDIS_URI = Deno.env.get('REDIS_URI');
 
-const redisClient = createClient({
+const redisPublisher = createClient({
     url: REDIS_URI,
 });
-const redisPubSubClient = redisClient.duplicate();
-//await redisClient.connect();
-await redisPubSubClient.connect();
+const redisSubscriber = redisPublisher.duplicate();
+await redisPublisher.connect();
+await redisSubscriber.connect();
 
 const stream = pretty({
     singleLine: true,
@@ -303,15 +303,15 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 
     //await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
 
-    await redisPubSubClient.publish('worker-response', JSON.stringify(payload));    //this is for publishing the message so any subscriber can listen to.
+    await redisPublisher.publish('worker-response', JSON.stringify(payload));    //this is for publishing the message so any subscriber can listen to.
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
 function shutdown() {
     logger.info(`shutting down...`);
     channel.disconnect();
-    //await redisClient.quit();
-    redisPubSubClient.quit();
+    redisPublisher.quit();
+    redisSubscriber.quit();
     setTimeout(() => {
         Deno.exit(0);
     }, 100);
@@ -325,7 +325,7 @@ channel.bind('options-stat-query', handleOptionsStatsMessage);
 emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
 emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
 
-await redisPubSubClient.subscribe('worker-request', (message) => {
+await redisSubscriber.subscribe('worker-request', (message) => {
     logger.info(`Received message from Redis on worker-request channel`);
     const data = JSON.parse(message) as { requestType: string };
     emitter.emit(data.requestType, data);
