@@ -644,10 +644,6 @@
         "symbol": "AKBA"
     },
     {
-        "name": "AIR LEASE CORP CL A",
-        "symbol": "AL"
-    },
-    {
         "name": "ASTERA LABS INC COM",
         "symbol": "ALAB"
     },
@@ -2330,10 +2326,6 @@
     {
         "name": "BJS WHSL CLUB HLDGS INC COM",
         "symbol": "BJ"
-    },
-    {
-        "name": "VANECK ETF TRUST GAMING ETF",
-        "symbol": "BJK"
     },
     {
         "name": "BJS RESTAURANTS INC COM",
@@ -16380,10 +16372,6 @@
         "symbol": "SEDG"
     },
     {
-        "name": "SEALED AIR CORP NEW COM",
-        "symbol": "SEE"
-    },
-    {
         "name": "SEER INC COM CL A",
         "symbol": "SEER"
     },
@@ -16982,6 +16970,10 @@
     {
         "name": "Tradr 2X Long SMR Daily ETF",
         "symbol": "SMU"
+    },
+    {
+        "name": "T-REX 2X Long SMR Daily Target ETF",
+        "symbol": "SMUP"
     },
     {
         "name": "SIMILARWEB LTD SHS",
