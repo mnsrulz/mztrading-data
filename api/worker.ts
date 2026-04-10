@@ -303,7 +303,23 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 
     //await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
 
-    await redisPublisher.publish('worker-response', JSON.stringify(payload));    //this is for publishing the message so any subscriber can listen to.
+    //this is for publishing the message so any subscriber can listen to.
+    const count = await redisPublisher.publish('worker-response', JSON.stringify(payload));    
+
+    if (count === 0) {
+        logger.warn(`No subscribers received the message for requestId ${requestId}`);
+        try {
+            await redisPublisher.ping(); // validate connection
+        } catch {
+            logger.error("Redis connection is stale. Reconnecting...");
+
+            try {
+                await redisPublisher.disconnect();
+            } catch {}
+
+            await redisPublisher.connect();
+        }
+    }
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
