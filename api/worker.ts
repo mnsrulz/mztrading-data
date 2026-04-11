@@ -27,11 +27,9 @@ const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const REDIS_URI = Deno.env.get('REDIS_URI');
 
-const redisPublisher = createClient({
+const redisSubscriber = createClient({
     url: REDIS_URI,
 });
-const redisSubscriber = redisPublisher.duplicate();
-await redisPublisher.connect();
 await redisSubscriber.connect();
 
 const stream = pretty({
@@ -56,7 +54,8 @@ const OptionsStatsSchema = z.object({
         .nonempty()
         .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
     lookbackDays: z.number().int().positive(),
-    requestId: z.uuid()
+    requestId: z.uuid(),
+    channel: z.string()
 });
 
 const BaseSchema = {
@@ -67,6 +66,7 @@ const BaseSchema = {
     lookbackDays: z.number().int().positive(),
 
     requestId: z.uuid(),
+    channel: z.string()
 };
 
 const FixedExpirySchema = z.object({
@@ -205,7 +205,7 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
             hasError = true;
         }
 
-        await publish(requestId, hasError, rows);
+        await publish(requestId, hasError, rows, args.channel);
         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
 
     } catch (error) {
@@ -273,7 +273,7 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
             logger.error(`error occurred while processing request: ${err}`);
             hasError = true;
         }
-        await publish(requestId, hasError, rows);
+        await publish(requestId, hasError, rows, args.channel);
         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
 
     } catch (error) {
@@ -281,7 +281,7 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
     }
 };
 
-async function publish(requestId: string, hasError: boolean, rows: any) {
+async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
     const payload = {
         requestId: requestId,
         hasError,
@@ -304,31 +304,18 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
     //await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
 
     //this is for publishing the message so any subscriber can listen to.
-    const count = await redisPublisher.publish('worker-response', JSON.stringify(payload));
-
-    if (count === 0) {
-        logger.warn(`No subscribers received the message for requestId ${requestId}`);
-        try {
-            await redisPublisher.ping(); // validate connection
-        } catch {
-            logger.error("Redis connection is stale. Reconnecting...");
-
-            try {
-                await redisPublisher.disconnect();
-            } catch { }
-
-            await redisPublisher.connect();
-        }
-    } else {
-        logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
-    }
+    const redisPublisher = redisSubscriber.duplicate();
+    await redisPublisher.connect();
+      
+    const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
+    redisPublisher.quit();
+    logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
 function shutdown() {
     logger.info(`shutting down...`);
     channel.disconnect();
-    redisPublisher.quit();
     redisSubscriber.quit();
     setTimeout(() => {
         Deno.exit(0);
@@ -353,12 +340,6 @@ logger.info(`Worker is listening for messages on channel ${channelName}...`);
 
 Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
-
-setInterval(() => {
-    const publisherInfo = redisPublisher.isOpen ? "connected" : "disconnected";
-    const subscriberInfo = redisSubscriber.isOpen ? "connected" : "disconnected";
-    logger.info(`Redis Publisher: ${publisherInfo}, Redis Subscriber: ${subscriberInfo}`);
-}, 60000);
 
 // For debugging in local env.
 // handleVolatilityMessage({
