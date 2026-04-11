@@ -274,7 +274,7 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
             hasError = true;
         }
         await publish(requestId, hasError, rows);
-        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
+        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
 
     } catch (error) {
         logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
@@ -319,6 +319,8 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 
             await redisPublisher.connect();
         }
+    } else {
+        logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
     }
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
@@ -351,6 +353,13 @@ logger.info(`Worker is listening for messages on channel ${channelName}...`);
 
 Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
+
+setInterval(async () => {
+    const publisherInfo = await redisPublisher.info();
+    const subscriberInfo = await redisSubscriber.info();
+    logger.info(`Redis Publisher Info: ${publisherInfo}`);
+    logger.info(`Redis Subscriber Info: ${subscriberInfo}`);
+}, 60000);
 
 // For debugging in local env.
 // handleVolatilityMessage({
