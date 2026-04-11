@@ -304,7 +304,7 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
     //await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
 
     //this is for publishing the message so any subscriber can listen to.
-    const count = await redisPublisher.publish('worker-response', JSON.stringify(payload));    
+    const count = await redisPublisher.publish('worker-response', JSON.stringify(payload));
 
     if (count === 0) {
         logger.warn(`No subscribers received the message for requestId ${requestId}`);
@@ -315,7 +315,7 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 
             try {
                 await redisPublisher.disconnect();
-            } catch {}
+            } catch { }
 
             await redisPublisher.connect();
         }
@@ -354,11 +354,10 @@ logger.info(`Worker is listening for messages on channel ${channelName}...`);
 Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
 
-setInterval(async () => {
-    const publisherInfo = await redisPublisher.ping();
-    const subscriberInfo = await redisSubscriber.ping();
-    logger.info(`Redis Publisher Info: ${publisherInfo}`);
-    logger.info(`Redis Subscriber Info: ${subscriberInfo}`);
+setInterval(() => {
+    const publisherInfo = redisPublisher.isOpen ? "connected" : "disconnected";
+    const subscriberInfo = redisSubscriber.isOpen ? "connected" : "disconnected";
+    logger.info(`Redis Publisher: ${publisherInfo}, Redis Subscriber: ${subscriberInfo}`);
 }, 60000);
 
 // For debugging in local env.
