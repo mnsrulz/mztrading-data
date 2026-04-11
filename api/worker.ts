@@ -355,8 +355,8 @@ Deno.addSignalListener("SIGTERM", shutdown);
 Deno.addSignalListener("SIGINT", shutdown);
 
 setInterval(async () => {
-    const publisherInfo = await redisPublisher.info();
-    const subscriberInfo = await redisSubscriber.info();
+    const publisherInfo = await redisPublisher.ping();
+    const subscriberInfo = await redisSubscriber.ping();
     logger.info(`Redis Publisher Info: ${publisherInfo}`);
     logger.info(`Redis Subscriber Info: ${subscriberInfo}`);
 }, 60000);
