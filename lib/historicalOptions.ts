@@ -336,7 +336,7 @@ type MicroOptionPricingItem = { oi: number, b: number, a: number, v: number, l: 
 type MicroOptionPricingContract = { c: Record<string, MicroOptionPricingItem>, p: Record<string, MicroOptionPricingItem> }
 
 type MicroOptionContractItem = { oi: number, volume: number, delta: number, gamma: number }
-type MicroOptionContract = { call: MicroOptionContractItem, put: MicroOptionContractItem }
+type MicroOptionContract = { call: MicroOptionContractItem[], put: MicroOptionContractItem[] }
 type ExposureDataItem = { absDelta: number[], absGamma: number[], openInterest: number[], volume: number[] }
 type ExposureDataType = { call: ExposureDataItem, put: ExposureDataItem, netGamma: number[], strikes: string[], expiration: string, dte: number }
 
@@ -379,20 +379,20 @@ export const calculateExpsoure = (spotPrice: number, indexedObject: Record<strin
         const netGammaData = new Array<number>(strikes.length).fill(0);
 
         for (let ix = 0; ix < strikes.length; ix++) {
-            callOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.oi || 0);
-            putOpenInterestData[ix] = indexedObject[expiration][strikes[ix]]?.put?.oi || 0;
+            callOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.map(k=> k.oi || 0).reduce((a, b) => a + b, 0)) || 0;
+            putOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.put?.map(k=> k.oi || 0).reduce((a, b) => a + b, 0)) || 0;
 
-            callVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.volume || 0);
-            putVolumeData[ix] = indexedObject[expiration][strikes[ix]]?.put?.volume || 0;
+            callVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.map(k=> k.volume || 0).reduce((a, b) => a + b, 0)) || 0;
+            putVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.put?.map(k=> k.volume || 0).reduce((a, b) => a + b, 0)) || 0;
 
-            callDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.delta || 0) * 100 * callOpenInterestData[ix] * spotPrice);
-            putDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.delta || 0) * 100 * putOpenInterestData[ix] * spotPrice);
+            callDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.map(k=> (k.delta || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
+            putDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.map(k=> (k.delta || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
 
-            callGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.gamma || 0) * 100 * callOpenInterestData[ix] * spotPrice);
-            putGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.gamma || 0) * 100 * putOpenInterestData[ix] * spotPrice);
+            callGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
+            putGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
 
-            const callGamma = (indexedObject[expiration][strikes[ix]]?.call?.gamma || 0) * 100 * callOpenInterestData[ix] * spotPrice;
-            const putGamma = (indexedObject[expiration][strikes[ix]]?.put?.gamma || 0) * 100 * putOpenInterestData[ix] * spotPrice;
+            const callGamma = (indexedObject[expiration][strikes[ix]]?.call?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice).reduce((a, b) => a + b, 0)) || 0;
+            const putGamma = (indexedObject[expiration][strikes[ix]]?.put?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice).reduce((a, b) => a + b, 0)) || 0;
             netGammaData[ix] = Math.trunc(callGamma - putGamma);
 
             const strikePrice = Number(strikes[ix])
@@ -440,9 +440,11 @@ async function getHistoricalOptionData(symbol: string, dt: string) {
         previous[current.expiration][current.strike] = previous[current.expiration][current.strike] || {};
         //does it make sense to throw exception if delta/gamma values doesn't seem accurate? like gamma being negative or delta being greater than 1?
         if (current.option_type == 'C') {
-            previous[current.expiration][current.strike].call = { oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma };
+            previous[current.expiration][current.strike].call = previous[current.expiration][current.strike].call || [];
+            previous[current.expiration][current.strike].call.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
         } else if (current.option_type == 'P') {
-            previous[current.expiration][current.strike].put = { oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma };
+            previous[current.expiration][current.strike].put = previous[current.expiration][current.strike].put || [];
+            previous[current.expiration][current.strike].put.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
         } else {
             throw new Error("Invalid option type");
         }
@@ -472,9 +474,11 @@ async function getLiveCboeOptionData(symbol: string) {
         previous[current.expiration][current.strike] = previous[current.expiration][current.strike] || {};
         //does it make sense to throw exception if delta/gamma values doesn't seem accurate? like gamma being negative or delta being greater than 1?
         if (current.option_type == 'C') {
-            previous[current.expiration][current.strike].call = { oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma };
+            previous[current.expiration][current.strike].call = previous[current.expiration][current.strike].call || [];
+            previous[current.expiration][current.strike].call.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
         } else if (current.option_type == 'P') {
-            previous[current.expiration][current.strike].put = { oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma };
+            previous[current.expiration][current.strike].put = previous[current.expiration][current.strike].put || [];
+            previous[current.expiration][current.strike].put.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
         } else {
             throw new Error("Invalid option type");
         }
