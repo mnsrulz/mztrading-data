@@ -824,7 +824,7 @@
         "symbol": "AMCR"
     },
     {
-        "name": "AMC NETWORKS INC CL A",
+        "name": "AMC GLOBAL MEDIA INC",
         "symbol": "AMCX"
     },
     {
@@ -5994,10 +5994,6 @@
     {
         "name": "EOS ENERGY ENTERPRISES INC COM CL A",
         "symbol": "EOSE"
-    },
-    {
-        "name": "T-REX 2X Long EOSE Daily Target ETF",
-        "symbol": "EOSU"
     },
     {
         "name": "ENERPAC TOOL GROUP CORP CL A COM",
@@ -12168,10 +12164,6 @@
         "symbol": "MRAM"
     },
     {
-        "name": "MONROE CAP CORP COM",
-        "symbol": "MRCC"
-    },
-    {
         "name": "MERCURY SYS INC COM",
         "symbol": "MRCY"
     },
@@ -12302,10 +12294,6 @@
     {
         "name": "TIDAL TRUST II DEFIANCE LEVERAG",
         "symbol": "MST"
-    },
-    {
-        "name": "Tuttle Capital MSTR 0DTE Covered Call ETF",
-        "symbol": "MSTK"
     },
     {
         "name": "STRATEGY INC CL A NEW",
