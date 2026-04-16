@@ -824,7 +824,7 @@
         "symbol": "AMCR"
     },
     {
-        "name": "AMC GLOBAL MEDIA INC",
+        "name": "AMC GLOBAL MEDIA INC CL A",
         "symbol": "AMCX"
     },
     {
@@ -5994,6 +5994,10 @@
     {
         "name": "EOS ENERGY ENTERPRISES INC COM CL A",
         "symbol": "EOSE"
+    },
+    {
+        "name": "T-REX 2X Long EOSE Daily Target ETF",
+        "symbol": "EOSU"
     },
     {
         "name": "ENERPAC TOOL GROUP CORP CL A COM",
