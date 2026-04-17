@@ -10180,7 +10180,7 @@
         "symbol": "JCI"
     },
     {
-        "name": "JPMorgan Inflation Managed Bond ETF",
+        "name": "J P MORGAN EXCHANGE TRADED FD INFLATION MANAGE",
         "symbol": "JCPI"
     },
     {
@@ -10260,7 +10260,7 @@
         "symbol": "JMSB"
     },
     {
-        "name": "JPMorgan Ultra-Short Municipal Income ETF",
+        "name": "J P MORGAN EXCHANGE TRADED FD ULTRA SHT MUNCPL",
         "symbol": "JMST"
     },
     {
@@ -12876,7 +12876,7 @@
         "symbol": "NMRK"
     },
     {
-        "name": "NEUROONE MED TECHNOLOGIES CORP COM NEW",
+        "name": "NEUROONE MED TECHNOLOGIES CORP COM",
         "symbol": "NMTC"
     },
     {
@@ -14790,10 +14790,6 @@
     {
         "name": "PROSHARES TR PSHS ULSHT 7-10Y",
         "symbol": "PST"
-    },
-    {
-        "name": "EVERPURE INC CL A",
-        "symbol": "PSTG"
     },
     {
         "name": "POSTAL REALTY TRUST INC CL A",
