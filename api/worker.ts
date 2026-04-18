@@ -301,7 +301,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
         stack.defer(() => instance.closeSync());
         const connection = await instance.connect();
         stack.defer(() => connection.closeSync());
-        let rows:any[] = [];
+        let rows: { rows: any[], columns: any[] } = { rows: [], columns: [] };
         let hasError = false;
         try {
 
@@ -328,7 +328,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
             const result = await connection.runAndReadAll(queryToExecute)
             const end = performance.now();
             logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
-            rows = result.getRows();
+            rows = { rows: result.getRows(), columns: result.getColumns() };
         }
         catch (err) {
             logger.error(`error occurred while processing request: ${err}`);
@@ -367,7 +367,7 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
     //this is for publishing the message so any subscriber can listen to.
     const redisPublisher = redisSubscriber.duplicate();
     await redisPublisher.connect();
-      
+
     const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
     redisPublisher.quit();
     logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
