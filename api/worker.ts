@@ -301,7 +301,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
         stack.defer(() => instance.closeSync());
         const connection = await instance.connect();
         stack.defer(() => connection.closeSync());
-        let rows: { rows: any[], columns: any[] } = { rows: [], columns: [] };
+        let rows: { rows: any[], columns: any } = { rows: [], columns: {} };
         let hasError = false;
         try {
 
@@ -328,7 +328,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
             const result = await connection.runAndReadAll(queryToExecute)
             const end = performance.now();
             logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
-            rows = { rows: result.getRows(), columns: result.getColumns() };
+            rows = { rows: result.getRows(), columns: result.columnNamesAndTypesJson() };
         }
         catch (err) {
             logger.error(`error occurred while processing request: ${err}`);
