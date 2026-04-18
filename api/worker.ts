@@ -58,6 +58,15 @@ const OptionsStatsSchema = z.object({
     channel: z.string()
 });
 
+const DynamicSqlSchema = z.object({
+    symbol: z.string()
+        .nonempty()
+        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+    sql: z.string().nonempty(),
+    requestId: z.uuid(),
+    channel: z.string()
+});
+
 const BaseSchema = {
     symbol: z.string()
         .nonempty()
@@ -122,6 +131,7 @@ export const OptionsVolRequestSchema = z.intersection(
 
 type OptionsVolRequest = z.infer<typeof OptionsVolRequestSchema>;
 type OptionsStatsRequest = z.infer<typeof OptionsStatsSchema>;
+type DynamicSqlRequest = z.infer<typeof DynamicSqlSchema>;
 
 /*
  {"symbol":"AAPL","lookbackDays":180,"delta":25,"expiration":"2025-11-07","mode":"delta","requestId":"977c5c7b-7e96-45d1-991b-db70992d0846"}       
@@ -281,6 +291,57 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
     }
 };
 
+const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
+    try {
+        const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
+
+        logger.info(`Dynamic SQL request received: ${JSON.stringify(args)}`);
+        using stack = new DisposableStack();
+        const instance = await DuckDBInstance.create(":memory:");
+        stack.defer(() => instance.closeSync());
+        const connection = await instance.connect();
+        stack.defer(() => connection.closeSync());
+        let rows:any[] = [];
+        let hasError = false;
+        try {
+
+            const queryToExecute = `
+                WITH T AS (
+                    SELECT DISTINCT dt, close, symbol
+                    FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
+                    AND close > 0
+                ), T2 AS (
+                    SELECT *
+                    FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
+                ), dataset AS (
+                    SELECT T2.*, T.close
+                    FROM T2
+                    JOIN T ON T.dt = T2.dt
+                ), M AS (
+                    ${sql}
+                )
+                SELECT * FROM M LIMIT 100
+            `;
+
+            //log the time it took to complete it
+            const start = performance.now();
+            const result = await connection.runAndReadAll(queryToExecute)
+            const end = performance.now();
+            logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
+            rows = result.getRows();
+        }
+        catch (err) {
+            logger.error(`error occurred while processing request: ${err}`);
+            hasError = true;
+        }
+        await publish(requestId, hasError, rows, args.channel);
+        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
+
+    } catch (error) {
+        logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
+    }
+};
+
 async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
     const payload = {
         requestId: requestId,
@@ -329,6 +390,7 @@ channel.bind('options-stat-query', handleOptionsStatsMessage);
 
 emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
 emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
+emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
 
 await redisSubscriber.subscribe('worker-request', (message) => {
     logger.info(`Received message from Redis on worker-request channel`);
