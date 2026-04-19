@@ -311,10 +311,63 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
                     AND close > 0
                 ), T2 AS (
-                    SELECT *
+                    SELECT *,
+                    CAST(DATE_DIFF('day', dt, CAST(strftime(expiration, '%Y-%m-%d') as date)) AS INT) AS dte
                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
                 ), dataset AS (
-                    SELECT T2.*, T.close
+                    SELECT
+                    strftime(T.dt, '%Y-%m-%d') AS quote_date,
+                    strftime(expiration, '%Y-%m-%d') AS expiration_date,
+                    dte,
+                    option_symbol AS option_ticker,
+                    option_type,
+                    strike AS strike_price,
+
+                    open_interest,
+                    volume AS option_volume,
+
+                    delta,
+                    gamma,
+                    vega,
+                    theta,
+                    rho,
+
+                    theo AS theoretical_price,
+                    iv AS implied_volatility,
+
+                    open AS option_open_price,
+                    high AS option_high_price,
+                    bid AS bid_price,
+                    ask AS ask_price,
+                    (bid + ask) / 2 AS mid_price,
+                    CASE
+                        WHEN open_interest > 1000 AND volume > 100 THEN 'HIGH'
+                        WHEN open_interest > 100 THEN 'MEDIUM'
+                        ELSE 'LOW'
+                    END AS liquidity_tier,
+                    volume / NULLIF(open_interest, 0) AS volume_oi_ratio,
+                    T.symbol AS underlying_symbol,
+                    close AS underlying_close_price,
+                    CASE
+                        WHEN ABS(strike - close) / close < 0.01 THEN 'ATM'
+                        WHEN (
+                            (option_type = 'call' AND strike < close) OR
+                            (option_type = 'put'  AND strike > close)
+                        ) THEN 'ITM'
+                        ELSE 'OTM'
+                    END AS moneyness,
+                    CASE
+                        WHEN (option_type = 'C' AND strike < close) OR
+                            (option_type = 'P'  AND strike > close)
+                            THEN -ABS(strike - close) / close * 100
+                        ELSE ABS(strike - close) / close * 100
+                    END AS moneyness_percent,
+                    CASE
+                        WHEN dte <= 7 THEN '0-7D'
+                        WHEN dte <= 30 THEN '7-30D'
+                        WHEN dte <= 90 THEN '30-90D'
+                        ELSE '90D+'
+                    END AS expiry_bucket
                     FROM T2
                     JOIN T ON T.dt = T2.dt
                 ), M AS (
@@ -331,14 +384,14 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
             rows = { rows: result.getRows(), columns: result.columnNamesAndTypesJson() };
         }
         catch (err) {
-            logger.error(`error occurred while processing request: ${err}`);
+            logger.error(err, `error occurred while processing request.`);
             hasError = true;
         }
         await publish(requestId, hasError, rows, args.channel);
         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
 
     } catch (error) {
-        logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
+        logger.error(error, `Error processing worker-volatility-request`);
     }
 };
 
