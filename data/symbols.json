@@ -2088,10 +2088,6 @@
         "symbol": "BDRY"
     },
     {
-        "name": "BIODESIX INC COM",
-        "symbol": "BDSX"
-    },
-    {
         "name": "BLACK DIAMOND THERAPEUTICS INC COM",
         "symbol": "BDTX"
     },
@@ -3662,10 +3658,6 @@
     {
         "name": "CELESTICA INC COM",
         "symbol": "CLS"
-    },
-    {
-        "name": "CLEARSIDE BIOMEDICAL INC COM NEW",
-        "symbol": "CLSDQ"
     },
     {
         "name": "CLEANSPARK INC COM NEW",
@@ -11204,10 +11196,6 @@
         "symbol": "LOMA"
     },
     {
-        "name": "LEONABIO INC COM",
-        "symbol": "LONA"
-    },
-    {
         "name": "LOOP INDS INC COM",
         "symbol": "LOOP"
     },
@@ -13838,6 +13826,10 @@
     {
         "name": "BANK OZK LITTLE ROCK ARK COM",
         "symbol": "OZK"
+    },
+    {
+        "name": "EVERPURE INC CL A",
+        "symbol": "P"
     },
     {
         "name": "PLAINS ALL AMERN PIPELINE L P UNIT LTD PARTN",
@@ -18418,10 +18410,6 @@
     {
         "name": "THE ONCOLOGY INSTITUTE INC COM",
         "symbol": "TOI"
-    },
-    {
-        "name": "Cambria Cannabis ETF",
-        "symbol": "TOKE"
     },
     {
         "name": "TOLL BROTHERS INC COM",
