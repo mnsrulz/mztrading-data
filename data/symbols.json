@@ -1440,7 +1440,7 @@
         "symbol": "ASML"
     },
     {
-        "name": "ASCENDIS PHARMA A/S SPONSORED ADR",
+        "name": "ASCENDIS PHARMA A/S ORD SHS",
         "symbol": "ASND"
     },
     {
@@ -5224,10 +5224,6 @@
         "symbol": "DOG"
     },
     {
-        "name": "Tradr 2X Long DDOG Daily ETF",
-        "symbol": "DOGD"
-    },
-    {
         "name": "REX-Osprey DOGE ETF",
         "symbol": "DOJE"
     },
@@ -5934,10 +5930,6 @@
     {
         "name": "ENPHASE ENERGY INC COM",
         "symbol": "ENPH"
-    },
-    {
-        "name": "Tradr 2X Long ENPH Daily ETF",
-        "symbol": "ENPX"
     },
     {
         "name": "ENERGIZER HLDGS INC COM",
@@ -11680,10 +11672,6 @@
         "symbol": "MDB"
     },
     {
-        "name": "Tradr 2X Long MDB Daily ETF",
-        "symbol": "MDBX"
-    },
-    {
         "name": "MADRIGAL PHARMACEUTICALS INC COM",
         "symbol": "MDGL"
     },
@@ -12882,10 +12870,6 @@
     {
         "name": "NANO NUCLEAR ENERGY INC COM",
         "symbol": "NNE"
-    },
-    {
-        "name": "Tradr 2X Long NNE Daily ETF",
-        "symbol": "NNEX"
     },
     {
         "name": "NELNET INC CL A",
@@ -17040,10 +17024,6 @@
         "symbol": "SNPS"
     },
     {
-        "name": "Tradr 2X Long SNPS Daily ETF",
-        "symbol": "SNPX"
-    },
-    {
         "name": "TD SYNNEX CORPORATION COM",
         "symbol": "SNX"
     },
@@ -19838,10 +19818,6 @@
     {
         "name": "VOYAGER TECHNOLOGIES INC COM CL A",
         "symbol": "VOYG"
-    },
-    {
-        "name": "Tradr 2X Long VOYG Daily ETF",
-        "symbol": "VOYX"
     },
     {
         "name": "VISHAY PRECISION GROUP INC COM",
