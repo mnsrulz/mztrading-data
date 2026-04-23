@@ -35,7 +35,7 @@ await redisSubscriber.connect();
 const stream = pretty({
     singleLine: true,
     colorize: true,
-    include: "time,msg",
+    include: "time,msg,err",
     messageFormat: (log, messageKey) => { return `${log[messageKey]}` },
 });
 
@@ -211,7 +211,7 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
             rows = result.getRows().map(r => JSON.parse(r[0]))[0];  //takes first row and first column
         }
         catch (err) {
-            logger.error(`error occurred while processing request: ${err}`);
+            logger.error({ err }, `error occurred while processing request`);
             hasError = true;
         }
 
@@ -220,7 +220,7 @@ const handleVolatilityMessage = async (args: OptionsVolRequest) => {
 
     } catch (error) {
         console.error(error);
-        logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
+        logger.error({ err: error }, `Error processing worker-volatility-request`);
     }
 };
 
@@ -287,7 +287,7 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
 
     } catch (error) {
-        logger.error(`Error processing worker-volatility-request: ${JSON.stringify(error)}`);
+        logger.error({ err: error }, `Error processing worker-volatility-request`);
     }
 };
 
@@ -384,14 +384,14 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
             rows = { rows: result.getRows(), columns: result.columnNamesAndTypesJson() };
         }
         catch (err) {
-            logger.error(err, `error occurred while processing request.`);
+            logger.error({ err }, `error occurred while processing request.`);
             hasError = true;
         }
         await publish(requestId, hasError, rows, args.channel);
         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
 
     } catch (error) {
-        logger.error(error, `Error processing worker-volatility-request`);
+        logger.error({ err: error }, `Error processing worker-volatility-request`);
     }
 };
 
