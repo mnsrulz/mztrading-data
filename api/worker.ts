@@ -323,6 +323,9 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     SELECT
                     strftime(T.dt, '%Y-%m-%d') AS quote_date,
                     strftime(expiration, '%Y-%m-%d') AS expiration_date,
+                    dayofweek(CAST(strftime(expiration, '%Y-%m-%d') as date)) AS expiration_dow,
+                    dayofweek(CAST(T.dt as date)) AS quote_dow,
+
                     dte,
                     option_symbol AS option_ticker,
                     option_type,
@@ -344,7 +347,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     high AS option_high_price,
                     bid AS bid_price,
                     ask AS ask_price,
-                    (bid + ask) / 2 AS mid_price,
+                    round((bid + ask) / 2, 2) AS mid_price,
                     CASE
                         WHEN open_interest > 1000 AND volume > 100 THEN 'HIGH'
                         WHEN open_interest > 100 THEN 'MEDIUM'
@@ -354,7 +357,10 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     T.symbol AS underlying_symbol,
                     close AS underlying_close_price,
                     CASE
-                        WHEN ABS(strike - close) / close < 0.01 THEN 'ATM'
+                        WHEN ROW_NUMBER() OVER ( 
+                            PARTITION BY T2.dt, expiration, option_type 
+                            ORDER BY ABS(strike - close), strike 
+                        ) = 1 THEN 'ATM'
                         WHEN (
                             (option_type = 'call' AND strike < close) OR
                             (option_type = 'put'  AND strike > close)
