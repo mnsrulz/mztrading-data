@@ -744,6 +744,10 @@
         "symbol": "ALNY"
     },
     {
+        "name": "REALLOYS INC COM",
+        "symbol": "ALOY"
+    },
+    {
         "name": "ALARM COM HLDGS INC COM",
         "symbol": "ALRM"
     },
@@ -1376,6 +1380,10 @@
         "symbol": "ARX"
     },
     {
+        "name": "ARXIS INC CL A COM",
+        "symbol": "ARXS"
+    },
+    {
         "name": "AMER SPORTS INC COM SHS",
         "symbol": "AS"
     },
@@ -1654,6 +1662,10 @@
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS EMGMKT",
         "symbol": "AVEM"
+    },
+    {
+        "name": "AEVEX CORP COM CL A",
+        "symbol": "AVEX"
     },
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS ALL EQT",
@@ -6296,6 +6308,10 @@
         "symbol": "EVLV"
     },
     {
+        "name": "EVOMMUNE INC COM SHS",
+        "symbol": "EVMN"
+    },
+    {
         "name": "INVESCO ACTVELY MNGD ETC FD TR ELC VEH MTLS CDT",
         "symbol": "EVMT"
     },
@@ -7646,6 +7662,10 @@
     {
         "name": "GOLUB CAP BDC INC COM",
         "symbol": "GBDC"
+    },
+    {
+        "name": "GBANK FINL HLDGS INC COM",
+        "symbol": "GBFH"
     },
     {
         "name": "GOLDMAN SACHS ETF TR ACCES TREASURY",
@@ -12160,6 +12180,10 @@
         "symbol": "MRK"
     },
     {
+        "name": "MERLIN INC COM",
+        "symbol": "MRLN"
+    },
+    {
         "name": "MODERNA INC COM",
         "symbol": "MRNA"
     },
@@ -12948,7 +12972,7 @@
         "symbol": "NPWR"
     },
     {
-        "name": "NRC HEALTH",
+        "name": "NRC HEALTH COM NEW",
         "symbol": "NRC"
     },
     {
@@ -13062,6 +13086,10 @@
     {
         "name": "NEW ERA ENERGY & DIGITAL INC COM",
         "symbol": "NUAI"
+    },
+    {
+        "name": "EAGLE NUCLEAR ENERGY CORP COM",
+        "symbol": "NUCL"
     },
     {
         "name": "NUCOR CORP COM",
@@ -13320,6 +13348,10 @@
         "symbol": "OCGN"
     },
     {
+        "name": "OCULIS HOLDING AG ORDINARY SHARES",
+        "symbol": "OCS"
+    },
+    {
         "name": "OAKTREE SPECIALTY LENDING COM",
         "symbol": "OCSL"
     },
@@ -13374,6 +13406,10 @@
     {
         "name": "OFS CAP CORP COM",
         "symbol": "OFS"
+    },
+    {
+        "name": "OCEANAGOLD CORP COM NEW",
+        "symbol": "OGC"
     },
     {
         "name": "OGE ENERGY CORP COM",
@@ -16676,7 +16712,7 @@
         "symbol": "SKF"
     },
     {
-        "name": "THE BEAUTY HEALTH COMPANY COM CL A",
+        "name": "SKINHEALTH SYSTEMS INC",
         "symbol": "SKIN"
     },
     {
@@ -16978,6 +17014,10 @@
     {
         "name": "SMART SAND INC COM",
         "symbol": "SND"
+    },
+    {
+        "name": "SONIDA SENIOR LIVING INC COM",
+        "symbol": "SNDA"
     },
     {
         "name": "SANDISK CORP COM",
@@ -17690,6 +17730,10 @@
     {
         "name": "SUNBELT RENTALS HOLDINGS INC SHS",
         "symbol": "SUNB"
+    },
+    {
+        "name": "SUNOCOCORP LLC COM SHS LLC",
+        "symbol": "SUNC"
     },
     {
         "name": "SUNRISE RLTY TR INC COM",
@@ -18422,6 +18466,10 @@
     {
         "name": "SSGA ACTIVE ETF TR STATE STREET DOU",
         "symbol": "TOTL"
+    },
+    {
+        "name": "TUNIU CORP SPONSORED ADS",
+        "symbol": "TOUR"
     },
     {
         "name": "Roundhill S&P 500 Target 10 Managed Distribution ETF",
