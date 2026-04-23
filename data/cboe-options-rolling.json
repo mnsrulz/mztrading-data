@@ -80313,5 +80313,6 @@
             "symbol": "YINN",
             "dt": "2026-04-23"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-04-23/options_cboe_oi_anomaly.parquet"
 }
