@@ -43,6 +43,11 @@ const logger = pino({
     level: LOG_LEVEL
 }, stream);
 
+BigInt.prototype.toJSON = function () {
+    return Number(this.toString());
+};
+
+
 const WorkerRequestSchema = z.object({
     requestType: z.enum(["volatility-query", "options-stat-query"]),
     requestId: z.uuid(),
