@@ -319,6 +319,8 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     SELECT *,
                     CAST(DATE_DIFF('day', dt, CAST(strftime(expiration, '%Y-%m-%d') as date)) AS INT) AS dte
                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
+                    -- this is to make sure we remove the first quote for each option contract when they appear for the very first time in the dataset, which likely represented by 0 OI, bid, ask, iv. we want to remove those data points because they can be very misleading for the analysis, especially for the newly listed contracts which usually have a lot of zero-OI quotes at the beginning.
+                    QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
                 ), dataset AS (
                     SELECT
                     strftime(T.dt, '%Y-%m-%d') AS quote_date,
