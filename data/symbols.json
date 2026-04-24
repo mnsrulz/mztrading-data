@@ -1408,10 +1408,6 @@
         "symbol": "ASEA"
     },
     {
-        "name": "ASGN INC COM",
-        "symbol": "ASGN"
-    },
-    {
         "name": "ASHLAND INC COM",
         "symbol": "ASH"
     },
@@ -4760,10 +4756,6 @@
         "symbol": "DAVE"
     },
     {
-        "name": "DAY ONE BIOPHARMACEUTICALS INC COM",
-        "symbol": "DAWN"
-    },
-    {
         "name": "DEUTSCHE BK AG NAMEN AKT",
         "symbol": "DB"
     },
@@ -5750,6 +5742,10 @@
     {
         "name": "iShares MSCI EAFE Growth ETF",
         "symbol": "EFG"
+    },
+    {
+        "name": "EVERFORTH INC",
+        "symbol": "EFOR"
     },
     {
         "name": "ENTERPRISE FINL SVCS CORP COM",
@@ -15164,10 +15160,6 @@
         "symbol": "QUS"
     },
     {
-        "name": "QVC GROUP INC COM SER A NEW",
-        "symbol": "QVCGA"
-    },
-    {
         "name": "INVESCO EXCHANGE-TRADED FD TR S&P 500 CONCENTR",
         "symbol": "QVMT"
     },
@@ -16712,7 +16704,7 @@
         "symbol": "SKF"
     },
     {
-        "name": "SKINHEALTH SYSTEMS INC",
+        "name": "SKINHEALTH SYSTEMS INC COM CL A",
         "symbol": "SKIN"
     },
     {
