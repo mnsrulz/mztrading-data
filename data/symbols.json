@@ -5744,7 +5744,7 @@
         "symbol": "EFG"
     },
     {
-        "name": "EVERFORTH INC",
+        "name": "EVERFORTH INC COM",
         "symbol": "EFOR"
     },
     {
@@ -6840,10 +6840,6 @@
         "symbol": "FFLV"
     },
     {
-        "name": "INNOVATOR ETFS TRUST IBD 50 ETF",
-        "symbol": "FFTY"
-    },
-    {
         "name": "F&G ANNUITIES & LIFE INC COMMON STOCK",
         "symbol": "FG"
     },
@@ -7772,7 +7768,7 @@
         "symbol": "GEM"
     },
     {
-        "name": "THEMES ETF TR LEVERAGE SHARES",
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
         "symbol": "GEMG"
     },
     {
@@ -11514,10 +11510,6 @@
     {
         "name": "MANCHESTER UTD PLC NEW ORD CL A",
         "symbol": "MANU"
-    },
-    {
-        "name": "WM TECHNOLOGY INC COM",
-        "symbol": "MAPS"
     },
     {
         "name": "MARRIOTT INTL INC NEW CL A",
