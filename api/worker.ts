@@ -313,9 +313,9 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
             const queryToExecute = `
                 WITH T AS (
                     SELECT DISTINCT dt, open as underlying_open_price, high as underlying_high_price, low as underlying_low_price, 
-                    underlying_close as underlying_close_price, volume as underlying_volume, iv30 as underlying_iv30, symbol as underlying_symbol
+                    close as underlying_close_price, volume as underlying_volume, iv30 as underlying_iv30, symbol as underlying_symbol
                     FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
-                    AND underlying_close > 0
+                    AND underlying_close_price > 0
                 ), T2 AS (
                     SELECT *,
                     CAST(DATE_DIFF('day', dt, CAST(strftime(expiration, '%Y-%m-%d') as date)) AS INT) AS dte
@@ -363,19 +363,19 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     CASE
                         WHEN ROW_NUMBER() OVER ( 
                             PARTITION BY T2.dt, expiration, option_type 
-                            ORDER BY ABS(strike - underlying_close), strike 
+                            ORDER BY ABS(strike - underlying_close_price), strike 
                         ) = 1 THEN 'ATM'
                         WHEN (
-                            (option_type = 'call' AND strike < underlying_close) OR
-                            (option_type = 'put'  AND strike > underlying_close)
+                            (option_type = 'call' AND strike < underlying_close_price) OR
+                            (option_type = 'put'  AND strike > underlying_close_price)
                         ) THEN 'ITM'
                         ELSE 'OTM'
                     END AS moneyness,
                     CASE
-                        WHEN (option_type = 'C' AND strike < underlying_close) OR
-                            (option_type = 'P'  AND strike > underlying_close)
-                            THEN -ABS(strike - underlying_close) / underlying_close * 100
-                        ELSE ABS(strike - underlying_close) / underlying_close * 100
+                        WHEN (option_type = 'C' AND strike < underlying_close_price) OR
+                            (option_type = 'P'  AND strike > underlying_close_price)
+                            THEN -ABS(strike - underlying_close_price) / underlying_close_price * 100
+                        ELSE ABS(strike - underlying_close_price) / underlying_close_price * 100
                     END AS moneyness_percent,
                     CASE
                         WHEN dte <= 7 THEN '0-7D'
