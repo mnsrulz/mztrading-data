@@ -287,11 +287,11 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
 const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
     try {
         const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
-        let rows: { rows: any[] } = { rows: [] };
+        let rows: { rows: any[], columns: any[] } = { rows: [], columns: [] };
         let hasError = false;
         try {
             const result = await executeReaderInternal(symbol, sql);    
-            rows = { rows: result };
+            rows = { rows: result.getRowsJson(), columns: result.getColumns() };
         }
         catch (err) {
             logger.error({ err }, `error occurred while processing request.`);
@@ -408,7 +408,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 200) {
     //log the time it took to complete it
     const start = performance.now();
     const result = await connection.runAndReadAll(`${baseQueryCte}
-            SELECT json_group_array(t) FROM (
+            --SELECT json_group_array(t) FROM (    
+            SELECT * FROM (
                 SELECT * FROM (    
                     ${sql}
                     ) LIMITED_CTE ${limitClause}
@@ -416,13 +417,15 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 200) {
     const end = performance.now();
     logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
 
-    rows = JSON.parse(result.getRows().at(0)?.at(0) as string); //takes first row and first column
+    // rows = JSON.parse(result.getRows().at(0)?.at(0) as string); //takes first row and first column
     //rows = result.getRows();
-    return rows;
+    return result;
 }
 
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
+
+    await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
 } else {
     const shutdown = () => {
         logger.info(`shutting down...`);
@@ -466,5 +469,3 @@ logger.info(`Worker is running...`);
 //     requestId: crypto.randomUUID()
 // })
 
-
-//await executeQueryInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
