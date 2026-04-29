@@ -1,36 +1,24 @@
 import { z } from "https://esm.sh/zod@4.3.6";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
-import prettyBytes from "https://esm.sh/pretty-bytes@7.1.0";
-import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
-import Pusher from 'https://esm.sh/pusher@5.3.2';
-import lz from "https://esm.sh/lz-string@1.5.0";
-import pako from 'https://esm.sh/pako@2.1.0';
 
 import { createClient } from "npm:redis@^4.5";
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
-import { Buffer } from "node:buffer";
 import Emittery from 'https://esm.sh/emittery@2.0.0';
 
 const emitter = new Emittery();
 
-const pusher = Pusher.forURL(Deno.env.get('PUSHER_URI') || '');
-const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
-const pusherClient = new PusherJS(Deno.env.get('PUSHER_APP_KEY') || '', {
-    cluster: Deno.env.get('PUSHER_APP_CLUSTER') || 'us2',
-});
-
-const channel = pusherClient.subscribe(channelName);
 const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const REDIS_URI = Deno.env.get('REDIS_URI');
+const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
 
 const redisSubscriber = createClient({
     url: REDIS_URI,
 });
-await redisSubscriber.connect();
+const duckDbInstance = await DuckDBInstance.create(":memory:");
 
 const stream = pretty({
     singleLine: true,
@@ -299,18 +287,49 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
 const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
     try {
         const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
-
-        logger.info(`Dynamic SQL request received: ${JSON.stringify(args)}`);
-        using stack = new DisposableStack();
-        const instance = await DuckDBInstance.create(":memory:");
-        stack.defer(() => instance.closeSync());
-        const connection = await instance.connect();
-        stack.defer(() => connection.closeSync());
-        let rows: { rows: any[], columns: any } = { rows: [], columns: {} };
+        let rows: { rows: any[] } = { rows: [] };
         let hasError = false;
         try {
+            const result = await executeReaderInternal(symbol, sql);    
+            rows = { rows: result };
+        }
+        catch (err) {
+            logger.error({ err }, `error occurred while processing request.`);
+            hasError = true;
+        }
+        await publish(requestId, hasError, rows, args.channel);
+        logger.debug(`Dynamic SQL request completed! ${JSON.stringify(args)}`);
 
-            const queryToExecute = `
+    } catch (error) {
+        logger.error({ err: error }, `Error processing worker-dynamic-sql-request`);
+    }
+};
+
+async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
+    const payload = {
+        requestId: requestId,
+        hasError,
+        value: rows
+    };
+
+    //this is for publishing the message so any subscriber can listen to.
+    const redisPublisher = redisSubscriber.duplicate();
+    await redisPublisher.connect();
+
+    const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
+    redisPublisher.quit();
+    logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
+    //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
+}
+
+async function executeReaderInternal(symbol: string, sql: string, limit = 200) {
+    using stack = new DisposableStack();
+    const connection = await duckDbInstance.connect();
+    stack.defer(() => connection.closeSync());
+    let rows = [];
+    const limitClause = limit > 0 ? `LIMIT ${limit}` : '';
+
+    const baseQueryCte = `
                 WITH T AS (
                     SELECT DISTINCT dt, open as underlying_open_price, high as underlying_high_price, low as underlying_low_price, 
                     close as underlying_close_price, volume as underlying_volume, iv30 as underlying_iv30, symbol as underlying_symbol
@@ -323,8 +342,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     -- this is to make sure we remove the first quote for each option contract when they appear for the very first time in the dataset, which likely represented by 0 OI, bid, ask, iv. we want to remove those data points because they can be very misleading for the analysis, especially for the newly listed contracts which usually have a lot of zero-OI quotes at the beginning.
                     QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
                 ), dataset AS (
-                    SELECT
-                    strftime(T.dt, '%Y-%m-%d') AS quote_date,
+                    SELECT T.dt AS quote_date,
                     strftime(expiration, '%Y-%m-%d') AS expiration_date,
                     dayofweek(CAST(strftime(expiration, '%Y-%m-%d') as date)) AS expiration_dow,
                     dayofweek(CAST(T.dt as date)) AS quote_dow,
@@ -385,91 +403,54 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
                     END AS expiry_bucket
                     FROM T2
                     JOIN T ON T.dt = T2.dt
-                ), M AS (
+                )`;
+
+    //log the time it took to complete it
+    const start = performance.now();
+    const result = await connection.runAndReadAll(`${baseQueryCte}
+            SELECT json_group_array(t) FROM (
+                SELECT * FROM (    
                     ${sql}
-                )
-                SELECT * FROM M LIMIT 100
-            `;
+                    ) LIMITED_CTE ${limitClause}
+            ) t`);
+    const end = performance.now();
+    logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
 
-            //log the time it took to complete it
-            const start = performance.now();
-            const result = await connection.runAndReadAll(queryToExecute)
-            const end = performance.now();
-            logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
-            rows = { rows: result.getRows(), columns: result.columnNamesAndTypesJson() };
-        }
-        catch (err) {
-            logger.error({ err }, `error occurred while processing request.`);
-            hasError = true;
-        }
-        await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
+    rows = JSON.parse(result.getRows().at(0)?.at(0) as string); //takes first row and first column
+    //rows = result.getRows();
+    return rows;
+}
 
-    } catch (error) {
-        logger.error({ err: error }, `Error processing worker-volatility-request`);
+if (DEBUG_MODE) {
+    logger.info(`Running in debug mode. Executing test query...`);
+} else {
+    const shutdown = () => {
+        logger.info(`shutting down...`);
+        redisSubscriber.quit();
+        setTimeout(() => {
+            Deno.exit(0);
+        }, 100);
+
+        logger.info("will shut down in 100ms")
     }
-};
+    emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
+    emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
+    emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
 
-async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
-    const payload = {
-        requestId: requestId,
-        hasError,
-        value: rows
-    };
-    //const packed = lz.compressToBase64(JSON.stringify(payload));
-    // const packed = Buffer.from(pako.deflate(JSON.stringify(payload))).toString("base64");
-    // const packedData = {
-    //     d: packed,
-    // };
 
-    // logger.info(`Publishing response for requestId ${requestId}. Size ${prettyBytes(JSON.stringify(packedData).length)}`);
+    await redisSubscriber.connect();
 
-    // await pusher.trigger(channelName, `worker-response-${requestId}`, packedData);
+    await redisSubscriber.subscribe('worker-request', (message) => {
+        logger.info(`Received message from Redis on worker-request channel`);
+        const data = JSON.parse(message) as { requestType: string };
+        emitter.emit(data.requestType, data);
+    });
 
-    //just for sending the notification to the client, the client will fetch the data from redis
-    //need to find a way to make this more efficient.
-    //await redisClient.set(`worker-response-${requestId}`, JSON.stringify(payload));
-
-    //await pusher.trigger(channelName, `worker-response-${requestId}`, { requestId });
-
-    //this is for publishing the message so any subscriber can listen to.
-    const redisPublisher = redisSubscriber.duplicate();
-    await redisPublisher.connect();
-
-    const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
-    redisPublisher.quit();
-    logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
-    //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
+    Deno.addSignalListener("SIGTERM", shutdown);
+    Deno.addSignalListener("SIGINT", shutdown);
 }
 
-function shutdown() {
-    logger.info(`shutting down...`);
-    channel.disconnect();
-    redisSubscriber.quit();
-    setTimeout(() => {
-        Deno.exit(0);
-    }, 100);
-
-    logger.info("will shut down in 100ms")
-}
-
-channel.bind('volatility-query', handleVolatilityMessage);
-channel.bind('options-stat-query', handleOptionsStatsMessage);
-
-emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
-emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
-emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
-
-await redisSubscriber.subscribe('worker-request', (message) => {
-    logger.info(`Received message from Redis on worker-request channel`);
-    const data = JSON.parse(message) as { requestType: string };
-    emitter.emit(data.requestType, data);
-});
-
-logger.info(`Worker is listening for messages on channel ${channelName}...`);
-
-Deno.addSignalListener("SIGTERM", shutdown);
-Deno.addSignalListener("SIGINT", shutdown);
+logger.info(`Worker is running...`);
 
 // For debugging in local env.
 // handleVolatilityMessage({
@@ -484,3 +465,6 @@ Deno.addSignalListener("SIGINT", shutdown);
 //     //expiryMode: "rolling",
 //     requestId: crypto.randomUUID()
 // })
+
+
+//await executeQueryInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
