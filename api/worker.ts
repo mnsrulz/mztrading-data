@@ -287,11 +287,11 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
 const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
     try {
         const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
-        let rows: { rows: any[], columns: any[] } = { rows: [], columns: [] };
+        let rows: { rows: any[], columns: any } = { rows: [], columns: null };
         let hasError = false;
         try {
             const result = await executeReaderInternal(symbol, sql);    
-            rows = { rows: result.getRowsJson(), columns: result.getColumns() };
+            rows = { rows: result.getRowsJson(), columns: result.columnNamesAndTypesJson() };
         }
         catch (err) {
             logger.error({ err }, `error occurred while processing request.`);
