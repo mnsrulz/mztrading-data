@@ -236,10 +236,6 @@
         "symbol": "ACLS"
     },
     {
-        "name": "ARCELLX INC COMMON STOCK",
-        "symbol": "ACLX"
-    },
-    {
         "name": "AECOM COM",
         "symbol": "ACM"
     },
@@ -548,6 +544,10 @@
         "symbol": "AIA"
     },
     {
+        "name": "AI FINANCIAL CORP",
+        "symbol": "AIFC"
+    },
+    {
         "name": "AIFU INC USD CL A ORD SHS",
         "symbol": "AIFU"
     },
@@ -778,10 +778,6 @@
     {
         "name": "ALTO INGREDIENTS INC COM",
         "symbol": "ALTO"
-    },
-    {
-        "name": "ALT5 SIGMA CORP COM",
-        "symbol": "ALTS"
     },
     {
         "name": "AUTOLIV INC COM",
@@ -5640,7 +5636,7 @@
         "symbol": "EDIV"
     },
     {
-        "name": "NEW ORIENTAL ED & TECHNOLOGY G SPON ADR",
+        "name": "NEW ORIENTAL ED & TECHNOLOGY SPON ADR",
         "symbol": "EDU"
     },
     {
@@ -6800,7 +6796,7 @@
         "symbol": "FFLV"
     },
     {
-        "name": "CAPFORCE IBD 50 ETF",
+        "name": "CAPITAL-FORCE ETF TR IBD 50 ETF",
         "symbol": "FFTY"
     },
     {
@@ -19740,7 +19736,7 @@
         "symbol": "VNQI"
     },
     {
-        "name": "VOLITIONRX LTD COM",
+        "name": "VOLITIONRX LTD COMMON STK",
         "symbol": "VNRX"
     },
     {
@@ -20530,6 +20526,10 @@
     {
         "name": "Roundhill S&P 500 0DTE Covered Call Strategy ETF",
         "symbol": "XDTE"
+    },
+    {
+        "name": "X-ENERGY INC COM CL A",
+        "symbol": "XE"
     },
     {
         "name": "XCEL ENERGY INC COM",
