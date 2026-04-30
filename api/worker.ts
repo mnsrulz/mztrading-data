@@ -17,6 +17,13 @@ const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
 
 const redisSubscriber = createClient({
     url: REDIS_URI,
+    socket: {
+        keepAlive: 30000,
+        reconnectStrategy: retries => {
+            logger.warn(`Redis connection lost. Attempting to reconnect... (attempt ${retries + 1})`);
+            return Math.min(retries * 1000, 30000); // Exponential backoff up to 30 seconds 
+        }
+    }
 });
 const duckDbInstance = await DuckDBInstance.create(":memory:");
 
