@@ -329,7 +329,7 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
-async function executeReaderInternal(symbol: string, sql: string, limit = 200) {
+async function executeReaderInternal(symbol: string, sql: string, limit = 1000) {
     using stack = new DisposableStack();
     const connection = await duckDbInstance.connect();
     stack.defer(() => connection.closeSync());
