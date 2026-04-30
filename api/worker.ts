@@ -339,7 +339,14 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
     const baseQueryCte = `
                 WITH T AS (
                     SELECT DISTINCT dt, open as underlying_open_price, high as underlying_high_price, low as underlying_low_price, 
-                    close as underlying_close_price, volume as underlying_volume, iv30 as underlying_iv30, symbol as underlying_symbol
+                    close as underlying_close_price, volume as underlying_volume, 
+                    -- iv30 as underlying_iv30, 
+                    -- NULLIF treats 0 as NULL so IGNORE NULLS can skip it
+                    last_value(nullif(iv30, 0) IGNORE NULLS) OVER (
+                        ORDER BY dt 
+                        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+                    ) as underlying_iv30,
+                    symbol as underlying_symbol
                     FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
                     AND underlying_close_price > 0
                 ), T2 AS (
