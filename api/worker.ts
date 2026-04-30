@@ -358,7 +358,9 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                 ), dataset AS (
                     SELECT T.dt AS quote_date,
                     strftime(expiration, '%Y-%m-%d') AS expiration_date,
-                    dayofweek(CAST(strftime(expiration, '%Y-%m-%d') as date)) AS expiration_dow,
+                    dayofweek(CAST(expiration as date)) AS expiration_dow,
+                    CASE WHEN expiration_date = MAX(expiration_date) OVER (PARTITION BY date_trunc('week', CAST(expiration_date AS DATE))) THEN 1 ELSE 0 END AS is_weekly_expiration,
+                    CASE WHEN is_weekly_expiration = 1 AND day(CAST(expiration_date AS DATE)) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration,
                     dayofweek(CAST(T.dt as date)) AS quote_dow,
 
                     dte,
