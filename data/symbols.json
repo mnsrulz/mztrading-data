@@ -1816,6 +1816,10 @@
         "symbol": "AXTI"
     },
     {
+        "name": "Tradr 2X Long AXTI Daily ETF",
+        "symbol": "AXTX"
+    },
+    {
         "name": "ACUITY INC COM",
         "symbol": "AYI"
     },
@@ -2876,7 +2880,7 @@
         "symbol": "BWMX"
     },
     {
-        "name": "STATE STREET SPDR BLOOMBERG IN",
+        "name": "SPDR SERIES TRUST STATE STREET SPD",
         "symbol": "BWX"
     },
     {
@@ -3848,7 +3852,7 @@
         "symbol": "CNXN"
     },
     {
-        "name": "VANECK ETF TRUST CHINEXT ETF",
+        "name": "VANECK CHINEXT INNOVATORS ETF",
         "symbol": "CNXT"
     },
     {
@@ -4086,6 +4090,10 @@
     {
         "name": "COUPANG INC CL A",
         "symbol": "CPNG"
+    },
+    {
+        "name": "Tradr 2X Long CPNG Daily ETF",
+        "symbol": "CPNX"
     },
     {
         "name": "CAPRI HOLDINGS LIMITED SHS",
@@ -4598,10 +4606,6 @@
     {
         "name": "CLEARWAY ENERGY INC CL C",
         "symbol": "CWEN"
-    },
-    {
-        "name": "CLEARWAY ENERGY INC CL A",
-        "symbol": "CWEN.A"
     },
     {
         "name": "CAMPING WORLD HLDGS INC CL A",
@@ -5536,6 +5540,10 @@
         "symbol": "DYN"
     },
     {
+        "name": "DYNAMIX CORP SHS CL A",
+        "symbol": "DYNC"
+    },
+    {
         "name": "BLACKROCK ETF TRUST ISHARES US EQUIT",
         "symbol": "DYNF"
     },
@@ -5572,7 +5580,7 @@
         "symbol": "EBIZ"
     },
     {
-        "name": "STATE STREET SPDR BLOOMBERG EM",
+        "name": "SPDR SERIES TRUST SST SPDR BLOOMBE",
         "symbol": "EBND"
     },
     {
@@ -6158,10 +6166,6 @@
     {
         "name": "GRAYSCALE ETHEREUM STAKING ETF SHS",
         "symbol": "ETHE"
-    },
-    {
-        "name": "DYNAMIX CORP SHS CL A",
-        "symbol": "ETHM"
     },
     {
         "name": "PROSHARES TR ULTRA ETHER ETF",
@@ -7664,10 +7668,6 @@
         "symbol": "GDE"
     },
     {
-        "name": "GOLDEN ENTMT INC COM",
-        "symbol": "GDEN"
-    },
-    {
         "name": "GRAYSCALE DOGECOIN TR ETF SHS",
         "symbol": "GDOG"
     },
@@ -9088,7 +9088,7 @@
         "symbol": "IBN"
     },
     {
-        "name": "STATE STREET SPDR BLOOMBERG IN",
+        "name": "SPDR SERIES TRUST SST SPDR BLOOMBE",
         "symbol": "IBND"
     },
     {
@@ -11044,6 +11044,10 @@
         "symbol": "LITX"
     },
     {
+        "name": "Tradr 2X Short LITE Daily ETF",
+        "symbol": "LITZ"
+    },
+    {
         "name": "LIVANOVA PLC SHS",
         "symbol": "LIVN"
     },
@@ -11518,10 +11522,6 @@
     {
         "name": "SIMPLIFY EXCHANGE TRADED FUNDS BITCOIN STRATEGY",
         "symbol": "MAXI"
-    },
-    {
-        "name": "MAXEON SOLAR TECHNOLOGIES LTD SHS NEW",
-        "symbol": "MAXN"
     },
     {
         "name": "MAZE THERAPEUTICS INC COM",
@@ -12086,6 +12086,10 @@
     {
         "name": "MONOLITHIC PWR SYS INC COM",
         "symbol": "MPWR"
+    },
+    {
+        "name": "Tradr 2X Long MPWR Daily ETF",
+        "symbol": "MPWX"
     },
     {
         "name": "MARINE PRODS CORP COM",
@@ -16964,6 +16968,10 @@
         "symbol": "SNDL"
     },
     {
+        "name": "Tradr 2X Short SNDK Daily ETF",
+        "symbol": "SNDQ"
+    },
+    {
         "name": "SCHNEIDER NATIONAL INC CL B",
         "symbol": "SNDR"
     },
@@ -17642,6 +17650,10 @@
     {
         "name": "EA SERIES TRUST STRIVE EMERGING",
         "symbol": "STXE"
+    },
+    {
+        "name": "Tradr 2X Long STX Daily ETF",
+        "symbol": "STXX"
     },
     {
         "name": "CONSTELLATION BRANDS INC CL A",
@@ -20248,7 +20260,7 @@
         "symbol": "WING"
     },
     {
-        "name": "STATE STREET SPDR FTSE INTERNA",
+        "name": "SPDR SERIES TRUST STATE STREET SPD",
         "symbol": "WIP"
     },
     {
