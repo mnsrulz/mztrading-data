@@ -68,6 +68,15 @@ const ExpectedMoveRequestSchema = z.object({
     expiryMode: z.enum(["weekly", "monthly"])
 });
 
+const OhlcSchema = z.object({
+    symbol: z.string()
+        .nonempty()
+        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+    lookbackDays: z.number().int().positive(),
+    requestId: z.uuid(),
+    channel: z.string()
+});
+
 const DynamicSqlSchema = z.object({
     symbol: z.string()
         .nonempty()
@@ -143,6 +152,7 @@ type OptionsVolRequest = z.infer<typeof OptionsVolRequestSchema>;
 type OptionsStatsRequest = z.infer<typeof OptionsStatsSchema>;
 type ExpectedMoveRequest = z.infer<typeof ExpectedMoveRequestSchema>;
 type DynamicSqlRequest = z.infer<typeof DynamicSqlSchema>;
+type OhlcRequest = z.infer<typeof OhlcSchema>;
 
 /*
  {"symbol":"AAPL","lookbackDays":180,"delta":25,"expiration":"2025-11-07","mode":"delta","requestId":"977c5c7b-7e96-45d1-991b-db70992d0846"}       
@@ -360,6 +370,47 @@ const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
     }
 };
 
+const handleOhlcMessage = async (args: OhlcRequest) => {
+    try {
+        const { symbol, lookbackDays, requestId } = OhlcSchema.parse(args);
+        logger.info(`Ohlc request received: ${JSON.stringify(args)}`);
+
+        //const defaultOhlcData = { dt: [] as string[], open: [] as number[], high: [] as number[], low: [] as number[], close: [] as number[], iv30: [] as number[] };
+        const query = `
+            SELECT dt, underlying_open_price as open, underlying_high_price as high, 
+            underlying_low_price as low, underlying_close_price as close, underlying_iv30 as iv30
+            FROM T
+            WHERE T.dt >= current_date - ${lookbackDays}
+            ORDER BY dt
+        `
+
+        let rows;
+        let hasError = false;
+        try {
+
+            const result = await executeReaderInternal(symbol, query, 99999);
+            const [dt, open, high, low, close, iv30 ] = result.getColumnsJson();
+
+            rows = {
+                dt,
+                open,
+                high,
+                low,
+                close,
+                iv30
+            };
+        }
+        catch (err) {
+            logger.error({ err }, `error occurred while processing request`);
+            hasError = true;
+        }
+        await publish(requestId, hasError, rows, args.channel);
+        logger.debug(`Ohlc request finished${hasError ? ' with error.' : '!'}`);
+    } catch (error) {
+        logger.error({ err: error }, `Error processing Ohlc request`);
+    }
+};
+
 const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
     try {
         const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
@@ -511,9 +562,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    await handleExpectedMoveMessage({
+    await handleOhlcMessage({
         channel: 'test',
-        expiryMode: 'weekly',
         lookbackDays: 45,
         requestId: crypto.randomUUID(),
         symbol: 'COIN'
@@ -533,6 +583,7 @@ if (DEBUG_MODE) {
     emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
     emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
     emitter.on('expected-move-query', ({ data }) => handleExpectedMoveMessage(data as ExpectedMoveRequest));
+    emitter.on('ohlc-query', ({ data }) => handleOhlcMessage(data as OhlcRequest));
 
     await redisSubscriber.connect();
 
