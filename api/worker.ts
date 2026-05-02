@@ -380,7 +380,7 @@ const handleOhlcMessage = async (args: OhlcRequest) => {
         This method will return the actual ohlc for given range. We can also get it from yfinace apis.
         */
         const query = `
-            SELECT strftime(CASE 
+            SELECT DISTINCT strftime(CASE 
                 WHEN dayofweek(CAST(dt AS DATE)) = 1 THEN CAST(dt AS DATE) - INTERVAL 3 DAY 
                 ELSE CAST(dt AS DATE) - INTERVAL 1 DAY 
             END, '%Y-%m-%d') dt, underlying_open_price as open, underlying_high_price as high, 
