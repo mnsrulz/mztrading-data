@@ -376,8 +376,14 @@ const handleOhlcMessage = async (args: OhlcRequest) => {
         logger.info(`Ohlc request received: ${JSON.stringify(args)}`);
 
         //const defaultOhlcData = { dt: [] as string[], open: [] as number[], high: [] as number[], low: [] as number[], close: [] as number[], iv30: [] as number[] };
+        /*
+        This method will return the actual ohlc for given range. We can also get it from yfinace apis.
+        */
         const query = `
-            SELECT dt, underlying_open_price as open, underlying_high_price as high, 
+            SELECT strftime(CASE 
+                WHEN dayofweek(CAST(dt AS DATE)) = 1 THEN CAST(dt AS DATE) - INTERVAL 3 DAY 
+                ELSE CAST(dt AS DATE) - INTERVAL 1 DAY 
+            END, '%Y-%m-%d') dt, underlying_open_price as open, underlying_high_price as high, 
             underlying_low_price as low, underlying_close_price as close, underlying_iv30 as iv30
             FROM T
             WHERE T.dt >= current_date - ${lookbackDays}
