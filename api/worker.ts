@@ -478,16 +478,18 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     AND underlying_close_price > 0
                 ), T2 AS (
                     SELECT *,
-                    CAST(DATE_DIFF('day', dt, CAST(strftime(expiration, '%Y-%m-%d') as date)) AS INT) AS dte
+                    --CAST(DATE_DIFF('day', dt, CAST(strftime(expiration, '%Y-%m-%d') as date)) AS INT) AS dte
+                    DATE_DIFF('day', dt, expiration) AS dte
                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
                     -- this is to make sure we remove the first quote for each option contract when they appear for the very first time in the dataset, which likely represented by 0 OI, bid, ask, iv. we want to remove those data points because they can be very misleading for the analysis, especially for the newly listed contracts which usually have a lot of zero-OI quotes at the beginning.
                     QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
                 ), dataset AS (
                     SELECT T.dt AS quote_date,
-                    strftime(expiration, '%Y-%m-%d') AS expiration_date,
-                    dayofweek(CAST(expiration as date)) AS expiration_dow,
-                    CASE WHEN expiration_date = MAX(expiration_date) OVER (PARTITION BY date_trunc('week', CAST(expiration_date AS DATE))) THEN 1 ELSE 0 END AS is_weekly_expiration,
-                    CASE WHEN is_weekly_expiration = 1 AND day(CAST(expiration_date AS DATE)) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration,
+                    --strftime(expiration, '%Y-%m-%d') AS expiration_date,
+                    expiration AS expiration_date,
+                    dayofweek(expiration) AS expiration_dow,
+                    CASE WHEN expiration = MAX(expiration) OVER (PARTITION BY date_trunc('week', expiration)) THEN 1 ELSE 0 END AS is_weekly_expiration,
+                    CASE WHEN is_weekly_expiration = 1 AND day(expiration) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration,
                     dayofweek(CAST(T.dt as date)) AS quote_dow,
 
                     dte,
@@ -568,11 +570,18 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    await handleOhlcMessage({
+    // await handleOhlcMessage({
+    //     channel: 'test',
+    //     lookbackDays: 45,
+    //     requestId: crypto.randomUUID(),
+    //     symbol: 'COIN'
+    // })
+    await handleExpectedMoveMessage({
         channel: 'test',
         lookbackDays: 45,
         requestId: crypto.randomUUID(),
-        symbol: 'COIN'
+        symbol: 'COIN',
+        expiryMode: 'weekly'
     })
     //await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
 } else {
