@@ -3,7 +3,7 @@ import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
 
 import { createClient } from "npm:redis@^4.5";
-import { DuckDBInstance } from "npm:@duckdb/node-api@1.4.3-r.2";
+import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
 import Emittery from 'https://esm.sh/emittery@2.0.0';
 
 const emitter = new Emittery();
