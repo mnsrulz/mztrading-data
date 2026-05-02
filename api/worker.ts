@@ -484,16 +484,11 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     -- this is to make sure we remove the first quote for each option contract when they appear for the very first time in the dataset, which likely represented by 0 OI, bid, ask, iv. we want to remove those data points because they can be very misleading for the analysis, especially for the newly listed contracts which usually have a lot of zero-OI quotes at the beginning.
                     --QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
                     WHERE open_interest > 0 OR bid > 0 OR ask > 0 and volume > 0
-                ), dataset AS (
+                ), base AS (
                     SELECT T.dt AS quote_date,
-                    --strftime(expiration, '%Y-%m-%d') AS expiration_date,
                     expiration AS expiration_date,
-                    dayofweek(expiration) AS expiration_dow,
-                    CASE WHEN expiration = MAX(expiration) OVER (PARTITION BY date_trunc('week', expiration)) THEN 1 ELSE 0 END AS is_weekly_expiration,
-                    CASE WHEN is_weekly_expiration = 1 AND day(expiration) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration,
-                    dayofweek(CAST(T.dt as date)) AS quote_dow,
-
                     dte,
+                    
                     option_symbol AS option_ticker,
                     option_type,
                     strike AS strike_price,
@@ -514,32 +509,81 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     high AS option_high_price,
                     bid AS bid_price,
                     ask AS ask_price,
-                    round((bid + ask) / 2, 2) AS mid_price,
+                    underlying_symbol,
+                    underlying_open_price, underlying_high_price, underlying_low_price, underlying_close_price,
+                    underlying_iv30, underlying_volume
+                    FROM T2
+                    JOIN T ON T.dt = T2.dt
+                ), calc AS (
+                    SELECT *,
+                    dayofweek(CAST(quote_date as date)) AS quote_dow,
+                    dayofweek(expiration_date) AS expiration_dow,
+                    round((bid_price + ask_price) / 2, 2) AS mid_price,
+                    abs(strike_price - underlying_close_price) AS strike_distance,
+                    abs(strike_price - underlying_close_price) / underlying_close_price * 100 AS strike_distance_pct,
+                    max(expiration_date) OVER (
+                        PARTITION BY date_trunc('week', expiration_date)
+                    ) AS weekly_max_expiration
+                    FROM base
+                ), ranked AS (
+                    SELECT
+                        *,
+                        row_number() OVER (
+                            PARTITION BY quote_date, expiration_date, option_type
+                            ORDER BY strike_distance, strike_price
+                        ) AS atm_rank
+                    FROM calc
+                ), dataset AS (
+                    SELECT quote_date,
+                    expiration_date,
+                    expiration_dow,
+                    quote_dow,
+                    CASE WHEN expiration_date = weekly_max_expiration THEN 1 ELSE 0 END AS is_weekly_expiration,
+                    CASE WHEN expiration_date = weekly_max_expiration AND day(expiration_date) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration,
+                    dte,
+                    option_ticker,
+                    option_type,
+                    strike_price,
+                    open_interest,
+                    option_volume,
+
+                    delta,
+                    gamma,
+                    vega,
+                    theta,
+                    rho,
+
+                    theoretical_price,
+                    implied_volatility,
+
+                    option_open_price,
+                    option_high_price,
+                    bid_price,
+                    ask_price,
+                    mid_price,  
                     CASE
-                        WHEN open_interest > 1000 AND volume > 100 THEN 'HIGH'
+                        WHEN open_interest > 1000 AND option_volume > 100 THEN 'HIGH'
                         WHEN open_interest > 100 THEN 'MEDIUM'
                         ELSE 'LOW'
                     END AS liquidity_tier,
-                    volume / NULLIF(open_interest, 0) AS volume_oi_ratio,
+                    option_volume / NULLIF(open_interest, 0) AS volume_oi_ratio,
                     underlying_symbol,
                     underlying_open_price, underlying_high_price, underlying_low_price, underlying_close_price,
                     underlying_iv30, underlying_volume,
+                    
                     CASE
-                        WHEN ROW_NUMBER() OVER ( 
-                            PARTITION BY T2.dt, expiration, option_type 
-                            ORDER BY ABS(strike - underlying_close_price), strike 
-                        ) = 1 THEN 'ATM'
+                        WHEN atm_rank = 1 THEN 'ATM'
                         WHEN (
-                            (option_type = 'call' AND strike < underlying_close_price) OR
-                            (option_type = 'put'  AND strike > underlying_close_price)
+                            (option_type = 'call' AND strike_price < underlying_close_price) OR
+                            (option_type = 'put'  AND strike_price > underlying_close_price)
                         ) THEN 'ITM'
                         ELSE 'OTM'
                     END AS moneyness,
                     CASE
-                        WHEN (option_type = 'C' AND strike < underlying_close_price) OR
-                            (option_type = 'P'  AND strike > underlying_close_price)
-                            THEN -ABS(strike - underlying_close_price) / underlying_close_price * 100
-                        ELSE ABS(strike - underlying_close_price) / underlying_close_price * 100
+                        WHEN (option_type = 'C' AND strike_price < underlying_close_price) OR
+                            (option_type = 'P'  AND strike_price > underlying_close_price)
+                            THEN -(strike_distance_pct)
+                        ELSE strike_distance_pct
                     END AS moneyness_percent,
                     CASE
                         WHEN dte <= 7 THEN '0-7D'
@@ -547,8 +591,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                         WHEN dte <= 90 THEN '30-90D'
                         ELSE '90D+'
                     END AS expiry_bucket
-                    FROM T2
-                    JOIN T ON T.dt = T2.dt
+                    FROM ranked
                 )`;
 
     //log the time it took to complete it
