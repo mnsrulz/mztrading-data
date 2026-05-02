@@ -482,7 +482,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     DATE_DIFF('day', dt, expiration) AS dte
                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
                     -- this is to make sure we remove the first quote for each option contract when they appear for the very first time in the dataset, which likely represented by 0 OI, bid, ask, iv. we want to remove those data points because they can be very misleading for the analysis, especially for the newly listed contracts which usually have a lot of zero-OI quotes at the beginning.
-                    QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
+                    --QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
+                    WHERE open_interest > 0 OR bid > 0 OR ask > 0 and volume > 0
                 ), dataset AS (
                     SELECT T.dt AS quote_date,
                     --strftime(expiration, '%Y-%m-%d') AS expiration_date,
