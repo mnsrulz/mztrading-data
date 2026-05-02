@@ -58,6 +58,16 @@ const OptionsStatsSchema = z.object({
     channel: z.string()
 });
 
+const ExpectedMoveRequestSchema = z.object({
+    symbol: z.string()
+        .nonempty()
+        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+    lookbackDays: z.number().int().positive(),
+    requestId: z.uuid(),
+    channel: z.string(),
+    expiryMode: z.enum(["weekly", "monthly"])
+});
+
 const DynamicSqlSchema = z.object({
     symbol: z.string()
         .nonempty()
@@ -131,6 +141,7 @@ export const OptionsVolRequestSchema = z.intersection(
 
 type OptionsVolRequest = z.infer<typeof OptionsVolRequestSchema>;
 type OptionsStatsRequest = z.infer<typeof OptionsStatsSchema>;
+type ExpectedMoveRequest = z.infer<typeof ExpectedMoveRequestSchema>;
 type DynamicSqlRequest = z.infer<typeof DynamicSqlSchema>;
 
 /*
@@ -291,13 +302,71 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
     }
 };
 
+const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
+    try {
+        const { symbol, lookbackDays, requestId, expiryMode: mode } = ExpectedMoveRequestSchema.parse(args);
+        logger.info(`Expected Move request received: ${JSON.stringify(args)}`);
+
+        const query = `
+            SELECT quote_date as dt, underlying_close_price as last_close, straddle_price
+            --, high, low, weekly_close as close, strike_price, expected_move_percent, low, high,
+            --ROUND(CASE WHEN ABS(high/underlying_close_price-1) > ABS(low/underlying_close_price-1) THEN high/underlying_close_price-1
+            --ELSE low/underlying_close_price-1 END * 100, 2) AS actual_max_move_percent,
+            --ROUND((weekly_close/underlying_close_price-1) * 100, 2) AS actual_move_percent 
+            FROM (
+                SELECT quote_date, expiration_date, dte, strike_price, underlying_close_price,
+                round(SUM(mid_price),2) AS straddle_price, 
+                round((straddle_price/underlying_close_price)*100,2) as expected_move_percent
+                FROM dataset
+                WHERE moneyness = 'ATM'
+                AND quote_dow = 1
+                AND quote_date >= current_date - ${lookbackDays}
+                AND ${mode == 'weekly' ? 'dte <=7' : 'dte BETWEEN 24 AND 28'}
+                AND ${mode == 'weekly' ? 'is_weekly_expiration' : 'is_monthly_expiration'} = 1
+                GROUP BY quote_date, dte, strike_price, expiration_date, underlying_close_price
+            ) 
+            --LEFT JOIN (
+            --    SELECT CAST(date_trunc(${mode == 'weekly' ? "'week'" : "'month'"}, CAST(quote_date as date) - 1) AS STRING) AS start, 
+            --    MAX(underlying_high_price) high, 
+            --    MIN(underlying_low_price) low,
+            --    arg_max(underlying_close_price, quote_date) AS weekly_close
+            --    FROM dataset
+            --    GROUP BY start
+            --) WT ON WT.start = CAST(date_trunc(${mode == 'weekly' ? "'week'" : "'month'"}, CAST(quote_date as date)) AS STRING)
+            ORDER BY quote_date
+        `
+
+        let rows;
+        let hasError = false;
+        try {
+
+            const result = await executeReaderInternal(symbol, query, 99999);
+            const [dt, last_close, straddle_price] = result.getColumnsJson();
+
+            rows = {
+                dt,
+                last_close,
+                straddle_price
+            };
+        }
+        catch (err) {
+            logger.error({ err }, `error occurred while processing request`);
+            hasError = true;
+        }
+        await publish(requestId, hasError, rows, args.channel);
+        logger.debug(`Expected Move request finished${hasError ? ' with error.' : '!'}`);
+    } catch (error) {
+        logger.error({ err: error }, `Error processing Expected move request`);
+    }
+};
+
 const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
     try {
         const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
         let rows: { rows: any[], columns: any } = { rows: [], columns: null };
         let hasError = false;
         try {
-            const result = await executeReaderInternal(symbol, sql);    
+            const result = await executeReaderInternal(symbol, sql);
             rows = { rows: result.getRowsJson(), columns: result.columnNamesAndTypesJson() };
         }
         catch (err) {
@@ -313,6 +382,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
 };
 
 async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
+    if (DEBUG_MODE) return;
     const payload = {
         requestId: requestId,
         hasError,
@@ -441,7 +511,14 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
+    await handleExpectedMoveMessage({
+        channel: 'test',
+        expiryMode: 'weekly',
+        lookbackDays: 45,
+        requestId: crypto.randomUUID(),
+        symbol: 'COIN'
+    })
+    //await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
 } else {
     const shutdown = () => {
         logger.info(`shutting down...`);
@@ -455,7 +532,7 @@ if (DEBUG_MODE) {
     emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
     emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
     emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
-
+    emitter.on('expected-move-query', ({ data }) => handleExpectedMoveMessage(data as ExpectedMoveRequest));
 
     await redisSubscriber.connect();
 
