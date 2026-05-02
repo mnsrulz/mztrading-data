@@ -386,7 +386,7 @@ const handleOhlcMessage = async (args: OhlcRequest) => {
             END, '%Y-%m-%d') dt, underlying_open_price as open, underlying_high_price as high, 
             underlying_low_price as low, underlying_close_price as close, underlying_iv30 as iv30
             FROM T
-            WHERE T.dt >= current_date - ${lookbackDays}
+            WHERE T.dt >= current_date - ${lookbackDays} AND dayofweek(dt) <> 6 --EXCLUDE SATURDAYS LEGACY DATA 
             ORDER BY dt
         `
 
