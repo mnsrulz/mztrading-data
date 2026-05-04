@@ -3852,7 +3852,7 @@
         "symbol": "CNXN"
     },
     {
-        "name": "VANECK CHINEXT INNOVATORS ETF",
+        "name": "VANECK ETF TRUST CHINEXT INNOVATO",
         "symbol": "CNXT"
     },
     {
@@ -6736,7 +6736,7 @@
         "symbol": "FEPI"
     },
     {
-        "name": "FERROVIAL SE ORD SHS",
+        "name": "FERROVIAL NV",
         "symbol": "FER"
     },
     {
@@ -11524,6 +11524,10 @@
         "symbol": "MAXI"
     },
     {
+        "name": "MAXEON SOLAR TECHNOLOGIES LTD SHS NEW",
+        "symbol": "MAXNQ"
+    },
+    {
         "name": "MAZE THERAPEUTICS INC COM",
         "symbol": "MAZE"
     },
@@ -11686,10 +11690,6 @@
     {
         "name": "MEDPACE HLDGS INC COM",
         "symbol": "MEDP"
-    },
-    {
-        "name": "MONTROSE ENVIRONMENTAL GROUP I COM",
-        "symbol": "MEG"
     },
     {
         "name": "METHODE ELECTRS INC COM",
@@ -12406,10 +12406,6 @@
     {
         "name": "MAGNACHIP SEMICONDUCTOR CORP COM",
         "symbol": "MX"
-    },
-    {
-        "name": "MSCI ACWI Net Total Return USD Index",
-        "symbol": "MXACW"
     },
     {
         "name": "MAXCYTE INC COM",
@@ -13530,6 +13526,10 @@
     {
         "name": "ON HLDG AG NAMEN AKT A",
         "symbol": "ONON"
+    },
+    {
+        "name": "ONTERRIS INC",
+        "symbol": "ONT"
     },
     {
         "name": "ONTO INNOVATION INC COM",
@@ -17558,10 +17558,6 @@
     {
         "name": "SOL STRATEGIES INC COM",
         "symbol": "STKE"
-    },
-    {
-        "name": "SUNOPTA INC COM",
-        "symbol": "STKL"
     },
     {
         "name": "THE ONE GROUP HOSPITALITY INC COM",
