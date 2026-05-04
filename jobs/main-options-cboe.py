@@ -40,6 +40,7 @@ print(f"Found {len(symbols)} symbols: {symbols}", flush=True)
 all_stock_data = []
 all_options_data = []
 retries = 5
+retry_delay_base = 3    # retry exponential back off base delay
 processed_symbols_success_count = 0
 processed_symbols_failed_count = 0
 retry_codes = [
@@ -113,11 +114,11 @@ for symbol in symbols:
                 code = exc.response.status_code            
                 if code in retry_codes:                    
                     retry_after = exc.response.headers.get('Retry-After')
-                    if retry_after:
+                    if retry_after is not None and int(retry_after) > 0:
                         print(f"Retry-After header present with value: {retry_after}", flush=True)
                         sleep_time = int(retry_after)
                     else:
-                        sleep_time = 10*(n+1)
+                        sleep_time = retry_delay_base * (2 ** n)
                     # retry after n seconds
                     print(f"Http error '{code}' occurred while fetching data for symbol: {symbol}... Sleeping for {sleep_time} seconds", flush=True)
                     time.sleep(sleep_time)
