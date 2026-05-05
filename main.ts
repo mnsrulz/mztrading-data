@@ -20,7 +20,8 @@ import {
     searchTicker,
     getSnapshotsAvailableForDate,
     getSnapshotsAvailableForSymbol,
-    getSymbolExpirations
+    getSymbolExpirations,
+    allTickerSymbols
 } from "./lib/data.ts";
 const stream = pretty({
   singleLine: true,
@@ -89,6 +90,11 @@ router.get("/", (context) => {
         //api/symbols/search?q=t
         const { q } = getQuery(context);
         const items = searchTicker(q);
+        context.response.body = items;
+    })
+    .get("/api/symbols/all", (context) => {
+        //api/symbols/all
+        const items = allTickerSymbols;
         context.response.body = items;
     })
     .get("/api/stocks/:symbol/indicators", async (context) => {

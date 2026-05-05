@@ -182,7 +182,7 @@ export const ghRepoBaseUrl = 'https://github.com/mnsrulz/mztrading-data/releases
 
 export const cleanSymbol = (symbol: string) => decodeURIComponent(symbol).replace(/\W/g, '');
 
-const allTickerSymbols = symbols as TickerSymbol[]
+export const allTickerSymbols = symbols as TickerSymbol[]
 
 const fuse = new Fuse(allTickerSymbols, {
     keys: ["symbol", "name"],
