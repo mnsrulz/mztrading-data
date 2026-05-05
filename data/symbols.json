@@ -6712,10 +6712,6 @@
         "symbol": "FEM"
     },
     {
-        "name": "FIRST TR EXCH TRD ALPHDX FD II EM SML CP ALPH",
-        "symbol": "FEMS"
-    },
-    {
         "name": "FENNEC PHARMACEUTICALS INC COM",
         "symbol": "FENC"
     },
@@ -7832,10 +7828,6 @@
         "symbol": "GHRS"
     },
     {
-        "name": "GOLDMAN SACHS ETF TR ACCESS HIG YLD",
-        "symbol": "GHYB"
-    },
-    {
         "name": "CGI INC CL A SUB VTG",
         "symbol": "GIB"
     },
@@ -7846,10 +7838,6 @@
     {
         "name": "REX Growth & Income Universe ETF",
         "symbol": "GIF"
-    },
-    {
-        "name": "GOLDMAN SACHS ETF TR ACCESS INVT GR",
-        "symbol": "GIGB"
     },
     {
         "name": "SPDR INDEX SHS FDS STATE STREET SPD",
@@ -9264,10 +9252,6 @@
         "symbol": "IFF"
     },
     {
-        "name": "ISHARES TR INTL DEV RE ETF",
-        "symbol": "IFGL"
-    },
-    {
         "name": "INVESCO EXCHANGE-TRADED FD TR BLOOMBERG ENHANC",
         "symbol": "IFLN"
     },
@@ -9550,10 +9534,6 @@
     {
         "name": "INGREDION INC COM",
         "symbol": "INGR"
-    },
-    {
-        "name": "SSGA ACTIVE ETF TR STATE STREET INC",
-        "symbol": "INKM"
     },
     {
         "name": "INMUNE BIO INC COM",
@@ -10702,10 +10682,6 @@
     {
         "name": "KURA ONCOLOGY INC COM",
         "symbol": "KURA"
-    },
-    {
-        "name": "KRANESHARES TRUST KRANESHARES VALU",
-        "symbol": "KVLE"
     },
     {
         "name": "KENVUE INC COM",
@@ -13236,10 +13212,6 @@
         "symbol": "NXT"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II AXS GREEN ALPHA",
-        "symbol": "NXTE"
-    },
-    {
         "name": "NEW YORK TIMES CO MTN BE CL A",
         "symbol": "NYT"
     },
@@ -13500,10 +13472,6 @@
         "symbol": "ONDU"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
-        "symbol": "ONEO"
-    },
-    {
         "name": "FIDELITY COMWLTH TR NASDAQ COMPSIT",
         "symbol": "ONEQ"
     },
@@ -13528,7 +13496,7 @@
         "symbol": "ONON"
     },
     {
-        "name": "ONTERRIS INC",
+        "name": "ONTERRIS INC COM",
         "symbol": "ONT"
     },
     {
@@ -13754,14 +13722,6 @@
     {
         "name": "OVID THERAPEUTICS INC COM",
         "symbol": "OVID"
-    },
-    {
-        "name": "Overlay Shares Hedged Large Cap Equity ETF",
-        "symbol": "OVLH"
-    },
-    {
-        "name": "Overlay Shares Short Term Bond ETF",
-        "symbol": "OVT"
     },
     {
         "name": "OVINTIV INC COM",
@@ -14692,10 +14652,6 @@
         "symbol": "PSEC"
     },
     {
-        "name": "Innovator U.S. Equity Power Buffer ETF - September",
-        "symbol": "PSEP"
-    },
-    {
         "name": "PAYSAFE LIMITED SHS",
         "symbol": "PSFE"
     },
@@ -15116,10 +15072,6 @@
         "symbol": "QVMT"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
-        "symbol": "QWLD"
-    },
-    {
         "name": "QXO INC COM NEW",
         "symbol": "QXO"
     },
@@ -15398,10 +15350,6 @@
     {
         "name": "REGIONS FINANCIAL CORP NEW COM",
         "symbol": "RF"
-    },
-    {
-        "name": "INVESCO EXCHANGE TRADED FD TR S&P MDCP400 PR",
-        "symbol": "RFG"
     },
     {
         "name": "RF INDS LTD COM PAR $0.01",
@@ -16434,10 +16382,6 @@
     {
         "name": "SIGMA LITHIUM CORPORATION COM",
         "symbol": "SGML"
-    },
-    {
-        "name": "SANGAMO THERAPEUTICS INC COM",
-        "symbol": "SGMO"
     },
     {
         "name": "SAGIMET BIOSCIENCES INC COM SER A",
@@ -18300,10 +18244,6 @@
         "symbol": "TMCI"
     },
     {
-        "name": "ProShares Russell US Dividend Growers ETF",
-        "symbol": "TMDV"
-    },
-    {
         "name": "TRANSMEDICS GROUP INC COM",
         "symbol": "TMDX"
     },
@@ -19268,10 +19208,6 @@
         "symbol": "USMC"
     },
     {
-        "name": "WisdomTree U.S. Multifactor Fund",
-        "symbol": "USMF"
-    },
-    {
         "name": "iShares MSCI USA Min Vol Factor ETF",
         "symbol": "USMV"
     },
@@ -19446,10 +19382,6 @@
     {
         "name": "VANGUARD WORLD FD CONSUM DIS ETF",
         "symbol": "VCR"
-    },
-    {
-        "name": "VANGUARD MALVERN FDS CORE BD ETF",
-        "symbol": "VCRB"
     },
     {
         "name": "VANGUARD SCOTTSDALE FDS SHRT TRM CORP BD",
