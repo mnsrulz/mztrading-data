@@ -318,7 +318,7 @@ const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
         logger.info(`Expected Move request received: ${JSON.stringify(args)}`);
 
         const query = `
-            SELECT quote_date as dt, underlying_close_price as last_close, straddle_price
+            SELECT quote_date as dt, underlying_close_price as last_close, straddle_price, expiration_date AS expiry
             --, high, low, weekly_close as close, strike_price, expected_move_percent, low, high,
             --ROUND(CASE WHEN ABS(high/underlying_close_price-1) > ABS(low/underlying_close_price-1) THEN high/underlying_close_price-1
             --ELSE low/underlying_close_price-1 END * 100, 2) AS actual_max_move_percent,
@@ -351,12 +351,13 @@ const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
         try {
 
             const result = await executeReaderInternal(symbol, query, 99999);
-            const [dt, last_close, straddle_price] = result.getColumnsJson();
+            const [dt, last_close, straddle_price, expiry] = result.getColumnsJson();
 
             rows = {
                 dt,
                 last_close,
-                straddle_price
+                straddle_price,
+                expiry
             };
         }
         catch (err) {
@@ -602,7 +603,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                 SELECT * FROM (    
                     ${sql}
                     ) LIMITED_CTE ${limitClause}
-            ) t`);
+            )`);
     const end = performance.now();
     logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
 
