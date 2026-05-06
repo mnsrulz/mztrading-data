@@ -7408,10 +7408,6 @@
         "symbol": "FTS"
     },
     {
-        "name": "FIRST TR EXCHANGE-TRADED FD IV FIRST TR ENH NEW",
-        "symbol": "FTSM"
-    },
-    {
         "name": "FORTIVE CORP COM",
         "symbol": "FTV"
     },
@@ -9332,10 +9328,6 @@
         "symbol": "IHS"
     },
     {
-        "name": "VANECK ETF TRUST INTERNATIONAL HI",
-        "symbol": "IHY"
-    },
-    {
         "name": "INFORMATION SVCS GROUP INC COM",
         "symbol": "III"
     },
@@ -10110,10 +10102,6 @@
     {
         "name": "JOHNSON CONTROLS INTERNATION SHS",
         "symbol": "JCI"
-    },
-    {
-        "name": "J P MORGAN EXCHANGE TRADED FD INFLATION MANAGE",
-        "symbol": "JCPI"
     },
     {
         "name": "JD.COM INC SPON ADS CL A",
@@ -11884,10 +11872,6 @@
         "symbol": "MLM"
     },
     {
-        "name": "VanEck Long Muni ETF",
-        "symbol": "MLN"
-    },
-    {
         "name": "GLOBAL X FDS GLBL X MLP ETF",
         "symbol": "MLPA"
     },
@@ -13216,10 +13200,6 @@
         "symbol": "NYT"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
-        "symbol": "NZUS"
-    },
-    {
         "name": "REALTY INCOME CORP COM",
         "symbol": "O"
     },
@@ -14258,10 +14238,6 @@
     {
         "name": "PARK-OHIO HLDGS CORP COM",
         "symbol": "PKOH"
-    },
-    {
-        "name": "PEAKSTONE REALTY TRUST COMMON SHARES",
-        "symbol": "PKST"
     },
     {
         "name": "INVESCO EXCHANGE TRADED FD TR BUYBACK ACHIEV",
@@ -15822,10 +15798,6 @@
     {
         "name": "PROSHARES TR SHRT RUSSELL2000",
         "symbol": "RWM"
-    },
-    {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
-        "symbol": "RWO"
     },
     {
         "name": "SPDR SERIES TRUST STATE STREET SPD",
@@ -17912,10 +17884,6 @@
         "symbol": "TDS"
     },
     {
-        "name": "EXCHANGE LISTED FDS TR ETC CABANA TARGT",
-        "symbol": "TDSC"
-    },
-    {
         "name": "FLEXSHARES TR IBOXX 3R TARGT",
         "symbol": "TDTT"
     },
@@ -18002,10 +17970,6 @@
     {
         "name": "THEMES ETF TR LEVERAGE SHS 2X",
         "symbol": "TERG"
-    },
-    {
-        "name": "TERNS PHARMACEUTICALS INC COM",
-        "symbol": "TERN"
     },
     {
         "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
