@@ -1320,7 +1320,7 @@
         "symbol": "ARMG"
     },
     {
-        "name": "ARAMARK HOLDINGS CORP COM",
+        "name": "ARAMARK COM",
         "symbol": "ARMK"
     },
     {
@@ -3208,7 +3208,7 @@
         "symbol": "CCK"
     },
     {
-        "name": "CARNIVAL CORP COMMON STOCK",
+        "name": "CARNIVAL CORP LTD",
         "symbol": "CCL"
     },
     {
@@ -4424,10 +4424,6 @@
         "symbol": "CTOS"
     },
     {
-        "name": "COTERRA ENERGY INC COM",
-        "symbol": "CTRA"
-    },
-    {
         "name": "CARETRUST REIT INC COM",
         "symbol": "CTRE"
     },
@@ -4470,10 +4466,6 @@
     {
         "name": "CUE BIOPHARMA INC COM",
         "symbol": "CUE"
-    },
-    {
-        "name": "CARNIVAL PLC ADS",
-        "symbol": "CUK"
     },
     {
         "name": "CULP INC COM",
