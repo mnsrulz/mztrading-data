@@ -5,6 +5,7 @@ import pretty from "https://esm.sh/pino-pretty@10.3.0";
 import { createClient } from "npm:redis@^4.5";
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
 import Emittery from 'https://esm.sh/emittery@2.0.0';
+import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 
 const emitter = new Emittery();
 
@@ -12,6 +13,7 @@ const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
+const PUSHER_APP_KEY = Deno.env.get('PUSHER_APP_KEY');
 const REDIS_URI = Deno.env.get('REDIS_URI');
 const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
 
@@ -25,6 +27,14 @@ const redisSubscriber = createClient({
         }
     }
 });
+
+const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
+const pusherClient = new PusherJS(PUSHER_APP_KEY || '', {
+    cluster: Deno.env.get('PUSHER_APP_CLUSTER') || 'us2',
+});
+
+const channel = pusherClient.subscribe(channelName);
+
 const duckDbInstance = await DuckDBInstance.create(":memory:");
 
 const stream = pretty({
@@ -396,7 +406,7 @@ const handleOhlcMessage = async (args: OhlcRequest) => {
         try {
 
             const result = await executeReaderInternal(symbol, query, 99999);
-            const [dt, open, high, low, close, iv30 ] = result.getColumnsJson();
+            const [dt, open, high, low, close, iv30] = result.getColumnsJson();
 
             rows = {
                 dt,
@@ -612,6 +622,21 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
     return result;
 }
 
+async function initRedisSubscription() {
+    try {
+        await redisSubscriber.connect();
+    
+        await redisSubscriber.subscribe('worker-request', (message) => {
+            logger.info(`Received message from Redis on worker-request channel`);
+            const data = JSON.parse(message) as { requestType: string };
+            emitter.emit(data.requestType, data);
+        });
+    } catch (error) {
+        logger.error({ err: error }, `error occurred while initializing the redis subscription.`);
+        Deno.exit(1);   //Better to exit the process.
+    }
+}
+
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
@@ -645,12 +670,18 @@ if (DEBUG_MODE) {
     emitter.on('expected-move-query', ({ data }) => handleExpectedMoveMessage(data as ExpectedMoveRequest));
     emitter.on('ohlc-query', ({ data }) => handleOhlcMessage(data as OhlcRequest));
 
-    await redisSubscriber.connect();
+    await initRedisSubscription();
 
-    await redisSubscriber.subscribe('worker-request', (message) => {
-        logger.info(`Received message from Redis on worker-request channel`);
-        const data = JSON.parse(message) as { requestType: string };
-        emitter.emit(data.requestType, data);
+    channel.bind('query-timeout', async (args: any) => {
+        logger.info(`query timeout received for event: ${JSON.stringify(args)}`);
+
+        try {
+            await redisSubscriber.quit();
+        } catch (error) {
+            logger.error({ err: error }, `error occurred while disconnecting the redis subscription. Will continue new subscription`);
+        }
+
+        await initRedisSubscription();
     });
 
     Deno.addSignalListener("SIGTERM", shutdown);
