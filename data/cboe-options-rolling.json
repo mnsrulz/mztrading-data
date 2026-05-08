@@ -80649,5 +80649,6 @@
             "symbol": "XEL",
             "dt": "2026-05-08"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-05-08/options_cboe_oi_anomaly.parquet"
 }
