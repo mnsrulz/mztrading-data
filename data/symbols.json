@@ -504,6 +504,10 @@
         "symbol": "AGNG"
     },
     {
+        "name": "EXP WORLD HLDGS INC COM",
+        "symbol": "AGNT"
+    },
+    {
         "name": "ASSURED GUARANTY LTD COM",
         "symbol": "AGO"
     },
@@ -3208,7 +3212,7 @@
         "symbol": "CCK"
     },
     {
-        "name": "CARNIVAL CORP LTD",
+        "name": "CARNIVAL CORP LTD COMMON SHARES",
         "symbol": "CCL"
     },
     {
@@ -6424,10 +6428,6 @@
         "symbol": "EXPE"
     },
     {
-        "name": "EXP WORLD HLDGS INC COM",
-        "symbol": "EXPI"
-    },
-    {
         "name": "EXPONENT INC COM",
         "symbol": "EXPO"
     },
@@ -7914,10 +7914,6 @@
     {
         "name": "GLOBAL PARTNERS LP COM UNITS",
         "symbol": "GLP"
-    },
-    {
-        "name": "GALAPAGOS NV SPON ADR",
-        "symbol": "GLPG"
     },
     {
         "name": "GAMING & LEISURE P COM",
@@ -10376,7 +10372,7 @@
         "symbol": "KFRC"
     },
     {
-        "name": "KINGSWAY FINL SVCS INC COM NEW",
+        "name": "KINGSWAY FINL SERVICES INC COM NEW",
         "symbol": "KFS"
     },
     {
@@ -11010,6 +11006,10 @@
     {
         "name": "LAKELAND FINL CORP COM",
         "symbol": "LKFN"
+    },
+    {
+        "name": "LAKEFRONT BIOTHERAPEUTICS",
+        "symbol": "LKFT"
     },
     {
         "name": "LKQ CORP COM",
