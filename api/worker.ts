@@ -1,6 +1,7 @@
 import { z } from "https://esm.sh/zod@4.3.6";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
+import pinologtail from "https://esm.sh/@logtail/pino@0.5.8";
 
 import { createClient } from "npm:redis@^4.5";
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
@@ -15,6 +16,7 @@ const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const PUSHER_APP_KEY = Deno.env.get('PUSHER_APP_KEY');
 const REDIS_URI = Deno.env.get('REDIS_URI');
+const LOGTAIL_TOKEN = Deno.env.get('LOGTAIL_TOKEN');
 const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
 
 const redisSubscriber = createClient({
@@ -44,14 +46,26 @@ const stream = pretty({
     messageFormat: (log, messageKey) => { return `${log[messageKey]}` },
 });
 
+const pinoStreams = [stream];
+
+if (LOGTAIL_TOKEN) {
+    const logTailStream = await pinologtail({
+        options: {
+            
+            
+        },
+        sourceToken: LOGTAIL_TOKEN
+    });
+    pinoStreams.push(logTailStream);
+}
+
 const logger = pino({
     level: LOG_LEVEL
-}, stream);
+}, pino.multistream(pinoStreams));
 
 BigInt.prototype.toJSON = function () {
     return Number(this.toString());
 };
-
 
 const WorkerRequestSchema = z.object({
     requestType: z.enum(["volatility-query", "options-stat-query"]),
@@ -607,13 +621,17 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 
     //log the time it took to complete it
     const start = performance.now();
-    const result = await connection.runAndReadAll(`${baseQueryCte}
+    const finalQuery = `
+            -----BEGIN QUERY----
+            ${baseQueryCte}
             --SELECT json_group_array(t) FROM (    
             SELECT * FROM (
                 SELECT * FROM (    
                     ${sql}
                     ) LIMITED_CTE ${limitClause}
-            )`);
+            )`
+    logger.info(`Executing query: ${finalQuery}`)
+    const result = await connection.runAndReadAll(finalQuery);
     const end = performance.now();
     logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
 
@@ -625,7 +643,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 async function initRedisSubscription() {
     try {
         await redisSubscriber.connect();
-    
+
         await redisSubscriber.subscribe('worker-request', (message) => {
             logger.info(`Received message from Redis on worker-request channel`);
             const data = JSON.parse(message) as { requestType: string };
