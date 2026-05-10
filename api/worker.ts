@@ -51,8 +51,8 @@ const pinoStreams = [stream];
 if (LOGTAIL_TOKEN) {
     const logTailStream = await pinologtail({
         options: {
-            
-            
+
+
         },
         sourceToken: LOGTAIL_TOKEN
     });
@@ -645,9 +645,13 @@ async function initRedisSubscription() {
         await redisSubscriber.connect();
 
         await redisSubscriber.subscribe('worker-request', (message) => {
-            logger.info(`Received message from Redis on worker-request channel`);
-            const data = JSON.parse(message) as { requestType: string };
-            emitter.emit(data.requestType, data);
+            try {
+                const data = JSON.parse(message) as { requestType: string };
+                logger.info(`Received message from Redis on worker-request channel: ${JSON.stringify(data)}`);
+                emitter.emit(data.requestType, data);
+            } catch (error) {
+                logger.error({ err: error }, `Error while emitting message on worker-request channel: ${message}`);
+            }
         });
     } catch (error) {
         logger.error({ err: error }, `error occurred while initializing the redis subscription.`);
