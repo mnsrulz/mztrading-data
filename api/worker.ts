@@ -7,6 +7,7 @@ import { createClient } from "npm:redis@^4.5";
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
 import Emittery from 'https://esm.sh/emittery@2.0.0';
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
+import pRetry from 'https://esm.sh/p-retry@8.0.0';
 
 const emitter = new Emittery();
 
@@ -471,13 +472,17 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
         value: rows
     };
 
-    //this is for publishing the message so any subscriber can listen to.
-    const redisPublisher = redisSubscriber.duplicate();
-    await redisPublisher.connect();
+    const publishInternal = async () => {
+        //this is for publishing the message so any subscriber can listen to.
+        const redisPublisher = redisSubscriber.duplicate();
+        await redisPublisher.connect();
 
-    const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
-    redisPublisher.quit();
-    logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
+        const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
+        redisPublisher.quit();
+        logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
+    }
+    await pRetry(publishInternal, { retries: 3 });
+
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
@@ -698,6 +703,7 @@ if (DEBUG_MODE) {
         logger.info(`query timeout received for event: ${JSON.stringify(args)}`);
 
         try {
+            await redisSubscriber.unsubscribe('worker-request');
             await redisSubscriber.quit();
         } catch (error) {
             logger.error({ err: error }, `error occurred while disconnecting the redis subscription. Will continue new subscription`);
