@@ -2684,6 +2684,10 @@
         "symbol": "BRT"
     },
     {
+        "name": "BOOST RUN INC",
+        "symbol": "BRUN"
+    },
+    {
         "name": "BRIXMOR PPTY GROUP INC COM",
         "symbol": "BRX"
     },
@@ -4406,10 +4410,6 @@
     {
         "name": "CYTEK BIOSCIENCES INC COM",
         "symbol": "CTKB"
-    },
-    {
-        "name": "CANTALOUPE INC COM",
-        "symbol": "CTLP"
     },
     {
         "name": "CYTOMX THERAPEUTICS INC. COM",
@@ -6304,10 +6304,6 @@
         "symbol": "EWC"
     },
     {
-        "name": "EUROPEAN WAX CTR INC CLASS A COM",
-        "symbol": "EWCZ"
-    },
-    {
         "name": "ISHARES INC MSCI SWEDEN ETF",
         "symbol": "EWD"
     },
@@ -6948,7 +6944,7 @@
         "symbol": "FLEU"
     },
     {
-        "name": "FLEXTRONICS INTL LTD ORD",
+        "name": "FLEX LTD ORD",
         "symbol": "FLEX"
     },
     {
@@ -7072,7 +7068,7 @@
         "symbol": "FMC"
     },
     {
-        "name": "FIDELITY COVINGTON TRUST ENHANCED MID",
+        "name": "FIDELITY ENHANCED MID CAP CORE",
         "symbol": "FMDE"
     },
     {
@@ -11008,7 +11004,7 @@
         "symbol": "LKFN"
     },
     {
-        "name": "LAKEFRONT BIOTHERAPEUTICS",
+        "name": "LAKEFRONT BIOTHERAPEUTICS NV SPON ADR",
         "symbol": "LKFT"
     },
     {
@@ -17984,7 +17980,7 @@
         "symbol": "TFC"
     },
     {
-        "name": "TRANSFORCE INC COM",
+        "name": "TFI INTERNATIONAL INC COM",
         "symbol": "TFII"
     },
     {
@@ -20162,10 +20158,6 @@
     {
         "name": "WORLD KINECT CORPORATION COM",
         "symbol": "WKC"
-    },
-    {
-        "name": "WILLOW LANE ACQUISITION CORP. ORD SHS CL A",
-        "symbol": "WLAC"
     },
     {
         "name": "WILLDAN GROUP INC COM",
