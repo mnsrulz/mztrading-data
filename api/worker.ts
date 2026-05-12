@@ -20,7 +20,7 @@ const REDIS_URI = Deno.env.get('REDIS_URI');
 const LOGTAIL_TOKEN = Deno.env.get('LOGTAIL_TOKEN');
 const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
 
-const redisSubscriber = createClient({
+let redisSubscriber = createClient({
     url: REDIS_URI,
     socket: {
         keepAlive: 30000,
@@ -647,6 +647,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 
 async function initRedisSubscription() {
     try {
+        redisSubscriber = redisSubscriber.duplicate();
+
         await redisSubscriber.connect();
 
         await redisSubscriber.subscribe('worker-request', (message) => {
@@ -689,6 +691,7 @@ if (DEBUG_MODE) {
             Deno.exit(0);
         }, 100);
 
+        pusherClient.disconnect();
         logger.info("will shut down in 100ms")
     }
     emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
