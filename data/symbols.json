@@ -1820,6 +1820,10 @@
         "symbol": "AXTI"
     },
     {
+        "name": "T-REX 2X Long AXTI Daily Target ETF",
+        "symbol": "AXTU"
+    },
+    {
         "name": "Tradr 2X Long AXTI Daily ETF",
         "symbol": "AXTX"
     },
@@ -2684,7 +2688,7 @@
         "symbol": "BRT"
     },
     {
-        "name": "BOOST RUN INC",
+        "name": "BOOST RUN INC ORD SHS CL A",
         "symbol": "BRUN"
     },
     {
@@ -3564,6 +3568,10 @@
         "symbol": "CINF"
     },
     {
+        "name": "CINGULATE INC COM",
+        "symbol": "CING"
+    },
+    {
         "name": "CI&T INC COM CL A",
         "symbol": "CINT"
     },
@@ -4342,6 +4350,10 @@
     {
         "name": "CSG SYS INTL INC COM",
         "symbol": "CSGS"
+    },
+    {
+        "name": "COINSHARES PLC COM",
+        "symbol": "CSHR"
     },
     {
         "name": "CANADIAN SOLAR INC COM",
@@ -5602,6 +5614,10 @@
     {
         "name": "ISHARES TR CHINA SM-CAP ETF",
         "symbol": "ECNS"
+    },
+    {
+        "name": "OKEANIS ECO TANKERS COR SHS",
+        "symbol": "ECO"
     },
     {
         "name": "COLUMBIA ETF TR II RESEARCH ENHANCD",
@@ -7068,7 +7084,7 @@
         "symbol": "FMC"
     },
     {
-        "name": "FIDELITY ENHANCED MID CAP CORE",
+        "name": "FIDELITY COVINGTON TRUST ENHANCED MID CAP",
         "symbol": "FMDE"
     },
     {
@@ -9680,6 +9696,10 @@
         "symbol": "IPSC"
     },
     {
+        "name": "IPERIONX LTD SPONSORED ADS",
+        "symbol": "IPX"
+    },
+    {
         "name": "IQIYI INC SPONSORED ADS",
         "symbol": "IQ"
     },
@@ -10698,10 +10718,6 @@
     {
         "name": "KAZIA THERAPEUTICS LTD SPONSORED ADS",
         "symbol": "KZIA"
-    },
-    {
-        "name": "KEZAR LIFE SCIENCES INC COM NEW",
-        "symbol": "KZR"
     },
     {
         "name": "LOEWS CORP COM",
@@ -11912,7 +11928,7 @@
         "symbol": "MMYT"
     },
     {
-        "name": "NEW YORK LIFE INVESTMENTS ETF NYLI MERGER ARBI",
+        "name": "NEW YORK LIFE INVESTMENTS ETF MERGER ARBITRAGE",
         "symbol": "MNA"
     },
     {
@@ -12682,6 +12698,10 @@
     {
         "name": "NATIONAL HEALTH INVS INC COM",
         "symbol": "NHI"
+    },
+    {
+        "name": "NATIONAL HEALTHCARE PPTYS INC COM CLASS A",
+        "symbol": "NHP"
     },
     {
         "name": "NATURAL HEALTH TRENDS CORP COM",
@@ -13844,6 +13864,10 @@
         "symbol": "PAYO"
     },
     {
+        "name": "PAYPAY CORP SPONSORED ADS",
+        "symbol": "PAYP"
+    },
+    {
         "name": "PAYSIGN INC COM",
         "symbol": "PAYS"
     },
@@ -14600,6 +14624,10 @@
         "symbol": "PRVA"
     },
     {
+        "name": "PERSHING SQUARE INC COMMON STOCK",
+        "symbol": "PS"
+    },
+    {
         "name": "PUBLIC STORAGE OPER CO COM",
         "symbol": "PSA"
     },
@@ -14812,7 +14840,7 @@
         "symbol": "QABA"
     },
     {
-        "name": "NEW YORK LIFE INVESTMENTS ETF NYLI HEDGE MULTI",
+        "name": "NEW YORK LIFE INVESTMENTS ETF HEDGE MULTI STRA",
         "symbol": "QAI"
     },
     {
@@ -16828,7 +16856,7 @@
         "symbol": "SMWB"
     },
     {
-        "name": "SMX SEC MATTERS PLC ORD SHS NEW",
+        "name": "SMX SEC MATTERS PLC SHS NEW",
         "symbol": "SMX"
     },
     {
@@ -17030,6 +17058,10 @@
     {
         "name": "SPDR SERIES TRUST STATE STREET SPD",
         "symbol": "SPAB"
+    },
+    {
+        "name": "SAFE PRO GROUP INC COM",
+        "symbol": "SPAI"
     },
     {
         "name": "SPECTRUM BRANDS HOLDINGS INC COM",
@@ -17948,6 +17980,10 @@
         "symbol": "TENB"
     },
     {
+        "name": "TENAX THERAPEUTICS INC COM NEW",
+        "symbol": "TENX"
+    },
+    {
         "name": "TELECOM ARGENTINA SA SPON ADR REP B",
         "symbol": "TEO"
     },
@@ -18828,10 +18864,6 @@
         "symbol": "UCYB"
     },
     {
-        "name": "UDEMY INC COM",
-        "symbol": "UDMY"
-    },
-    {
         "name": "INVESCO DB US DLR INDEX TR BEARISH FD",
         "symbol": "UDN"
     },
@@ -19458,6 +19490,10 @@
     {
         "name": "VANGUARD SCOTTSDALE FDS LONG TERM TREAS",
         "symbol": "VGLT"
+    },
+    {
+        "name": "VERSIGENT PLC ORDINARY SHARES",
+        "symbol": "VGNT"
     },
     {
         "name": "VANGUARD SCOTTSDALE FDS SHORT TERM TREAS",
@@ -20546,6 +20582,10 @@
     {
         "name": "Nasdaq-100 Micro Index",
         "symbol": "XND"
+    },
+    {
+        "name": "XANADU QUANTUM TECHNOLO LTD SUB VTG B",
+        "symbol": "XNDU"
     },
     {
         "name": "XUNLEI LTD SPONSORED ADS",
