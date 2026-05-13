@@ -8440,6 +8440,10 @@
         "symbol": "HAUS"
     },
     {
+        "name": "HAWKEYE 360 INC COM SHS",
+        "symbol": "HAWK"
+    },
+    {
         "name": "HAYWARD HLDGS INC COM",
         "symbol": "HAYW"
     },
@@ -11190,10 +11194,6 @@
     {
         "name": "LIQUIDITY SVCS INC COM",
         "symbol": "LQDT"
-    },
-    {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
-        "symbol": "LQIG"
     },
     {
         "name": "Tradr 2X Long LRCX Daily ETF",
