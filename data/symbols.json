@@ -5688,7 +5688,7 @@
         "symbol": "EEMV"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR MSCI EMRG",
         "symbol": "EEMX"
     },
     {
@@ -8368,7 +8368,7 @@
         "symbol": "GWX"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS SP CHINA ETF",
         "symbol": "GXC"
     },
     {
@@ -10296,7 +10296,7 @@
         "symbol": "KBA"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP BANK",
         "symbol": "KBE"
     },
     {
@@ -10332,7 +10332,7 @@
         "symbol": "KCCA"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP CAPMKT",
         "symbol": "KCE"
     },
     {
@@ -10424,7 +10424,7 @@
         "symbol": "KIDS"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP INS",
         "symbol": "KIE"
     },
     {
@@ -10544,7 +10544,7 @@
         "symbol": "KOLD"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST SP KENSHO NEWEC",
         "symbol": "KOMP"
     },
     {
@@ -10580,7 +10580,7 @@
         "symbol": "KRC"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP REGBNK",
         "symbol": "KRE"
     },
     {
@@ -11640,11 +11640,11 @@
         "symbol": "MDY"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP400GRW",
         "symbol": "MDYG"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP400VAL",
         "symbol": "MDYV"
     },
     {
@@ -11920,7 +11920,7 @@
         "symbol": "MMSI"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR 1500MOM",
         "symbol": "MMTM"
     },
     {
@@ -12448,7 +12448,7 @@
         "symbol": "NANOS"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR SP N AM",
         "symbol": "NANR"
     },
     {
@@ -15056,7 +15056,7 @@
         "symbol": "QURE"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR MSCI USAQ",
         "symbol": "QUS"
     },
     {
@@ -15816,7 +15816,7 @@
         "symbol": "RWM"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR DOW REIT",
         "symbol": "RWR"
     },
     {
@@ -16236,7 +16236,7 @@
         "symbol": "SDVY"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP DIV",
         "symbol": "SDY"
     },
     {
@@ -16724,11 +16724,11 @@
         "symbol": "SLX"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP600GRWO",
         "symbol": "SLYG"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP600SM C",
         "symbol": "SLYV"
     },
     {
@@ -16878,10 +16878,6 @@
     {
         "name": "SLEEP NUMBER CORP COM",
         "symbol": "SNBR"
-    },
-    {
-        "name": "SUN CTRY AIRLS HLDGS INC COM",
-        "symbol": "SNCY"
     },
     {
         "name": "SMART SAND INC COM",
@@ -17116,7 +17112,7 @@
         "symbol": "SPGI"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR MSCI GLB",
         "symbol": "SPGM"
     },
     {
@@ -17172,7 +17168,7 @@
         "symbol": "SPMB"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR P400MID",
         "symbol": "SPMD"
     },
     {
@@ -17216,7 +17212,7 @@
         "symbol": "SPSC"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP600 SML",
         "symbol": "SPSM"
     },
     {
@@ -17232,7 +17228,7 @@
         "symbol": "SPTL"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR PR SP1500",
         "symbol": "SPTM"
     },
     {
@@ -17280,11 +17276,11 @@
         "symbol": "SPY"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP500DIV",
         "symbol": "SPYD"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR P500GRW",
         "symbol": "SPYG"
     },
     {
@@ -17296,7 +17292,7 @@
         "symbol": "SPYI"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR P500ETF",
         "symbol": "SPYM"
     },
     {
@@ -17308,11 +17304,11 @@
         "symbol": "SPYT"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR P500VAL",
         "symbol": "SPYV"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP500FF",
         "symbol": "SPYX"
     },
     {
@@ -18358,10 +18354,6 @@
     {
         "name": "TPG INC COM CL A",
         "symbol": "TPG"
-    },
-    {
-        "name": "TRI POINTE HOMES INC COM",
-        "symbol": "TPH"
     },
     {
         "name": "TEXAS PACIFIC LAND CORPORATION COM",
@@ -20424,11 +20416,11 @@
         "symbol": "XAIX"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP AERO",
         "symbol": "XAR"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP BIOT",
         "symbol": "XBI"
     },
     {
@@ -20472,7 +20464,7 @@
         "symbol": "XERS"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST SP O&G EQP SERV",
         "symbol": "XES"
     },
     {
@@ -20480,11 +20472,11 @@
         "symbol": "XGN"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP HOME",
         "symbol": "XHB"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP HCEQ",
         "symbol": "XHE"
     },
     {
@@ -20552,7 +20544,7 @@
         "symbol": "XMAG"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP METAL",
         "symbol": "XME"
     },
     {
@@ -20600,7 +20592,7 @@
         "symbol": "XOMA"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST SP O&G EXPL PRO",
         "symbol": "XOP"
     },
     {
@@ -20624,7 +20616,7 @@
         "symbol": "XPEV"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP PHARMA",
         "symbol": "XPH"
     },
     {
@@ -20680,7 +20672,7 @@
         "symbol": "XRPZ"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP RETAIL",
         "symbol": "XRT"
     },
     {
@@ -20688,7 +20680,7 @@
         "symbol": "XRX"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP SEMI",
         "symbol": "XSD"
     },
     {
@@ -20708,7 +20700,7 @@
         "symbol": "XSVM"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SW SERV",
         "symbol": "XSW"
     },
     {
@@ -20716,11 +20708,11 @@
         "symbol": "XT"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP TELCO",
         "symbol": "XTL"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR SP TRANS",
         "symbol": "XTN"
     },
     {
