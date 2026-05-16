@@ -660,6 +660,8 @@ async function initRedisSubscription() {
                 logger.error({ err: error }, `Error while emitting message on worker-request channel: ${message}`);
             }
         });
+
+        logger.info(`Subscribed to Redis on workerr-request channel`);
     } catch (error) {
         logger.error({ err: error }, `error occurred while initializing the redis subscription.`);
         Deno.exit(1);   //Better to exit the process.
