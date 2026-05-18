@@ -476,10 +476,6 @@
         "symbol": "AGGY"
     },
     {
-        "name": "AUREUS GREENWAY HLDGS INC COM",
-        "symbol": "AGH"
-    },
-    {
         "name": "ALAMOS GOLD INC COM CL A",
         "symbol": "AGI"
     },
@@ -2532,10 +2528,6 @@
         "symbol": "BNED"
     },
     {
-        "name": "BONK INC COM",
-        "symbol": "BNKK"
-    },
-    {
         "name": "BROADSTONE NET LEASE INC COM",
         "symbol": "BNL"
     },
@@ -3146,6 +3138,10 @@
     {
         "name": "CRACKER BARREL OLD CTRY STORE COM",
         "symbol": "CBRL"
+    },
+    {
+        "name": "CEREBRAS SYSTEMS INC COM CL A",
+        "symbol": "CBRS"
     },
     {
         "name": "COMMERCE BANCSHARES INC COM",
@@ -6724,7 +6720,7 @@
         "symbol": "FEPI"
     },
     {
-        "name": "FERROVIAL NV",
+        "name": "FERROVIAL NV ORD SHS",
         "symbol": "FER"
     },
     {
@@ -7158,10 +7154,6 @@
     {
         "name": "FORESTAR GROUP INC COM",
         "symbol": "FOR"
-    },
-    {
-        "name": "FORIAN INC COM",
-        "symbol": "FORA"
     },
     {
         "name": "FORMFACTOR INC COM",
@@ -11544,6 +11536,10 @@
         "symbol": "MCD"
     },
     {
+        "name": "MASTERCRAFT BOAT HLDGS INC COM",
+        "symbol": "MCFT"
+    },
+    {
         "name": "YORKVILLE ACQUISITION CORP. SHS CL A",
         "symbol": "MCGA"
     },
@@ -14754,6 +14750,10 @@
     {
         "name": "HYPERLIQUID STRATEGIES INC COM",
         "symbol": "PURR"
+    },
+    {
+        "name": "AUREUS GREENWAY HLDGS INC COM",
+        "symbol": "PUSA"
     },
     {
         "name": "PVH CORPORATION COM",
