@@ -1616,6 +1616,10 @@
         "symbol": "AUTL"
     },
     {
+        "name": "Corgi Aerospace & Commercial Aviation ETF",
+        "symbol": "AV"
+    },
+    {
         "name": "AVISTA CORP COM",
         "symbol": "AVA"
     },
@@ -1934,6 +1938,10 @@
     {
         "name": "BAXTER INTL INC COM",
         "symbol": "BAX"
+    },
+    {
+        "name": "Corgi Bay Area Based ETF",
+        "symbol": "BAY"
     },
     {
         "name": "BLACKBERRY LTD COM",
@@ -2384,6 +2392,10 @@
         "symbol": "BLBD"
     },
     {
+        "name": "Corgi Crypto Infrastructure ETF",
+        "symbol": "BLCK"
+    },
+    {
         "name": "SIREN ETF TR NEXGEN ECONOMY",
         "symbol": "BLCN"
     },
@@ -2630,6 +2642,10 @@
     {
         "name": "BRC INC COM CL A",
         "symbol": "BRCC"
+    },
+    {
+        "name": "Corgi Coffee & Energy Drinks ETF",
+        "symbol": "BREW"
     },
     {
         "name": "VANECK ETF TRUST BRAZIL SMALL CAP",
@@ -2952,6 +2968,10 @@
         "symbol": "BZUN"
     },
     {
+        "name": "Corgi Drones & Urban Air Mobility ETF",
+        "symbol": "BZZ"
+    },
+    {
         "name": "CITIGROUP INC COM NEW",
         "symbol": "C"
     },
@@ -3130,6 +3150,10 @@
     {
         "name": "Cboe Global Markets, Inc.",
         "symbol": "CBOE"
+    },
+    {
+        "name": "Corgi Robots & Humanoids ETF",
+        "symbol": "CBOT"
     },
     {
         "name": "CBRE GROUP INC CL A",
@@ -3684,6 +3708,10 @@
         "symbol": "CM"
     },
     {
+        "name": "Corgi Mag 7 ETF",
+        "symbol": "CMAG"
+    },
+    {
         "name": "CAMBIUM NETWORKS CORP SHS",
         "symbol": "CMBMF"
     },
@@ -4138,6 +4166,10 @@
     {
         "name": "CHENIERE ENERGY PARTNERS L P COM UNIT",
         "symbol": "CQP"
+    },
+    {
+        "name": "Corgi Quantum Computing ETF",
+        "symbol": "CQTM"
     },
     {
         "name": "CRANE COMPANY COMMON STOCK",
@@ -5044,6 +5076,10 @@
         "symbol": "DIOD"
     },
     {
+        "name": "Corgi Space & Satellite Communications ETF",
+        "symbol": "DIPR"
+    },
+    {
         "name": "DISNEY WALT CO COM",
         "symbol": "DIS"
     },
@@ -5148,10 +5184,6 @@
         "symbol": "DMLP"
     },
     {
-        "name": "DIGIMARC CORP NEW COM",
-        "symbol": "DMRC"
-    },
-    {
         "name": "GINKGO BIOWORKS HOLDINGS INC CL A NEW",
         "symbol": "DNA"
     },
@@ -5182,6 +5214,10 @@
     {
         "name": "HEALTHPEAK PROPERTIES INC COM",
         "symbol": "DOC"
+    },
+    {
+        "name": "Corgi Ports, Rail & Freight ETF",
+        "symbol": "DOCK"
     },
     {
         "name": "DIGITALOCEAN HLDGS INC COM",
@@ -6236,6 +6272,10 @@
         "symbol": "EUSA"
     },
     {
+        "name": "Corgi Lithography & Semiconductor Photonics ETF",
+        "symbol": "EUV"
+    },
+    {
         "name": "ENTRAVISION COMMUNICATIONS CP CL A",
         "symbol": "EVC"
     },
@@ -6438,6 +6478,10 @@
     {
         "name": "NATIONAL VISION HLDGS INC COM",
         "symbol": "EYE"
+    },
+    {
+        "name": "Corgi Data & Surveillance ETF",
+        "symbol": "EYES"
     },
     {
         "name": "EYEPOINT INC COM NEW",
@@ -7576,6 +7620,10 @@
         "symbol": "GASS"
     },
     {
+        "name": "Corgi Natural Gas Power & Turbines ETF",
+        "symbol": "GASZ"
+    },
+    {
         "name": "GATX CORP COM",
         "symbol": "GATX"
     },
@@ -7864,6 +7912,10 @@
         "symbol": "GLAD"
     },
     {
+        "name": "Corgi Beauty, Skincare & Aesthetics ETF",
+        "symbol": "GLAM"
+    },
+    {
         "name": "GLOBAL E ONLINE LTD SHS",
         "symbol": "GLBE"
     },
@@ -7970,6 +8022,10 @@
     {
         "name": "GENELUX CORPORATION COM",
         "symbol": "GNLX"
+    },
+    {
+        "name": "Corgi Genomics & Precision Medicine ETF",
+        "symbol": "GNMX"
     },
     {
         "name": "GLOBAL X FDS GENOMICS AND BIO",
@@ -8890,6 +8946,10 @@
     {
         "name": "HUBSPOT INC COM",
         "symbol": "HUBS"
+    },
+    {
+        "name": "Corgi Shipping & Global Logistics ETF",
+        "symbol": "HULL"
     },
     {
         "name": "HUMANA INC COM",
@@ -10196,6 +10256,10 @@
         "symbol": "JOE"
     },
     {
+        "name": "Corgi High Voltage Grid Equipment ETF",
+        "symbol": "JOUL"
+    },
+    {
         "name": "JOYY INC ADS REPSTG COM A",
         "symbol": "JOYY"
     },
@@ -10370,10 +10434,6 @@
     {
         "name": "KFORCE INC COM",
         "symbol": "KFRC"
-    },
-    {
-        "name": "KINGSWAY FINL SERVICES INC COM NEW",
-        "symbol": "KFS"
     },
     {
         "name": "KORN FERRY COM NEW",
@@ -10680,6 +10740,14 @@
         "symbol": "KWR"
     },
     {
+        "name": "KINGSWAY CORP",
+        "symbol": "KWY"
+    },
+    {
+        "name": "Corgi Digital Banking & Fintech Infrastructure ETF",
+        "symbol": "KYC"
+    },
+    {
         "name": "KYIVSTAR GROUP LTD ORD SHS",
         "symbol": "KYIV"
     },
@@ -10762,6 +10830,10 @@
     {
         "name": "NLIGHT INC COM",
         "symbol": "LASR"
+    },
+    {
+        "name": "Corgi Buy Now Pay Later ETF",
+        "symbol": "LATR"
     },
     {
         "name": "LAUREATE ED INC COMMON STOCK",
@@ -11124,7 +11196,7 @@
         "symbol": "LOUP"
     },
     {
-        "name": "LOVESAC COMPANY COM",
+        "name": "LOVESAC CO COM",
         "symbol": "LOVE"
     },
     {
@@ -16658,10 +16730,6 @@
     {
         "name": "SILENCE THERAPEUTICS PLC ADS",
         "symbol": "SLN"
-    },
-    {
-        "name": "SOLENO THERAPEUTICS INC COM",
-        "symbol": "SLNO"
     },
     {
         "name": "PROSHARES TR ULTRA SOLANA ETF",
