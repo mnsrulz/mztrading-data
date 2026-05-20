@@ -5184,6 +5184,10 @@
         "symbol": "DMLP"
     },
     {
+        "name": "DIGIMARC PARENT INC COM",
+        "symbol": "DMRC"
+    },
+    {
         "name": "GINKGO BIOWORKS HOLDINGS INC CL A NEW",
         "symbol": "DNA"
     },
@@ -10740,7 +10744,7 @@
         "symbol": "KWR"
     },
     {
-        "name": "KINGSWAY CORP",
+        "name": "KINGSWAY CORP COM NEW",
         "symbol": "KWY"
     },
     {
@@ -11646,10 +11650,6 @@
     {
         "name": "MARCUS CORP DEL COM",
         "symbol": "MCS"
-    },
-    {
-        "name": "MISTER CAR WASH INC COM",
-        "symbol": "MCW"
     },
     {
         "name": "MERCURY GENL CORP NEW COM",
@@ -14680,7 +14680,7 @@
         "symbol": "PS"
     },
     {
-        "name": "PUBLIC STORAGE OPER CO COM",
+        "name": "PUBLIC STORAGE COM",
         "symbol": "PSA"
     },
     {
