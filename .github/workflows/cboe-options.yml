@@ -1,11 +1,11 @@
 name: CBOE options daily parquet
 
 on:
+  # schedule:
+    # - cron: '30 6 * * 1-5'
+#      timezone: 'America/New_York' # Runs at 6:30 AM local New York time NOT WORKING
   schedule:
-    - cron: '30 6 * * 1-5'
-      timezone: 'America/New_York' # Runs at 6:30 AM local New York time
-#  schedule:
-#    - cron: '0 10 * * 1-5'
+    - cron: '0 10 * * 1-5'
   workflow_dispatch: # Allow manual trigger from GitHub Actions UI
 
 permissions:

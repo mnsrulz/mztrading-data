@@ -356,7 +356,7 @@ const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
                 WHERE moneyness = 'ATM'
                 AND quote_dow = 1
                 AND quote_date >= current_date - ${lookbackDays}
-                AND ${mode == 'weekly' ? 'dte <=7' : 'dte BETWEEN 24 AND 28'}
+                AND ${mode == 'weekly' ? 'dte <=7' : 'dte BETWEEN 25 AND 31'}
                 AND ${mode == 'weekly' ? 'is_weekly_expiration' : 'is_monthly_expiration'} = 1
                 GROUP BY quote_date, dte, strike_price, expiration_date, underlying_close_price
             ) 
