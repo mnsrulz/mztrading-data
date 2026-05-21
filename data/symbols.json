@@ -20,6 +20,10 @@
         "symbol": "AAMI"
     },
     {
+        "name": "Leverage Shares 2X Long AAOI Daily ETF",
+        "symbol": "AAOG"
+    },
+    {
         "name": "APPLIED OPTOELECTRONICS INC COM",
         "symbol": "AAOI"
     },
@@ -798,6 +802,10 @@
     {
         "name": "APPLIED MATLS INC COM",
         "symbol": "AMAT"
+    },
+    {
+        "name": "Leverage Shares 2X Long AMAT Daily ETF",
+        "symbol": "AMAU"
     },
     {
         "name": "AMBARELLA INC SHS",
@@ -2336,10 +2344,6 @@
         "symbol": "BJRI"
     },
     {
-        "name": "BANK NEW YORK MELLON CORP COM",
-        "symbol": "BK"
-    },
-    {
         "name": "BROOKDALE SR LIVING INC COM",
         "symbol": "BKD"
     },
@@ -2562,6 +2566,10 @@
     {
         "name": "BIONTECH SE SPONSORED ADS",
         "symbol": "BNTX"
+    },
+    {
+        "name": "BANK NEW YORK MELLON CORP COM",
+        "symbol": "BNY"
     },
     {
         "name": "BOBS DISC FURNITURE INC COM SHS",
@@ -3108,6 +3116,10 @@
         "symbol": "CAT"
     },
     {
+        "name": "Leverage Shares 2X Long CAT Daily ETF",
+        "symbol": "CATG"
+    },
+    {
         "name": "GLOBAL X FDS S&P 500 CATHOLIC",
         "symbol": "CATH"
     },
@@ -3158,6 +3170,10 @@
     {
         "name": "CBRE GROUP INC CL A",
         "symbol": "CBRE"
+    },
+    {
+        "name": "Leverage Shares 2X Long CBRS Daily ETF",
+        "symbol": "CBRG"
     },
     {
         "name": "CRACKER BARREL OLD CTRY STORE COM",
@@ -3556,6 +3572,10 @@
         "symbol": "CIBR"
     },
     {
+        "name": "Leverage Shares 2X Long CIEN Daily ETF",
+        "symbol": "CIEG"
+    },
+    {
         "name": "CIENA CORP COM NEW",
         "symbol": "CIEN"
     },
@@ -3914,6 +3934,10 @@
     {
         "name": "COGENT BIOSCIENCES INC COM",
         "symbol": "COGT"
+    },
+    {
+        "name": "Leverage Shares 2X Long COHR Daily ETF",
+        "symbol": "COHH"
     },
     {
         "name": "COHERENT CORP COM",
@@ -6222,6 +6246,10 @@
     {
         "name": "EATON CORP PLC SHS",
         "symbol": "ETN"
+    },
+    {
+        "name": "Leverage Shares 2X Long ETN Daily ETF",
+        "symbol": "ETNG"
     },
     {
         "name": "ETON PHARMACEUTICALS INC COM",
@@ -8792,6 +8820,10 @@
         "symbol": "HON"
     },
     {
+        "name": "Leverage Shares 2X Long HON Daily ETF",
+        "symbol": "HONG"
+    },
+    {
         "name": "ROBINHOOD MKTS INC COM CL A",
         "symbol": "HOOD"
     },
@@ -11184,6 +11216,10 @@
         "symbol": "LOGI"
     },
     {
+        "name": "Roundhill HALO ETF",
+        "symbol": "LOHA"
+    },
+    {
         "name": "LOMA NEGRA C I A S A MTN 144A SPONSORED ADS",
         "symbol": "LOMA"
     },
@@ -13256,6 +13292,10 @@
         "symbol": "NXT"
     },
     {
+        "name": "Corgi NYC Based ETF",
+        "symbol": "NYNY"
+    },
+    {
         "name": "NEW YORK TIMES CO MTN BE CL A",
         "symbol": "NYT"
     },
@@ -13322,6 +13362,10 @@
     {
         "name": "PACER FDS TR BLUESTAR DIG ENT",
         "symbol": "ODDS"
+    },
+    {
+        "name": "Corgi Sports Betting & Gambling ETF",
+        "symbol": "ODDZ"
     },
     {
         "name": "OLD DOMINION FREIGHT LINE INC COM",
@@ -14802,6 +14846,10 @@
     {
         "name": "PACER FDS TR TRENDPILOT 100",
         "symbol": "PTNQ"
+    },
+    {
+        "name": "Corgi IP Licensing & Royalties ETF",
+        "symbol": "PTNT"
     },
     {
         "name": "PELOTON INTERACTIVE INC CL A COM",
@@ -16940,6 +16988,10 @@
         "symbol": "SNDA"
     },
     {
+        "name": "Leverage Shares 2X Long SNDK Daily ETF",
+        "symbol": "SNDG"
+    },
+    {
         "name": "SANDISK CORP COM",
         "symbol": "SNDK"
     },
@@ -17632,8 +17684,16 @@
         "symbol": "STXE"
     },
     {
+        "name": "Leverage Shares 2X Long STX Daily ETF",
+        "symbol": "STXU"
+    },
+    {
         "name": "Tradr 2X Long STX Daily ETF",
         "symbol": "STXX"
+    },
+    {
+        "name": "Corgi Lifestyle Brands ETF",
+        "symbol": "STYL"
     },
     {
         "name": "CONSTELLATION BRANDS INC CL A",
@@ -20060,6 +20120,10 @@
         "symbol": "WAT"
     },
     {
+        "name": "Corgi Battery Energy Storage Systems ETF",
+        "symbol": "WATS"
+    },
+    {
         "name": "WAYSTAR HLDG CORP COM",
         "symbol": "WAY"
     },
@@ -20288,6 +20352,10 @@
         "symbol": "WNC"
     },
     {
+        "name": "Corgi Travel & Leisure ETF",
+        "symbol": "WNDR"
+    },
+    {
         "name": "TIDAL TRUST II YIELDMAX MSTR SH",
         "symbol": "WNTR"
     },
@@ -20322,6 +20390,10 @@
     {
         "name": "WESTPORT FUEL SYSTEMS INC COM",
         "symbol": "WPRT"
+    },
+    {
+        "name": "Corgi U.S. War Machine ETF",
+        "symbol": "WR"
     },
     {
         "name": "WRAP TECHNOLOGIES INC COM",
@@ -20462,6 +20534,10 @@
     {
         "name": "WIDEPOINT CORP COMMON",
         "symbol": "WYY"
+    },
+    {
+        "name": "Corgi AI Cybersecurity ETF",
+        "symbol": "XA"
     },
     {
         "name": "DBX ETF TR XTRACKERS ARTIFI",
@@ -20890,6 +20966,10 @@
     {
         "name": "YUM CHINA HLDGS INC COM",
         "symbol": "YUMC"
+    },
+    {
+        "name": "Corgi Longevity Consumer ETF",
+        "symbol": "YUNG"
     },
     {
         "name": "PROSHARES TR SHT FTSE CHIN 50",
