@@ -31,6 +31,8 @@ let redisSubscriber = createClient({
     }
 });
 
+let consecutiveRedisFailures = 0;
+
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
 const pusherClient = new PusherJS(PUSHER_APP_KEY || '', {
     cluster: Deno.env.get('PUSHER_APP_CLUSTER') || 'us2',
@@ -647,12 +649,15 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 
 async function initRedisSubscription() {
     try {
+        logger.info(`Initializing Redis subscription on worker-request channel`);
+
         redisSubscriber = redisSubscriber.duplicate();
 
         await redisSubscriber.connect();
 
         await redisSubscriber.subscribe('worker-request', (message) => {
             try {
+                consecutiveRedisFailures = 0; // reset on successful message receipt
                 const data = JSON.parse(message) as { requestType: string };
                 logger.info(`Received message from Redis on worker-request channel: ${JSON.stringify(data)}`);
                 emitter.emit(data.requestType, data);
@@ -705,7 +710,13 @@ if (DEBUG_MODE) {
     await initRedisSubscription();
 
     channel.bind('query-timeout', async (args: any) => {
-        logger.info(`query timeout received for event: ${JSON.stringify(args)}`);
+        consecutiveRedisFailures++;
+        logger.warn(`query timeout (${consecutiveRedisFailures}/5) received for event: ${JSON.stringify(args)}`);
+
+        if (consecutiveRedisFailures >= 5) {
+            logger.fatal(`Too many consecutive Redis failures. Restarting process...`);
+            Deno.exit(1);
+        }
 
         try {
             await redisSubscriber.unsubscribe('worker-request');
