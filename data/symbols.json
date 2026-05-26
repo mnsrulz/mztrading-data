@@ -2812,6 +2812,10 @@
         "symbol": "BTI"
     },
     {
+        "name": "BITCOIN DEPOT INC COM",
+        "symbol": "BTMCQ"
+    },
+    {
         "name": "BTQ TECHNOLOGIES CORP COM",
         "symbol": "BTQ"
     },
@@ -14698,6 +14702,10 @@
     {
         "name": "PRIORITY TECHNOLOGY HLDGS INC COM",
         "symbol": "PRTH"
+    },
+    {
+        "name": "CARPARTS COM INC COM",
+        "symbol": "PRTS"
     },
     {
         "name": "PRUDENTIAL FINL INC COM",
