@@ -40,7 +40,7 @@
         "symbol": "AAP"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG AAPL DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG AAPL ETF",
         "symbol": "AAPB"
     },
     {
@@ -1000,7 +1000,7 @@
         "symbol": "AMZY"
     },
     {
-        "name": "GRANITESHARES ETF TR GRANITESHARES 2X",
+        "name": "GRANITESHARES ETF TR 2X LONG AMZN ETF",
         "symbol": "AMZZ"
     },
     {
@@ -1872,7 +1872,7 @@
         "symbol": "BABW"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG BABA DAI",
+        "name": "GRANITESHARES ETF TR 2X LNG BABA DAL",
         "symbol": "BABX"
     },
     {
@@ -3372,7 +3372,7 @@
         "symbol": "CENX"
     },
     {
-        "name": "ETF OPPORTUNITIES TRUST REX CRYPTO EQUIT",
+        "name": "ETF OPPORTUNITIES TRUST REX CRYP EQU ETF",
         "symbol": "CEPI"
     },
     {
@@ -4008,7 +4008,7 @@
         "symbol": "CONI"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG COIN DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG COIN ETF",
         "symbol": "CONL"
     },
     {
@@ -4352,7 +4352,7 @@
         "symbol": "CRWG"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG CRWD DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG CRWD ETF",
         "symbol": "CRWL"
     },
     {
@@ -5112,7 +5112,7 @@
         "symbol": "DIVO"
     },
     {
-        "name": "GLOBAL X FDS DOW 30 COVERED C",
+        "name": "GLOBAL X FDS DOW 30 CO CA ETF",
         "symbol": "DJIA"
     },
     {
@@ -5156,7 +5156,7 @@
         "symbol": "DLHC"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG DELL DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG DELL ETF",
         "symbol": "DLLL"
     },
     {
@@ -6592,7 +6592,7 @@
         "symbol": "FBK"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG META DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG META ETF",
         "symbol": "FBL"
     },
     {
@@ -7964,7 +7964,7 @@
         "symbol": "GLGG"
     },
     {
-        "name": "LIBERTY CAPITAL CORP",
+        "name": "LIBERTY CAP CORP SER C GCI GROUP",
         "symbol": "GLIBK"
     },
     {
@@ -9324,7 +9324,7 @@
         "symbol": "IFF"
     },
     {
-        "name": "INVESCO EXCHANGE-TRADED FD TR BLOOMBERG ENHANC",
+        "name": "INVESCO EXCHANGE-TRADED FD TR BLOO EN ANGE ETF",
         "symbol": "IFLN"
     },
     {
@@ -9676,7 +9676,7 @@
         "symbol": "INTU"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG INTC DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG INTC ETF",
         "symbol": "INTW"
     },
     {
@@ -10908,7 +10908,7 @@
         "symbol": "LC"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG LCID DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG LCID ETF",
         "symbol": "LCDL"
     },
     {
@@ -12408,7 +12408,7 @@
         "symbol": "MUFG"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG MU DAILY",
+        "name": "GRANITESHARES ETF TR 2X LO MU DA ETF",
         "symbol": "MULL"
     },
     {
@@ -13132,7 +13132,7 @@
         "symbol": "NVCT"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X SHORT NVDA DA",
+        "name": "GRANITESHARES ETF TR 2X SHOR NVDA NEW",
         "symbol": "NVD"
     },
     {
@@ -13148,7 +13148,7 @@
         "symbol": "NVDG"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG NVDA DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG NVDA ETF",
         "symbol": "NVDL"
     },
     {
@@ -14960,7 +14960,7 @@
         "symbol": "QCLN"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG QCOM DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG QCOM ETF",
         "symbol": "QCML"
     },
     {
@@ -15972,7 +15972,7 @@
         "symbol": "RYLD"
     },
     {
-        "name": "GLOBAL X FDS RUSSELL 2000 COV",
+        "name": "GLOBAL X FDS RUSSE GROWT ETF",
         "symbol": "RYLG"
     },
     {
@@ -16852,7 +16852,7 @@
         "symbol": "SMCI"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG SMCI DAI",
+        "name": "GRANITESHARES ETF TR 2X LO SMCI DA ET",
         "symbol": "SMCL"
     },
     {
@@ -18628,7 +18628,7 @@
         "symbol": "TSCO"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X SHORT TSLA DA",
+        "name": "GRANITESHARES ETF TR 2X SHOR TSLA NEW",
         "symbol": "TSDD"
     },
     {
@@ -18637,7 +18637,7 @@
     },
     {
         "name": "TRINSEO PLC SHS",
-        "symbol": "TSEOF"
+        "symbol": "TSEOQ"
     },
     {
         "name": "TAYSHA GENE THERAPIES INC COM SHS",
@@ -18664,7 +18664,7 @@
         "symbol": "TSLQ"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG TSLA DAI",
+        "name": "GRANITESHARES ETF TR 2X LONG TSLA ETF",
         "symbol": "TSLR"
     },
     {
@@ -18700,7 +18700,7 @@
         "symbol": "TSMG"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG TSM DAIL",
+        "name": "GRANITESHARES ETF TR 2X LO TSM DA ETF",
         "symbol": "TSMU"
     },
     {
@@ -19060,7 +19060,7 @@
         "symbol": "ULTA"
     },
     {
-        "name": "TIDAL TRUST II YIELDMAX ULTRA O",
+        "name": "TIDAL TRUST II YIELD ULTRA ETF",
         "symbol": "ULTY"
     },
     {
@@ -19850,10 +19850,6 @@
     {
         "name": "VIRIDIAN THERAPEUTICS INC COM",
         "symbol": "VRDN"
-    },
-    {
-        "name": "VERIS RESIDENTIAL INC COM",
-        "symbol": "VRE"
     },
     {
         "name": "VAREX IMAGING CORP COM",
@@ -20844,7 +20840,7 @@
         "symbol": "XXI"
     },
     {
-        "name": "LISTED FDS TR TEUCRIUM 2X LONG",
+        "name": "LISTED FDS TR TEUCR 2X XRP ETF",
         "symbol": "XXRP"
     },
     {
@@ -20912,11 +20908,11 @@
         "symbol": "YLD"
     },
     {
-        "name": "TIDAL TRUST II YIELDMAX MAGNIFI",
+        "name": "TIDAL TRUST II YIEL MAGN 7 ETFS",
         "symbol": "YMAG"
     },
     {
-        "name": "TIDAL TRUST II YIELDMAX UNIVERS",
+        "name": "TIDAL TRUST II YIELD UNIVE ETFS",
         "symbol": "YMAX"
     },
     {
