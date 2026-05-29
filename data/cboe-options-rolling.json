@@ -83101,5 +83101,6 @@
             "symbol": "TSM",
             "dt": "2026-05-29"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-05-29/options_cboe_oi_anomaly.parquet"
 }
