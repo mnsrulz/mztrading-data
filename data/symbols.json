@@ -616,7 +616,7 @@
         "symbol": "AIV"
     },
     {
-        "name": "AMPLIFY BLOOMBERG AI EQUAL WEI",
+        "name": "AMPLIFY ETF TR BLOOMBERG AI EQQ",
         "symbol": "AIVC"
     },
     {
@@ -954,10 +954,6 @@
     {
         "name": "AEMETIS INC COM NEW",
         "symbol": "AMTX"
-    },
-    {
-        "name": "AMERICAN WOODMARK CORP COM",
-        "symbol": "AMWD"
     },
     {
         "name": "AMERICAN WELL CORP COM CL A NEW",
@@ -2292,7 +2288,7 @@
         "symbol": "BIRK"
     },
     {
-        "name": "PROSHARES TR ULTST NASD NW20",
+        "name": "PROSHARES TR ULTST NASD 2026",
         "symbol": "BIS"
     },
     {
@@ -2316,7 +2312,7 @@
         "symbol": "BITS"
     },
     {
-        "name": "PROSHARES TR ULTRA BITCOIN ET",
+        "name": "PROSHARES TR ULTRA BITCON ETF",
         "symbol": "BITU"
     },
     {
@@ -3912,7 +3908,7 @@
         "symbol": "CNYA"
     },
     {
-        "name": "EXCHANGE TRADED CONCEPTS TRUST RANGE GLOBAL COA",
+        "name": "EXCHANGE TRADED CONCEPTS TRUST RANG GL COAL ETF",
         "symbol": "COAL"
     },
     {
@@ -4576,10 +4572,6 @@
         "symbol": "CVGI"
     },
     {
-        "name": "CALAVO GROWERS INC COM",
-        "symbol": "CVGW"
-    },
-    {
         "name": "CVR ENERGY INC COM",
         "symbol": "CVI"
     },
@@ -4936,7 +4928,7 @@
         "symbol": "DESK"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST US CORE EQUITY 2",
+        "name": "DIMENSIONAL ETF TRUST US COR EQU 2 ETF",
         "symbol": "DFAC"
     },
     {
@@ -5352,7 +5344,7 @@
         "symbol": "DRLL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY REAL ESTAT",
+        "name": "DIREXION SHARES ETF TRUST DAI REA BUL ETF",
         "symbol": "DRN"
     },
     {
@@ -7140,7 +7132,7 @@
         "symbol": "FMC"
     },
     {
-        "name": "FIDELITY COVINGTON TRUST ENHANCED MID CAP",
+        "name": "FIDELITY COVINGTON TRUST ENH MID COR ETF",
         "symbol": "FMDE"
     },
     {
@@ -7628,7 +7620,7 @@
         "symbol": "GAIN"
     },
     {
-        "name": "SSGA ACTIVE ETF TR STATE STREET GLO",
+        "name": "SSGA ACTIVE ETF TR ST STR GLOBA ETF",
         "symbol": "GAL"
     },
     {
@@ -9204,7 +9196,7 @@
         "symbol": "ICLN"
     },
     {
-        "name": "ICON PLC SHS",
+        "name": "ICON PUB LTD CO SHS",
         "symbol": "ICLR"
     },
     {
@@ -9580,7 +9572,7 @@
         "symbol": "INDV"
     },
     {
-        "name": "LISTED FDS TR HORIZON KINETICS",
+        "name": "LISTED FDS TR HORI KI INFL ETF",
         "symbol": "INFL"
     },
     {
@@ -10380,7 +10372,7 @@
         "symbol": "KB"
     },
     {
-        "name": "KRANESHARES TRUST BOSERA MSCI CHIN",
+        "name": "KRANESHARES TRUST BOSE MSC CHI ETF",
         "symbol": "KBA"
     },
     {
@@ -10640,7 +10632,7 @@
         "symbol": "KOPN"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MSCI SOUTH",
+        "name": "DIREXION SHARES ETF TRUST DAIL MS KORE ETF",
         "symbol": "KORU"
     },
     {
@@ -10648,7 +10640,7 @@
         "symbol": "KOS"
     },
     {
-        "name": "KRANESHARES TRUST 2X LONG PDD DAIL",
+        "name": "KRANESHARES TRUST 2X LNG PDD ETF",
         "symbol": "KPDD"
     },
     {
@@ -10828,7 +10820,7 @@
         "symbol": "LAB"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY S&P BIOTEC",
+        "name": "DIREXION SHARES ETF TRUST DAI BIO BEA ETF",
         "symbol": "LABD"
     },
     {
@@ -12180,7 +12172,7 @@
         "symbol": "MQ"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
+        "name": "INVESTMENT MANAGERS SER TR II TRAD 2X LON MONT",
         "symbol": "MQQQ"
     },
     {
@@ -12324,7 +12316,7 @@
         "symbol": "MSOX"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE LEVERAG",
+        "name": "TIDAL TRUST II DEFI LEVE LO IN",
         "symbol": "MST"
     },
     {
@@ -14564,7 +14556,7 @@
         "symbol": "POWL"
     },
     {
-        "name": "ISHARES INC US POWER INFRAST",
+        "name": "ISHARES INC US PWR INFRA ETF",
         "symbol": "POWR"
     },
     {
@@ -14988,7 +14980,7 @@
         "symbol": "QBTX"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "name": "TIDAL TRUST II DEFI DA QBTS ETF",
         "symbol": "QBTZ"
     },
     {
@@ -15072,7 +15064,7 @@
         "symbol": "QNXT"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE 2X DAIL",
+        "name": "TIDAL TRUST II DEFI 2X QUAN ETF",
         "symbol": "QPUX"
     },
     {
@@ -15452,7 +15444,7 @@
         "symbol": "RETL"
     },
     {
-        "name": "PROSHARES TR ULTRASHORT TECHN",
+        "name": "PROSHARES TR ULTRA TECHN",
         "symbol": "REW"
     },
     {
@@ -15532,7 +15524,7 @@
         "symbol": "RGTU"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "name": "TIDAL TRUST II DEFI DA RGTI ETF",
         "symbol": "RGTX"
     },
     {
@@ -15648,7 +15640,7 @@
         "symbol": "RLX"
     },
     {
-        "name": "SSGA ACTIVE ETF TR STATE STREET MUL",
+        "name": "SSGA ACTIVE ETF TR ST STR REAL ETF",
         "symbol": "RLY"
     },
     {
@@ -16356,7 +16348,7 @@
         "symbol": "SDOW"
     },
     {
-        "name": "PROSHARES TR ULTRASHORT UTILI",
+        "name": "PROSHARES TR ULTRA UTIL NEW",
         "symbol": "SDP"
     },
     {
@@ -16732,7 +16724,7 @@
         "symbol": "SKM"
     },
     {
-        "name": "ETF OPPORTUNITIES TRUST TUTTLE CAP DAILY",
+        "name": "ETF OPPORTUNITIES TRUST TUTT CAP BKS ETF",
         "symbol": "SKRE"
     },
     {
@@ -17176,7 +17168,7 @@
         "symbol": "SOXQ"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY SEMICONDUC",
+        "name": "DIREXION SHARES ETF TRUST DAI SEM 3X ETF",
         "symbol": "SOXS"
     },
     {
@@ -17288,7 +17280,7 @@
         "symbol": "SPIB"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR TIPS ETF",
         "symbol": "SPIP"
     },
     {
@@ -17392,7 +17384,7 @@
         "symbol": "SPXC"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BU",
+        "name": "DIREXION SHARES ETF TRUST DA 500 BU 3X ETF",
         "symbol": "SPXL"
     },
     {
@@ -17436,7 +17428,7 @@
         "symbol": "SPYM"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG SP",
+        "name": "INVESTMENT MANAGERS SER TR II TRAD 2X LONG SPY",
         "symbol": "SPYQ"
     },
     {
@@ -20656,7 +20648,7 @@
         "symbol": "XIFR"
     },
     {
-        "name": "SELECT SECTOR SPDR TR STATE STREET MAT",
+        "name": "SELECT SECTOR SPDR TR ST STR MATER ETF",
         "symbol": "XLB"
     },
     {
@@ -20696,7 +20688,7 @@
         "symbol": "XLSR"
     },
     {
-        "name": "SELECT SECTOR SPDR TR STATE STREET UTI",
+        "name": "SELECT SECTOR SPDR TR ST STR UTIL ETF",
         "symbol": "XLU"
     },
     {
