@@ -1700,7 +1700,7 @@
         "symbol": "AVLC"
     },
     {
-        "name": "AMERICAN CENTY ETF TR AVANTIS US MID C",
+        "name": "AMERICAN CENTY ETF TR AVA MID EQU ETF",
         "symbol": "AVMC"
     },
     {
@@ -2100,7 +2100,7 @@
         "symbol": "BDN"
     },
     {
-        "name": "AMPLIFY COMMODITY TRUST BREAKWAVE DRY BU",
+        "name": "AMPLIFY COMMODITY TRUST BREA DRY BUL ETF",
         "symbol": "BDRY"
     },
     {
@@ -2260,7 +2260,7 @@
         "symbol": "BILL"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR BL 12 ETF",
         "symbol": "BILS"
     },
     {
@@ -2296,7 +2296,7 @@
         "symbol": "BITB"
     },
     {
-        "name": "PROSHARES TR SHORT BITCOIN ET",
+        "name": "PROSHARES TR SHOR BITC ET NEW",
         "symbol": "BITI"
     },
     {
@@ -2308,7 +2308,7 @@
         "symbol": "BITQ"
     },
     {
-        "name": "GLOBAL X FDS BLOCKCHAIN & BIT",
+        "name": "GLOBAL X FDS BLOC BIT STR ETF",
         "symbol": "BITS"
     },
     {
@@ -2564,7 +2564,7 @@
         "symbol": "BNTX"
     },
     {
-        "name": "BANK NEW YORK MELLON CORP COM",
+        "name": "BANK OF NY MELLON CORP COM",
         "symbol": "BNY"
     },
     {
@@ -2896,7 +2896,7 @@
         "symbol": "BWMX"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST INTL BBG ETF",
         "symbol": "BWX"
     },
     {
@@ -3476,7 +3476,7 @@
         "symbol": "CHAT"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY CSI 300 CH",
+        "name": "DIREXION SHARES ETF TRUST DAIL CSI 300 ETF",
         "symbol": "CHAU"
     },
     {
@@ -4652,7 +4652,7 @@
         "symbol": "CWH"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR ACWI ETF",
         "symbol": "CWI"
     },
     {
@@ -4860,7 +4860,7 @@
         "symbol": "DCOM"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST US CORE EQUITY 1",
+        "name": "DIMENSIONAL ETF TRUST US COR EQU 1 ETF",
         "symbol": "DCOR"
     },
     {
@@ -5364,7 +5364,7 @@
         "symbol": "DRUP"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY REAL ESTAT",
+        "name": "DIREXION SHARES ETF TRUST DAI REA BEA ETF",
         "symbol": "DRV"
     },
     {
@@ -5476,7 +5476,7 @@
         "symbol": "DVN"
     },
     {
-        "name": "WEBS ETF TR QQQ DEFINED VOLA",
+        "name": "WEBS ETF TR QQQ DEF VOL ETF",
         "symbol": "DVQQ"
     },
     {
@@ -5678,10 +5678,6 @@
     {
         "name": "CONSOLIDATED EDISON INC COM",
         "symbol": "ED"
-    },
-    {
-        "name": "EDAP TMS S A SPONSORED ADR",
-        "symbol": "EDAP"
     },
     {
         "name": "DIREXION SHARES ETF TRUST DAILY MSCI EMERG",
@@ -6124,7 +6120,7 @@
         "symbol": "ERO"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY ENERGY BUL",
+        "name": "DIREXION SHARES ETF TRUST DAI ENE BUL ETF",
         "symbol": "ERX"
     },
     {
@@ -7084,7 +7080,7 @@
         "symbol": "FLS"
     },
     {
-        "name": "VANECK ETF TRUST IG FLOATING RATE",
+        "name": "VANECK ETF TRUST IG FLOA RATE ETF",
         "symbol": "FLTR"
     },
     {
@@ -7214,6 +7210,10 @@
     {
         "name": "FINANCE OF AMERICA COMPAN CL A NEW",
         "symbol": "FOA"
+    },
+    {
+        "name": "EDAP TMS S A SPONSORED ADR",
+        "symbol": "FOCL"
     },
     {
         "name": "FORESTAR GROUP INC COM",
@@ -7892,7 +7892,7 @@
         "symbol": "GIF"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR INFRA ETF",
         "symbol": "GII"
     },
     {
@@ -8056,7 +8056,7 @@
         "symbol": "GNOM"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR NAT ETF",
         "symbol": "GNR"
     },
     {
@@ -9064,7 +9064,7 @@
         "symbol": "HYLN"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST NUVE HIGH ETF",
         "symbol": "HYMB"
     },
     {
@@ -9080,7 +9080,7 @@
         "symbol": "HYS"
     },
     {
-        "name": "BONDBLOXX ETF TRUST USD HIGH YIELD B",
+        "name": "BONDBLOXX ETF TRUST USD HIGH YIE ETF",
         "symbol": "HYSA"
     },
     {
@@ -9944,7 +9944,7 @@
         "symbol": "IVE"
     },
     {
-        "name": "WEDBUSH SER TR DAN IVES WEDBUSH",
+        "name": "WEDBUSH SER TR DAN IVE REVO ETF",
         "symbol": "IVES"
     },
     {
@@ -13124,7 +13124,7 @@
         "symbol": "NUG"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY GOLD MINER",
+        "name": "DIREXION SHARES ETF TRUST DAI GOL BUL ETF",
         "symbol": "NUGT"
     },
     {
@@ -13184,7 +13184,7 @@
         "symbol": "NVDQ"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 1.5X SHORT",
+        "name": "INVESTMENT MANAGERS SER TR II TRADR 1.5X NVDA",
         "symbol": "NVDS"
     },
     {
@@ -13222,10 +13222,6 @@
     {
         "name": "TIDAL TRUST II DEFIANCE DLY TRG",
         "symbol": "NVOX"
-    },
-    {
-        "name": "ENVIRI CORP COM",
-        "symbol": "NVRI"
     },
     {
         "name": "NOVARTIS AG SPONSORED ADR",
@@ -14776,7 +14772,7 @@
         "symbol": "PSIX"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR PFD ETF",
         "symbol": "PSK"
     },
     {
@@ -15188,7 +15184,7 @@
         "symbol": "QUS"
     },
     {
-        "name": "INVESCO EXCHANGE-TRADED FD TR S&P 500 CONCENTR",
+        "name": "INVESCO EXCHANGE-TRADED FD TR S&P 500 CONC ETF",
         "symbol": "QVMT"
     },
     {
@@ -15424,7 +15420,7 @@
         "symbol": "REM"
     },
     {
-        "name": "VANECK ETF TRUST RARE EARTH AND S",
+        "name": "VANECK ETF TRUST RARE EAR STR ETF",
         "symbol": "REMX"
     },
     {
@@ -15440,7 +15436,7 @@
         "symbol": "RES"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY RETAIL BUL",
+        "name": "DIREXION SHARES ETF TRUST DAIL RETA BU ETF",
         "symbol": "RETL"
     },
     {
@@ -16164,7 +16160,7 @@
         "symbol": "SBIO"
     },
     {
-        "name": "PROSHARES TR ULTRASHORT BITCO",
+        "name": "PROSHARES TR ULTRA BITCO ETF",
         "symbol": "SBIT"
     },
     {
@@ -16308,7 +16304,7 @@
         "symbol": "SCVL"
     },
     {
-        "name": "SCYNEXIS INC COM NEW",
+        "name": "SCYNEXIS INC COM",
         "symbol": "SCYX"
     },
     {
@@ -16556,7 +16552,7 @@
         "symbol": "SHLS"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST NUVE TERM ETF",
         "symbol": "SHM"
     },
     {
@@ -16632,7 +16628,7 @@
         "symbol": "SILA"
     },
     {
-        "name": "AMPLIFY ETF TR AMPLIFY JUNIOR S",
+        "name": "AMPLIFY ETF TR JR SILV MINE ETF",
         "symbol": "SILJ"
     },
     {
@@ -16700,7 +16696,7 @@
         "symbol": "SJM"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST TERM HIGH ETF",
         "symbol": "SJNK"
     },
     {
@@ -16888,7 +16884,7 @@
         "symbol": "SMCL"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "name": "TIDAL TRUST II DEFI DA SMCI ETF",
         "symbol": "SMCX"
     },
     {
@@ -16984,7 +16980,7 @@
         "symbol": "SMWB"
     },
     {
-        "name": "SMX SEC MATTERS PLC SHS NEW",
+        "name": "SMX SEC MATTERS PLC ORD SHS",
         "symbol": "SMX"
     },
     {
@@ -17296,7 +17292,7 @@
         "symbol": "SPLV"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR BACKE ETF",
         "symbol": "SPMB"
     },
     {
@@ -17352,7 +17348,7 @@
         "symbol": "SPT"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST INTER ETF",
         "symbol": "SPTI"
     },
     {
@@ -17432,7 +17428,7 @@
         "symbol": "SPYQ"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE S&P 500",
+        "name": "TIDAL TRUST II DEF 500 INC ETF",
         "symbol": "SPYT"
     },
     {
@@ -17528,7 +17524,7 @@
         "symbol": "SSD"
     },
     {
-        "name": "PROSHARES TR ULTRASHORT SEMIC",
+        "name": "PROSHARES TR ULTRA SEMIC NEW",
         "symbol": "SSG"
     },
     {
@@ -18084,7 +18080,7 @@
         "symbol": "TECL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY TECHNOLOGY",
+        "name": "DIREXION SHARES ETF TRUST DA TE BE 3X ETF",
         "symbol": "TECS"
     },
     {
@@ -18232,15 +18228,11 @@
         "symbol": "THO"
     },
     {
-        "name": "THERMON GROUP HLDGS INC COM",
-        "symbol": "THR"
-    },
-    {
         "name": "GENTHERM INC COM",
         "symbol": "THRM"
     },
     {
-        "name": "BLACKROCK ETF TRUST ISHARES US THEMA",
+        "name": "BLACKROCK ETF TRUST ISHA US THEM ETF",
         "symbol": "THRO"
     },
     {
@@ -18472,7 +18464,7 @@
         "symbol": "TOST"
     },
     {
-        "name": "SSGA ACTIVE ETF TR STATE STREET DOU",
+        "name": "SSGA ACTIVE ETF TR ST STR TOTAL ETF",
         "symbol": "TOTL"
     },
     {
@@ -20312,7 +20304,7 @@
         "symbol": "WING"
     },
     {
-        "name": "SPDR SERIES TRUST STATE STREET SPD",
+        "name": "SPDR SERIES TRUST ST STR FTSE ETF",
         "symbol": "WIP"
     },
     {
