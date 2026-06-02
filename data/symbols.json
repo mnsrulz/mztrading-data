@@ -153,7 +153,7 @@
     },
     {
         "name": "ABOVE FOOD INGREDIENTS INC COM",
-        "symbol": "ABVE"
+        "symbol": "ABVEF"
     },
     {
         "name": "ABIVAX SA SPONSORED ADS",
@@ -4856,7 +4856,7 @@
         "symbol": "DCO"
     },
     {
-        "name": "DIME CMNTY BANCSHARES INC COM",
+        "name": "DIME COML BANCSHARES INC COM",
         "symbol": "DCOM"
     },
     {
@@ -11592,7 +11592,7 @@
         "symbol": "MAX"
     },
     {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS BITCOIN STRATEGY",
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS BITC STR PLU ETF",
         "symbol": "MAXI"
     },
     {
@@ -13224,6 +13224,10 @@
         "symbol": "NVOX"
     },
     {
+        "name": "ENVIRI CORP COM",
+        "symbol": "NVRI"
+    },
+    {
         "name": "NOVARTIS AG SPONSORED ADR",
         "symbol": "NVS"
     },
@@ -14132,7 +14136,7 @@
         "symbol": "PEGA"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR LEISURE AND ENTE",
+        "name": "INVESCO EXCHANGE TRADED FD TR LEISU ENTMT ETF",
         "symbol": "PEJ"
     },
     {
@@ -18856,7 +18860,7 @@
         "symbol": "TWLO"
     },
     {
-        "name": "PROSHARES TR ULTRASHORT RUSSE",
+        "name": "PROSHARES TR ULTR RU 2000 NEW",
         "symbol": "TWM"
     },
     {
@@ -19920,10 +19924,6 @@
         "symbol": "VSAT"
     },
     {
-        "name": "VICTORIAS SECRET AND CO COMMON STOCK",
-        "symbol": "VSCO"
-    },
-    {
         "name": "VICTORY PORTFOLIOS II VICSHS DV AC ETF",
         "symbol": "VSDA"
     },
@@ -19962,6 +19962,10 @@
     {
         "name": "VESTIS CORPORATION COM SHS",
         "symbol": "VSTS"
+    },
+    {
+        "name": "VICTORIAS SECRET AND CO COMMON STOCK",
+        "symbol": "VSXY"
     },
     {
         "name": "VANGUARD INTL EQUITY INDEX FDS TT WRLD ST ETF",
