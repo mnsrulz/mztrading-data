@@ -5360,7 +5360,7 @@
         "symbol": "DRTS"
     },
     {
-        "name": "GRANITESHARES ETF TR NASDAQ SELECT DI",
+        "name": "GRANITESHARES ETF TR NASD SEL DIS ETF",
         "symbol": "DRUP"
     },
     {
@@ -5456,7 +5456,7 @@
         "symbol": "DUSL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY GOLD MINER",
+        "name": "DIREXION SHARES ETF TRUST DAI GOL BEA ETF",
         "symbol": "DUST"
     },
     {
@@ -7168,7 +7168,7 @@
         "symbol": "FNDA"
     },
     {
-        "name": "SCHWAB STRATEGIC TR FUNDAMENTAL EMER",
+        "name": "SCHWAB STRATEGIC TR FUND EM EQUI ETF",
         "symbol": "FNDE"
     },
     {
@@ -8826,10 +8826,6 @@
     {
         "name": "THEMES ETF TR LEVERAGE SHS 2X",
         "symbol": "HOOG"
-    },
-    {
-        "name": "HOOKIPA PHARMA INC COM NEW",
-        "symbol": "HOOK"
     },
     {
         "name": "Roundhill HOOD WeeklyPay ETF",
@@ -10932,7 +10928,7 @@
         "symbol": "LCII"
     },
     {
-        "name": "BLACKROCK ETF TRUST ISHARES WORLD EX",
+        "name": "BLACKROCK ETF TRUST ISHA WORL EX ETF",
         "symbol": "LCTD"
     },
     {
@@ -11812,7 +11808,7 @@
         "symbol": "METW"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MSCI MEXIC",
+        "name": "DIREXION SHARES ETF TRUST DAIL MS MEXI ETF",
         "symbol": "MEXX"
     },
     {
@@ -13744,7 +13740,7 @@
         "symbol": "ORN"
     },
     {
-        "name": "EA SERIES TRUST MILITIA LONG/SHO",
+        "name": "EA SERIES TRUST MILI LONG SH ETF",
         "symbol": "ORR"
     },
     {
@@ -14752,7 +14748,7 @@
         "symbol": "PSA"
     },
     {
-        "name": "INVESCO EXCHANGE-TRADED FD TR S&P SMALLCAP ENE",
+        "name": "INVESCO EXCHANGE-TRADED FD TR S&P SM EN ET NEW",
         "symbol": "PSCE"
     },
     {
@@ -14920,7 +14916,7 @@
         "symbol": "PWR"
     },
     {
-        "name": "TCW ETF TRUST TRANSFORM SYSTEM",
+        "name": "TCW ETF TRUST TRANS SYSTE ETF",
         "symbol": "PWRD"
     },
     {
@@ -15104,7 +15100,7 @@
         "symbol": "QQQM"
     },
     {
-        "name": "INVESTMENT MANAGERS SER TR II TRADR 2X LONG IN",
+        "name": "INVESTMENT MANAGERS SER TR II TRAD 2X 100 QUAR",
         "symbol": "QQQP"
     },
     {
@@ -15720,7 +15716,7 @@
         "symbol": "RODM"
     },
     {
-        "name": "EA SERIES TRUST ASTORIA US EQUAL",
+        "name": "EA SERIES TRUST AST EQU KIN ETF",
         "symbol": "ROE"
     },
     {
@@ -20864,7 +20860,7 @@
         "symbol": "XSW"
     },
     {
-        "name": "ISHARES TR FUTURE EXPONENTI",
+        "name": "ISHARES TR FUTU EXPO TE ETF",
         "symbol": "XT"
     },
     {
@@ -20940,7 +20936,7 @@
         "symbol": "YEXT"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY FTSE CHINA",
+        "name": "DIREXION SHARES ETF TRUST DA FT CH BU ETF",
         "symbol": "YINN"
     },
     {
