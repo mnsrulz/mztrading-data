@@ -5700,7 +5700,7 @@
         "symbol": "EDV"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MSCI EMERG",
+        "name": "DIREXION SHARES ETF TRUST DAI MAR BEA ETF",
         "symbol": "EDZ"
     },
     {
@@ -6280,7 +6280,7 @@
         "symbol": "EUO"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY FTSE EUROP",
+        "name": "DIREXION SHARES ETF TRUST DAIL FT EURO ETF",
         "symbol": "EURL"
     },
     {
@@ -8672,7 +8672,7 @@
         "symbol": "HIBL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 HI",
+        "name": "DIREXION SHARES ETF TRUST DAI BET BEA ETF",
         "symbol": "HIBS"
     },
     {
@@ -9082,10 +9082,6 @@
     {
         "name": "MARINEMAX INC COM",
         "symbol": "HZO"
-    },
-    {
-        "name": "IAC INC COM NEW",
-        "symbol": "IAC"
     },
     {
         "name": "IAMGOLD CORP COM",
@@ -12048,7 +12044,7 @@
         "symbol": "MNOV"
     },
     {
-        "name": "MACH NATURAL RESOURCES LP COM UNIT LTD PAR",
+        "name": "MACH NATURAL RESOURCES LP COM UN LT PA IN",
         "symbol": "MNR"
     },
     {
@@ -13138,10 +13134,6 @@
     {
         "name": "NUVALENT INC COM",
         "symbol": "NUVL"
-    },
-    {
-        "name": "NOVA MINERALS LTD SPONSORED ADS",
-        "symbol": "NVA"
     },
     {
         "name": "NOVAVAX INC COM NEW",
@@ -14590,6 +14582,10 @@
     {
         "name": "PPL CORP COM",
         "symbol": "PPL"
+    },
+    {
+        "name": "PEOPLE INC COM NEW",
+        "symbol": "PPLI"
     },
     {
         "name": "ABRDN PLATINUM ETF TRUST PHYSCL PLATM SHS",
@@ -19528,7 +19524,7 @@
         "symbol": "VEEV"
     },
     {
-        "name": "ISHARES INC MSCI AGRICULTURE",
+        "name": "ISHARES INC MSCI AGR PRO ETF",
         "symbol": "VEGI"
     },
     {
@@ -20560,7 +20556,7 @@
         "symbol": "XA"
     },
     {
-        "name": "DBX ETF TR XTRACKERS ARTIFI",
+        "name": "DBX ETF TR XTRA ART INT ETF",
         "symbol": "XAIX"
     },
     {
