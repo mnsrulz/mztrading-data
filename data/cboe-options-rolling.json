@@ -83601,5 +83601,6 @@
             "symbol": "TRTX",
             "dt": "2026-06-04"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-06-04/options_cboe_oi_anomaly.parquet"
 }
