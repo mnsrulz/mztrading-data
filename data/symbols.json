@@ -12,6 +12,10 @@
         "symbol": "AAAU"
     },
     {
+        "name": "APPLIED AEROSPACE & DEFENSE COMMON STOCK",
+        "symbol": "AADX"
+    },
+    {
         "name": "AMERICAN AIRLINES GROUP INC COM",
         "symbol": "AAL"
     },
@@ -3176,6 +3180,14 @@
         "symbol": "CBRS"
     },
     {
+        "name": "Tradr 2X Long CBRS Daily ETF",
+        "symbol": "CBRX"
+    },
+    {
+        "name": "Tradr 2X Short CBRS Daily ETF",
+        "symbol": "CBRZ"
+    },
+    {
         "name": "COMMERCE BANCSHARES INC COM",
         "symbol": "CBSH"
     },
@@ -3374,6 +3386,10 @@
     {
         "name": "CANTOR EQUITY PARTNERS I INC. SHS CL A",
         "symbol": "CEPO"
+    },
+    {
+        "name": "CANTOR EQUITY PARTNERS II INC. CL A ORD SHS",
+        "symbol": "CEPT"
     },
     {
         "name": "CENTRAL PUERTO S A SPONSORED ADR",
@@ -5340,7 +5356,7 @@
         "symbol": "DRIV"
     },
     {
-        "name": "EA SERIES TRUST STRIVE US ENERGY",
+        "name": "EA SERIES TRUST STRI US ENER ETF",
         "symbol": "DRLL"
     },
     {
@@ -5508,7 +5524,7 @@
         "symbol": "DVXF"
     },
     {
-        "name": "WEBS ETF TR TECHNOLOGY XLK D",
+        "name": "WEBS ETF TR TECH XLK DEF ETF",
         "symbol": "DVXK"
     },
     {
@@ -7232,6 +7248,10 @@
         "symbol": "FOSL"
     },
     {
+        "name": "Tuttle Capital Pure Play Photonics ETF",
+        "symbol": "FOTO"
+    },
+    {
         "name": "SHIFT4 PMTS INC CL A",
         "symbol": "FOUR"
     },
@@ -8524,6 +8544,10 @@
         "symbol": "HBM"
     },
     {
+        "name": "Tuttle Capital Concentrated Memory Stack ETF",
+        "symbol": "HBMX"
+    },
+    {
         "name": "HORIZON BANCORP IND COM",
         "symbol": "HBNC"
     },
@@ -8668,7 +8692,7 @@
         "symbol": "HHH"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 HI",
+        "name": "DIREXION SHARES ETF TRUST DAI BET BUL ETF",
         "symbol": "HIBL"
     },
     {
@@ -11672,6 +11696,10 @@
         "symbol": "MCHP"
     },
     {
+        "name": "Tradr 2X Long MCHP Daily ETF",
+        "symbol": "MCHU"
+    },
+    {
         "name": "MCKESSON CORP COM",
         "symbol": "MCK"
     },
@@ -12856,7 +12884,7 @@
         "symbol": "NLOP"
     },
     {
-        "name": "VANECK ETF TRUST URANIUM AND NUCL",
+        "name": "VANECK ETF TRUST URANI NUCLE ETF",
         "symbol": "NLR"
     },
     {
@@ -13292,6 +13320,10 @@
         "symbol": "NXPI"
     },
     {
+        "name": "Tradr 2X Long NXPI Daily ETF",
+        "symbol": "NXPX"
+    },
+    {
         "name": "NEXPOINT RESIDENTIAL TR INC COM",
         "symbol": "NXRT"
     },
@@ -13598,6 +13630,10 @@
     {
         "name": "ONTO INNOVATION INC COM",
         "symbol": "ONTO"
+    },
+    {
+        "name": "Tradr 2X Long ON Daily ETF",
+        "symbol": "ONX"
     },
     {
         "name": "OOMA INC COM",
@@ -14088,7 +14124,7 @@
         "symbol": "PDM"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR DORSEY WRIGHT MO",
+        "name": "INVESCO EXCHANGE TRADED FD TR DORS WRI MOM ETF",
         "symbol": "PDP"
     },
     {
@@ -14512,6 +14548,10 @@
         "symbol": "PODD"
     },
     {
+        "name": "Defiance Daily Target 2X Long POET ETF",
+        "symbol": "POEL"
+    },
+    {
         "name": "POET TECHNOLOGIES INC COM NEW",
         "symbol": "POET"
     },
@@ -14920,7 +14960,7 @@
         "symbol": "PWZ"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR ENERGY EXPLORATI",
+        "name": "INVESCO EXCHANGE TRADED FD TR ENERG EXPL ETF",
         "symbol": "PXE"
     },
     {
@@ -15050,6 +15090,10 @@
     {
         "name": "QUINSTREET INC COM",
         "symbol": "QNST"
+    },
+    {
+        "name": "QUANTINUUM INC CL A COM",
+        "symbol": "QNT"
     },
     {
         "name": "ISHARES TR NASDAQ-100 EX",
@@ -16952,7 +16996,7 @@
         "symbol": "SMR"
     },
     {
-        "name": "SMITH MICRO SOFTWARE INC COM SHS",
+        "name": "SMITH MICRO SOFTWARE INC COM NEW",
         "symbol": "SMSI"
     },
     {
@@ -17200,7 +17244,7 @@
         "symbol": "SPCI"
     },
     {
-        "name": "COLLABORATIVE INVESTMNT SER TR THE SPAC AND NEW",
+        "name": "COLLABORATIVE INVESTMNT SER TR SPA NEW ISS ETF",
         "symbol": "SPCK"
     },
     {
@@ -17212,7 +17256,7 @@
         "symbol": "SPDW"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST PORT MARK ETF",
         "symbol": "SPEM"
     },
     {
@@ -17668,10 +17712,6 @@
         "symbol": "STRO"
     },
     {
-        "name": "EA SERIES TRUST STRIVE 500 ETF",
-        "symbol": "STRV"
-    },
-    {
         "name": "STARZ ENTERTAINMENT CORP. COM",
         "symbol": "STRZ"
     },
@@ -17702,6 +17742,14 @@
     {
         "name": "EA SERIES TRUST STRIVE EMERGING",
         "symbol": "STXE"
+    },
+    {
+        "name": "EA SERIES TRUST STRIVE 500 ETF",
+        "symbol": "STXF"
+    },
+    {
+        "name": "Defiance Daily Target 2x Long STX ETF",
+        "symbol": "STXL"
     },
     {
         "name": "Leverage Shares 2X Long STX Daily ETF",
@@ -18124,12 +18172,16 @@
         "symbol": "TERG"
     },
     {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA REVOLU",
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA RE ETF",
         "symbol": "TESL"
     },
     {
         "name": "21Shares Ethereum ETF",
         "symbol": "TETH"
+    },
+    {
+        "name": "T-REX 2X Long TE Daily Target ETF",
+        "symbol": "TEUP"
     },
     {
         "name": "TEVA PHARMACEUTICAL INDS LTD SPONSORED ADS",
