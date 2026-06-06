@@ -22,13 +22,17 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     outputs:
       snapshot-data-tag: ${{ steps.snapshotimages.outputs.RELEASE_NAME }}
+      display-name: ${{ steps.snapshotimages.outputs.DISPLAY_NAME }}
     steps:
       - id: snapshotimages
         run: |
           if [ -n "${{ github.event.inputs.forceDayId }}" ]; then
             echo "RELEASE_NAME=DATA_${{ github.event.inputs.forceDayId }}" >> ${GITHUB_OUTPUT}
+            echo "DISPLAY_NAME=${{ github.event.inputs.forceDayId }}" >> ${GITHUB_OUTPUT}
           else
-            echo "RELEASE_NAME=DATA_$(date --rfc-3339=date)" >> ${GITHUB_OUTPUT}
+            today="$(date --rfc-3339=date)"
+            echo "RELEASE_NAME=DATA_${today}" >> ${GITHUB_OUTPUT}
+            echo "DISPLAY_NAME=${today}" >> ${GITHUB_OUTPUT}
           fi
 
   split-batches:
@@ -139,7 +143,7 @@ jobs:
     needs: [set-release-vars, consolidate-snapshot-data]
     env:
       RELEASE_NAME: ${{needs.set-release-vars.outputs.snapshot-data-tag}}
-      FORCE_DAY_ID: ${{ github.event.inputs.forceDayId }}
+      DISPLAY_NAME: ${{needs.set-release-vars.outputs.display-name}}
     steps:
       - name: Setup repo
         uses: actions/checkout@v4

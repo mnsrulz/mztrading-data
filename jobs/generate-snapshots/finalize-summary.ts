@@ -6,16 +6,16 @@ const data = getOptionsSnapshotSummary();
 
 const releaseName = Deno.env.get("RELEASE_NAME") ||
     `DEX_GEX_SNAPSHOT_${format(new Date(), "yyyy-MM-dd")}`;
-const forceDayId = Deno.env.get("FORCE_DAY_ID")
+const displayName = Deno.env.get("DISPLAY_NAME")
 
-forceDayId && console.log(`Force day id for this release: ${forceDayId}`);
+displayName && console.log(`Display name for this release: ${displayName}`);
 
 console.log(`🔄 Generating options snapshot for release: ${releaseName}`);
 
 const allSymbols = JSON.parse(Deno.readTextFileSync(`temp/all-symbols.json`)) as string[];
 
 data[releaseName] = {
-    displayName: forceDayId || format(new Date(), "yyyy-MM-dd"),
+    displayName: displayName || format(new Date(), "yyyy-MM-dd"),
     created: new Date(),
     zipAssetUrl: `${ghRepoBaseUrl}/${releaseName}/options-snapshots.zip`,
     releasesBaseUrl: `https://github.com/mnsrulz/mztrading-data/releases`,
