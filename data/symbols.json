@@ -5220,7 +5220,7 @@
         "symbol": "DNA"
     },
     {
-        "name": "WISDOMTREE TR GLOBAL EX US QUA",
+        "name": "WISDOMTREE TR GLOB EX US QU FD",
         "symbol": "DNL"
     },
     {
@@ -5444,7 +5444,7 @@
         "symbol": "DUBS"
     },
     {
-        "name": "PROSHARES TR ULTRASHORT ENERG",
+        "name": "PROSHARES TR ULTRA ENERG NEW",
         "symbol": "DUG"
     },
     {
@@ -5696,7 +5696,7 @@
         "symbol": "ED"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MSCI EMERG",
+        "name": "DIREXION SHARES ETF TRUST DAI MAR BUL ETF",
         "symbol": "EDC"
     },
     {
@@ -6724,7 +6724,7 @@
         "symbol": "FDNI"
     },
     {
-        "name": "FRESH DEL MONTE PRODUCE INC ORD",
+        "name": "DEL MONTE CORP",
         "symbol": "FDP"
     },
     {
@@ -9240,7 +9240,7 @@
         "symbol": "IDCC"
     },
     {
-        "name": "ISHARES TR US DIGITAL INFRA",
+        "name": "ISHARES TR US DIGI REAL ETF",
         "symbol": "IDGT"
     },
     {
@@ -11928,7 +11928,7 @@
         "symbol": "MIDD"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MID CAP BU",
+        "name": "DIREXION SHARES ETF TRUST DAIL MID CAP ETF",
         "symbol": "MIDU"
     },
     {
@@ -15090,10 +15090,6 @@
     {
         "name": "QUINSTREET INC COM",
         "symbol": "QNST"
-    },
-    {
-        "name": "QUANTINUUM INC CL A COM",
-        "symbol": "QNT"
     },
     {
         "name": "ISHARES TR NASDAQ-100 EX",
