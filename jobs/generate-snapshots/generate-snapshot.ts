@@ -31,12 +31,16 @@ if (latestDateAndSymbols == null || latestDateAndSymbols.latestDate == null) {
     throw new Error(`Unable to find any latest date in the data summary file!`);
 }
 
-let browser: Browser;
+let browser = null as Browser | null;
 let page: Page;
 
 async function initializePage() {
     browser = await puppeteer.launch();
     page = await browser.newPage();
+
+    if (latestDateAndSymbols == null || latestDateAndSymbols.latestDate == null) {
+        throw new Error(`Unable to find any latest date in the data summary file!`);
+    }
 
     await page.goto(
         `https://mztrading.netlify.app/tools/snapshot?dgextab=DEX&print=true&mode=HISTORICAL&historical=${encodeURIComponent(latestDateAndSymbols.latestDate)}`,
@@ -62,7 +66,7 @@ for (const symbol of symbols) {
             });
         } catch (err) {
             console.error(`❌ Error processing symbol ${symbol}: ${(err as Error).message}`);
-            await browser.close();
+            await browser?.close();
             console.log(`Closed browser after error...`);
             throw err;
         }
