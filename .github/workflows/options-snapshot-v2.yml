@@ -66,7 +66,8 @@ jobs:
         run: PUPPETEER_PRODUCT=chrome deno run -A https://deno.land/x/puppeteer@16.2.0/install.ts
       - name: Compile snapshot binary
         run: |
-          deno compile --allow-all --output temp/generate-snapshot jobs/generate-snapshots/generate-snapshot.ts
+          deno compile --allow-all --unstable --output temp/generate-snapshot jobs/generate-snapshots/generate-snapshot.ts
+
       - name: Upload batch files artifact
         uses: actions/upload-artifact@v4
         with:
