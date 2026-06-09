@@ -64,7 +64,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
       - name: Compile snapshot binary
         run: |
-          deno compile jobs/generate-snapshots/generate-snapshot.ts
+          deno compile --allow-all --output temp/generate-snapshot jobs/generate-snapshots/generate-snapshot.ts
       - name: Upload batch files artifact
         uses: actions/upload-artifact@v4
         with:
@@ -72,6 +72,7 @@ jobs:
           if-no-files-found: error
           path: |
             ${{ github.workspace}}/data/options-snapshot.summary.json
+            ${{ github.workspace}}/temp/generate-snapshot
             ${{ github.workspace}}/temp/batches/*.json
             ${{ github.workspace}}/temp/batch-manifest.json
             ${{ github.workspace}}/temp/all-symbols.json
@@ -103,8 +104,11 @@ jobs:
           deno-version: v1.x
       - name: Setup puppeteer
         run: PUPPETEER_PRODUCT=chrome deno run -A https://deno.land/x/puppeteer@16.2.0/install.ts
+      - name: Prepare compiled snapshot binary
+        run: |
+          chmod +x temp/generate-snapshot
       - name: Run
-        run: deno run --allow-all jobs/generate-snapshots/generate-snapshot.ts
+        run: temp/generate-snapshot
       - name: Upload artifacts 
         uses: actions/upload-artifact@v4
         with:
