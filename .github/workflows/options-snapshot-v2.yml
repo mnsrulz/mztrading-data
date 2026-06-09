@@ -62,6 +62,9 @@ jobs:
             echo "$json_content"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
+      - name: Compile snapshot binary
+        run: |
+          deno compile jobs/generate-snapshots/generate-snapshot.ts
       - name: Upload batch files artifact
         uses: actions/upload-artifact@v4
         with:
