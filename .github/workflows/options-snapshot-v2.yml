@@ -50,6 +50,13 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
+      - name: Cache Deno
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/deno
+          key: deno-${{ runner.os }}-deno-v1-puppeteer-16.2.0-chrome
+          restore-keys: |
+            deno-${{ runner.os }}-deno-v1-puppeteer-16.2.0-chrome
       - name: Create batch files
         id: make_batches
         run: |
@@ -99,6 +106,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: symbol-batches
+      - name: Cache Deno
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/deno
+          key: deno-${{ runner.os }}-deno-v1-puppeteer-16.2.0-chrome
+          restore-keys: |
+            deno-${{ runner.os }}-deno-v1-puppeteer-16.2.0-chrome
       - name: Install puppeteer deps
         run: sudo apt-get install -y ca-certificates fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
       - name: Prepare compiled snapshot binary
