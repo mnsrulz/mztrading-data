@@ -2712,7 +2712,7 @@
         "symbol": "BRZE"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MSCI BRAZI",
+        "name": "DIREXION SHARES ETF TRUST DAIL MS BRAZ ETF",
         "symbol": "BRZU"
     },
     {
@@ -4670,10 +4670,6 @@
     {
         "name": "SPDR INDEX SHS FDS ST STR ACWI ETF",
         "symbol": "CWI"
-    },
-    {
-        "name": "REX CRWV Growth & Income ETF",
-        "symbol": "CWII"
     },
     {
         "name": "CUSHMAN AND WAKEFIELD LTD COMMON SHARES",
@@ -6724,7 +6720,7 @@
         "symbol": "FDNI"
     },
     {
-        "name": "DEL MONTE CORP",
+        "name": "DEL MONTE CORP ORD",
         "symbol": "FDP"
     },
     {
@@ -7908,10 +7904,6 @@
         "symbol": "GIC"
     },
     {
-        "name": "REX Growth & Income Universe ETF",
-        "symbol": "GIF"
-    },
-    {
         "name": "SPDR INDEX SHS FDS ST STR INFRA ETF",
         "symbol": "GII"
     },
@@ -8826,10 +8818,6 @@
     {
         "name": "HARLEY DAVIDSON INC COM",
         "symbol": "HOG"
-    },
-    {
-        "name": "REX HOOD Growth & Income ETF",
-        "symbol": "HOII"
     },
     {
         "name": "HOME BANCSHARES INC COM",
@@ -10292,7 +10280,7 @@
         "symbol": "JNK"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY JUNIOR GOL",
+        "name": "DIREXION SHARES ETF TRUST DAIL JR GOLD ETF",
         "symbol": "JNUG"
     },
     {
@@ -11142,10 +11130,6 @@
     {
         "name": "LKQ CORP COM",
         "symbol": "LKQ"
-    },
-    {
-        "name": "REX LLY Growth & Income ETF",
-        "symbol": "LLII"
     },
     {
         "name": "ELI LILLY & CO COM",
@@ -13240,7 +13224,7 @@
         "symbol": "NVOX"
     },
     {
-        "name": "ENVIRI CORP COM",
+        "name": "ENVIRI II CORP COM",
         "symbol": "NVRI"
     },
     {
@@ -13676,7 +13660,7 @@
         "symbol": "OPLN"
     },
     {
-        "name": "WISDOMTREE TR EUROPEAN OPPORTU",
+        "name": "WISDOMTREE TR EUROP OPPOR FD",
         "symbol": "OPPE"
     },
     {
@@ -14460,10 +14444,6 @@
         "symbol": "PLTG"
     },
     {
-        "name": "REX PLTR Growth & Income ETF",
-        "symbol": "PLTI"
-    },
-    {
         "name": "PLAYTIKA HLDG CORP COM",
         "symbol": "PLTK"
     },
@@ -15090,6 +15070,10 @@
     {
         "name": "QUINSTREET INC COM",
         "symbol": "QNST"
+    },
+    {
+        "name": "QUANTINUUM INC CL A COM",
+        "symbol": "QNT"
     },
     {
         "name": "ISHARES TR NASDAQ-100 EX",
@@ -15984,7 +15968,7 @@
         "symbol": "RWT"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST DOW INTL ETF",
         "symbol": "RWX"
     },
     {
