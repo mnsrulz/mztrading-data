@@ -127,14 +127,12 @@ const BaseSchema = {
 const FixedExpirySchema = z.object({
     expiryMode: z.literal("fixed").optional(),
     expiration: z.string()
-        .regex(/^\d{4}-\d{2}-\d{2}$/, "Expiration must be YYYY-MM-DD"),
-    dte: z.undefined().optional()
+        .regex(/^\d{4}-\d{2}-\d{2}$/, "Expiration must be YYYY-MM-DD")
 });
 
 const RollingExpirySchema = z.object({
     expiryMode: z.literal("rolling"),
-    dte: z.number().int().positive(),
-    expiration: z.undefined().optional()
+    dte: z.number().int().positive()
 });
 
 const ExpirySchema = z.discriminatedUnion("expiryMode", [
@@ -146,16 +144,14 @@ const ExpirySchema = z.discriminatedUnion("expiryMode", [
 const DeltaModeSchema = z.object({
     ...BaseSchema,
     mode: z.literal("delta"),
-    delta: z.number().max(100).nonnegative(),
-    strike: z.null().optional(),
+    delta: z.number().max(100).nonnegative()
 });
 
 // strike mode
 const StrikeModeSchema = z.object({
     ...BaseSchema,
     mode: z.literal("strike"),
-    strike: z.number().positive(),
-    delta: z.null().optional(),
+    strike: z.number().positive()
 });
 
 // atm mode
@@ -184,87 +180,176 @@ type OhlcRequest = z.infer<typeof OhlcSchema>;
 /*
  {"symbol":"AAPL","lookbackDays":180,"delta":25,"expiration":"2025-11-07","mode":"delta","requestId":"977c5c7b-7e96-45d1-991b-db70992d0846"}       
 */
-const handleVolatilityMessage = async (args: OptionsVolRequest) => {
+// const handleVolatilityMessage = async (args: OptionsVolRequest) => {
+//     try {
+//         const { symbol, lookbackDays, delta, expiration, mode, strike, requestId, dte, expiryMode } = OptionsVolRequestSchema.parse(args);
+
+//         logger.info(`Worker volatility request received: ${JSON.stringify(args)}`);
+//         using stack = new DisposableStack();
+//         const instance = await DuckDBInstance.create(":memory:");
+//         stack.defer(() => instance.closeSync());
+//         const connection = await instance.connect();
+//         stack.defer(() => connection.closeSync());
+//         const strikeFilter = mode == 'strike' ? ` AND strike = ${strike}` : '';
+//         let partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
+//         let rows = [];
+//         let hasError = false;
+//         const useRollingExpiry = expiryMode === 'rolling';
+//         if (useRollingExpiry) {
+//             partitionOrderColumn = `dte ASC, ${partitionOrderColumn}`
+//         }
+//         try {
+
+//             const queryToExecute = `
+//             SELECT to_json(t)    
+//             FROM (
+//                 WITH OHLC AS (
+//                   SELECT DISTINCT dt, iv30/100  AS iv30, if(close > 0, close, LAG(close) OVER (PARTITION BY symbol ORDER BY dt)) AS close,
+//                   PERCENT_RANK() OVER (PARTITION BY symbol ORDER BY iv30) AS iv_percentile
+//                   FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
+//                 ), I AS (
+//                     SELECT DISTINCT opdata.dt, iv, option_type, option_symbol, expiration, strike, (bid + ask)/2 AS  mid_price, 
+//                     OHLC.close, OHLC.iv30, OHLC.iv_percentile,
+//                     abs(delta) AS abs_delta,
+//                     abs(strike - OHLC.close) AS price_strike_diff,
+//                     abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff,
+//                     DATE_DIFF('day', opdata.dt, expiration) AS dte
+//                     --FROM '${DATA_DIR}/${symbol}_*.parquet' opdata
+//                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet' opdata
+//                     JOIN OHLC ON OHLC.dt = opdata.dt
+//                     WHERE 1 = 1 
+//                         AND (open_interest > 0 OR bid > 0 OR ask > 0 OR iv > 0)           --JUST TO MAKE SURE NEW CONTRACTS WON'T APPEAR IN THE DATASET WHICH LIKELY REPRESENTED BY 0 OI, bid/ask/iv
+//                         AND OHLC.dt >= current_date - ${lookbackDays} ${strikeFilter} 
+//                 ), J AS (
+//                     SELECT *,
+//                     ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY dte ASC) AS dte_rn
+//                     FROM I
+//                     WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
+//                 ), M AS (
+//                     SELECT *,
+//                     ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY ${partitionOrderColumn} ASC) AS rn
+//                     FROM I
+//                     WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
+//                     --${useRollingExpiry ? 'WHERE dte_rn = 1' : ''}
+//                 )
+//                 SELECT 
+//                     array_agg(DISTINCT dt ORDER BY dt) AS dt,
+//                     --array_agg(expiration ORDER BY dt) FILTER (WHERE option_type='C') AS expiration,
+//                     array_agg(CAST(close AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS close,
+//                     array_agg(CAST(iv30 AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv30,
+//                     array_agg(CAST(iv_percentile AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv_percentile,
+//                     array_agg(CAST(iv AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS cv,
+//                     array_agg(CAST(iv AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='P') AS pv,
+//                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
+//                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='P') AS pp
+//                 FROM M
+//                 WHERE rn = 1
+//                 --${mode == 'strike' ? '' : 'WHERE rn = 1'}
+//             ) t`;
+
+//             //log the time it took to complete it
+//             const start = performance.now();
+//             const result = await connection.runAndReadAll(queryToExecute)
+//             const end = performance.now();
+//             logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
+//             rows = result.getRows().map(r => JSON.parse(r[0]))[0];  //takes first row and first column
+
+//             logger.info(`Query result for symbol: ${symbol}, rows: ${JSON.stringify(rows)}`);
+//         }
+//         catch (err) {
+//             logger.error({ err }, `error occurred while processing request`);
+//             hasError = true;
+//         }
+
+//         await publish(requestId, hasError, rows, args.channel);
+//         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
+
+//     } catch (error) {
+//         console.error(error);
+//         logger.error({ err: error }, `Error processing worker-volatility-request`);
+//     }
+// };
+
+const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
     try {
-        const { symbol, lookbackDays, delta, expiration, mode, strike, requestId, dte, expiryMode } = OptionsVolRequestSchema.parse(args);
+        const { symbol, lookbackDays, requestId, expiryMode } = OptionsVolRequestSchema.parse(args);
+        const delta = args.mode == 'delta' ? args.delta : 0;
 
-        logger.info(`Worker volatility request received: ${JSON.stringify(args)}`);
-        using stack = new DisposableStack();
-        const instance = await DuckDBInstance.create(":memory:");
-        stack.defer(() => instance.closeSync());
-        const connection = await instance.connect();
-        stack.defer(() => connection.closeSync());
-        const strikeFilter = mode == 'strike' ? ` AND strike = ${strike}` : '';
-        let partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
-        let rows = [];
-        let hasError = false;
-        const useRollingExpiry = expiryMode === 'rolling';
-        if (useRollingExpiry) {
-            partitionOrderColumn = `dte ASC, ${partitionOrderColumn}`
+        let qualifyClause = '', whereClause = ` WHERE quote_date >= (current_date - ${lookbackDays})`;
+        let useQualifyClause = false;
+        
+        if(args.expiryMode == 'rolling') {
+            useQualifyClause = true;
+        } else if (args.expiryMode == 'fixed') {
+            whereClause = `${whereClause} AND expiration_date = '${args.expiration}'`;
         }
+
+        let partitionOrderColumn = '';
+
+        if(args.mode == 'strike') {
+            whereClause = `${whereClause} AND strike_price = ${args.strike}`;
+        } else {
+            useQualifyClause = true;
+            partitionOrderColumn = args.mode == 'atm' ? ', price_strike_diff' : ', delta_diff';
+        }
+        
+        if(useQualifyClause) { 
+            qualifyClause = ` 
+            QUALIFY ROW_NUMBER() OVER (
+                    PARTITION BY quote_date, option_type 
+                    ORDER BY dte ASC ${partitionOrderColumn}
+            ) = 1`;
+        }
+
+        let rows:any = {};
+        let hasError = false;
+
+        let sql = `
+        PIVOT (
+        SELECT quote_date as dt, option_type, underlying_close_price as close, 
+        expiration_date as expiry, strike_price, mid_price, 
+        implied_volatility as iv, underlying_iv30 as iv30,
+        underlying_iv30_percentile as iv30_percentile
+        FROM (
+            SELECT *, abs(delta) AS abs_delta,
+                    abs(strike_price - underlying_close_price) AS price_strike_diff,
+                    abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff 
+            FROM
+            dataset
+        )
+        ${whereClause}
+        ${qualifyClause}
+        ORDER BY dt
+        )
+        ON option_type
+        USING FIRST(strike_price) AS strike, FIRST(mid_price) AS mid, FIRST(iv) AS iv
+        GROUP BY dt, close, iv30, iv30_percentile
+        ORDER BY dt
+        `;
+
+
+
         try {
+            const result = await executeReaderInternal(symbol, sql, 99999);
+            const [dt, close, iv30, iv_percentile, cs, cp, cv, ps, pp, pv] = result.getColumnsJson();
 
-            const queryToExecute = `
-            SELECT to_json(t)    
-            FROM (
-                WITH OHLC AS (
-                  SELECT DISTINCT dt, iv30/100  AS iv30, if(close > 0, close, LAG(close) OVER (PARTITION BY symbol ORDER BY dt)) AS close,
-                  PERCENT_RANK() OVER (PARTITION BY symbol ORDER BY iv30) AS iv_percentile
-                  FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
-                ), I AS (
-                    SELECT DISTINCT opdata.dt, iv, option_type, option_symbol, expiration, strike, (bid + ask)/2 AS  mid_price, 
-                    OHLC.close, OHLC.iv30, OHLC.iv_percentile,
-                    abs(delta) AS abs_delta,
-                    abs(strike - OHLC.close) AS price_strike_diff,
-                    abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff,
-                    DATE_DIFF('day', opdata.dt, expiration) AS dte
-                    --FROM '${DATA_DIR}/${symbol}_*.parquet' opdata
-                    FROM '${DATA_DIR}/symbol=${symbol}/*.parquet' opdata
-                    JOIN OHLC ON OHLC.dt = opdata.dt
-                    WHERE 1 = 1 
-                        AND (open_interest > 0 OR bid > 0 OR ask > 0 OR iv > 0)           --JUST TO MAKE SURE NEW CONTRACTS WON'T APPEAR IN THE DATASET WHICH LIKELY REPRESENTED BY 0 OI, bid/ask/iv
-                        AND OHLC.dt >= current_date - ${lookbackDays} ${strikeFilter} 
-                ), J AS (
-                    SELECT *,
-                    ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY dte ASC) AS dte_rn
-                    FROM I
-                    WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
-                ), M AS (
-                    SELECT *,
-                    ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY ${partitionOrderColumn} ASC) AS rn
-                    FROM I
-                    WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
-                    --${useRollingExpiry ? 'WHERE dte_rn = 1' : ''}
-                )
-                SELECT 
-                    array_agg(DISTINCT dt ORDER BY dt) AS dt,
-                    --array_agg(expiration ORDER BY dt) FILTER (WHERE option_type='C') AS expiration,
-                    array_agg(CAST(close AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS close,
-                    array_agg(CAST(iv30 AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv30,
-                    array_agg(CAST(iv_percentile AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv_percentile,
-                    array_agg(CAST(iv AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS cv,
-                    array_agg(CAST(iv AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='P') AS pv,
-                    array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
-                    array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='P') AS pp
-                FROM M
-                WHERE rn = 1
-                --${mode == 'strike' ? '' : 'WHERE rn = 1'}
-            ) t`;
-
-            //log the time it took to complete it
-            const start = performance.now();
-            const result = await connection.runAndReadAll(queryToExecute)
-            const end = performance.now();
-            logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
-            rows = result.getRows().map(r => JSON.parse(r[0]))[0];  //takes first row and first column
+            rows = { 
+                dt, close, iv30, 
+                iv_percentile, 
+                cv, 
+                pv, 
+                cs, 
+                ps, 
+                cp, 
+                pp
+             };
         }
         catch (err) {
-            logger.error({ err }, `error occurred while processing request`);
+            logger.error({ err }, `error occurred while processing volatility request.`);
             hasError = true;
         }
 
         await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
 
     } catch (error) {
         console.error(error);
@@ -505,7 +590,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                         ORDER BY dt 
                         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
                     ) as underlying_iv30,
-                    symbol as underlying_symbol
+                    symbol as underlying_symbol,
+                    CAST(100 *PERCENT_RANK() OVER (PARTITION BY symbol ORDER BY iv30) AS DECIMAL(10, 2)) AS underlying_iv30_percentile
                     FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
                     AND underlying_close_price > 0
                 ), T2 AS (
@@ -535,7 +621,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     rho,
 
                     theo AS theoretical_price,
-                    iv AS implied_volatility,
+                    iv * 100 AS implied_volatility,
 
                     open AS option_open_price,
                     high AS option_high_price,
@@ -543,7 +629,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     ask AS ask_price,
                     underlying_symbol,
                     underlying_open_price, underlying_high_price, underlying_low_price, underlying_close_price,
-                    underlying_iv30, underlying_volume
+                    underlying_iv30, underlying_volume,
+                    underlying_iv30_percentile
                     FROM T2
                     JOIN T ON T.dt = T2.dt
                 ), calc AS (
@@ -602,6 +689,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     underlying_symbol,
                     underlying_open_price, underlying_high_price, underlying_low_price, underlying_close_price,
                     underlying_iv30, underlying_volume,
+                    underlying_iv30_percentile,
                     
                     CASE
                         WHEN atm_rank = 1 THEN 'ATM'
@@ -682,12 +770,15 @@ if (DEBUG_MODE) {
     //     requestId: crypto.randomUUID(),
     //     symbol: 'COIN'
     // })
-    await handleExpectedMoveMessage({
+    await handleVolatilityMessageV2({
         channel: 'test',
-        lookbackDays: 45,
+        lookbackDays: 90,
         requestId: crypto.randomUUID(),
         symbol: 'COIN',
-        expiryMode: 'weekly'
+        mode: 'delta',
+        delta: 25,
+        dte: 30,
+        expiryMode: 'rolling',
     })
     //await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
 } else {
@@ -701,7 +792,7 @@ if (DEBUG_MODE) {
         pusherClient.disconnect();
         logger.info("will shut down in 100ms")
     }
-    emitter.on('volatility-query', ({ data }) => handleVolatilityMessage(data as OptionsVolRequest));
+    emitter.on('volatility-query', ({ data }) => handleVolatilityMessageV2(data as OptionsVolRequest));
     emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
     emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
     emitter.on('expected-move-query', ({ data }) => handleExpectedMoveMessage(data as ExpectedMoveRequest));
