@@ -308,7 +308,7 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
         let sql = `
         PIVOT (
         SELECT quote_date as dt, option_type, underlying_close_price as close, 
-        expiration_date as expiry, strike_price, mid_price, 
+        expiration_date as expiry, strike_price, round((bid_price + ask_price) / 2, 2) as mid_price, 
         implied_volatility as iv, underlying_iv30 as iv30,
         underlying_iv30_percentile as iv30_percentile
         FROM (
@@ -316,7 +316,7 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
                     abs(strike_price - underlying_close_price) AS price_strike_diff,
                     abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff 
             FROM
-            dataset
+            base
         )
         ${whereClause}
         ${qualifyClause}
@@ -773,9 +773,9 @@ if (DEBUG_MODE) {
     // })
     await handleVolatilityMessageV2({
         channel: 'test',
-        lookbackDays: 90,
+        lookbackDays: 180,
         requestId: crypto.randomUUID(),
-        symbol: 'COIN',
+        symbol: 'SPX',
         mode: 'delta',
         delta: 25,
         dte: 30,
