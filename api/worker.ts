@@ -280,6 +280,7 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
         
         if(args.expiryMode == 'rolling') {
             useQualifyClause = true;
+            whereClause = `${whereClause} AND dte >= '${args.dte}'`;
         } else if (args.expiryMode == 'fixed') {
             whereClause = `${whereClause} AND expiration_date = '${args.expiration}'`;
         }
