@@ -508,7 +508,7 @@
         "symbol": "AGNG"
     },
     {
-        "name": "EXP WORLD HLDGS INC COM",
+        "name": "AGNT INC COM",
         "symbol": "AGNT"
     },
     {
@@ -592,6 +592,10 @@
         "symbol": "AIRG"
     },
     {
+        "name": "AIRJOULE TECHNOLOGIES CORP CL A",
+        "symbol": "AIRJ"
+    },
+    {
         "name": "AIRO GROUP HLDGS INC COM",
         "symbol": "AIRO"
     },
@@ -650,6 +654,10 @@
     {
         "name": "AKEBIA THREAPEUTICS INC COM",
         "symbol": "AKBA"
+    },
+    {
+        "name": "AKARI THERAPEUTICS PLC SPONSORED ADR",
+        "symbol": "AKTX"
     },
     {
         "name": "ASTERA LABS INC COM",
@@ -1478,6 +1486,10 @@
     {
         "name": "ASTRANA HEALTH INC COM NEW",
         "symbol": "ASTH"
+    },
+    {
+        "name": "ASCENT SOLAR TECHNOLOGIES INC COM NEW",
+        "symbol": "ASTI"
     },
     {
         "name": "ALGOMA STL GROUP INC COM",
@@ -2608,6 +2620,10 @@
         "symbol": "BORR"
     },
     {
+        "name": "ROBOSTRATEGY INC COM SHS",
+        "symbol": "BOT"
+    },
+    {
         "name": "GLOBAL X FDS RBTCS ARTFL INTE",
         "symbol": "BOTZ"
     },
@@ -3710,10 +3726,6 @@
     {
         "name": "Tradr 2X Long CLSK Daily ETF",
         "symbol": "CLSX"
-    },
-    {
-        "name": "Tradr 2X Short CLSK Daily ETF",
-        "symbol": "CLSZ"
     },
     {
         "name": "CLARIVATE PLC ORD SHS",
@@ -6164,10 +6176,6 @@
         "symbol": "ESI"
     },
     {
-        "name": "REX-Osprey ETH + Staking ETF",
-        "symbol": "ESK"
-    },
-    {
         "name": "ELBIT SYS LTD ORD",
         "symbol": "ESLT"
     },
@@ -6742,6 +6750,10 @@
     {
         "name": "FEDEX CORP COM",
         "symbol": "FDX"
+    },
+    {
+        "name": "FEDEX FGHT HLDG CO INC COMMON STOCK",
+        "symbol": "FDXF"
     },
     {
         "name": "FIRSTENERGY CORP COM",
@@ -8776,10 +8788,6 @@
         "symbol": "HLX"
     },
     {
-        "name": "Tradr 2X Long HL Daily ETF",
-        "symbol": "HLXX"
-    },
-    {
         "name": "HONDA MOTOR CO LTD ADR ECH CNV IN 3",
         "symbol": "HMC"
     },
@@ -9816,6 +9824,10 @@
         "symbol": "IRE"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "IREG"
+    },
+    {
         "name": "IREN LIMITED ORDINARY SHARES",
         "symbol": "IREN"
     },
@@ -10362,10 +10374,6 @@
     {
         "name": "KAISER ALUMINIUM CORPORATION COM PAR $0.01",
         "symbol": "KALU"
-    },
-    {
-        "name": "KALVISTA PHARMACEUTICALS INC COM",
-        "symbol": "KALV"
     },
     {
         "name": "KRANESHARES TRUST ELEC VEH FUTUR",
@@ -11200,6 +11208,10 @@
         "symbol": "LNTH"
     },
     {
+        "name": "LANZATECH GLOBAL INC COM NEW",
+        "symbol": "LNZA"
+    },
+    {
         "name": "MANHATTAN BRDG CAP INC COM",
         "symbol": "LOAN"
     },
@@ -11418,6 +11430,10 @@
     {
         "name": "LAMB WESTON HLDGS INC COM",
         "symbol": "LW"
+    },
+    {
+        "name": "LIFEWAY FOODS INC COM",
+        "symbol": "LWAY"
     },
     {
         "name": "LIGHTWAVE LOGIC INC COM",
@@ -12078,6 +12094,10 @@
     {
         "name": "MNTN INC CL A",
         "symbol": "MNTN"
+    },
+    {
+        "name": "MOMENTUS INC COM CL A",
+        "symbol": "MNTS"
     },
     {
         "name": "MONEYHERO LIMITED ORD SHS",
@@ -13010,6 +13030,10 @@
     {
         "name": "ENERGY VAULT HOLDINGS INC COM",
         "symbol": "NRGV"
+    },
+    {
+        "name": "NORTHRIM BANCORP INC COM",
+        "symbol": "NRIM"
     },
     {
         "name": "NURIX THERAPEUTICS INC COM",
@@ -16312,10 +16336,6 @@
         "symbol": "SCSC"
     },
     {
-        "name": "SHOE CARNIVAL INC COM",
-        "symbol": "SCVL"
-    },
-    {
         "name": "SCYNEXIS INC COM",
         "symbol": "SCYX"
     },
@@ -16568,8 +16588,16 @@
         "symbol": "SHM"
     },
     {
+        "name": "SCHMID GROUP N.V. EURO SHS CL A",
+        "symbol": "SHMD"
+    },
+    {
         "name": "SUNSTONE HOTEL INVS INC NEW COM",
         "symbol": "SHO"
+    },
+    {
+        "name": "SHOE STA GROUP INC COM",
+        "symbol": "SHOE"
     },
     {
         "name": "MADDEN STEVEN LTD COM",
@@ -16958,10 +16986,6 @@
     {
         "name": "SIMPLY GOOD FOODS CO COM",
         "symbol": "SMPL"
-    },
-    {
-        "name": "Tradr 1X Short Innovation 100 Monthly ETF",
-        "symbol": "SMQ"
     },
     {
         "name": "NUSCALE PWR CORP CL A COM",
@@ -17498,10 +17522,6 @@
     {
         "name": "SAREPTA THERAPEUTICS INC COM",
         "symbol": "SRPT"
-    },
-    {
-        "name": "Tradr 2X Long SRPT Daily ETF",
-        "symbol": "SRPU"
     },
     {
         "name": "SCHOLAR ROCK HLDG CORP COM",
@@ -20466,6 +20486,10 @@
     {
         "name": "WILLSCOT HLDGS CORP COM CL A",
         "symbol": "WSC"
+    },
+    {
+        "name": "WISE GROUP PLC ORD SHS CLASS A",
+        "symbol": "WSE"
     },
     {
         "name": "WSFS FINL CORP COM",
