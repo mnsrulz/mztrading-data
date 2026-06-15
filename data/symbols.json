@@ -4556,7 +4556,7 @@
         "symbol": "CURB"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY HEALTHCARE",
+        "name": "DIREXION SHARES ETF TRUST DAIL HEAL BU ETF",
         "symbol": "CURE"
     },
     {
@@ -9976,7 +9976,7 @@
         "symbol": "IVR"
     },
     {
-        "name": "ISHARES TR FUTURE METAVERSE",
+        "name": "ISHARES TR FUTU META TE ETF",
         "symbol": "IVRS"
     },
     {
@@ -20894,6 +20894,10 @@
     {
         "name": "Mini-SPX",
         "symbol": "XSP"
+    },
+    {
+        "name": "MiniSPXBinaryOptions",
+        "symbol": "XSPBX"
     },
     {
         "name": "INVESCO EXCHANGE TRADED FD TR S&P SMCP VLU MNT",
