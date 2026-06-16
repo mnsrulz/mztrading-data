@@ -556,7 +556,7 @@
         "symbol": "AIFC"
     },
     {
-        "name": "AIFU INC USD CL A ORD SHS",
+        "name": "AIFU INC CL A ORD SHS",
         "symbol": "AIFU"
     },
     {
@@ -10780,10 +10780,6 @@
         "symbol": "KVYO"
     },
     {
-        "name": "KENNEDY-WILSON HOLDINGS INC COM",
-        "symbol": "KW"
-    },
-    {
         "name": "KRANESHARES TRUST CSI CHI INTERNET",
         "symbol": "KWEB"
     },
@@ -17080,6 +17076,10 @@
         "symbol": "SNEX"
     },
     {
+        "name": "GraniteShares 2x Short SpaceX Daily ETF",
+        "symbol": "SNK"
+    },
+    {
         "name": "SMITH & NEPHEW PLC SPDN ADR NEW",
         "symbol": "SNN"
     },
@@ -17224,6 +17224,10 @@
         "symbol": "SPAI"
     },
     {
+        "name": "GraniteShares 2x Long SpaceX Daily ETF",
+        "symbol": "SPAL"
+    },
+    {
         "name": "SPECTRUM BRANDS HOLDINGS INC COM",
         "symbol": "SPB"
     },
@@ -17236,12 +17240,28 @@
         "symbol": "SPCE"
     },
     {
+        "name": "Tradr 2X Short SpaceX Daily ETF",
+        "symbol": "SPCG"
+    },
+    {
+        "name": "Leverage Shares 2X Long SPCX Daily ETF",
+        "symbol": "SPCH"
+    },
+    {
         "name": "Tuttle Capital Space Industry Income Blast ETF",
         "symbol": "SPCI"
     },
     {
         "name": "COLLABORATIVE INVESTMNT SER TR SPA NEW ISS ETF",
         "symbol": "SPCK"
+    },
+    {
+        "name": "Tradr 2X Long SpaceX Daily ETF",
+        "symbol": "SPCM"
+    },
+    {
+        "name": "SPACE EXPLORATION TECHN CORP CLASS A COM STK",
+        "symbol": "SPCX"
     },
     {
         "name": "DIREXION SHARES ETF TRUST DAILY 500 1X ETF",
@@ -17578,6 +17598,10 @@
     {
         "name": "SCRIPPS E W CO OHIO CL A NEW",
         "symbol": "SSP"
+    },
+    {
+        "name": "Leverage Shares 2X Short SPCX Daily ETF",
+        "symbol": "SSPC"
     },
     {
         "name": "SSR MINING IN COM",
