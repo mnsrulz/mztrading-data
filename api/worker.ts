@@ -602,7 +602,12 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
                     -- this is to make sure we remove the first quote for each option contract when they appear for the very first time in the dataset, which likely represented by 0 OI, bid, ask, iv. we want to remove those data points because they can be very misleading for the analysis, especially for the newly listed contracts which usually have a lot of zero-OI quotes at the beginning.
                     --QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
-                    WHERE open_interest > 0 OR bid > 0 OR ask > 0 and volume > 0
+                    WHERE open_interest > 0 OR bid > 0 OR ask > 0 OR volume > 0
+                ), weekly_expiries as (
+                    select DISTINCT max(expiration) OVER (
+                                            PARTITION BY date_trunc('week', expiration)
+                                        ) AS expiration
+                    from (SELECT DISTINCT expiration FROM T2)
                 ), base AS (
                     SELECT T.dt AS quote_date,
                     expiration AS expiration_date,
@@ -641,10 +646,10 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     round((bid_price + ask_price) / 2, 2) AS mid_price,
                     abs(strike_price - underlying_close_price) AS strike_distance,
                     abs(strike_price - underlying_close_price) / underlying_close_price * 100 AS strike_distance_pct,
-                    max(expiration_date) OVER (
-                        PARTITION BY date_trunc('week', expiration_date)
-                    ) AS weekly_max_expiration
+                    CASE WHEN weekly_expiries.expiration IS NOT NULL THEN 1 ELSE 0 END AS is_weekly_expiration,
+                    CASE WHEN is_weekly_expiration = 1 AND day(expiration_date) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration
                     FROM base
+                    LEFT JOIN weekly_expiries ON base.expiration_date = weekly_expiries.expiration
                 ), ranked AS (
                     SELECT
                         *,
@@ -658,8 +663,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     expiration_date,
                     expiration_dow,
                     quote_dow,
-                    CASE WHEN expiration_date = weekly_max_expiration THEN 1 ELSE 0 END AS is_weekly_expiration,
-                    CASE WHEN expiration_date = weekly_max_expiration AND day(expiration_date) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration,
+                    is_weekly_expiration,
+                    is_monthly_expiration,
                     dte,
                     option_ticker,
                     option_type,
