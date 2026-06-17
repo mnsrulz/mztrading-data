@@ -1472,10 +1472,6 @@
         "symbol": "ASR"
     },
     {
-        "name": "ASSERTIO HOLDINGS INC COM NEW",
-        "symbol": "ASRT"
-    },
-    {
         "name": "STRIVE INC CL A COM",
         "symbol": "ASST"
     },
@@ -8052,7 +8048,7 @@
         "symbol": "GMEU"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR ASIA ETF",
         "symbol": "GMF"
     },
     {
@@ -13236,7 +13232,7 @@
         "symbol": "NVOX"
     },
     {
-        "name": "ENVIRI II CORP COM",
+        "name": "ENVIRI CORP COM",
         "symbol": "NVRI"
     },
     {
@@ -14960,7 +14956,7 @@
         "symbol": "PXH"
     },
     {
-        "name": "INVESCO EXCHANGE TRADED FD TR OIL & GAS SERVIC",
+        "name": "INVESCO EXCHANGE TRADED FD TR OIL GAS SVC ETF",
         "symbol": "PXJ"
     },
     {
@@ -17256,8 +17252,20 @@
         "symbol": "SPCK"
     },
     {
+        "name": "Defiance Daily 2X Space ETF",
+        "symbol": "SPCL"
+    },
+    {
         "name": "Tradr 2X Long SpaceX Daily ETF",
         "symbol": "SPCM"
+    },
+    {
+        "name": "Defiance Daily Target 2X Short SpaceX ETF",
+        "symbol": "SPCQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long SpaceX ETF",
+        "symbol": "SPCU"
     },
     {
         "name": "SPACE EXPLORATION TECHN CORP CLASS A COM STK",
@@ -19244,7 +19252,7 @@
         "symbol": "UPBD"
     },
     {
-        "name": "UPLAND SOFTWARE INC COM",
+        "name": "UPLAND SOFTWARE INC COM NEW",
         "symbol": "UPLD"
     },
     {
