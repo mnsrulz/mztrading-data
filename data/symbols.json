@@ -308,10 +308,6 @@
         "symbol": "ADAM"
     },
     {
-        "name": "ADAPTIMMUNE THERAPEUTICS PLC SPONDS ADS",
-        "symbol": "ADAPY"
-    },
-    {
         "name": "ADOBE INC COM",
         "symbol": "ADBE"
     },
@@ -4600,7 +4596,7 @@
         "symbol": "CVI"
     },
     {
-        "name": "MORGAN STANLEY ETF TRUST CALVERT INTERNAT",
+        "name": "MORGAN STANLEY ETF TRUST CALVE INDEX ETF",
         "symbol": "CVIE"
     },
     {
@@ -4944,7 +4940,7 @@
         "symbol": "DEO"
     },
     {
-        "name": "VANECK ETF TRUST OFFICE AND COMME",
+        "name": "VANECK ETF TRUST OFFIC REIT ETF",
         "symbol": "DESK"
     },
     {
@@ -5556,7 +5552,7 @@
         "symbol": "DWAS"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST S&P INTL ETF",
         "symbol": "DWX"
     },
     {
@@ -5708,7 +5704,7 @@
         "symbol": "EDIT"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST MAR DIVID ETF",
         "symbol": "EDIV"
     },
     {
@@ -6444,7 +6440,7 @@
         "symbol": "EWW"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST MARKE CAP ETF",
         "symbol": "EWX"
     },
     {
@@ -6824,7 +6820,7 @@
         "symbol": "FEX"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR EU 50 ETF",
         "symbol": "FEZ"
     },
     {
@@ -8444,7 +8440,7 @@
         "symbol": "GWW"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST INTL CAP ETF",
         "symbol": "GWX"
     },
     {
@@ -10918,10 +10914,6 @@
     {
         "name": "LIBERTY GLOBAL LTD COM CL C",
         "symbol": "LBTYK"
-    },
-    {
-        "name": "LENDINGCLUB ISSUANCE TR SER COM NEW",
-        "symbol": "LC"
     },
     {
         "name": "GRANITESHARES ETF TR 2X LONG LCID ETF",
@@ -13978,10 +13970,6 @@
     {
         "name": "Global X U.S. Infrastructure Development ETF",
         "symbol": "PAVE"
-    },
-    {
-        "name": "PAVMED INC COM",
-        "symbol": "PAVM"
     },
     {
         "name": "PATRIA INVESTMENTS LIMITED COM CL A",
@@ -17168,10 +17156,6 @@
         "symbol": "SON"
     },
     {
-        "name": "SONDER HOLDINGS INC CL A NEW",
-        "symbol": "SONDQ"
-    },
-    {
         "name": "SONOS INC COM",
         "symbol": "SONO"
     },
@@ -17260,11 +17244,11 @@
         "symbol": "SPCM"
     },
     {
-        "name": "Defiance Daily Target 2X Short SpaceX ETF",
+        "name": "Defiance Daily Target 2X Short SPCX ETF",
         "symbol": "SPCQ"
     },
     {
-        "name": "Defiance Daily Target 2X Long SpaceX ETF",
+        "name": "Defiance Daily Target 2X Long SPCX ETF",
         "symbol": "SPCU"
     },
     {
@@ -17276,7 +17260,7 @@
         "symbol": "SPDN"
     },
     {
-        "name": "SPDR INDEX SHS FDS STATE STREET SPD",
+        "name": "SPDR INDEX SHS FDS ST STR PO EX ETF",
         "symbol": "SPDW"
     },
     {
