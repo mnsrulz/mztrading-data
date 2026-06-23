@@ -5468,7 +5468,7 @@
         "symbol": "DUSA"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY INDUSTRIAL",
+        "name": "DIREXION SHARES ETF TRUST DAIL INDU BU ETF",
         "symbol": "DUSL"
     },
     {
@@ -9568,7 +9568,7 @@
         "symbol": "INDI"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY MSCI INDIA",
+        "name": "DIREXION SHARES ETF TRUST DAIL MS INDI ETF",
         "symbol": "INDL"
     },
     {
@@ -12316,7 +12316,7 @@
         "symbol": "MSM"
     },
     {
-        "name": "ADVISORSHARES TR PURE US CANNABIS",
+        "name": "ADVISORSHARES TR PURE US CANN ETF",
         "symbol": "MSOS"
     },
     {
@@ -17020,8 +17020,8 @@
         "symbol": "SNAP"
     },
     {
-        "name": "SLEEP NUMBER CORP COM",
-        "symbol": "SNBR"
+        "name": "--Placeholder--",
+        "symbol": "SNBRQ"
     },
     {
         "name": "SMART SAND INC COM",
@@ -17416,7 +17416,7 @@
         "symbol": "SPTS"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY S&P 500 BU",
+        "name": "DIREXION SHARES ETF TRUST DAILY 500 2X ETF",
         "symbol": "SPUU"
     },
     {
@@ -18552,7 +18552,7 @@
         "symbol": "TPL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY TRANSPORTA",
+        "name": "DIREXION SHARES ETF TRUST DAILY TRANSN ETF",
         "symbol": "TPOR"
     },
     {
@@ -18964,7 +18964,7 @@
         "symbol": "TXT"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY 710 YEAR T",
+        "name": "DIREXION SHARES ETF TRUST DAI 710 BUL ETF",
         "symbol": "TYD"
     },
     {
@@ -18976,7 +18976,7 @@
         "symbol": "TYLG"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY 710 YEAR T",
+        "name": "DIREXION SHARES ETF TRUST DAI 710 BEA ETF",
         "symbol": "TYO"
     },
     {
@@ -19020,7 +19020,7 @@
         "symbol": "UBEW"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY ROBOTICS A",
+        "name": "DIREXION SHARES ETF TRUST DAIL ROBO AR ETF",
         "symbol": "UBOT"
     },
     {
@@ -20188,7 +20188,7 @@
         "symbol": "WAL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DAILY CONSUMER D",
+        "name": "DIREXION SHARES ETF TRUST DAIL CONS DI ETF",
         "symbol": "WANT"
     },
     {
