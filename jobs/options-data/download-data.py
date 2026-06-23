@@ -39,7 +39,7 @@ def parse_options_data(data):
 # Initialize lists to collect all stock and options data
 all_stock_data = []
 all_options_data = []
-retries = 5
+retries = 10
 retry_delay_base = 3    # retry exponential back off base delay
 processed_symbols_success_count = 0
 processed_symbols_failed_count = 0
