@@ -500,7 +500,7 @@
         "symbol": "AGNC"
     },
     {
-        "name": "GLOBAL X FDS AGING POPULATION",
+        "name": "GLOBAL X FDS AGING POPUL ETF",
         "symbol": "AGNG"
     },
     {
@@ -3144,7 +3144,7 @@
         "symbol": "CAVA"
     },
     {
-        "name": "CHUBB LTD SWITZ COM",
+        "name": "CHUBB LIMITED COM",
         "symbol": "CB"
     },
     {
@@ -5662,6 +5662,10 @@
     {
         "name": "iShares MSCI Chile ETF",
         "symbol": "ECH"
+    },
+    {
+        "name": "ECHOSTAR CORP CL A",
+        "symbol": "ECHO"
     },
     {
         "name": "ECOLAB INC COM",
@@ -15900,7 +15904,7 @@
         "symbol": "RUI"
     },
     {
-        "name": "RUMBLE INC COM CL A",
+        "name": "RUM GROUP INC",
         "symbol": "RUM"
     },
     {
@@ -16142,10 +16146,6 @@
     {
         "name": "Invesco Alerian Galaxy Crypto Economy ETF",
         "symbol": "SATO"
-    },
-    {
-        "name": "ECHOSTAR CORP CL A",
-        "symbol": "SATS"
     },
     {
         "name": "SAFE BULKERS INC COM",
@@ -17020,7 +17020,7 @@
         "symbol": "SNAP"
     },
     {
-        "name": "--Placeholder--",
+        "name": "SLEEP NUMBER CORP COM",
         "symbol": "SNBRQ"
     },
     {
@@ -18956,7 +18956,7 @@
         "symbol": "TXRH"
     },
     {
-        "name": "TEXAS CAPITAL FUNDS TRUST TEXAS CAP TEX EQ",
+        "name": "TEXAS CAPITAL FUNDS TRUST CAP TE EQ IN ETF",
         "symbol": "TXS"
     },
     {
