@@ -2468,7 +2468,7 @@
         "symbol": "BLV"
     },
     {
-        "name": "BANCO LATINOAMERICANO DE COMER SHS E",
+        "name": "BLADEX INC",
         "symbol": "BLX"
     },
     {
@@ -3146,10 +3146,6 @@
     {
         "name": "CHUBB LIMITED COM",
         "symbol": "CB"
-    },
-    {
-        "name": "CBAK ENERGY TECHNOLOGY INC COM",
-        "symbol": "CBAT"
     },
     {
         "name": "CENTRAL BANCOMPANY COM CL A",
@@ -3892,10 +3888,6 @@
         "symbol": "CNS"
     },
     {
-        "name": "CENTESSA PHARMACEUTICALS PLC SPONSORED ADS",
-        "symbol": "CNTA"
-    },
-    {
         "name": "CONNECT BIOPHARMA HLDGS LTD SHS",
         "symbol": "CNTB"
     },
@@ -4332,7 +4324,7 @@
         "symbol": "CROX"
     },
     {
-        "name": "FIRST TR EXCHNG TRADED FD VIII SKYBRIDGE CRYPTO",
+        "name": "FIRST TR EXCHNG TRADED FD VIII SKYB CRY IND ETF",
         "symbol": "CRPT"
     },
     {
@@ -4644,10 +4636,6 @@
         "symbol": "CW"
     },
     {
-        "name": "CLEARWATER ANALYTICS HLDGS INC CL A",
-        "symbol": "CWAN"
-    },
-    {
         "name": "SPDR SERIES TRUST ST STR CONV ETF",
         "symbol": "CWB"
     },
@@ -4884,7 +4872,7 @@
         "symbol": "DCTH"
     },
     {
-        "name": "DUPONT DE NEMOURS INC COM",
+        "name": "DUPONT DE NEMOURS INC COMMON STOCK",
         "symbol": "DD"
     },
     {
@@ -15244,6 +15232,10 @@
         "symbol": "RAL"
     },
     {
+        "name": "Roundhill T-REX 2X Long DRAM Daily Target ETF",
+        "symbol": "RAM"
+    },
+    {
         "name": "LIVERAMP HLDGS INC COM",
         "symbol": "RAMP"
     },
@@ -15904,7 +15896,7 @@
         "symbol": "RUI"
     },
     {
-        "name": "RUM GROUP INC",
+        "name": "RUM GROUP INC COM CL A",
         "symbol": "RUM"
     },
     {
