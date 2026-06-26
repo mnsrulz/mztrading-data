@@ -1836,6 +1836,10 @@
         "symbol": "AXTX"
     },
     {
+        "name": "AYA GOLD & SILVER INC COM",
+        "symbol": "AYA"
+    },
+    {
         "name": "ACUITY INC COM",
         "symbol": "AYI"
     },
@@ -2156,7 +2160,7 @@
         "symbol": "BETR"
     },
     {
-        "name": "LISTED FDS TR ROUNDHILL SPORTS",
+        "name": "LISTED FDS TR ROUN SPOR BE ETF",
         "symbol": "BETZ"
     },
     {
@@ -2468,7 +2472,7 @@
         "symbol": "BLV"
     },
     {
-        "name": "BLADEX INC",
+        "name": "BLADEX INC SHS E",
         "symbol": "BLX"
     },
     {
@@ -2622,6 +2626,10 @@
     {
         "name": "BOX INC CL A",
         "symbol": "BOX"
+    },
+    {
+        "name": "Alpha Architect 1-3 Month Box ETF",
+        "symbol": "BOXX"
     },
     {
         "name": "BP PLC SPONSORED ADR",
@@ -2896,6 +2904,10 @@
         "symbol": "BWEN"
     },
     {
+        "name": "AMPLIFY COMMODITY TRUST BREA TANK SH ETF",
+        "symbol": "BWET"
+    },
+    {
         "name": "THE BALDWIN INSURANCE GRP INC COM CL A",
         "symbol": "BWIN"
     },
@@ -3146,6 +3158,10 @@
     {
         "name": "CHUBB LIMITED COM",
         "symbol": "CB"
+    },
+    {
+        "name": "CBAK ENERGY TECHNOLOGY LTD",
+        "symbol": "CBAT"
     },
     {
         "name": "CENTRAL BANCOMPANY COM CL A",
@@ -5944,7 +5960,7 @@
         "symbol": "EMPD"
     },
     {
-        "name": "EXCHANGE TRADED CONCEPTS TRUST EMQQ THE EMERGIN",
+        "name": "EXCHANGE TRADED CONCEPTS TRUST EMQQ EME MAR ETF",
         "symbol": "EMQQ"
     },
     {
@@ -6062,6 +6078,10 @@
     {
         "name": "EPSILON ENERGY LTD COM",
         "symbol": "EPSN"
+    },
+    {
+        "name": "ISHARES TR MSCI PERU GL ETF",
+        "symbol": "EPU"
     },
     {
         "name": "PROSHARES TR ULTRASHORT FTSE",
@@ -6538,6 +6558,10 @@
     {
         "name": "FIRST ADVANTAGE CORP NEW COM",
         "symbol": "FA"
+    },
+    {
+        "name": "FACTORIAL ENERGY INC COM CL A",
+        "symbol": "FAC"
     },
     {
         "name": "FIRST AMERN FINL CORP COM",
@@ -7986,6 +8010,10 @@
     {
         "name": "GLOBANT S A COM",
         "symbol": "GLOB"
+    },
+    {
+        "name": "GLOO HOLDINGS INC CL A",
+        "symbol": "GLOO"
     },
     {
         "name": "GLOBAL PARTNERS LP COM UNITS",
@@ -9604,6 +9632,10 @@
         "symbol": "INGR"
     },
     {
+        "name": "INNIO NV ORDINARY SHARES",
+        "symbol": "INIO"
+    },
+    {
         "name": "INMUNE BIO INC COM",
         "symbol": "INMB"
     },
@@ -9770,6 +9802,10 @@
     {
         "name": "CENTURY THERAPEUTICS INC COM",
         "symbol": "IPSC"
+    },
+    {
+        "name": "IDEAL PWR INC COM NEW",
+        "symbol": "IPWR"
     },
     {
         "name": "IPERIONX LTD SPONSORED ADS",
@@ -10134,6 +10170,10 @@
     {
         "name": "JAKKS PAC INC COM NEW",
         "symbol": "JAKK"
+    },
+    {
+        "name": "JANUS LIVING INC CL A-1",
+        "symbol": "JAN"
     },
     {
         "name": "JANUX THERAPEUTICS INC COM",
@@ -11006,6 +11046,10 @@
     {
         "name": "LIFESTANCE HEALTH GROUP INC COM",
         "symbol": "LFST"
+    },
+    {
+        "name": "LIFTOFF MOBILE INC COM",
+        "symbol": "LFTO"
     },
     {
         "name": "LITTELFUSE INC COM",
@@ -11884,6 +11928,10 @@
         "symbol": "MGY"
     },
     {
+        "name": "MCGRAW HILL INC COM",
+        "symbol": "MH"
+    },
+    {
         "name": "MOHAWK INDS INC COM",
         "symbol": "MHK"
     },
@@ -12474,6 +12522,10 @@
     {
         "name": "MUELLER WTR PRODS INC COM SER A",
         "symbol": "MWA"
+    },
+    {
+        "name": "SOLV ENERGY INC COM SHS CL A",
+        "symbol": "MWH"
     },
     {
         "name": "MAGNACHIP SEMICONDUCTOR CORP COM",
@@ -14612,10 +14664,6 @@
         "symbol": "PR"
     },
     {
-        "name": "PROASSURANCE CORP COM",
-        "symbol": "PRA"
-    },
-    {
         "name": "PRA GROUP INC COM",
         "symbol": "PRAA"
     },
@@ -15052,6 +15100,10 @@
         "symbol": "QLYS"
     },
     {
+        "name": "QUANTUM CORP COM",
+        "symbol": "QMCO"
+    },
+    {
         "name": "EA SERIES TRUST US QUAN MOMENTUM",
         "symbol": "QMOM"
     },
@@ -15158,6 +15210,10 @@
     {
         "name": "QUANTERIX CORP COM",
         "symbol": "QTRX"
+    },
+    {
+        "name": "Q32 BIO INC COM",
+        "symbol": "QTTB"
     },
     {
         "name": "ETF SER SOLUTIONS DEFIA QUANT ETF",
@@ -20634,6 +20690,10 @@
     {
         "name": "XBIOTECH INC COM",
         "symbol": "XBIT"
+    },
+    {
+        "name": "Roundhill Ultra Short Duration No Dividend Target ETF",
+        "symbol": "XBOX"
     },
     {
         "name": "COLUMBIA ETF TR II EM CORE EX ETF",
