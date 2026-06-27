@@ -272,7 +272,7 @@ type OhlcRequest = z.infer<typeof OhlcSchema>;
 
 const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
     try {
-        const { symbol, lookbackDays, requestId, expiryMode } = OptionsVolRequestSchema.parse(args);
+        const { symbol, lookbackDays, requestId } = OptionsVolRequestSchema.parse(args);
         const delta = args.mode == 'delta' ? args.delta : 0;
 
         let qualifyClause = '', whereClause = ` WHERE quote_date >= (current_date - ${lookbackDays})`;
@@ -324,7 +324,7 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
         )
         ON option_type
         USING FIRST(strike_price) AS strike, FIRST(mid_price) AS mid, FIRST(iv) AS iv
-        GROUP BY dt, close, iv30, iv30_percentile
+        GROUP BY dt, close, iv30, iv30_percentile, expiry
         ORDER BY dt
         `;
 
@@ -332,7 +332,7 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
 
         try {
             const result = await executeReaderInternal(symbol, sql, 99999);
-            const [dt, close, iv30, iv_percentile, cs, cp, cv, ps, pp, pv] = result.getColumnsJson();
+            const [dt, close, iv30, iv_percentile, expiry, cs, cp, cv, ps, pp, pv] = result.getColumnsJson();
 
             rows = { 
                 dt, close, iv30, 
@@ -342,7 +342,8 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
                 cs, 
                 ps, 
                 cp, 
-                pp
+                pp,
+                expiry
              };
         }
         catch (err) {
