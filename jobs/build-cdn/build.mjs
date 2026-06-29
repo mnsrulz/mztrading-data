@@ -1,4 +1,5 @@
 import { join } from "node:path";
+import { mkdir } from "node:fs/promises";
 import { createWriteStream } from "node:fs";
 import { pipeline } from "node:stream/promises";
 import { Readable } from "node:stream";
@@ -15,6 +16,7 @@ if (!response.ok || !response.body) {
   throw new Error(`Download failed: ${response.status}`);
 }
 
+await mkdir("temp", { recursive: true });
 const filePath = join("temp", "snapshot.zip");
 
 await pipeline(
