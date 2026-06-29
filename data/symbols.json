@@ -2328,7 +2328,7 @@
         "symbol": "BITU"
     },
     {
-        "name": "2x Bitcoin Strategy ETF",
+        "name": "2x Bitcoin ETF",
         "symbol": "BITX"
     },
     {
@@ -5212,6 +5212,10 @@
         "symbol": "DMAC"
     },
     {
+        "name": "DEL MONTE CORP ORD",
+        "symbol": "DMC"
+    },
+    {
         "name": "DORCHESTER MINERALS L P COM UNIT",
         "symbol": "DMLP"
     },
@@ -6734,10 +6738,6 @@
     {
         "name": "FIRST TR EXCHANGE-TRADED FD II DJ INTL INTRNT",
         "symbol": "FDNI"
-    },
-    {
-        "name": "DEL MONTE CORP ORD",
-        "symbol": "FDP"
     },
     {
         "name": "FACTSET RESH SYS INC COM",
@@ -11956,7 +11956,7 @@
         "symbol": "MIDU"
     },
     {
-        "name": "GLOBAL X FDS MILLENNIAL CONSU",
+        "name": "GLOBAL X FDS MILLE CONSU ETF",
         "symbol": "MILN"
     },
     {
@@ -18284,7 +18284,7 @@
         "symbol": "TG"
     },
     {
-        "name": "TASEKO MINES LTD COM",
+        "name": "TREKOR METALS LTD COM",
         "symbol": "TGB"
     },
     {
@@ -19812,7 +19812,7 @@
         "symbol": "VIV"
     },
     {
-        "name": "VIVOPOWER PLC SHS NEW",
+        "name": "VIVOPOWER PLC CL A ORD SHS",
         "symbol": "VIVO"
     },
     {
