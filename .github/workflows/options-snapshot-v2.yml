@@ -199,3 +199,8 @@ jobs:
             git commit -m "publish snapshot images data (via GitHub Actions)"
             git push
           fi
+      - name: Create NF branch
+        run: |
+          NF_BRANCH_NAME="NF_${RELEASE_NAME}"
+          git branch -f "$NF_BRANCH_NAME"
+          git push origin "$NF_BRANCH_NAME" --force
