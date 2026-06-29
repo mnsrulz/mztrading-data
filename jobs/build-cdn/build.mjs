@@ -7,7 +7,10 @@ import optionsSnapshotSummary from "../../data/options-snapshot.summary.json" wi
     type: "json",
 };
 
-const bname = process.env.BRANCH; //netlify branch name
+if(!process.env.BRANCH.startsWith("NF_")) {
+  throw new Error("Invalid branch name");
+}
+const bname = process.env.BRANCH.substring(3); //netlify branch name
 
 const url = optionsSnapshotSummary[bname].zipAssetUrl;
 const response = await fetch(url);
