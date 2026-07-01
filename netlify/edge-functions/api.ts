@@ -10,19 +10,20 @@ await db.instantiate(() => { });
 
 const app = new Hono();
 
-
 app.get("/api/hello", async (c) => {
+  console.log("Start of func call!");
   const connection = db.connect();
-
+  
   const url = new URL("/options_data.parquet", c.req.url);
   const res = await fetch(url);
-
+  
   const buffer = await res.arrayBuffer();
-
+  
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
-
+  
   const rows = result.toArray();
+  console.log("End of func call!");
   return c.json({ message: "Hello from Deno on Netlify Edge!", rows, d: buffer.byteLength });
 });
 
