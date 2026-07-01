@@ -10,7 +10,7 @@ await db.instantiate(() => { });
 
 const app = new Hono();
 
-const fb = Deno.readFileSync(new URL("./options_data.parquet", import.meta.url));
+const fb = Deno.readFileSync(new URL("./../../public/options_data.parquet", import.meta.url));
 
 app.get("/api/hello", async (c) => {
   const connection = db.connect();
