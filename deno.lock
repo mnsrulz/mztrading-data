@@ -19,6 +19,7 @@
     }
   },
   "redirects": {
+    "https://esm.sh/@duckdb/duckdb-wasm": "https://esm.sh/@duckdb/duckdb-wasm@1.33.1-dev57.0",
     "https://esm.sh/@duckdb/node-api": "https://esm.sh/@duckdb/node-api@1.5.4-r.1",
     "https://esm.sh/@duckdb/node-bindings-darwin-arm64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-darwin-arm64@1.5.4-r.1/duckdb.node?target=denonext",
     "https://esm.sh/@duckdb/node-bindings-darwin-x64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-darwin-x64@1.5.4-r.1/duckdb.node?target=denonext",
@@ -28,14 +29,26 @@
     "https://esm.sh/@duckdb/node-bindings-linux-x64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-linux-x64@1.5.4-r.1/duckdb.node?target=denonext",
     "https://esm.sh/@duckdb/node-bindings-win32-arm64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-win32-arm64@1.5.4-r.1/duckdb.node?target=denonext",
     "https://esm.sh/@duckdb/node-bindings-win32-x64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-win32-x64@1.5.4-r.1/duckdb.node?target=denonext",
-    "https://esm.sh/detect-libc@^2.1.2?target=denonext": "https://esm.sh/detect-libc@2.1.2?target=denonext"
+    "https://esm.sh/@types/emscripten@~0.0.34/index.d.ts": "https://esm.sh/@types/emscripten@0.0.34/index.d.ts",
+    "https://esm.sh/apache-arrow@^17.0.0?target=denonext": "https://esm.sh/apache-arrow@17.0.0?target=denonext",
+    "https://esm.sh/detect-libc@^2.1.2?target=denonext": "https://esm.sh/detect-libc@2.1.2?target=denonext",
+    "https://esm.sh/flatbuffers@^24.3.25?target=denonext": "https://esm.sh/flatbuffers@24.12.23?target=denonext",
+    "https://esm.sh/tslib@^2.6.2?target=denonext": "https://esm.sh/tslib@2.8.1?target=denonext"
   },
   "remote": {
+    "https://esm.sh/@duckdb/duckdb-wasm@1.33.1-dev57.0": "83790f706616e468c6f041a8ea4cce6c017175783a42f90c64ee9397f9c64252",
+    "https://esm.sh/@duckdb/duckdb-wasm@1.33.1-dev57.0/denonext/duckdb-wasm.mjs": "06c138cfd9836101483734782613481d284e2c160a373d07e972cc8de2f648d9",
     "https://esm.sh/@duckdb/node-api@1.5.4-r.1": "415e855629913486e1d1644a906748dcb4a4c86c1445fb66dfab018599b2c098",
     "https://esm.sh/@duckdb/node-api@1.5.4-r.1/denonext/node-api.mjs": "94d5b59f77ee70fb7e9dfa551ef1c4638d2debe542b4988646ea70c8f2a8485a",
     "https://esm.sh/@duckdb/node-bindings@1.5.4-r.1/denonext/node-bindings.mjs": "059fa020d4ada5651599e4ade71042d648c94b71349f9d72cdad0b4ee3e71300",
+    "https://esm.sh/apache-arrow@17.0.0/denonext/apache-arrow.mjs": "95bcb1380d0306807f963555d02abd4bc40e5bc2ba933f1b59a02296188215f0",
+    "https://esm.sh/apache-arrow@17.0.0?target=denonext": "65d54d76a092f2eba01746aaa2026273dfe6e556909166e2d14eb5134fe69c9a",
     "https://esm.sh/detect-libc@2.1.2/denonext/detect-libc.mjs": "0c6fb379e7311e61b21178c11b21ab1fd45793553f5cfe085275694b1bcd9406",
-    "https://esm.sh/detect-libc@2.1.2?target=denonext": "b1ed5e3e4470325af26569aea08ce0aab1ab6d4a2efed817516008ba8ee1cb82"
+    "https://esm.sh/detect-libc@2.1.2?target=denonext": "b1ed5e3e4470325af26569aea08ce0aab1ab6d4a2efed817516008ba8ee1cb82",
+    "https://esm.sh/flatbuffers@24.12.23/denonext/flatbuffers.mjs": "6baa4b6e8d60d4c7a241436dae6b6d2b511fb81df34a130bd58e5b806be7f11e",
+    "https://esm.sh/flatbuffers@24.12.23?target=denonext": "e17a54cf880702e537e72e81a5ade221a678341677c165ae09f8fef5174f24af",
+    "https://esm.sh/tslib@2.8.1/denonext/tslib.mjs": "c38da5dd6da6281964435002ce204cd586634fe3bdfb24a0ee116f48cf3292e9",
+    "https://esm.sh/tslib@2.8.1?target=denonext": "a89cbf082a0ad54e87ea85d75e6d5492b3e2ff0c5de9e3e478206a015b3f3992"
   },
   "workspace": {
     "dependencies": [
