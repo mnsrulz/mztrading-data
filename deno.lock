@@ -18,9 +18,33 @@
       "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag=="
     }
   },
+  "redirects": {
+    "https://esm.sh/@duckdb/node-api": "https://esm.sh/@duckdb/node-api@1.5.4-r.1",
+    "https://esm.sh/@duckdb/node-bindings-darwin-arm64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-darwin-arm64@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-darwin-x64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-darwin-x64@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-linux-arm64-musl/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-linux-arm64-musl@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-linux-arm64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-linux-arm64@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-linux-x64-musl/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-linux-x64-musl@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-linux-x64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-linux-x64@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-win32-arm64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-win32-arm64@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/@duckdb/node-bindings-win32-x64/duckdb.node?target=denonext": "https://esm.sh/@duckdb/node-bindings-win32-x64@1.5.4-r.1/duckdb.node?target=denonext",
+    "https://esm.sh/detect-libc@^2.1.2?target=denonext": "https://esm.sh/detect-libc@2.1.2?target=denonext"
+  },
+  "remote": {
+    "https://esm.sh/@duckdb/node-api@1.5.4-r.1": "415e855629913486e1d1644a906748dcb4a4c86c1445fb66dfab018599b2c098",
+    "https://esm.sh/@duckdb/node-api@1.5.4-r.1/denonext/node-api.mjs": "94d5b59f77ee70fb7e9dfa551ef1c4638d2debe542b4988646ea70c8f2a8485a",
+    "https://esm.sh/@duckdb/node-bindings@1.5.4-r.1/denonext/node-bindings.mjs": "059fa020d4ada5651599e4ade71042d648c94b71349f9d72cdad0b4ee3e71300",
+    "https://esm.sh/detect-libc@2.1.2/denonext/detect-libc.mjs": "0c6fb379e7311e61b21178c11b21ab1fd45793553f5cfe085275694b1bcd9406",
+    "https://esm.sh/detect-libc@2.1.2?target=denonext": "b1ed5e3e4470325af26569aea08ce0aab1ab6d4a2efed817516008ba8ee1cb82"
+  },
   "workspace": {
     "dependencies": [
       "npm:hono@^4.12.27"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:hono@^4.12.27"
+      ]
+    }
   }
 }
