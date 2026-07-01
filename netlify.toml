@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "echo 'No build step required'"
+  command = "npm install"
 
 [[edge_functions]]
   function = "api"
