@@ -1,7 +1,7 @@
 // @deno-types="https://esm.sh/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.d.ts"
 import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.mjs/+esm';
-import { Hono } from "hono";
-import { handle } from "hono/netlify";
+import { Hono } from "https://esm.sh/hono@4.12";
+import { handle } from "https://esm.sh/hono@4.12/netlify";
 
 const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
@@ -10,12 +10,21 @@ await db.instantiate(() => { });
 
 const app = new Hono();
 
-
 app.get("/api/hello", (c) => {
   const connection = db.connect();
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
+  
+  const rows = result.toArray();
+  return c.json({ message: "Hello from Deno on Netlify Edge!", rows });
+});
+
+app.get("/api/query", (c) => {
+  const connection = db.connect();
+
+  //const connection = await duckDbInstance.connect();
+  const result = connection.query(`SELECT * from 'temp/options_data.parquet' LIMIT 100`);
   
   const rows = result.toArray();
   return c.json({ message: "Hello from Deno on Netlify Edge!", rows });

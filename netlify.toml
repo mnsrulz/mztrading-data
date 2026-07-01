@@ -1,6 +1,3 @@
-[build]
-  command = "npm install"
-
 [[edge_functions]]
   function = "api"
   path = "/api/*"
