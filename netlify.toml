@@ -1,4 +1,3 @@
 [[edge_functions]]
   function = "api"
   path = "/api/*"
-  included_files = ["public/**"]
