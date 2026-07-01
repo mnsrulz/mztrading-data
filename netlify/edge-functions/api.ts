@@ -12,20 +12,23 @@ const app = new Hono();
 
 app.get("/api/hello", (c) => {
   const connection = db.connect();
+  const t = Deno.readDirSync("temp");
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
-  
+
   const rows = result.toArray();
-  return c.json({ message: "Hello from Deno on Netlify Edge!", rows });
+  return c.json({ message: "Hello from Deno on Netlify Edge!", rows, files: t.map(k => k.name) });
 });
 
 app.get("/api/query", (c) => {
+
+
   const connection = db.connect();
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT * from 'temp/options_data.parquet' LIMIT 100`);
-  
+
   const rows = result.toArray();
   return c.json({ message: "Hello from Deno on Netlify Edge!", rows });
 });
