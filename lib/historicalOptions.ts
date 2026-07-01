@@ -5,7 +5,7 @@ import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckD
 import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
     type: "json",
 };
-import { getPriceAtDate } from './historicalPrice.ts';
+//import { getPriceAtDate } from './historicalPrice.ts';
 import dayjs from "https://esm.sh/dayjs@1.11.13";
 import { getOptionsChain } from './cboe.ts';
 import { getWeekOfMonth } from './utils.ts';
@@ -455,7 +455,7 @@ async function getHistoricalOptionData(symbol: string, dt: string) {
 
     let _spotPrice: number | null | undefined = await getStockPriceDataFromParquet(symbol, dt);
     if (!_spotPrice || Number.isNaN(_spotPrice)) {
-        _spotPrice = await getPriceAtDate(symbol, dt, true, true);    //fallback to yf pricing
+        //_spotPrice = await getPriceAtDate(symbol, dt, true, true);    //fallback to yf pricing
         if (!_spotPrice || Number.isNaN(_spotPrice)) {
             _spotPrice = await getStockPriceDataFromParquet(symbol, dt, true);
             if (!_spotPrice || Number.isNaN(_spotPrice)) {
