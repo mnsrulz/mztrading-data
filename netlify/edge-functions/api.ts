@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { handle } from "hono/netlify";
-import { DuckDBInstance } from "@duckdb/node-api";
+import { DuckDBInstance } from "npm:@duckdb/node-api";
 
 const app = new Hono();
 const duckDbInstance = await DuckDBInstance.create(":memory:");

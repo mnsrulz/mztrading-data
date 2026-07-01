@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@duckdb/node-api": "^1.5.4-r.1",
     "hono": "^4.12.27"
   }
 }
