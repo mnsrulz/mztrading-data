@@ -1,5 +1,5 @@
-import { Hono } from "@hono/hono";
-import { handle } from "@hono/hono/netlify";
+import { Hono } from "hono";
+import { handle } from "hono/netlify";
 
 const app = new Hono();
 
