@@ -36,6 +36,12 @@
     "https://esm.sh/tslib@^2.6.2?target=denonext": "https://esm.sh/tslib@2.8.1?target=denonext"
   },
   "remote": {
+    "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm/dist/duckdb-browser-blocking.mjs/+esm": "92a27f4b0bd38ce923ba67807aedf1ac79747cc9e567f26c9c558da17fcfe2a7",
+    "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.mjs/+esm": "f668040f2d15cb380bb7498dbf8a22bbc0e6648d0a42597c4ebbaa16e0f5dca0",
+    "https://cdn.jsdelivr.net/npm/apache-arrow@%5E17.0.0/+esm": "2df175d5ca788380f3794ad2afcf86d84eb188c902e90f9cf90f2b3e33913ffc",
+    "https://cdn.jsdelivr.net/npm/apache-arrow@17.0.0/+esm": "2df175d5ca788380f3794ad2afcf86d84eb188c902e90f9cf90f2b3e33913ffc",
+    "https://cdn.jsdelivr.net/npm/flatbuffers@24.3.25/+esm": "e2e255fa750cc1ba9c2dbae40290cc8cb00a39546c926f86a49164ad1dea308f",
+    "https://cdn.jsdelivr.net/npm/tslib@2.6.3/+esm": "65db916f33e14910aeaf428773a17a11f928f6b1a23caf1295c5c79ba36979ba",
     "https://esm.sh/@duckdb/duckdb-wasm@1.33.1-dev57.0": "83790f706616e468c6f041a8ea4cce6c017175783a42f90c64ee9397f9c64252",
     "https://esm.sh/@duckdb/duckdb-wasm@1.33.1-dev57.0/denonext/duckdb-wasm.mjs": "06c138cfd9836101483734782613481d284e2c160a373d07e972cc8de2f648d9",
     "https://esm.sh/@duckdb/node-api@1.5.4-r.1": "415e855629913486e1d1644a906748dcb4a4c86c1445fb66dfab018599b2c098",
