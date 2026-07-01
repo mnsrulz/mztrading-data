@@ -2416,10 +2416,6 @@
         "symbol": "BLCO"
     },
     {
-        "name": "TOPBUILD COR COM",
-        "symbol": "BLD"
-    },
-    {
         "name": "BALLARD PWR SYS INC NEW COM",
         "symbol": "BLDP"
     },
@@ -10264,10 +10260,6 @@
         "symbol": "JFIN"
     },
     {
-        "name": "JANUS HENDERSON GROUP PLC ORD SHS",
-        "symbol": "JHG"
-    },
-    {
         "name": "JOHN HANCOCK EXCHANGE TRADED MLTFCTR LRG CAP",
         "symbol": "JHML"
     },
@@ -13090,6 +13082,10 @@
     {
         "name": "INSIGHT ENTERPRISES INC COM",
         "symbol": "NSIT"
+    },
+    {
+        "name": "NEOSTELLAR CAPITAL CORP",
+        "symbol": "NSLR"
     },
     {
         "name": "INSPERITY INC COM",
@@ -16464,10 +16460,6 @@
         "symbol": "SELF"
     },
     {
-        "name": "SELECT MED HLDGS CORP COM",
-        "symbol": "SEM"
-    },
-    {
         "name": "SENSEONICS HLDGS INC COM",
         "symbol": "SENS"
     },
@@ -16694,10 +16686,6 @@
     {
         "name": "GLOBAL X FDS GLOBAL X SILVER",
         "symbol": "SIL"
-    },
-    {
-        "name": "SILA REALTY TRUST INC COMMON STOCK",
-        "symbol": "SILA"
     },
     {
         "name": "AMPLIFY ETF TR JR SILV MINE ETF",
@@ -17650,10 +17638,6 @@
     {
         "name": "SSR MINING IN COM",
         "symbol": "SSRM"
-    },
-    {
-        "name": "SURO CAPITAL CORP COM NEW",
-        "symbol": "SSSS"
     },
     {
         "name": "SOUNDTHINKING INC COM",
