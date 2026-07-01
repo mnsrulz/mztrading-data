@@ -10,13 +10,13 @@ await db.instantiate(() => { });
 
 const app = new Hono();
 
+
+app.get("/api/hello", async (c) => {
+  const connection = db.connect();
+  
 const url = new URL("/options_data.parquet", import.meta.url);
 const res = await fetch(url);
 const buffer = await res.arrayBuffer();
-
-app.get("/api/hello", (c) => {
-  const connection = db.connect();
-  
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
