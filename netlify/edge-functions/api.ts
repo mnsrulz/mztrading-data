@@ -10,14 +10,14 @@ await db.instantiate(() => { });
 
 const app = new Hono();
 
-const fb = Deno.readFileSync(new URL("./../../public/options_data.parquet", import.meta.url));
 
 app.get("/api/hello", async (c) => {
   const connection = db.connect();
-  
-// const url = new URL("/options_data.parquet", import.meta.url);
-// const res = await fetch(url);
-const buffer = fb;
+
+  const url = new URL("/options_data.parquet", c.req.url);
+  const res = await fetch(url);
+
+  const buffer = await res.arrayBuffer();
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
