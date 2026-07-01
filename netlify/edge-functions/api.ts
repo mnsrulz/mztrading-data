@@ -12,7 +12,7 @@ const app = new Hono();
 
 app.get("/api/hello", (c) => {
   const connection = db.connect();
-  const t = Deno.readDirSync("temp");
+  const t = Deno.readDirSync("public");
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);

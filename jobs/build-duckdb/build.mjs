@@ -14,8 +14,8 @@ if (!response.ok || !response.body) {
   throw new Error(`Download failed: ${response.status}`);
 }
 
-await mkdir("temp", { recursive: true });
-const filePath = join("temp", "options_data.parquet");
+await mkdir("public", { recursive: true });
+const filePath = join("public", "options_data.parquet");
 
 await pipeline(
   Readable.fromWeb(response.body),
