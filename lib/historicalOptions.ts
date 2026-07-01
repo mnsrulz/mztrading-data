@@ -7,7 +7,7 @@ import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
 };
 //import { getPriceAtDate } from './historicalPrice.ts';
 import dayjs from "https://esm.sh/dayjs@1.11.13";
-import { getOptionsChain } from './cboe.ts';
+//import { getOptionsChain } from './cboe.ts';
 import { getWeekOfMonth } from './utils.ts';
 
 const logger = new ConsoleLogger();
@@ -467,38 +467,38 @@ async function getHistoricalOptionData(symbol: string, dt: string) {
     return { spotPrice, indexedObject, timestamp: dayjs(dt).toDate() };    //timestamp not really needed, but keeping it for consistency
 }
 
-async function getLiveCboeOptionData(symbol: string) {
-    const { data, currentPrice, timestamp } = await getOptionsChain(symbol);
-    const indexedObject = data.reduce((previous, current) => {
-        previous[current.expiration] = previous[current.expiration] || {};
-        previous[current.expiration][current.strike] = previous[current.expiration][current.strike] || {};
-        //does it make sense to throw exception if delta/gamma values doesn't seem accurate? like gamma being negative or delta being greater than 1?
-        if (current.option_type == 'C') {
-            previous[current.expiration][current.strike].call = previous[current.expiration][current.strike].call || [];
-            previous[current.expiration][current.strike].call.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
-        } else if (current.option_type == 'P') {
-            previous[current.expiration][current.strike].put = previous[current.expiration][current.strike].put || [];
-            previous[current.expiration][current.strike].put.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
-        } else {
-            throw new Error("Invalid option type");
-        }
-        return previous;
-    }, {} as Record<string, Record<string, MicroOptionContract>>);
-    return { spotPrice: currentPrice, indexedObject, timestamp };
-}
+// async function getLiveCboeOptionData(symbol: string) {
+//     const { data, currentPrice, timestamp } = await getOptionsChain(symbol);
+//     const indexedObject = data.reduce((previous, current) => {
+//         previous[current.expiration] = previous[current.expiration] || {};
+//         previous[current.expiration][current.strike] = previous[current.expiration][current.strike] || {};
+//         //does it make sense to throw exception if delta/gamma values doesn't seem accurate? like gamma being negative or delta being greater than 1?
+//         if (current.option_type == 'C') {
+//             previous[current.expiration][current.strike].call = previous[current.expiration][current.strike].call || [];
+//             previous[current.expiration][current.strike].call.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
+//         } else if (current.option_type == 'P') {
+//             previous[current.expiration][current.strike].put = previous[current.expiration][current.strike].put || [];
+//             previous[current.expiration][current.strike].put.push({ oi: current.open_interest, volume: current.volume, delta: current.delta, gamma: current.gamma });
+//         } else {
+//             throw new Error("Invalid option type");
+//         }
+//         return previous;
+//     }, {} as Record<string, Record<string, MicroOptionContract>>);
+//     return { spotPrice: currentPrice, indexedObject, timestamp };
+// }
 
-export async function getLiveCboeOptionsPricingData(symbol: string) {
-    const { data, currentPrice, timestamp } = await getOptionsChain(symbol);
-    const options = data.reduce((previous, current) => {
-        previous[current.expiration] = previous[current.expiration] || { c: {}, p: {} };
-        if (current.option_type == 'C') {
-            previous[current.expiration].c[current.strike] = { oi: current.open_interest, v: current.volume, l: current.last_trade_price, a: current.ask, b: current.bid };
-        } else if (current.option_type == 'P') {
-            previous[current.expiration].p[current.strike] = { oi: current.open_interest, v: current.volume, l: current.last_trade_price, a: current.ask, b: current.bid };
-        } else {
-            throw new Error("Invalid option type");
-        }
-        return previous;
-    }, {} as Record<string, MicroOptionPricingContract>);
-    return { spotPrice: currentPrice, options, timestamp };
-}
+// export async function getLiveCboeOptionsPricingData(symbol: string) {
+//     const { data, currentPrice, timestamp } = await getOptionsChain(symbol);
+//     const options = data.reduce((previous, current) => {
+//         previous[current.expiration] = previous[current.expiration] || { c: {}, p: {} };
+//         if (current.option_type == 'C') {
+//             previous[current.expiration].c[current.strike] = { oi: current.open_interest, v: current.volume, l: current.last_trade_price, a: current.ask, b: current.bid };
+//         } else if (current.option_type == 'P') {
+//             previous[current.expiration].p[current.strike] = { oi: current.open_interest, v: current.volume, l: current.last_trade_price, a: current.ask, b: current.bid };
+//         } else {
+//             throw new Error("Invalid option type");
+//         }
+//         return previous;
+//     }, {} as Record<string, MicroOptionPricingContract>);
+//     return { spotPrice: currentPrice, options, timestamp };
+// }
