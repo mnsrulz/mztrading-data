@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+  command = "echo 'No build step required'"
+
+[[edge_functions]]
+  function = "api"
+  path = "/api/*"
