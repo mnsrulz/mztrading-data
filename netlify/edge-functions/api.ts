@@ -1,23 +1,17 @@
+// @deno-types="https://esm.sh/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.d.ts"
+import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
 import { Hono } from "hono";
 import { handle } from "hono/netlify";
-import * as duckdb from "https://esm.sh/@duckdb/duckdb-wasm";
+
+const logger = new ConsoleLogger();
+const JSDELIVR_BUNDLES = getJsDelivrBundles();
+const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
+await db.instantiate(() => { });
 
 const app = new Hono();
 
 
 app.get("/api/hello", async (c) => {
-
-  const bundles = duckdb.getJsDelivrBundles();
-  const bundle = await duckdb.selectBundle(bundles);
-
-  const worker = new Worker(bundle.mainWorker!);
-
-  const logger = new duckdb.ConsoleLogger();
-
-  const db = new duckdb.AsyncDuckDB(logger, worker);
-
-  await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
-
   const connection = await db.connect();
 
   //const connection = await duckDbInstance.connect();
