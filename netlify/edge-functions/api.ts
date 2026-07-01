@@ -3,11 +3,14 @@ import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME } from
 import { Hono } from "https://esm.sh/hono@4.12";
 import { handle } from "https://esm.sh/hono@4.12/netlify";
 
+console.log("Starting up DuckDB on Netlify Edge Functions...");
+
 const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
 const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
 await db.instantiate(() => { });
 
+console.log("Duckdb Booting completed...");
 const app = new Hono();
 
 app.get("/api/hello", async (c) => {
