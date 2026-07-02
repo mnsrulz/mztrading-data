@@ -1,3 +1,7 @@
 [[edge_functions]]
   function = "api"
   path = "/api/*"
+
+[[edge_functions]]
+  function = "api2"
+  path = "/api2/*"
