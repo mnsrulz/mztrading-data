@@ -22,14 +22,14 @@ const app = new Hono();
 app.get("/api/hello", async (c) => {
   const connection = await init();
 
-  const historicalDates = await getHistoricalSnapshotDatesFromParquet("AAPL");
+  //const historicalDates = await getHistoricalSnapshotDatesFromParquet("AAPL");
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
 
   const rows = result.toArray();
   console.log("End of func call!");
-  return c.json({ message: "Hello from Deno on Netlify Edge!", rows, historicalDates });
+  return c.json({ message: "Hello from Deno on Netlify Edge!", rows, historicalDates: [] });
 });
 
 app.get("/api/query", async (c) => {
