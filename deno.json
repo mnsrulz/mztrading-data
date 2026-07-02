@@ -4,6 +4,6 @@
     "dev": "deno run --watch main.ts"
   },
   "imports": {
-    "hono": "npm:hono@^4.12.27"
+    "hono": "https://esm.sh/hono@^4.12.27"
   }
 }
