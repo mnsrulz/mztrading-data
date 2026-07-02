@@ -2,7 +2,7 @@
 import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.mjs/+esm';
 import { Hono } from "https://esm.sh/hono@4.12";
 import { handle } from "https://esm.sh/hono@4.12/netlify";
-import { getHistoricalSnapshotDatesFromParquet } from "../../lib/historicalOptions.ts";
+//import { getHistoricalSnapshotDatesFromParquet } from "../../lib/historicalOptions.ts";
 let connection: DuckDBConnection;
 
 async function init() {
