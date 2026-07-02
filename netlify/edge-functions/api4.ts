@@ -5,7 +5,7 @@ export default async (request: Request, context: Context) => {
   const files = Deno.readDirSync("./");//.map(({name, isDirectory, isFile, isSymlink}) => ({ name, isDirectory, isFile, isSymlink }));
   const fileList = []
   try {
-    for await (const walkEntry of walk("./")) {
+    for await (const walkEntry of walk("./data")) {
       const type = walkEntry.isSymlink
       ? "symlink"
       : walkEntry.isFile
