@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createWriteStream } from "node:fs";
 import { pipeline } from "node:stream/promises";
 import { Readable } from "node:stream";
@@ -23,3 +23,14 @@ await pipeline(
 );
 
 console.log(`File saved to: ${filePath}`);
+
+const buffer = await readFile(filePath);
+
+const json = {
+  filename: "options_data.parquet",
+  encoding: "base64",
+  data: buffer.toString("base64"),
+};
+
+const jsonFilePath = join("public", "options_data.json");
+await writeFile(jsonFilePath, JSON.stringify(json));
