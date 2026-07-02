@@ -1,7 +1,10 @@
 import type { Context } from "@netlify/edge-functions";
 
 export default async (request: Request, context: Context) => {
-  return new Response("hello from edge function", { status: 200 });
+  const files = Deno.readDirSync("./");
+  return Response.json({
+    files: files
+  }, { status: 200 });
 };
 
 export const config = { path: "/api4" };
