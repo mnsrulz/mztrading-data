@@ -1,25 +1,10 @@
 import type { Context } from "@netlify/edge-functions";
-import { walk } from "https://deno.land/std@0.170.0/fs/walk.ts";
 
 export default async (request: Request, context: Context) => {
-  const files = Deno.readDirSync("./");//.map(({name, isDirectory, isFile, isSymlink}) => ({ name, isDirectory, isFile, isSymlink }));
-  const fileList = []
-  try {
-    for await (const walkEntry of walk("./data")) {
-      const type = walkEntry.isSymlink
-      ? "symlink"
-      : walkEntry.isFile
-      ? "file"
-      : "directory";
-      
-      fileList.push({type, path: walkEntry.path});
-    }
-  } catch (error) {
-    console.error("Error walking the directory:", error);
-  }
+  const d = new URL(request.url).searchParams.get("d");
+  const files = Deno.readDirSync(d ?? "./");//.map(({name, isDirectory, isFile, isSymlink}) => ({ name, isDirectory, isFile, isSymlink }));
   return Response.json({
-    files: Array.from(files), 
-    fileList,
+    files: Array.from(files)
   }, { status: 200 });
 };
 
