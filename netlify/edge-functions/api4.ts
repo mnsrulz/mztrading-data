@@ -1,9 +1,9 @@
 import type { Context } from "@netlify/edge-functions";
 
 export default async (request: Request, context: Context) => {
-  const files = Deno.readDirSync("./");
+  const files = Deno.readDirSync("./");//.map(({name, isDirectory, isFile, isSymlink}) => ({ name, isDirectory, isFile, isSymlink }));
   return Response.json({
-    files: files
+    files: Array.from(files)
   }, { status: 200 });
 };
 
