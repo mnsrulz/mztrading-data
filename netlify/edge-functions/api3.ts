@@ -1,6 +1,6 @@
 import { allTickerSymbols } from "../../lib/data.ts"
-import { Hono } from "hono";
-import { handle } from "hono/netlify";
+import { Hono } from "https://esm.sh/hono@4.12";
+import { handle } from "https://esm.sh/hono@4.12/netlify";
 
 import p from "./../../public/options_data.parquet" with {
     type: "bytes",
