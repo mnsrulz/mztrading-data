@@ -1,21 +1,26 @@
 // @deno-types="https://esm.sh/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.d.ts"
-import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.mjs/+esm';
+import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/dist/duckdb-browser-blocking.mjs/+esm';
 import { Hono } from "https://esm.sh/hono@4.12";
 import { handle } from "https://esm.sh/hono@4.12/netlify";
 import { getHistoricalSnapshotDatesFromParquet } from "../../lib/historicalOptions.ts";
+let connection: DuckDBConnection;
 
-console.log("Starting up DuckDB on Netlify Edge Functions...");
-
-const logger = new ConsoleLogger();
-const JSDELIVR_BUNDLES = getJsDelivrBundles();
-const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
-await db.instantiate(() => { });
-
-console.log("Duckdb Booting completed...");
+async function init() {
+  if (!connection) {
+    console.log("Starting up DuckDB on Netlify Edge Functions...");
+    const logger = new ConsoleLogger();
+    const JSDELIVR_BUNDLES = getJsDelivrBundles();
+    const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
+    await db.instantiate(() => { });
+    connection = db.connect();
+    console.log("Duckdb Booting completed...");
+  }
+  return connection;
+}
 const app = new Hono();
 
 app.get("/api/hello", async (c) => {
-  const connection = db.connect();
+  const connection = await init();
 
   const historicalDates = await getHistoricalSnapshotDatesFromParquet("AAPL");
 
@@ -27,8 +32,8 @@ app.get("/api/hello", async (c) => {
   return c.json({ message: "Hello from Deno on Netlify Edge!", rows, historicalDates });
 });
 
-app.get("/api/query", (c) => {
-  const connection = db.connect();
+app.get("/api/query", async (c) => {
+  const connection = await init();
 
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT * from 'temp/options_data.parquet' LIMIT 100`);
@@ -41,7 +46,7 @@ app.get("/api/memory", (c) => {
   const memoryInfo = Deno.systemMemoryInfo();
   const loadAvg = Deno.loadavg();
   const memoryUsage = Deno.memoryUsage();
-  
+
   return c.json({
     message: "System Memory Info",
     totalMemoryMB: memoryInfo.total / 1024 / 1024,
