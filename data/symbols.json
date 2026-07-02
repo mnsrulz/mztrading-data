@@ -700,7 +700,7 @@
         "symbol": "ALHC"
     },
     {
-        "name": "ALIGHT INC COM CL A",
+        "name": "ALIGHT INC COM SHS CL A",
         "symbol": "ALIT"
     },
     {
@@ -3402,10 +3402,6 @@
     {
         "name": "CANTOR EQUITY PARTNERS I INC. SHS CL A",
         "symbol": "CEPO"
-    },
-    {
-        "name": "CANTOR EQUITY PARTNERS II INC. CL A ORD SHS",
-        "symbol": "CEPT"
     },
     {
         "name": "CENTRAL PUERTO S A SPONSORED ADR",
@@ -12208,7 +12204,7 @@
         "symbol": "MPWX"
     },
     {
-        "name": "MARQETA INC CLASS A COM",
+        "name": "MARQETA INC CL A COM",
         "symbol": "MQ"
     },
     {
@@ -12276,7 +12272,7 @@
         "symbol": "MRVL"
     },
     {
-        "name": "MAREX GROUP PLC ORD",
+        "name": "MAREX GROUP LTD",
         "symbol": "MRX"
     },
     {
@@ -13084,7 +13080,7 @@
         "symbol": "NSIT"
     },
     {
-        "name": "NEOSTELLAR CAPITAL CORP",
+        "name": "NEOSTELLAR CAP CORP COM NEW",
         "symbol": "NSLR"
     },
     {
@@ -15732,7 +15728,7 @@
         "symbol": "RMR"
     },
     {
-        "name": "ROCKWELL MED INC COM NEW",
+        "name": "ROCKWELL MED INC COMMON STOCK",
         "symbol": "RMTI"
     },
     {
@@ -16434,6 +16430,10 @@
     {
         "name": "Main Sector Rotation ETF",
         "symbol": "SECT"
+    },
+    {
+        "name": "SECURITIZE CORP",
+        "symbol": "SECZ"
     },
     {
         "name": "SOLAREDGE TECHNOLOGIES INC COM",
@@ -20838,10 +20838,6 @@
     {
         "name": "XUNLEI LTD SPONSORED ADS",
         "symbol": "XNET"
-    },
-    {
-        "name": "EXXON MOBIL CORP COM",
-        "symbol": "XOM"
     },
     {
         "name": "XOMA ROYALTY CORPORATION COM NEW",
