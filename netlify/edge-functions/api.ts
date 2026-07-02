@@ -16,12 +16,12 @@ const app = new Hono();
 
 app.get("/api/hello", async (c) => {
   const connection = db.connect();
-  
+
   const historicalDates = await getHistoricalSnapshotDatesFromParquet("AAPL");
-  
+
   //const connection = await duckDbInstance.connect();
   const result = connection.query(`SELECT version() AS version`);
-  
+
   const rows = result.toArray();
   console.log("End of func call!");
   return c.json({ message: "Hello from Deno on Netlify Edge!", rows, historicalDates });
@@ -35,6 +35,30 @@ app.get("/api/query", (c) => {
 
   const rows = result.toArray();
   return c.json({ message: "Hello from Deno on Netlify Edge!", rows });
+});
+
+app.get("/api/memory", (c) => {
+  const memoryInfo = Deno.systemMemoryInfo();
+  const loadAvg = Deno.loadavg();
+  const memoryUsage = Deno.memoryUsage();
+  
+  return c.json({
+    message: "System Memory Info",
+    totalMemoryMB: memoryInfo.total / 1024 / 1024,
+    freeMemoryMB: memoryInfo.free / 1024 / 1024,
+    availableMemoryMB: memoryInfo.available / 1024 / 1024,
+    buffersMB: memoryInfo.buffers / 1024 / 1024,
+    cachedMB: memoryInfo.cached / 1024 / 1024,
+    swapTotalMB: memoryInfo.swapTotal / 1024 / 1024,
+    swapFreeMB: memoryInfo.swapFree / 1024 / 1024,
+    loadAverage1Min: loadAvg[0],
+    loadAverage5Min: loadAvg[1],
+    loadAverage15Min: loadAvg[2],
+    externalMemoryUsageMB: memoryUsage.external / 1024 / 1024,
+    rssMemoryUsageMB: memoryUsage.rss / 1024 / 1024,
+    heapTotalMemoryUsageMB: memoryUsage.heapTotal / 1024 / 1024,
+    heapUsedMemoryUsageMB: memoryUsage.heapUsed / 1024 / 1024
+  })
 });
 
 export const config = { path: "/api/*" };
