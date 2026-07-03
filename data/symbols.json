@@ -144,10 +144,6 @@
         "symbol": "ABT"
     },
     {
-        "name": "AMERICAN BITCOIN CORP. COM CL A",
-        "symbol": "ABTC"
-    },
-    {
         "name": "ARBUTUS BIOPHARMA CORP COM",
         "symbol": "ABUS"
     },
@@ -6024,10 +6020,6 @@
         "symbol": "EOLS"
     },
     {
-        "name": "EOS ENERGY ENTERPRISES INC COM CL A",
-        "symbol": "EOSE"
-    },
-    {
         "name": "T-REX 2X Long EOSE Daily Target ETF",
         "symbol": "EOSU"
     },
@@ -8436,7 +8428,7 @@
         "symbol": "GVIP"
     },
     {
-        "name": "TIDAL TRUST I GOTHAM 1000 VALU",
+        "name": "TIDAL TRUST I GOTH 1000 VA ETF",
         "symbol": "GVLU"
     },
     {
@@ -13172,7 +13164,7 @@
         "symbol": "NUGT"
     },
     {
-        "name": "EXCHANGE TRADED CONCEPTS TRUST RANGE NUCLEAR RE",
+        "name": "EXCHANGE TRADED CONCEPTS TRUST RANG NUCL RE ETF",
         "symbol": "NUKZ"
     },
     {
@@ -13750,10 +13742,6 @@
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY",
         "symbol": "ORCX"
-    },
-    {
-        "name": "ORIGIN MATERIALS INC COM",
-        "symbol": "ORGN"
     },
     {
         "name": "ORGANOGENESIS HLDGS INC COM",
@@ -16432,7 +16420,7 @@
         "symbol": "SECT"
     },
     {
-        "name": "SECURITIZE CORP",
+        "name": "SECURITIZE CORP COM SHS",
         "symbol": "SECZ"
     },
     {
@@ -16818,10 +16806,6 @@
     {
         "name": "SILICON LABORATORIES INC COM",
         "symbol": "SLAB"
-    },
-    {
-        "name": "SOLAI LIMITED SPON ADR",
-        "symbol": "SLAI"
     },
     {
         "name": "SLB LIMITED COM STK",
@@ -20838,6 +20822,10 @@
     {
         "name": "XUNLEI LTD SPONSORED ADS",
         "symbol": "XNET"
+    },
+    {
+        "name": "EXXONMOBIL HOLDINGS CORP COM SHS",
+        "symbol": "XOM"
     },
     {
         "name": "XOMA ROYALTY CORPORATION COM NEW",
