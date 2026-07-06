@@ -146,7 +146,7 @@ jobs:
           ls -lR temp
       - name: Zip snapshot images
         run: |
-          zip -rj temp/options-snapshots.zip temp -i '*.png'
+          zip -rj0 temp/options-snapshots.zip temp -i '*.png'
           cp temp/symbol-batches/temp/all-symbols.json temp/all-symbols.json
       - name: Upload artifacts 
         uses: actions/upload-artifact@v4
