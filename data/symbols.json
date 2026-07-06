@@ -144,6 +144,10 @@
         "symbol": "ABT"
     },
     {
+        "name": "AMERICAN BITCOIN CORP. COM CL A",
+        "symbol": "ABTC"
+    },
+    {
         "name": "ARBUTUS BIOPHARMA CORP COM",
         "symbol": "ABUS"
     },
@@ -6018,6 +6022,10 @@
     {
         "name": "EVOLUS INC COM",
         "symbol": "EOLS"
+    },
+    {
+        "name": "EOS ENERGY ENTERPRISES INC COM CL A",
+        "symbol": "EOSE"
     },
     {
         "name": "T-REX 2X Long EOSE Daily Target ETF",
@@ -16806,6 +16814,10 @@
     {
         "name": "SILICON LABORATORIES INC COM",
         "symbol": "SLAB"
+    },
+    {
+        "name": "SOLAI LIMITED SPON ADR",
+        "symbol": "SLAI"
     },
     {
         "name": "SLB LIMITED COM STK",
