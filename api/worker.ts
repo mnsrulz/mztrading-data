@@ -1,3 +1,4 @@
+import { Hono } from "https://esm.sh/hono@4.9.8";
 import { z } from "https://esm.sh/zod@4.3.6";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
@@ -9,7 +10,9 @@ import Emittery from 'https://esm.sh/emittery@2.0.0';
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import pRetry from 'https://esm.sh/p-retry@8.0.0';
 
+const app = new Hono();
 const emitter = new Emittery();
+
 
 const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
@@ -17,8 +20,14 @@ const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const PUSHER_APP_KEY = Deno.env.get('PUSHER_APP_KEY');
 const REDIS_URI = Deno.env.get('REDIS_URI');
+const VALKEY_URI = Deno.env.get('VALKEY_URI');
 const LOGTAIL_TOKEN = Deno.env.get('LOGTAIL_TOKEN');
 const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
+
+// 1. Initialize and connect your Redis client to your Valkey container
+const valkey = createClient({
+    url: VALKEY_URI
+});
 
 let redisSubscriber = createClient({
     url: REDIS_URI,
@@ -277,8 +286,8 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
 
         let qualifyClause = '', whereClause = ` WHERE quote_date >= (current_date - ${lookbackDays})`;
         let useQualifyClause = false;
-        
-        if(args.expiryMode == 'rolling') {
+
+        if (args.expiryMode == 'rolling') {
             useQualifyClause = true;
             whereClause = `${whereClause} AND dte >= '${args.dte}'`;
         } else if (args.expiryMode == 'fixed') {
@@ -287,14 +296,14 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
 
         let partitionOrderColumn = '';
 
-        if(args.mode == 'strike') {
+        if (args.mode == 'strike') {
             whereClause = `${whereClause} AND strike_price = ${args.strike}`;
         } else {
             useQualifyClause = true;
             partitionOrderColumn = args.mode == 'atm' ? ', price_strike_diff' : ', delta_diff';
         }
-        
-        if(useQualifyClause) { 
+
+        if (useQualifyClause) {
             qualifyClause = ` 
             QUALIFY ROW_NUMBER() OVER (
                     PARTITION BY quote_date, option_type 
@@ -302,7 +311,7 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
             ) = 1`;
         }
 
-        let rows:any = {};
+        let rows: any = {};
         let hasError = false;
 
         let sql = `
@@ -334,17 +343,17 @@ const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
             const result = await executeReaderInternal(symbol, sql, 99999);
             const [dt, close, iv30, iv_percentile, expiry, cs, cp, cv, ps, pp, pv] = result.getColumnsJson();
 
-            rows = { 
-                dt, close, iv30, 
-                iv_percentile, 
-                cv, 
-                pv, 
-                cs, 
-                ps, 
-                cp, 
+            rows = {
+                dt, close, iv30,
+                iv_percentile,
+                cv,
+                pv,
+                cs,
+                ps,
+                cp,
                 pp,
                 expiry
-             };
+            };
         }
         catch (err) {
             logger.error({ err }, `error occurred while processing volatility request.`);
@@ -753,9 +762,15 @@ async function initRedisSubscription() {
         await redisSubscriber.subscribe('worker-request', (message) => {
             try {
                 consecutiveRedisFailures = 0; // reset on successful message receipt
-                const data = JSON.parse(message) as { requestType: string };
+                const data = JSON.parse(message) as { requestType: string, clientId: string };
                 logger.info(`Received message from Redis on worker-request channel: ${JSON.stringify(data)}`);
                 emitter.emit(data.requestType, data);
+
+                // Create a unique key per user per minute (e.g., "track:127.0.0.1:2026-07-07T18:05")
+                const currentMinute = new Date().toISOString().slice(0, 16);
+                const valkeyKey = `track:${data.clientId}:${currentMinute}`;
+                // Atomically increment the request count in Valkey
+                valkey.incr(valkeyKey).catch(k => logger.error(k)); //let it run in background
             } catch (error) {
                 logger.error({ err: error }, `Error while emitting message on worker-request channel: ${message}`);
             }
@@ -826,6 +841,9 @@ if (DEBUG_MODE) {
         await initRedisSubscription();
     });
 
+    //init valkey
+    await valkey.connect();
+
     Deno.addSignalListener("SIGTERM", shutdown);
     Deno.addSignalListener("SIGINT", shutdown);
 }
@@ -846,3 +864,26 @@ logger.info(`Worker is running...`);
 //     requestId: crypto.randomUUID()
 // })
 
+app.get('/', 
+    c => c.json({ "message": "hello" })
+).get('/stats', async c => {
+    const stats: Record<string, number> = {};
+
+    // Safely scan Valkey for any keys matching our tracking pattern
+    // scanIter handles pagination automatically under the hood
+    for await (const key of valkey.scanIterator({ MATCH: 'track:*' })) {
+        const count = await valkey.get(key);
+
+        if (count !== null) {
+            stats[key] = parseInt(count, 10);
+        }
+    }
+
+    return c.json({
+        description: "Active client request counts inside active windows",
+        data: stats
+    });
+});
+
+// --- Start server ---
+Deno.serve(app.fetch);
