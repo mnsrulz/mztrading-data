@@ -1,1 +1,5 @@
 **/temp/
+
+.netlify/
+
+node_modules/
