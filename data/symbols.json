@@ -13564,10 +13564,6 @@
         "symbol": "OLP"
     },
     {
-        "name": "OLAPLEX HLDGS INC COM",
-        "symbol": "OLPX"
-    },
-    {
         "name": "OUTSET MED INC COM NEW",
         "symbol": "OM"
     },
@@ -15422,10 +15418,6 @@
     {
         "name": "THE REAL BROKERAGE INC COM NEW",
         "symbol": "REAX"
-    },
-    {
-        "name": "REE AUTOMOTIVE LTD SHS CL A NEW",
-        "symbol": "REE"
     },
     {
         "name": "ISHARES TR GLOBAL REIT ETF",
@@ -17868,7 +17860,7 @@
         "symbol": "SVAL"
     },
     {
-        "name": "SERVICE PPTYS TR COM SH BEN INT",
+        "name": "SERVICE PPTYS TR COM NEW",
         "symbol": "SVC"
     },
     {
