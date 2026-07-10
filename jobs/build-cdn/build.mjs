@@ -7,7 +7,7 @@ import optionsSnapshotSummary from "../../data/options-snapshot.summary.json" wi
     type: "json",
 };
 
-const realBranchName = process.env.BRANCH || process.env.CF_PAGES_BRANCH;
+const realBranchName = process.env.BRANCH || process.env.WORKERS_CI_BRANCH;
 let bname = '';
 if(!realBranchName.startsWith("NF_")) {
   bname = Object.keys(optionsSnapshotSummary).at(-1);
