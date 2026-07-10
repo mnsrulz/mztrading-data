@@ -576,6 +576,10 @@
         "symbol": "AIPI"
     },
     {
+        "name": "TIDAL TRUST II DEFIA AI PWR ETF",
+        "symbol": "AIPO"
+    },
+    {
         "name": "GLOBAL X FDS ARTIFICIAL ETF",
         "symbol": "AIQ"
     },
@@ -3328,6 +3332,10 @@
         "symbol": "CDNA"
     },
     {
+        "name": "CARDINAL INFRASTRUCTURE GROUP CL A",
+        "symbol": "CDNL"
+    },
+    {
         "name": "CADENCE DESIGN SYSTEM INC COM",
         "symbol": "CDNS"
     },
@@ -5376,6 +5384,10 @@
         "symbol": "DRTS"
     },
     {
+        "name": "BRIGHT MINDS BIOSCIENCES INC COM NEW",
+        "symbol": "DRUG"
+    },
+    {
         "name": "GRANITESHARES ETF TR NASD SEL DIS ETF",
         "symbol": "DRUP"
     },
@@ -6142,6 +6154,10 @@
     {
         "name": "ERO COPPER CORP COM",
         "symbol": "ERO"
+    },
+    {
+        "name": "EROCK INC CL A COM",
+        "symbol": "EROC"
     },
     {
         "name": "DIREXION SHARES ETF TRUST DAI ENE BUL ETF",
@@ -8890,6 +8906,10 @@
     {
         "name": "HP INC COM",
         "symbol": "HPQ"
+    },
+    {
+        "name": "HORIZON QUANTUM HOLDINGS LTD CL A ORD SHS",
+        "symbol": "HQ"
     },
     {
         "name": "HEALTHEQUITY INC COM",
@@ -12482,6 +12502,10 @@
     {
         "name": "MURPHY USA INC COM",
         "symbol": "MUSA"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DLY MU BULL 2X",
+        "symbol": "MUU"
     },
     {
         "name": "MCEWEN INC. COM NEW",
@@ -16568,6 +16592,10 @@
         "symbol": "SHAK"
     },
     {
+        "name": "SHARONAI HOLDINGS INC COM CL A",
+        "symbol": "SHAZ"
+    },
+    {
         "name": "SOTERA HEALTH CO COM",
         "symbol": "SHC"
     },
@@ -18052,10 +18080,6 @@
         "symbol": "TBPH"
     },
     {
-        "name": "TRUBRIDGE INC COM",
-        "symbol": "TBRG"
-    },
-    {
         "name": "PROSHARES TR PSHS ULTSH 20YRS",
         "symbol": "TBT"
     },
@@ -18642,6 +18666,10 @@
     {
         "name": "TRIPADVISOR INC COM",
         "symbol": "TRIP"
+    },
+    {
+        "name": "TRULIEVE CANNABIS CORP SUB VTG SHS",
+        "symbol": "TRLV"
     },
     {
         "name": "TRIMBLE INC COM",
