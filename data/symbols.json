@@ -2752,6 +2752,10 @@
         "symbol": "BSOL"
     },
     {
+        "name": "BENDING SPOONS SPA COM SHS",
+        "symbol": "BSP"
+    },
+    {
         "name": "SIERRA BANCORP COM",
         "symbol": "BSRR"
     },
@@ -4568,10 +4572,6 @@
         "symbol": "CURV"
     },
     {
-        "name": "TRUST FOR PROFESSIONAL MANAGER CROSS BRG ULTRST",
-        "symbol": "CUSD"
-    },
-    {
         "name": "INVESCO EXCHANGE-TRADED FD TR MSCI GBL TIMBR",
         "symbol": "CUT"
     },
@@ -5776,10 +5776,6 @@
         "symbol": "EEV"
     },
     {
-        "name": "EMERALD HOLDING INC COM",
-        "symbol": "EEX"
-    },
-    {
         "name": "ISHARES TR MSCI EAFE ETF",
         "symbol": "EFA"
     },
@@ -6202,10 +6198,6 @@
     {
         "name": "VANECK ETF TRUST VIDEO GMNG ESPRT",
         "symbol": "ESPO"
-    },
-    {
-        "name": "ESPERION THERAPEUTICS INC NEW COM",
-        "symbol": "ESPR"
     },
     {
         "name": "EMPIRE ST RLTY TR INC CL A",
@@ -8858,6 +8850,10 @@
     {
         "name": "HONEYWELL INTL INC COM",
         "symbol": "HON"
+    },
+    {
+        "name": "HONEYWELL AEROSPACE INC COM",
+        "symbol": "HONA"
     },
     {
         "name": "Leverage Shares 2X Long HON Daily ETF",
@@ -14868,7 +14864,7 @@
         "symbol": "PSQ"
     },
     {
-        "name": "PSQ HOLDINGS INC CL A",
+        "name": "PSQ HOLDINGS INC COM SHS CL A",
         "symbol": "PSQH"
     },
     {
@@ -15122,6 +15118,10 @@
     {
         "name": "QUANTINUUM INC CL A COM",
         "symbol": "QNT"
+    },
+    {
+        "name": "Tradr 2X Long QNT Daily ETF",
+        "symbol": "QNTU"
     },
     {
         "name": "ISHARES TR NASDAQ-100 EX",
@@ -15722,6 +15722,10 @@
     {
         "name": "RAMBUS INC DEL COM",
         "symbol": "RMBS"
+    },
+    {
+        "name": "Tradr 2X Long RMBS Daily ETF",
+        "symbol": "RMBX"
     },
     {
         "name": "RESMED INC COM",
@@ -16778,6 +16782,10 @@
     {
         "name": "PROSHARES TR ULTRASHORT FINA",
         "symbol": "SKF"
+    },
+    {
+        "name": "SK HYNIX INC AMERICAN DEPOSIT",
+        "symbol": "SKHY"
     },
     {
         "name": "SKINHEALTH SYSTEMS INC COM CL A",
@@ -18904,6 +18912,10 @@
         "symbol": "TTMI"
     },
     {
+        "name": "Tradr 2X Long TTMI Daily ETF",
+        "symbol": "TTMX"
+    },
+    {
         "name": "PROSHARES TR ULSH 20YRTRE NEW",
         "symbol": "TTT"
     },
@@ -20564,10 +20576,6 @@
         "symbol": "WSO"
     },
     {
-        "name": "WHITESTONE REIT COM",
-        "symbol": "WSR"
-    },
-    {
         "name": "WEST PHARMACEUTICAL SVSC INC COM",
         "symbol": "WST"
     },
@@ -20896,7 +20904,7 @@
         "symbol": "XPP"
     },
     {
-        "name": "EXPRO GROUP HOLDINGS NV COM",
+        "name": "EXPRO LTD",
         "symbol": "XPRO"
     },
     {
