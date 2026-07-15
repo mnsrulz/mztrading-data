@@ -656,6 +656,10 @@
         "symbol": "AKBA"
     },
     {
+        "name": "AKTIS ONCOLOGY INC COM",
+        "symbol": "AKTS"
+    },
+    {
         "name": "AKARI THERAPEUTICS PLC SPONSORED ADR",
         "symbol": "AKTX"
     },
@@ -850,10 +854,6 @@
     {
         "name": "ADVANCED MICRO DEVICES INC COM",
         "symbol": "AMD"
-    },
-    {
-        "name": "DIREXION SHARES ETF TRUST DLY AMD BEAR 1X",
-        "symbol": "AMDD"
     },
     {
         "name": "THEMES ETF TR LEVERAGE SHARES",
@@ -1652,6 +1652,10 @@
         "symbol": "AVB"
     },
     {
+        "name": "AVIDIA BANCORP INC COMMON STOCK",
+        "symbol": "AVBC"
+    },
+    {
         "name": "ARRIVENT BIOPHARMA INC COM",
         "symbol": "AVBP"
     },
@@ -2410,10 +2414,6 @@
     {
         "name": "Corgi Crypto Infrastructure ETF",
         "symbol": "BLCK"
-    },
-    {
-        "name": "SIREN ETF TR NEXGEN ECONOMY",
-        "symbol": "BLCN"
     },
     {
         "name": "BAUSCH PLUS LOMB CORP COMMON SHARES",
@@ -3314,6 +3314,10 @@
     {
         "name": "T-REX 2X Long CRCL Daily Target ETF",
         "symbol": "CCUP"
+    },
+    {
+        "name": "CHURCHILL CAP CORP XI CL A ORD SHS",
+        "symbol": "CCXI"
     },
     {
         "name": "CHAINCE DIGITAL HOLDINGS INC ORDINARY SHARES",
@@ -5320,6 +5324,10 @@
         "symbol": "DOX"
     },
     {
+        "name": "DPC HOLDINGS PLC ORDINARY SHARES",
+        "symbol": "DPC"
+    },
+    {
         "name": "DRAGANFLY INC. COM",
         "symbol": "DPRO"
     },
@@ -5354,10 +5362,6 @@
     {
         "name": "DARDEN RESTAURANTS INC COM",
         "symbol": "DRI"
-    },
-    {
-        "name": "DIREXION SHARES ETF TRUST DAILY S&P OIL &",
-        "symbol": "DRIP"
     },
     {
         "name": "GLOBAL X FDS AUTONMOUS EV ETF",
@@ -7892,10 +7896,6 @@
         "symbol": "GGLL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DLY GOOGL BR 1X",
-        "symbol": "GGLS"
-    },
-    {
         "name": "GOGORO INC ORDINARY SHARES",
         "symbol": "GGR"
     },
@@ -7970,6 +7970,10 @@
     {
         "name": "Corgi Beauty, Skincare & Aesthetics ETF",
         "symbol": "GLAM"
+    },
+    {
+        "name": "GLASS HOUSE BRANDS INC SUB REG LTD VTG",
+        "symbol": "GLAS"
     },
     {
         "name": "GLOBAL E ONLINE LTD SHS",
@@ -12556,6 +12560,10 @@
         "symbol": "MYE"
     },
     {
+        "name": "FIRST WESTN FINL INC COM",
+        "symbol": "MYFW"
+    },
+    {
         "name": "MYRIAD GENETICS INC COM",
         "symbol": "MYGN"
     },
@@ -13742,6 +13750,10 @@
     {
         "name": "OPTIMUM COMMUNICATIONS INC CL A",
         "symbol": "OPTU"
+    },
+    {
+        "name": "SYNTEC OPTICS HLDGS INC CL A",
+        "symbol": "OPTX"
     },
     {
         "name": "OR ROYALTIES INC. COM SHS",
@@ -15440,6 +15452,10 @@
         "symbol": "REAX"
     },
     {
+        "name": "REE AUTOMOTIVE LTD SHS CL A NEW",
+        "symbol": "REEAF"
+    },
+    {
         "name": "ISHARES TR GLOBAL REIT ETF",
         "symbol": "REET"
     },
@@ -16776,6 +16792,10 @@
         "symbol": "SJT"
     },
     {
+        "name": "Corgi SK hynix 2x Daily ETF",
+        "symbol": "SK"
+    },
+    {
         "name": "SKEENA RES LTD NEW COM",
         "symbol": "SKE"
     },
@@ -16784,8 +16804,16 @@
         "symbol": "SKF"
     },
     {
+        "name": "Leverage Shares 2X Long SK Hynix Daily ETF",
+        "symbol": "SKHX"
+    },
+    {
         "name": "SK HYNIX INC AMERICAN DEPOSIT",
         "symbol": "SKHY"
+    },
+    {
+        "name": "Leverage Shares 1X Short SK Hynix Daily ETF",
+        "symbol": "SKHZ"
     },
     {
         "name": "SKINHEALTH SYSTEMS INC COM CL A",
@@ -16986,6 +17014,10 @@
     {
         "name": "VANECK ETF TRUST SEMICONDUCTR ETF",
         "symbol": "SMH"
+    },
+    {
+        "name": "VANECK ETF TRUST CHINA SEMICNDCTR",
+        "symbol": "SMHC"
     },
     {
         "name": "SEACOR MARINE HLDGS INC COM",
@@ -18180,10 +18212,6 @@
         "symbol": "TECL"
     },
     {
-        "name": "DIREXION SHARES ETF TRUST DA TE BE 3X ETF",
-        "symbol": "TECS"
-    },
-    {
         "name": "TECTONIC THERAPEUTIC INC COM",
         "symbol": "TECX"
     },
@@ -19034,10 +19062,6 @@
     {
         "name": "TYRA BIOSCIENCES INC COM",
         "symbol": "TYRA"
-    },
-    {
-        "name": "DIREXION SHARES ETF TRUST DAILY SMALL CAP",
-        "symbol": "TZA"
     },
     {
         "name": "UNITY SOFTWARE INC COM",
@@ -20860,10 +20884,6 @@
         "symbol": "XOM"
     },
     {
-        "name": "XOMA ROYALTY CORPORATION COM NEW",
-        "symbol": "XOMA"
-    },
-    {
         "name": "SPDR SERIES TRUST SP O&G EXPL PRO",
         "symbol": "XOP"
     },
@@ -20904,7 +20924,7 @@
         "symbol": "XPP"
     },
     {
-        "name": "EXPRO LTD",
+        "name": "EXPRO LTD ORD SHS",
         "symbol": "XPRO"
     },
     {
