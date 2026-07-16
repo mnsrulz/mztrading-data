@@ -856,6 +856,10 @@
         "symbol": "AMD"
     },
     {
+        "name": "DIREXION SHARES ETF TRUST DLY AMD BEAR 1X",
+        "symbol": "AMDD"
+    },
+    {
         "name": "THEMES ETF TR LEVERAGE SHARES",
         "symbol": "AMDG"
     },
@@ -1274,10 +1278,6 @@
     {
         "name": "ARHAUS INC COM CL A",
         "symbol": "ARHS"
-    },
-    {
-        "name": "APOLLO COML REAL ESTATE FIN COM",
-        "symbol": "ARI"
     },
     {
         "name": "ARIS MINING CORPORATION COM",
@@ -2816,7 +2816,7 @@
         "symbol": "BTE"
     },
     {
-        "name": "VALKYRIE ETF TRUST II COINSHARES BITCN",
+        "name": "COINSHARES ETF TR COINSHARES BITCN",
         "symbol": "BTF"
     },
     {
@@ -4192,10 +4192,6 @@
         "symbol": "CPRT"
     },
     {
-        "name": "CATALYST PHARMACEUTICALS INC COM",
-        "symbol": "CPRX"
-    },
-    {
         "name": "COOPER-STANDARD HOLDINGS INC COM",
         "symbol": "CPS"
     },
@@ -5362,6 +5358,10 @@
     {
         "name": "DARDEN RESTAURANTS INC COM",
         "symbol": "DRI"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DAILY S&P OIL &",
+        "symbol": "DRIP"
     },
     {
         "name": "GLOBAL X FDS AUTONMOUS EV ETF",
@@ -7896,6 +7896,10 @@
         "symbol": "GGLL"
     },
     {
+        "name": "DIREXION SHARES ETF TRUST DLY GOOGL BR 1X",
+        "symbol": "GGLS"
+    },
+    {
         "name": "GOGORO INC ORDINARY SHARES",
         "symbol": "GGR"
     },
@@ -8398,10 +8402,6 @@
     {
         "name": "GITLAB INC CLASS A COM",
         "symbol": "GTLB"
-    },
-    {
-        "name": "CHART INDS INC COM",
-        "symbol": "GTLS"
     },
     {
         "name": "ZOOMINFO TECHNOLOGIES INC COMMON STOCK",
@@ -10960,10 +10960,6 @@
         "symbol": "LBTYK"
     },
     {
-        "name": "GRANITESHARES ETF TR 2X LONG LCID ETF",
-        "symbol": "LCDL"
-    },
-    {
         "name": "LUCID GROUP INC COM NEW",
         "symbol": "LCID"
     },
@@ -11584,6 +11580,10 @@
         "symbol": "MAN"
     },
     {
+        "name": "VERADERMICS INC COMMON STOCK",
+        "symbol": "MANE"
+    },
+    {
         "name": "MANHATTAN ASSOCIATES INC COM",
         "symbol": "MANH"
     },
@@ -11636,7 +11636,7 @@
         "symbol": "MAX"
     },
     {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS BITC STR PLU ETF",
+        "name": "SIMPLIFY EXCHANGE TRADED FUNDS BITCOIN STRATEGY",
         "symbol": "MAXI"
     },
     {
@@ -13210,10 +13210,6 @@
     {
         "name": "NUVATION BIO INC COM CL A",
         "symbol": "NUVB"
-    },
-    {
-        "name": "NUVALENT INC COM",
-        "symbol": "NUVL"
     },
     {
         "name": "NOVAVAX INC COM NEW",
@@ -16796,12 +16792,20 @@
         "symbol": "SK"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X SRT SK HYNIX",
+        "symbol": "SKDD"
+    },
+    {
         "name": "SKEENA RES LTD NEW COM",
         "symbol": "SKE"
     },
     {
         "name": "PROSHARES TR ULTRASHORT FINA",
         "symbol": "SKF"
+    },
+    {
+        "name": "PROSHARES TR ULTRA SK HYNIX",
+        "symbol": "SKHU"
     },
     {
         "name": "Leverage Shares 2X Long SK Hynix Daily ETF",
@@ -16830,6 +16834,10 @@
     {
         "name": "TANGER INC COM",
         "symbol": "SKT"
+    },
+    {
+        "name": "GRANITESHARES ETF TR 2X LNG SK HYNIX",
+        "symbol": "SKUU"
     },
     {
         "name": "SKYWARD SPECIALTY INS GROUP IN COM",
@@ -17306,6 +17314,10 @@
     {
         "name": "VIRGIN GALACTIC HOLDINGS INC COM NEW",
         "symbol": "SPCE"
+    },
+    {
+        "name": "PROSHARES TR ULTRA SPACEX",
+        "symbol": "SPCF"
     },
     {
         "name": "Tradr 2X Short SpaceX Daily ETF",
@@ -18212,6 +18224,10 @@
         "symbol": "TECL"
     },
     {
+        "name": "DIREXION SHARES ETF TRUST DA TE BE 3X ETF",
+        "symbol": "TECS"
+    },
+    {
         "name": "TECTONIC THERAPEUTIC INC COM",
         "symbol": "TECX"
     },
@@ -19062,6 +19078,10 @@
     {
         "name": "TYRA BIOSCIENCES INC COM",
         "symbol": "TYRA"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DAILY SMALL CAP",
+        "symbol": "TZA"
     },
     {
         "name": "UNITY SOFTWARE INC COM",
@@ -20404,7 +20424,7 @@
         "symbol": "WFRD"
     },
     {
-        "name": "VALKYRIE ETF TRUST II COINSHARES BITCN",
+        "name": "COINSHARES ETF TR COINSHARES BITCN",
         "symbol": "WGMI"
     },
     {
