@@ -17,9 +17,11 @@ const kvindexmap = 'cboe-options-index-map';
 const kvcboeanalytics = 'cboe-options-analytics';
 
 // const kv = await Deno.openKv(":memory:");
-const kv = await (isDenoDeploy ? Deno.openKv() : Deno.openKv(":memory:"));
+const kv = await (isDenoDeploy ? Deno.openKv() : null);
 const indexMap = new Set<string>(['SPX']);    //store the symbols which requires _ to be prefixed in the url. Add a job later on which will fetch the list of symbols from the kv store and persist in json file.
-for await (const res of kv.list<string>({ prefix: [kvindexmap] })) indexMap.add(res.value);
+if (kv) {
+    for await (const res of kv.list<string>({ prefix: [kvindexmap] })) indexMap.add(res.value);
+}
 
 const fetchOptionChainFromCboe = async (symbol: string) => {
     const url = `https://cdn.cboe.com/api/global/delayed_quotes/options/${indexMap.has(symbol) ? '_' : ''}${symbol}.json`;
@@ -30,13 +32,13 @@ const fetchOptionChainFromCboe = async (symbol: string) => {
         response = await client(`https://cdn.cboe.com/api/global/delayed_quotes/options/_${symbol}.json`);
         if (response.ok) {
             indexMap.add(symbol);
-            await kv.set([kvindexmap, symbol], symbol);
+            await kv?.set([kvindexmap, symbol], symbol);
         }
     }
 
     if (!response.ok) throw new Error('error fetching options data');
 
-    await kv.atomic().sum([kvcboeanalytics, symbol], 1n).commit();
+    await kv?.atomic().sum([kvcboeanalytics, symbol], 1n).commit();
 
     return await response.json<{
         data: {
@@ -76,8 +78,8 @@ export const getOptionsChain = async (symbol: string) => {
             volume,
             delta,
             gamma,
-            last_trade_price, 
-            ask, 
+            last_trade_price,
+            ask,
             bid
         }
     });
@@ -86,6 +88,7 @@ export const getOptionsChain = async (symbol: string) => {
 }
 
 export const getOptionsAnalytics = async () => {
+    if (!kv) return [];
     const data = new Map<string, number>();
     for await (const res of kv.list<number>({ prefix: [kvcboeanalytics] })) {
         const k = res.key.at(-1);
