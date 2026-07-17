@@ -8,15 +8,9 @@ import pretty from "https://esm.sh/pino-pretty@10.3.0";
 
 import { sortBy } from "https://deno.land/std@0.224.0/collections/sort_by.ts";
 import { getQuery } from "https://deno.land/x/oak@v12.6.1/helpers.ts";
-// import ky from "https://esm.sh/ky@1.8.2";
 import { stringify } from "jsr:@std/csv@1.0.6";
 import {
     AvailableSnapshotDates,
-    // CboeOptionsRawSummary,
-    // getOptionsDataSummary,
-    // mapDataToLegacy,
-    // OptionsSnapshotSummary,
-    //OptionsSnapshotSummaryLegacy,
     searchTicker,
     getSnapshotsAvailableForDate,
     getSnapshotsAvailableForSymbol,
@@ -24,14 +18,14 @@ import {
     allTickerSymbols
 } from "./lib/data.ts";
 const stream = pretty({
-  singleLine: true,
-  colorize: true,
-  include: "msg",
-  messageFormat: (log, messageKey) => { return `${log[messageKey]}` },
+    singleLine: true,
+    colorize: true,
+    include: "msg",
+    messageFormat: (log, messageKey) => { return `${log[messageKey]}` },
 });
 
 const logger = pino({
-  //level: "info" 
+    //level: "info" 
 }, stream);
 
 // import { getPriceAtDate } from './lib/historicalPrice.ts'
@@ -48,14 +42,13 @@ import {
 // import { getOptionsAnalytics, getOptionsChain } from "./lib/cboe.ts";
 import { getIndicatorValues } from "./lib/ta.ts";
 import { OIAnomalyFacetSearchRequestType, OIAnomalySearchRequest, queryOIAnomalyFacetSearch, queryOIAnomalySearch } from "./lib/oianomalySearchClient.ts";
-import { error } from "node:console";
 
 // const token = Deno.env.get("ghtoken") || '';
 const router = new Router();
 
 router.get("/", (context) => {
     context.response.body = "hello";
-})    
+})
     .get("/symbols", (context) => {
         //api/symbols/search?q=t
         const { q } = getQuery(context);
@@ -131,59 +124,47 @@ router.get("/", (context) => {
     .get("/api/options/report/greeks", async (context) => {
         const { dt, dte } = getQuery(context);
         if (!dt) throw new Error("dt parameter is missing!");
-        context.response.body = await getHistoricalGreeksSummaryDataFromParquet(dt, dte);
+        context.response.body = await getHistoricalGreeksSummaryDataFromParquet(dt, Number(dte));
         context.response.type = "application/json";
     })
     .get("/api/options/report/exposure-walls", async (context) => {
         const { dt, dte, symbol } = getQuery(context);
         // if (!dt) throw new Error("dt parameter is missing!");
-        context.response.body = await getHistoricalExposureWallsFromParquet(dt, dte, symbol);
+        context.response.body = await getHistoricalExposureWallsFromParquet(dt, Number(dte), symbol);
         context.response.type = "application/json";
     })
     .get("/api/options/report/oi-anomaly", async (context) => {
         const { dt, dteFrom, dteTo, symbols } = getQuery(context);
         const symbolList = (symbols || '').split(',').map(k => k.trim()).filter(k => k);
         const dtList = (dt || '').split(',').map(k => k.trim()).filter(k => k);
-        context.response.body = await getOIAnomalyDataFromParquet(dtList, dteFrom, dteTo, symbolList);
+        context.response.body = await getOIAnomalyDataFromParquet(dtList, Number(dteFrom), Number(dteTo), symbolList);
         context.response.type = "application/json";
     })
     .post("/api/search/oi-anomaly", async (context) => {
         if (!context.request.hasBody) {
             context.throw(415);
         }
-        try {
-            const searchRequest = await context.request.body().value as OIAnomalySearchRequest[];
-            if (!searchRequest || searchRequest.length == 0) {
-                throw new Error("Search request is empty!");
-            }
-            context.response.body = await queryOIAnomalySearch(searchRequest);
-        } catch (error) {
-            console.error(error);
-            context.response.body = error;
-            context.response.status = 500;
+        const searchRequest = await context.request.body().value as OIAnomalySearchRequest[];
+        if (!searchRequest || searchRequest.length == 0) {
+            throw new Error("Search request is empty!");
         }
+        context.response.body = await queryOIAnomalySearch(searchRequest);
         context.response.type = "application/json";
     })
     .post("/api/search/oi-anomaly/facet", async (context) => {
         if (!context.request.hasBody) {
             context.throw(415);
         }
-        try {
-            const searchRequest = await context.request.body().value as OIAnomalyFacetSearchRequestType;
-            if (!searchRequest) {
-                throw new Error("Facet search request is empty!");
-            }
-            context.response.body = await queryOIAnomalyFacetSearch(searchRequest);
-        } catch (error) {
-            console.error(error);
-            context.response.body = error;
-            context.response.status = 500;
+        const searchRequest = await context.request.body().value as OIAnomalyFacetSearchRequestType;
+        if (!searchRequest) {
+            throw new Error("Facet search request is empty!");
         }
+        context.response.body = await queryOIAnomalyFacetSearch(searchRequest);
         context.response.type = "application/json";
     })
     .get("/api/options/report/greeks.txt", async (context) => {
         const { dt, dte } = getQuery(context);
-        const result = await getHistoricalGreeksSummaryDataFromParquet(dt, dte);
+        const result = await getHistoricalGreeksSummaryDataFromParquet(dt, Number(dte));
         if (result.length == 0) throw new Error("No data found for the given date range");
         context.response.body = stringify(result, { columns: Object.keys(result.at(0) || {}) });
         context.response.type = "text/plain";
@@ -262,13 +243,13 @@ app.use(async (context, next) => {
         } else {
             context.response.status = 500;
         }
-        context.response.body = { error: err.message };
+        context.response.body = { error: (err as Error).message };
         context.response.type = "json";
-        logger.error(`Error occurred: ${err.message}`);
+        logger.error(`Error occurred: ${(err as Error).message}`);
         hasError = true;
     } finally {
         const end = performance.now();
-        logger.info(`${ hasError ? 'ERR':'OK' } ${req.method} ${req.url.pathname} ${req.headers.get('X-Forwarded-For') || req.headers.get('x-real-ip') || ''} ${(end - start).toFixed(2)} ms`)
+        logger.info(`${hasError ? 'ERR' : 'OK'} ${req.method} ${req.url.pathname} ${req.headers.get('X-Forwarded-For') || req.headers.get('x-real-ip') || ''} ${(end - start).toFixed(2)} ms`)
     }
 });
 
