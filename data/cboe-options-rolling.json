@@ -87657,5 +87657,6 @@
             "symbol": "MRX",
             "dt": "2026-07-17"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-07-17/options_cboe_oi_anomaly.parquet"
 }
