@@ -1072,6 +1072,10 @@
         "symbol": "ANRO"
     },
     {
+        "name": "AN2 THERAPEUTICS INC COM",
+        "symbol": "ANTX"
+    },
+    {
         "name": "ANNOVIS BIO INC COM",
         "symbol": "ANVS"
     },
@@ -1278,6 +1282,10 @@
     {
         "name": "ARHAUS INC COM CL A",
         "symbol": "ARHS"
+    },
+    {
+        "name": "APOLLO COML REAL ESTATE FIN COM",
+        "symbol": "ARI"
     },
     {
         "name": "ARIS MINING CORPORATION COM",
@@ -16870,10 +16878,6 @@
     {
         "name": "SILICON LABORATORIES INC COM",
         "symbol": "SLAB"
-    },
-    {
-        "name": "SOLAI LIMITED SPONSORED ADS",
-        "symbol": "SLAI"
     },
     {
         "name": "SLB LIMITED COM STK",
