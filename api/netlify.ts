@@ -38,7 +38,7 @@ const execute = async ()=> {
     return result.readAll().flatMap(k => k.toArray().map((row) => row.toJSON()));
 }
 
-app.get('/', async c=> {
+app.get('/api/duckdb', async c=> {
     const result = await execute();
     c.json(result);
 })
