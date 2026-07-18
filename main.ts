@@ -193,7 +193,7 @@ router.get("/", (context) => {
     })
     .get("/api/options/:symbol/expirations", async (context) => {
         const { symbol } = context.params;
-        context.response.body = getSymbolExpirations(symbol);
+        context.response.body = await getSymbolExpirations(symbol);
         context.response.type = "application/json";
     })
     .get("/api/options/:symbol/exposures/snapshots", (context) => {
