@@ -30,12 +30,22 @@ const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
 
 const execute = async ()=> {
+    const optionsStart = performance.now();
+    
+    
     const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
     await db.instantiate(() => { });
     
     const connection = db.connect();
     const result = await connection.send(`SELECT 1 AS c1`);
-    return result.readAll().flatMap(k => k.toArray().map((row) => row.toJSON()));
+    const dbresult = result.readAll().flatMap(k => k.toArray().map((row) => row.toJSON()));
+    const optionsEnd = performance.now();
+    console.log(`✅ data fetched in ${(optionsEnd - optionsStart).toFixed(2)} ms`);
+    return {
+        data: dbresult,
+        timing: optionsEnd - optionsStart
+    }
+
 }
 
 app.get('/api/duckdb', async c=> {
