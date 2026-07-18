@@ -40,7 +40,7 @@ const execute = async ()=> {
 
 app.get('/api/duckdb', async c=> {
     const result = await execute();
-    c.json(result);
+    return c.json(result);
 })
 
 export const config = { path: "/api/*" };
