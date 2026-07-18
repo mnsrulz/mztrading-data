@@ -14,7 +14,6 @@ import {
     searchTicker,
     getSnapshotsAvailableForDate,
     getSnapshotsAvailableForSymbol,
-    getSymbolExpirations,
     allTickerSymbols
 } from "./lib/data.ts";
 const stream = pretty({
@@ -38,6 +37,7 @@ import {
     getLiveCboeOptionsPricingData, getHistoricalSnapshotDates, getHistoricalGreeksSummaryDataBySymbolFromParquet, getHistoricalGreeksAvailableExpirationsBySymbolFromParquet,
     getOIAnomalyDataFromParquet, getHistoricalDataForOptionContractFromParquet,
     getHistoricalOIDataBySymbolFromParquet,
+    getSymbolExpirations
 } from "./lib/historicalOptions.ts";
 // import { getOptionsAnalytics, getOptionsChain } from "./lib/cboe.ts";
 import { getIndicatorValues } from "./lib/ta.ts";

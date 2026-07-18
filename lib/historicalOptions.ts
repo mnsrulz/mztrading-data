@@ -14,7 +14,7 @@ const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
 
 const initialize = async () => {
-    const { assetUrl, name, stockUrl } = optionsRollingSummary;
+    const { assetUrl, name, stockUrl, expirationsStrikesUrl } = optionsRollingSummary;
     // const ds = 'https://github.com/mnsrulz/mztrading-data/releases/download/archives/output_test_all.parquet';
 
     //HTTP paths are not supported due to xhr not available in deno.
@@ -37,9 +37,17 @@ const initialize = async () => {
     const stocksDataBuffer = await fetch(stockUrl).then(r => r.arrayBuffer());
     const stocksEnd = performance.now();
     console.log(`✅ Stocks data fetched in ${(stocksEnd - stocksStart).toFixed(2)} ms`);
+    
+    // Fetch stock expirations data
+    console.log(`Fetching stocks expirations data from ${expirationsStrikesUrl}...`);
+    const expirationsStrikesStart = performance.now();
+    const expirationsStrikesDataBuffer = await fetch(expirationsStrikesUrl).then(r => r.arrayBuffer());
+    const expirationsStrikesEnd = performance.now();
+    console.log(`✅ Expirations data fetched in ${(expirationsStrikesStart - expirationsStrikesEnd).toFixed(2)} ms`);
 
     db.registerFileBuffer('db.parquet', new Uint8Array(optionsDataBuffer));
     db.registerFileBuffer('stocks.parquet', new Uint8Array(stocksDataBuffer));
+    db.registerFileBuffer('strikes.parquet', new Uint8Array(expirationsStrikesDataBuffer));
     return db;
 }
 
@@ -501,4 +509,40 @@ export async function getLiveCboeOptionsPricingData(symbol: string) {
         return previous;
     }, {} as Record<string, MicroOptionPricingContract>);
     return { spotPrice: currentPrice, options, timestamp };
+}
+
+
+export async function getSymbolExpirations(symbol: string) {
+
+    const conn = await getConnection();
+    const arrowResult = await conn.send(`
+            SELECT CAST(expiration as STRING) as dt, symbol, strikes
+            FROM 'strikes.parquet'
+            WHERE symbol = '${symbol}'
+            ORDER BY 1
+        `);
+    const symbolExpirations = arrowResult.readAll().flatMap(k => k.toArray().map((row) => row.toJSON())) as {
+        dt: string, symbol: string, strikes: string
+    }[];
+
+    if (!symbolExpirations) return [];
+    const expirations = symbolExpirations.map(k => {
+        return {
+            expiration: k.dt,
+            strikes: JSON.parse(k.strikes)
+        }
+    })
+    //dup code. TODO: make it centralized
+    const monthlyExpiryMap = new Map<string, string>();
+    for (const { expiration } of expirations) {
+        const expirationDayjs = dayjs(expiration, 'YYYY-MM-DD', true);
+        if (expirationDayjs.date() >= 15 && expirationDayjs.date() <= 21 && getWeekOfMonth(expirationDayjs.date(), expirationDayjs.month(), expirationDayjs.year()) == 3) { //third week of the month
+            const k = `${expirationDayjs.year()}-${expirationDayjs.month()}`;
+            if (monthlyExpiryMap.get(k)! > expiration) continue;
+            monthlyExpiryMap.set(k, expiration);
+        }
+    }
+
+    const monthlyExpirations = new Set([...monthlyExpiryMap.values()]);
+    return expirations.map(k => ({ ...k, isMonthly: monthlyExpirations.has(k.expiration) }));
 }

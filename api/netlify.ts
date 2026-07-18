@@ -9,7 +9,6 @@ import {
   searchTicker,
   getSnapshotsAvailableForDate,
   getSnapshotsAvailableForSymbol,
-  getSymbolExpirations,
   allTickerSymbols,
 } from "../lib/data.ts";
 import {
@@ -26,6 +25,7 @@ import {
   getOIAnomalyDataFromParquet,
   getHistoricalDataForOptionContractFromParquet,
   getHistoricalOIDataBySymbolFromParquet,
+  getSymbolExpirations
 } from "../lib/historicalOptions.ts";
 import { getIndicatorValues } from "../lib/ta.ts";
 import {
