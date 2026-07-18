@@ -1,6 +1,6 @@
 
 // @deno-types="https://esm.sh/v135/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.d.ts"
-import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBBindings } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
+import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
 
 import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
     type: "json",
@@ -14,7 +14,7 @@ const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
 
 const initialize = async () => {
-    const { assetUrl, name, stockUrl, expirationsStrikesUrl } = optionsRollingSummary;
+    const { assetUrl, name, stockUrl, expirationsStrikesUrl, openInterestAnomalyUrl } = optionsRollingSummary;
     //HTTP paths are not supported due to xhr not available in deno.
     //db.registerFileURL('db.parquet', assetUrl, DuckDBDataProtocol.HTTP, false);
 
@@ -31,49 +31,27 @@ const initialize = async () => {
     }
 
     await Promise.allSettled([
-        registerTable('db.parquet', assetUrl), 
-        registerTable('stocks.parquet', stockUrl), 
-        registerTable('strikes.parquet', expirationsStrikesUrl)
+        registerTable('db.parquet', assetUrl),
+        registerTable('stocks.parquet', stockUrl),
+        registerTable('strikes.parquet', expirationsStrikesUrl),
+        registerTable('oianomaly.parquet', openInterestAnomalyUrl)
     ]);
     return db;
 }
 
-const initializeOIAnomalyDb = async () => {
-    const { name, openInterestAnomalyUrl } = optionsRollingSummary;
-
-    console.log(`initializing anomaly duckdb with ${openInterestAnomalyUrl} and name: ${name}`);
-    const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
-    await db.instantiate(() => { });
-    const oiAnomalyDataBuffer = await fetch(openInterestAnomalyUrl)    //let's initialize the data set in memory
-        .then(r => r.arrayBuffer());
-    db.registerFileBuffer('oianomaly.parquet', new Uint8Array(oiAnomalyDataBuffer));
-    return db;
-}
-
-let dbPromise: Promise<DuckDBBindings> | null;
-let anomalyDbPromise: Promise<DuckDBBindings> | null;
+let dbConn: DuckDBConnection | null = null;
 
 export const getConnection = async () => {
     try {
-        if (dbPromise == null) dbPromise = initialize();
-        const dbPromiseVal = await dbPromise;
-        return dbPromiseVal.connect();
+        if (!dbConn) {
+            const dbPromise = await initialize();
+            dbConn = dbPromise.connect();
+        }
+        return dbConn;
     } catch (error) {
         console.error("Error initializing DuckDB:", error);
-        dbPromise = null; //reset the promise if there is an error
+        dbConn = null; //reset the promise if there is an error
         throw new Error('error initializing DuckDB. Check the logs to see details about the error'); //rethrow the error to be handled by the caller        
-    }
-}
-
-export const getOIAnomalyConnection = async () => {
-    try {
-        if (anomalyDbPromise == null) anomalyDbPromise = initializeOIAnomalyDb();
-        const dbPromiseVal = await anomalyDbPromise;
-        return dbPromiseVal.connect();
-    } catch (error) {
-        console.error("Error initializing OI Anomaly DB:", error);
-        anomalyDbPromise = null; //reset the promise if there is an error
-        throw new Error('error initializing OI Anomaly DB. Check the logs to see details about the error'); //rethrow the error to be handled by the caller
     }
 }
 
@@ -184,7 +162,7 @@ export const getHistoricalExposureWallsFromParquet = async (dt: string | undefin
 }
 
 export const getOIAnomalyDataFromParquet = async (dt: string[], dteFrom: number | undefined, dteTo: number | undefined, symbols: string[]) => {
-    const conn = await getOIAnomalyConnection();
+    const conn = await getConnection();
     // const dtFilterExpression = (dt && dt.length>0) ? `AND dt IN ('${dt.map(k=> k).join(',')}'` : '';
     const dteFromFilterExpression = dteFrom ? `AND dte >= ${dteFrom}` : '';
     const dteToFilterExpression = dteTo ? `AND dte <= ${dteTo}` : '';
