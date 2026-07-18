@@ -1,7 +1,8 @@
 import { Hono } from "https://esm.sh/hono@4.12";
 import { handle } from "https://esm.sh/hono@4.12/netlify";
-
-import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
+//import { DuckDBInstance } from 'npm:@duckdb/node-bindings';
+// @deno-types="https://esm.sh/v135/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.d.ts"
+import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBBindings } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
 const instanceId = crypto.randomUUID();
 
 // Start a Hono app
@@ -25,13 +26,16 @@ app.onError((err, c) => {
     );
 });
 
-
-const duckDbInstance = await DuckDBInstance.create(":memory:");
+const logger = new ConsoleLogger();
+const JSDELIVR_BUNDLES = getJsDelivrBundles();
 
 const execute = async ()=> {
-    const connection = await duckDbInstance.connect();
-    const result = await connection.runAndReadAll(`SELECT 1 AS c1`);
-    return result;
+    const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
+    await db.instantiate(() => { });
+    
+    const connection = db.connect();
+    const result = await connection.send(`SELECT 1 AS c1`);
+    return result.readAll().flatMap(k => k.toArray().map((row) => row.toJSON()));
 }
 
 app.get('/', async c=> {
