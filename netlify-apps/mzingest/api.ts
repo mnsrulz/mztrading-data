@@ -4,7 +4,7 @@ import { cors } from "https://esm.sh/hono@4.12.27/cors";
 import { handle, getConnInfo } from "https://esm.sh/hono@4.12.27/netlify";
 import { HTTPException } from "https://esm.sh/hono@4.12.27/http-exception";
 import Pusher from 'https://esm.sh/pusher@5.3.3';
-import { createClient } from "npm:redis@^4.5";  //esm.sh doesn't work here...
+import { Redis } from 'https://esm.sh/@upstash/redis@1.38.0'
 import delay from "https://esm.sh/delay@7.0.0";
 const instanceId = crypto.randomUUID();
 
@@ -13,9 +13,8 @@ const pusherConfig = {
     pusherAppKey: Deno.env.get("PUSHER_APP_KEY"),
     channelName: Deno.env.get("PUSHER_CHANNEL_NAME") || "mztrading-channel",
 }
-const redisSubscriber = createClient({
-    url: Deno.env.get('REDIS_URI'),
-});
+
+const redis = Redis.fromEnv();
 const resultStore = getStore({
     name: "request-results",
     consistency: "strong" // Ensures immediate read availability
@@ -48,11 +47,7 @@ app.post('/api/requests', async c => {
 
     const info = getConnInfo(c)
     const clientId = info.remote.address;
-    const redisPublisher = redisSubscriber.duplicate();
-    await redisPublisher.connect();
-    await redisPublisher.publish("worker-request", JSON.stringify({ channel: `channel-${instanceId}`, ...args, clientId }));
-    redisPublisher.quit();
-
+    await redis.publish("worker-request", JSON.stringify({ channel: `channel-${instanceId}`, ...args, clientId }));
     const data = await waitForResult(args.requestId);
     clearTimeout(tmr);
     return c.json(data);
