@@ -10,7 +10,6 @@ const instanceId = crypto.randomUUID();
 
 const pusherConfig = {
     pusherUri: Deno.env.get("PUSHER_URI"),
-    pusherAppKey: Deno.env.get("PUSHER_APP_KEY"),
     channelName: Deno.env.get("PUSHER_CHANNEL_NAME") || "mztrading-channel",
 }
 
