@@ -588,7 +588,7 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
     const publishToMzIngest = async () => {
         await mzingestClient.put(`requests/${requestId}/result`, {
             json: payload
-        }).then(d => console.log(`Response received: ${JSON.stringify(d)}`))
+        }).json().then(d => console.log(`Response received: ${JSON.stringify(d)}`))
     }
 
     await Promise.all([
