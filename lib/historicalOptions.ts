@@ -24,7 +24,7 @@ const initialize = async () => {
     await db.instantiate(() => { });
 
     // 1. Detect if we are running inside Netlify
-    const isNetlify = !!(Deno.env.get("NETLIFY") || Deno.env.get("NETLIFY_BLOBS_CONTEXT"));
+    const isNetlify = !!globalThis.netlifyBlobsContext;
 
     const fetchStandardUrl = async (url: string, tableName: string): Promise<ArrayBuffer> => {
         const response = await fetch(url);
