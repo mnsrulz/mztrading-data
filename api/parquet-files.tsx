@@ -10,7 +10,7 @@ const optionsSummary: OptionsSummary[] = CboeOptionsRawSummary;
 
 const app = new Hono();
 
-// --- Components (Kept identical to your original source) ---
+// --- Components ---
 const Html = ({ children }: { children: preact.ComponentChildren }) => (
   <html lang="en">
     <head>
@@ -49,14 +49,16 @@ const App = ({ options, prefix }: { options: OptionsSummary[]; prefix: string })
   </div>
 );
 
-const FilePage = ({ title, fileName }: { title: string, fileName: string }) => (
+// Changed to accept a direct link URL alongside the friendly display name
+const FilePage = ({ title, fileUrl, displayName }: { title: string, fileUrl: string, displayName: string }) => (
   <div>
     <h1>{title}</h1>
     <ul>
       <li><a href="../">...</a></li>
       <li>
-        <a href={fileName} target="_blank">
-          {fileName}
+        {/* The href now links directly to the remote parquet host */}
+        <a href={fileUrl} target="_blank">
+          {displayName}
         </a>
       </li>
     </ul>
@@ -75,19 +77,35 @@ optionsSummary.forEach((match) => {
   // 1. Files detail page
   app.get(`/files/dt=${match.dt}/`, (c) => {
     const fileName = new URL(match.optionsAssetUrl).pathname.split("/").pop() || '';
-    return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Options Data for ${match.dt}`} fileName={fileName} /></Html>));
+    return c.html("<!DOCTYPE html>" + renderToString(
+      <Html>
+        <FilePage 
+          title={`Options Data for ${match.dt}`} 
+          fileUrl={match.optionsAssetUrl} // Direct absolute URL
+          displayName={fileName} 
+        />
+      </Html>
+    ));
   });
 
   // 2. OHLC detail page
   if (match.stocksAssetUrl) {
     app.get(`/ohlc/dt=${match.dt}/`, (c) => {
       const fileName = new URL(match.stocksAssetUrl).pathname.split("/").pop() || '';
-      return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Ohlc Data for ${match.dt}`} fileName={fileName} /></Html>));
+      return c.html("<!DOCTYPE html>" + renderToString(
+        <Html>
+          <FilePage 
+            title={`Ohlc Data for ${match.dt}`} 
+            fileUrl={match.stocksAssetUrl} // Direct absolute URL
+            displayName={fileName} 
+          />
+        </Html>
+      ));
     });
   }
 });
 
-// --- Handle compilation and Native Redirection Matrix ---
+// --- Handle compilation ---
 if (import.meta.main) {
   // Generate static site files to 'dist' folder
   const res = await toSSG(app, fs, { dir: "dist" });
@@ -96,25 +114,5 @@ if (import.meta.main) {
     Deno.exit(1);
   }
 
-  // Generate native Netlify _redirects file for file requests and trailing slashes
-  let redirectsContent = `# Trailing slash corrections\n`;
-  redirectsContent += `/files    /files/    301\n`;
-  redirectsContent += `/ohlc     /ohlc/     301\n\n`;
-  
-  redirectsContent += `# Parquet Proxy File Redirects\n`;
-  optionsSummary.forEach((match) => {
-    // Correctly routes trailing slash issues
-    redirectsContent += `/files/dt=${match.dt}    /files/dt=${match.dt}/    301\n`;
-    // Uses Netlify's correct splat operator (*) instead of /*.parquet
-    redirectsContent += `/files/dt=${match.dt}/*    ${match.optionsAssetUrl}    302\n`;
-    
-    if (match.stocksAssetUrl) {
-      redirectsContent += `/ohlc/dt=${match.dt}    /ohlc/dt=${match.dt}/    301\n`;
-      // Uses Netlify's correct splat operator (*) instead of /*.parquet
-      redirectsContent += `/ohlc/dt=${match.dt}/*    ${match.stocksAssetUrl}    302\n`;
-    }
-  });
-
-  await Deno.writeTextFile("dist/_redirects", redirectsContent);
-  console.log("Static Generation & Native Redirect map output complete!");
+  console.log("Static Generation complete! No redirect mapping required.");
 }
