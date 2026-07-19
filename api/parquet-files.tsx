@@ -103,12 +103,15 @@ if (import.meta.main) {
   
   redirectsContent += `# Parquet Proxy File Redirects\n`;
   optionsSummary.forEach((match) => {
+    // Correctly routes trailing slash issues
     redirectsContent += `/files/dt=${match.dt}    /files/dt=${match.dt}/    301\n`;
-    redirectsContent += `/files/dt=${match.dt}/*.parquet    ${match.optionsAssetUrl}    302\n`;
+    // Uses Netlify's correct splat operator (*) instead of /*.parquet
+    redirectsContent += `/files/dt=${match.dt}/*    ${match.optionsAssetUrl}    302\n`;
     
     if (match.stocksAssetUrl) {
       redirectsContent += `/ohlc/dt=${match.dt}    /ohlc/dt=${match.dt}/    301\n`;
-      redirectsContent += `/ohlc/dt=${match.dt}/*.parquet    ${match.stocksAssetUrl}    302\n`;
+      // Uses Netlify's correct splat operator (*) instead of /*.parquet
+      redirectsContent += `/ohlc/dt=${match.dt}/*    ${match.stocksAssetUrl}    302\n`;
     }
   });
 
