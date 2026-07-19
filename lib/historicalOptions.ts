@@ -78,6 +78,7 @@ let dbPromise: Promise<DuckDBBindings> | null = null;
 
 export const getConnection = async () => {
     try {
+        if (dbConn) return dbConn;
         if (!dbPromise) {
             dbPromise =  initialize();
         }
