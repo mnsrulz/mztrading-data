@@ -35,23 +35,34 @@ const initialize = async () => {
     };
 
     const registerTable = async (tableName: string, dataUrl: string) => {
-        console.log(`Fetching ${tableName} data from ${dataUrl}...`);
         const start = performance.now();
         let buffer: ArrayBuffer;
+
         if (isNetlify) {
             console.log(`[Netlify Mode] Fetching ${tableName} from Netlify Blobs...`);
             try {
-                // Assumes you have a store named 'parquet-cache'
-                // and keys match the fileName (e.g., 'db.parquet')
-                const store = getStore(`parquet-cache`); 
+                const store = getStore("parquet-cache");
+                // Using dataUrl as the key as you specified in your snippet
                 const blob = await store.get(dataUrl, { type: "arrayBuffer" });
-                
+
                 if (!blob) {
-                    throw new Error(`Blob ${tableName} with url: "${dataUrl}" not found in store`);
+                    console.log(`🧡 Cache Miss! "${tableName}" not found in blob store. Downloading and seeding...`);
+                    // 1. Download via standard HTTP
+                    buffer = await fetchStandardUrl(dataUrl, tableName);
+
+                    // 2. Async save it into Netlify Blobs so it's there for the next request
+                    // We use a background promise so we don't block the current DuckDB initialization
+                    store.set(dataUrl, buffer).then(() => {
+                        console.log(`💾 Successfully seeded "${tableName}" into Netlify Blobs.`);
+                    }).catch(err => {
+                        console.error(`❌ Failed to save "${tableName}" to Netlify Blobs:`, err);
+                    });
+                } else {
+                    console.log(`🚀 Cache Hit! Loaded "${tableName}" instantly from Netlify Blobs.`);
+                    buffer = blob;
                 }
-                buffer = blob;
             } catch (blobError) {
-                console.warn(`⚠️ Netlify Blob fetch failed for ${tableName}, falling back to network HTTP...`, blobError);
+                console.warn(`⚠️ Netlify Blob system error for ${tableName}, falling back to network HTTP...`, blobError);
                 buffer = await fetchStandardUrl(dataUrl, tableName);
             }
         } else {
@@ -80,7 +91,7 @@ export const getConnection = async () => {
     try {
         if (dbConn) return dbConn;
         if (!dbPromise) {
-            dbPromise =  initialize();
+            dbPromise = initialize();
         }
         const db = await dbPromise;
         dbConn = dbConn || db.connect();
