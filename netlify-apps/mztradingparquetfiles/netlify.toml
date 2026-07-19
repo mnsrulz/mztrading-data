@@ -1,5 +1,5 @@
 [build]
   base = "netlify-apps/mztradingparquetfiles"
-  publish = "public"
-  command = "mkdir -p public && deno bundle api.ts --minify -o netlify/edge-functions/api.js"
+  publish = "dist"
+  command = "deno run --allow-all ../../api/parquet-files.tsx"
   ignore = "false"

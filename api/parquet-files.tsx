@@ -1,15 +1,16 @@
 /** @jsxImportSource https://esm.sh/preact */
+import { Hono } from "https://esm.sh/hono@4.12.27";
+import { toSSG } from "https://esm.sh/hono@4.12.27/ssg";
 import { renderToString } from "npm:preact-render-to-string@^6.5.13";
-import { Hono } from "https://esm.sh/hono@4.12";
-import { handle } from "https://esm.sh/hono@4.12/netlify";
 import { CboeOptionsRawSummary } from "../lib/data.ts";
+import fs from "node:fs/promises";
 
 type OptionsSummary = { name: string; optionsAssetUrl: string; dt: string, stocksAssetUrl: string };
-
-const app = new Hono();
 const optionsSummary: OptionsSummary[] = CboeOptionsRawSummary;
 
-// --- Layout wrapper ---
+const app = new Hono();
+
+// --- Components (Kept identical to your original source) ---
 const Html = ({ children }: { children: preact.ComponentChildren }) => (
   <html lang="en">
     <head>
@@ -26,21 +27,20 @@ const Home = () => (
   <div>
     <h1>Home</h1>
     <ul>
-      <li key="ohlc"><a href="ohlc">ohlc</a></li>
-      <li key="files"><a href="files">files</a></li>
+      <li><a href="/ohlc/">ohlc</a></li>
+      <li><a href="/files/">files</a></li>
     </ul>
   </div>
-)
+);
 
-// --- Pages ---
-const App = ({ options }: { options: OptionsSummary[] }) => (
+const App = ({ options, prefix }: { options: OptionsSummary[]; prefix: string }) => (
   <div>
     <h1>Options Data</h1>
     <ul>
-      <li><a href="../">...</a></li>
+      <li><a href="/">...</a></li>
       {options.map((item) => (
         <li key={item.dt}>
-          <a href={`dt=${item.dt}/`} target="_blank">
+          <a href={`/${prefix}/dt=${item.dt}/`}>
             dt={item.dt}
           </a>
         </li>
@@ -63,121 +63,58 @@ const FilePage = ({ title, fileName }: { title: string, fileName: string }) => (
   </div>
 );
 
-// --- Middlewares ---
-app.use(async (c, next) => {
-  console.log(`request received: ${c.req.method} ${c.req.path}`);
-  await next();
-});
+// --- Static HTML Routes ---
+app.get("/", (c) => c.html("<!DOCTYPE html>" + renderToString(<Html><Home /></Html>)));
 
-// --- API routes ---
-app.get("/", (c) => {
-  const html =
-    "<!DOCTYPE html>" + renderToString(<Html><Home /></Html>);
-  return c.html(html);
-})
+app.get("/files/", (c) => c.html("<!DOCTYPE html>" + renderToString(<Html><App options={optionsSummary} prefix="files" /></Html>)));
 
-// --- HTML routes ---
-app.get("/files", (c) => c.redirect("/files/"));
+app.get("/ohlc/", (c) => c.html("<!DOCTYPE html>" + renderToString(<Html><App options={optionsSummary.filter(k => k.stocksAssetUrl)} prefix="ohlc" /></Html>)));
 
-app.get("/files/", (c) => {
-  const html =
-    "<!DOCTYPE html>" + renderToString(<Html><App options={optionsSummary} /></Html>);
-  return c.html(html);
-});
-
-app.get("/files/:dt/*.parquet", async (c) => {
-  const dtParam = c.req.param("dt");
-  const dtMatch = dtParam.match(/dt=(\d{4}-\d{2}-\d{2})/);
-  if (!dtMatch) return c.text("Not found", 404);
-
-  const dt = dtMatch[1];
-  const match = optionsSummary.find((k) => k.dt === dt);
-
-  if (match) {
-    if (c.req.method === "HEAD") {
-      return await fetch(match.optionsAssetUrl, {
-        method: "HEAD"
-      });
-    }
-    return c.redirect(match.optionsAssetUrl);
-  } else {
-    return c.text("Custom 404 Message", 404);
-  }
-});
-
-app.get("/files/:dt", (c) => c.redirect(`${c.req.path}/`));
-
-app.get("/files/:dt/", (c) => {
-  const dtParam = c.req.param("dt");
-  const dtMatch = dtParam.match(/dt=(\d{4}-\d{2}-\d{2})/);
-  if (!dtMatch) return c.text("Not found", 404);
-
-  const dt = dtMatch[1];
-  const match = optionsSummary.find((k) => k.dt === dt);
-
-  if (match) {
+// Dynamic HTML Routes generated strictly per existing data item
+optionsSummary.forEach((match) => {
+  // 1. Files detail page
+  app.get(`/files/dt=${match.dt}/`, (c) => {
     const fileName = new URL(match.optionsAssetUrl).pathname.split("/").pop() || '';
-    const html =
-      "<!DOCTYPE html>" +
-      renderToString(<Html><FilePage title={`Options Data for ${dt}`} fileName={fileName} /></Html>);
-    return c.html(html);
+    return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Options Data for ${match.dt}`} fileName={fileName} /></Html>));
+  });
+
+  // 2. OHLC detail page
+  if (match.stocksAssetUrl) {
+    app.get(`/ohlc/dt=${match.dt}/`, (c) => {
+      const fileName = new URL(match.stocksAssetUrl).pathname.split("/").pop() || '';
+      return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Ohlc Data for ${match.dt}`} fileName={fileName} /></Html>));
+    });
+  }
+});
+
+// --- Handle compilation and Native Redirection Matrix ---
+if (import.meta.main) {
+  // Generate static site files to 'dist' folder
+  const res = await toSSG(app, fs, { dir: "dist" });
+  if (!res.success) {
+    console.error("SSG Build Failed", res.error);
+    Deno.exit(1);
   }
 
-  const notFoundHtml = "<!DOCTYPE html>" + renderToString(<Html><body>Not found</body></Html>);
-  return c.html(notFoundHtml, 404);
-});
-
-// --- HTML routes ---
-app.get("/ohlc", (c) => c.redirect("/ohlc/"));
-
-app.get("/ohlc/", (c) => {
-  const html =
-    "<!DOCTYPE html>" + renderToString(<Html><App options={optionsSummary.filter(k => k.stocksAssetUrl)} /></Html>);
-  return c.html(html);
-});
-
-app.get("/ohlc/:dt/*.parquet", async (c) => {
-  const dtParam = c.req.param("dt");
-  const dtMatch = dtParam.match(/dt=(\d{4}-\d{2}-\d{2})/);
-  if (!dtMatch) return c.text("Not found", 404);
-
-  const dt = dtMatch[1];
-  const match = optionsSummary.find((k) => k.dt === dt);
-
-  if (match && match.stocksAssetUrl) {
-    if (c.req.method === "HEAD") {
-      return await fetch(match.stocksAssetUrl, {
-        method: "HEAD"
-      });
+  // Generate native Netlify _redirects file for file requests and trailing slashes
+  let redirectsContent = `# Trailing slash corrections\n`;
+  redirectsContent += `/files    /files/    301\n`;
+  redirectsContent += `/ohlc     /ohlc/     301\n\n`;
+  
+  redirectsContent += `# Parquet Proxy File Redirects\n`;
+  optionsSummary.forEach((match) => {
+    // Correctly routes trailing slash issues
+    redirectsContent += `/files/dt=${match.dt}    /files/dt=${match.dt}/    301\n`;
+    // Uses Netlify's correct splat operator (*) instead of /*.parquet
+    redirectsContent += `/files/dt=${match.dt}/*    ${match.optionsAssetUrl}    302\n`;
+    
+    if (match.stocksAssetUrl) {
+      redirectsContent += `/ohlc/dt=${match.dt}    /ohlc/dt=${match.dt}/    301\n`;
+      // Uses Netlify's correct splat operator (*) instead of /*.parquet
+      redirectsContent += `/ohlc/dt=${match.dt}/*    ${match.stocksAssetUrl}    302\n`;
     }
-    return c.redirect(match.stocksAssetUrl);
-  } else {
-    return c.text("Custom 404 Message", 404);
-  }
-});
+  });
 
-app.get("/ohlc/:dt", (c) => c.redirect(`${c.req.path}/`));
-
-app.get("/ohlc/:dt/", (c) => {
-  const dtParam = c.req.param("dt");
-  const dtMatch = dtParam.match(/dt=(\d{4}-\d{2}-\d{2})/);
-  if (!dtMatch) return c.text("Not found", 404);
-
-  const dt = dtMatch[1];
-  const match = optionsSummary.find((k) => k.dt === dt);
-
-  if (match) {
-    const html =
-      "<!DOCTYPE html>" +
-      renderToString(<Html><FilePage title={`Ohlc Data for ${dt}`} fileName={new URL(match.stocksAssetUrl).pathname.split("/").pop() || ''} /></Html>);
-    return c.html(html);
-  }
-
-  const notFoundHtml = "<!DOCTYPE html>" + renderToString(<Html><body>Not found</body></Html>);
-  return c.html(notFoundHtml, 404);
-});
-
-export default handle(app);
-export {
-  app
+  await Deno.writeTextFile("dist/_redirects", redirectsContent);
+  console.log("Static Generation & Native Redirect map output complete!");
 }
