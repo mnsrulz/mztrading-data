@@ -1,6 +1,7 @@
 /** @jsxImportSource https://esm.sh/preact */
 import { renderToString } from "npm:preact-render-to-string@^6.5.13";
-import { Hono } from "https://esm.sh/hono@4.9.8";
+import { Hono } from "https://esm.sh/hono@4.12";
+import { handle } from "https://esm.sh/hono@4.12/netlify";
 import { CboeOptionsRawSummary } from "../lib/data.ts";
 
 type OptionsSummary = { name: string; optionsAssetUrl: string; dt: string, stocksAssetUrl: string };
@@ -176,5 +177,7 @@ app.get("/ohlc/:dt/", (c) => {
   return c.html(notFoundHtml, 404);
 });
 
-// --- Start server ---
-Deno.serve(app.fetch);
+export default handle(app);
+export {
+  app
+}

@@ -36,4 +36,4 @@ jobs:
         run: |
           deployctl deploy --prod \
             --project=mztrading-parquetfiles \
-            --entrypoint=api/parquet-files.tsx
+            --entrypoint=main-parquetfiles.ts

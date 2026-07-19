@@ -1,6 +1,6 @@
 
 // @deno-types="https://esm.sh/v135/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.d.ts"
-import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBBindings } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
+import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
 
 import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
     type: "json",
@@ -14,9 +14,7 @@ const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
 
 const initialize = async () => {
-    const { assetUrl, name, stockUrl } = optionsRollingSummary;
-    // const ds = 'https://github.com/mnsrulz/mztrading-data/releases/download/archives/output_test_all.parquet';
-
+    const { assetUrl, name, stockUrl, expirationsStrikesUrl, openInterestAnomalyUrl } = optionsRollingSummary;
     //HTTP paths are not supported due to xhr not available in deno.
     //db.registerFileURL('db.parquet', assetUrl, DuckDBDataProtocol.HTTP, false);
 
@@ -24,61 +22,36 @@ const initialize = async () => {
     const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
     await db.instantiate(() => { });
 
-    // Fetch options data
-    console.log(`Fetching options data from ${assetUrl}...`);
-    const optionsStart = performance.now();
-    const optionsDataBuffer = await fetch(assetUrl).then(r => r.arrayBuffer());
-    const optionsEnd = performance.now();
-    console.log(`✅ Options data fetched in ${(optionsEnd - optionsStart).toFixed(2)} ms`);
+    const registerTable = async (tableName: string, dataUrl: string) => {
+        console.log(`Fetching ${tableName} data from ${dataUrl}...`);
+        const start = performance.now();
+        await fetch(dataUrl).then(r => r.arrayBuffer()).then(d => db.registerFileBuffer(tableName, new Uint8Array(d)));
+        const end = performance.now();
+        console.log(`✅ ${tableName} fetched in ${(end - start).toFixed(2)} ms`);
+    }
 
-    // Fetch stocks data
-    console.log(`Fetching stocks data from ${stockUrl}...`);
-    const stocksStart = performance.now();
-    const stocksDataBuffer = await fetch(stockUrl).then(r => r.arrayBuffer());
-    const stocksEnd = performance.now();
-    console.log(`✅ Stocks data fetched in ${(stocksEnd - stocksStart).toFixed(2)} ms`);
-
-    db.registerFileBuffer('db.parquet', new Uint8Array(optionsDataBuffer));
-    db.registerFileBuffer('stocks.parquet', new Uint8Array(stocksDataBuffer));
+    await Promise.allSettled([
+        registerTable('db.parquet', assetUrl),
+        registerTable('stocks.parquet', stockUrl),
+        registerTable('strikes.parquet', expirationsStrikesUrl),
+        registerTable('oianomaly.parquet', openInterestAnomalyUrl)
+    ]);
     return db;
 }
 
-const initializeOIAnomalyDb = async () => {
-    const { name, openInterestAnomalyUrl } = optionsRollingSummary;
-
-    console.log(`initializing anomaly duckdb with ${openInterestAnomalyUrl} and name: ${name}`);
-    const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
-    await db.instantiate(() => { });
-    const oiAnomalyDataBuffer = await fetch(openInterestAnomalyUrl)    //let's initialize the data set in memory
-        .then(r => r.arrayBuffer());
-    db.registerFileBuffer('oianomaly.parquet', new Uint8Array(oiAnomalyDataBuffer));
-    return db;
-}
-
-let dbPromise: Promise<DuckDBBindings> | null;
-let anomalyDbPromise: Promise<DuckDBBindings> | null;
+let dbConn: DuckDBConnection | null = null;
 
 export const getConnection = async () => {
     try {
-        if (dbPromise == null) dbPromise = initialize();
-        const dbPromiseVal = await dbPromise;
-        return dbPromiseVal.connect();
+        if (!dbConn) {
+            const dbPromise = await initialize();
+            dbConn = dbPromise.connect();
+        }
+        return dbConn;
     } catch (error) {
         console.error("Error initializing DuckDB:", error);
-        dbPromise = null; //reset the promise if there is an error
+        dbConn = null; //reset the promise if there is an error
         throw new Error('error initializing DuckDB. Check the logs to see details about the error'); //rethrow the error to be handled by the caller        
-    }
-}
-
-export const getOIAnomalyConnection = async () => {
-    try {
-        if (anomalyDbPromise == null) anomalyDbPromise = initializeOIAnomalyDb();
-        const dbPromiseVal = await anomalyDbPromise;
-        return dbPromiseVal.connect();
-    } catch (error) {
-        console.error("Error initializing OI Anomaly DB:", error);
-        anomalyDbPromise = null; //reset the promise if there is an error
-        throw new Error('error initializing OI Anomaly DB. Check the logs to see details about the error'); //rethrow the error to be handled by the caller
     }
 }
 
@@ -189,7 +162,7 @@ export const getHistoricalExposureWallsFromParquet = async (dt: string | undefin
 }
 
 export const getOIAnomalyDataFromParquet = async (dt: string[], dteFrom: number | undefined, dteTo: number | undefined, symbols: string[]) => {
-    const conn = await getOIAnomalyConnection();
+    const conn = await getConnection();
     // const dtFilterExpression = (dt && dt.length>0) ? `AND dt IN ('${dt.map(k=> k).join(',')}'` : '';
     const dteFromFilterExpression = dteFrom ? `AND dte >= ${dteFrom}` : '';
     const dteToFilterExpression = dteTo ? `AND dte <= ${dteTo}` : '';
@@ -379,20 +352,20 @@ export const calculateExpsoure = (spotPrice: number, indexedObject: Record<strin
         const netGammaData = new Array<number>(strikes.length).fill(0);
 
         for (let ix = 0; ix < strikes.length; ix++) {
-            callOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.map(k=> k.oi || 0).reduce((a, b) => a + b, 0)) || 0;
-            putOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.put?.map(k=> k.oi || 0).reduce((a, b) => a + b, 0)) || 0;
+            callOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.map(k => k.oi || 0).reduce((a, b) => a + b, 0)) || 0;
+            putOpenInterestData[ix] = (indexedObject[expiration][strikes[ix]]?.put?.map(k => k.oi || 0).reduce((a, b) => a + b, 0)) || 0;
 
-            callVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.map(k=> k.volume || 0).reduce((a, b) => a + b, 0)) || 0;
-            putVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.put?.map(k=> k.volume || 0).reduce((a, b) => a + b, 0)) || 0;
+            callVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.call?.map(k => k.volume || 0).reduce((a, b) => a + b, 0)) || 0;
+            putVolumeData[ix] = (indexedObject[expiration][strikes[ix]]?.put?.map(k => k.volume || 0).reduce((a, b) => a + b, 0)) || 0;
 
-            callDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.map(k=> (k.delta || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
-            putDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.map(k=> (k.delta || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
+            callDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.map(k => (k.delta || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
+            putDeltaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.map(k => (k.delta || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
 
-            callGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
-            putGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
+            callGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.call?.map(k => (k.gamma || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
+            putGammaData[ix] = Math.trunc((indexedObject[expiration][strikes[ix]]?.put?.map(k => (k.gamma || 0) * 100 * k.oi * spotPrice)).reduce((a, b) => a + b, 0)) || 0;
 
-            const callGamma = (indexedObject[expiration][strikes[ix]]?.call?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice).reduce((a, b) => a + b, 0)) || 0;
-            const putGamma = (indexedObject[expiration][strikes[ix]]?.put?.map(k=> (k.gamma || 0) * 100 * k.oi * spotPrice).reduce((a, b) => a + b, 0)) || 0;
+            const callGamma = (indexedObject[expiration][strikes[ix]]?.call?.map(k => (k.gamma || 0) * 100 * k.oi * spotPrice).reduce((a, b) => a + b, 0)) || 0;
+            const putGamma = (indexedObject[expiration][strikes[ix]]?.put?.map(k => (k.gamma || 0) * 100 * k.oi * spotPrice).reduce((a, b) => a + b, 0)) || 0;
             netGammaData[ix] = Math.trunc(callGamma - putGamma);
 
             const strikePrice = Number(strikes[ix])
@@ -501,4 +474,40 @@ export async function getLiveCboeOptionsPricingData(symbol: string) {
         return previous;
     }, {} as Record<string, MicroOptionPricingContract>);
     return { spotPrice: currentPrice, options, timestamp };
+}
+
+
+export async function getSymbolExpirations(symbol: string) {
+
+    const conn = await getConnection();
+    const arrowResult = await conn.send(`
+            SELECT expiration, symbol, strikes
+            FROM 'strikes.parquet'
+            WHERE symbol = '${symbol}'
+            ORDER BY 1
+        `);
+    const symbolExpirations = arrowResult.readAll().flatMap(k => k.toArray().map((row) => row.toJSON())) as {
+        expiration: string, symbol: string, strikes: string
+    }[];
+
+    if (!symbolExpirations) return [];
+    const expirations = symbolExpirations.map(k => {
+        return {
+            expiration: k.expiration,
+            strikes: JSON.parse(k.strikes) as number[]
+        }
+    })
+    //dup code. TODO: make it centralized
+    const monthlyExpiryMap = new Map<string, string>();
+    for (const { expiration } of expirations) {
+        const expirationDayjs = dayjs(expiration, 'YYYY-MM-DD', true);
+        if (expirationDayjs.date() >= 15 && expirationDayjs.date() <= 21 && getWeekOfMonth(expirationDayjs.date(), expirationDayjs.month(), expirationDayjs.year()) == 3) { //third week of the month
+            const k = `${expirationDayjs.year()}-${expirationDayjs.month()}`;
+            if (monthlyExpiryMap.get(k)! > expiration) continue;
+            monthlyExpiryMap.set(k, expiration);
+        }
+    }
+
+    const monthlyExpirations = new Set([...monthlyExpiryMap.values()]);
+    return expirations.map(k => ({ ...k, isMonthly: monthlyExpirations.has(k.expiration) }));
 }

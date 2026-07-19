@@ -1,0 +1,4 @@
+[build]
+  base = "netlify-apps/mztradingdata"
+  publish = "public"
+  command = "mkdir -p public && deno bundle api.ts --minify -o netlify/edge-functions/api.js"
