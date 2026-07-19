@@ -82,31 +82,53 @@ export const AvailableSnapshotDates = Object.values(OptionsSnapshotSummary).map(
 export const zipServiceUrl = 'https://zipservice-deno.deno.dev/download';//?f=AAOI_GEX_620.png&q=https://github.com/mnsrulz/mztrading-data/releases/download/DEX_GEX_SNAPSHOT_2025-07-08/options-snapshots.zip';
 const snapshotCdnUrl = 'https://mztradingsnapshotcdn.deno.dev/api/snapshots'; //?dt=2025-08-14&f=AAPL_DEX_620.png&symbol=AAPL'
 
+const getWorkerSnapshotUrl = (releaseName: string, fileName: string) => `https://nf-${releaseName.replaceAll('_', '-')}-mztradingcdn.mztrading.workers.dev/${fileName}`; // /POET_DEX_1240.png 
 const getFileName = (symbol: string, type: 'dex' | 'gex', resolution: string) => `${symbol.toUpperCase()}_${type.toUpperCase()}_${resolution}.png`;
 
 export const getSnapshotsAvailableForDate = (dt: string) => {
     const result = Object.values(OptionsSnapshotSummary).find(k => k.displayName == dt);
     const releaseName = Object.keys(OptionsSnapshotSummary).find(k => OptionsSnapshotSummary[k].displayName == dt);
 
-    if (result) {
-        //FLR_DEX_620.png
-        return result.tickers.map(k => {
-            const dexHdFileName = getFileName(k, 'dex', result.hdResolution);
-            const dexSdFileName = getFileName(k, 'dex', result.sdResolution);
-            const gexHdFileName = getFileName(k, 'gex', result.hdResolution);
-            const gexSdFileName = getFileName(k, 'gex', result.sdResolution);
-            return {
-                symbol: k,
-                dex: {
-                    hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexHdFileName}`,
-                    sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexSdFileName}`
-                },
-                gex: {
-                    hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexHdFileName}`,
-                    sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexSdFileName}`
-                },
-            }
-        });
+    if (result && releaseName) {
+        //all data_* release names are pushed to cloudflare for static hosting
+        if(releaseName.startsWith('DATA_')) {
+            return result.tickers.map(k => {
+                const dexHdFileName = getFileName(k, 'dex', result.hdResolution);
+                const dexSdFileName = getFileName(k, 'dex', result.sdResolution);
+                const gexHdFileName = getFileName(k, 'gex', result.hdResolution);
+                const gexSdFileName = getFileName(k, 'gex', result.sdResolution);
+                return {
+                    symbol: k,
+                    dex: {
+                        hdAssetUrl: getWorkerSnapshotUrl(releaseName, dexHdFileName),
+                        sdAssetUrl: getWorkerSnapshotUrl(releaseName, dexSdFileName)
+                    },
+                    gex: {
+                        hdAssetUrl: getWorkerSnapshotUrl(releaseName, gexHdFileName),
+                        sdAssetUrl: getWorkerSnapshotUrl(releaseName, gexSdFileName)
+                    },
+                }
+            });
+        } else {
+            //FLR_DEX_620.png
+            return result.tickers.map(k => {
+                const dexHdFileName = getFileName(k, 'dex', result.hdResolution);
+                const dexSdFileName = getFileName(k, 'dex', result.sdResolution);
+                const gexHdFileName = getFileName(k, 'gex', result.hdResolution);
+                const gexSdFileName = getFileName(k, 'gex', result.sdResolution);
+                return {
+                    symbol: k,
+                    dex: {
+                        hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexHdFileName}`,
+                        sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexSdFileName}`
+                    },
+                    gex: {
+                        hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexHdFileName}`,
+                        sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexSdFileName}`
+                    },
+                }
+            });
+        }
     }
     throw new Error('No data found for this date');
 }
