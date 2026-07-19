@@ -52,7 +52,7 @@ const initialize = async () => {
 
                     // 2. Async save it into Netlify Blobs so it's there for the next request
                     // We use a background promise so we don't block the current DuckDB initialization
-                    store.set(dataUrl, buffer).then(() => {
+                    await store.set(dataUrl, buffer).then(() => {
                         console.log(`💾 Successfully seeded "${tableName}" into Netlify Blobs.`);
                     }).catch(err => {
                         console.error(`❌ Failed to save "${tableName}" to Netlify Blobs:`, err);
