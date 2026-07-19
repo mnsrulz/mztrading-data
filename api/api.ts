@@ -246,3 +246,7 @@ app.get("/api/options/:symbol/report/greeks/expirations", async (c) => {
 
 export const config = { path: "/api/*" };
 export default handle(app);
+
+export {
+    app
+};

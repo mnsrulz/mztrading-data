@@ -481,20 +481,20 @@ export async function getSymbolExpirations(symbol: string) {
 
     const conn = await getConnection();
     const arrowResult = await conn.send(`
-            SELECT CAST(expiration as STRING) as dt, symbol, strikes
+            SELECT expiration, symbol, strikes
             FROM 'strikes.parquet'
             WHERE symbol = '${symbol}'
             ORDER BY 1
         `);
     const symbolExpirations = arrowResult.readAll().flatMap(k => k.toArray().map((row) => row.toJSON())) as {
-        dt: string, symbol: string, strikes: string
+        expiration: string, symbol: string, strikes: string
     }[];
 
     if (!symbolExpirations) return [];
     const expirations = symbolExpirations.map(k => {
         return {
-            expiration: k.dt,
-            strikes: JSON.parse(k.strikes)
+            expiration: k.expiration,
+            strikes: JSON.parse(k.strikes) as number[]
         }
     })
     //dup code. TODO: make it centralized
