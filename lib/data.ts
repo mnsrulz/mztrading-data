@@ -111,23 +111,24 @@ export const getSnapshotsAvailableForDate = (dt: string) => {
             });
         } else {
             //FLR_DEX_620.png
-            return result.tickers.map(k => {
-                const dexHdFileName = getFileName(k, 'dex', result.hdResolution);
-                const dexSdFileName = getFileName(k, 'dex', result.sdResolution);
-                const gexHdFileName = getFileName(k, 'gex', result.hdResolution);
-                const gexSdFileName = getFileName(k, 'gex', result.sdResolution);
-                return {
-                    symbol: k,
-                    dex: {
-                        hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexHdFileName}`,
-                        sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexSdFileName}`
-                    },
-                    gex: {
-                        hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexHdFileName}`,
-                        sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexSdFileName}`
-                    },
-                }
-            });
+            // return result.tickers.map(k => {
+            //     const dexHdFileName = getFileName(k, 'dex', result.hdResolution);
+            //     const dexSdFileName = getFileName(k, 'dex', result.sdResolution);
+            //     const gexHdFileName = getFileName(k, 'gex', result.hdResolution);
+            //     const gexSdFileName = getFileName(k, 'gex', result.sdResolution);
+            //     return {
+            //         symbol: k,
+            //         dex: {
+            //             hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexHdFileName}`,
+            //             sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${dexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${dexSdFileName}`
+            //         },
+            //         gex: {
+            //             hdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexHdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexHdFileName}`,
+            //             sdAssetUrl: result.zipAssetUrl ? `${snapshotCdnUrl}?f=${gexSdFileName}&dt=${dt}&symbol=${k}` : `${result.releasesBaseUrl}/download/${releaseName}/${gexSdFileName}`
+            //         },
+            //     }
+            // });
+            return []
         }
     }
     throw new Error('No data found for this date');
@@ -163,7 +164,7 @@ export const getZipAssetInfoByDate = (dt: string) => {
 export const getSnapshotsAvailableForSymbol = (symbol: string) => {
     const result = Object.keys(OptionsSnapshotSummary)
         .filter((j) =>
-            OptionsSnapshotSummary[j].tickers.includes(symbol)
+            OptionsSnapshotSummary[j].tickers.includes(symbol) && j.startsWith('DATA_')
         )
         .map((releaseName) => {
             const { zipAssetUrl, displayName: date, hdResolution, sdResolution, releasesBaseUrl } = OptionsSnapshotSummary[releaseName];
@@ -171,18 +172,29 @@ export const getSnapshotsAvailableForSymbol = (symbol: string) => {
             const dexSdFileName = getFileName(symbol, 'dex', sdResolution);
             const gexHdFileName = getFileName(symbol, 'gex', hdResolution);
             const gexSdFileName = getFileName(symbol, 'gex', sdResolution);
-
             return {
                 date,
                 dex: {
-                    hdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${dexHdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${dexHdFileName}`,
-                    sdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${dexSdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${dexSdFileName}`
+                    hdAssetUrl: getWorkerSnapshotUrl(releaseName, dexHdFileName),
+                    sdAssetUrl: getWorkerSnapshotUrl(releaseName, dexSdFileName)
                 },
                 gex: {
-                    hdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${gexHdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${gexHdFileName}`,
-                    sdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${gexSdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${gexSdFileName}`
+                    hdAssetUrl: getWorkerSnapshotUrl(releaseName, gexHdFileName),
+                    sdAssetUrl: getWorkerSnapshotUrl(releaseName, gexSdFileName)
                 },
             }
+
+            // return {
+            //     date,
+            //     dex: {
+            //         hdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${dexHdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${dexHdFileName}`,
+            //         sdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${dexSdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${dexSdFileName}`
+            //     },
+            //     gex: {
+            //         hdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${gexHdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${gexHdFileName}`,
+            //         sdAssetUrl: zipAssetUrl ? `${snapshotCdnUrl}?f=${gexSdFileName}&dt=${date}&symbol=${symbol}` : `${releasesBaseUrl}/download/${releaseName}/${gexSdFileName}`
+            //     },
+            // }
         });
     return result;
 }
