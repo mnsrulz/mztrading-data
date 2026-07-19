@@ -24,7 +24,7 @@ const initialize = async () => {
     await db.instantiate(() => { });
 
     // 1. Detect if we are running inside Netlify
-    const isNetlify = !!globalThis.netlifyBlobsContext;
+    const isNetlify = false; // !!globalThis.netlifyBlobsContext;   //disable netlify blob cache. Not worth it!
 
     const fetchStandardUrl = async (url: string, tableName: string): Promise<ArrayBuffer> => {
         const response = await fetch(url);
