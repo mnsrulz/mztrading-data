@@ -25,8 +25,17 @@ const app = new Hono();
 app.use('/api/*', cors());
 
 app.use("*", async (c, next) => {
-    c.header("x-server-instance-id", instanceId);
-    await next();
+    const start = performance.now();
+    const req = c.req.raw;
+    try {
+        c.header("x-server-instance-id", instanceId);
+        await next();
+    } finally {
+        const end = performance.now();
+        console.log(
+            `${req.method} ${new URL(req.url).pathname} ${req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || ""} ${(end - start).toFixed(2)} ms`,
+        );
+    }
 });
 
 app.post('/api/requests', async c => {
@@ -87,7 +96,10 @@ async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 500
             type: "json"
         })
 
-        if (data) return data;
+        if (data) {
+            resultStore.delete(id).catch(() => console.log(`error deleting blob: ${id}`));  //purge the blob as soon as we got the response.
+            return data;
+        }
         // Wait a short duration before trying again to prevent rate-limiting
         await delay(pollIntervalMs);
     }
