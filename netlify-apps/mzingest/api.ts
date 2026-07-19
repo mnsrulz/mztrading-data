@@ -15,10 +15,6 @@ const pusherConfig = {
 }
 
 const redis = Redis.fromEnv();
-const resultStore = getStore({
-    name: "request-results",
-    consistency: "strong" // Ensures immediate read availability
-});
 
 if (!pusherConfig.pusherUri) {
     throw new Error("PUSHER_URI is not set. Please set it in your environment variables to enable pusher functionality.");
@@ -59,6 +55,11 @@ app.put('/api/requests/:id/result', async (c) => {
     if (!body) throw new HTTPException(400, { message: "Invalid payload or empty data." });
 
     try {
+        const resultStore = getStore({
+            name: "request-results",
+            consistency: "strong" // Ensures immediate read availability
+        });
+
         await resultStore.setJSON(id, body);
         return c.json({ message: "Result safely stored in Netlify Blobs" });
     } catch (error) {
@@ -75,8 +76,13 @@ app.put('/api/requests/:id/result', async (c) => {
  */
 async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 500) {
     const startTime = Date.now();
+    const resultStore = getStore({
+        name: "request-results",
+        consistency: "strong" // Ensures immediate read availability
+    });
 
     while (Date.now() - startTime < timeoutMs) {
+
         // Attempt to fetch the data from Netlify Blobs
         const data = await resultStore.get(id, {
             type: "json"
