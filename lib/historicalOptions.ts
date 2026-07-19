@@ -7,6 +7,7 @@ import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
 };
 import { getPriceAtDate } from './historicalPrice.ts';
 import dayjs from "https://esm.sh/dayjs@1.11.13";
+import { getStore } from "https://esm.sh/@netlify/blobs@10.7.9";
 import { getOptionsChain } from './cboe.ts';
 import { getWeekOfMonth } from './utils.ts';
 
@@ -22,15 +23,46 @@ const initialize = async () => {
     const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
     await db.instantiate(() => { });
 
+    // 1. Detect if we are running inside Netlify
+    const isNetlify = !!(Deno.env.get("NETLIFY") || Deno.env.get("NETLIFY_BLOBS_CONTEXT"));
+
+    const fetchStandardUrl = async (url: string, tableName: string): Promise<ArrayBuffer> => {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to HTTP fetch ${tableName}: ${response.statusText}`);
+        }
+        return await response.arrayBuffer();
+    };
+
     const registerTable = async (tableName: string, dataUrl: string) => {
         console.log(`Fetching ${tableName} data from ${dataUrl}...`);
         const start = performance.now();
-        await fetch(dataUrl).then(r => r.arrayBuffer()).then(d => {
-            db.registerFileBuffer(tableName, new Uint8Array(d));
-            const end = performance.now();
-            console.log(`✅ ${tableName} fetched (${prettyBytes(d.byteLength)}) in ${(end - start).toFixed(2)} ms`);
-        });
-    }
+        let buffer: ArrayBuffer;
+        if (isNetlify) {
+            console.log(`[Netlify Mode] Fetching ${tableName} from Netlify Blobs...`);
+            try {
+                // Assumes you have a store named 'parquet-cache'
+                // and keys match the fileName (e.g., 'db.parquet')
+                const store = getStore(`parquet-cache`); 
+                const blob = await store.get(dataUrl, { type: "arrayBuffer" });
+                
+                if (!blob) {
+                    throw new Error(`Blob ${tableName} with url: "${dataUrl}" not found in store`);
+                }
+                buffer = blob;
+            } catch (blobError) {
+                console.warn(`⚠️ Netlify Blob fetch failed for ${tableName}, falling back to network HTTP...`, blobError);
+                buffer = await fetchStandardUrl(dataUrl, tableName);
+            }
+        } else {
+            console.log(`[Standard Mode] Fetching ${tableName} data via HTTP from ${dataUrl}...`);
+            buffer = await fetchStandardUrl(dataUrl, tableName);
+        }
+
+        db.registerFileBuffer(tableName, new Uint8Array(buffer));
+        const end = performance.now();
+        console.log(`✅ ${tableName} registered (${prettyBytes(buffer.byteLength)}) in ${(end - start).toFixed(2)} ms`);
+    };
 
     await Promise.all([
         registerTable('db.parquet', assetUrl),
