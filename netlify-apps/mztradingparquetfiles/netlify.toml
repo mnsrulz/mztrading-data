@@ -2,3 +2,4 @@
   base = "netlify-apps/mztradingparquetfiles"
   publish = "public"
   command = "mkdir -p public && deno bundle api.ts --minify -o netlify/edge-functions/api.js"
+  ignore = "false"
