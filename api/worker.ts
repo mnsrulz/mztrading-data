@@ -1,5 +1,5 @@
 import { Hono } from "https://esm.sh/hono@4.9.8";
-import { z } from "https://esm.sh/zod@4.3.6";
+import { promise, z } from "https://esm.sh/zod@4.3.6";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
 import pinologtail from "https://esm.sh/@logtail/pino@0.5.8";
@@ -9,6 +9,8 @@ import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
 import Emittery from 'https://esm.sh/emittery@2.0.0';
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import pRetry from 'https://esm.sh/p-retry@8.0.0';
+import ky from 'https://esm.sh/ky@1.8.2';
+
 
 const app = new Hono();
 const emitter = new Emittery();
@@ -24,6 +26,9 @@ const VALKEY_URI = Deno.env.get('VALKEY_URI');
 const LOGTAIL_TOKEN = Deno.env.get('LOGTAIL_TOKEN');
 const DEBUG_MODE = Deno.env.get('DEBUG_MODE') == '1';
 
+const mzingestClient = ky.create({
+    prefixUrl: Deno.env.get('MZINGEST_BASE_URI') || 'https://mzingest.netlify.app/api'
+});
 // 1. Initialize and connect your Redis client to your Valkey container
 const valkey = createClient({
     url: VALKEY_URI
@@ -579,7 +584,18 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
         redisPublisher.quit();
         logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
     }
-    await pRetry(publishInternal, { retries: 3 });
+
+    const publishToMzIngest = async () => {
+        await mzingestClient.put(`requests/${requestId}/result`, {
+            json: payload
+        }).then(d => console.log(`Response received: ${JSON.stringify(d)}`))
+    }
+
+    await Promise.all([
+        pRetry(publishInternal, { retries: 3 }),
+        pRetry(publishToMzIngest, { retries: 3 })
+    ])
+
 
     //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
@@ -864,7 +880,7 @@ logger.info(`Worker is running...`);
 //     requestId: crypto.randomUUID()
 // })
 
-app.get('/', 
+app.get('/',
     c => c.json({ "message": "hello" })
 ).get('/stats', async c => {
     const stats: Record<string, number> = {};
