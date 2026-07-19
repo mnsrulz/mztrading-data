@@ -1,7 +1,7 @@
 
 // @deno-types="https://esm.sh/v135/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.d.ts"
 import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
-
+import prettyBytes from 'https://esm.sh/pretty-bytes@7.1.0';
 import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
     type: "json",
 };
@@ -25,9 +25,11 @@ const initialize = async () => {
     const registerTable = async (tableName: string, dataUrl: string) => {
         console.log(`Fetching ${tableName} data from ${dataUrl}...`);
         const start = performance.now();
-        await fetch(dataUrl).then(r => r.arrayBuffer()).then(d => db.registerFileBuffer(tableName, new Uint8Array(d)));
-        const end = performance.now();
-        console.log(`✅ ${tableName} fetched in ${(end - start).toFixed(2)} ms`);
+        await fetch(dataUrl).then(r => r.arrayBuffer()).then(d => {
+            db.registerFileBuffer(tableName, new Uint8Array(d));
+            const end = performance.now();
+            console.log(`✅ ${tableName} fetched (${prettyBytes(d.byteLength)}) in ${(end - start).toFixed(2)} ms`);
+        });
     }
 
     await Promise.allSettled([
