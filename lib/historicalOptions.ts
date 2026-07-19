@@ -1,6 +1,6 @@
 
 // @deno-types="https://esm.sh/v135/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.d.ts"
-import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
+import { createDuckDB, getJsDelivrBundles, ConsoleLogger, DEFAULT_RUNTIME, DuckDBConnection, DuckDBBindings } from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-browser-blocking.mjs/+esm';
 import prettyBytes from 'https://esm.sh/pretty-bytes@7.1.0';
 import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
     type: "json",
@@ -32,7 +32,7 @@ const initialize = async () => {
         });
     }
 
-    await Promise.allSettled([
+    await Promise.all([
         registerTable('db.parquet', assetUrl),
         registerTable('stocks.parquet', stockUrl),
         registerTable('strikes.parquet', expirationsStrikesUrl),
@@ -42,17 +42,19 @@ const initialize = async () => {
 }
 
 let dbConn: DuckDBConnection | null = null;
+let dbPromise: Promise<DuckDBBindings> | null = null;
 
 export const getConnection = async () => {
     try {
-        if (!dbConn) {
-            const dbPromise = await initialize();
-            dbConn = dbPromise.connect();
+        if (!dbPromise) {
+            dbPromise =  initialize();
         }
+        const db = await dbPromise;
+        dbConn = dbConn || db.connect();
         return dbConn;
     } catch (error) {
         console.error("Error initializing DuckDB:", error);
-        dbConn = null; //reset the promise if there is an error
+        dbPromise = null; //reset the promise if there is an error
         throw new Error('error initializing DuckDB. Check the logs to see details about the error'); //rethrow the error to be handled by the caller        
     }
 }
