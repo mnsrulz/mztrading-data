@@ -78,7 +78,7 @@ const initialize = async () => {
     await Promise.all([
         registerTable('db.parquet', assetUrl),
         registerTable('stocks.parquet', stockUrl),
-        registerTable('strikes.parquet', expirationsStrikesUrl),
+        //registerTable('strikes.parquet', expirationsStrikesUrl),
         registerTable('oianomaly.parquet', openInterestAnomalyUrl)
     ]);
     return db;
