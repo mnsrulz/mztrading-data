@@ -3,3 +3,9 @@
   publish = "dist"
   command = "deno run --allow-all build.ts && deno bundle api.ts --minify -o netlify/edge-functions/api.js"
   ignore = "false"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, HEAD, OPTIONS"
