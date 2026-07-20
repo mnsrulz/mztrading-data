@@ -87749,5 +87749,6 @@
             "symbol": "NUE",
             "dt": "2026-07-20"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-07-20/options_cboe_oi_anomaly.parquet"
 }
