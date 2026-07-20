@@ -1224,10 +1224,6 @@
         "symbol": "ARBE"
     },
     {
-        "name": "ARGO BLOCKCHAIN PLC SPONSORED ADS",
-        "symbol": "ARBK"
-    },
-    {
         "name": "ARCBEST CORP COM",
         "symbol": "ARCB"
     },
@@ -5916,10 +5912,6 @@
         "symbol": "ELME"
     },
     {
-        "name": "COMPANHIA PARANAENSE DE ENERGI SPONSORED ADS",
-        "symbol": "ELPC"
-    },
-    {
         "name": "EQUITY LIFESTYLE PROPERTIES COM",
         "symbol": "ELS"
     },
@@ -8184,10 +8176,6 @@
         "symbol": "GOP"
     },
     {
-        "name": "GOLD RESOURCE CORP COM",
-        "symbol": "GORO"
-    },
-    {
         "name": "GOSSAMER BIO INC COM",
         "symbol": "GOSS"
     },
@@ -8404,7 +8392,7 @@
         "symbol": "GTE"
     },
     {
-        "name": "GATES INDL CORP PLC ORD SHS",
+        "name": "GATES INDUSTRIAL CORP LTD",
         "symbol": "GTES"
     },
     {
@@ -13476,10 +13464,6 @@
         "symbol": "ODTE"
     },
     {
-        "name": "OSISKO DEVELOPMENT CORP COM NEW",
-        "symbol": "ODV"
-    },
-    {
         "name": "ORION S.A. COM",
         "symbol": "OEC"
     },
@@ -13514,6 +13498,10 @@
     {
         "name": "OGE ENERGY CORP COM",
         "symbol": "OGE"
+    },
+    {
+        "name": "OSISKO GOLD GROUP INC",
+        "symbol": "OGG"
     },
     {
         "name": "ORGANIGRAM GLOBAL INC COM",
@@ -14776,10 +14764,6 @@
         "symbol": "PROP"
     },
     {
-        "name": "PROPHASE LABS INC COM SHS",
-        "symbol": "PRPH"
-    },
-    {
         "name": "PURPLE INNOVATION INC COM",
         "symbol": "PRPL"
     },
@@ -15674,10 +15658,6 @@
     {
         "name": "RIVIAN AUTOMOTIVE INC COM CL A",
         "symbol": "RIVN"
-    },
-    {
-        "name": "REPUBLIC AWYS HLDGS INC COM SHS",
-        "symbol": "RJET"
     },
     {
         "name": "RAYMOND JAMES FINL INC COM",
