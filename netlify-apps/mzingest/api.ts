@@ -65,7 +65,7 @@ app.put('/api/requests/:id/result', async (c) => {
     try {
         const resultStore = getStore({
             name: "request-results",
-            consistency: "strong" // Ensures immediate read availability
+            //consistency: "strong" // Ensures immediate read availability
         });
 
         await resultStore.setJSON(id, body);
