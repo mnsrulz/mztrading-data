@@ -2,8 +2,8 @@
 import { Hono } from "https://esm.sh/hono@4.12.27";
 import { toSSG } from "https://esm.sh/hono@4.12.27/ssg";
 import { renderToString } from "npm:preact-render-to-string@^6.5.13";
-import { CboeOptionsRawSummary } from "../lib/data.ts";
 import fs from "node:fs/promises";
+import { CboeOptionsRawSummary } from "../../lib/data.ts";
 
 type OptionsSummary = { name: string; optionsAssetUrl: string; dt: string, stocksAssetUrl: string };
 const optionsSummary: OptionsSummary[] = CboeOptionsRawSummary;
@@ -88,33 +88,35 @@ optionsSummary.forEach((match) => {
 });
 
 // --- Handle compilation and Native Redirection Matrix ---
-if (import.meta.main) {
-  // Generate static site files to 'dist' folder
-  const res = await toSSG(app, fs, { dir: "dist" });
-  if (!res.success) {
-    console.error("SSG Build Failed", res.error);
-    Deno.exit(1);
-  }
 
-  // Generate native Netlify _redirects file for file requests and trailing slashes
-  let redirectsContent = `# Trailing slash corrections\n`;
-  redirectsContent += `/files    /files/    301\n`;
-  redirectsContent += `/ohlc     /ohlc/     301\n\n`;
-  
-  redirectsContent += `# Parquet Proxy File Redirects\n`;
-  optionsSummary.forEach((match) => {
-    // Correctly routes trailing slash issues
-    redirectsContent += `/files/dt=${match.dt}    /files/dt=${match.dt}/    301\n`;
-    // Uses Netlify's correct splat operator (*) instead of /*.parquet
-    redirectsContent += `/files/dt=${match.dt}/*    ${match.optionsAssetUrl}    302\n`;
-    
-    if (match.stocksAssetUrl) {
-      redirectsContent += `/ohlc/dt=${match.dt}    /ohlc/dt=${match.dt}/    301\n`;
-      // Uses Netlify's correct splat operator (*) instead of /*.parquet
-      redirectsContent += `/ohlc/dt=${match.dt}/*    ${match.stocksAssetUrl}    302\n`;
-    }
-  });
-
-  await Deno.writeTextFile("dist/_redirects", redirectsContent);
-  console.log("Static Generation & Native Redirect map output complete!");
+// Generate static site files to 'dist' folder
+const res = await toSSG(app, fs, { dir: "dist" });
+if (!res.success) {
+  console.error("SSG Build Failed", res.error);
+  Deno.exit(1);
 }
+
+const getAssetFileName = (assetUrl: string) => new URL(assetUrl).pathname.split("/").pop() || "";
+
+// Generate native Netlify _redirects file for file requests and trailing slashes
+let redirectsContent = `# Trailing slash corrections\n`;
+redirectsContent += `/files    /files/    301\n`;
+redirectsContent += `/ohlc     /ohlc/     301\n\n`;
+
+redirectsContent += `# Parquet Proxy File Redirects\n`;
+optionsSummary.forEach((match) => {
+  const optionsFileName = getAssetFileName(match.optionsAssetUrl);
+
+  // Correctly routes trailing slash issues
+  redirectsContent += `/files/dt=${match.dt}    /files/dt=${match.dt}/    301\n`;
+  redirectsContent += `/files/dt=${match.dt}/${optionsFileName}    ${match.optionsAssetUrl}    302\n`;
+
+  if (match.stocksAssetUrl) {
+    const stocksFileName = getAssetFileName(match.stocksAssetUrl);
+    redirectsContent += `/ohlc/dt=${match.dt}    /ohlc/dt=${match.dt}/    301\n`;
+    redirectsContent += `/ohlc/dt=${match.dt}/${stocksFileName}    ${match.stocksAssetUrl}    302\n`;
+  }
+});
+
+await Deno.writeTextFile("dist/_redirects", redirectsContent);
+console.log("Static Generation & Native Redirect map output complete!");
