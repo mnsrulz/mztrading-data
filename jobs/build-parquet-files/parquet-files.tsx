@@ -108,13 +108,11 @@ optionsSummary.forEach((match) => {
   const optionsFileName = getAssetFileName(match.optionsAssetUrl);
 
   // Correctly routes trailing slash issues
-  redirectsContent += `/files/dt=${match.dt}    /files/dt=${match.dt}/    301\n`;
-  redirectsContent += `/files/dt=${match.dt}/${optionsFileName}    ${match.optionsAssetUrl}    302\n`;
+  redirectsContent += `/files/dt%3D${match.dt}/${optionsFileName}    ${match.optionsAssetUrl}    302\n`;
 
   if (match.stocksAssetUrl) {
     const stocksFileName = getAssetFileName(match.stocksAssetUrl);
-    redirectsContent += `/ohlc/dt=${match.dt}    /ohlc/dt=${match.dt}/    301\n`;
-    redirectsContent += `/ohlc/dt=${match.dt}/${stocksFileName}    ${match.stocksAssetUrl}    302\n`;
+    redirectsContent += `/ohlc/dt%3D${match.dt}/${stocksFileName}    ${match.stocksAssetUrl}    302\n`;
   }
 });
 
