@@ -3668,7 +3668,7 @@
         "symbol": "CLB"
     },
     {
-        "name": "COLUMBIA FINL INC COM",
+        "name": "COLUMBIA FINANCIAL INC",
         "symbol": "CLBK"
     },
     {
@@ -5548,7 +5548,7 @@
         "symbol": "DVXK"
     },
     {
-        "name": "WEBS ETF TR CONSUMER STAPLES",
+        "name": "WEBS ETF TR CONS STA XLP ETF",
         "symbol": "DVXP"
     },
     {
@@ -8176,6 +8176,10 @@
         "symbol": "GOP"
     },
     {
+        "name": "GOLDGROUP MNG INC COM NEW",
+        "symbol": "GORO"
+    },
+    {
         "name": "GOSSAMER BIO INC COM",
         "symbol": "GOSS"
     },
@@ -8392,7 +8396,7 @@
         "symbol": "GTE"
     },
     {
-        "name": "GATES INDUSTRIAL CORP LTD",
+        "name": "GATES INDL CORP LTD COM SHS",
         "symbol": "GTES"
     },
     {
@@ -9760,7 +9764,7 @@
         "symbol": "IONX"
     },
     {
-        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "name": "TIDAL TRUST II DEFI DA IONQ NEW",
         "symbol": "IONZ"
     },
     {
@@ -12804,10 +12808,6 @@
         "symbol": "NEXT"
     },
     {
-        "name": "NORTHFIELD BANCORP INC DEL COM",
-        "symbol": "NFBK"
-    },
-    {
         "name": "NEW FORTRESS ENERGY INC COM CL A",
         "symbol": "NFE"
     },
@@ -13500,7 +13500,7 @@
         "symbol": "OGE"
     },
     {
-        "name": "OSISKO GOLD GROUP INC",
+        "name": "OSISKO GOLD GROUP INC COM NEW",
         "symbol": "OGG"
     },
     {
@@ -14764,7 +14764,7 @@
         "symbol": "PROP"
     },
     {
-        "name": "PURPLE INNOVATION INC COM",
+        "name": "PURPLE INNOVATION INC COM SHS",
         "symbol": "PRPL"
     },
     {
@@ -16858,6 +16858,10 @@
     {
         "name": "SILICON LABORATORIES INC COM",
         "symbol": "SLAB"
+    },
+    {
+        "name": "SOLAI LIMITED SPONSORED ADS",
+        "symbol": "SLAIY"
     },
     {
         "name": "SLB LIMITED COM STK",
