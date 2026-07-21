@@ -18,7 +18,7 @@ const kvcboeanalytics = 'cboe-options-analytics';
 
 // const kv = await Deno.openKv(":memory:");
 const kv = await (isDenoDeploy ? Deno.openKv() : null);
-const indexMap = new Set<string>(['SPX']);    //store the symbols which requires _ to be prefixed in the url. Add a job later on which will fetch the list of symbols from the kv store and persist in json file.
+const indexMap = new Set<string>(['SPX', 'NDX']);    //store the symbols which requires _ to be prefixed in the url. Add a job later on which will fetch the list of symbols from the kv store and persist in json file.
 if (kv) {
     for await (const res of kv.list<string>({ prefix: [kvindexmap] })) indexMap.add(res.value);
 }

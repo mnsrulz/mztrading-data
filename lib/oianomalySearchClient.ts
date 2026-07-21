@@ -1,4 +1,4 @@
-import { getConnection } from "./historicalOptions.ts";
+import { getOIAnomalConnection } from "./historicalOptions.ts";
 
 const baseCte = `
 WITH T AS(
@@ -89,7 +89,7 @@ export const queryOIAnomalyFacetSearch = async (request: OIAnomalyFacetSearchReq
 }
 
 async function executeMainQuery(request: OIAnomalySearchRequest, perPage: number, offset: number) {
-    const conn = await getConnection();
+    const conn = await getOIAnomalConnection();
     const { params, indexName } = request;
     const query = buildFacetQuery(params);
     console.log(`executing main query: ${query} `);
@@ -127,7 +127,7 @@ async function executeMainQuery(request: OIAnomalySearchRequest, perPage: number
 
 async function executeFacet(request: OIAnomalySearchRequest[], mainRequest: OIAnomalySearchRequest) {
     const facetValues: Record<string, any> = {};
-    const conn = await getConnection();
+    const conn = await getOIAnomalConnection();
     const availableFacets = mainRequest.params.facets as string[];
     const processedFacets: string[] = [];
     for (const req of request) {
@@ -186,7 +186,7 @@ function buildFacetQuery(params: OIAnomalySearchRequestParams | OIAnomalyFacetSe
 }
 
 async function executeFacetSearch(request: OIAnomalyFacetSearchRequestType) {
-    const conn = await getConnection();
+    const conn = await getOIAnomalConnection();
     const { params } = request;
     const query = buildFacetQuery(params);
     const result = await conn.send(`

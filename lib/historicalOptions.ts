@@ -12,58 +12,85 @@ import { getWeekOfMonth } from './utils.ts';
 
 const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
+const fetchStandardUrl = async (url: string, tableName: string): Promise<ArrayBuffer> => {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to HTTP fetch ${tableName}: ${response.statusText}`);
+    }
+    return await response.arrayBuffer();
+};
+
+const registerTable = async (db: DuckDBBindings, tableName: string, dataUrl: string) => {
+    const start = performance.now();
+    console.log(`[Standard Mode] Fetching ${tableName} data via HTTP from ${dataUrl}...`);
+    const buffer = await fetchStandardUrl(dataUrl, tableName);
+    db.registerFileBuffer(tableName, new Uint8Array(buffer));
+    const end = performance.now();
+    console.log(`✅ ${tableName} registered (${prettyBytes(buffer.byteLength)}) in ${(end - start).toFixed(2)} ms`);
+};
+
 
 const initialize = async () => {
-    const { assetUrl, name, stockUrl, openInterestAnomalyUrl } = optionsRollingSummary;
     //HTTP paths are not supported due to xhr not available in deno.
     //db.registerFileURL('db.parquet', assetUrl, DuckDBDataProtocol.HTTP, false);
-
-    console.log(`initializing duckdb with ${assetUrl} and name: ${name}`);
     const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
     await db.instantiate(() => { });
-
-    const fetchStandardUrl = async (url: string, tableName: string): Promise<ArrayBuffer> => {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Failed to HTTP fetch ${tableName}: ${response.statusText}`);
-        }
-        return await response.arrayBuffer();
-    };
-
-    const registerTable = async (tableName: string, dataUrl: string) => {
-        const start = performance.now();
-        console.log(`[Standard Mode] Fetching ${tableName} data via HTTP from ${dataUrl}...`);
-        const buffer = await fetchStandardUrl(dataUrl, tableName);
-        db.registerFileBuffer(tableName, new Uint8Array(buffer));
-        const end = performance.now();
-        console.log(`✅ ${tableName} registered (${prettyBytes(buffer.byteLength)}) in ${(end - start).toFixed(2)} ms`);
-    };
-
-    await Promise.all([
-        registerTable('db.parquet', assetUrl),
-        registerTable('stocks.parquet', stockUrl),
-        registerTable('oianomaly.parquet', openInterestAnomalyUrl)
-    ]);
     return db;
+}
+
+const getDb = async (): Promise<DuckDBBindings> => {
+    try {
+        if (!dbPromise) {
+            dbPromise = initialize();
+        }
+
+        return await dbPromise;
+    } catch (err) {
+        dbPromise = null;
+        throw err;
+    }
+};
+
+const registerOptionsTables = async (db: DuckDBBindings) => {
+    const { assetUrl, stockUrl } = optionsRollingSummary;
+    await Promise.all([
+        registerTable(db, 'db.parquet', assetUrl),
+        registerTable(db, 'stocks.parquet', stockUrl)
+    ])
+}
+
+const registerOIAnomalyTables = async (db: DuckDBBindings) => {
+    const { openInterestAnomalyUrl } = optionsRollingSummary;
+    await Promise.all([
+        registerTable(db, 'oianomaly.parquet', openInterestAnomalyUrl)
+    ])
 }
 
 let dbConn: DuckDBConnection | null = null;
 let dbPromise: Promise<DuckDBBindings> | null = null;
+let optionsTableRegistrationPromise: Promise<void> | null = null;
+let oiAnomalTableRegistrationPromise: Promise<void> | null = null;
 
 export const getConnection = async () => {
-    try {
-        if (dbConn) return dbConn;
-        if (!dbPromise) {
-            dbPromise = initialize();
-        }
-        const db = await dbPromise;
-        dbConn = dbConn || db.connect();
-        return dbConn;
-    } catch (error) {
-        console.error("Error initializing DuckDB:", error);
-        dbPromise = null; //reset the promise if there is an error
-        throw new Error('error initializing DuckDB. Check the logs to see details about the error'); //rethrow the error to be handled by the caller        
-    }
+    const db = await getDb();
+    optionsTableRegistrationPromise ??= registerOptionsTables(db).catch(err => {
+        console.error("Error initializing options tables:", err);
+        optionsTableRegistrationPromise = null;
+        throw err;
+    });
+    await optionsTableRegistrationPromise;
+    return dbConn ??= db.connect();
+}
+
+export const getOIAnomalConnection = async () => {
+    const db = await getDb();
+    oiAnomalTableRegistrationPromise ??= registerOIAnomalyTables(db).catch(err => {
+        console.error("Error initializing OI anomaly tables:", err);
+        oiAnomalTableRegistrationPromise = null;
+        throw err;
+    });
+    await oiAnomalTableRegistrationPromise;
+    return dbConn ??= db.connect();
 }
 
 //find a way to parametrize the query
