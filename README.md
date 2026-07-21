@@ -3,19 +3,61 @@
 
 # mztrading-data
 
-The `mztrading-data` repository is designed to facilitate the mztrading site for any backend services like options data retrieval and historical options data retrieval.
+Options market data backend — CBOE options chains, Greeks, GEX/DEX snapshots, OI anomaly detection.
 
-## Repository Structure
+## Architecture
 
-- `.devcontainer/`: Configuration files for development container setups.
-- `.github/workflows/`: GitHub Actions workflows for continuous integration and data updates.
-- `.vscode/`: Visual Studio Code settings and extensions for a consistent development environment.
-- `data/`: Contains datasets and JSON files with consolidated options data.
-- `jobs/`: Scripts and configurations for scheduled tasks and data processing jobs.
-- `lib/`: Library modules and utilities used across the project.
-- `main.ts`: The main TypeScript entry point for serving the services in Deno platform.
+**Three Netlify Edge Functions** (each under `netlify-apps/`):
 
-## For local debugging
+| App | Role |
+|---|---|
+| `mztradingdata` | Main REST API — options data, Greeks, exposure, pricing, OI anomaly (Hono, DuckDB-WASM) |
+| `mztradingparquetfiles` | Parquet file explorer — static site listing available datasets (Preact SSG) |
+| `mzingest` | Request ingress — accepts queries, returns results via WebSocket polling (Pusher + Redis + Netlify Blobs) |
+
+**Two standalone services:**
+
+| Service | Role |
+|---|---|
+| `api/snapshot-cdn.ts` | Snapshot image CDN with caching (deprecated) |
+| `api/worker.ts` | Background worker — processes queued analytics via DuckDB (Redis pub/sub + Pusher) |
+
+**Data pipeline** — orchestrated via GitHub Actions `workflow_run` triggers:
+
 ```
-deno --allow-all  --unstable-kv main.ts
+tickers (daily symbol sync) — standalone, no downstream
+cboe-options (download parquet) — triggered by third-party scheduler at 6AM EST weekdays via workflow_dispatch (GitHub Actions cron was unreliable)
+  → cboe-options-consolidated (30-day rolling)
+    → cboe-options-oi-anomaly (OI anomaly)
+    → options-snapshot-v2 (GEX/DEX PNG)
 ```
+
+Parquet files are stored as GitHub Releases. The API uses DuckDB-WASM at the edge.
+
+## Directory structure
+
+| Path | Purpose |
+|---|---|
+| `api/` | Endpoint handlers and application logic |
+| `lib/` | Core libraries: DuckDB queries, CBOE fetcher, search, pricing, TA |
+| `netlify-apps/` | Netlify app shells — each has its own `netlify.toml` |
+| `data/` | CI-managed JSON summaries (do not edit directly) |
+| `jobs/` | Python scripts for data processing, Deno scripts for orchestration |
+| `.github/workflows/` | CI pipeline workflow definitions |
+
+## Local dev
+
+```
+deno --allow-all --unstable-kv netlify-apps/mztradingdata/api.ts
+```
+
+No test, lint, or typecheck commands exist.
+
+## Tech stack
+
+- **Runtime:** Deno (URL-based ESM imports, no npm/node_modules)
+- **Edge framework:** Hono
+- **Data query:** DuckDB-WASM + DuckDB Node-API
+- **Data format:** Parquet files (GitHub Releases)
+- **Infra:** Netlify Edge Functions, Deno Deploy, Cloudflare Workers
+- **Messaging:** Redis, Pusher, Netlify Blobs
