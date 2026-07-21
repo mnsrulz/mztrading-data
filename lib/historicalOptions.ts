@@ -7,7 +7,6 @@ import optionsRollingSummary from "./../data/cboe-options-rolling.json" with {
 };
 import { getPriceAtDate } from './historicalPrice.ts';
 import dayjs from "https://esm.sh/dayjs@1.11.13";
-import { getStore } from "https://esm.sh/@netlify/blobs@10.7.9";
 import { getOptionsChain } from './cboe.ts';
 import { getWeekOfMonth } from './utils.ts';
 
@@ -15,16 +14,13 @@ const logger = new ConsoleLogger();
 const JSDELIVR_BUNDLES = getJsDelivrBundles();
 
 const initialize = async () => {
-    const { assetUrl, name, stockUrl, expirationsStrikesUrl, openInterestAnomalyUrl } = optionsRollingSummary;
+    const { assetUrl, name, stockUrl, openInterestAnomalyUrl } = optionsRollingSummary;
     //HTTP paths are not supported due to xhr not available in deno.
     //db.registerFileURL('db.parquet', assetUrl, DuckDBDataProtocol.HTTP, false);
 
     console.log(`initializing duckdb with ${assetUrl} and name: ${name}`);
     const db = await createDuckDB(JSDELIVR_BUNDLES, logger, DEFAULT_RUNTIME);
     await db.instantiate(() => { });
-
-    // 1. Detect if we are running inside Netlify
-    const isNetlify = false; // !!globalThis.netlifyBlobsContext;   //disable netlify blob cache. Not worth it!
 
     const fetchStandardUrl = async (url: string, tableName: string): Promise<ArrayBuffer> => {
         const response = await fetch(url);
@@ -36,40 +32,8 @@ const initialize = async () => {
 
     const registerTable = async (tableName: string, dataUrl: string) => {
         const start = performance.now();
-        let buffer: ArrayBuffer;
-
-        if (isNetlify) {
-            console.log(`[Netlify Mode] Fetching ${tableName} from Netlify Blobs...`);
-            try {
-                const store = getStore("parquet-cache");
-                // Using dataUrl as the key as you specified in your snippet
-                const blob = await store.get(dataUrl, { type: "arrayBuffer" });
-
-                if (!blob) {
-                    console.log(`🧡 Cache Miss! "${tableName}" not found in blob store. Downloading and seeding...`);
-                    // 1. Download via standard HTTP
-                    buffer = await fetchStandardUrl(dataUrl, tableName);
-
-                    // 2. Async save it into Netlify Blobs so it's there for the next request
-                    // We use a background promise so we don't block the current DuckDB initialization
-                    await store.set(dataUrl, buffer).then(() => {
-                        console.log(`💾 Successfully seeded "${tableName}" into Netlify Blobs.`);
-                    }).catch(err => {
-                        console.error(`❌ Failed to save "${tableName}" to Netlify Blobs:`, err);
-                    });
-                } else {
-                    console.log(`🚀 Cache Hit! Loaded "${tableName}" instantly from Netlify Blobs.`);
-                    buffer = blob;
-                }
-            } catch (blobError) {
-                console.warn(`⚠️ Netlify Blob system error for ${tableName}, falling back to network HTTP...`, blobError);
-                buffer = await fetchStandardUrl(dataUrl, tableName);
-            }
-        } else {
-            console.log(`[Standard Mode] Fetching ${tableName} data via HTTP from ${dataUrl}...`);
-            buffer = await fetchStandardUrl(dataUrl, tableName);
-        }
-
+        console.log(`[Standard Mode] Fetching ${tableName} data via HTTP from ${dataUrl}...`);
+        const buffer = await fetchStandardUrl(dataUrl, tableName);
         db.registerFileBuffer(tableName, new Uint8Array(buffer));
         const end = performance.now();
         console.log(`✅ ${tableName} registered (${prettyBytes(buffer.byteLength)}) in ${(end - start).toFixed(2)} ms`);
@@ -78,7 +42,6 @@ const initialize = async () => {
     await Promise.all([
         registerTable('db.parquet', assetUrl),
         registerTable('stocks.parquet', stockUrl),
-        //registerTable('strikes.parquet', expirationsStrikesUrl),
         registerTable('oianomaly.parquet', openInterestAnomalyUrl)
     ]);
     return db;
@@ -104,6 +67,9 @@ export const getConnection = async () => {
 }
 
 //find a way to parametrize the query
+/** 
+* @deprecated - prefer using the getDatesForSymbol from data.ts
+*/
 export const getHistoricalSnapshotDatesFromParquet = async (symbol: string) => {
     const conn = await getConnection();
     const arrowResult = await conn.send(`SELECT DISTINCT CAST(dt as STRING) as dt FROM 'db.parquet' WHERE option_symbol = '${symbol.toUpperCase()}'`);
@@ -111,6 +77,9 @@ export const getHistoricalSnapshotDatesFromParquet = async (symbol: string) => {
 }
 
 //find a way to parametrize the query
+/**
+ * @deprecated prefer using the AvailableDates from data.ts
+ */
 export const getHistoricalSnapshotDates = async () => {
     const conn = await getConnection();
     const arrowResult = await conn.send(`SELECT DISTINCT CAST(dt as STRING) as dt FROM 'db.parquet'`);
@@ -522,40 +491,4 @@ export async function getLiveCboeOptionsPricingData(symbol: string) {
         return previous;
     }, {} as Record<string, MicroOptionPricingContract>);
     return { spotPrice: currentPrice, options, timestamp };
-}
-
-
-export async function getSymbolExpirations(symbol: string) {
-
-    const conn = await getConnection();
-    const arrowResult = await conn.send(`
-            SELECT expiration, symbol, strikes
-            FROM 'strikes.parquet'
-            WHERE symbol = '${symbol}'
-            ORDER BY 1
-        `);
-    const symbolExpirations = arrowResult.readAll().flatMap(k => k.toArray().map((row) => row.toJSON())) as {
-        expiration: string, symbol: string, strikes: string
-    }[];
-
-    if (!symbolExpirations) return [];
-    const expirations = symbolExpirations.map(k => {
-        return {
-            expiration: k.expiration,
-            strikes: JSON.parse(k.strikes) as number[]
-        }
-    })
-    //dup code. TODO: make it centralized
-    const monthlyExpiryMap = new Map<string, string>();
-    for (const { expiration } of expirations) {
-        const expirationDayjs = dayjs(expiration, 'YYYY-MM-DD', true);
-        if (expirationDayjs.date() >= 15 && expirationDayjs.date() <= 21 && getWeekOfMonth(expirationDayjs.date(), expirationDayjs.month(), expirationDayjs.year()) == 3) { //third week of the month
-            const k = `${expirationDayjs.year()}-${expirationDayjs.month()}`;
-            if (monthlyExpiryMap.get(k)! > expiration) continue;
-            monthlyExpiryMap.set(k, expiration);
-        }
-    }
-
-    const monthlyExpirations = new Set([...monthlyExpiryMap.values()]);
-    return expirations.map(k => ({ ...k, isMonthly: monthlyExpirations.has(k.expiration) }));
 }

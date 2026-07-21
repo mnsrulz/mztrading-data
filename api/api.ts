@@ -10,6 +10,8 @@ import {
     getSnapshotsAvailableForDate,
     getSnapshotsAvailableForSymbol,
     allTickerSymbols,
+    getDatesForSymbol,
+    AvailableDates,
 } from "../lib/data.ts";
 import {
     calculateExpsoure,
@@ -17,15 +19,12 @@ import {
     getExposureData,
     getHistoricalGreeksSummaryDataFromParquet,
     getHistoricalExposureWallsFromParquet,
-    getHistoricalSnapshotDatesFromParquet,
     getLiveCboeOptionsPricingData,
-    getHistoricalSnapshotDates,
     getHistoricalGreeksSummaryDataBySymbolFromParquet,
     getHistoricalGreeksAvailableExpirationsBySymbolFromParquet,
     getOIAnomalyDataFromParquet,
     getHistoricalDataForOptionContractFromParquet,
-    getHistoricalOIDataBySymbolFromParquet,
-    getSymbolExpirations
+    getHistoricalOIDataBySymbolFromParquet
 } from "../lib/historicalOptions.ts";
 import { getIndicatorValues } from "../lib/ta.ts";
 import {
@@ -97,10 +96,7 @@ app.post("/api/options/exposure/calculate", async (c) => {
     return c.json(calculateExpsoure(body.spotPrice, body.data, body.spotDate, new Date()));
 });
 
-app.get("/api/options/exposures/dates", async (c) => {
-    const data = await getHistoricalSnapshotDates();
-    return c.json(data);
-});
+app.get("/api/options/exposures/dates", (c) => c.json(AvailableDates));
 
 app.get("/api/options/exposures/snapshot-dates", (c) => c.json(AvailableSnapshotDates));
 
@@ -183,9 +179,9 @@ app.get("/api/options/:symbol/exposure", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/:symbol/exposure/historical-dates", async (c) => {
+app.get("/api/options/:symbol/exposure/historical-dates", (c) => {
     const symbol = c.req.param("symbol");
-    const dates = await getHistoricalSnapshotDatesFromParquet(symbol);
+    const dates = getDatesForSymbol(symbol);
     return c.json(dates);
 });
 
@@ -206,11 +202,11 @@ app.get("/api/options/:symbol/pricing", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/:symbol/expirations", async (c) => {
-    const symbol = c.req.param("symbol");
-    const data = await getSymbolExpirations(symbol);
-    return c.json(data);
-});
+// app.get("/api/options/:symbol/expirations", async (c) => {
+//     const symbol = c.req.param("symbol");
+//     const data = await getSymbolExpirations(symbol);
+//     return c.json(data);
+// });
 
 app.get("/api/options/:symbol/exposures/snapshots", (c) => {
     const symbol = c.req.param("symbol");

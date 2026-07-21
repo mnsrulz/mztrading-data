@@ -77,6 +77,8 @@ export const OptionsSnapshotSummary = (optionsSnapshotSummary as OptionsSnapshot
 
 export const AvailableSnapshotDates = Object.values(OptionsSnapshotSummary).map(k => ({ dt: k.displayName }));
 
+export const AvailableDates = [...new Set(optionsRollingSummary.symbolsSummary.map(k => k.dt))].toSorted().map(k => ({ dt: k }));
+
 //export const OptionsSnapshotSummaryLegacy = Object.fromEntries(Object.keys(OptionsSnapshotSummary).map(j => [OptionsSnapshotSummary[j].displayName, { zipAssetUrl: OptionsSnapshotSummary[j].zipAssetUrl, symbols: OptionsSnapshotSummary[j].symbols }]));
 
 export const zipServiceUrl = 'https://zipservice-deno.deno.dev/download';//?f=AAOI_GEX_620.png&q=https://github.com/mnsrulz/mztrading-data/releases/download/DEX_GEX_SNAPSHOT_2025-07-08/options-snapshots.zip';
@@ -91,7 +93,7 @@ export const getSnapshotsAvailableForDate = (dt: string) => {
 
     if (result && releaseName) {
         //all data_* release names are pushed to cloudflare for static hosting
-        if(releaseName.startsWith('DATA_')) {
+        if (releaseName.startsWith('DATA_')) {
             return result.tickers.map(k => {
                 const dexHdFileName = getFileName(k, 'dex', result.hdResolution);
                 const dexSdFileName = getFileName(k, 'dex', result.sdResolution);
@@ -226,6 +228,16 @@ export const searchTicker = (q: string) => {
 }
 
 export const CboeOptionsRawSummary = (cboeOptionsSummary as CboeOptionSummaryType[]).map(({ name, optionsAssetUrl, stocksAssetUrl }) => ({ name, optionsAssetUrl, stocksAssetUrl, dt: name.substring((name.lastIndexOf('_') + 1)).substring(0, 10) }));
+
+export const getDatesForSymbol = (symbol: string) => {
+    return optionsRollingSummary.symbolsSummary
+        .filter(k => k.symbol.toUpperCase() == symbol.toUpperCase())
+        .map(k => k.dt)
+        .toSorted()
+        .map(k => ({
+            dt: k
+        }))
+}
 
 export const getCboeLatestDateAndSymbols = (forceDayId?: string) => {
     if (forceDayId) {
