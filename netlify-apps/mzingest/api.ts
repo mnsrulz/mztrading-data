@@ -15,6 +15,8 @@ const pusherConfig = {
 
 const redis = Redis.fromEnv();
 const ENABLE_REDIS = Deno.env.get("ENABLE_REDIS") === "true";
+const POLL_TIMEOUT_MS = parseInt(Deno.env.get("POLL_TIMEOUT_MS") || "10000", 10);
+const POLL_INTERVAL_MS = parseInt(Deno.env.get("POLL_INTERVAL_MS") || "200", 10);
 
 if (!pusherConfig.pusherUri) {
     throw new Error("PUSHER_URI is not set. Please set it in your environment variables to enable pusher functionality.");
@@ -76,7 +78,7 @@ app.put('/api/requests/:id/result', async (c) => {
     }
 });
 
-async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 200) {
+async function waitForResult(id: string, timeoutMs = POLL_TIMEOUT_MS, pollIntervalMs = POLL_INTERVAL_MS) {
     const startTime = Date.now();
     while (Date.now() - startTime < timeoutMs) {
         const raw = await redis.get(id);
@@ -89,7 +91,7 @@ async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 200
     throw new Error(`Polling timed out after ${timeoutMs / 1000} seconds for ID: ${id}`);
 }
 
-async function waitForResultFromTurso(id: string, timeoutMs = 10000, pollIntervalMs = 200) {
+async function waitForResultFromTurso(id: string, timeoutMs = POLL_TIMEOUT_MS, pollIntervalMs = POLL_INTERVAL_MS) {
     const startTime = Date.now();
     while (Date.now() - startTime < timeoutMs) {
         const raw = await getResult(id);
