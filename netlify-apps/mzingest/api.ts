@@ -46,6 +46,8 @@ app.post('/api/requests', async c => {
         throw new HTTPException(400, { message: "Search request is empty!" });
     }
 
+    args.requestId = crypto.randomUUID();   //let's overwrite the id
+
     //Register a 10sec timer, if we don't receive the response we will fire a timeout event through pusher.
     const tmr = setTimeout(async () => {
         await pusher.trigger(pusherConfig.channelName, 'query-timeout', { instanceId, ...args });
