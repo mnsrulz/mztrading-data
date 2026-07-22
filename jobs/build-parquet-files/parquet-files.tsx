@@ -40,7 +40,7 @@ const App = ({ options, prefix }: { options: OptionsSummary[]; prefix: string })
       <li><a href="/">...</a></li>
       {options.map((item) => (
         <li key={item.dt}>
-          <a href={`/${prefix}/dt%3D${item.dt}/`}>
+          <a href={`/${prefix}/dt=${item.dt}/`}>
             dt={item.dt}
           </a>
         </li>
@@ -108,11 +108,11 @@ optionsSummary.forEach((match) => {
   const optionsFileName = getAssetFileName(match.optionsAssetUrl);
 
   // Correctly routes trailing slash issues
-  redirectsContent += `/files/dt%3D${match.dt}/${optionsFileName}    ${match.optionsAssetUrl}    302\n`;
+  redirectsContent += `/files/dt=${match.dt}/${optionsFileName}    ${match.optionsAssetUrl}    302\n`;
 
   if (match.stocksAssetUrl) {
     const stocksFileName = getAssetFileName(match.stocksAssetUrl);
-    redirectsContent += `/ohlc/dt%3D${match.dt}/${stocksFileName}    ${match.stocksAssetUrl}    302\n`;
+    redirectsContent += `/ohlc/dt=${match.dt}/${stocksFileName}    ${match.stocksAssetUrl}    302\n`;
   }
 });
 
