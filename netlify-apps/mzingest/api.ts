@@ -66,6 +66,7 @@ app.put('/api/requests/:id/result', async (c) => {
 
     try {
         await blobStores.requestResults.setJSON(id, body);
+        console.log(`Stored the blob for request ${id} succesfuly.`);
         return c.json({ message: "Result safely stored in Netlify Blobs" });
     } catch (error) {
         console.error(`Failed to store blob for ${id}:`, error);
@@ -85,7 +86,7 @@ async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 500
 
         // Attempt to fetch the data from Netlify Blobs
         const data = await blobStores.requestResults.get(id, {
-            type: "json"
+            consistency: "eventual"
         })
 
         if (data) {
