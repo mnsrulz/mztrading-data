@@ -5,7 +5,7 @@ import { HTTPException } from "https://esm.sh/hono@4.12.27/http-exception";
 import Pusher from 'https://esm.sh/pusher@5.3.3';
 import { Redis } from 'https://esm.sh/@upstash/redis@1.38.0'
 import delay from "https://esm.sh/delay@7.0.0";
-import { storeResult, getResult } from './tursoStore.ts';
+import { storeResult, deleteResult, getResult } from './tursoStore.ts';
 const instanceId = crypto.randomUUID();
 
 const pusherConfig = {
@@ -14,6 +14,7 @@ const pusherConfig = {
 }
 
 const redis = Redis.fromEnv();
+const ENABLE_REDIS = Deno.env.get("ENABLE_REDIS") === "true";
 
 if (!pusherConfig.pusherUri) {
     throw new Error("PUSHER_URI is not set. Please set it in your environment variables to enable pusher functionality.");
@@ -56,9 +57,7 @@ app.post('/api/requests', async c => {
     const info = getConnInfo(c)
     const clientId = info.remote.address;
     await redis.publish("worker-request", JSON.stringify({ channel: `channel-${instanceId}`, ...args, clientId }));
-    // for instrumentation only now.
-    waitForResultFromTurso(args.requestId).catch(err => console.error(`timeout retreving from turso store..`, err));
-    const data = await waitForResult(args.requestId);
+    const data = ENABLE_REDIS ? await waitForResult(args.requestId) : await waitForResultFromTurso(args.requestId);
     clearTimeout(tmr);
     return c.json(data);
 });
@@ -95,9 +94,8 @@ async function waitForResultFromTurso(id: string, timeoutMs = 10000, pollInterva
     while (Date.now() - startTime < timeoutMs) {
         const raw = await getResult(id);
         if (raw) {
-            //redis.del(id).catch(() => {});
-            console.log(`Result retrieved from turso store for this id: ${id}`);
-            return;
+            deleteResult(id).catch(() => {});
+            return raw;
         }
         await delay(pollIntervalMs);
     }

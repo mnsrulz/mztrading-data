@@ -35,3 +35,11 @@ export async function getResult(id: string) {
   if (rs.rows.length === 0) return null;
   return JSON.parse(rs.rows[0].payload as string);
 }
+
+export async function deleteResult(id: string) {
+  if (!client) return;
+  await client.execute({
+    sql: "DELETE FROM request_results WHERE id = ?",
+    args: [id],
+  });
+}
