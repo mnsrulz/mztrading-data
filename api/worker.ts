@@ -575,15 +575,15 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
         value: rows
     };
 
-    const publishInternal = async () => {
-        //this is for publishing the message so any subscriber can listen to.
-        const redisPublisher = redisSubscriber.duplicate();
-        await redisPublisher.connect();
+    // const publishInternal = async () => {
+    //     //this is for publishing the message so any subscriber can listen to.
+    //     const redisPublisher = redisSubscriber.duplicate();
+    //     await redisPublisher.connect();
 
-        const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
-        redisPublisher.quit();
-        logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
-    }
+    //     const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
+    //     redisPublisher.quit();
+    //     logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
+    // }
 
     const publishToMzIngest = async () => {
         await mzingestClient.put(`requests/${requestId}/result`, {
@@ -591,8 +591,17 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
         }).json().catch(d => logger.error(`Invalid response received while persisting the result for request: ${requestId}, ${JSON.stringify(d)}`))
     }
 
+    const publishToRedis = async () => {
+        const redisWriter = redisSubscriber.duplicate();
+        await redisWriter.connect();
+        await redisWriter.set(requestId, JSON.stringify(payload), { EX: 60 });
+        await redisWriter.quit();
+        logger.info(`Stored result for requestId ${requestId} in Redis`);
+    }
+
     await Promise.all([
-        pRetry(publishInternal, { retries: 3 }),
+        //pRetry(publishInternal, { retries: 3 }),
+        pRetry(publishToRedis, { retries: 3 }),
         pRetry(publishToMzIngest, { retries: 3 })
     ])
 
