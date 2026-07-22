@@ -5,7 +5,8 @@ export const blobStores = {
     get requestResults() {
         return _resultStore ??= getDeployStore({
             name: "request-results",
-            consistency: 'eventual'
+            consistency: 'eventual',
+            region: "us-east-1"
         });
     }
 };
