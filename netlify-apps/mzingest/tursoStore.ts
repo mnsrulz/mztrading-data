@@ -1,4 +1,4 @@
-import { createClient } from "https://esm.sh/@libsql/client@0.17.4";
+import { createClient } from "https://esm.sh/@libsql/client@0.17.4/web";
 
 const url = Deno.env.get("TURSO_URL");
 const authToken = Deno.env.get("TURSO_TOKEN");
@@ -13,6 +13,8 @@ if (client) {
   client.execute("CREATE TABLE IF NOT EXISTS request_results (id TEXT PRIMARY KEY, payload TEXT NOT NULL, created_at INTEGER)")
     .then(() => console.log("Turso: table ready"))
     .catch(e => console.error("Turso: table creation failed:", e));
+} else {
+  console.warn(`Client not initialized!`)
 }
 
 export async function storeResult(id: string, payload: unknown) {
