@@ -40,7 +40,7 @@ const App = ({ options, prefix }: { options: OptionsSummary[]; prefix: string })
       <li><a href="/">...</a></li>
       {options.map((item) => (
         <li key={item.dt}>
-          <a href={`/${prefix}/dt=${item.dt}/`}>
+          <a href={`/${prefix}/dt%3D${item.dt}/`}>
             dt={item.dt}
           </a>
         </li>
