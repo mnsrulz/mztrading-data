@@ -1,5 +1,5 @@
 import { Hono } from "https://esm.sh/hono@4.9.8";
-import { promise, z } from "https://esm.sh/zod@4.3.6";
+import { z } from "https://esm.sh/zod@4.3.6";
 import pino from "https://esm.sh/pino@10.1.0";
 import pretty from "https://esm.sh/pino-pretty@10.3.0";
 import pinologtail from "https://esm.sh/@logtail/pino@0.5.8";
@@ -588,7 +588,7 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
     const publishToMzIngest = async () => {
         await mzingestClient.put(`requests/${requestId}/result`, {
             json: payload
-        }).json().then(d => console.log(`Response received: ${JSON.stringify(d)}`))
+        }).json().catch(d => logger.error(`Invalid response received while persisting the result for request: ${requestId}, ${JSON.stringify(d)}`))
     }
 
     await Promise.all([
@@ -757,7 +757,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     ${sql}
                     ) LIMITED_CTE ${limitClause}
             )`
-    logger.info(`Executing query: ${finalQuery}`)
+    //logger.info(`Executing query: ${finalQuery}`)
     const result = await connection.runAndReadAll(finalQuery);
     const end = performance.now();
     logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);

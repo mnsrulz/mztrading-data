@@ -1,11 +1,11 @@
 import { Hono } from "https://esm.sh/hono@4.12.27";
-import { getStore } from "https://esm.sh/@netlify/blobs@10.7.9";
 import { cors } from "https://esm.sh/hono@4.12.27/cors";
 import { handle, getConnInfo } from "https://esm.sh/hono@4.12.27/netlify";
 import { HTTPException } from "https://esm.sh/hono@4.12.27/http-exception";
 import Pusher from 'https://esm.sh/pusher@5.3.3';
 import { Redis } from 'https://esm.sh/@upstash/redis@1.38.0'
 import delay from "https://esm.sh/delay@7.0.0";
+import { blobStores } from './store.ts';
 const instanceId = crypto.randomUUID();
 
 const pusherConfig = {
@@ -20,6 +20,8 @@ if (!pusherConfig.pusherUri) {
 };
 
 const pusher = Pusher.forURL(pusherConfig.pusherUri!);
+
+
 
 const app = new Hono();
 app.use('/api/*', cors());
@@ -63,12 +65,7 @@ app.put('/api/requests/:id/result', async (c) => {
     if (!body) throw new HTTPException(400, { message: "Invalid payload or empty data." });
 
     try {
-        const resultStore = getStore({
-            name: "request-results",
-            //consistency: "strong" // Ensures immediate read availability
-        });
-
-        await resultStore.setJSON(id, body);
+        await blobStores.requestResults.setJSON(id, body);
         return c.json({ message: "Result safely stored in Netlify Blobs" });
     } catch (error) {
         console.error(`Failed to store blob for ${id}:`, error);
@@ -84,20 +81,16 @@ app.put('/api/requests/:id/result', async (c) => {
  */
 async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 500) {
     const startTime = Date.now();
-    const resultStore = getStore({
-        name: "request-results",
-        consistency: "strong" // Ensures immediate read availability
-    });
-
     while (Date.now() - startTime < timeoutMs) {
 
         // Attempt to fetch the data from Netlify Blobs
-        const data = await resultStore.get(id, {
+        const data = await blobStores.requestResults.get(id, {
             type: "json"
         })
 
         if (data) {
-            resultStore.delete(id).catch(() => console.log(`error deleting blob: ${id}`));  //purge the blob as soon as we got the response.
+            //let's not delete it immediately 
+            //resultStore.delete(id).catch(() => console.log(`error deleting blob: ${id}`));  //purge the blob as soon as we got the response.
             return data;
         }
         // Wait a short duration before trying again to prevent rate-limiting
