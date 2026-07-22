@@ -5,6 +5,7 @@ import { HTTPException } from "https://esm.sh/hono@4.12.27/http-exception";
 import Pusher from 'https://esm.sh/pusher@5.3.3';
 import { Redis } from 'https://esm.sh/@upstash/redis@1.38.0'
 import delay from "https://esm.sh/delay@7.0.0";
+import { storeResult, getResult } from './tursoStore.ts';
 const instanceId = crypto.randomUUID();
 
 const pusherConfig = {
@@ -55,6 +56,8 @@ app.post('/api/requests', async c => {
     const info = getConnInfo(c)
     const clientId = info.remote.address;
     await redis.publish("worker-request", JSON.stringify({ channel: `channel-${instanceId}`, ...args, clientId }));
+    // for instrumentation only now.
+    waitForResultFromTurso(args.requestId).catch(err => console.error(`timeout retreving from turso store..`, err));
     const data = await waitForResult(args.requestId);
     clearTimeout(tmr);
     return c.json(data);
@@ -65,15 +68,13 @@ app.put('/api/requests/:id/result', async (c) => {
     const body = await c.req.json().catch(() => null);
     if (!body) throw new HTTPException(400, { message: "Invalid payload or empty data." });
 
-    // try {
-    //     await redis.set(id, JSON.stringify(body), { ex: 60 });
-    //     console.log(`Stored result for request ${id} successfully.`);
-    //     return c.json({ message: "Result stored" });
-    // } catch (error) {
-    //     console.error(`Failed to store result for ${id}:`, error);
-    //     throw new HTTPException(500, { message: "Failed to persist result" });
-    // }
-    return c.json({ message: "Result stored" });
+    try {
+        await storeResult(id, body);
+        return c.json({ message: "Result stored" });
+    } catch (error) {
+        console.error(`Failed to store result for ${id}:`, error);
+        return c.json({ message: "Failed to persist result" }, 500);
+    }
 });
 
 async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 200) {
@@ -83,6 +84,20 @@ async function waitForResult(id: string, timeoutMs = 10000, pollIntervalMs = 200
         if (raw) {
             //redis.del(id).catch(() => {});
             return typeof raw === 'string' ? JSON.parse(raw) : raw;
+        }
+        await delay(pollIntervalMs);
+    }
+    throw new Error(`Polling timed out after ${timeoutMs / 1000} seconds for ID: ${id}`);
+}
+
+async function waitForResultFromTurso(id: string, timeoutMs = 10000, pollIntervalMs = 200) {
+    const startTime = Date.now();
+    while (Date.now() - startTime < timeoutMs) {
+        const raw = await getResult(id);
+        if (raw) {
+            //redis.del(id).catch(() => {});
+            console.log(`Result retrieved from turso store for this id: ${id}`);
+            return;
         }
         await delay(pollIntervalMs);
     }
