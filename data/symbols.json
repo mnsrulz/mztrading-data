@@ -40,6 +40,10 @@
         "symbol": "AAOX"
     },
     {
+        "name": "Tradr 2X Short AAOI Daily ETF",
+        "symbol": "AAOZ"
+    },
+    {
         "name": "ADVANCE AUTO PARTS INC COM",
         "symbol": "AAP"
     },
@@ -546,6 +550,10 @@
     {
         "name": "ISHARES TR ASIA 50 ETF",
         "symbol": "AIA"
+    },
+    {
+        "name": "BITZERO HOLDINGS INC COM",
+        "symbol": "AIBZ"
     },
     {
         "name": "AI FINL CORP COM",
@@ -3300,10 +3308,6 @@
         "symbol": "CCOI"
     },
     {
-        "name": "CROSS CTRY HEALTHCARE INC COM",
-        "symbol": "CCRN"
-    },
-    {
         "name": "CENTURY COMMUNITIES INC COM",
         "symbol": "CCS"
     },
@@ -3668,7 +3672,7 @@
         "symbol": "CLB"
     },
     {
-        "name": "COLUMBIA FINANCIAL INC",
+        "name": "COLUMBIA FINL INC COM SHS",
         "symbol": "CLBK"
     },
     {
@@ -4210,6 +4214,10 @@
     {
         "name": "CAMDEN PPTY TR SH BEN INT",
         "symbol": "CPT"
+    },
+    {
+        "name": "GLOBAL X MORNINGSTAR CAPITAL A",
+        "symbol": "CPTL"
     },
     {
         "name": "TIDAL TRUST III USCF DLY TRGT 2X",
@@ -9840,6 +9848,10 @@
         "symbol": "IQLT"
     },
     {
+        "name": "ISHARES TR NASDAQ 100 ETF",
+        "symbol": "IQQ"
+    },
+    {
         "name": "IQVIA HLDGS INC COM",
         "symbol": "IQV"
     },
@@ -10718,10 +10730,6 @@
     {
         "name": "KITE REALTY GROUP TRUST COM NEW",
         "symbol": "KRG"
-    },
-    {
-        "name": "GLOBAL X FDS CONSCIOUS COS",
-        "symbol": "KRMA"
     },
     {
         "name": "KORU MEDICAL SYSTEMS INC COM",
@@ -11656,6 +11664,10 @@
         "symbol": "MBC"
     },
     {
+        "name": "MOBILITY GLOBAL INC COM SHS",
+        "symbol": "MBGL"
+    },
+    {
         "name": "MBIA INC COM",
         "symbol": "MBI"
     },
@@ -11754,6 +11766,10 @@
     {
         "name": "PEDIATRIX MEDICAL GROUP INC COM",
         "symbol": "MD"
+    },
+    {
+        "name": "MDA SPACE LTD COM",
+        "symbol": "MDA"
     },
     {
         "name": "MONGODB INC CL A",
@@ -13040,6 +13056,10 @@
         "symbol": "NOW"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LO NOW DA ETF",
+        "symbol": "NOWL"
+    },
+    {
         "name": "NEUROPACE INC COM",
         "symbol": "NPCE"
     },
@@ -13090,10 +13110,6 @@
     {
         "name": "NRX PHARMACEUTICALS INC COM NEW",
         "symbol": "NRXP"
-    },
-    {
-        "name": "NATIONAL STORAGE AFFILIATES TR COM SHS BEN IN",
-        "symbol": "NSA"
     },
     {
         "name": "NORFOLK SOUTHN CORP COM",
@@ -13770,6 +13786,10 @@
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY",
         "symbol": "ORCX"
+    },
+    {
+        "name": "Tradr 2X Short ORCL Daily ETF",
+        "symbol": "ORCZ"
     },
     {
         "name": "ORGANOGENESIS HLDGS INC COM",
@@ -15174,10 +15194,6 @@
     {
         "name": "TIDAL TRUST II DEFIANCE NASDAQ",
         "symbol": "QQQY"
-    },
-    {
-        "name": "EXCHANGE LISTED FDS TR QRAFT AI ENHCD",
-        "symbol": "QRFT"
     },
     {
         "name": "QUEST RESOURCE HLDG CORP COM NEW",
