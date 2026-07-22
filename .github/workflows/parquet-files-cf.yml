@@ -1,15 +1,18 @@
 name: Deploy mztradingparquetfiles to CF
 
 on:
-  workflow_dispatch: # Allow manual trigger from GitHub Actions UI
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["CBOE options daily parquet"]
+    branches: [main]
+    types:
+      - completed
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     steps:
     - uses: actions/checkout@v6
     - name: Setup Deno

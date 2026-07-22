@@ -1,5 +1,0 @@
-[build]
-  base = "netlify-apps/mztradingparquetfiles"
-  publish = "dist"
-  command = "deno run --allow-all ../../api/parquet-files.tsx"
-  ignore = "false"

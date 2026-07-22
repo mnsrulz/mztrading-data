@@ -14,7 +14,6 @@ No npm/node_modules in prod. All imports are URL-based ESM.
 | File | Purpose | Deployed To |
 |---|---|---|
 | `netlify-apps/mztradingdata/api.ts` | Main REST API (24 endpoints) | Netlify Edge Function |
-| `netlify-apps/mztradingparquetfiles/api.ts` | Parquet file explorer (Preact SSG) | Netlify Edge Function |
 | `netlify-apps/mzingest/api.ts` | Request ingress + response polling (Pusher + Upstash Redis + Netlify Blobs) | Netlify Edge Function |
 | `api/snapshot-cdn.ts` | Snapshot image CDN with caching (deprecated) | — |
 | `api/worker.ts` | Background worker (Redis + DuckDB Node-API + Pusher) | Standalone server |
@@ -38,6 +37,7 @@ cboe-options (download daily parquet from CBOE) — invoked via workflow_dispatc
   → cboe-options-consolidated (30-day rolling parquet consolidation)
     → cboe-options-oi-anomaly (OI anomaly detection)
     → options-snapshot-v2 (GEX/DEX PNG snapshot generation)
+    → parquet-files-cf (parquet file listing SSG + Cloudflare deploy)
 ```
 
 Netlify deploys happen automatically via Git integration (connected to `netlify-apps/` subdirectories). All pipeline steps can be manually triggered via `workflow_dispatch`.
@@ -64,7 +64,6 @@ Netlify deploys happen automatically via Git integration (connected to `netlify-
 
 Each app under `netlify-apps/` has its own `netlify.toml`:
 - `netlify-apps/mztradingdata/` — imports `api/api.ts`, builds via `deno bundle`
-- `netlify-apps/mztradingparquetfiles/` — imports `api/parquet-files.tsx`, SSG build
 - `netlify-apps/mzingest/` — standalone Hono app with Pusher + Redis + Netlify Blobs
 
 ## SQL injection warning

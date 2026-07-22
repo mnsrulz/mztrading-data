@@ -7,12 +7,11 @@ Options market data backend — CBOE options chains, Greeks, GEX/DEX snapshots, 
 
 ## Architecture
 
-**Three Netlify Edge Functions** (each under `netlify-apps/`):
+**Two Netlify Edge Functions** (each under `netlify-apps/`) + **Cloudflare Workers** for static assets:
 
 | App | Role |
 |---|---|
 | `mztradingdata` | Main REST API — options data, Greeks, exposure, pricing, OI anomaly (Hono, DuckDB-WASM) |
-| `mztradingparquetfiles` | Parquet file explorer — static site listing available datasets (Preact SSG) |
 | `mzingest` | Request ingress — accepts queries, returns results via WebSocket polling (Pusher + Redis + Netlify Blobs) |
 
 **Two standalone services:**
@@ -30,6 +29,7 @@ cboe-options (download parquet) — triggered by third-party scheduler at 6AM ES
   → cboe-options-consolidated (30-day rolling)
     → cboe-options-oi-anomaly (OI anomaly)
     → options-snapshot-v2 (GEX/DEX PNG)
+    → parquet-files-cf (parquet file listing SSG + Cloudflare deploy)
 ```
 
 Parquet files are stored as GitHub Releases. The API uses DuckDB-WASM at the edge.
@@ -59,5 +59,5 @@ No test, lint, or typecheck commands exist.
 - **Edge framework:** Hono
 - **Data query:** DuckDB-WASM + DuckDB Node-API
 - **Data format:** Parquet files (GitHub Releases)
-- **Infra:** Netlify Edge Functions, Deno Deploy, Cloudflare Workers
+- **Infra:** Netlify Edge Functions, Cloudflare Workers (static assets)
 - **Messaging:** Redis, Pusher, Netlify Blobs
