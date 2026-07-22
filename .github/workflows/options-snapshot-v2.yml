@@ -204,3 +204,22 @@ jobs:
           NF_BRANCH_NAME="NF_${RELEASE_NAME}"
           git branch -f "$NF_BRANCH_NAME"
           git push origin "$NF_BRANCH_NAME" --force
+  publish-to-cf:
+    runs-on: ubuntu-latest
+    needs: [set-release-vars, consolidate-snapshot-data]
+    env:
+      DISPLAY_NAME: ${{ needs.set-release-vars.outputs.display-name }}
+    steps:
+      - name: Download snapshot artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: snapshot-data
+          path: temp
+      - name: Build dist
+        run: |
+          unzip -o temp/options-snapshots.zip -d dist
+      - name: Publish to CF
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: versions upload --assets dist --compatibility-date 2026-07-10 --name mztradingcdn  --preview-alias nf-data-${{ env.DISPLAY_NAME }}
