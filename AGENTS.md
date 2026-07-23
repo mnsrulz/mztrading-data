@@ -176,3 +176,4 @@ In `DEBUG_MODE=1`, you must manually construct the function call to test a speci
 - `data/cboe-options-rolling.json` is the live config — change URLs there if storage moves
 - When adding new parquet-based endpoints, follow the pattern in `historicalOptions.ts` (`registerFileBuffer` + `conn.send`)
 - Job scripts in `jobs/` use Python for data processing, Deno for orchestration
+- **Always ask the user before committing** — never commit without explicit confirmation
