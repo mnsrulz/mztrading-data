@@ -9,6 +9,7 @@ import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import pRetry from 'https://esm.sh/p-retry@8.0.0';
 import ky from 'https://esm.sh/ky@1.8.2';
+import PQueue from 'https://esm.sh/p-queue@9.3.3';
 
 
 const app = new Hono();
@@ -44,6 +45,11 @@ let redisSubscriber = createClient({
 });
 
 let consecutiveRedisFailures = 0;
+
+const MAX_CONCURRENCY = parseInt(Deno.env.get('MAX_CONCURRENCY') || '2', 10);
+const QUEUE_TIMEOUT_MS = parseInt(Deno.env.get('QUEUE_TIMEOUT_MS') || '5000', 10);
+const queue = new PQueue({ concurrency: MAX_CONCURRENCY });
+
 
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
 const pusherClient = new PusherJS(PUSHER_APP_KEY || '', {
@@ -515,7 +521,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     ) LIMITED_CTE ${limitClause}
             )`
     //logger.info(`Executing query: ${finalQuery}`)
-    const result = await connection.runAndReadAll(finalQuery);
+    const result = await connection.startStreamThenReadAll(finalQuery);
     const end = performance.now();
     logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
 
@@ -562,12 +568,17 @@ async function initRedisSubscription() {
                     return;
                 }
 
-                handler(args)
-                    .then(rows => publish(requestId, false, rows))
-                    .catch(error => {
-                        logger.error({ err: error }, `Error processing ${requestType}`);
-                        return publish(requestId, true, {});
-                    });
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), QUEUE_TIMEOUT_MS);
+                queue.add(() =>
+                    handler(args)
+                        .then(rows => publish(requestId, false, rows))
+                        .catch(error => {
+                            logger.error({ err: error }, `Error processing ${requestType}`);
+                            return publish(requestId, true, {});
+                        }),
+                    { signal: controller.signal }
+                ).catch(() => {}).finally(() => clearTimeout(timeout));
             } catch (error) {
                 logger.error({ err: error }, `Error processing message: ${message}`);
             }
