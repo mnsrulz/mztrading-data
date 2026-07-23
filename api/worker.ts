@@ -548,12 +548,11 @@ async function initRedisSubscription() {
         await redisSubscriber.subscribe('worker-request', (message) => {
             try {
                 consecutiveRedisFailures = 0;
-                const { requestType, clientId, data: args } = JSON.parse(message);
+                const { requestType, clientId, requestId,  ...args } = JSON.parse(message);
                 trackClient(clientId);
 
                 logger.info(`Received message from Redis: ${JSON.stringify({ requestType, clientId })}`);
 
-                const requestId = args?.requestId || 'unknown';
                 const handler = handlers[requestType];
 
                 if (!handler) {
