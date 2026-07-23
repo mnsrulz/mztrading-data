@@ -433,10 +433,52 @@ const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
             hasError = true;
         }
         await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`);
+        logger.debug(`Worker statistics request completed! ${JSON.stringify(args)}`);
 
     } catch (error) {
-        logger.error({ err: error }, `Error processing worker-volatility-request`);
+        logger.error({ err: error }, `Error processing worker-statistics-request`);
+    }
+};
+
+const handleOptionsStatsMessageV2 = async (args: OptionsStatsRequest) => {
+    try {
+        const { symbol, lookbackDays, requestId } = OptionsStatsSchema.parse(args);
+        logger.info(`Worker options stats V2 request received: ${JSON.stringify(args)}`);
+
+        const query = `
+            PIVOT (
+                SELECT T2.dt, T2.option_type, T.underlying_close_price AS close,
+                    SUM(T2.open_interest) AS total_oi,
+                    ROUND(SUM(T2.open_interest * T2.theo) * 100) AS total_price,
+                    ROUND(SUM(T2.open_interest * abs(T2.delta))) AS total_delta,
+                    CAST(COUNT(DISTINCT T2.option) AS INTEGER) AS options_count
+                FROM T2
+                JOIN T ON T.dt = T2.dt
+                WHERE T2.dt >= current_date - ${lookbackDays}
+                GROUP BY T2.dt, T2.option_type, T.underlying_close_price
+            )
+            ON option_type
+            USING FIRST(total_oi) AS oi, FIRST(total_price) AS price, FIRST(total_delta) AS delta, FIRST(options_count) AS options
+            GROUP BY dt, close
+            ORDER BY dt
+        `
+
+        let rows;
+        let hasError = false;
+        try {
+            const result = await executeReaderInternal(symbol, query, 99999);
+            const [dt, close, co, cp, cd, options_count, po, pp, pd] = result.getColumnsJson();
+            rows = { dt, close, options_count, co, po, cp, pp, cd, pd };
+        }
+        catch (err) {
+            logger.error({ err }, `error occurred while processing stats V2 request.`);
+            hasError = true;
+        }
+        await publish(requestId, hasError, rows, args.channel);
+        logger.debug(`Worker statistics V2 request completed! ${JSON.stringify(args)}`);
+
+    } catch (error) {
+        logger.error({ err: error }, `Error processing worker-statistics-V2-request`);
     }
 };
 
@@ -568,7 +610,10 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
 };
 
 async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
-    if (DEBUG_MODE) return;
+    if (DEBUG_MODE) {
+        logger.info(`[DEBUG] publish called for ${requestId}: hasError=${hasError}, rows=${JSON.stringify(rows)}`);
+        return;
+    }
     const payload = {
         requestId: requestId,
         hasError,
@@ -811,10 +856,12 @@ async function initRedisSubscription() {
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    await handleOptionsStatsMessage({
+    const debugRequestId = crypto.randomUUID();
+
+    await handleOptionsStatsMessageV2({
         channel: 'test',
-        lookbackDays: 45,
-        requestId: crypto.randomUUID(),
+        lookbackDays: 180,
+        requestId: debugRequestId,
         symbol: 'COIN'
     })
 
@@ -847,7 +894,7 @@ if (DEBUG_MODE) {
         logger.info("will shut down in 100ms")
     }
     emitter.on('volatility-query', ({ data }) => handleVolatilityMessageV2(data as OptionsVolRequest));
-    emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessage(data as OptionsStatsRequest));
+    emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessageV2(data as OptionsStatsRequest));
     emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
     emitter.on('expected-move-query', ({ data }) => handleExpectedMoveMessage(data as ExpectedMoveRequest));
     emitter.on('ohlc-query', ({ data }) => handleOhlcMessage(data as OhlcRequest));
