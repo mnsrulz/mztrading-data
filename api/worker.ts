@@ -6,14 +6,12 @@ import pinologtail from "https://esm.sh/@logtail/pino@0.5.8";
 
 import { createClient } from "npm:redis@^4.5";
 import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
-import Emittery from 'https://esm.sh/emittery@2.0.0';
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import pRetry from 'https://esm.sh/p-retry@8.0.0';
 import ky from 'https://esm.sh/ky@1.8.2';
 
 
 const app = new Hono();
-const emitter = new Emittery();
 
 
 const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
@@ -83,12 +81,6 @@ const logger = pino({
 BigInt.prototype.toJSON = function () {
     return Number(this.toString());
 };
-
-const WorkerRequestSchema = z.object({
-    requestType: z.enum(["volatility-query", "options-stat-query"]),
-    requestId: z.uuid(),
-    data: z.any()
-});
 
 const OptionsStatsSchema = z.object({
     symbol: z.string()
@@ -191,425 +183,150 @@ type ExpectedMoveRequest = z.infer<typeof ExpectedMoveRequestSchema>;
 type DynamicSqlRequest = z.infer<typeof DynamicSqlSchema>;
 type OhlcRequest = z.infer<typeof OhlcSchema>;
 
-/*
- {"symbol":"AAPL","lookbackDays":180,"delta":25,"expiration":"2025-11-07","mode":"delta","requestId":"977c5c7b-7e96-45d1-991b-db70992d0846"}       
-*/
-// const handleVolatilityMessage = async (args: OptionsVolRequest) => {
-//     try {
-//         const { symbol, lookbackDays, delta, expiration, mode, strike, requestId, dte, expiryMode } = OptionsVolRequestSchema.parse(args);
-
-//         logger.info(`Worker volatility request received: ${JSON.stringify(args)}`);
-//         using stack = new DisposableStack();
-//         const instance = await DuckDBInstance.create(":memory:");
-//         stack.defer(() => instance.closeSync());
-//         const connection = await instance.connect();
-//         stack.defer(() => connection.closeSync());
-//         const strikeFilter = mode == 'strike' ? ` AND strike = ${strike}` : '';
-//         let partitionOrderColumn = mode == 'atm' ? 'price_strike_diff' : 'delta_diff';
-//         let rows = [];
-//         let hasError = false;
-//         const useRollingExpiry = expiryMode === 'rolling';
-//         if (useRollingExpiry) {
-//             partitionOrderColumn = `dte ASC, ${partitionOrderColumn}`
-//         }
-//         try {
-
-//             const queryToExecute = `
-//             SELECT to_json(t)    
-//             FROM (
-//                 WITH OHLC AS (
-//                   SELECT DISTINCT dt, iv30/100  AS iv30, if(close > 0, close, LAG(close) OVER (PARTITION BY symbol ORDER BY dt)) AS close,
-//                   PERCENT_RANK() OVER (PARTITION BY symbol ORDER BY iv30) AS iv_percentile
-//                   FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
-//                 ), I AS (
-//                     SELECT DISTINCT opdata.dt, iv, option_type, option_symbol, expiration, strike, (bid + ask)/2 AS  mid_price, 
-//                     OHLC.close, OHLC.iv30, OHLC.iv_percentile,
-//                     abs(delta) AS abs_delta,
-//                     abs(strike - OHLC.close) AS price_strike_diff,
-//                     abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff,
-//                     DATE_DIFF('day', opdata.dt, expiration) AS dte
-//                     --FROM '${DATA_DIR}/${symbol}_*.parquet' opdata
-//                     FROM '${DATA_DIR}/symbol=${symbol}/*.parquet' opdata
-//                     JOIN OHLC ON OHLC.dt = opdata.dt
-//                     WHERE 1 = 1 
-//                         AND (open_interest > 0 OR bid > 0 OR ask > 0 OR iv > 0)           --JUST TO MAKE SURE NEW CONTRACTS WON'T APPEAR IN THE DATASET WHICH LIKELY REPRESENTED BY 0 OI, bid/ask/iv
-//                         AND OHLC.dt >= current_date - ${lookbackDays} ${strikeFilter} 
-//                 ), J AS (
-//                     SELECT *,
-//                     ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY dte ASC) AS dte_rn
-//                     FROM I
-//                     WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
-//                 ), M AS (
-//                     SELECT *,
-//                     ROW_NUMBER() OVER (PARTITION BY dt, option_type ORDER BY ${partitionOrderColumn} ASC) AS rn
-//                     FROM I
-//                     WHERE ${useRollingExpiry ? `dte >= ${dte}` : `expiration = '${expiration}'`}
-//                     --${useRollingExpiry ? 'WHERE dte_rn = 1' : ''}
-//                 )
-//                 SELECT 
-//                     array_agg(DISTINCT dt ORDER BY dt) AS dt,
-//                     --array_agg(expiration ORDER BY dt) FILTER (WHERE option_type='C') AS expiration,
-//                     array_agg(CAST(close AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS close,
-//                     array_agg(CAST(iv30 AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv30,
-//                     array_agg(CAST(iv_percentile AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS iv_percentile,
-//                     array_agg(CAST(iv AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='C') AS cv,
-//                     array_agg(CAST(iv AS DECIMAL(10, 4)) ORDER BY dt) FILTER (WHERE option_type='P') AS pv,
-//                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
-//                     array_agg(CAST(mid_price AS DECIMAL(10, 2)) ORDER BY dt) FILTER (WHERE option_type='P') AS pp
-//                 FROM M
-//                 WHERE rn = 1
-//                 --${mode == 'strike' ? '' : 'WHERE rn = 1'}
-//             ) t`;
-
-//             //log the time it took to complete it
-//             const start = performance.now();
-//             const result = await connection.runAndReadAll(queryToExecute)
-//             const end = performance.now();
-//             logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
-//             rows = result.getRows().map(r => JSON.parse(r[0]))[0];  //takes first row and first column
-
-//             logger.info(`Query result for symbol: ${symbol}, rows: ${JSON.stringify(rows)}`);
-//         }
-//         catch (err) {
-//             logger.error({ err }, `error occurred while processing request`);
-//             hasError = true;
-//         }
-
-//         await publish(requestId, hasError, rows, args.channel);
-//         logger.debug(`Worker volatility request completed! ${JSON.stringify(args)}`,);
-
-//     } catch (error) {
-//         console.error(error);
-//         logger.error({ err: error }, `Error processing worker-volatility-request`);
-//     }
-// };
-
 const handleVolatilityMessageV2 = async (args: OptionsVolRequest) => {
-    try {
-        const { symbol, lookbackDays, requestId } = OptionsVolRequestSchema.parse(args);
-        const delta = args.mode == 'delta' ? args.delta : 0;
+    const { symbol, lookbackDays } = OptionsVolRequestSchema.parse(args);
+    const delta = args.mode == 'delta' ? args.delta : 0;
 
-        let qualifyClause = '', whereClause = ` WHERE quote_date >= (current_date - ${lookbackDays})`;
-        let useQualifyClause = false;
+    let qualifyClause = '', whereClause = ` WHERE quote_date >= (current_date - ${lookbackDays})`;
+    let useQualifyClause = false;
 
-        if (args.expiryMode == 'rolling') {
-            useQualifyClause = true;
-            whereClause = `${whereClause} AND dte >= '${args.dte}'`;
-        } else if (args.expiryMode == 'fixed') {
-            whereClause = `${whereClause} AND expiration_date = '${args.expiration}'`;
-        }
-
-        let partitionOrderColumn = '';
-
-        if (args.mode == 'strike') {
-            whereClause = `${whereClause} AND strike_price = ${args.strike}`;
-        } else {
-            useQualifyClause = true;
-            partitionOrderColumn = args.mode == 'atm' ? ', price_strike_diff' : ', delta_diff';
-        }
-
-        if (useQualifyClause) {
-            qualifyClause = ` 
-            QUALIFY ROW_NUMBER() OVER (
-                    PARTITION BY quote_date, option_type 
-                    ORDER BY dte ASC ${partitionOrderColumn}
-            ) = 1`;
-        }
-
-        let rows: any = {};
-        let hasError = false;
-
-        let sql = `
-        PIVOT (
-        SELECT quote_date as dt, option_type, underlying_close_price as close, 
-        expiration_date as expiry, strike_price, round((bid_price + ask_price) / 2, 2) as mid_price, 
-        implied_volatility as iv, underlying_iv30 as iv30,
-        underlying_iv30_percentile as iv30_percentile
-        FROM (
-            SELECT *, abs(delta) AS abs_delta,
-                    abs(strike_price - underlying_close_price) AS price_strike_diff,
-                    abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff 
-            FROM
-            base
-        )
-        ${whereClause}
-        ${qualifyClause}
-        ORDER BY dt
-        )
-        ON option_type
-        USING FIRST(strike_price) AS strike, FIRST(mid_price) AS mid, FIRST(iv) AS iv
-        GROUP BY dt, close, iv30, iv30_percentile, expiry
-        ORDER BY dt
-        `;
-
-
-
-        try {
-            const result = await executeReaderInternal(symbol, sql, 99999);
-            const [dt, close, iv30, iv_percentile, expiry, cs, cp, cv, ps, pp, pv] = result.getColumnsJson();
-
-            rows = {
-                dt, close, iv30,
-                iv_percentile,
-                cv,
-                pv,
-                cs,
-                ps,
-                cp,
-                pp,
-                expiry
-            };
-        }
-        catch (err) {
-            logger.error({ err }, `error occurred while processing volatility request.`);
-            hasError = true;
-        }
-
-        await publish(requestId, hasError, rows, args.channel);
-
-    } catch (error) {
-        console.error(error);
-        logger.error({ err: error }, `Error processing worker-volatility-request`);
+    if (args.expiryMode == 'rolling') {
+        useQualifyClause = true;
+        whereClause = `${whereClause} AND dte >= '${args.dte}'`;
+    } else if (args.expiryMode == 'fixed') {
+        whereClause = `${whereClause} AND expiration_date = '${args.expiration}'`;
     }
-};
 
-const handleOptionsStatsMessage = async (args: OptionsStatsRequest) => {
-    try {
-        const { symbol, lookbackDays, requestId } = OptionsStatsSchema.parse(args);
+    let partitionOrderColumn = '';
 
-        logger.info(`Worker options stats request received: ${JSON.stringify(args)}`);
-        using stack = new DisposableStack();
-        const instance = await DuckDBInstance.create(":memory:");
-        stack.defer(() => instance.closeSync());
-        const connection = await instance.connect();
-        stack.defer(() => connection.closeSync());
-        let rows = [];
-        let hasError = false;
-        try {
-
-            const queryToExecute = `
-            SELECT to_json(t)    
-            FROM (
-                WITH T AS (
-                    SELECT DISTINCT dt, close, symbol
-                    FROM '${OHLC_DATA_DIR}/*.parquet' WHERE replace(symbol, '^', '') = '${symbol}'
-                    AND close > 0
-                ), T2 AS (
-                    SELECT dt, option_type, SUM(open_interest) AS total_oi,
-                    SUM(open_interest * theo)*100 AS total_price,
-                    SUM(open_interest * abs(delta)) AS total_delta,
-                    COUNT(DISTINCT option) AS options_count
-                    FROM '${DATA_DIR}/symbol=${symbol}/*.parquet'
-                    GROUP BY dt, option_type
-                ), M AS (
-                    SELECT T2.*, T.close
-                    FROM T
-                    JOIN T2 ON T.dt = T2.dt
-                    WHERE T.dt >= current_date - ${lookbackDays}
-                )
-                
-                SELECT 
-                    array_agg(DISTINCT dt ORDER BY dt) AS dt,
-                    array_agg(close ORDER BY dt) FILTER (WHERE option_type='C') AS close,
-                    array_agg(options_count ORDER BY dt) FILTER (WHERE option_type='C') AS options_count,
-                    array_agg(total_oi ORDER BY dt) FILTER (WHERE option_type='C') AS co,
-                    array_agg(total_oi ORDER BY dt) FILTER (WHERE option_type='P') AS po,
-                    array_agg(CAST(total_price AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='C') AS cp,
-                    array_agg(CAST(total_price AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='P') AS pp,
-                    array_agg(CAST(total_delta AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='C') AS cd,
-                    array_agg(CAST(total_delta AS BIGINT) ORDER BY dt) FILTER (WHERE option_type='P') AS pd
-                FROM M
-            ) t`;
-
-            //log the time it took to complete it
-            const start = performance.now();
-            const result = await connection.runAndReadAll(queryToExecute)
-            const end = performance.now();
-            logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
-            rows = result.getRows().map(r => JSON.parse(r[0]))[0];  //takes first row and first column
-        }
-        catch (err) {
-            logger.error(`error occurred while processing request: ${err}`);
-            hasError = true;
-        }
-        await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Worker statistics request completed! ${JSON.stringify(args)}`);
-
-    } catch (error) {
-        logger.error({ err: error }, `Error processing worker-statistics-request`);
+    if (args.mode == 'strike') {
+        whereClause = `${whereClause} AND strike_price = ${args.strike}`;
+    } else {
+        useQualifyClause = true;
+        partitionOrderColumn = args.mode == 'atm' ? ', price_strike_diff' : ', delta_diff';
     }
+
+    if (useQualifyClause) {
+        qualifyClause = ` 
+        QUALIFY ROW_NUMBER() OVER (
+                PARTITION BY quote_date, option_type 
+                ORDER BY dte ASC ${partitionOrderColumn}
+        ) = 1`;
+    }
+
+    const sql = `
+    PIVOT (
+    SELECT quote_date as dt, option_type, underlying_close_price as close, 
+    expiration_date as expiry, strike_price, round((bid_price + ask_price) / 2, 2) as mid_price, 
+    implied_volatility as iv, underlying_iv30 as iv30,
+    underlying_iv30_percentile as iv30_percentile
+    FROM (
+        SELECT *, abs(delta) AS abs_delta,
+                abs(strike_price - underlying_close_price) AS price_strike_diff,
+                abs(abs(delta) - ${(delta || 0) / 100}) AS delta_diff 
+        FROM
+        base
+    )
+    ${whereClause}
+    ${qualifyClause}
+    ORDER BY dt
+    )
+    ON option_type
+    USING FIRST(strike_price) AS strike, FIRST(mid_price) AS mid, FIRST(iv) AS iv
+    GROUP BY dt, close, iv30, iv30_percentile, expiry
+    ORDER BY dt
+    `;
+
+    const result = await executeReaderInternal(symbol, sql, 99999);
+    const [dt, close, iv30, iv_percentile, expiry, cs, cp, cv, ps, pp, pv] = result.getColumnsJson();
+
+    return { dt, close, iv30, iv_percentile, cv, pv, cs, ps, cp, pp, expiry };
 };
 
 const handleOptionsStatsMessageV2 = async (args: OptionsStatsRequest) => {
-    try {
-        const { symbol, lookbackDays, requestId } = OptionsStatsSchema.parse(args);
-        logger.info(`Worker options stats V2 request received: ${JSON.stringify(args)}`);
+    const { symbol, lookbackDays } = OptionsStatsSchema.parse(args);
+    logger.info(`Worker options stats V2 request received: ${JSON.stringify(args)}`);
 
-        const query = `
-            PIVOT (
-                SELECT T2.dt, T2.option_type, T.underlying_close_price AS close,
-                    SUM(T2.open_interest) AS total_oi,
-                    ROUND(SUM(T2.open_interest * T2.theo) * 100) AS total_price,
-                    ROUND(SUM(T2.open_interest * abs(T2.delta))) AS total_delta,
-                    CAST(COUNT(DISTINCT T2.option) AS INTEGER) AS options_count
-                FROM T2
-                JOIN T ON T.dt = T2.dt
-                WHERE T2.dt >= current_date - ${lookbackDays}
-                GROUP BY T2.dt, T2.option_type, T.underlying_close_price
-            )
-            ON option_type
-            USING FIRST(total_oi) AS oi, FIRST(total_price) AS price, FIRST(total_delta) AS delta, FIRST(options_count) AS options
-            GROUP BY dt, close
-            ORDER BY dt
-        `
+    const query = `
+        PIVOT (
+            SELECT T2.dt, T2.option_type, T.underlying_close_price AS close,
+                SUM(T2.open_interest) AS total_oi,
+                ROUND(SUM(T2.open_interest * T2.theo) * 100) AS total_price,
+                ROUND(SUM(T2.open_interest * abs(T2.delta))) AS total_delta,
+                CAST(COUNT(DISTINCT T2.option) AS INTEGER) AS options_count
+            FROM T2
+            JOIN T ON T.dt = T2.dt
+            WHERE T2.dt >= current_date - ${lookbackDays}
+            GROUP BY T2.dt, T2.option_type, T.underlying_close_price
+        )
+        ON option_type
+        USING FIRST(total_oi) AS oi, FIRST(total_price) AS price, FIRST(total_delta) AS delta, FIRST(options_count) AS options
+        GROUP BY dt, close
+        ORDER BY dt
+    `
 
-        let rows;
-        let hasError = false;
-        try {
-            const result = await executeReaderInternal(symbol, query, 99999);
-            const [dt, close, co, cp, cd, options_count, po, pp, pd] = result.getColumnsJson();
-            rows = { dt, close, options_count, co, po, cp, pp, cd, pd };
-        }
-        catch (err) {
-            logger.error({ err }, `error occurred while processing stats V2 request.`);
-            hasError = true;
-        }
-        await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Worker statistics V2 request completed! ${JSON.stringify(args)}`);
-
-    } catch (error) {
-        logger.error({ err: error }, `Error processing worker-statistics-V2-request`);
-    }
+    const result = await executeReaderInternal(symbol, query, 99999);
+    const [dt, close, co, cp, cd, options_count, po, pp, pd] = result.getColumnsJson();
+    logger.debug(`Worker statistics V2 request completed! ${JSON.stringify(args)}`);
+    return { dt, close, options_count, co, po, cp, pp, cd, pd };
 };
 
 const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
-    try {
-        const { symbol, lookbackDays, requestId, expiryMode: mode } = ExpectedMoveRequestSchema.parse(args);
-        logger.info(`Expected Move request received: ${JSON.stringify(args)}`);
+    const { symbol, lookbackDays, expiryMode: mode } = ExpectedMoveRequestSchema.parse(args);
+    logger.info(`Expected Move request received: ${JSON.stringify(args)}`);
 
-        const query = `
-            SELECT quote_date as dt, underlying_close_price as last_close, straddle_price, expiration_date AS expiry
-            --, high, low, weekly_close as close, strike_price, expected_move_percent, low, high,
-            --ROUND(CASE WHEN ABS(high/underlying_close_price-1) > ABS(low/underlying_close_price-1) THEN high/underlying_close_price-1
-            --ELSE low/underlying_close_price-1 END * 100, 2) AS actual_max_move_percent,
-            --ROUND((weekly_close/underlying_close_price-1) * 100, 2) AS actual_move_percent 
-            FROM (
-                SELECT quote_date, expiration_date, dte, strike_price, underlying_close_price,
-                round(SUM(mid_price),2) AS straddle_price, 
-                round((straddle_price/underlying_close_price)*100,2) as expected_move_percent
-                FROM dataset
-                WHERE moneyness = 'ATM'
-                AND quote_dow = 1
-                AND quote_date >= current_date - ${lookbackDays}
-                AND ${mode == 'weekly' ? 'dte <=7' : 'dte BETWEEN 25 AND 31'}
-                AND ${mode == 'weekly' ? 'is_weekly_expiration' : 'is_monthly_expiration'} = 1
-                GROUP BY quote_date, dte, strike_price, expiration_date, underlying_close_price
-            ) 
-            --LEFT JOIN (
-            --    SELECT CAST(date_trunc(${mode == 'weekly' ? "'week'" : "'month'"}, CAST(quote_date as date) - 1) AS STRING) AS start, 
-            --    MAX(underlying_high_price) high, 
-            --    MIN(underlying_low_price) low,
-            --    arg_max(underlying_close_price, quote_date) AS weekly_close
-            --    FROM dataset
-            --    GROUP BY start
-            --) WT ON WT.start = CAST(date_trunc(${mode == 'weekly' ? "'week'" : "'month'"}, CAST(quote_date as date)) AS STRING)
-            ORDER BY quote_date
-        `
+    const query = `
+        SELECT quote_date as dt, underlying_close_price as last_close, straddle_price, expiration_date AS expiry
+        FROM (
+            SELECT quote_date, expiration_date, dte, strike_price, underlying_close_price,
+            round(SUM(mid_price),2) AS straddle_price, 
+            round((straddle_price/underlying_close_price)*100,2) as expected_move_percent
+            FROM dataset
+            WHERE moneyness = 'ATM'
+            AND quote_dow = 1
+            AND quote_date >= current_date - ${lookbackDays}
+            AND ${mode == 'weekly' ? 'dte <=7' : 'dte BETWEEN 25 AND 31'}
+            AND ${mode == 'weekly' ? 'is_weekly_expiration' : 'is_monthly_expiration'} = 1
+            GROUP BY quote_date, dte, strike_price, expiration_date, underlying_close_price
+        ) 
+        ORDER BY quote_date
+    `
 
-        let rows;
-        let hasError = false;
-        try {
-
-            const result = await executeReaderInternal(symbol, query, 99999);
-            const [dt, last_close, straddle_price, expiry] = result.getColumnsJson();
-
-            rows = {
-                dt,
-                last_close,
-                straddle_price,
-                expiry
-            };
-        }
-        catch (err) {
-            logger.error({ err }, `error occurred while processing request`);
-            hasError = true;
-        }
-        await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Expected Move request finished${hasError ? ' with error.' : '!'}`);
-    } catch (error) {
-        logger.error({ err: error }, `Error processing Expected move request`);
-    }
+    const result = await executeReaderInternal(symbol, query, 99999);
+    const [dt, last_close, straddle_price, expiry] = result.getColumnsJson();
+    logger.debug(`Expected Move request finished!`);
+    return { dt, last_close, straddle_price, expiry };
 };
 
 const handleOhlcMessage = async (args: OhlcRequest) => {
-    try {
-        const { symbol, lookbackDays, requestId } = OhlcSchema.parse(args);
-        logger.info(`Ohlc request received: ${JSON.stringify(args)}`);
+    const { symbol, lookbackDays } = OhlcSchema.parse(args);
+    logger.info(`Ohlc request received: ${JSON.stringify(args)}`);
 
-        //const defaultOhlcData = { dt: [] as string[], open: [] as number[], high: [] as number[], low: [] as number[], close: [] as number[], iv30: [] as number[] };
-        /*
-        This method will return the actual ohlc for given range. We can also get it from yfinace apis.
-        */
-        const query = `
-            SELECT DISTINCT strftime(CASE 
-                WHEN dayofweek(CAST(dt AS DATE)) = 1 THEN CAST(dt AS DATE) - INTERVAL 3 DAY 
-                ELSE CAST(dt AS DATE) - INTERVAL 1 DAY 
-            END, '%Y-%m-%d') dt, underlying_open_price as open, underlying_high_price as high, 
-            underlying_low_price as low, underlying_close_price as close, underlying_iv30 as iv30
-            FROM T
-            WHERE T.dt >= current_date - ${lookbackDays} AND dayofweek(dt) <> 6 --EXCLUDE SATURDAYS LEGACY DATA 
-            ORDER BY dt
-        `
+    const query = `
+        SELECT DISTINCT strftime(CASE 
+            WHEN dayofweek(CAST(dt AS DATE)) = 1 THEN CAST(dt AS DATE) - INTERVAL 3 DAY 
+            ELSE CAST(dt AS DATE) - INTERVAL 1 DAY 
+        END, '%Y-%m-%d') dt, underlying_open_price as open, underlying_high_price as high, 
+        underlying_low_price as low, underlying_close_price as close, underlying_iv30 as iv30
+        FROM T
+        WHERE T.dt >= current_date - ${lookbackDays} AND dayofweek(dt) <> 6
+        ORDER BY dt
+    `
 
-        let rows;
-        let hasError = false;
-        try {
-
-            const result = await executeReaderInternal(symbol, query, 99999);
-            const [dt, open, high, low, close, iv30] = result.getColumnsJson();
-
-            rows = {
-                dt,
-                open,
-                high,
-                low,
-                close,
-                iv30
-            };
-        }
-        catch (err) {
-            logger.error({ err }, `error occurred while processing request`);
-            hasError = true;
-        }
-        await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Ohlc request finished${hasError ? ' with error.' : '!'}`);
-    } catch (error) {
-        logger.error({ err: error }, `Error processing Ohlc request`);
-    }
+    const result = await executeReaderInternal(symbol, query, 99999);
+    const [dt, open, high, low, close, iv30] = result.getColumnsJson();
+    logger.debug(`Ohlc request finished!`);
+    return { dt, open, high, low, close, iv30 };
 };
 
 const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
-    try {
-        const { symbol, sql, requestId } = DynamicSqlSchema.parse(args);
-        let rows: { rows: any[], columns: any } = { rows: [], columns: null };
-        let hasError = false;
-        try {
-            const result = await executeReaderInternal(symbol, sql);
-            rows = { rows: result.getRowsJson(), columns: result.columnNamesAndTypesJson() };
-        }
-        catch (err) {
-            logger.error({ err }, `error occurred while processing request.`);
-            hasError = true;
-        }
-        await publish(requestId, hasError, rows, args.channel);
-        logger.debug(`Dynamic SQL request completed! ${JSON.stringify(args)}`);
-
-    } catch (error) {
-        logger.error({ err: error }, `Error processing worker-dynamic-sql-request`);
-    }
+    const { symbol, sql } = DynamicSqlSchema.parse(args);
+    const result = await executeReaderInternal(symbol, sql);
+    logger.debug(`Dynamic SQL request completed! ${JSON.stringify(args)}`);
+    return { rows: result.getRowsJson(), columns: result.columnNamesAndTypesJson() };
 };
 
-async function publish(requestId: string, hasError: boolean, rows: any, channel: string) {
+async function publish(requestId: string, hasError: boolean, rows: any) {
     if (DEBUG_MODE) {
         logger.info(`[DEBUG] publish called for ${requestId}: hasError=${hasError}, rows=${JSON.stringify(rows)}`);
         return;
@@ -619,16 +336,6 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
         hasError,
         value: rows
     };
-
-    // const publishInternal = async () => {
-    //     //this is for publishing the message so any subscriber can listen to.
-    //     const redisPublisher = redisSubscriber.duplicate();
-    //     await redisPublisher.connect();
-
-    //     const count = await redisPublisher.publish(`worker-response-${channel}`, JSON.stringify(payload));
-    //     redisPublisher.quit();
-    //     logger.info(`Published response for requestId ${requestId} to ${count} subscriber${count > 1 ? 's' : ''}`);
-    // }
 
     const publishToMzIngest = async () => {
         await mzingestClient.put(`requests/${requestId}/result`, {
@@ -645,13 +352,9 @@ async function publish(requestId: string, hasError: boolean, rows: any, channel:
     }
 
     await Promise.all([
-        //pRetry(publishInternal, { retries: 3 }),
         pRetry(publishToRedis, { retries: 3 }),
         pRetry(publishToMzIngest, { retries: 3 })
     ])
-
-
-    //await redisClient.publish(`worker-response-${requestId}`, JSON.stringify(payload));
 }
 
 async function executeReaderInternal(symbol: string, sql: string, limit = 1000) {
@@ -821,67 +524,73 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
     return result;
 }
 
+function trackClient(clientId: string) {
+    const currentMinute = new Date().toISOString().slice(0, 16);
+    const valkeyKey = `track:${clientId}:${currentMinute}`;
+    valkey.incr(valkeyKey).catch(k => logger.error(k));
+}
+
+const handlers: Record<string, (args: any) => Promise<any>> = {
+    'volatility-query': (args) => handleVolatilityMessageV2(args as OptionsVolRequest),
+    'options-stat-query': (args) => handleOptionsStatsMessageV2(args as OptionsStatsRequest),
+    'dynamic-sql-query': (args) => handleDynamicSqlMessage(args as DynamicSqlRequest),
+    'expected-move-query': (args) => handleExpectedMoveMessage(args as ExpectedMoveRequest),
+    'ohlc-query': (args) => handleOhlcMessage(args as OhlcRequest),
+};
+
 async function initRedisSubscription() {
     try {
         logger.info(`Initializing Redis subscription on worker-request channel`);
 
         redisSubscriber = redisSubscriber.duplicate();
-
         await redisSubscriber.connect();
 
         await redisSubscriber.subscribe('worker-request', (message) => {
             try {
-                consecutiveRedisFailures = 0; // reset on successful message receipt
-                const data = JSON.parse(message) as { requestType: string, clientId: string };
-                logger.info(`Received message from Redis on worker-request channel: ${JSON.stringify(data)}`);
-                emitter.emit(data.requestType, data);
+                consecutiveRedisFailures = 0;
+                const { requestType, clientId, data: args } = JSON.parse(message);
+                trackClient(clientId);
 
-                // Create a unique key per user per minute (e.g., "track:127.0.0.1:2026-07-07T18:05")
-                const currentMinute = new Date().toISOString().slice(0, 16);
-                const valkeyKey = `track:${data.clientId}:${currentMinute}`;
-                // Atomically increment the request count in Valkey
-                valkey.incr(valkeyKey).catch(k => logger.error(k)); //let it run in background
+                logger.info(`Received message from Redis: ${JSON.stringify({ requestType, clientId })}`);
+
+                const requestId = args?.requestId || 'unknown';
+                const handler = handlers[requestType];
+
+                if (!handler) {
+                    logger.error(`Unknown request type: ${requestType}`);
+                    publish(requestId, true, {});
+                    return;
+                }
+
+                handler(args)
+                    .then(rows => publish(requestId, false, rows))
+                    .catch(error => {
+                        logger.error({ err: error }, `Error processing ${requestType}`);
+                        return publish(requestId, true, {});
+                    });
             } catch (error) {
-                logger.error({ err: error }, `Error while emitting message on worker-request channel: ${message}`);
+                logger.error({ err: error }, `Error processing message: ${message}`);
             }
         });
 
-        logger.info(`Subscribed to Redis on workerr-request channel`);
+        logger.info(`Subscribed to Redis on worker-request channel`);
     } catch (error) {
         logger.error({ err: error }, `error occurred while initializing the redis subscription.`);
-        Deno.exit(1);   //Better to exit the process.
+        Deno.exit(1);
     }
 }
 
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    const debugRequestId = crypto.randomUUID();
-
-    await handleOptionsStatsMessageV2({
+    const result = await handleOptionsStatsMessageV2({
         channel: 'test',
         lookbackDays: 180,
-        requestId: debugRequestId,
+        requestId: crypto.randomUUID(),
         symbol: 'COIN'
-    })
+    });
 
-    // await handleOhlcMessage({
-    //     channel: 'test',
-    //     lookbackDays: 45,
-    //     requestId: crypto.randomUUID(),
-    //     symbol: 'COIN'
-    // })
-    // await handleVolatilityMessageV2({
-    //     channel: 'test',
-    //     lookbackDays: 180,
-    //     requestId: crypto.randomUUID(),
-    //     symbol: 'SPX',
-    //     mode: 'delta',
-    //     delta: 25,
-    //     dte: 30,
-    //     expiryMode: 'rolling',
-    // })
-    //await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
+    logger.info(`Result: ${JSON.stringify(result)}`);
 } else {
     const shutdown = () => {
         logger.info(`shutting down...`);
@@ -893,11 +602,6 @@ if (DEBUG_MODE) {
         pusherClient.disconnect();
         logger.info("will shut down in 100ms")
     }
-    emitter.on('volatility-query', ({ data }) => handleVolatilityMessageV2(data as OptionsVolRequest));
-    emitter.on('options-stat-query', ({ data }) => handleOptionsStatsMessageV2(data as OptionsStatsRequest));
-    emitter.on('dynamic-sql-query', ({ data }) => handleDynamicSqlMessage(data as DynamicSqlRequest));
-    emitter.on('expected-move-query', ({ data }) => handleExpectedMoveMessage(data as ExpectedMoveRequest));
-    emitter.on('ohlc-query', ({ data }) => handleOhlcMessage(data as OhlcRequest));
 
     await initRedisSubscription();
 
@@ -920,49 +624,31 @@ if (DEBUG_MODE) {
         await initRedisSubscription();
     });
 
-    //init valkey
     await valkey.connect();
 
     Deno.addSignalListener("SIGTERM", shutdown);
     Deno.addSignalListener("SIGINT", shutdown);
-    
+
     logger.info(`Worker is running...`);
-    
-    // For debugging in local env.
-    // handleVolatilityMessage({
-    //     symbol: "COIN",
-    //     lookbackDays: 90,
-    //     delta: 25,
-    //     expiration: "2026-04-17",
-    //     // expiryMode: "fixed",
-    //     // expiryMode: "rolling",
-    //     // dte : 7,
-    //     mode: "delta",
-    //     //expiryMode: "rolling",
-    //     requestId: crypto.randomUUID()
-    // })
-    
+
     app.get('/',
         c => c.json({ "message": "hello" })
     ).get('/stats', async c => {
         const stats: Record<string, number> = {};
-    
-        // Safely scan Valkey for any keys matching our tracking pattern
-        // scanIter handles pagination automatically under the hood
+
         for await (const key of valkey.scanIterator({ MATCH: 'track:*' })) {
             const count = await valkey.get(key);
-    
+
             if (count !== null) {
                 stats[key] = parseInt(count, 10);
             }
         }
-    
+
         return c.json({
             description: "Active client request counts inside active windows",
             data: stats
         });
     });
-    
-    // --- Start server ---
+
     Deno.serve(app.fetch);
 }
