@@ -49,13 +49,13 @@ const App = ({ options, prefix }: { options: OptionsSummary[]; prefix: string })
   </div>
 );
 
-const FilePage = ({ title, fileName }: { title: string, fileName: string }) => (
+const FilePage = ({ title, fileName, fileUrl }: { title: string, fileName: string, fileUrl: string }) => (
   <div>
     <h1>{title}</h1>
     <ul>
       <li><a href="../">...</a></li>
       <li>
-        <a href={fileName} target="_blank">
+        <a href={fileUrl} target="_blank">
           {fileName}
         </a>
       </li>
@@ -75,14 +75,16 @@ optionsSummary.forEach((match) => {
   // 1. Files detail page
   app.get(`/files/dt=${match.dt}/`, (c) => {
     const fileName = new URL(match.optionsAssetUrl).pathname.split("/").pop() || '';
-    return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Options Data for ${match.dt}`} fileName={fileName} /></Html>));
+    const fileUrl = `/files/dt=${match.dt}/${fileName}`;
+    return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Options Data for ${match.dt}`} fileName={fileName} fileUrl={fileUrl} /></Html>));
   });
 
   // 2. OHLC detail page
   if (match.stocksAssetUrl) {
     app.get(`/ohlc/dt=${match.dt}/`, (c) => {
       const fileName = new URL(match.stocksAssetUrl).pathname.split("/").pop() || '';
-      return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Ohlc Data for ${match.dt}`} fileName={fileName} /></Html>));
+      const fileUrl = `/ohlc/dt=${match.dt}/${fileName}`;
+      return c.html("<!DOCTYPE html>" + renderToString(<Html><FilePage title={`Ohlc Data for ${match.dt}`} fileName={fileName} fileUrl={fileUrl} /></Html>));
     });
   }
 });
