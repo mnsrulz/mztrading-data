@@ -811,22 +811,29 @@ async function initRedisSubscription() {
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
+    await handleOptionsStatsMessage({
+        channel: 'test',
+        lookbackDays: 45,
+        requestId: crypto.randomUUID(),
+        symbol: 'COIN'
+    })
+
     // await handleOhlcMessage({
     //     channel: 'test',
     //     lookbackDays: 45,
     //     requestId: crypto.randomUUID(),
     //     symbol: 'COIN'
     // })
-    await handleVolatilityMessageV2({
-        channel: 'test',
-        lookbackDays: 180,
-        requestId: crypto.randomUUID(),
-        symbol: 'SPX',
-        mode: 'delta',
-        delta: 25,
-        dte: 30,
-        expiryMode: 'rolling',
-    })
+    // await handleVolatilityMessageV2({
+    //     channel: 'test',
+    //     lookbackDays: 180,
+    //     requestId: crypto.randomUUID(),
+    //     symbol: 'SPX',
+    //     mode: 'delta',
+    //     delta: 25,
+    //     dte: 30,
+    //     expiryMode: 'rolling',
+    // })
     //await executeReaderInternal("COIN", `SELECT * FROM dataset LIMIT 10`, 5);
 } else {
     const shutdown = () => {
@@ -871,44 +878,44 @@ if (DEBUG_MODE) {
 
     Deno.addSignalListener("SIGTERM", shutdown);
     Deno.addSignalListener("SIGINT", shutdown);
-}
-
-logger.info(`Worker is running...`);
-
-// For debugging in local env.
-// handleVolatilityMessage({
-//     symbol: "COIN",
-//     lookbackDays: 90,
-//     delta: 25,
-//     expiration: "2026-04-17",
-//     // expiryMode: "fixed",
-//     // expiryMode: "rolling",
-//     // dte : 7,
-//     mode: "delta",
-//     //expiryMode: "rolling",
-//     requestId: crypto.randomUUID()
-// })
-
-app.get('/',
-    c => c.json({ "message": "hello" })
-).get('/stats', async c => {
-    const stats: Record<string, number> = {};
-
-    // Safely scan Valkey for any keys matching our tracking pattern
-    // scanIter handles pagination automatically under the hood
-    for await (const key of valkey.scanIterator({ MATCH: 'track:*' })) {
-        const count = await valkey.get(key);
-
-        if (count !== null) {
-            stats[key] = parseInt(count, 10);
+    
+    logger.info(`Worker is running...`);
+    
+    // For debugging in local env.
+    // handleVolatilityMessage({
+    //     symbol: "COIN",
+    //     lookbackDays: 90,
+    //     delta: 25,
+    //     expiration: "2026-04-17",
+    //     // expiryMode: "fixed",
+    //     // expiryMode: "rolling",
+    //     // dte : 7,
+    //     mode: "delta",
+    //     //expiryMode: "rolling",
+    //     requestId: crypto.randomUUID()
+    // })
+    
+    app.get('/',
+        c => c.json({ "message": "hello" })
+    ).get('/stats', async c => {
+        const stats: Record<string, number> = {};
+    
+        // Safely scan Valkey for any keys matching our tracking pattern
+        // scanIter handles pagination automatically under the hood
+        for await (const key of valkey.scanIterator({ MATCH: 'track:*' })) {
+            const count = await valkey.get(key);
+    
+            if (count !== null) {
+                stats[key] = parseInt(count, 10);
+            }
         }
-    }
-
-    return c.json({
-        description: "Active client request counts inside active windows",
-        data: stats
+    
+        return c.json({
+            description: "Active client request counts inside active windows",
+            data: stats
+        });
     });
-});
-
-// --- Start server ---
-Deno.serve(app.fetch);
+    
+    // --- Start server ---
+    Deno.serve(app.fetch);
+}
