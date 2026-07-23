@@ -4216,7 +4216,7 @@
         "symbol": "CPT"
     },
     {
-        "name": "GLOBAL X MORNINGSTAR CAPITAL A",
+        "name": "GLOBAL X FDS MORNINGSTAR CAP",
         "symbol": "CPTL"
     },
     {
@@ -7676,10 +7676,6 @@
         "symbol": "GALT"
     },
     {
-        "name": "GAMBLING COM GROUP LIMITED ORDINARY SHARES",
-        "symbol": "GAMB"
-    },
-    {
         "name": "GAIN THERAPEUTICS INC COM",
         "symbol": "GANX"
     },
@@ -8326,6 +8322,10 @@
     {
         "name": "GORILLA TECHNOLOGY GROUP INC SHS NEW",
         "symbol": "GRRR"
+    },
+    {
+        "name": "GRANDSTAND LTD",
+        "symbol": "GRSD"
     },
     {
         "name": "GROWGENERATION CORP COM",
