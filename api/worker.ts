@@ -5,7 +5,7 @@ import pretty from "https://esm.sh/pino-pretty@10.3.0";
 import pinologtail from "https://esm.sh/@logtail/pino@0.5.8";
 
 import { createClient } from "npm:redis@^4.5";
-import { DuckDBInstance } from "npm:@duckdb/node-api@1.5.2-r.1";
+import { DuckDBInstance, DuckDBConnection } from "npm:@duckdb/node-api@1.5.2-r.1";
 import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import pRetry from 'https://esm.sh/p-retry@8.0.0';
 import ky from 'https://esm.sh/ky@1.8.2';
@@ -50,6 +50,11 @@ const MAX_CONCURRENCY = parseInt(Deno.env.get('MAX_CONCURRENCY') || '2', 10);
 const QUEUE_TIMEOUT_MS = parseInt(Deno.env.get('QUEUE_TIMEOUT_MS') || '5000', 10);
 const queue = new PQueue({ concurrency: MAX_CONCURRENCY });
 
+const connectionPool: DuckDBConnection[] = [];
+
+async function getConnection() {
+    return connectionPool.pop() || await duckDbInstance.connect();
+}
 
 const channelName = Deno.env.get('PUSHER_CHANNEL_NAME') || 'mztrading-channel';
 const pusherClient = new PusherJS(PUSHER_APP_KEY || '', {
@@ -364,13 +369,12 @@ async function publish(requestId: string, hasError: boolean, rows: any) {
 }
 
 async function executeReaderInternal(symbol: string, sql: string, limit = 1000) {
-    using stack = new DisposableStack();
-    const connection = await duckDbInstance.connect();
-    stack.defer(() => connection.closeSync());
-    let rows = [];
-    const limitClause = limit > 0 ? `LIMIT ${limit}` : '';
+    const connection = await getConnection();
+    try {
+        let rows = [];
+        const limitClause = limit > 0 ? `LIMIT ${limit}` : '';
 
-    const baseQueryCte = `
+        const baseQueryCte = `
                 WITH T AS (
                     SELECT DISTINCT dt, open as underlying_open_price, high as underlying_high_price, low as underlying_low_price, 
                     close as underlying_close_price, volume as underlying_volume, 
@@ -509,9 +513,9 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     FROM ranked
                 )`;
 
-    //log the time it took to complete it
-    const start = performance.now();
-    const finalQuery = `
+        //log the time it took to complete it
+        const start = performance.now();
+        const finalQuery = `
             -----BEGIN QUERY----
             ${baseQueryCte}
             --SELECT json_group_array(t) FROM (    
@@ -520,14 +524,17 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     ${sql}
                     ) LIMITED_CTE ${limitClause}
             )`
-    //logger.info(`Executing query: ${finalQuery}`)
-    const result = await connection.startStreamThenReadAll(finalQuery);
-    const end = performance.now();
-    logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
+        //logger.info(`Executing query: ${finalQuery}`)
+        const result = await connection.startStreamThenReadAll(finalQuery);
+        const end = performance.now();
+        logger.info(`✅ Query completed in ${(end - start).toFixed(2)} ms`);
 
-    // rows = JSON.parse(result.getRows().at(0)?.at(0) as string); //takes first row and first column
-    //rows = result.getRows();
-    return result;
+        // rows = JSON.parse(result.getRows().at(0)?.at(0) as string); //takes first row and first column
+        //rows = result.getRows();
+        return result;
+    } finally {
+        connectionPool.push(connection);
+    }
 }
 
 function trackClient(clientId: string) {
@@ -555,7 +562,7 @@ async function initRedisSubscription() {
             try {
                 consecutiveRedisFailures = 0;
                 const args = JSON.parse(message);
-                const { requestType, clientId, requestId} = args;
+                const { requestType, clientId, requestId } = args;
                 trackClient(clientId);
 
                 logger.info(`Received message from Redis: ${JSON.stringify({ requestType, clientId })}`);
@@ -578,7 +585,7 @@ async function initRedisSubscription() {
                             return publish(requestId, true, {});
                         }),
                     { signal: controller.signal }
-                ).catch(() => {}).finally(() => clearTimeout(timeout));
+                ).catch(() => { }).finally(() => clearTimeout(timeout));
             } catch (error) {
                 logger.error({ err: error }, `Error processing message: ${message}`);
             }
