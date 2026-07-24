@@ -96,6 +96,20 @@ if (failedSymbols.length > 0) {
     console.log(`Failed symbols list: ${JSON.stringify(failedSymbols, null, 2)}`);
 }
 
+Deno.writeTextFileSync(`${dataFolder}/summary.json`, JSON.stringify({
+    batch: batchFileName,
+    matrixId: MATRIX_ID,
+    total: symbols.length,
+    success: successfullyGenerated,
+    failed: failedSymbols.length,
+    failedSymbols,
+    failedSymbolsSummary: failedSymbols.length === 0
+        ? ""
+        : failedSymbols.length <= 5
+            ? failedSymbols.join(", ")
+            : `${failedSymbols.slice(0, 5).join(", ")} and ${failedSymbols.length - 5} others`,
+}, null, 2));
+
 async function processSymbol(symbol: string) {
     async function captureScreenshot(path: string) {
         // async function captureScreenshotCore() {

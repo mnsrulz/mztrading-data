@@ -128,6 +128,7 @@ jobs:
           path: |
             ${{ github.workspace}}/data/options-snapshot.summary.json
             ${{ github.workspace}}/temp/options-snapshots/batch-${{ strategy.job-index }}/*.png
+            ${{ github.workspace}}/temp/options-snapshots/batch-${{ strategy.job-index }}/summary.json
             
   consolidate-snapshot-data:
     runs-on: ubuntu-latest
@@ -148,6 +149,22 @@ jobs:
         run: |
           zip -rj0 temp/options-snapshots.zip temp -i '*.png'
           cp temp/symbol-batches/temp/all-symbols.json temp/all-symbols.json
+      - name: Aggregate batch summaries
+        run: |
+          echo "## Snapshot Generation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "| Batch | Total | Success | Failed | Status | Failed Symbols |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|-------|---------|--------|--------|----------------|" >> $GITHUB_STEP_SUMMARY
+          total=0; success=0; failed=0
+          for f in temp/snapshot-data-batch-*/temp/options-snapshots/batch-*/summary.json; do
+            b_total=$(jq .total "$f")
+            b_success=$(jq .success "$f")
+            b_failed=$(jq .failed "$f")
+            b_summary=$(jq -r .failedSymbolsSummary "$f")
+            status="✅"; [ "$b_failed" -gt 0 ] && status="⚠️"
+            echo "| $(jq -r .matrixId "$f") | $b_total | $b_success | $b_failed | $status | $b_summary |" >> $GITHUB_STEP_SUMMARY
+            total=$((total + b_total)); success=$((success + b_success)); failed=$((failed + b_failed))
+          done
+          echo "| **Totals** | **$total** | **$success** | **$failed** | | |" >> $GITHUB_STEP_SUMMARY
       - name: Upload artifacts 
         uses: actions/upload-artifact@v4
         with:
