@@ -268,6 +268,10 @@
         "symbol": "ACNT"
     },
     {
+        "name": "ALPHA COGNITION INC COM NEW",
+        "symbol": "ACOG"
+    },
+    {
         "name": "ACRES COMMERCIAL REALTY CORP COM NEW",
         "symbol": "ACR"
     },
@@ -1380,6 +1384,10 @@
         "symbol": "ARRY"
     },
     {
+        "name": "ARTIVA BIOTHERAPEUTICS INC COM",
+        "symbol": "ARTV"
+    },
+    {
         "name": "ISHARES TR FUTU AI TECH ETF",
         "symbol": "ARTY"
     },
@@ -1734,10 +1742,6 @@
     {
         "name": "AMERICAN CENTY ETF TR AVAN US VALU ETF",
         "symbol": "AVMV"
-    },
-    {
-        "name": "AVANOS MED INC COM",
-        "symbol": "AVNS"
     },
     {
         "name": "AVIENT CORPORATION COM",
@@ -2154,6 +2158,10 @@
     {
         "name": "BEAM GLOBAL COM",
         "symbol": "BEEM"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "BEG"
     },
     {
         "name": "KE HLDGS INC SPONSORED ADS",
@@ -3572,6 +3580,10 @@
         "symbol": "CHPT"
     },
     {
+        "name": "TIDAL TRUST II YIEL SE PORT ETF",
+        "symbol": "CHPY"
+    },
+    {
         "name": "CHORD ENERGY CORPORATION COM NEW",
         "symbol": "CHRD"
     },
@@ -3718,6 +3730,10 @@
     {
         "name": "CLEAN ENERGY FUELS CORP COM",
         "symbol": "CLNE"
+    },
+    {
+        "name": "CLENE INC COM NEW",
+        "symbol": "CLNN"
     },
     {
         "name": "GLOBAL X FDS CLOUD COMPUTNG",
@@ -4844,7 +4860,7 @@
         "symbol": "DBJP"
     },
     {
-        "name": "IM GLOBAL PARTNER FUND",
+        "name": "IM GLOBAL PARTNER FUNDS IMGP DBI MAN ETF",
         "symbol": "DBMF"
     },
     {
@@ -4858,6 +4874,10 @@
     {
         "name": "DIGITALBRIDGE GROUP INC CL A NEW",
         "symbol": "DBRG"
+    },
+    {
+        "name": "DBV TECHNOLOGIES S A SPONSORED ADS",
+        "symbol": "DBVT"
     },
     {
         "name": "DROPBOX INC CL A",
@@ -5126,6 +5146,10 @@
     {
         "name": "DISNEY WALT CO COM",
         "symbol": "DIS"
+    },
+    {
+        "name": "TEMA ETF TRUST MEMORY ETF",
+        "symbol": "DISK"
     },
     {
         "name": "GLOBAL X FDS GLOBX SUPDV US",
@@ -6980,6 +7004,10 @@
         "symbol": "FIP"
     },
     {
+        "name": "FIRY INC COM CL A",
+        "symbol": "FIRY"
+    },
+    {
         "name": "FIDELITY NATL INFORMATION SVCS COM",
         "symbol": "FIS"
     },
@@ -8046,6 +8074,10 @@
     {
         "name": "CORNING INC COM",
         "symbol": "GLW"
+    },
+    {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "GLWG"
     },
     {
         "name": "T-REX 2X Long GLXY Daily Target ETF",
@@ -9122,6 +9154,10 @@
     {
         "name": "HYCROFT MINING HOLDING CORP CL A NEW",
         "symbol": "HYMC"
+    },
+    {
+        "name": "ETF OPPORTUNITIES TRUST T-REX 2X LONG SK",
+        "symbol": "HYNX"
     },
     {
         "name": "HYPERFINE INC COM CL A",
@@ -12528,6 +12564,10 @@
         "symbol": "MUX"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "MUZ"
+    },
+    {
         "name": "MVB FINL CORP COM",
         "symbol": "MVBF"
     },
@@ -12538,10 +12578,6 @@
     {
         "name": "GRANITESHARES ETF TR 2X LONG MRVL",
         "symbol": "MVLL"
-    },
-    {
-        "name": "MV OIL TR TR UNITS",
-        "symbol": "MVO"
     },
     {
         "name": "MICROVAST HOLDINGS INC COM",
@@ -12786,6 +12822,10 @@
     {
         "name": "Roundhill Video Games ETF",
         "symbol": "NERD"
+    },
+    {
+        "name": "MINERVA NEUROSCIENCES INC COM NEW",
+        "symbol": "NERV"
     },
     {
         "name": "NATIONAL ENERGY SERVICES REUNI SHS",
@@ -13110,6 +13150,10 @@
     {
         "name": "NRX PHARMACEUTICALS INC COM NEW",
         "symbol": "NRXP"
+    },
+    {
+        "name": "NEURAXIS INC COM",
+        "symbol": "NRXS"
     },
     {
         "name": "NORFOLK SOUTHN CORP COM",
@@ -13578,6 +13622,10 @@
     {
         "name": "THEMES ETF TR LEVERAGE SHS 2X",
         "symbol": "OKTG"
+    },
+    {
+        "name": "ONKURE THERAPEUTICS INC COM CL A",
+        "symbol": "OKUR"
     },
     {
         "name": "UNIVERSAL DISPLAY CORP COM",
@@ -15128,6 +15176,10 @@
         "symbol": "QMOM"
     },
     {
+        "name": "QUANTUM EMOTION CORP COM",
+        "symbol": "QNC"
+    },
+    {
         "name": "QUINCE THERAPEUTICS INC COM",
         "symbol": "QNCX"
     },
@@ -15394,6 +15446,10 @@
     {
         "name": "ARCUS BIOSCIENCES INC COM",
         "symbol": "RCUS"
+    },
+    {
+        "name": "RADCOM LTD SHS NEW",
+        "symbol": "RDCM"
     },
     {
         "name": "REDDIT INC CL A",
@@ -18620,6 +18676,10 @@
         "symbol": "TOUR"
     },
     {
+        "name": "TOYO CO LTD ORD SH",
+        "symbol": "TOYO"
+    },
+    {
         "name": "Roundhill S&P 500 Target 10 Managed Distribution ETF",
         "symbol": "TPAY"
     },
@@ -19878,10 +19938,6 @@
     {
         "name": "VIKING THERAPEUTICS INC COM",
         "symbol": "VKTX"
-    },
-    {
-        "name": "VALENS SEMICONDUCTOR LTD ORDINARY SHARES",
-        "symbol": "VLN"
     },
     {
         "name": "VALERO ENERGY CORP COM",
