@@ -48,6 +48,11 @@ jobs:
           pip install pandas requests pyarrow duckdb
       - name: Run the Python script
         run: python jobs/main-options-cboe-consolidate.py
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Classify expiration types
+        run: deno run --allow-all jobs/main-options-classify-expirations.ts
       - name: Upload artifacts 
         uses: actions/upload-artifact@v4
         with:
@@ -58,6 +63,7 @@ jobs:
             ${{ github.workspace}}/temp/*.csv
             ${{ github.workspace}}/data/cboe-options-rolling.json
             ${{ github.workspace}}/data/options-expirations-strikes.json
+            ${{ github.workspace}}/data/options-expirations-summary.json
   release-cboe-rolling-data:
     runs-on: ubuntu-latest
     needs: [set-release-vars, cboe-options-rolling-parquet]
