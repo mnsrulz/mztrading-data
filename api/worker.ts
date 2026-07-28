@@ -17,6 +17,7 @@ const app = new Hono();
 
 const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
+const STATIC_DATA_DIR = Deno.env.get("STATIC_DIR") || 'temp/ohlc';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const PUSHER_APP_KEY = Deno.env.get('PUSHER_APP_KEY');
@@ -375,7 +376,10 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
         const limitClause = limit > 0 ? `LIMIT ${limit}` : '';
 
         const baseQueryCte = `
-                WITH T AS (
+                WITH expirations AS (
+                    SELECT expiration, isWeekly, isMonthly
+                    FROM '${STATIC_DATA_DIR}/options-expirations-summary.json'
+                ), T AS (
                     SELECT DISTINCT dt, open as underlying_open_price, high as underlying_high_price, low as underlying_low_price, 
                     close as underlying_close_price, volume as underlying_volume, 
                     -- iv30 as underlying_iv30, 
@@ -397,10 +401,13 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     --QUALIFY dt > MIN(dt) OVER (PARTITION BY expiration, strike, option_type)    
                     WHERE open_interest > 0 OR bid > 0 OR ask > 0 OR volume > 0
                 ), weekly_expiries as (
-                    select DISTINCT max(expiration) OVER (
-                                            PARTITION BY date_trunc('week', expiration)
-                                        ) AS expiration
-                    from (SELECT DISTINCT expiration FROM T2)
+                    SELECT expiration FROM 
+                    expirations 
+                    WHERE isWeekly = 1
+                    --select DISTINCT max(expiration) OVER (
+                    --                        PARTITION BY date_trunc('week', expiration)
+                    --                    ) AS expiration
+                    --from (SELECT DISTINCT expiration FROM T2)
                 ), base AS (
                     SELECT T.dt AS quote_date,
                     expiration AS expiration_date,
@@ -439,10 +446,10 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     round((bid_price + ask_price) / 2, 2) AS mid_price,
                     abs(strike_price - underlying_close_price) AS strike_distance,
                     abs(strike_price - underlying_close_price) / underlying_close_price * 100 AS strike_distance_pct,
-                    CASE WHEN weekly_expiries.expiration IS NOT NULL THEN 1 ELSE 0 END AS is_weekly_expiration,
-                    CASE WHEN is_weekly_expiration = 1 AND day(expiration_date) BETWEEN 15 AND 21 THEN 1 ELSE 0 END AS is_monthly_expiration
+                    CASE WHEN expirations.isWeekly = 1 THEN 1 ELSE 0 END AS is_weekly_expiration,
+                    CASE WHEN expirations.isMonthly = 1 THEN 1 ELSE 0 END AS is_monthly_expiration
                     FROM base
-                    LEFT JOIN weekly_expiries ON base.expiration_date = weekly_expiries.expiration
+                    JOIN expirations ON base.expiration_date = expirations.expiration
                 ), ranked AS (
                     SELECT
                         *,
