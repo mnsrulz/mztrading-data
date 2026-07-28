@@ -8892,7 +8892,7 @@
         "symbol": "HOMB"
     },
     {
-        "name": "HONEYWELL INTL INC COM",
+        "name": "HONEYWELL INTL INC COM.",
         "symbol": "HON"
     },
     {
@@ -11588,7 +11588,7 @@
         "symbol": "MAC"
     },
     {
-        "name": "Point Bridge America First ETF",
+        "name": "ETF SER SOLUTIONS POINT BRIDGE AMR",
         "symbol": "MAGA"
     },
     {
@@ -19456,10 +19456,6 @@
         "symbol": "URNM"
     },
     {
-        "name": "URANIUM RTY CORP COM",
-        "symbol": "UROY"
-    },
-    {
         "name": "ISHARES INC MSCI WORLD ETF",
         "symbol": "URTH"
     },
@@ -19938,6 +19934,10 @@
     {
         "name": "VIKING THERAPEUTICS INC COM",
         "symbol": "VKTX"
+    },
+    {
+        "name": "VALENS SEMICONDUCTOR LTD ORDINARY SHARES",
+        "symbol": "VLN"
     },
     {
         "name": "VALERO ENERGY CORP COM",
