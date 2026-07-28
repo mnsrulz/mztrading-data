@@ -24,7 +24,13 @@ No npm/node_modules in prod. All imports are URL-based ESM.
 deno --allow-all --unstable-kv netlify-apps/mztradingdata/api.ts
 ```
 
-No test, lint, or typecheck commands exist.
+## Tests
+
+Unit tests use Deno's built-in test runner. Tests are co-located with source files as `*_test.ts`.
+
+```
+deno test --allow-all
+```
 
 ## CI pipeline (GitHub Actions)
 
@@ -176,4 +182,6 @@ In `DEBUG_MODE=1`, you must manually construct the function call to test a speci
 - `data/cboe-options-rolling.json` is the live config — change URLs there if storage moves
 - When adding new parquet-based endpoints, follow the pattern in `historicalOptions.ts` (`registerFileBuffer` + `conn.send`)
 - Job scripts in `jobs/` use Python for data processing, Deno for orchestration
+- **Always ask the user before committing** — never commit without explicit confirmation
+- **Use dayjs for all date manipulation and date utilities** — import from `https://esm.sh/dayjs@1.11` or the version already used in the codebase scripts in `jobs/` use Python for data processing, Deno for orchestration
 - **Always ask the user before committing** — never commit without explicit confirmation

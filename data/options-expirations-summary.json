@@ -1,0 +1,2407 @@
+[
+    {
+        "expiration": "2024-05-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2024-12-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-13",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2024-12-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-27",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2024-12-31",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-03",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-10",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-01-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-24",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-01-31",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-07",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-14",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-02-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-02-28",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-07",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-14",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-03-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-28",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-03-31",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-04",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-11",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-04-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-25",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-04-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-02",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-09",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-16",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-05-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-23",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-05-30",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-06",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-13",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-06-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-27",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-06-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-03",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-11",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-18",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-07-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-25",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-07-31",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-01",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-08",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-08-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-22",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-08-29",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-05",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-12",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-19",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-09-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-26",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-09-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-03",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-10",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-10-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-24",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-10-31",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-07",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-14",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-11-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-11-28",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-05",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-12",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-19",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2025-12-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-26",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2025-12-31",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-02",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-09",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-16",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-01-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-23",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-01-30",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-06",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-13",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-02-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-02-27",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-06",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-13",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-03-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-27",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-03-31",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-02",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-10",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-04-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-24",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-04-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-01",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-08",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-05-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-22",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-05-29",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-05",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-12",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-18",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-06-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-26",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-06-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-02",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-07",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-08",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-09",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-10",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-15",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-07-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-21",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-23",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-24",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-28",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-29",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-30",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-07-31",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-04",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-05",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-06",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-07",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-10",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-11",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-12",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-14",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-19",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-08-24",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-25",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-26",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-27",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-28",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-08-31",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-01",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-03",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-04",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-11",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-09-18",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-09-30",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-10-16",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-10-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-10-30",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-11-18",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-11-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-11-30",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-12-16",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-12-18",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2026-12-31",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-01-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-01-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-01-29",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-02-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-02-19",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-03-17",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-03-19",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-03-31",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-04-16",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-05-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-06-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-06-30",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-07-16",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-08-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-09-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-10-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-11-19",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2027-12-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-01-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-02-18",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-03-17",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-04-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-06-16",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-07-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-09-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2028-12-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2029-12-21",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2030-03-15",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2030-12-20",
+        "isWeekly": true,
+        "isMonthly": true
+    },
+    {
+        "expiration": "2031-12-19",
+        "isWeekly": true,
+        "isMonthly": true
+    }
+]
