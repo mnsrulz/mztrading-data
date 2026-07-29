@@ -297,6 +297,7 @@ const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
                 select next_opex as expiration, LEAD(quote_date) OVER (ORDER BY quote_date) as opex_start from (
                     SELECT DISTINCT quote_date, expiration, next_opex
                     FROM dataset left join opex_cte on quote_date = expiration
+                    WHERE quote_dow NOT IN (6,7)    --EXCLUDE LEGACY DATA WHERE SATURDAY AND SUNDAY RUNS ARE AVAILABLE
                     ORDER BY 1
                 )
             ) WHERE expiration is not null
