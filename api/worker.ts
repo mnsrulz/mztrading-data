@@ -17,7 +17,7 @@ const app = new Hono();
 
 const DATA_DIR = Deno.env.get("DATA_DIR") || 'temp/w2-output';
 const OHLC_DATA_DIR = Deno.env.get("OHLC_DIR") || 'temp/ohlc';
-const STATIC_DATA_DIR = Deno.env.get("STATIC_DIR") || 'temp/ohlc';
+const STATIC_DATA_DIR = Deno.env.get("STATIC_DIR") || 'temp/static';
 const LOG_LEVEL = Deno.env.get("LOG_LEVEL") || 'info';
 
 const PUSHER_APP_KEY = Deno.env.get('PUSHER_APP_KEY');
@@ -288,16 +288,27 @@ const handleExpectedMoveMessage = async (args: ExpectedMoveRequest) => {
     logger.info(`Expected Move request received: ${JSON.stringify(args)}`);
 
     const query = `
+        with opex as (
+            SELECT * FROM (
+                with opex_cte as (
+                    select expiration, LEAD(expiration) OVER (ORDER BY expiration) as next_opex from expirations 
+                    WHERE ${mode== 'weekly' ? 'is_weekly' : 'is_monthly'} = 1
+                )
+                select next_opex as expiration, LEAD(quote_date) OVER (ORDER BY quote_date) as opex_start from (
+                    SELECT DISTINCT quote_date, expiration, next_opex
+                    FROM dataset left join opex_cte on quote_date = expiration
+                    ORDER BY 1
+                )
+            ) WHERE expiration is not null
+        )
         SELECT quote_date as dt, underlying_close_price as last_close, straddle_price, expiration_date AS expiry
         FROM (
             SELECT quote_date, expiration_date, dte, strike_price, underlying_close_price,
             round(SUM(mid_price),2) AS straddle_price, 
             round((straddle_price/underlying_close_price)*100,2) as expected_move_percent
-            FROM dataset
+            FROM dataset JOIN opex ON dataset.quote_date = opex.opex_start AND dataset.expiration_date = opex.expiration
             WHERE moneyness = 'ATM'
-            AND quote_dow = 1
             AND quote_date >= current_date - ${lookbackDays}
-            AND ${mode == 'weekly' ? 'dte <=7' : 'dte BETWEEN 25 AND 31'}
             AND ${mode == 'weekly' ? 'is_weekly_expiration' : 'is_monthly_expiration'} = 1
             GROUP BY quote_date, dte, strike_price, expiration_date, underlying_close_price
         ) 
@@ -608,11 +619,12 @@ async function initRedisSubscription() {
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    const result = await handleOptionsStatsMessageV2({
+    const result = await handleExpectedMoveMessage({
         channel: 'test',
         lookbackDays: 180,
         requestId: crypto.randomUUID(),
-        symbol: 'COIN'
+        symbol: 'COIN',
+        expiryMode: 'monthly'
     });
 
     logger.info(`Result: ${JSON.stringify(result)}`);
