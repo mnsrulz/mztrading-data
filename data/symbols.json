@@ -128,10 +128,6 @@
         "symbol": "ABNB"
     },
     {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "ABNG"
-    },
-    {
         "name": "ACUMEN PHARMACEUTICALS INC COM",
         "symbol": "ABOS"
     },
@@ -3826,10 +3822,6 @@
     {
         "name": "CHIPOTLE MEXICAN GRILL INC COM",
         "symbol": "CMG"
-    },
-    {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "CMGG"
     },
     {
         "name": "CUMMINS INC COM",
@@ -11944,7 +11936,7 @@
         "symbol": "MGA"
     },
     {
-        "name": "VANGUARD WORLD FD MEGA CAP INDEX",
+        "name": "VANGUARD MORNINGSTAR MEGA CAP ",
         "symbol": "MGC"
     },
     {
@@ -11952,7 +11944,7 @@
         "symbol": "MGEE"
     },
     {
-        "name": "VANGUARD WORLD FD MEGA GRWTH IND",
+        "name": "VANGUARD MORNINGSTAR MEGA CAP ",
         "symbol": "MGK"
     },
     {
@@ -11980,7 +11972,7 @@
         "symbol": "MGTX"
     },
     {
-        "name": "VANGUARD WORLD FD MEGA CAP VAL ETF",
+        "name": "VANGUARD MORNINGSTAR MEGA CAP ",
         "symbol": "MGV"
     },
     {
@@ -13886,10 +13878,6 @@
     {
         "name": "OLD SECOND BANCORP INC DEL COM",
         "symbol": "OSBC"
-    },
-    {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "OSCG"
     },
     {
         "name": "OSCAR HEALTH INC CL A",
@@ -16326,10 +16314,6 @@
     {
         "name": "T-REX 2X Long SBET Daily Target ETF",
         "symbol": "SBTU"
-    },
-    {
-        "name": "THEMES ETF TR LEVERAGE SHARES",
-        "symbol": "SBU"
     },
     {
         "name": "STARBUCKS CORP COM",
@@ -19456,6 +19440,10 @@
         "symbol": "URNM"
     },
     {
+        "name": "URANIUM RTY CORP COM",
+        "symbol": "UROY"
+    },
+    {
         "name": "ISHARES INC MSCI WORLD ETF",
         "symbol": "URTH"
     },
@@ -19668,11 +19656,11 @@
         "symbol": "VAW"
     },
     {
-        "name": "VANGUARD INDEX FDS SMALL CP ETF",
+        "name": "VANGUARD MORNINGSTAR SMALL-CAP",
         "symbol": "VB"
     },
     {
-        "name": "VANGUARD INDEX FDS SML CP GRW ETF",
+        "name": "VANGUARD MORNINGSTAR SMALL-CAP",
         "symbol": "VBK"
     },
     {
@@ -19680,7 +19668,7 @@
         "symbol": "VBNK"
     },
     {
-        "name": "VANGUARD INDEX FDS SM CP VAL ETF",
+        "name": "VANGUARD MORNINGSTAR SMALL-CAP",
         "symbol": "VBR"
     },
     {
@@ -20012,7 +20000,7 @@
         "symbol": "VNT"
     },
     {
-        "name": "VANGUARD INDEX FDS MID CAP ETF",
+        "name": "VANGUARD MORNINGSTAR MID-CAP E",
         "symbol": "VO"
     },
     {
@@ -20024,7 +20012,7 @@
         "symbol": "VOD"
     },
     {
-        "name": "VANGUARD INDEX FDS MCAP VL IDXVIP",
+        "name": "VANGUARD MORNINGSTAR MID-CAP V",
         "symbol": "VOE"
     },
     {
@@ -20048,7 +20036,7 @@
         "symbol": "VOR"
     },
     {
-        "name": "VANGUARD INDEX FDS MCAP GR IDXVIP",
+        "name": "VANGUARD MORNINGSTAR MID-CAP G",
         "symbol": "VOT"
     },
     {
@@ -20208,7 +20196,7 @@
         "symbol": "VTGN"
     },
     {
-        "name": "VANGUARD INDEX FDS TOTAL STK MKT",
+        "name": "VANGUARD MORNINGSTAR TOTAL STO",
         "symbol": "VTI"
     },
     {
@@ -20232,7 +20220,7 @@
         "symbol": "VTSI"
     },
     {
-        "name": "VANGUARD INDEX FDS VALUE ETF",
+        "name": "VANGUARD MORNINGSTAR VALUE ETF",
         "symbol": "VTV"
     },
     {
@@ -20244,7 +20232,7 @@
         "symbol": "VTWO"
     },
     {
-        "name": "VANGUARD INDEX FDS GROWTH ETF",
+        "name": "VANGUARD MORNINGSTAR GROWTH ET",
         "symbol": "VUG"
     },
     {
@@ -20256,7 +20244,7 @@
         "symbol": "VUZI"
     },
     {
-        "name": "VANGUARD INDEX FDS LARGE CAP ETF",
+        "name": "VANGUARD MORNINGSTAR LARGE-CAP",
         "symbol": "VV"
     },
     {
