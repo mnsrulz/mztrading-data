@@ -377,7 +377,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 
         const baseQueryCte = `
                 WITH expirations AS (
-                    SELECT expiration, isWeekly, isMonthly
+                    SELECT expiration, isWeekly as is_weekly, isMonthly as is_monthly
                     FROM '${STATIC_DATA_DIR}/options-expirations-summary.json'
                 ), T AS (
                     SELECT DISTINCT dt, open as underlying_open_price, high as underlying_high_price, low as underlying_low_price, 
@@ -446,8 +446,8 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     round((bid_price + ask_price) / 2, 2) AS mid_price,
                     abs(strike_price - underlying_close_price) AS strike_distance,
                     abs(strike_price - underlying_close_price) / underlying_close_price * 100 AS strike_distance_pct,
-                    CASE WHEN expirations.isWeekly = 1 THEN 1 ELSE 0 END AS is_weekly_expiration,
-                    CASE WHEN expirations.isMonthly = 1 THEN 1 ELSE 0 END AS is_monthly_expiration
+                    CASE WHEN expirations.is_weekly = 1 THEN 1 ELSE 0 END AS is_weekly_expiration,
+                    CASE WHEN expirations.is_monthly = 1 THEN 1 ELSE 0 END AS is_monthly_expiration
                     FROM base
                     JOIN expirations ON base.expiration_date = expirations.expiration
                 ), ranked AS (
