@@ -4380,7 +4380,7 @@
         "symbol": "CRSR"
     },
     {
-        "name": "CRITEO S A SPONS ADS",
+        "name": "CRITEO S A ORD SHS",
         "symbol": "CRTO"
     },
     {
@@ -8884,7 +8884,7 @@
         "symbol": "HOMB"
     },
     {
-        "name": "HONEYWELL INTL INC COM.",
+        "name": "HONEYWELL INTL INC COM",
         "symbol": "HON"
     },
     {
@@ -11936,7 +11936,7 @@
         "symbol": "MGA"
     },
     {
-        "name": "VANGUARD MORNINGSTAR MEGA CAP ",
+        "name": "VANGUARD WORLD FD MRNGSTR CAP ETF",
         "symbol": "MGC"
     },
     {
@@ -11944,7 +11944,7 @@
         "symbol": "MGEE"
     },
     {
-        "name": "VANGUARD MORNINGSTAR MEGA CAP ",
+        "name": "VANGUARD WORLD FD MRNGSTR MEGA CAP",
         "symbol": "MGK"
     },
     {
@@ -11972,7 +11972,7 @@
         "symbol": "MGTX"
     },
     {
-        "name": "VANGUARD MORNINGSTAR MEGA CAP ",
+        "name": "VANGUARD WORLD FD MRNGSTR VAL ETF",
         "symbol": "MGV"
     },
     {
@@ -19656,11 +19656,11 @@
         "symbol": "VAW"
     },
     {
-        "name": "VANGUARD MORNINGSTAR SMALL-CAP",
+        "name": "VANGUARD INDEX FDS MRNGSTR SML CAP",
         "symbol": "VB"
     },
     {
-        "name": "VANGUARD MORNINGSTAR SMALL-CAP",
+        "name": "VANGUARD INDEX FDS MRNGSTR SM CP GR",
         "symbol": "VBK"
     },
     {
@@ -19668,7 +19668,7 @@
         "symbol": "VBNK"
     },
     {
-        "name": "VANGUARD MORNINGSTAR SMALL-CAP",
+        "name": "VANGUARD INDEX FDS MRNGSTR SML CP V",
         "symbol": "VBR"
     },
     {
@@ -20000,7 +20000,7 @@
         "symbol": "VNT"
     },
     {
-        "name": "VANGUARD MORNINGSTAR MID-CAP E",
+        "name": "VANGUARD INDEX FDS MRNGSTR MID CAP",
         "symbol": "VO"
     },
     {
@@ -20012,7 +20012,7 @@
         "symbol": "VOD"
     },
     {
-        "name": "VANGUARD MORNINGSTAR MID-CAP V",
+        "name": "VANGUARD INDEX FDS MRNGSTR MD CP VA",
         "symbol": "VOE"
     },
     {
@@ -20036,7 +20036,7 @@
         "symbol": "VOR"
     },
     {
-        "name": "VANGUARD MORNINGSTAR MID-CAP G",
+        "name": "VANGUARD INDEX FDS MRNGSTR MD CP GR",
         "symbol": "VOT"
     },
     {
@@ -20196,7 +20196,7 @@
         "symbol": "VTGN"
     },
     {
-        "name": "VANGUARD MORNINGSTAR TOTAL STO",
+        "name": "VANGUARD INDEX FDS MRNGSTR TTL STK",
         "symbol": "VTI"
     },
     {
@@ -20220,7 +20220,7 @@
         "symbol": "VTSI"
     },
     {
-        "name": "VANGUARD MORNINGSTAR VALUE ETF",
+        "name": "VANGUARD INDEX FDS MRNGSTR VAL ETF",
         "symbol": "VTV"
     },
     {
@@ -20232,7 +20232,7 @@
         "symbol": "VTWO"
     },
     {
-        "name": "VANGUARD MORNINGSTAR GROWTH ET",
+        "name": "VANGUARD INDEX FDS MRNGSTR GRWT ETF",
         "symbol": "VUG"
     },
     {
@@ -20244,7 +20244,7 @@
         "symbol": "VUZI"
     },
     {
-        "name": "VANGUARD MORNINGSTAR LARGE-CAP",
+        "name": "VANGUARD INDEX FDS MRNGSTR LRG CAP",
         "symbol": "VV"
     },
     {
