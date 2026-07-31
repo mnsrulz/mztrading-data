@@ -4380,10 +4380,6 @@
         "symbol": "CRSR"
     },
     {
-        "name": "CRITEO S A ORD SHS",
-        "symbol": "CRTO"
-    },
-    {
         "name": "CIRRUS LOGIC INC COM",
         "symbol": "CRUS"
     },
@@ -8200,7 +8196,7 @@
         "symbol": "GOOY"
     },
     {
-        "name": "Tidal Trust I",
+        "name": "Subversive Congressional Republicans Trading ETF",
         "symbol": "GOP"
     },
     {
@@ -11340,10 +11336,6 @@
         "symbol": "LPLA"
     },
     {
-        "name": "OPEN LENDING CORP COM",
-        "symbol": "LPRO"
-    },
-    {
         "name": "LIVEPERSON INC COM",
         "symbol": "LPSN"
     },
@@ -11580,7 +11572,7 @@
         "symbol": "MAC"
     },
     {
-        "name": "ETF SER SOLUTIONS POINT BRIDGE AMR",
+        "name": "YORKVILLE AMER INVTS TR TRUTH SOCIAL AME",
         "symbol": "MAGA"
     },
     {
@@ -12336,6 +12328,10 @@
         "symbol": "MRVL"
     },
     {
+        "name": "DIREXION SHARES ETF TRUST DAILY MRVL BULL",
+        "symbol": "MRVU"
+    },
+    {
         "name": "MAREX GROUP LTD",
         "symbol": "MRX"
     },
@@ -12660,7 +12656,7 @@
         "symbol": "NAN"
     },
     {
-        "name": "Tidal Trust I",
+        "name": "Subversive Congressional Democrats Trading ETF",
         "symbol": "NANC"
     },
     {
@@ -12982,6 +12978,10 @@
     {
         "name": "ANNALY CAPITAL MANAGEMENT INC COM NEW",
         "symbol": "NLY"
+    },
+    {
+        "name": "NOMAD PWR SOLUTIONS INC COM",
+        "symbol": "NMAD"
     },
     {
         "name": "NEWSMAX INC COM SHS CLASS B",
@@ -13850,10 +13850,6 @@
     {
         "name": "ORUKA THERAPEUTICS INC COM",
         "symbol": "ORKA"
-    },
-    {
-        "name": "ORLA MNG LTD NEW COM",
-        "symbol": "ORLA"
     },
     {
         "name": "OREILLY AUTOMOTIVE INC COM",
@@ -15356,6 +15352,10 @@
         "symbol": "RAMP"
     },
     {
+        "name": "T-REX 2X Inverse DRAM Daily Target ETF",
+        "symbol": "RAMZ"
+    },
+    {
         "name": "RANI THERAPEUTICS HLDGS INC COM CL A",
         "symbol": "RANI"
     },
@@ -16846,6 +16846,14 @@
     {
         "name": "PROSHARES TR ULTRASHORT FINA",
         "symbol": "SKF"
+    },
+    {
+        "name": "Tradr 2X Long SK hynix Daily ETF",
+        "symbol": "SKHA"
+    },
+    {
+        "name": "Tradr 2X Short SK hynix Daily ETF",
+        "symbol": "SKHN"
     },
     {
         "name": "PROSHARES TR ULTRA SK HYNIX",
@@ -18376,7 +18384,7 @@
         "symbol": "TGEN"
     },
     {
-        "name": "TECNOGLASS INC COM SHS",
+        "name": "TECNOGLASS HOLDINGS INC",
         "symbol": "TGLS"
     },
     {
