@@ -4380,6 +4380,10 @@
         "symbol": "CRSR"
     },
     {
+        "name": "CRITEO S A ORD SHS",
+        "symbol": "CRTO"
+    },
+    {
         "name": "CIRRUS LOGIC INC COM",
         "symbol": "CRUS"
     },
@@ -16904,10 +16908,6 @@
         "symbol": "SKYH"
     },
     {
-        "name": "SKYWATER TECHNOLOGY INC COM",
-        "symbol": "SKYT"
-    },
-    {
         "name": "PROSHARES TR ULTR NASDAQCMPTG",
         "symbol": "SKYU"
     },
@@ -18384,7 +18384,7 @@
         "symbol": "TGEN"
     },
     {
-        "name": "TECNOGLASS HOLDINGS INC",
+        "name": "TECNOGLASS HOLDINGS INC COM SHS",
         "symbol": "TGLS"
     },
     {
@@ -19066,10 +19066,6 @@
     {
         "name": "PROSHARES TR ULTR RU 2000 NEW",
         "symbol": "TWM"
-    },
-    {
-        "name": "TWO HARBORS INVENTMENT CORPOR COM",
-        "symbol": "TWO"
     },
     {
         "name": "TWIST BIOSCIENCE CORP COM",
