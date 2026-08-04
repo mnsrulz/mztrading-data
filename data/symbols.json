@@ -152,10 +152,6 @@
         "symbol": "ABUS"
     },
     {
-        "name": "ABVC BIOPHARMA INC COM NEW",
-        "symbol": "ABVC"
-    },
-    {
         "name": "ABOVE FOOD INGREDIENTS INC COM",
         "symbol": "ABVEF"
     },
@@ -10352,6 +10348,10 @@
         "symbol": "JMIA"
     },
     {
+        "name": "JERSEY MIKES SUBS INC COM SHS CL A",
+        "symbol": "JMKE"
+    },
+    {
         "name": "JOHN MARSHALL BANCORP INC COM",
         "symbol": "JMSB"
     },
@@ -12564,7 +12564,7 @@
         "symbol": "MVBF"
     },
     {
-        "name": "MICROVISION INC DEL COM NEW",
+        "name": "MICROVISION INC DEL COM",
         "symbol": "MVIS"
     },
     {
@@ -14608,7 +14608,7 @@
         "symbol": "PNFP"
     },
     {
-        "name": "PENNANTPARK INVT CORP COM",
+        "name": "PENNANTPARK INVTS CORP COM",
         "symbol": "PNNT"
     },
     {
@@ -15598,10 +15598,6 @@
     {
         "name": "ISHARES TR RESIDENTIAL MULT",
         "symbol": "REZ"
-    },
-    {
-        "name": "RESIDEO TECHNOLOGIES INC COM",
-        "symbol": "REZI"
     },
     {
         "name": "REGIONS FINANCIAL CORP NEW COM",
@@ -18628,10 +18624,6 @@
         "symbol": "TNYA"
     },
     {
-        "name": "THE ONCOLOGY INSTITUTE INC COM",
-        "symbol": "TOI"
-    },
-    {
         "name": "TOLL BROTHERS INC COM",
         "symbol": "TOL"
     },
@@ -19066,6 +19058,10 @@
     {
         "name": "PROSHARES TR ULTR RU 2000 NEW",
         "symbol": "TWM"
+    },
+    {
+        "name": "TWO HARBORS INVENTMENT CORPOR COM",
+        "symbol": "TWO"
     },
     {
         "name": "TWIST BIOSCIENCE CORP COM",
