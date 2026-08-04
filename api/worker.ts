@@ -392,47 +392,42 @@ const OPTION_CHAIN_COLUMNS = [
 
 const gqlResolvers = {
   Query: {
-    optionChain: async (_parent: unknown, args: { symbol: string; dt: string }) => {
+    optionChain: async (_parent: unknown, args: { symbol: string; dt: string }, _context: unknown, info: any) => {
       const { symbol, dt } = args;
       const dtFilter = `AND quote_date = '${dt}'`;
-      
+
+      const requestedFields = info?.fieldNodes?.[0]?.selectionSet?.selections
+        ?.map((s: any) => s.name?.value)
+        ?.filter(Boolean) ?? OPTION_CHAIN_COLUMNS;
+
+      const selectCols = OPTION_CHAIN_COLUMNS
+        .filter((col) => requestedFields.includes(col))
+        .map((col) => {
+          if (col === 'quote_date' || col === 'expiration_date') return `CAST(${col} AS VARCHAR) as ${col}`;
+          return col;
+        })
+        .join(', ');
+
       const sql = `
-        SELECT 
-          CAST(quote_date AS VARCHAR) as quote_date,
-          CAST(expiration_date AS VARCHAR) as expiration_date,
-          dte,
-          option_ticker,
-          option_type,
-          strike_price,
-          open_interest,
-          option_volume,
-          delta,
-          gamma,
-          vega,
-          theta,
-          rho,
-          implied_volatility,
-          bid_price,
-          ask_price,
-          mid_price,
-          moneyness,
-          liquidity_tier,
-          underlying_close_price,
-          underlying_iv30
+        SELECT ${selectCols}
         FROM dataset
         WHERE 1=1 ${dtFilter}
         ORDER BY quote_date DESC, expiration_date, strike_price
       `;
-      
+
+      logger.info(`GraphQL optionChain request received for symbol: ${symbol}, dt: ${dt}. 
+        Executing SQL: ${sql}
+        `);
       const result = await executeReaderInternal(symbol, sql, 0);
       const colArrays: any[][] = result.getColumnsJson();
+      const selectedCols = OPTION_CHAIN_COLUMNS.filter((col) => requestedFields.includes(col));
       const rowCount = colArrays[0]?.length ?? 0;
-      
+
       const rows = [];
       for (let i = 0; i < rowCount; i++) {
         const row: Record<string, unknown> = {};
-        for (let j = 0; j < OPTION_CHAIN_COLUMNS.length; j++) {
-          row[OPTION_CHAIN_COLUMNS[j]] = colArrays[j][i];
+        for (let j = 0; j < selectedCols.length; j++) {
+          row[selectedCols[j]] = colArrays[j][i];
         }
         rows.push(row);
       }
