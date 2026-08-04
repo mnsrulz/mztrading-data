@@ -10,7 +10,7 @@ import PusherJS from 'https://esm.sh/pusher-js@8.4.0';
 import pRetry from 'https://esm.sh/p-retry@8.0.0';
 import ky from 'https://esm.sh/ky@1.8.2';
 import PQueue from 'https://esm.sh/p-queue@9.3.3';
-
+import { ApolloServer, HeaderMap } from "npm:@apollo/server";
 
 const app = new Hono();
 
@@ -350,6 +350,156 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
     return { rows: result.getRowsJson(), columns: result.columnNamesAndTypesJson() };
 };
 
+// GraphQL Schema
+const gqlTypeDefs = `#graphql
+  type Query {
+    optionChain(symbol: String!, dt: String!): [OptionChainItem]
+    availableDates(symbol: String!): [String]
+  }
+
+  type OptionChainItem {
+    quote_date: String
+    expiration_date: String
+    dte: Int
+    option_ticker: String
+    option_type: String
+    strike_price: Float
+    open_interest: Int
+    option_volume: Int
+    delta: Float
+    gamma: Float
+    vega: Float
+    theta: Float
+    rho: Float
+    implied_volatility: Float
+    bid_price: Float
+    ask_price: Float
+    mid_price: Float
+    moneyness: String
+    liquidity_tier: String
+    underlying_close_price: Float
+    underlying_iv30: Float
+  }
+`;
+
+// GraphQL Resolvers
+const OPTION_CHAIN_COLUMNS = [
+  'quote_date', 'expiration_date', 'dte', 'option_ticker', 'option_type',
+  'strike_price', 'open_interest', 'option_volume', 'delta', 'gamma',
+  'vega', 'theta', 'rho', 'implied_volatility', 'bid_price', 'ask_price',
+  'mid_price', 'moneyness', 'liquidity_tier', 'underlying_close_price', 'underlying_iv30'
+];
+
+const gqlResolvers = {
+  Query: {
+    optionChain: async (_parent: unknown, args: { symbol: string; dt: string }) => {
+      const { symbol, dt } = args;
+      const dtFilter = `AND quote_date = '${dt}'`;
+      
+      const sql = `
+        SELECT 
+          CAST(quote_date AS VARCHAR) as quote_date,
+          CAST(expiration_date AS VARCHAR) as expiration_date,
+          dte,
+          option_ticker,
+          option_type,
+          strike_price,
+          open_interest,
+          option_volume,
+          delta,
+          gamma,
+          vega,
+          theta,
+          rho,
+          implied_volatility,
+          bid_price,
+          ask_price,
+          mid_price,
+          moneyness,
+          liquidity_tier,
+          underlying_close_price,
+          underlying_iv30
+        FROM dataset
+        WHERE 1=1 ${dtFilter}
+        ORDER BY quote_date DESC, expiration_date, strike_price
+      `;
+      
+      const result = await executeReaderInternal(symbol, sql, 0);
+      const colArrays: any[][] = result.getColumnsJson();
+      const rowCount = colArrays[0]?.length ?? 0;
+      
+      const rows = [];
+      for (let i = 0; i < rowCount; i++) {
+        const row: Record<string, unknown> = {};
+        for (let j = 0; j < OPTION_CHAIN_COLUMNS.length; j++) {
+          row[OPTION_CHAIN_COLUMNS[j]] = colArrays[j][i];
+        }
+        rows.push(row);
+      }
+      return rows;
+    },
+    availableDates: async (_parent: unknown, args: { symbol: string }) => {
+      const { symbol } = args;
+      const sql = `SELECT DISTINCT CAST(quote_date AS VARCHAR) as dt FROM dataset ORDER BY dt ASC`;
+      const result = await executeReaderInternal(symbol, sql, 0);
+      const [dates] = result.getColumnsJson();
+      return dates;
+    },
+  },
+};
+
+// Apollo Server instance
+const apolloServer = new ApolloServer({
+  typeDefs: gqlTypeDefs,
+  resolvers: gqlResolvers,
+});
+
+await apolloServer.start();
+
+// Shared GraphQL endpoint
+app.all('/graphql', async (c) => {
+    try {
+        const request = c.req.raw;
+        const body = request.method === 'POST' ? await request.json() : undefined;
+
+        const requestHeaders = new HeaderMap();
+        request.headers.forEach((value, key) => {
+            requestHeaders.set(key, value);
+        });
+        
+        const response = await apolloServer.executeHTTPGraphQLRequest({
+            httpGraphQLRequest: {
+                method: request.method,
+                headers: requestHeaders,
+                body,
+                search: new URL(request.url).search,
+            },
+            context: async () => ({}),
+        });
+        
+        const responseHeaders: Record<string, string> = {};
+        response.headers.forEach((value, key) => {
+            responseHeaders[key] = value;
+        });
+
+        const responseBody = response.body.kind === 'complete' 
+            ? response.body.string 
+            : JSON.stringify(response.body);
+        
+        if (!responseHeaders['content-type']) {
+            responseHeaders['content-type'] = 'application/json';
+        }
+
+        return new Response(responseBody, {
+            status: response.status || 200,
+            headers: responseHeaders,
+        });
+    } catch (error) {
+        logger.error({ err: error }, 'GraphQL error');
+        return c.json({ error: 'GraphQL error' }, 500);
+    }
+});
+
 async function publish(requestId: string, hasError: boolean, rows: any) {
     if (DEBUG_MODE) {
         logger.info(`[DEBUG] publish called for ${requestId}: hasError=${hasError}, rows=${JSON.stringify(rows)}`);
@@ -667,11 +817,7 @@ if (DEBUG_MODE) {
     Deno.addSignalListener("SIGTERM", shutdown);
     Deno.addSignalListener("SIGINT", shutdown);
 
-    logger.info(`Worker is running...`);
-
-    app.get('/',
-        c => c.json({ "message": "hello" })
-    ).get('/stats', async c => {
+    app.get('/stats', async c => {
         const stats: Record<string, number> = {};
 
         for await (const key of valkey.scanIterator({ MATCH: 'track:*' })) {
@@ -687,6 +833,12 @@ if (DEBUG_MODE) {
             data: stats
         });
     });
-
-    Deno.serve(app.fetch);
+    
 }
+
+app.get('/',
+    c => c.json({ "message": "hello" })
+)
+Deno.serve(app.fetch);
+
+logger.info(`Worker is running...`);
