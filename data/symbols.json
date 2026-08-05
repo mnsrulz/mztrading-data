@@ -152,6 +152,10 @@
         "symbol": "ABUS"
     },
     {
+        "name": "ABVC BIOPHARMA INC COM NEW",
+        "symbol": "ABVC"
+    },
+    {
         "name": "ABOVE FOOD INGREDIENTS INC COM",
         "symbol": "ABVEF"
     },
@@ -5654,10 +5658,6 @@
     {
         "name": "ENI SPA SPONSORED ADR",
         "symbol": "E"
-    },
-    {
-        "name": "ELECTRONIC ARTS INC COM",
-        "symbol": "EA"
     },
     {
         "name": "GRAFTECH INTL LTD SR NT COM NEW",
@@ -15600,6 +15600,10 @@
         "symbol": "REZ"
     },
     {
+        "name": "RESIDEO TECHNOLOGIES INC COM",
+        "symbol": "REZI"
+    },
+    {
         "name": "REGIONS FINANCIAL CORP NEW COM",
         "symbol": "RF"
     },
@@ -17822,6 +17826,10 @@
     {
         "name": "STEEL DYNAMICS INC COM",
         "symbol": "STLD"
+    },
+    {
+        "name": "STARLING ONCOLOGY INC",
+        "symbol": "STLN"
     },
     {
         "name": "STMICROELECTRONICS N V NY REGISTRY",
@@ -21172,7 +21180,7 @@
         "symbol": "YOU"
     },
     {
-        "name": "YPF SOCIEDAD ANONIMA SPON ADR CL D",
+        "name": "YPF SOCIEDAD ANONIMA SPONSORED ADS",
         "symbol": "YPF"
     },
     {
