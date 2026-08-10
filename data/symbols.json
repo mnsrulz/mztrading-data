@@ -5540,7 +5540,7 @@
         "symbol": "DVQQ"
     },
     {
-        "name": "WEBS ETF TR REAL ESTATE XLRE",
+        "name": "WEBS ETF TR REAL EST XLR ETF",
         "symbol": "DVRE"
     },
     {
@@ -9216,7 +9216,7 @@
         "symbol": "IBM"
     },
     {
-        "name": "ICICI BANK LIMITED ADR",
+        "name": "ICICI BK LTD ACTING THRU ITS ADR",
         "symbol": "IBN"
     },
     {
@@ -20726,10 +20726,6 @@
     {
         "name": "Tradr 2X Long WULF Daily ETF",
         "symbol": "WULX"
-    },
-    {
-        "name": "WAVE LIFE SCIENCES LTD SHS",
-        "symbol": "WVE"
     },
     {
         "name": "WW INTL INC COM NEW",
