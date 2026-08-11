@@ -11540,6 +11540,10 @@
         "symbol": "LYG"
     },
     {
+        "name": "Roundhill Photonics & Optics ETF",
+        "symbol": "LYTE"
+    },
+    {
         "name": "LSI INDS INC OHIO COM",
         "symbol": "LYTS"
     },
@@ -16000,6 +16004,14 @@
         "symbol": "RSPT"
     },
     {
+        "name": "Return Stacked Global Stocks & Bonds ETF",
+        "symbol": "RSSB"
+    },
+    {
+        "name": "Return Stacked U.S. Stocks & Managed Futures ETF",
+        "symbol": "RSST"
+    },
+    {
         "name": "VANECK ETF TRUST RETAIL ETF",
         "symbol": "RTH"
     },
@@ -16392,7 +16404,7 @@
         "symbol": "SCHV"
     },
     {
-        "name": "SCHWAB CHARLES CORP COM",
+        "name": "CHARLES SCHWAB CORP (THE) COM",
         "symbol": "SCHW"
     },
     {
@@ -20726,6 +20738,10 @@
     {
         "name": "Tradr 2X Long WULF Daily ETF",
         "symbol": "WULX"
+    },
+    {
+        "name": "WAVE LIFE SCIENCES INC SHS",
+        "symbol": "WVE"
     },
     {
         "name": "WW INTL INC COM NEW",
