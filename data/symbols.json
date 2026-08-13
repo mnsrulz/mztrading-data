@@ -3188,6 +3188,10 @@
         "symbol": "CBC"
     },
     {
+        "name": "CRESCENT BIOPHARMA INC. COM",
+        "symbol": "CBIO"
+    },
+    {
         "name": "CBL & ASSOC PPTYS INC COMMON STOCK",
         "symbol": "CBL"
     },
@@ -4450,6 +4454,10 @@
     {
         "name": "CARLISLE COS INC COM",
         "symbol": "CSL"
+    },
+    {
+        "name": "CSQUARE INC COMMON STOCK",
+        "symbol": "CSQR"
     },
     {
         "name": "CENTERSPACE COM",
@@ -7900,6 +7908,10 @@
         "symbol": "GFS"
     },
     {
+        "name": "GENERAL FUSION GROUP LTD COM",
+        "symbol": "GFUZ"
+    },
+    {
         "name": "GRUPO FINANCIERO GALICIA S.A. SPONSORED ADR",
         "symbol": "GGAL"
     },
@@ -9780,6 +9792,10 @@
         "symbol": "INVZ"
     },
     {
+        "name": "IONIC DIGITAL INC COM CL A",
+        "symbol": "IOND"
+    },
+    {
         "name": "GRANITESHARES ETF TR 2X LONG IONQ",
         "symbol": "IONL"
     },
@@ -10048,10 +10064,6 @@
         "symbol": "IVR"
     },
     {
-        "name": "ISHARES TR FUTU META TE ETF",
-        "symbol": "IVRS"
-    },
-    {
         "name": "INVENTRUST PPTYS CORP COM NEW",
         "symbol": "IVT"
     },
@@ -10286,6 +10298,10 @@
     {
         "name": "DIREXION SHARES ETF TRUST DAILY JUNIOR GOL",
         "symbol": "JDST"
+    },
+    {
+        "name": "ETF SER SOLUTIONS DEFI DRON MO ETF",
+        "symbol": "JEDI"
     },
     {
         "name": "JEFFERIES FINANCIAL GROUP INC COM",
@@ -10812,6 +10828,10 @@
         "symbol": "KSS"
     },
     {
+        "name": "KRANESHARES TRUST CHINA TECHNO & S",
+        "symbol": "KSTR"
+    },
+    {
         "name": "KT CORP SPONSORED ADR",
         "symbol": "KT"
     },
@@ -11294,6 +11314,10 @@
     {
         "name": "COMSTOCK INC COM SHS",
         "symbol": "LODE"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DLY SPCX BULL 2X",
+        "symbol": "LOFF"
     },
     {
         "name": "LOGITECH INTL S A SHS",
@@ -11926,6 +11950,10 @@
     {
         "name": "MEDALLION FINANCIAL CORP COM",
         "symbol": "MFIN"
+    },
+    {
+        "name": "MIDERA FOOD PROCESSING INC COM",
+        "symbol": "MFP"
     },
     {
         "name": "MISTRAS GROUP INC COM",
@@ -13100,6 +13128,10 @@
         "symbol": "NOWL"
     },
     {
+        "name": "NEPTUNE INS HLDGS INC CL A",
+        "symbol": "NP"
+    },
+    {
         "name": "NEUROPACE INC COM",
         "symbol": "NPCE"
     },
@@ -13498,6 +13530,10 @@
     {
         "name": "OAKTREE SPECIALTY LENDING COM",
         "symbol": "OCSL"
+    },
+    {
+        "name": "OCTAVE INTELLIGENCE PLC ORD SHS CL B",
+        "symbol": "OCTV"
     },
     {
         "name": "OCULAR THERAPEUTIX INC COM",
