@@ -2976,10 +2976,6 @@
         "symbol": "BYD"
     },
     {
-        "name": "BEYOND MEAT INC COM",
-        "symbol": "BYND"
-    },
-    {
         "name": "BYRNA TECHNOLOGIES INC COM NEW",
         "symbol": "BYRN"
     },
@@ -9228,7 +9224,7 @@
         "symbol": "IBM"
     },
     {
-        "name": "ICICI BK LTD ACTING THRU ITS ADR",
+        "name": "ICICI BK LTD ADR",
         "symbol": "IBN"
     },
     {
@@ -9354,10 +9350,6 @@
     {
         "name": "IVANHOE ELECTRIC INC COM",
         "symbol": "IE"
-    },
-    {
-        "name": "iShares U.S. Consumer Focused ETF",
-        "symbol": "IEDI"
     },
     {
         "name": "ISHARES TR 7-10 YR TRSY BD",
@@ -12368,7 +12360,7 @@
         "symbol": "MRVU"
     },
     {
-        "name": "MAREX GROUP LTD",
+        "name": "MAREX GROUP LTD ORD",
         "symbol": "MRX"
     },
     {
