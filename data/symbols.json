@@ -2156,7 +2156,7 @@
         "symbol": "BEKE"
     },
     {
-        "name": "FRANKLIN TEMPLETON INC",
+        "name": "FRANKLIN TEMPLETON INC COM",
         "symbol": "BEN"
     },
     {
@@ -6140,10 +6140,6 @@
         "symbol": "EQPT"
     },
     {
-        "name": "EQUITY RESIDENTIAL SH BEN INT",
-        "symbol": "EQR"
-    },
-    {
         "name": "EQT CORP COM",
         "symbol": "EQT"
     },
@@ -8456,7 +8452,7 @@
         "symbol": "GTY"
     },
     {
-        "name": "NORTHERN TRUST MORNINGSTAR GLO",
+        "name": "FLEXSHARES TR NRTRN TR MRN GBL",
         "symbol": "GUNR"
     },
     {
@@ -9864,7 +9860,7 @@
         "symbol": "IQ"
     },
     {
-        "name": "NORTHERN TRUST INTERNATIONAL Q",
+        "name": "FLEXSHARES TR NRTRN TR INTL QL",
         "symbol": "IQDF"
     },
     {
@@ -9958,10 +9954,6 @@
     {
         "name": "INTUITIVE SURGICAL INC COM NEW",
         "symbol": "ISRG"
-    },
-    {
-        "name": "INNOVATIVE SOLUTIONS & SUPPORT COM",
-        "symbol": "ISSC"
     },
     {
         "name": "ISHARES TR CORE 1 5 YR USD",
@@ -13440,11 +13432,7 @@
         "symbol": "NXE"
     },
     {
-        "name": "--Placeholder--",
-        "symbol": "NXH"
-    },
-    {
-        "name": "--Placeholder--",
+        "name": "NEIGHBORHOOD INTELLIGENCE INC COM",
         "symbol": "NXH"
     },
     {
@@ -15140,7 +15128,7 @@
         "symbol": "QCOM"
     },
     {
-        "name": "NORTHERN TRUST QUALITY DIVIDEN",
+        "name": "FLEXSHARES TR NRTRN TR QLTY DV",
         "symbol": "QDEF"
     },
     {
@@ -15466,10 +15454,6 @@
     {
         "name": "ROYAL CARIBBEAN GROUP COM",
         "symbol": "RCL"
-    },
-    {
-        "name": "RECON TECHNOLOGY LTD SHS NEW CL A",
-        "symbol": "RCON"
     },
     {
         "name": "ARCUS BIOSCIENCES INC COM",
@@ -18168,10 +18152,6 @@
         "symbol": "TAL"
     },
     {
-        "name": "TALKSPACE INC COM",
-        "symbol": "TALK"
-    },
-    {
         "name": "TALOS ENERGY INC COM",
         "symbol": "TALO"
     },
@@ -18280,7 +18260,7 @@
         "symbol": "TDS"
     },
     {
-        "name": "NORTHERN TRUST IBOXX 3-YEAR TA",
+        "name": "FLEXSHARES TR NRTRN TR IBOXX 3",
         "symbol": "TDTT"
     },
     {
