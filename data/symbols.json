@@ -9164,6 +9164,10 @@
         "symbol": "HZO"
     },
     {
+        "name": "INNOVATIVE SOLUTIONS & SUPPORT COM",
+        "symbol": "IA"
+    },
+    {
         "name": "IAMGOLD CORP COM",
         "symbol": "IAG"
     },
@@ -13136,10 +13140,6 @@
         "symbol": "NRDS"
     },
     {
-        "name": "NERDY INC CL A COM",
-        "symbol": "NRDY"
-    },
-    {
         "name": "NRG ENERGY INC COM NEW",
         "symbol": "NRG"
     },
@@ -15454,6 +15454,10 @@
     {
         "name": "ROYAL CARIBBEAN GROUP COM",
         "symbol": "RCL"
+    },
+    {
+        "name": "RECON TECHNOLOGY LTD SHS NEW CL A",
+        "symbol": "RCON"
     },
     {
         "name": "ARCUS BIOSCIENCES INC COM",
@@ -19996,6 +20000,10 @@
         "symbol": "VMI"
     },
     {
+        "name": "VIVMARK RESIDENTIAL SH BEN INT",
+        "symbol": "VMRK"
+    },
+    {
         "name": "VANDA PHARMACEUTICALS INC COM",
         "symbol": "VNDA"
     },
@@ -20500,7 +20508,7 @@
         "symbol": "WFRD"
     },
     {
-        "name": "COINSHARES ETF TR COINSHARES BITCN",
+        "name": "COINSHARES ETF TRUST COINSHARE",
         "symbol": "WGMI"
     },
     {
