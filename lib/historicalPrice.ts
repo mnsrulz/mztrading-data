@@ -1,4 +1,23 @@
 import ky from 'https://esm.sh/ky@1.8.2';
+
+type WorkerOhlcRow = { date: string; open: number; high: number; low: number; close: number; volume: number; adjclose?: number };
+export type OptionOhlcRow = { dt: string; open: number; high: number; low: number; close: number; volume: number };
+
+export const mapWorkerOhlcRow = (row: WorkerOhlcRow): OptionOhlcRow => ({
+    dt: row.date,
+    open: row.open,
+    high: row.high,
+    low: row.low,
+    close: row.close,
+    volume: row.volume,
+});
+
+export const getOptionHistoricalOhlc = async (contractId: string, n?: number) => {
+    const rows = await ky('https://live-quotes.mztrading.workers.dev/ohlc', {
+        searchParams: { s: contractId, ...(n ? { n: String(n) } : {}) }
+    }).json<WorkerOhlcRow[]>();
+    return rows.map(mapWorkerOhlcRow);
+}
 export async function getPriceAtDate(
     symbol: string,
     dt: string,

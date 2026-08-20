@@ -27,6 +27,7 @@ import {
     getHistoricalOIDataBySymbolFromParquet
 } from "../lib/historicalOptions.ts";
 import { getIndicatorValues } from "../lib/ta.ts";
+import { getOptionHistoricalOhlc } from "../lib/historicalPrice.ts";
 import {
     type OIAnomalyFacetSearchRequestType,
     type OIAnomalySearchRequest,
@@ -232,6 +233,18 @@ app.get("/api/options/contracts/:contractId/historical-data", async (c) => {
     const contractId = c.req.param("contractId");
     const data = await getHistoricalDataForOptionContractFromParquet(contractId);
     return c.json(data);
+});
+
+app.get("/api/options/contracts/:contractId/ohlc", async (c) => {
+    const contractId = c.req.param("contractId");
+    const n = c.req.query("n") ? Number(c.req.query("n")) : 365;
+    try {
+        const data = await getOptionHistoricalOhlc(contractId, n);
+        return c.json(data);
+    } catch (err) {
+        console.error(`Error fetching OHLC for contract ${contractId}:`, err);
+        throw new HTTPException(404, { message: `No data found for contract '${contractId}'` });
+    }
 });
 
 app.get("/api/options/:symbol/report/greeks/expirations", async (c) => {

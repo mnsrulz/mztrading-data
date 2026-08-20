@@ -63,7 +63,7 @@ Netlify deploys happen automatically via Git integration (connected to `netlify-
 | `lib/cboe.ts` | Live CBOE options chain fetcher (Deno KV cache for index symbols) |
 | `lib/data.ts` | Static data loader, Fuse.js search, snapshot URL generation |
 | `lib/oianomalySearchClient.ts` | Algolia-compatible faceted search over DuckDB |
-| `lib/historicalPrice.ts` | Stock price fetcher from Cloudflare Worker |
+| `lib/historicalPrice.ts` | Stock/option price fetchers from Cloudflare Worker (`/price`, `/prices`, `/ohlc`) |
 | `api/worker.ts` | Redis pub/sub background worker using Node-API DuckDB bindings |
 
 ## Netlify apps structure
