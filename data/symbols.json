@@ -7924,10 +7924,6 @@
         "symbol": "GGR"
     },
     {
-        "name": "GLIMPSE GROUP INC COM",
-        "symbol": "GGRP"
-    },
-    {
         "name": "GUARDANT HEALTH INC COM",
         "symbol": "GH"
     },
@@ -13138,6 +13134,10 @@
     {
         "name": "NERDWALLET INC COM CL A",
         "symbol": "NRDS"
+    },
+    {
+        "name": "NERDY INC COM SHS CL A",
+        "symbol": "NRDY"
     },
     {
         "name": "NRG ENERGY INC COM NEW",
@@ -20400,10 +20400,6 @@
         "symbol": "WBI"
     },
     {
-        "name": "WEBSTER FINL CORP COM",
-        "symbol": "WBS"
-    },
-    {
         "name": "WEBTOON ENTMT INC COM",
         "symbol": "WBTN"
     },
@@ -20508,7 +20504,7 @@
         "symbol": "WFRD"
     },
     {
-        "name": "COINSHARES ETF TRUST COINSHARE",
+        "name": "COINSHARES ETF TR BITCOIN MING DIG",
         "symbol": "WGMI"
     },
     {
