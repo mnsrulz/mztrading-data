@@ -2840,6 +2840,10 @@
         "symbol": "BTI"
     },
     {
+        "name": "BRIGHTLINE INTERACTIVE INC COM",
+        "symbol": "BTLN"
+    },
+    {
         "name": "BITCOIN DEPOT INC COM",
         "symbol": "BTMCQ"
     },
@@ -10970,14 +10974,6 @@
     {
         "name": "LANDBRIDGE COMPANY LLC CL A",
         "symbol": "LB"
-    },
-    {
-        "name": "LIBERTY BROADBAND CORP COM SER A",
-        "symbol": "LBRDA"
-    },
-    {
-        "name": "LIBERTY BROADBAND CORP COM SER C",
-        "symbol": "LBRDK"
     },
     {
         "name": "LIBERTY ENERGY INC COM CL A",
