@@ -90,18 +90,42 @@ print("Processing done, dumping the config file.")
 with open(os.path.join(TEMP_DIR, CONFIG_FILE_NAME), "w") as file:
     json.dump(configData, file, indent=4)
 
-
 print(f"Processing daily ohlc data")
-con.execute(f"""
-COPY (
-  SELECT *
-  FROM read_parquet('{OHLC_RAW_DIR}/*/*.parquet', hive_partitioning=1)
-  EXCEPT
-  SELECT *
-  FROM read_parquet('{OHLC_DIR}/*.parquet')
-)  TO '{OHLC_CONSOLIDATED_DATA_DIR}/{uuid.uuid4()}.parquet'
-  (FORMAT PARQUET, APPEND TRUE);
-""")
+
+existing = list(Path(OHLC_DIR).glob("*.parquet"))
+
+if not existing:
+    print("No existing OHLC data — initializing consolidated dataset", flush=True)
+
+    con.execute(f"""
+        COPY (
+            SELECT *
+            FROM read_parquet(
+                '{OHLC_RAW_DIR}/*/*.parquet',
+                hive_partitioning=1
+            )
+        )
+        TO '{OHLC_CONSOLIDATED_DATA_DIR}/{uuid.uuid4()}.parquet'
+        (FORMAT PARQUET);
+    """)
+
+else:
+    print(f"Found {len(existing)} existing OHLC files", flush=True)
+
+    con.execute(f"""
+        COPY (
+            SELECT *
+            FROM read_parquet(
+                '{OHLC_RAW_DIR}/*/*.parquet',
+                hive_partitioning=1
+            )
+            EXCEPT
+            SELECT *
+            FROM read_parquet('{OHLC_DIR}/*.parquet')
+        )
+        TO '{OHLC_CONSOLIDATED_DATA_DIR}/{uuid.uuid4()}.parquet'
+        (FORMAT PARQUET, APPEND TRUE);
+    """)
 
 df = con.execute(f"""SELECT * FROM '{OHLC_CONSOLIDATED_DATA_DIR}/*.parquet' LIMIT 1""").fetchone()
 
