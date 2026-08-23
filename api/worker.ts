@@ -97,7 +97,7 @@ BigInt.prototype.toJSON = function () {
 const OptionsStatsSchema = z.object({
     symbol: z.string()
         .nonempty()
-        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+        .regex(/^[a-zA-Z0-9.]+$/, "Symbol must be alphanumeric or contain dots"),
     lookbackDays: z.number().int().positive(),
     requestId: z.uuid(),
     channel: z.string()
@@ -106,7 +106,7 @@ const OptionsStatsSchema = z.object({
 const ExpectedMoveRequestSchema = z.object({
     symbol: z.string()
         .nonempty()
-        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+        .regex(/^[a-zA-Z0-9.]+$/, "Symbol must be alphanumeric or contain dots"),
     lookbackDays: z.number().int().positive(),
     requestId: z.uuid(),
     channel: z.string(),
@@ -116,7 +116,7 @@ const ExpectedMoveRequestSchema = z.object({
 const OhlcSchema = z.object({
     symbol: z.string()
         .nonempty()
-        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+        .regex(/^[a-zA-Z0-9.]+$/, "Symbol must be alphanumeric or contain dots"),
     lookbackDays: z.number().int().positive(),
     requestId: z.uuid(),
     channel: z.string()
@@ -125,7 +125,7 @@ const OhlcSchema = z.object({
 const DynamicSqlSchema = z.object({
     symbol: z.string()
         .nonempty()
-        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+        .regex(/^[a-zA-Z0-9.]+$/, "Symbol must be alphanumeric or contain dots"),
     sql: z.string().nonempty(),
     requestId: z.uuid(),
     channel: z.string()
@@ -134,7 +134,7 @@ const DynamicSqlSchema = z.object({
 const BaseSchema = {
     symbol: z.string()
         .nonempty()
-        .regex(/^[a-zA-Z0-9]+$/, "Symbol must be alphanumeric"),
+        .regex(/^[a-zA-Z0-9.]+$/, "Symbol must be alphanumeric or contain dots"),
 
     lookbackDays: z.number().int().positive(),
 
