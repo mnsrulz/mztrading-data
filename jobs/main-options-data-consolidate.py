@@ -76,7 +76,7 @@ for dt in dt_dirs[:MAX_DATES_LIMIT]:
                             ['option_symbol', 'expiration', 'option_type', 'strike']
                         )
                     ),
-                    open_interest, volume, delta, gamma, vega, theta, rho, theo, open, high, iv, bid, ask
+                    open_interest, volume, delta, gamma, vega, theta, rho, theo, open, high, low, iv, bid, ask
                 FROM read_parquet('{os.path.join(PARQUET_SRC_DIR, dt_dir, "*.parquet")}')
             ) T
         ) TO '{CONSOLIDATED_DATA_DIR}'
