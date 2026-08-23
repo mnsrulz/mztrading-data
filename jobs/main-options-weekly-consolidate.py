@@ -40,27 +40,48 @@ def combine_parquet_files(input_dir: str, max_size:int|None=None):
 
     print(f"Found {len(parquet_files)} files in director {input_dir} to consolidate")
 
-    dfs = [pd.read_parquet(pf) for pf in parquet_files]
-    combined_df = pd.concat(dfs, ignore_index=True)
+    output_files = []
+    batch_files = []
+    batch_size = 0
 
-    # Output file path (in the same folder)
-    output_file = os.path.join(TMP_DIR, f"{uuid.uuid4()}.parquet")
+    def write_batch(files):
+        dfs = [pd.read_parquet(pf) for pf in files]
+        combined_df = pd.concat(dfs, ignore_index=True)
+        # Output file path (in the same folder)
+        output_file = os.path.join(TMP_DIR, f"{uuid.uuid4()}.parquet")
 
-    # Save combined Parquet file
-    combined_df.to_parquet(output_file, index=False)
-    # list the size of teh file 
-    file_size_bytes = os.path.getsize(output_file) 
-    file_size_mb = file_size_bytes / (1024 * 1024)
+        # Save combined Parquet file
+        combined_df.to_parquet(output_file, index=False)
+        output_files.append(output_file)
 
-    print(f"Combined {len(parquet_files)} files into {output_file} ({file_size_mb:.2f} MB)")
-    
-    # Move the consolidated file back to the original folder
-    shutil.move(output_file, input_dir)
+    try:
+        for parquet_file in parquet_files:
+            batch_files.append(parquet_file)
+            batch_size += os.path.getsize(parquet_file)
+
+            if max_size is not None and batch_size >= max_size:
+                write_batch(batch_files)
+                batch_files = []
+                batch_size = 0
+
+        if batch_files:
+            write_batch(batch_files)
+    except Exception:
+        for path in output_files:
+            os.remove(path)
+        raise
+
+    for output_file in output_files:
+        file_size_mb = os.path.getsize(output_file) / (1024 * 1024)
+        shutil.move(output_file, input_dir)
+        print(f"Wrote consolidated file {output_file} ({file_size_mb:.2f} MB)")
 
     # Delete original files one by one
     for pf in parquet_files:
         os.remove(pf)
         print(f"Deleted {pf}")
+
+    print(f"Combined {len(parquet_files)} files into {len(output_files)} output files")
 
 #### 1 Options data consolidation
 for folder_name in os.listdir(CONSOLIDATED_DATA_DIR):
