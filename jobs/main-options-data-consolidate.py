@@ -131,6 +131,7 @@ df = con.execute(f"""SELECT * FROM '{OHLC_CONSOLIDATED_DATA_DIR}/*.parquet' LIMI
 
 if df is None:
     shutil.rmtree(OHLC_CONSOLIDATED_DATA_DIR, ignore_errors=True)
+    os.makedirs(OHLC_CONSOLIDATED_DATA_DIR, exist_ok=True)  # just to be sure, create the directory again
     print(f"No new data found for ohlc data")
 else:
     print(f"Processing done for ohlc data")
