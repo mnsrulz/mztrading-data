@@ -3712,10 +3712,6 @@
         "symbol": "CLH"
     },
     {
-        "name": "CLEARSIGN TECHNOLOGIES CORP COM NEW",
-        "symbol": "CLIR"
-    },
-    {
         "name": "CELLECTIS S A SPON ADS",
         "symbol": "CLLS"
     },
@@ -8588,10 +8584,6 @@
         "symbol": "HBCP"
     },
     {
-        "name": "HARVARD BIOSCIENCE INC COM",
-        "symbol": "HBIO"
-    },
-    {
         "name": "HUDBAY MINERALS INC COM",
         "symbol": "HBM"
     },
@@ -12436,6 +12428,10 @@
         "symbol": "MSTU"
     },
     {
+        "name": "T-Rex 2X Long MSTR Daily Target ETF",
+        "symbol": "MSTU"
+    },
+    {
         "name": "Roundhill MSTR WeeklyPay ETF",
         "symbol": "MSTW"
     },
@@ -12762,10 +12758,6 @@
     {
         "name": "NASDAQ INC COM",
         "symbol": "NDAQ"
-    },
-    {
-        "name": "NOODLES & CO CL A NEW",
-        "symbol": "NDLS"
     },
     {
         "name": "NORDSON CORP COM",
@@ -13338,10 +13330,6 @@
     {
         "name": "NOVA LTD COM",
         "symbol": "NVMI"
-    },
-    {
-        "name": "ENVVENO MEDICAL CORPORATION COM NEW",
-        "symbol": "NVNO"
     },
     {
         "name": "NOVO-NORDISK A S ADR",
@@ -15940,10 +15928,6 @@
         "symbol": "RPRX"
     },
     {
-        "name": "RITHM PPTY TR INC COM NEW SHS",
-        "symbol": "RPT"
-    },
-    {
         "name": "INVESCO EXCHANGE TRADED FD TR S&P500 PUR VAL",
         "symbol": "RPV"
     },
@@ -17170,10 +17154,6 @@
     {
         "name": "SIMILARWEB LTD SHS",
         "symbol": "SMWB"
-    },
-    {
-        "name": "SMX SEC MATTERS PLC ORD SHS",
-        "symbol": "SMX"
     },
     {
         "name": "Tradr 2X Short SMR Daily ETF",
@@ -18890,10 +18870,6 @@
     {
         "name": "TOWER SEMICONDUCTOR LTD SHS NEW",
         "symbol": "TSEM"
-    },
-    {
-        "name": "TRINSEO PLC SHS",
-        "symbol": "TSEOQ"
     },
     {
         "name": "TAYSHA GENE THERAPIES INC COM SHS",
