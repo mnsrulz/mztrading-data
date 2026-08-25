@@ -2596,7 +2596,7 @@
         "symbol": "BOC"
     },
     {
-        "name": "BANK HAWAII CORP COM",
+        "name": "BANK OF HI CORP COM",
         "symbol": "BOH"
     },
     {
@@ -2672,7 +2672,7 @@
         "symbol": "BRCB"
     },
     {
-        "name": "BRC INC COM CL A",
+        "name": "BRC INC COM SHS CL A",
         "symbol": "BRCC"
     },
     {
@@ -10620,10 +10620,6 @@
         "symbol": "KLTR"
     },
     {
-        "name": "KLX ENERGY SERVICES HOLDINGS COM NEW",
-        "symbol": "KLXE"
-    },
-    {
         "name": "KIMBERLY-CLARK CORP COM",
         "symbol": "KMB"
     },
@@ -12422,10 +12418,6 @@
     {
         "name": "STRATEGY INC CL A NEW",
         "symbol": "MSTR"
-    },
-    {
-        "name": "T-Rex 2X Long MSTR Daily Target ETF",
-        "symbol": "MSTU"
     },
     {
         "name": "T-Rex 2X Long MSTR Daily Target ETF",
@@ -15508,10 +15500,6 @@
         "symbol": "REAL"
     },
     {
-        "name": "THE REAL BROKERAGE INC COM NEW",
-        "symbol": "REAX"
-    },
-    {
         "name": "REE AUTOMOTIVE LTD SHS CL A NEW",
         "symbol": "REEAF"
     },
@@ -15786,10 +15774,6 @@
     {
         "name": "REGIONAL MGMT CORP COM",
         "symbol": "RM"
-    },
-    {
-        "name": "RE/MAX HLDGS INC CL A",
-        "symbol": "RMAX"
     },
     {
         "name": "RAMBUS INC DEL COM",
@@ -19066,10 +19050,6 @@
     {
         "name": "PROSHARES TR ULTR RU 2000 NEW",
         "symbol": "TWM"
-    },
-    {
-        "name": "TWO HARBORS INVENTMENT CORPOR COM",
-        "symbol": "TWO"
     },
     {
         "name": "TWIST BIOSCIENCE CORP COM",
