@@ -10620,6 +10620,10 @@
         "symbol": "KLTR"
     },
     {
+        "name": "KLX ENERGY SERVICES HOLDINGS COM NEW",
+        "symbol": "KLXE"
+    },
+    {
         "name": "KIMBERLY-CLARK CORP COM",
         "symbol": "KMB"
     },
@@ -13428,7 +13432,7 @@
         "symbol": "NXST"
     },
     {
-        "name": "NEXTPOWER INC CLASS A COM",
+        "name": "NEXTPOWER INC COM",
         "symbol": "NXT"
     },
     {
@@ -15498,6 +15502,10 @@
     {
         "name": "THE REALREAL INC COM",
         "symbol": "REAL"
+    },
+    {
+        "name": "REAL REMAX GROUP INC COM NEW",
+        "symbol": "REAX"
     },
     {
         "name": "REE AUTOMOTIVE LTD SHS CL A NEW",
