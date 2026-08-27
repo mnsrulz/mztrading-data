@@ -1844,6 +1844,10 @@
         "symbol": "AXTI"
     },
     {
+        "name": "Tradr 2X Short AXTI Daily ETF",
+        "symbol": "AXTQ"
+    },
+    {
         "name": "T-REX 2X Long AXTI Daily Target ETF",
         "symbol": "AXTU"
     },
@@ -2842,10 +2846,6 @@
     {
         "name": "BRIGHTLINE INTERACTIVE INC COM",
         "symbol": "BTLN"
-    },
-    {
-        "name": "BITCOIN DEPOT INC COM",
-        "symbol": "BTMCQ"
     },
     {
         "name": "BTQ TECHNOLOGIES CORP COM",
@@ -3978,6 +3978,10 @@
     {
         "name": "Leverage Shares 2X Long COHR Daily ETF",
         "symbol": "COHH"
+    },
+    {
+        "name": "Tradr 2X Short COHR Daily ETF",
+        "symbol": "COHQ"
     },
     {
         "name": "COHERENT CORP COM",
@@ -5528,10 +5532,6 @@
         "symbol": "DVA"
     },
     {
-        "name": "WEBS ETF TR INDUSTRIALS XLI",
-        "symbol": "DVIN"
-    },
-    {
         "name": "DEVON ENERGY CORP NEW COM",
         "symbol": "DVN"
     },
@@ -5540,48 +5540,8 @@
         "symbol": "DVQQ"
     },
     {
-        "name": "WEBS ETF TR REAL EST XLR ETF",
-        "symbol": "DVRE"
-    },
-    {
         "name": "WEBS ETF TR SPY DEFINED VOL",
         "symbol": "DVSP"
-    },
-    {
-        "name": "WEBS ETF TR UTILITIES XLU",
-        "symbol": "DVUT"
-    },
-    {
-        "name": "WEBS ETF TR MATERIALS XLB",
-        "symbol": "DVXB"
-    },
-    {
-        "name": "WEBS ETF TR COMMCTN SRVC XLC",
-        "symbol": "DVXC"
-    },
-    {
-        "name": "WEBS ETF TR ENER XLE DEF ETF",
-        "symbol": "DVXE"
-    },
-    {
-        "name": "WEBS ETF TR FINL XLF DEF ETF",
-        "symbol": "DVXF"
-    },
-    {
-        "name": "WEBS ETF TR TECH XLK DEF ETF",
-        "symbol": "DVXK"
-    },
-    {
-        "name": "WEBS ETF TR CONS STA XLP ETF",
-        "symbol": "DVXP"
-    },
-    {
-        "name": "WEBS ETF TR HEALTH CARE XLV",
-        "symbol": "DVXV"
-    },
-    {
-        "name": "WEBS ETF TR CONSMR DISCRTNRY",
-        "symbol": "DVXY"
     },
     {
         "name": "ISHARES TR SELECT DIVID ETF",
@@ -11024,10 +10984,6 @@
         "symbol": "LECO"
     },
     {
-        "name": "LEGGETT & PLATT INC COM",
-        "symbol": "LEG"
-    },
-    {
         "name": "LEGEND BIOTECH CORP SPONSORED ADS",
         "symbol": "LEGN"
     },
@@ -11884,6 +11840,10 @@
         "symbol": "METC"
     },
     {
+        "name": "Tradr 2X Short META Daily ETF",
+        "symbol": "METQ"
+    },
+    {
         "name": "DIREXION SHARES ETF TRUST DLY META BULL 2X",
         "symbol": "METU"
     },
@@ -12074,6 +12034,10 @@
     {
         "name": "GLOBAL X FDS GLBL X MLP ETF",
         "symbol": "MLPA"
+    },
+    {
+        "name": "NEOS MLP & Energy Infrastructure High Income ETF",
+        "symbol": "MLPI"
     },
     {
         "name": "GLOBAL X FDS GLB X MLP ENRG I",
@@ -12278,6 +12242,10 @@
     {
         "name": "EVERSPIN TECHNOLOGIES INC COM",
         "symbol": "MRAM"
+    },
+    {
+        "name": "Tradr 2X Long MRAM Daily ETF",
+        "symbol": "MRAX"
     },
     {
         "name": "MERCURY SYS INC COM",
@@ -12716,6 +12684,10 @@
         "symbol": "NBIG"
     },
     {
+        "name": "GRANITESHARES ETF TR 2X LONG NBIS DLY",
+        "symbol": "NBIL"
+    },
+    {
         "name": "NEBIUS GROUP N.V. SHS CLASS A",
         "symbol": "NBIS"
     },
@@ -12738,6 +12710,10 @@
     {
         "name": "NBT BANCORP INC COM",
         "symbol": "NBTB"
+    },
+    {
+        "name": "ROUNDHILL ETF TRUST NEOCLOUD ETF",
+        "symbol": "NCLD"
     },
     {
         "name": "NORWEGIAN CRUISE LINE HLDGS LT SHS",
@@ -13360,7 +13336,7 @@
         "symbol": "NVTX"
     },
     {
-        "name": "NOVONIX LIMITED SPONSORED ADS",
+        "name": "NOVONIX LIMITED SPON ADS REP 40",
         "symbol": "NVX"
     },
     {
@@ -13696,6 +13672,10 @@
         "symbol": "OND"
     },
     {
+        "name": "Defiance Daily Target 2X Long ONDS ETF",
+        "symbol": "ONDL"
+    },
+    {
         "name": "ONDAS INC COM NEW",
         "symbol": "ONDS"
     },
@@ -13830,6 +13810,10 @@
     {
         "name": "ORACLE CORP COM",
         "symbol": "ORCL"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DAILY ORCL BULL",
+        "symbol": "ORCU"
     },
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY",
@@ -14570,6 +14554,10 @@
     {
         "name": "TIDAL TRUST II YIELD PLTR ETF",
         "symbol": "PLTY"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY",
+        "symbol": "PLTZ"
     },
     {
         "name": "PLUG PWR INC COM NEW",
@@ -15504,7 +15492,7 @@
         "symbol": "REAL"
     },
     {
-        "name": "REAL REMAX GROUP INC COM NEW",
+        "name": "REAL REMAX GROUP INC",
         "symbol": "REAX"
     },
     {
@@ -15834,6 +15822,10 @@
     {
         "name": "RENEW ENERGY GLOBAL PLC CL A SHS",
         "symbol": "RNW"
+    },
+    {
+        "name": "CONSTRUCTION PARTNERS INC COM CL A",
+        "symbol": "ROAD"
     },
     {
         "name": "T-Rex 2X Long HOOD Daily Target ETF",
@@ -16792,6 +16784,10 @@
         "symbol": "SITM"
     },
     {
+        "name": "Tradr 2X Long SITM Daily ETF",
+        "symbol": "SITX"
+    },
+    {
         "name": "ABRDN SILVER ETF TRUST PHYSCL SILVR SHS",
         "symbol": "SIVR"
     },
@@ -17354,6 +17350,10 @@
     {
         "name": "GraniteShares 2x Long SpaceX Daily ETF",
         "symbol": "SPAL"
+    },
+    {
+        "name": "ETF OPPORTUNITIES TRUST T REX 2X LN SPCX",
+        "symbol": "SPAX"
     },
     {
         "name": "SPECTRUM BRANDS HOLDINGS INC COM",
@@ -18328,7 +18328,7 @@
         "symbol": "TESL"
     },
     {
-        "name": "21Shares Ethereum ETF",
+        "name": "21Shares Ethereum Staking ETF",
         "symbol": "TETH"
     },
     {
