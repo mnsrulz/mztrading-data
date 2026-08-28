@@ -353,7 +353,7 @@ const handleDynamicSqlMessage = async (args: DynamicSqlRequest) => {
 // GraphQL Schema
 const gqlTypeDefs = `#graphql
   type Query {
-    optionChain(symbol: String!, dt: String!): [OptionChainItem]
+    optionChain(symbol: String!, dt: String!, moneyness: Moneyness, expirationDate: String): [OptionChainItem]
     availableDates(symbol: String!): [String]
     weeklyExpirations: [String]
     monthlyExpirations: [String]
@@ -367,6 +367,10 @@ const gqlTypeDefs = `#graphql
     l: Float
     c: Float
     iv30: Float
+  }
+
+  enum Moneyness {
+    ATM
   }
 
 type OptionChainItem {
@@ -410,9 +414,11 @@ const OHLC_COLUMNS = ['dt', 'o', 'h', 'l', 'c', 'iv30'];
 
 const gqlResolvers = {
   Query: {
-    optionChain: async (_parent: unknown, args: { symbol: string; dt: string }, _context: unknown, info: any) => {
-      const { symbol, dt } = args;
+    optionChain: async (_parent: unknown, args: { symbol: string; dt: string; moneyness?: string; expirationDate?: string }, _context: unknown, info: any) => {
+      const { symbol, dt, moneyness, expirationDate } = args;
       const dtFilter = `AND quote_date = '${dt}'`;
+      const moneynessFilter = moneyness === 'ATM' ? "AND moneyness = 'ATM'" : '';
+      const expirationFilter = expirationDate ? `AND expiration_date = '${expirationDate}'` : '';
 
       const requestedFields = info?.fieldNodes?.[0]?.selectionSet?.selections
         ?.map((s: any) => s.name?.value)
@@ -429,7 +435,7 @@ const gqlResolvers = {
       const sql = `
         SELECT ${selectCols}
         FROM dataset
-        WHERE 1=1 ${dtFilter}
+        WHERE 1=1 ${dtFilter} ${moneynessFilter} ${expirationFilter}
         ORDER BY quote_date DESC, expiration_date, strike_price
       `;
 
