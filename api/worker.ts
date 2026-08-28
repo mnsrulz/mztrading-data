@@ -355,9 +355,21 @@ const gqlTypeDefs = `#graphql
   type Query {
     optionChain(symbol: String!, dt: String!): [OptionChainItem]
     availableDates(symbol: String!): [String]
+    weeklyExpirations: [String]
+    monthlyExpirations: [String]
+    ohlc(symbol: String!, dt: String): [OhlcItem]
   }
 
-  type OptionChainItem {
+  type OhlcItem {
+    dt: String
+    o: Float
+    h: Float
+    l: Float
+    c: Float
+    iv30: Float
+  }
+
+type OptionChainItem {
     quote_date: String
     expiration_date: String
     dte: Int
@@ -375,11 +387,14 @@ const gqlTypeDefs = `#graphql
     bid_price: Float
     ask_price: Float
     mid_price: Float
+    option_open_price: Float
+    option_high_price: Float
+    option_close_price: Float
     moneyness: String
     liquidity_tier: String
     underlying_close_price: Float
     underlying_iv30: Float
-  }
+}
 `;
 
 // GraphQL Resolvers
@@ -387,8 +402,11 @@ const OPTION_CHAIN_COLUMNS = [
   'quote_date', 'expiration_date', 'dte', 'option_ticker', 'option_type',
   'strike_price', 'open_interest', 'option_volume', 'delta', 'gamma',
   'vega', 'theta', 'rho', 'implied_volatility', 'bid_price', 'ask_price',
-  'mid_price', 'moneyness', 'liquidity_tier', 'underlying_close_price', 'underlying_iv30'
+  'mid_price', 'option_open_price', 'option_high_price', 'option_close_price',
+  'moneyness', 'liquidity_tier', 'underlying_close_price', 'underlying_iv30'
 ];
+
+const OHLC_COLUMNS = ['dt', 'o', 'h', 'l', 'c', 'iv30'];
 
 const gqlResolvers = {
   Query: {
@@ -440,6 +458,63 @@ const gqlResolvers = {
       const [dates] = result.getColumnsJson();
       return dates;
     },
+    weeklyExpirations: async (_parent: unknown) => {
+        const sql = `SELECT expiration FROM expirations WHERE is_weekly = 1 ORDER BY expiration ASC`;
+        const result = await executeReaderInternal('NVDA', sql, 0);
+        const [expirations] = result.getColumnsJson();
+        return expirations;
+    },
+    monthlyExpirations: async (_parent: unknown) => {
+        const sql = `SELECT expiration FROM expirations WHERE is_monthly = 1 ORDER BY expiration ASC`;
+        const result = await executeReaderInternal('NVDA', sql, 0);
+        const [expirations] = result.getColumnsJson();
+        return expirations;
+    },
+    ohlc: async (_parent: unknown, args: { symbol: string; dt?: string }, _context: unknown, info: any) => {
+        const { symbol } = args;
+
+        const ohlcColumnMap: Record<string, string> = {
+            dt: 'CAST(dt AS VARCHAR) as dt',
+            o: 'underlying_open_price as o',
+            h: 'underlying_high_price as h',
+            l: 'underlying_low_price as l',
+            c: 'underlying_close_price as c',
+            iv30: 'underlying_iv30 as iv30',
+        };
+
+        const requestedFields = info?.fieldNodes?.[0]?.selectionSet?.selections
+            ?.map((s: any) => s.name?.value)
+            ?.filter(Boolean) ?? OHLC_COLUMNS;
+
+        const selectCols = OHLC_COLUMNS
+            .filter((col) => requestedFields.includes(col))
+            .map((col) => ohlcColumnMap[col])
+            .join(', ');
+
+        const dtFilter = args.dt ? `AND dt = '${args.dt}'` : '';
+
+        const sql = `
+            SELECT ${selectCols}
+            FROM T
+            WHERE 1=1 ${dtFilter}
+            ORDER BY dt DESC
+        `;
+
+        const result = await executeReaderInternal(symbol, sql, 0);
+        const colArrays: any[][] = result.getColumnsJson();
+        const selectedCols = OHLC_COLUMNS.filter((col) => requestedFields.includes(col));
+        const rowCount = colArrays[0]?.length ?? 0;
+
+        const rows = [];
+        for (let i = 0; i < rowCount; i++) {
+            const row: Record<string, unknown> = {};
+            for (let j = 0; j < selectedCols.length; j++) {
+                row[selectedCols[j]] = colArrays[j][i];
+            }
+            rows.push(row);
+        }
+        return rows;
+    }
   },
 };
 
@@ -601,6 +676,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
                     dayofweek(CAST(quote_date as date)) AS quote_dow,
                     dayofweek(expiration_date) AS expiration_dow,
                     round((bid_price + ask_price) / 2, 2) AS mid_price,
+                    round((bid_price + ask_price) / 2, 2) AS option_close_price,
                     abs(strike_price - underlying_close_price) AS strike_distance,
                     abs(strike_price - underlying_close_price) / underlying_close_price * 100 AS strike_distance_pct,
                     CASE WHEN expirations.is_weekly = 1 THEN 1 ELSE 0 END AS is_weekly_expiration,
@@ -640,6 +716,7 @@ async function executeReaderInternal(symbol: string, sql: string, limit = 1000) 
 
                     option_open_price,
                     option_high_price,
+                    option_close_price,
                     bid_price,
                     ask_price,
                     mid_price,  
@@ -765,12 +842,11 @@ async function initRedisSubscription() {
 if (DEBUG_MODE) {
     logger.info(`Running in debug mode. Executing test query...`);
 
-    const result = await handleExpectedMoveMessage({
+    const result = await handleOhlcMessage({
         channel: 'test',
-        lookbackDays: 180,
+        lookbackDays: 30,
         requestId: crypto.randomUUID(),
         symbol: 'COIN',
-        expiryMode: 'monthly'
     });
 
     logger.info(`Result: ${JSON.stringify(result)}`);
