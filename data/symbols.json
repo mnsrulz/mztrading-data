@@ -1268,10 +1268,6 @@
         "symbol": "AREC"
     },
     {
-        "name": "THE ARENA GROUP HOLDINGS INC COM",
-        "symbol": "AREN"
-    },
-    {
         "name": "ARES MANAGEMENT CORPORATION CL A COM STK",
         "symbol": "ARES"
     },
@@ -9104,7 +9100,7 @@
         "symbol": "HYS"
     },
     {
-        "name": "BONDBLOXX ETF TRUST USD HIGH YIE ETF",
+        "name": "BONDBLOXX HIGH YIELD INCOME ET",
         "symbol": "HYSA"
     },
     {
@@ -13976,6 +13972,10 @@
         "symbol": "PAA"
     },
     {
+        "name": "PARADIUMAI INC COM",
+        "symbol": "PAAI"
+    },
+    {
         "name": "PAN AMERN SILVER CORP COM",
         "symbol": "PAAS"
     },
@@ -15108,7 +15108,7 @@
         "symbol": "QDPL"
     },
     {
-        "name": "Roundhill Innovation-100 0DTE Covered Call Strategy ETF",
+        "name": "Roundhill Nasdaq-100 0DTE Covered Call ETF Strategy ETF",
         "symbol": "QDTE"
     },
     {
