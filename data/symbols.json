@@ -4348,10 +4348,6 @@
         "symbol": "CRNT"
     },
     {
-        "name": "CRINETICS PHARMACEUTICALS INC COM",
-        "symbol": "CRNX"
-    },
-    {
         "name": "CRONOS GROUP INC COM",
         "symbol": "CRON"
     },
@@ -8776,10 +8772,6 @@
         "symbol": "HLT"
     },
     {
-        "name": "HELIX ENERGY SOLUTIONS GRP INC COM",
-        "symbol": "HLX"
-    },
-    {
         "name": "HONDA MOTOR CO LTD ADR ECH CNV IN 3",
         "symbol": "HMC"
     },
@@ -8854,6 +8846,10 @@
     {
         "name": "TIDAL TRUST II YIE HOO INC ETF",
         "symbol": "HOOY"
+    },
+    {
+        "name": "HELIX ENERGY SOLUTIONS GRP INC COM",
+        "symbol": "HOS"
     },
     {
         "name": "WEREWOLF THERAPEUTICS INC COM",
@@ -9920,7 +9916,7 @@
         "symbol": "ITB"
     },
     {
-        "name": "AMPLIFY ETF TR AMPLIFY BLUESTAR",
+        "name": "AMPLIFY ETF TR BLUE ISRA TE ETF",
         "symbol": "ITEQ"
     },
     {
