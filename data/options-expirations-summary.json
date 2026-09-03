@@ -2315,6 +2315,16 @@
         "isMonthly": false
     },
     {
+        "expiration": "2026-10-13",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-10-14",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
         "expiration": "2026-10-16",
         "isWeekly": true,
         "isMonthly": true
