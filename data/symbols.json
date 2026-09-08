@@ -3608,6 +3608,10 @@
         "symbol": "CIA"
     },
     {
+        "name": "GRUPO CIBEST SA SPON ADS",
+        "symbol": "CIB"
+    },
+    {
         "name": "FIRST TR EXCHANGE-TRADED FD II NASDAQ CYB ETF",
         "symbol": "CIBR"
     },
@@ -4534,6 +4538,10 @@
     {
         "name": "COGNIZANT TECHNOLOGY SOLUTIONS CL A",
         "symbol": "CTSH"
+    },
+    {
+        "name": "CYTOSORBENTS CORP COMMON STOCK",
+        "symbol": "CTSO"
     },
     {
         "name": "CORTEVA INC COM",
