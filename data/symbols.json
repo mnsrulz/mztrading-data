@@ -336,6 +336,10 @@
         "symbol": "ADI"
     },
     {
+        "name": "ADI GLOBAL DISTR INC COM SHS",
+        "symbol": "ADIG"
+    },
+    {
         "name": "ARCHER DANIELS MIDLAND CO COM",
         "symbol": "ADM"
     },
@@ -1312,7 +1316,7 @@
         "symbol": "ARKQ"
     },
     {
-        "name": "ARK Next Generation Internet ETF",
+        "name": "ARK Next Generation Technology ETF",
         "symbol": "ARKW"
     },
     {
@@ -2462,6 +2466,10 @@
     {
         "name": "AMPLIFY ETF TR BLOCK TECHN ETF",
         "symbol": "BLOK"
+    },
+    {
+        "name": "TIDAL TRUST II NICHOLAS CRYPTO",
+        "symbol": "BLOX"
     },
     {
         "name": "THEMES ETF TR LEVERAGE SHS 2X",
@@ -7056,6 +7064,10 @@
         "symbol": "FLO"
     },
     {
+        "name": "FLOWCO HLDGS INC COM CL A",
+        "symbol": "FLOC"
+    },
+    {
         "name": "GLOBAL X FDS US CASH FLOW",
         "symbol": "FLOW"
     },
@@ -9736,7 +9748,7 @@
         "symbol": "IONX"
     },
     {
-        "name": "TIDAL TRUST II DEFI DA IONQ NEW",
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
         "symbol": "IONZ"
     },
     {
@@ -15488,6 +15500,10 @@
         "symbol": "REET"
     },
     {
+        "name": "REFORMATION INC COM",
+        "symbol": "REF"
+    },
+    {
         "name": "CHICAGO ATLANTIC REAL ESTATE F COM",
         "symbol": "REFI"
     },
@@ -16250,6 +16266,10 @@
     {
         "name": "PROSHARES TR SHRT SMALLCAP60",
         "symbol": "SBB"
+    },
+    {
+        "name": "SBC MED GROUP HLDGS INC COM",
+        "symbol": "SBC"
     },
     {
         "name": "SEACOAST BKG CORP FLA COM NEW",
@@ -20060,6 +20080,10 @@
         "symbol": "VRA"
     },
     {
+        "name": "VERRICA PHARMACEUTICALS INC COM SHS",
+        "symbol": "VRCA"
+    },
+    {
         "name": "VIRIDIAN THERAPEUTICS INC COM",
         "symbol": "VRDN"
     },
@@ -20508,6 +20532,10 @@
         "symbol": "WLDN"
     },
     {
+        "name": "WILLIS LEASE FIN CORP COM",
+        "symbol": "WLFC"
+    },
+    {
         "name": "WESTLAKE CORPORATION COM",
         "symbol": "WLK"
     },
@@ -20590,6 +20618,10 @@
     {
         "name": "WESTPORT FUEL SYSTEMS INC COM",
         "symbol": "WPRT"
+    },
+    {
+        "name": "WisdomTree Quantum Computing Fund",
+        "symbol": "WQTM"
     },
     {
         "name": "Corgi U.S. War Machine ETF",
