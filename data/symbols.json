@@ -5796,6 +5796,10 @@
         "symbol": "EFX"
     },
     {
+        "name": "ENERFLEX LTD COM",
+        "symbol": "EFXT"
+    },
+    {
         "name": "PROSHARES TR PSHS SH MSCI EAF",
         "symbol": "EFZ"
     },
@@ -13572,10 +13576,6 @@
         "symbol": "OIS"
     },
     {
-        "name": "ONEOK INC NEW COM",
-        "symbol": "OKE"
-    },
-    {
         "name": "TIDAL TRUST II DEFIANCE DAILY T",
         "symbol": "OKLL"
     },
@@ -16858,6 +16858,10 @@
     {
         "name": "Tradr 2X Long SK hynix Daily ETF",
         "symbol": "SKHA"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DAILY SK HYNIX",
+        "symbol": "SKHL"
     },
     {
         "name": "Tradr 2X Short SK hynix Daily ETF",
@@ -21086,6 +21090,10 @@
     {
         "name": "SPDR SERIES TRUST ST STR SP TRANS",
         "symbol": "XTN"
+    },
+    {
+        "name": "XTEND AI ROBOTICS INC COM",
+        "symbol": "XTND"
     },
     {
         "name": "TWENTY ONE CAP INC COM SHS CL A",
