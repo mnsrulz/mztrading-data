@@ -1524,10 +1524,6 @@
         "symbol": "ASYS"
     },
     {
-        "name": "ATAIBECKLEY INC COM SHS",
-        "symbol": "ATAI"
-    },
-    {
         "name": "ATOUR LIFESTYLE HLDGS LTD SPONSORED ADS",
         "symbol": "ATAT"
     },
@@ -2520,7 +2516,7 @@
         "symbol": "BMNU"
     },
     {
-        "name": "BANK MONTREAL MEDIUM COM",
+        "name": "BANK OF MONTREAL COM",
         "symbol": "BMO"
     },
     {
@@ -7208,7 +7204,7 @@
         "symbol": "FNGR"
     },
     {
-        "name": "BANK MONTREAL MEDIUM NT LKD 38",
+        "name": "BANK OF MONTREAL NT LKD 38",
         "symbol": "FNGS"
     },
     {
@@ -9108,7 +9104,7 @@
         "symbol": "HYS"
     },
     {
-        "name": "BONDBLOXX ETF TRUST USD HIGH YIE ETF",
+        "name": "BONDBLOXX ETF TRUST HIGH YIELD INC",
         "symbol": "HYSA"
     },
     {
@@ -13574,6 +13570,10 @@
     {
         "name": "OIL STS INTL INC COM",
         "symbol": "OIS"
+    },
+    {
+        "name": "ONEOK INC NEW COM",
+        "symbol": "OKE"
     },
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY T",
@@ -18342,10 +18342,6 @@
     {
         "name": "T-REX 2X Long TE Daily Target ETF",
         "symbol": "TEUP"
-    },
-    {
-        "name": "TEVA PHARMACEUTICAL INDS LTD SPONSORED ADS",
-        "symbol": "TEVA"
     },
     {
         "name": "TEREX CORP NEW COM",
