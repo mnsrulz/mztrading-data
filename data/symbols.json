@@ -1092,10 +1092,6 @@
         "symbol": "ANVS"
     },
     {
-        "name": "SPHERE 3D CORP NEW COM SHS",
-        "symbol": "ANY"
-    },
-    {
         "name": "AON PLC SHS CL A",
         "symbol": "AON"
     },
@@ -5390,6 +5386,10 @@
     {
         "name": "GLOBAL X FDS AUTONMOUS EV ETF",
         "symbol": "DRIV"
+    },
+    {
+        "name": "SPHERE 3D CORP NEW COM SHS",
+        "symbol": "DRK"
     },
     {
         "name": "EA SERIES TRUST STRI US ENER ETF",
@@ -17096,7 +17096,7 @@
         "symbol": "SMLF"
     },
     {
-        "name": "HARBOR ETF TRUST ACTIVE SMALL CAP",
+        "name": "HARBOR ETF TRUST ACTI SMA CAP ETF",
         "symbol": "SMLL"
     },
     {
