@@ -1,0 +1,7 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Deno (URL-based ESM, no npm), Hono, DuckDB-WASM + DuckDB Node-API, Python (pandas/pyarrow/duckdb), Parquet on GitHub Releases, Netlify Edge Functions, Cloudflare Workers, Redis/Pusher/Netlify Blobs
+  Domain: Options market data — CBOE chains, Greeks, GEX/DEX snapshots, OI anomaly detection
+  Conventions: Use dayjs for dates (https://esm.sh/dayjs@1.11), Deno test runner (*_test.ts co-located), dual-path response (Redis + mzingest PUT), Hive-partitioned parquet (symbol=${symbol}), data/cboe-options-rolling.json is source of truth, data/ is CI-managed (do not edit directly), always ask before committing
+  Entrypoints: netlify-apps/mztradingdata/api.ts (main API, 24 endpoints), netlify-apps/mzingest/api.ts (ingress), api/worker.ts (background worker)
