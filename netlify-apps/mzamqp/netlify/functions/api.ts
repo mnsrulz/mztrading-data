@@ -29,14 +29,12 @@ app.post("/api/requests", async (c) => {
     await client.connect();
     await client.declareQueue();
 
-    const correlationId = body.requestId as string;
-    await client.publishRequest(
+    const result = await client.rpc(
       body.requestType as string,
       body as never,
-      correlationId
+      body.requestId as string,
+      8000
     );
-
-    const result = await client.waitForReply(correlationId, 8000);
     return c.json(result);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
