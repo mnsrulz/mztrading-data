@@ -46,7 +46,7 @@ app.post("/api/requests", async (c) => {
     }
 
     console.error("AMQP error:", message);
-    return c.json({ error: "Internal server error" }, 500);
+    return c.json({ error: message }, 500);
   } finally {
     await client.close();
   }
