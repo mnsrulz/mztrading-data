@@ -16,13 +16,14 @@ app.post("/api/requests", async (c) => {
     return c.json({ error: "Invalid JSON body" }, 400);
   }
 
-  if (!body?.requestType || !body?.symbol || !body?.requestId) {
+  if (!body?.requestType || !body?.symbol) {
     return c.json(
-      { error: "Missing required fields: requestType, symbol, requestId" },
+      { error: "Missing required fields: requestType, symbol" },
       400
     );
   }
 
+  const requestId = crypto.randomUUID();
   const client = new AmqpClient();
 
   try {
@@ -31,11 +32,11 @@ app.post("/api/requests", async (c) => {
 
     const result = await client.rpc(
       body.requestType as string,
-      body as never,
-      body.requestId as string,
+      { ...body, requestId } as never,
+      requestId,
       8000
     );
-    return c.json(result);
+    return c.json({ requestId, ...result as object });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
 
