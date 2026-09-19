@@ -1,14 +1,11 @@
-import type { Config } from "@netlify/functions";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { AmqpClient } from "../../amqpClient.js";
 
-export const config: Config = {
-  path: "/api/*",
-};
-
 const app = new Hono();
 app.use("*", cors());
+
+app.get("/api/health", (c) => c.json({ status: "ok" }));
 
 app.post("/api/requests", async (c) => {
   let body: Record<string, unknown>;
@@ -60,12 +57,20 @@ export const handler = async (event: {
   headers: Record<string, string>;
   body?: string;
 }) => {
-  const req = new Request(event.rawUrl, {
+  const url = event.httpMethod === "GET" && !event.body
+    ? event.rawUrl
+    : event.rawUrl;
+
+  const init: RequestInit = {
     method: event.httpMethod,
     headers: event.headers,
-    body: event.body,
-  });
+  };
 
+  if (event.body && event.httpMethod !== "GET" && event.httpMethod !== "HEAD") {
+    init.body = event.body;
+  }
+
+  const req = new Request(url, init);
   const res = await app.fetch(req);
 
   return {
