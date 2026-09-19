@@ -1,6 +1,11 @@
+import type { Config } from "@netlify/functions";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { AmqpClient } from "../../amqpClient.js";
+
+export const config: Config = {
+  path: "/api/*",
+};
 
 const app = new Hono();
 app.use("*", cors());
