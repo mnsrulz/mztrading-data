@@ -1,3 +1,4 @@
+import type { Context } from "@netlify/functions";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { AmqpClient } from "../../amqpClient.js";
@@ -51,31 +52,10 @@ app.post("/api/requests", async (c) => {
   }
 });
 
-export const handler = async (event: {
-  rawUrl: string;
-  httpMethod: string;
-  headers: Record<string, string>;
-  body?: string;
-}) => {
-  const url = event.httpMethod === "GET" && !event.body
-    ? event.rawUrl
-    : event.rawUrl;
+export default async (req: Request, context: Context) => {
+  return app.fetch(req);
+};
 
-  const init: RequestInit = {
-    method: event.httpMethod,
-    headers: event.headers,
-  };
-
-  if (event.body && event.httpMethod !== "GET" && event.httpMethod !== "HEAD") {
-    init.body = event.body;
-  }
-
-  const req = new Request(url, init);
-  const res = await app.fetch(req);
-
-  return {
-    statusCode: res.status,
-    headers: Object.fromEntries(res.headers.entries()),
-    body: await res.text(),
-  };
+export const config = {
+  path: "/api/*",
 };
