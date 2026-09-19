@@ -1,4 +1,4 @@
-import amqplib from "amqplib";
+import { AMQPClient as AmqpSocketClient, type AMQPMessage } from "@cloudamqp/amqp-client";
 
 const QUEUE_NAME = "mztrading.requests";
 const REPLY_QUEUE = "amq.rabbitmq.reply-to";
@@ -14,22 +14,19 @@ export interface AmqpClientOptions {
   uri?: string;
   queueName?: string;
   socketTimeout?: number;
-  connectionTimeout?: number;
 }
 
 export class AmqpClient {
-  private connection: amqplib.Connection | null = null;
-  private channel: amqplib.Channel | null = null;
+  private client: AmqpSocketClient | null = null;
+  private channel: Awaited<ReturnType<AmqpSocketClient["channel"]>> | null = null;
   private readonly uri: string;
   private readonly queueName: string;
   private readonly socketTimeout: number;
-  private readonly connectionTimeout: number;
 
   constructor(options: AmqpClientOptions = {}) {
     this.uri = options.uri || process.env.AMQP_URI || "";
     this.queueName = options.queueName || QUEUE_NAME;
     this.socketTimeout = options.socketTimeout || 5000;
-    this.connectionTimeout = options.connectionTimeout || 5000;
   }
 
   async connect(): Promise<void> {
@@ -37,15 +34,11 @@ export class AmqpClient {
       throw new Error("AMQP_URI environment variable is not set");
     }
 
-    this.connection = await amqplib.connect(this.uri, {
-      socket_options: {
-        timeout: this.socketTimeout,
-      },
-      connection_timeout: this.connectionTimeout,
-    });
+    this.client = new AmqpSocketClient(this.uri);
+    await this.client.connect();
 
-    this.channel = await this.connection.createChannel();
-    await this.channel.prefetch(1);
+    this.channel = await this.client.channel();
+    await this.channel.basicQos(1);
   }
 
   async declareQueue(): Promise<void> {
@@ -53,7 +46,7 @@ export class AmqpClient {
       throw new Error("Channel not initialized. Call connect() first.");
     }
 
-    await this.channel.assertQueue(this.queueName, { durable: true });
+    await this.channel.queueDeclare(this.queueName, { durable: true });
   }
 
   async publishRequest(
@@ -65,13 +58,13 @@ export class AmqpClient {
       throw new Error("Channel not initialized. Call connect() first.");
     }
 
-    const message = Buffer.from(JSON.stringify(payload));
+    const message = JSON.stringify(payload);
 
-    this.channel.sendToQueue(this.queueName, message, {
+    await this.channel.basicPublish("", this.queueName, message, {
       correlationId,
       replyTo: REPLY_QUEUE,
       contentType: "application/json",
-      persistent: true,
+      deliveryMode: 2,
     });
   }
 
@@ -85,20 +78,22 @@ export class AmqpClient {
         reject(new Error(`Reply timeout after ${timeoutMs}ms for correlationId: ${correlationId}`));
       }, timeoutMs);
 
-      const onMessage = (msg: amqplib.ConsumeMessage | null) => {
-        if (!msg) {
+      const onMessage = async (msg: AMQPMessage) => {
+        if (msg.properties?.correlationId === correlationId) {
           clearTimeout(timeout);
-          this.channel?.cancel(onMessage as unknown as string);
-          reject(new Error("Consumer cancelled by server"));
-          return;
-        }
-
-        if (msg.properties.correlationId === correlationId) {
-          clearTimeout(timeout);
-          this.channel?.cancel(onMessage as unknown as string);
+          try {
+            await this.channel?.basicCancel(msg.consumerTag ?? "");
+          } catch {
+            // consumer may already be cancelled
+          }
 
           try {
-            const reply = JSON.parse(msg.content.toString());
+            const body = msg.bodyToString();
+            if (!body) {
+              reject(new Error("Empty reply body"));
+              return;
+            }
+            const reply = JSON.parse(body);
             resolve(reply);
           } catch {
             reject(new Error("Failed to parse reply message as JSON"));
@@ -106,16 +101,16 @@ export class AmqpClient {
         }
       };
 
-      this.channel!.consume(REPLY_QUEUE, onMessage, { noAck: true }).catch((err) => {
-        clearTimeout(timeout);
-        reject(err);
-      });
+      this.channel!.basicConsume(REPLY_QUEUE, { noAck: true }, onMessage).catch((err) => {
+          clearTimeout(timeout);
+          reject(err);
+        });
     });
   }
 
   async close(): Promise<void> {
     try {
-      if (this.channel) {
+      if (this.channel && !this.channel.closed) {
         await this.channel.close();
         this.channel = null;
       }
@@ -124,9 +119,9 @@ export class AmqpClient {
     }
 
     try {
-      if (this.connection) {
-        await this.connection.close();
-        this.connection = null;
+      if (this.client && !this.client.closed) {
+        await this.client.close();
+        this.client = null;
       }
     } catch {
       // Connection may already be closed

@@ -7,12 +7,11 @@
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "amqplib": "^0.10.9",
-    "@netlify/functions": "^5.1.5"
+    "@cloudamqp/amqp-client": "^4.1.1",
+    "@netlify/functions": "^6.0.0"
   },
   "devDependencies": {
-    "@types/amqplib": "^0.10.5",
-    "@types/node": "^24.0.0",
-    "typescript": "^5.7.0"
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
   }
 }
