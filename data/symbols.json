@@ -4060,10 +4060,6 @@
         "symbol": "COO"
     },
     {
-        "name": "TRAEGER INC COM NEW",
-        "symbol": "COOK"
-    },
-    {
         "name": "CONOCOPHILLIPS COM",
         "symbol": "COP"
     },
@@ -5386,10 +5382,6 @@
     {
         "name": "GLOBAL X FDS AUTONMOUS EV ETF",
         "symbol": "DRIV"
-    },
-    {
-        "name": "DARKHORSE TECHNOLOGIES INC COM SHS",
-        "symbol": "DRK"
     },
     {
         "name": "EA SERIES TRUST STRI US ENER ETF",
@@ -8596,7 +8588,7 @@
         "symbol": "HDB"
     },
     {
-        "name": "ADVISORSHARES TR RANGER EQUITY BE",
+        "name": "ADVISORSHARES TR ACTIVE BEAR ETF",
         "symbol": "HDGE"
     },
     {
@@ -19362,10 +19354,6 @@
     {
         "name": "Tradr 2X Long U Daily ETF",
         "symbol": "UNX"
-    },
-    {
-        "name": "URBAN ONE INC CL A SHS",
-        "symbol": "UONE"
     },
     {
         "name": "WHEELS UP EXPERIENCE INC COM CL A",
