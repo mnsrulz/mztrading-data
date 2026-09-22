@@ -2704,10 +2704,6 @@
         "symbol": "BROS"
     },
     {
-        "name": "PROCAP FINL INC COM SHS",
-        "symbol": "BRR"
-    },
-    {
         "name": "BRIGHTSTAR LOTTERY PLC SHS USD",
         "symbol": "BRSL"
     },
@@ -7704,6 +7700,10 @@
         "symbol": "GCOR"
     },
     {
+        "name": "GRAYSCALE FUNDS TRUST AI COMPUTE ETF",
+        "symbol": "GCPU"
+    },
+    {
         "name": "GIGACLOUD TECHNOLOGY INC CLASS A ORD",
         "symbol": "GCT"
     },
@@ -12098,10 +12098,6 @@
     {
         "name": "MONRO INC COM",
         "symbol": "MNRO"
-    },
-    {
-        "name": "GRAYSCALE FUNDS TRUST BITCOIN MINERS",
-        "symbol": "MNRS"
     },
     {
         "name": "MINISO GROUP HLDG LTD SPONSORED ADS",
@@ -17990,6 +17986,10 @@
     {
         "name": "SERVICE PPTYS TR COM NEW",
         "symbol": "SVC"
+    },
+    {
+        "name": "SILVIA INC COM SHS",
+        "symbol": "SVIA"
     },
     {
         "name": "-1x Short VIX Futures ETF",
