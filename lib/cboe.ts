@@ -24,12 +24,12 @@ if (kv) {
 }
 
 const fetchOptionChainFromCboe = async (symbol: string) => {
-    const url = `https://cdn.cboe.com/api/global/delayed_quotes/options/${indexMap.has(symbol) ? '_' : ''}${symbol}.json`;
+    const url = `https://cdn-api.cboe.com/api/global/delayed_quotes/options/${indexMap.has(symbol) ? '_' : ''}${symbol}.json`;
 
     let response = await client(url);
     if (response.status == 403 && !indexMap.has(symbol)) {
         console.log(`403 response recieved for symbol: ${symbol}. Trying with _ prefix`);
-        response = await client(`https://cdn.cboe.com/api/global/delayed_quotes/options/_${symbol}.json`);
+        response = await client(`https://cdn-api.cboe.com/api/global/delayed_quotes/options/_${symbol}.json`);
         if (response.ok) {
             indexMap.add(symbol);
             await kv?.set([kvindexmap, symbol], symbol);

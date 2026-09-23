@@ -69,9 +69,9 @@ for symbol in symbols:
             try:
                 print(f"Fetching data for symbol: {symbol}", flush=True)
                 # if the symbol is one of the exception_symbols, then prefix it with _                
-                url_to_fetch = f"https://cdn.cboe.com/api/global/delayed_quotes/options/{symbol}.json"
+                url_to_fetch = f"https://cdn-api.cboe.com/api/global/delayed_quotes/options/{symbol}.json"
                 if symbol in exception_symbols:
-                    url_to_fetch = f"https://cdn.cboe.com/api/global/delayed_quotes/options/_{symbol}.json"
+                    url_to_fetch = f"https://cdn-api.cboe.com/api/global/delayed_quotes/options/_{symbol}.json"
                 response = requests.get(url_to_fetch)
                 response.raise_for_status()
                 json_data = response.json()
