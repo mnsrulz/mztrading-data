@@ -5300,10 +5300,6 @@
         "symbol": "DOMH"
     },
     {
-        "name": "DOMO INC COM CL B",
-        "symbol": "DOMO"
-    },
-    {
         "name": "WISDOMTREE TR US MIDCAP DIVID",
         "symbol": "DON"
     },
@@ -8990,6 +8986,10 @@
     {
         "name": "HUBSPOT INC COM",
         "symbol": "HUBS"
+    },
+    {
+        "name": "HUCKLEBERRY AI INC COM CL B",
+        "symbol": "HUCK"
     },
     {
         "name": "Corgi Shipping & Global Logistics ETF",
@@ -18170,10 +18170,6 @@
     {
         "name": "TABOOLA.COM LTD ORD SHS",
         "symbol": "TBLA"
-    },
-    {
-        "name": "THERAVANCE BIOPHARMA INC COM",
-        "symbol": "TBPH"
     },
     {
         "name": "PROSHARES TR PSHS ULTSH 20YRS",
