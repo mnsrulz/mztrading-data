@@ -2385,6 +2385,11 @@
         "isMonthly": false
     },
     {
+        "expiration": "2026-11-02",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
         "expiration": "2026-11-03",
         "isWeekly": false,
         "isMonthly": false
@@ -2396,6 +2401,11 @@
     },
     {
         "expiration": "2026-11-06",
+        "isWeekly": true,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2026-11-13",
         "isWeekly": true,
         "isMonthly": false
     },
@@ -2493,6 +2503,11 @@
         "expiration": "2027-05-21",
         "isWeekly": true,
         "isMonthly": true
+    },
+    {
+        "expiration": "2027-06-16",
+        "isWeekly": false,
+        "isMonthly": false
     },
     {
         "expiration": "2027-06-17",
