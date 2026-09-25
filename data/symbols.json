@@ -1484,6 +1484,10 @@
         "symbol": "ASST"
     },
     {
+        "name": "T-REX 2X Long ASST Daily Target ETF",
+        "symbol": "ASSX"
+    },
+    {
         "name": "ASTEC INDS INC COM",
         "symbol": "ASTE"
     },
@@ -2938,6 +2942,10 @@
     {
         "name": "BLUELINX HLDGS INC COM NEW",
         "symbol": "BXC"
+    },
+    {
+        "name": "BLACKSTONE DIGITAL INFRASTRUCT COMMON STOCK",
+        "symbol": "BXDC"
     },
     {
         "name": "BLACKSTONE MORTGAGE TRUST INC COM CL A",
@@ -9020,6 +9028,10 @@
         "symbol": "HUT"
     },
     {
+        "name": "THEMES ETF TR LEVERAGE SHS 2X",
+        "symbol": "HUTG"
+    },
+    {
         "name": "HUYA INC ADS REP SHS A",
         "symbol": "HUYA"
     },
@@ -12168,6 +12180,10 @@
         "symbol": "MOV"
     },
     {
+        "name": "CORVEX INC COM NEW",
+        "symbol": "MOVE"
+    },
+    {
         "name": "MP MATERIALS CORP COM CL A",
         "symbol": "MP"
     },
@@ -12250,6 +12266,10 @@
     {
         "name": "MODERNA INC COM",
         "symbol": "MRNA"
+    },
+    {
+        "name": "TIDAL TRUST II DEFI 2X MRNA ETF",
+        "symbol": "MRNX"
     },
     {
         "name": "TIDAL TRUST II YIE MRN INC ETF",
@@ -21226,6 +21246,10 @@
     {
         "name": "ZEBRA TECHNOLOGIES CORPORATION CL A",
         "symbol": "ZBRA"
+    },
+    {
+        "name": "ZCASH ETF ETV",
+        "symbol": "ZCSH"
     },
     {
         "name": "ZIFF DAVIS INC COM",
