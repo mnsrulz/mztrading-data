@@ -1924,6 +1924,10 @@
         "symbol": "BALL"
     },
     {
+        "name": "BALLYS CORPORATION COMMON STOCK",
+        "symbol": "BALY"
+    },
+    {
         "name": "BROOKFIELD ASSET MANAGMT LTD CL A LMT VTG SHS",
         "symbol": "BAM"
     },
@@ -4896,10 +4900,6 @@
         "symbol": "DCOM"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST US COR EQU 1 ETF",
-        "symbol": "DCOR"
-    },
-    {
         "name": "DELCATH SYS INC COM NEW",
         "symbol": "DCTH"
     },
@@ -4968,7 +4968,7 @@
         "symbol": "DFAC"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST US REAL ESTA ETF",
+        "name": "DFA INVT DIMENSIONS GROUP INC REAL ESTATE SECU",
         "symbol": "DFAR"
     },
     {
@@ -5028,7 +5028,7 @@
         "symbol": "DFNL"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST US SMALL CAP ETF",
+        "name": "DFA INVT DIMENSIONS GROUP INC U.S. SML CP VAL",
         "symbol": "DFSV"
     },
     {
@@ -5480,7 +5480,7 @@
         "symbol": "DUG"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST US HIGH PROF ETF",
+        "name": "DFA INVT DIMENSIONS GROUP INC U.S. HIGH RELATI",
         "symbol": "DUHP"
     },
     {
@@ -5570,10 +5570,6 @@
     {
         "name": "DXP ENTERPRISES INC COM NEW",
         "symbol": "DXPE"
-    },
-    {
-        "name": "DIMENSIONAL ETF TRUST DIMENSIONAL US",
-        "symbol": "DXUV"
     },
     {
         "name": "DYCOM INDS INC COM",
@@ -6848,12 +6844,12 @@
         "symbol": "FG"
     },
     {
-        "name": "FIRST TR EXCH TRD ALPHDX FD II GERMANY ALPHA",
-        "symbol": "FGM"
+        "name": "FG CMNTYS HOLDINGS INC COM",
+        "symbol": "FGC"
     },
     {
-        "name": "FG NEXUS INC. COM",
-        "symbol": "FGNX"
+        "name": "FIRST TR EXCH TRD ALPHDX FD II GERMANY ALPHA",
+        "symbol": "FGM"
     },
     {
         "name": "T-REX 2X Long FIGR Daily Target ETF",
