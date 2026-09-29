@@ -4900,6 +4900,10 @@
         "symbol": "DCOM"
     },
     {
+        "name": "DFA INVT DIMENSIONS GROUP INC U.S. CORE EQTY 1",
+        "symbol": "DCOR"
+    },
+    {
         "name": "DELCATH SYS INC COM NEW",
         "symbol": "DCTH"
     },
@@ -4968,7 +4972,7 @@
         "symbol": "DFAC"
     },
     {
-        "name": "DFA INVT DIMENSIONS GROUP INC REAL ESTATE SECU",
+        "name": "DFA REAL ESTATE SECURITIES ETF",
         "symbol": "DFAR"
     },
     {
@@ -5570,6 +5574,10 @@
     {
         "name": "DXP ENTERPRISES INC COM NEW",
         "symbol": "DXPE"
+    },
+    {
+        "name": "DFA INVT DIMENSIONS GROUP INC U.S. VECTOR EQT",
+        "symbol": "DXUV"
     },
     {
         "name": "DYCOM INDS INC COM",
@@ -7674,10 +7682,6 @@
     {
         "name": "GRAYSCALE BITCOIN TRUST ETF SHS REP COM UT",
         "symbol": "GBTC"
-    },
-    {
-        "name": "GLOBAL BUSINESS TRAVEL GROUP COM CL A",
-        "symbol": "GBTG"
     },
     {
         "name": "GREENBRIER COS INC COM",
@@ -17072,7 +17076,7 @@
         "symbol": "SMDD"
     },
     {
-        "name": "ProShares Russell 2000 Dividend Growers ETF",
+        "name": "ProShares S&P SmallCap 600 Dividend Aristocrats ETF",
         "symbol": "SMDV"
     },
     {
