@@ -89829,5 +89829,6 @@
             "symbol": "NPWR",
             "dt": "2026-10-01"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-10-01/options_cboe_oi_anomaly.parquet"
 }
