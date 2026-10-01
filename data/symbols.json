@@ -2540,7 +2540,7 @@
         "symbol": "BN"
     },
     {
-        "name": "BNB STANDARD CORP",
+        "name": "BNB STANDARD CORP COM",
         "symbol": "BNC"
     },
     {
@@ -7812,6 +7812,10 @@
         "symbol": "GERN"
     },
     {
+        "name": "GETTY IMAGES HOLDINGS INC CL A COM",
+        "symbol": "GETY"
+    },
+    {
         "name": "GE VERNOVA INC COM",
         "symbol": "GEV"
     },
@@ -8624,7 +8628,7 @@
         "symbol": "HELE"
     },
     {
-        "name": "CYBIN INC COM NEW",
+        "name": "HELUS PHARMA INC",
         "symbol": "HELP"
     },
     {
@@ -11836,7 +11840,7 @@
         "symbol": "METU"
     },
     {
-        "name": "LISTED FDS TR ROUNDHILL BALL",
+        "name": "LISTED FDS TR ROUNDHILL METAVE",
         "symbol": "METV"
     },
     {
@@ -12044,7 +12048,7 @@
         "symbol": "MLYS"
     },
     {
-        "name": "MINIMED GROUP INC COM",
+        "name": "MINIMED GROUP INC",
         "symbol": "MMED"
     },
     {
@@ -20792,7 +20796,7 @@
         "symbol": "XBIT"
     },
     {
-        "name": "Roundhill Ultra Short Duration No Dividend Target ETF",
+        "name": "Roundhill Box Spread ETF",
         "symbol": "XBOX"
     },
     {
@@ -20800,7 +20804,7 @@
         "symbol": "XCEM"
     },
     {
-        "name": "Roundhill S&P 500 No Dividend Target ETF",
+        "name": "Roundhill S&P 500 Accumulating ETF",
         "symbol": "XDIV"
     },
     {
