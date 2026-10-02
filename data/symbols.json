@@ -2540,7 +2540,7 @@
         "symbol": "BN"
     },
     {
-        "name": "BNB STANDARD CORP COM",
+        "name": "BNB STD CORP COM",
         "symbol": "BNC"
     },
     {
@@ -4072,11 +4072,11 @@
         "symbol": "COP"
     },
     {
-        "name": "SPROTT FDS TR JR COPPER MINERS",
+        "name": "SPROTT ETF TRUST JR COPPER MINERS",
         "symbol": "COPJ"
     },
     {
-        "name": "SPROTT FDS TR COPPER MINER ETF",
+        "name": "SPROTT ETF TRUST COPPER MINER ETF",
         "symbol": "COPP"
     },
     {
@@ -7788,6 +7788,10 @@
         "symbol": "GEN"
     },
     {
+        "name": "GENERATE BIOMEDICINES INC COM SHS",
+        "symbol": "GENB"
+    },
+    {
         "name": "GENCOR INDS INC COM",
         "symbol": "GENC"
     },
@@ -7970,6 +7974,10 @@
     {
         "name": "PROSHARES TR II ULTRASHORT GOLD",
         "symbol": "GLL"
+    },
+    {
+        "name": "GREENLAND ENERGY CO SHS",
+        "symbol": "GLND"
     },
     {
         "name": "GOLAR LNG LTD SHS",
@@ -8384,6 +8392,10 @@
         "symbol": "GTN"
     },
     {
+        "name": "INVESCO ACTIVELY MANAGED EXCHA TOTAL RETURN",
+        "symbol": "GTO"
+    },
+    {
         "name": "GOLDMAN SACHS ETF TR MSCI WORLD PRIV",
         "symbol": "GTPE"
     },
@@ -8628,7 +8640,7 @@
         "symbol": "HELE"
     },
     {
-        "name": "HELUS PHARMA INC",
+        "name": "HELUS PHARMA INC COM NEW",
         "symbol": "HELP"
     },
     {
@@ -8850,6 +8862,10 @@
     {
         "name": "HORNBECK OFFSHORE SERVICES INC COM",
         "symbol": "HOS"
+    },
+    {
+        "name": "HOST DIGITAL INC COM SHS CL A",
+        "symbol": "HOST"
     },
     {
         "name": "WEREWOLF THERAPEUTICS INC COM",
@@ -10220,6 +10236,10 @@
         "symbol": "JBTM"
     },
     {
+        "name": "JEFFERSON CAPITAL INC COM",
+        "symbol": "JCAP"
+    },
+    {
         "name": "JOHNSON CONTROLS INTERNATION SHS",
         "symbol": "JCI"
     },
@@ -10398,6 +10418,10 @@
     {
         "name": "KAISER ALUMINIUM CORPORATION COM PAR $0.01",
         "symbol": "KALU"
+    },
+    {
+        "name": "KARDIGAN INC COM",
+        "symbol": "KARD"
     },
     {
         "name": "KRANESHARES TRUST ELEC VEH FUTUR",
@@ -12048,7 +12072,7 @@
         "symbol": "MLYS"
     },
     {
-        "name": "MINIMED GROUP INC",
+        "name": "MINIMED GROUP INC COM",
         "symbol": "MMED"
     },
     {
@@ -14996,7 +15020,7 @@
         "symbol": "PURR"
     },
     {
-        "name": "AUREUS GREENWAY HLDGS INC COM",
+        "name": "POWERUS CORP COM",
         "symbol": "PUSA"
     },
     {
@@ -17016,7 +17040,7 @@
         "symbol": "SLVP"
     },
     {
-        "name": "SPROTT FDS TR SILVER MINERS",
+        "name": "SPROTT ETF TRUST SILVER MINERS",
         "symbol": "SLVR"
     },
     {
@@ -17076,7 +17100,7 @@
         "symbol": "SMDV"
     },
     {
-        "name": "SUMITOMO MITSUI FIN GRP INC SPONSORED ADR",
+        "name": "SUMITOMO MITSUI FIN GRP INC SPONSORED ADS",
         "symbol": "SMFG"
     },
     {
@@ -17742,6 +17766,10 @@
     {
         "name": "SASOL LTD SPONSORED ADR",
         "symbol": "SSL"
+    },
+    {
+        "name": "SUNSHINE SILVER MNG & REFNG CO COMMON STOCK",
+        "symbol": "SSMR"
     },
     {
         "name": "SS&C TECH HLDGS COM",
@@ -18544,6 +18572,10 @@
         "symbol": "TLSA"
     },
     {
+        "name": "TRISALUS LIFE SCIENCES INC COM",
+        "symbol": "TLSI"
+    },
+    {
         "name": "ISHARES TR 20 YR TR BD ETF",
         "symbol": "TLT"
     },
@@ -19016,6 +19048,10 @@
         "symbol": "TTMX"
     },
     {
+        "name": "TURN THERAPEUTICS INC COM",
+        "symbol": "TTRX"
+    },
+    {
         "name": "PROSHARES TR ULSH 20YRTRE NEW",
         "symbol": "TTT"
     },
@@ -19436,11 +19472,11 @@
         "symbol": "URI"
     },
     {
-        "name": "SPROTT FDS TR JUNIOR URANIUM",
+        "name": "SPROTT ETF TRUST JUNIOR URANIUM",
         "symbol": "URNJ"
     },
     {
-        "name": "SPROTT FDS TR URANI MINER ETF",
+        "name": "SPROTT ETF TRUST URANI MINER ETF",
         "symbol": "URNM"
     },
     {
