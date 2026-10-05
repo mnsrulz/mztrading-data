@@ -89901,5 +89901,6 @@
             "symbol": "NRG",
             "dt": "2026-10-05"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-10-05/options_cboe_oi_anomaly.parquet"
 }
