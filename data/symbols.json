@@ -4960,7 +4960,7 @@
         "symbol": "DESK"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST U S CR EQT",
+        "name": "DFA INVT DIMENSIONS GROUP INC U S CR EQT",
         "symbol": "DFAC"
     },
     {
@@ -4968,11 +4968,11 @@
         "symbol": "DFAR"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST U S SML CP PRT",
+        "name": "DFA INVT DIMENSIONS GROUP INC U S SML CP PRT",
         "symbol": "DFAS"
     },
     {
-        "name": "DIMENSIONAL ETF TRUST U S TRGD VL PR",
+        "name": "DFA INVT DIMENSIONS GROUP INC U S TRGD VL PR",
         "symbol": "DFAT"
     },
     {
@@ -11016,10 +11016,6 @@
         "symbol": "LENZ"
     },
     {
-        "name": "LESLIES INC COM",
-        "symbol": "LESL"
-    },
-    {
         "name": "CENTRUS ENERGY CORP CL A",
         "symbol": "LEU"
     },
@@ -14900,10 +14896,6 @@
         "symbol": "PSK"
     },
     {
-        "name": "PARAMOUNT SKYDANCE CORP COM CL B",
-        "symbol": "PSKY"
-    },
-    {
         "name": "PRICESMART INC COM",
         "symbol": "PSMT"
     },
@@ -15254,10 +15246,6 @@
     {
         "name": "GLOBAL X FDS NASDAQ 100 RIS",
         "symbol": "QRMI"
-    },
-    {
-        "name": "QORVO INC COM",
-        "symbol": "QRVO"
     },
     {
         "name": "QUANTUMSCAPE CORP COM CL A",
@@ -16934,6 +16922,10 @@
     {
         "name": "CHAMPION HOMES INC COM",
         "symbol": "SKY"
+    },
+    {
+        "name": "SKYDANCE CORP COM CL B",
+        "symbol": "SKYD"
     },
     {
         "name": "SKY HARBOUR GROUP CORPORATION COM CL A",
