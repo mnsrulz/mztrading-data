@@ -2432,10 +2432,6 @@
         "symbol": "BLDR"
     },
     {
-        "name": "BIOLIFE SOLUTIONS INC COM NEW",
-        "symbol": "BLFS"
-    },
-    {
         "name": "BLACKROCK INC COM",
         "symbol": "BLK"
     },
@@ -11016,6 +11012,10 @@
         "symbol": "LENZ"
     },
     {
+        "name": "LESLIES INC COM",
+        "symbol": "LESLQ"
+    },
+    {
         "name": "CENTRUS ENERGY CORP CL A",
         "symbol": "LEU"
     },
@@ -16996,10 +16996,6 @@
         "symbol": "SLON"
     },
     {
-        "name": "SIMULATIONS PLUS INC COM",
-        "symbol": "SLP"
-    },
-    {
         "name": "SELECTQUOTE INC COM",
         "symbol": "SLQT"
     },
@@ -20386,10 +20382,6 @@
     {
         "name": "WEIBO CORP SPONSORED ADR",
         "symbol": "WB"
-    },
-    {
-        "name": "WARNER BROS DISCOVERY INC COM SER A",
-        "symbol": "WBD"
     },
     {
         "name": "WATERBRIDGE INFRASTRUCTURE LLC CL A SHS REPSTG",
