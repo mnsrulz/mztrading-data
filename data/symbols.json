@@ -1776,6 +1776,10 @@
         "symbol": "AVXL"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "AVXX"
+    },
+    {
         "name": "AVERY DENNISON CORP COM",
         "symbol": "AVY"
     },
@@ -2254,6 +2258,10 @@
     {
         "name": "BIOHAVEN LTD COM",
         "symbol": "BHVN"
+    },
+    {
+        "name": "BITWISE HYPERLIQUID ETF COM SHS BEN INT",
+        "symbol": "BHYP"
     },
     {
         "name": "PROSHARES TR PSHS ULT NASB",
@@ -9528,6 +9536,10 @@
         "symbol": "IMO"
     },
     {
+        "name": "CHIPMOS TECHNOLOGIES INC SPONSORD ADS NEW",
+        "symbol": "IMOS"
+    },
+    {
         "name": "IMPERIAL PETE INC COM NEW",
         "symbol": "IMPP"
     },
@@ -9870,6 +9882,10 @@
     {
         "name": "Tradr 2X Short IREN Daily ETF",
         "symbol": "IREZ"
+    },
+    {
+        "name": "IRULYA THERAPEUTICS INC COM",
+        "symbol": "IRLA"
     },
     {
         "name": "IRON MTN INC DEL COM",
@@ -11092,6 +11108,10 @@
         "symbol": "LIF"
     },
     {
+        "name": "ETHOS TECHNOLOGIES INC CL A",
+        "symbol": "LIFE"
+    },
+    {
         "name": "LENNOX INTL INC COM",
         "symbol": "LII"
     },
@@ -12094,6 +12114,10 @@
     {
         "name": "MAKEMYTRIP LIMITED MAURITIUS SHS",
         "symbol": "MMYT"
+    },
+    {
+        "name": "Corgi MANGOS ETF",
+        "symbol": "MN"
     },
     {
         "name": "NYLIM ETF TR MERGE ARBIT ETF",
@@ -13644,6 +13668,10 @@
         "symbol": "OMAB"
     },
     {
+        "name": "TIDAL TRUST III VISTASHARES TRGT",
+        "symbol": "OMAH"
+    },
+    {
         "name": "OMNICOM GROUP INC COM",
         "symbol": "OMC"
     },
@@ -15172,10 +15200,6 @@
         "symbol": "QNC"
     },
     {
-        "name": "QUINCE THERAPEUTICS INC COM",
-        "symbol": "QNCX"
-    },
-    {
         "name": "QUINSTREET INC COM",
         "symbol": "QNST"
     },
@@ -15738,6 +15762,10 @@
     {
         "name": "TIDAL TRUST II DEFIANCE DAILY",
         "symbol": "RKLX"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE DAILY T",
+        "symbol": "RKLZ"
     },
     {
         "name": "ROCKET COS INC COM CL A",
@@ -17730,6 +17758,10 @@
     {
         "name": "PACER FDS TR DATA AND INFRAST",
         "symbol": "SRVR"
+    },
+    {
+        "name": "SURROZEN INC COM NEW",
+        "symbol": "SRZN"
     },
     {
         "name": "SOUTHSTATE BK CORP COM",
@@ -20320,6 +20352,10 @@
         "symbol": "VYGR"
     },
     {
+        "name": "VYLOR INC COM SHS",
+        "symbol": "VYLR"
+    },
+    {
         "name": "VANGUARD WHITEHALL FDS HIGH DIV YLD",
         "symbol": "VYM"
     },
@@ -21046,6 +21082,10 @@
     {
         "name": "VOLATILITY SHS TR XRP ETF",
         "symbol": "XRPI"
+    },
+    {
+        "name": "ARMADA ACQUISITION CORP II COM CL A",
+        "symbol": "XRPN"
     },
     {
         "name": "REX-Osprey XRP ETF",
