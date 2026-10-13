@@ -13708,10 +13708,6 @@
         "symbol": "ONC"
     },
     {
-        "name": "PROSHARES TR ON-DEMAND ETF",
-        "symbol": "OND"
-    },
-    {
         "name": "Defiance Daily Target 2X Long ONDS ETF",
         "symbol": "ONDL"
     },
@@ -18012,10 +18008,6 @@
         "symbol": "SUNS"
     },
     {
-        "name": "PROSHARES TR SUPPLY CHAIN LOG",
-        "symbol": "SUPL"
-    },
-    {
         "name": "SUPERNUS PHARMACEUTICALS COM",
         "symbol": "SUPN"
     },
@@ -19248,10 +19240,6 @@
         "symbol": "UCTT"
     },
     {
-        "name": "PROSHARES TR ULTRA CYBRSCURTY",
-        "symbol": "UCYB"
-    },
-    {
         "name": "INVESCO DB US DLR INDEX TR BEARISH FD",
         "symbol": "UDN"
     },
@@ -19810,10 +19798,6 @@
     {
         "name": "VERITONE INC COM",
         "symbol": "VERI"
-    },
-    {
-        "name": "PROSHARES TR METAVERSE ETF",
-        "symbol": "VERS"
     },
     {
         "name": "VERU INC COM NEW",
@@ -21084,7 +21068,7 @@
         "symbol": "XRPI"
     },
     {
-        "name": "ARMADA ACQUISITION CORP II COM CL A",
+        "name": "EVERNORTH HOLDINGS INC COM CL A",
         "symbol": "XRPN"
     },
     {
