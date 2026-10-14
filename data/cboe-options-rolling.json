@@ -90153,5 +90153,6 @@
             "symbol": "NOV",
             "dt": "2026-10-14"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-10-14/options_cboe_oi_anomaly.parquet"
 }
