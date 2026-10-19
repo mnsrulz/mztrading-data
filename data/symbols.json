@@ -288,10 +288,6 @@
         "symbol": "ACTG"
     },
     {
-        "name": "ACV AUCTIONS INC COM CL A",
-        "symbol": "ACVA"
-    },
-    {
         "name": "ISHARES TR MSCI ACWI ETF",
         "symbol": "ACWI"
     },
@@ -1548,10 +1544,6 @@
         "symbol": "ATI"
     },
     {
-        "name": "ATKORE INC COM",
-        "symbol": "ATKR"
-    },
-    {
         "name": "AMES NATL CORP COM",
         "symbol": "ATLO"
     },
@@ -2054,10 +2046,6 @@
     {
         "name": "BRUNSWICK CORP COM",
         "symbol": "BC"
-    },
-    {
-        "name": "BIOATLA INC COM NEW",
-        "symbol": "BCAB"
     },
     {
         "name": "BICARA THERAPEUTICS INC COM",
@@ -3408,10 +3396,6 @@
         "symbol": "CEMB"
     },
     {
-        "name": "CENNTRO INC COM",
-        "symbol": "CENN"
-    },
-    {
         "name": "CENTRAL GARDEN & PET CO CL A NON-VTG",
         "symbol": "CENTA"
     },
@@ -3774,10 +3758,6 @@
     {
         "name": "Corgi Mag 7 ETF",
         "symbol": "CMAG"
-    },
-    {
-        "name": "CAMBIUM NETWORKS CORP SHS",
-        "symbol": "CMBMF"
     },
     {
         "name": "CMB.TECH NV SHS",
@@ -4558,10 +4538,6 @@
     {
         "name": "CUSTOMERS BANCORP INC COM",
         "symbol": "CUBI"
-    },
-    {
-        "name": "CUE BIOPHARMA INC COM",
-        "symbol": "CUE"
     },
     {
         "name": "CULP INC COM",
@@ -7388,10 +7364,6 @@
         "symbol": "FSTR"
     },
     {
-        "name": "FIRSTSUN CAP BANCORP COM",
-        "symbol": "FSUN"
-    },
-    {
         "name": "FIRSTSERVICE CORP NEW COM",
         "symbol": "FSV"
     },
@@ -9880,10 +9852,6 @@
         "symbol": "IREZ"
     },
     {
-        "name": "IRULYA THERAPEUTICS INC COM",
-        "symbol": "IRLA"
-    },
-    {
         "name": "IRON MTN INC DEL COM",
         "symbol": "IRM"
     },
@@ -11066,10 +11034,6 @@
     {
         "name": "LIFEVANTAGE CORP COM NEW",
         "symbol": "LFVN"
-    },
-    {
-        "name": "LIFEWARD LTD SHS",
-        "symbol": "LFWD"
     },
     {
         "name": "LGI HOMES INC COM",
@@ -16070,10 +16034,6 @@
     {
         "name": "RETRACTABLE TECHNOLOGIES INC COM",
         "symbol": "RVP"
-    },
-    {
-        "name": "REVIVA PHARMACEUTCLS HLDGS INC COM NEW",
-        "symbol": "RVPH"
     },
     {
         "name": "RIVERVIEW BANCORP INC COM",
