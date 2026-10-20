@@ -2460,10 +2460,6 @@
         "symbol": "BLOX"
     },
     {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "BLSG"
-    },
-    {
         "name": "BULLISH ORD SHS",
         "symbol": "BLSH"
     },
@@ -2982,10 +2978,6 @@
     {
         "name": "BUZZFEED INC CL A NEW",
         "symbol": "BZFD"
-    },
-    {
-        "name": "BEAZER HOMES USA INC COM NEW",
-        "symbol": "BZH"
     },
     {
         "name": "PROSHARES TR ULT MSCI BR CAPP",
@@ -4166,10 +4158,6 @@
     {
         "name": "COUPANG INC CL A",
         "symbol": "CPNG"
-    },
-    {
-        "name": "Tradr 2X Long CPNG Daily ETF",
-        "symbol": "CPNX"
     },
     {
         "name": "CAPRI HOLDINGS LIMITED SHS",
@@ -7744,10 +7732,6 @@
         "symbol": "GEM"
     },
     {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "GEMG"
-    },
-    {
         "name": "GEMINI SPACE STA INC CL A COM",
         "symbol": "GEMI"
     },
@@ -7930,10 +7914,6 @@
     {
         "name": "Roundhill Gold WeeklyPay ETF",
         "symbol": "GLDW"
-    },
-    {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "GLGG"
     },
     {
         "name": "LIBERTY CAP CORP SER C GCI GROUP",
@@ -8802,10 +8782,6 @@
     {
         "name": "HONEYWELL AEROSPACE INC COM",
         "symbol": "HONA"
-    },
-    {
-        "name": "Leverage Shares 2X Long HON Daily ETF",
-        "symbol": "HONG"
     },
     {
         "name": "ROBINHOOD MKTS INC COM CL A",
@@ -12760,10 +12736,6 @@
         "symbol": "NEM"
     },
     {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "NEMG"
-    },
-    {
         "name": "NEOGENOMICS INC COM NEW",
         "symbol": "NEO"
     },
@@ -12892,7 +12864,7 @@
         "symbol": "NHI"
     },
     {
-        "name": "NATIONAL HEALTHCARE PPTYS INC COM CLASS A",
+        "name": "NATIONAL HEALTHCARE PPTYS INC COMMON STOCK",
         "symbol": "NHP"
     },
     {
@@ -13216,10 +13188,6 @@
         "symbol": "NUE"
     },
     {
-        "name": "THEMES ETF TR LEVERAGE SHS 2X",
-        "symbol": "NUG"
-    },
-    {
         "name": "DIREXION SHARES ETF TRUST DAI GOL BUL ETF",
         "symbol": "NUGT"
     },
@@ -13390,10 +13358,6 @@
     {
         "name": "NXP SEMICONDUCTORS N V COM",
         "symbol": "NXPI"
-    },
-    {
-        "name": "Tradr 2X Long NXPI Daily ETF",
-        "symbol": "NXPX"
     },
     {
         "name": "NEXPOINT RESIDENTIAL TR INC COM",
@@ -14630,10 +14594,6 @@
     {
         "name": "POET TECHNOLOGIES INC COM NEW",
         "symbol": "POET"
-    },
-    {
-        "name": "Tradr 2X Long PONY Daily ETF",
-        "symbol": "PONX"
     },
     {
         "name": "PONY AI INC SPONSORED ADS",
@@ -17142,10 +17102,6 @@
     {
         "name": "SIMILARWEB LTD SHS",
         "symbol": "SMWB"
-    },
-    {
-        "name": "Tradr 2X Short SMR Daily ETF",
-        "symbol": "SMZ"
     },
     {
         "name": "SHARKNINJA INC COM SHS",
