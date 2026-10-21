@@ -90341,5 +90341,6 @@
             "symbol": "LAZR",
             "dt": "2026-10-21"
         }
-    ]
+    ],
+    "openInterestAnomalyUrl": "https://github.com/mnsrulz/mztrading-data/releases/download/DATA_2026-10-21/options_cboe_oi_anomaly.parquet"
 }
