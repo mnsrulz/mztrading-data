@@ -168,10 +168,6 @@
         "symbol": "ABX"
     },
     {
-        "name": "ARCOSA INC COM",
-        "symbol": "ACA"
-    },
-    {
         "name": "ACADIA PHARMACEUTICALS INC COM",
         "symbol": "ACAD"
     },
@@ -1706,6 +1702,10 @@
     {
         "name": "AMERICAN CENTY ETF TR AVANTIS US LARG",
         "symbol": "AVLC"
+    },
+    {
+        "name": "AVALYN PHARMACEUTICALS INC COM SHS",
+        "symbol": "AVLN"
     },
     {
         "name": "AMERICAN CENTY ETF TR AVA MID EQU ETF",
@@ -10244,7 +10244,7 @@
         "symbol": "JKHY"
     },
     {
-        "name": "JINKOSOLAR HLDG CO LTD SPONSORED ADR",
+        "name": "JINKO HOLDINGS LTD SPONSORED ADR",
         "symbol": "JKS"
     },
     {
@@ -10516,7 +10516,7 @@
         "symbol": "KINS"
     },
     {
-        "name": "KRANESHARES TRUST 2X LONG JD DAILY",
+        "name": "KRANESHARES TRUST 2X LO JD DA ETF",
         "symbol": "KJD"
     },
     {
@@ -10538,6 +10538,10 @@
     {
         "name": "KULICKE & SOFFA INDS INC COM",
         "symbol": "KLIC"
+    },
+    {
+        "name": "KAILERA THERAPEUTICS INC COMMON STOCK",
+        "symbol": "KLRA"
     },
     {
         "name": "KALTURA INC COM",
@@ -10886,6 +10890,10 @@
     {
         "name": "LAZARD INC COM",
         "symbol": "LAZ"
+    },
+    {
+        "name": "TEMA ETF TRUST PHOTONICS & OPTI",
+        "symbol": "LAZR"
     },
     {
         "name": "LANDBRIDGE CORP CL A",
@@ -11348,7 +11356,7 @@
         "symbol": "LTRX"
     },
     {
-        "name": "LUFAX HOLDING LTD SPONSORED ADR",
+        "name": "LUFAX HOLDING LTD SPONSORED ADS",
         "symbol": "LU"
     },
     {
@@ -13536,7 +13544,7 @@
         "symbol": "OIS"
     },
     {
-        "name": "ONEOK INC NEW COM",
+        "name": "ONEOK INC COM",
         "symbol": "OKE"
     },
     {
@@ -18116,6 +18124,10 @@
         "symbol": "TBBB"
     },
     {
+        "name": "BANCORP INC DEL COM",
+        "symbol": "TBBK"
+    },
+    {
         "name": "TURTLE BEACH CORP COM NEW",
         "symbol": "TBCH"
     },
@@ -19468,6 +19480,10 @@
         "symbol": "USLM"
     },
     {
+        "name": "DIREXION SHARES ETF TRUST DAILY SILVER BUL",
+        "symbol": "USLV"
+    },
+    {
         "name": "PRINCIPAL EXCHANGE TRADED FDS US MEGA CP ETF",
         "symbol": "USMC"
     },
@@ -20170,6 +20186,10 @@
     {
         "name": "VIATRIS INC COM",
         "symbol": "VTRS"
+    },
+    {
+        "name": "VITESSE ENERGY INC COMMON STOCK",
+        "symbol": "VTS"
     },
     {
         "name": "VIRTRA INC COM PAR",
