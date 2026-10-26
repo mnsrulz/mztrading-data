@@ -5833,7 +5833,7 @@
     },
     {
         "name": "ELME COMMUNITIES SH BEN INT",
-        "symbol": "ELME"
+        "symbol": "ELMES"
     },
     {
         "name": "EQUITY LIFESTYLE PROPERTIES COM",
@@ -20388,10 +20388,6 @@
         "symbol": "WEAT"
     },
     {
-        "name": "WEAVE COMMUNICATIONS INC COM",
-        "symbol": "WEAV"
-    },
-    {
         "name": "DIREXION SHARES ETF TRUST DAILY DOW JONES",
         "symbol": "WEBL"
     },
@@ -20582,10 +20578,6 @@
     {
         "name": "WPP PLC NEW ADR",
         "symbol": "WPP"
-    },
-    {
-        "name": "WESTPORT FUEL SYSTEMS INC COM",
-        "symbol": "WPRT"
     },
     {
         "name": "WisdomTree Quantum Computing Fund",
