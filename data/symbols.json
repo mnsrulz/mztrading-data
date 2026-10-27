@@ -420,6 +420,10 @@
         "symbol": "AESI"
     },
     {
+        "name": "AETHERION TECHNOLOGIES INC COM",
+        "symbol": "AETR"
+    },
+    {
         "name": "AEVA TECHNOLOGIES INC COM NEW",
         "symbol": "AEVA"
     },
@@ -10496,10 +10500,6 @@
         "symbol": "KHC"
     },
     {
-        "name": "KRANESHARES TRUST ASIA PACIFIC ETF",
-        "symbol": "KHYB"
-    },
-    {
         "name": "ORTHOPEDIATRICS CORP COM",
         "symbol": "KIDS"
     },
@@ -10514,10 +10514,6 @@
     {
         "name": "KINGSTONE COS INC COM",
         "symbol": "KINS"
-    },
-    {
-        "name": "KRANESHARES TRUST 2X LO JD DA ETF",
-        "symbol": "KJD"
     },
     {
         "name": "KKR & CO INC COM",
@@ -10646,10 +10642,6 @@
     {
         "name": "KOSMOS ENERGY LTD COM",
         "symbol": "KOS"
-    },
-    {
-        "name": "KRANESHARES TRUST 2X LNG PDD ETF",
-        "symbol": "KPDD"
     },
     {
         "name": "KARYOPHARM THERAPEUTICS INC COM NEW",
@@ -12340,8 +12332,8 @@
         "symbol": "MSGE"
     },
     {
-        "name": "MADISON SQUARE GRDN SPRT CORP CL A",
-        "symbol": "MSGS"
+        "name": "MSG KNICKERBOCKERS CORP CL A",
+        "symbol": "MSGK"
     },
     {
         "name": "MOTOROLA SOLUTIONS INC COM NEW",
