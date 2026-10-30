@@ -5552,10 +5552,6 @@
         "symbol": "DYN"
     },
     {
-        "name": "DYNAMIX CORP SHS CL A",
-        "symbol": "DYNC"
-    },
-    {
         "name": "BLACKROCK ETF TRUST ISHARES US EQUIT",
         "symbol": "DYNF"
     },
@@ -9060,7 +9056,7 @@
         "symbol": "HYPR"
     },
     {
-        "name": "PIMCO ETF TR 0-5 HIGH YIELD",
+        "name": "PIMCO ETF TR 0-5 YR HGH YLD C",
         "symbol": "HYS"
     },
     {
@@ -12628,7 +12624,7 @@
         "symbol": "NAUT"
     },
     {
-        "name": "NAVIENT CORPORATION COM",
+        "name": "NAVIENT HOLDINGS INC COM",
         "symbol": "NAVI"
     },
     {
