@@ -3120,6 +3120,10 @@
         "symbol": "CASH"
     },
     {
+        "name": "MGP INGREDIENTS INC NEW COM",
+        "symbol": "CASK"
+    },
+    {
         "name": "CASEYS GEN STORES INC COM",
         "symbol": "CASY"
     },
@@ -3226,10 +3230,6 @@
     {
         "name": "CIBUS INC CL A COM STK",
         "symbol": "CBUS"
-    },
-    {
-        "name": "CBIZ INC COM",
-        "symbol": "CBZ"
     },
     {
         "name": "CHEMOURS CO COM",
@@ -10756,10 +10756,6 @@
         "symbol": "KURA"
     },
     {
-        "name": "KENVUE INC COM",
-        "symbol": "KVUE"
-    },
-    {
         "name": "KLAVIYO INC COM SER A",
         "symbol": "KVYO"
     },
@@ -11148,10 +11144,6 @@
         "symbol": "LMT"
     },
     {
-        "name": "LUNAI BIOWORKS INC COM SHS",
-        "symbol": "LNAI"
-    },
-    {
         "name": "LINCOLN NATL CORP IND COM",
         "symbol": "LNC"
     },
@@ -11414,10 +11406,6 @@
     {
         "name": "LUXFER HLDGS PLC SHS",
         "symbol": "LXFR"
-    },
-    {
-        "name": "LXP INDUSTRIAL TRUST COM",
-        "symbol": "LXP"
     },
     {
         "name": "LEXICON PHARMACEUTICALS INC COM NEW",
@@ -11870,10 +11858,6 @@
     {
         "name": "MACROGENICS INC COM",
         "symbol": "MGNX"
-    },
-    {
-        "name": "MGP INGREDIENTS INC NEW COM",
-        "symbol": "MGPI"
     },
     {
         "name": "CBOE Magnificent 10 Index",
@@ -15284,10 +15268,6 @@
         "symbol": "RAM"
     },
     {
-        "name": "LIVERAMP HLDGS INC COM",
-        "symbol": "RAMP"
-    },
-    {
         "name": "T-REX 2X Inverse DRAM Daily Target ETF",
         "symbol": "RAMZ"
     },
@@ -17288,7 +17268,7 @@
         "symbol": "SOYB"
     },
     {
-        "name": "SPDR SERIES TRUST ST STR AGGRE ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PRT AGGR",
         "symbol": "SPAB"
     },
     {
@@ -17308,7 +17288,7 @@
         "symbol": "SPB"
     },
     {
-        "name": "SPDR SERIES TRUST ST STR CORPO ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PRT CORP",
         "symbol": "SPBO"
     },
     {
@@ -17416,15 +17396,15 @@
         "symbol": "SPHR"
     },
     {
-        "name": "SPDR SERIES TRUST ST PORT HIGH ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PORT HGH",
         "symbol": "SPHY"
     },
     {
-        "name": "SPDR SERIES TRUST ST INTER BD ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PRT INTR",
         "symbol": "SPIB"
     },
     {
-        "name": "SPDR SERIES TRUST ST STR TIPS ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PRT TIPS",
         "symbol": "SPIP"
     },
     {
@@ -17432,7 +17412,7 @@
         "symbol": "SPIR"
     },
     {
-        "name": "SPDR SERIES TRUST ST LONG BD ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PORT LNG",
         "symbol": "SPLB"
     },
     {
@@ -17440,7 +17420,7 @@
         "symbol": "SPLV"
     },
     {
-        "name": "SPDR SERIES TRUST ST STR BACKE ETF",
+        "name": "SPDR SERIES TRUST ST PRT BACKE ETF",
         "symbol": "SPMB"
     },
     {
@@ -17480,7 +17460,7 @@
         "symbol": "SPRY"
     },
     {
-        "name": "SPDR SERIES TRUST ST SHOR CORP ETF",
+        "name": "SPDR SERIES TRUST ST PRT SHOR CORP",
         "symbol": "SPSB"
     },
     {
@@ -17496,11 +17476,11 @@
         "symbol": "SPT"
     },
     {
-        "name": "SPDR SERIES TRUST ST INTER ETF",
+        "name": "SPDR SERIES TRUST ST SPDR PORT INT",
         "symbol": "SPTI"
     },
     {
-        "name": "SPDR SERIES TRUST ST LON TREAS ETF",
+        "name": "SPDR SERIES TRUST ST PRT LON TREAS",
         "symbol": "SPTL"
     },
     {
@@ -17508,7 +17488,7 @@
         "symbol": "SPTM"
     },
     {
-        "name": "SPDR SERIES TRUST ST SHO TREAS ETF",
+        "name": "SPDR SERIES TRUST ST PRT SHO TREAS",
         "symbol": "SPTS"
     },
     {
@@ -18278,10 +18258,6 @@
     {
         "name": "THEMES ETF TR LEVERAGE SHS 2X",
         "symbol": "TERG"
-    },
-    {
-        "name": "SIMPLIFY EXCHANGE TRADED FUNDS VOLT TSLA RE ETF",
-        "symbol": "TESL"
     },
     {
         "name": "21Shares Ethereum Staking ETF",
