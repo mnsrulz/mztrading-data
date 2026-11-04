@@ -452,10 +452,6 @@
         "symbol": "AFRM"
     },
     {
-        "name": "T-REX 2X Long AFRM Daily Target ETF",
-        "symbol": "AFRU"
-    },
-    {
         "name": "AFYA LTD CL A COM",
         "symbol": "AFYA"
     },
@@ -10848,7 +10844,7 @@
         "symbol": "LAR"
     },
     {
-        "name": "LASER PHOTONICS CORP COM",
+        "name": "LASE CORP COM",
         "symbol": "LASE"
     },
     {
@@ -14716,7 +14712,7 @@
         "symbol": "PRLD"
     },
     {
-        "name": "PERIMETER SOLUTIONS INC COMMON STOCK",
+        "name": "PERIMETER GROUP INC COMMON STOCK",
         "symbol": "PRM"
     },
     {
@@ -16234,10 +16230,6 @@
     {
         "name": "SIBANYE STILLWATER LTD SPONSORED ADR",
         "symbol": "SBSW"
-    },
-    {
-        "name": "T-REX 2X Long SBET Daily Target ETF",
-        "symbol": "SBTU"
     },
     {
         "name": "STARBUCKS CORP COM",
@@ -17888,6 +17880,10 @@
         "symbol": "SUNS"
     },
     {
+        "name": "SUPERNUS INC COM",
+        "symbol": "SUPN"
+    },
+    {
         "name": "GRUPO SUPERVIELLE S.A. SPONSORED ADR",
         "symbol": "SUPV"
     },
@@ -18254,10 +18250,6 @@
     {
         "name": "21Shares Ethereum Staking ETF",
         "symbol": "TETH"
-    },
-    {
-        "name": "T-REX 2X Long TE Daily Target ETF",
-        "symbol": "TEUP"
     },
     {
         "name": "TEVA PHARMACEUTICAL INDS LTD SHS",
