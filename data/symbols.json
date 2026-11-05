@@ -488,6 +488,10 @@
         "symbol": "AGL"
     },
     {
+        "name": "CHURCHILL CAP CORP XI COM",
+        "symbol": "AGLT"
+    },
+    {
         "name": "FEDERAL AGRIC MTG CORP CL C",
         "symbol": "AGM"
     },
@@ -3298,10 +3302,6 @@
     {
         "name": "T-REX 2X Long CRCL Daily Target ETF",
         "symbol": "CCUP"
-    },
-    {
-        "name": "CHURCHILL CAP CORP XI CL A ORD SHS",
-        "symbol": "CCXI"
     },
     {
         "name": "CHAINCE DIGITAL HOLDINGS INC ORDINARY SHARES",
@@ -11136,6 +11136,10 @@
         "symbol": "LMT"
     },
     {
+        "name": "LUNAI BIOWORKS INC COM SHS",
+        "symbol": "LNAI"
+    },
+    {
         "name": "LINCOLN NATL CORP IND COM",
         "symbol": "LNC"
     },
@@ -14170,10 +14174,6 @@
     {
         "name": "INVESCO EXCHANGE TRADED FD TR LEISU ENTMT ETF",
         "symbol": "PEJ"
-    },
-    {
-        "name": "PENUMBRA INC COM",
-        "symbol": "PEN"
     },
     {
         "name": "PENGUIN SOLUTIONS INC COM",
