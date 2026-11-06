@@ -488,7 +488,7 @@
         "symbol": "AGL"
     },
     {
-        "name": "CHURCHILL CAP CORP XI COM",
+        "name": "AGILITY ROBOTICS INC COM",
         "symbol": "AGLT"
     },
     {
@@ -5826,10 +5826,6 @@
     {
         "name": "ELECTROMED INC COM",
         "symbol": "ELMD"
-    },
-    {
-        "name": "ELME COMMUNITIES SH BEN INT",
-        "symbol": "ELMES"
     },
     {
         "name": "EQUITY LIFESTYLE PROPERTIES COM",
@@ -16768,16 +16764,8 @@
         "symbol": "SKF"
     },
     {
-        "name": "Tradr 2X Long SK hynix Daily ETF",
-        "symbol": "SKHA"
-    },
-    {
         "name": "DIREXION SHARES ETF TRUST DAILY SK HYNIX",
         "symbol": "SKHL"
-    },
-    {
-        "name": "Tradr 2X Short SK hynix Daily ETF",
-        "symbol": "SKHN"
     },
     {
         "name": "PROSHARES TR ULTRA SK HYNIX",
