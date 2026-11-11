@@ -2576,8 +2576,13 @@
     },
     {
         "expiration": "2027-01-20",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
+        "expiration": "2027-01-22",
         "isWeekly": true,
-        "isMonthly": true
+        "isMonthly": false
     },
     {
         "expiration": "2027-01-29",
