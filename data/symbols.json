@@ -212,10 +212,6 @@
         "symbol": "ACHR"
     },
     {
-        "name": "ACHIEVE LIFE SCIENCE INC COM",
-        "symbol": "ACHV"
-    },
-    {
         "name": "ALBERTSONS COMPANIES INC COMMON STOCK",
         "symbol": "ACI"
     },
@@ -1270,10 +1266,6 @@
     {
         "name": "ARHAUS INC COM CL A",
         "symbol": "ARHS"
-    },
-    {
-        "name": "APOLLO COML REAL ESTATE FIN COM",
-        "symbol": "ARI"
     },
     {
         "name": "ARIS MINING CORPORATION COM",
@@ -2906,10 +2898,6 @@
     {
         "name": "THE BALDWIN INSURANCE GRP INC COM CL A",
         "symbol": "BWIN"
-    },
-    {
-        "name": "BOWMAN CONSULTING GROUP LTD COM",
-        "symbol": "BWMN"
     },
     {
         "name": "BETTERWARE DE MEXC S A P I DE SHS",
@@ -8460,10 +8448,6 @@
         "symbol": "HASI"
     },
     {
-        "name": "Tidal Trust I",
-        "symbol": "HAUS"
-    },
-    {
         "name": "HAWKEYE 360 INC COM SHS",
         "symbol": "HAWK"
     },
@@ -10344,12 +10328,72 @@
         "symbol": "JYNT"
     },
     {
+        "name": "Advanced Micro Devices, Inc.",
+        "symbol": "KAAMD"
+    },
+    {
+        "name": "Amazon.com, Inc.",
+        "symbol": "KAAMZ"
+    },
+    {
+        "name": "Apple, Inc.",
+        "symbol": "KAAPL"
+    },
+    {
+        "name": "Bank of America Corporation",
+        "symbol": "KABAC"
+    },
+    {
+        "name": "Citigroup Inc.",
+        "symbol": "KACIT"
+    },
+    {
+        "name": "The Walt Disney Company",
+        "symbol": "KADIS"
+    },
+    {
+        "name": "Ford Motor Company",
+        "symbol": "KAFOR"
+    },
+    {
+        "name": "Alphabet Inc.",
+        "symbol": "KAGOG"
+    },
+    {
+        "name": "Robinhood Markets, Inc.",
+        "symbol": "KAHOD"
+    },
+    {
         "name": "KADANT INC COM",
         "symbol": "KAI"
     },
     {
+        "name": "JPMorgan Chase & Co.",
+        "symbol": "KAJPM"
+    },
+    {
         "name": "KAISER ALUMINIUM CORPORATION COM PAR $0.01",
         "symbol": "KALU"
+    },
+    {
+        "name": "Meta Platforms, Inc.",
+        "symbol": "KAMET"
+    },
+    {
+        "name": "Microsoft Corporation",
+        "symbol": "KAMSF"
+    },
+    {
+        "name": "Netflix, Inc.",
+        "symbol": "KANFX"
+    },
+    {
+        "name": "NVIDIA Corporation",
+        "symbol": "KANVD"
+    },
+    {
+        "name": "Palantir Technologies Inc.",
+        "symbol": "KAPLT"
     },
     {
         "name": "KARDIGAN INC COM",
@@ -10360,6 +10404,22 @@
         "symbol": "KARS"
     },
     {
+        "name": "Super Micro Computer, Inc.",
+        "symbol": "KASMC"
+    },
+    {
+        "name": "SoFi Technologies, Inc.",
+        "symbol": "KASOF"
+    },
+    {
+        "name": "Target Corporation",
+        "symbol": "KATGT"
+    },
+    {
+        "name": "Tesla, Inc.",
+        "symbol": "KATSL"
+    },
+    {
         "name": "KB FINL GROUP INC SPONSORED ADR",
         "symbol": "KB"
     },
@@ -10368,16 +10428,108 @@
         "symbol": "KBA"
     },
     {
+        "name": "Advanced Micro Devices, Inc.",
+        "symbol": "KBAMD"
+    },
+    {
+        "name": "Amazon.com, Inc.",
+        "symbol": "KBAMZ"
+    },
+    {
+        "name": "Apple, Inc.",
+        "symbol": "KBAPL"
+    },
+    {
+        "name": "Bank of America Corporation",
+        "symbol": "KBBAC"
+    },
+    {
+        "name": "Citigroup Inc.",
+        "symbol": "KBCIT"
+    },
+    {
+        "name": "Coinbase Global, Inc.",
+        "symbol": "KBCOI"
+    },
+    {
+        "name": "The Walt Disney Company",
+        "symbol": "KBDIS"
+    },
+    {
         "name": "SPDR SERIES TRUST ST STR SP BANK",
         "symbol": "KBE"
+    },
+    {
+        "name": "Ford Motor Company",
+        "symbol": "KBFOR"
+    },
+    {
+        "name": "Alphabet Inc.",
+        "symbol": "KBGOG"
     },
     {
         "name": "KB HOME COM",
         "symbol": "KBH"
     },
     {
+        "name": "Robinhood Markets, Inc.",
+        "symbol": "KBHOD"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "KBINT"
+    },
+    {
+        "name": "JPMorgan Chase & Co.",
+        "symbol": "KBJPM"
+    },
+    {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KBMAR"
+    },
+    {
+        "name": "Meta Platforms, Inc.",
+        "symbol": "KBMET"
+    },
+    {
+        "name": "Microsoft Corporation",
+        "symbol": "KBMSF"
+    },
+    {
+        "name": "Netflix, Inc.",
+        "symbol": "KBNFX"
+    },
+    {
+        "name": "NVIDIA Corporation",
+        "symbol": "KBNVD"
+    },
+    {
+        "name": "Palantir Technologies Inc.",
+        "symbol": "KBPLT"
+    },
+    {
         "name": "KBR INC COM",
         "symbol": "KBR"
+    },
+    {
+        "name": "Super Micro Computer, Inc.",
+        "symbol": "KBSMC"
+    },
+    {
+        "name": "SoFi Technologies, Inc.",
+        "symbol": "KBSOF"
+    },
+    {
+        "name": "Space Exploration Technologies Corp.",
+        "symbol": "KBSPC"
+    },
+    {
+        "name": "Target Corporation",
+        "symbol": "KBTGT"
+    },
+    {
+        "name": "Tesla, Inc.",
+        "symbol": "KBTSL"
     },
     {
         "name": "INVESCO EXCHANGE-TRADED FD TR KBW BK ETF",
@@ -10400,52 +10552,280 @@
         "symbol": "KC"
     },
     {
+        "name": "Advanced Micro Devices, Inc.",
+        "symbol": "KCAMD"
+    },
+    {
+        "name": "Amazon.com, Inc.",
+        "symbol": "KCAMZ"
+    },
+    {
+        "name": "Apple, Inc.",
+        "symbol": "KCAPL"
+    },
+    {
+        "name": "Bank of America Corporation",
+        "symbol": "KCBAC"
+    },
+    {
         "name": "KRANESHARES TRUST CALIFORNIA CARB",
         "symbol": "KCCA"
+    },
+    {
+        "name": "Citigroup Inc.",
+        "symbol": "KCCIT"
+    },
+    {
+        "name": "Coinbase Global, Inc.",
+        "symbol": "KCCOI"
+    },
+    {
+        "name": "The Walt Disney Company",
+        "symbol": "KCDIS"
     },
     {
         "name": "SPDR SERIES TRUST ST STR SP CAPMKT",
         "symbol": "KCE"
     },
     {
+        "name": "Ford Motor Company",
+        "symbol": "KCFOR"
+    },
+    {
+        "name": "Alphabet Inc.",
+        "symbol": "KCGOG"
+    },
+    {
+        "name": "Robinhood Markets, Inc.",
+        "symbol": "KCHOD"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "KCINT"
+    },
+    {
+        "name": "JPMorgan Chase & Co.",
+        "symbol": "KCJPM"
+    },
+    {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KCMAR"
+    },
+    {
+        "name": "Meta Platforms, Inc.",
+        "symbol": "KCMET"
+    },
+    {
+        "name": "Netflix, Inc.",
+        "symbol": "KCNFX"
+    },
+    {
+        "name": "NVIDIA Corporation",
+        "symbol": "KCNVD"
+    },
+    {
         "name": "Kurv Copper & Mining Enhanced Income ETF",
         "symbol": "KCOP"
+    },
+    {
+        "name": "Palantir Technologies Inc.",
+        "symbol": "KCPLT"
+    },
+    {
+        "name": "Super Micro Computer, Inc.",
+        "symbol": "KCSMC"
+    },
+    {
+        "name": "SoFi Technologies, Inc.",
+        "symbol": "KCSOF"
+    },
+    {
+        "name": "Target Corporation",
+        "symbol": "KCTGT"
+    },
+    {
+        "name": "Tesla, Inc.",
+        "symbol": "KCTSL"
     },
     {
         "name": "KYNDRYL HLDGS INC COMMON STOCK",
         "symbol": "KD"
     },
     {
+        "name": "Advanced Micro Devices, Inc.",
+        "symbol": "KDAMD"
+    },
+    {
+        "name": "Amazon.com, Inc.",
+        "symbol": "KDAMZ"
+    },
+    {
+        "name": "Apple, Inc.",
+        "symbol": "KDAPL"
+    },
+    {
+        "name": "Bank of America Corporation",
+        "symbol": "KDBAC"
+    },
+    {
+        "name": "Citigroup Inc.",
+        "symbol": "KDCIT"
+    },
+    {
+        "name": "Coinbase Global, Inc.",
+        "symbol": "KDCOI"
+    },
+    {
+        "name": "The Walt Disney Company",
+        "symbol": "KDDIS"
+    },
+    {
         "name": "EXCHANGE LISTED FDS TR PLUS KOREA DEFE",
         "symbol": "KDEF"
+    },
+    {
+        "name": "Ford Motor Company",
+        "symbol": "KDFOR"
+    },
+    {
+        "name": "Alphabet Inc.",
+        "symbol": "KDGOG"
+    },
+    {
+        "name": "Robinhood Markets, Inc.",
+        "symbol": "KDHOD"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "KDINT"
+    },
+    {
+        "name": "JPMorgan Chase & Co.",
+        "symbol": "KDJPM"
     },
     {
         "name": "KODIAK AI INC. COM",
         "symbol": "KDK"
     },
     {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KDMAR"
+    },
+    {
+        "name": "Meta Platforms, Inc.",
+        "symbol": "KDMET"
+    },
+    {
+        "name": "Netflix, Inc.",
+        "symbol": "KDNFX"
+    },
+    {
+        "name": "NVIDIA Corporation",
+        "symbol": "KDNVD"
+    },
+    {
         "name": "KEURIG DR PEPPER INC COM",
         "symbol": "KDP"
+    },
+    {
+        "name": "Palantir Technologies Inc.",
+        "symbol": "KDPLT"
+    },
+    {
+        "name": "Super Micro Computer, Inc.",
+        "symbol": "KDSMC"
+    },
+    {
+        "name": "SoFi Technologies, Inc.",
+        "symbol": "KDSOF"
+    },
+    {
+        "name": "Target Corporation",
+        "symbol": "KDTGT"
     },
     {
         "name": "KIMBALL ELECTRONICS INC COM",
         "symbol": "KE"
     },
     {
+        "name": "Advanced Micro Devices, Inc.",
+        "symbol": "KEAMD"
+    },
+    {
+        "name": "Amazon.com, Inc.",
+        "symbol": "KEAMZ"
+    },
+    {
+        "name": "Apple, Inc.",
+        "symbol": "KEAPL"
+    },
+    {
+        "name": "Bank of America Corporation",
+        "symbol": "KEBAC"
+    },
+    {
+        "name": "Citigroup Inc.",
+        "symbol": "KECIT"
+    },
+    {
+        "name": "The Walt Disney Company",
+        "symbol": "KEDIS"
+    },
+    {
         "name": "KEEL INFRASTRUCTURE CORP COM SHS",
         "symbol": "KEEL"
+    },
+    {
+        "name": "Ford Motor Company",
+        "symbol": "KEFOR"
+    },
+    {
+        "name": "Robinhood Markets, Inc.",
+        "symbol": "KEHOD"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "KEINT"
+    },
+    {
+        "name": "JPMorgan Chase & Co.",
+        "symbol": "KEJPM"
     },
     {
         "name": "KELLY SVCS INC CL A",
         "symbol": "KELYA"
     },
     {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KEMAR"
+    },
+    {
+        "name": "Meta Platforms, Inc.",
+        "symbol": "KEMET"
+    },
+    {
         "name": "KENON HLDGS LTD SHS",
         "symbol": "KEN"
     },
     {
+        "name": "Netflix, Inc.",
+        "symbol": "KENFX"
+    },
+    {
         "name": "KOREA ELEC PWR CORP SPONSORED ADR",
         "symbol": "KEP"
+    },
+    {
+        "name": "SoFi Technologies, Inc.",
+        "symbol": "KESOF"
+    },
+    {
+        "name": "Target Corporation",
+        "symbol": "KETGT"
+    },
+    {
+        "name": "Tesla, Inc.",
+        "symbol": "KETSL"
     },
     {
         "name": "KIRBY CORP COM",
@@ -10460,8 +10840,28 @@
         "symbol": "KEYS"
     },
     {
+        "name": "Amazon.com, Inc.",
+        "symbol": "KFAMZ"
+    },
+    {
+        "name": "Apple, Inc.",
+        "symbol": "KFAPL"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "KFINT"
+    },
+    {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KFMAR"
+    },
+    {
         "name": "KFORCE INC COM",
         "symbol": "KFRC"
+    },
+    {
+        "name": "Tesla, Inc.",
+        "symbol": "KFTSL"
     },
     {
         "name": "KORN FERRY COM NEW",
@@ -10470,6 +10870,10 @@
     {
         "name": "KINROSS GOLD CORP COM",
         "symbol": "KGC"
+    },
+    {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KGMAR"
     },
     {
         "name": "KRANESHARES TRUST MSCI CHINA CLEAN",
@@ -10784,8 +11188,24 @@
         "symbol": "KYTX"
     },
     {
+        "name": "Coinbase Global, Inc.",
+        "symbol": "KZCOI"
+    },
+    {
         "name": "KAZIA THERAPEUTICS LTD SPONSORED ADS",
         "symbol": "KZIA"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "KZINT"
+    },
+    {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "KZMAR"
+    },
+    {
+        "name": "Space Exploration Technologies Corp.",
+        "symbol": "KZSPC"
     },
     {
         "name": "LOEWS CORP COM",
@@ -12222,6 +12642,10 @@
     {
         "name": "MARSH & MCLENNAN COS INC COM",
         "symbol": "MRSH"
+    },
+    {
+        "name": "Mini Russell 2000 Binary Options",
+        "symbol": "MRTBX"
     },
     {
         "name": "MARTEN TRANS LTD COM",
@@ -15208,6 +15632,10 @@
         "symbol": "QUIK"
     },
     {
+        "name": "ACHIEVE LIFE SCIENCE INC COM",
+        "symbol": "QUIT"
+    },
+    {
         "name": "UNIQURE NV SHS",
         "symbol": "QURE"
     },
@@ -15400,7 +15828,7 @@
         "symbol": "REAL"
     },
     {
-        "name": "REAL REMAX GROUP INC",
+        "name": "REAL REMAX GROUP INC COM NEW",
         "symbol": "REAX"
     },
     {
@@ -15778,10 +16206,6 @@
     {
         "name": "ROCKWELL AUTOMATION INC COM",
         "symbol": "ROK"
-    },
-    {
-        "name": "ROKU INC COM CL A",
-        "symbol": "ROKU"
     },
     {
         "name": "ROLLINS INC COM",
@@ -18092,10 +18516,6 @@
         "symbol": "TBT"
     },
     {
-        "name": "TEXAS CAP BANCSHARES INC COM",
-        "symbol": "TCBI"
-    },
-    {
         "name": "TRICO BANCSHARES COM",
         "symbol": "TCBK"
     },
@@ -18978,6 +19398,10 @@
     {
         "name": "TERNIUM SA SPONSORED ADS",
         "symbol": "TX"
+    },
+    {
+        "name": "TEXAS CAP BANCSHARES INC COM",
+        "symbol": "TXCP"
     },
     {
         "name": "10X GENOMICS INC CL A COM",
