@@ -2560,6 +2560,11 @@
         "isMonthly": false
     },
     {
+        "expiration": "2026-12-22",
+        "isWeekly": false,
+        "isMonthly": false
+    },
+    {
         "expiration": "2026-12-23",
         "isWeekly": false,
         "isMonthly": false
