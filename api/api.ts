@@ -57,7 +57,7 @@ app.use("*", async (c, next) => {
     } finally {
         const end = performance.now();
         console.log(
-            `${req.method} ${new URL(req.url).pathname} ${req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || ""} ${(end - start).toFixed(2)} ms`,
+            `${req.method} ${c.res.status} ${new URL(req.url).pathname} ${req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || ""} ${(end - start).toFixed(2)} ms`,
         );
     }
 });
