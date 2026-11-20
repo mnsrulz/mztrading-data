@@ -31,7 +31,7 @@ jobs:
       BATCH_CHUNK_SIZE: 60
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
@@ -49,7 +49,7 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
       - name: Upload batch files artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: symbol-batches
           if-no-files-found: error
@@ -71,16 +71,16 @@ jobs:
       MATRIX_ID: ${{ strategy.job-index }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Get Public IP
         run: |
           curl https://api.ipify.org?format=json
       - name: Download batch files
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: symbol-batches
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.14" # Specify your Python version
       - name: Install dependencies
@@ -90,7 +90,7 @@ jobs:
       - name: Run the Python script
         run: python jobs/options-data/download-data.py -u
       - name: Upload artifacts 
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: cboe-data-batch-${{ strategy.job-index }}
           if-no-files-found: error
@@ -105,9 +105,9 @@ jobs:
       RELEASE_NAME: ${{needs.set-release-vars.outputs.cboe-tag}}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Download all artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           path: temp
       - name: List all files in temp directory
@@ -115,7 +115,7 @@ jobs:
           echo "Listing all files and subdirectories in temp:"
           ls -lR temp
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.14" # Specify your Python version
       - name: Install dependencies
@@ -125,7 +125,7 @@ jobs:
       - name: Run the Python script
         run: python jobs/options-data/finalize-summary.py -u
       - name: Upload artifacts 
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: cboe-data
           if-no-files-found: error
@@ -140,12 +140,12 @@ jobs:
       RELEASE_NAME: ${{needs.set-release-vars.outputs.cboe-tag}}
     steps:
       - name: Setup repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0   # Fetch all commits to ensure the latest state is available
           ref: main        # Ensure the latest state from the main branch is checked out
       - name: Download snapshot images Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: cboe-data
       # - name: Release
