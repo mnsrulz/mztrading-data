@@ -34,14 +34,14 @@ jobs:
       ROLLING_DAYS: ${{ github.event.inputs.rolling_days }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # fetch-depth: 0
           ref: main
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.9" # Specify your Python version
+          python-version: "3.12" # Specify your Python version
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -54,7 +54,7 @@ jobs:
       - name: Classify expiration types
         run: deno run --allow-all jobs/main-options-classify-expirations.ts
       - name: Upload artifacts 
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: cboe-rolling-data
           if-no-files-found: error
@@ -71,12 +71,12 @@ jobs:
       RELEASE_NAME: ${{needs.set-release-vars.outputs.cboerolling-tag}}
     steps:
       - name: Setup repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0   # Fetch all commits to ensure the latest state is available
           ref: main        # Ensure the latest state from the main branch is checked out
       - name: Download snapshot images Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: cboe-rolling-data
       - name: Release
