@@ -51,6 +51,11 @@ retry_codes = [
     HTTPStatus.GATEWAY_TIMEOUT,
 ]
 
+headers = {
+    "Referer": "https://www.cboe.com/",
+    "User-Agent": "Mozilla/5.0"
+}
+
 with open(BATCH_FILE_NAME, "r") as file:
     symbols = json.load(file)
     print(f"Loaded {len(symbols)} symbols from batch: {MATRIX_ID}", flush=True)
@@ -72,7 +77,7 @@ for symbol in symbols:
                 url_to_fetch = f"https://cdn-api.cboe.com/api/global/delayed_quotes/options/{symbol}.json"
                 if symbol in exception_symbols:
                     url_to_fetch = f"https://cdn-api.cboe.com/api/global/delayed_quotes/options/_{symbol}.json"
-                response = requests.get(url_to_fetch)
+                response = requests.get(url_to_fetch, headers=headers)
                 response.raise_for_status()
                 json_data = response.json()
 
