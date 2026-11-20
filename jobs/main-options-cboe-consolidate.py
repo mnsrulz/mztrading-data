@@ -41,7 +41,7 @@ for optionsAssetUrl, stocksAssetUrl, name in last_30_entries:
     print(f"Parsed Date: {date}")
     
     # _ ^ symbols are ones with index options like spx, vix etc
-    duckdb.sql(f"""INSERT INTO OPDATA SELECT '{date}' AS dt, replace(symbol,'_', '') as symbol, option, UNNEST(regexp_extract(option, '(\w+)(\d{{6}})([CP])(\d+)', ['option_symbol', 'expiration', 'option_type', 'strike'])), open_interest, volume, delta, gamma, iv fROM read_parquet('{optionsAssetUrl}')""")
+    duckdb.sql(fr"""INSERT INTO OPDATA SELECT '{date}' AS dt, replace(symbol,'_', '') as symbol, option, UNNEST(regexp_extract(option, '(\w+)(\d{{6}})([CP])(\d+)', ['option_symbol', 'expiration', 'option_type', 'strike'])), open_interest, volume, delta, gamma, iv fROM read_parquet('{optionsAssetUrl}')""")
     duckdb.sql(f"""INSERT INTO STOCKSDATA SELECT '{date}' AS dt, replace(symbol,'^', '') symbol, current_price, price_change, price_change_percent, open, high, low, close, prev_day_close FROM read_parquet('{stocksAssetUrl}')""")
   else:
     raise ValueError(f"Unable to parse date from name: {name}")
