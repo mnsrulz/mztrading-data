@@ -3,6 +3,7 @@ const isDenoDeploy = Deno.env.get("DENO_DEPLOY") === "true";
 
 const client = ky.create({
     headers: {
+        'Referer': 'https://www.cboe.com/',
         'Accept': 'application/json'
     },
     throwHttpErrors: false,

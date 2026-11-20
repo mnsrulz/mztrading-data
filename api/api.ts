@@ -1,4 +1,5 @@
 import { Hono } from "https://esm.sh/hono@4.12";
+import { RateLimiterMemory } from "https://esm.sh/rate-limiter-flexible@11.5.0";
 import { HTTPException } from "https://esm.sh/hono@4.12/http-exception";
 import { handle } from "https://esm.sh/hono@4.12/netlify";
 import { sortBy } from "https://deno.land/std@0.224.0/collections/sort_by.ts";
@@ -36,6 +37,13 @@ import {
 } from "../lib/oianomalySearchClient.ts";
 
 const app = new Hono();
+
+const rateLimiter = new RateLimiterMemory({
+  keyPrefix: 'middleware',
+  points: 10, // 10 requests for ip
+  duration: 60, // per 1 minute
+});
+
 
 app.use("*", async (c, next) => {
     const start = performance.now();
@@ -174,7 +182,16 @@ app.get("/api/options/report/greeks.txt", async (c) => {
     return c.text(stringify(result, { columns: Object.keys(result.at(0) || {}) }));
 });
 
-app.get("/api/options/:symbol/exposure", async (c) => {
+app.get("/api/options/:symbol/exposure", async (c, next)=> {
+    try {
+      const req = c.req.raw;
+      const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "unknown";
+      await rateLimiter.consume(ip);
+    } catch {
+        return c.json({ error: "too many request" }, 429);
+    }
+    await next()
+}, async (c)=> {
     const symbol = c.req.param("symbol");
     const data = await getExposureData(symbol, "LIVE");
     return c.json(data);
