@@ -11496,6 +11496,10 @@
         "symbol": "LKQ"
     },
     {
+        "name": "Global X LLM ETF",
+        "symbol": "LLMA"
+    },
+    {
         "name": "ELI LILLY & CO COM",
         "symbol": "LLY"
     },
@@ -11798,10 +11802,6 @@
     {
         "name": "LEXEO THERAPEUTICS INC COM",
         "symbol": "LXEO"
-    },
-    {
-        "name": "LUXFER HLDGS PLC SHS",
-        "symbol": "LXFR"
     },
     {
         "name": "LEXICON PHARMACEUTICALS INC COM NEW",
@@ -12164,10 +12164,6 @@
         "symbol": "MEOH"
     },
     {
-        "name": "MERCER INTL INC COM",
-        "symbol": "MERC"
-    },
-    {
         "name": "MESOBLAST LTD SPONS ADR",
         "symbol": "MESO"
     },
@@ -12354,6 +12350,10 @@
     {
         "name": "MARKETAXESS HLDGS INC COM",
         "symbol": "MKTX"
+    },
+    {
+        "name": "Global X MLCC & Electronic Components ETF",
+        "symbol": "MLCC"
     },
     {
         "name": "MELCO RESORTS AND ENTMNT LTD ADR",
@@ -17112,6 +17112,10 @@
         "symbol": "SIVR"
     },
     {
+        "name": "Global X Magnificent Six ETF",
+        "symbol": "SIX"
+    },
+    {
         "name": "Materials Select Sector Index S&P 500",
         "symbol": "SIXB"
     },
@@ -17434,6 +17438,10 @@
     {
         "name": "NUSCALE PWR CORP CL A COM",
         "symbol": "SMR"
+    },
+    {
+        "name": "Global X Small Modular Reactor ETF",
+        "symbol": "SMRZ"
     },
     {
         "name": "SMITH MICRO SOFTWARE INC COM NEW",
@@ -20876,7 +20884,7 @@
         "symbol": "WMT"
     },
     {
-        "name": "REX WMT Growth & Income ETF",
+        "name": "REX WMT Enhanced Growth & Income ETF",
         "symbol": "WMTI"
     },
     {
