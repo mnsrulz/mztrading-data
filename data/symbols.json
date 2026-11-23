@@ -156,10 +156,6 @@
         "symbol": "ABVC"
     },
     {
-        "name": "ABOVE FOOD INGREDIENTS INC COM",
-        "symbol": "ABVEF"
-    },
-    {
         "name": "ABIVAX SA SPONSORED ADS",
         "symbol": "ABVX"
     },
@@ -366,10 +362,6 @@
     {
         "name": "ADDUS HOMECARE CORP COM",
         "symbol": "ADUS"
-    },
-    {
-        "name": "ADVANTAGE SOLUTIONS INC COM NEW CL A",
-        "symbol": "ADV"
     },
     {
         "name": "AMEREN CORP COM",
@@ -1066,6 +1058,10 @@
     {
         "name": "ALTO NEUROSCIENCE INC COM SHS",
         "symbol": "ANRO"
+    },
+    {
+        "name": "ANTHROPIC PBC COM SHS CL A",
+        "symbol": "ANT"
     },
     {
         "name": "AN2 THERAPEUTICS INC COM",
@@ -1936,10 +1932,6 @@
         "symbol": "BAP"
     },
     {
-        "name": "BARK INC COM NEW",
-        "symbol": "BARK"
-    },
-    {
         "name": "ATLANTA BRAVES HLDGS INC COM SER A",
         "symbol": "BATRA"
     },
@@ -2288,12 +2280,8 @@
         "symbol": "BIOX"
     },
     {
-        "name": "BROOKFIELD INFRASTRUCTURE PART LP INT UNIT",
+        "name": "BROOKFIELD INFRASTRUCTURE PARTNERS INC",
         "symbol": "BIP"
-    },
-    {
-        "name": "BROOKFIELD INFRASTRUCTURE CORP COM SUB VTG A",
-        "symbol": "BIPC"
     },
     {
         "name": "BIRKENSTOCK HOLDING PLC COM SHS",
@@ -3140,7 +3128,7 @@
         "symbol": "CB"
     },
     {
-        "name": "CBAK ENERGY TECHNOLOGY LTD",
+        "name": "CBAK ENERGY TECHNOLOGY LTD COM",
         "symbol": "CBAT"
     },
     {
@@ -9852,7 +9840,7 @@
         "symbol": "ITOT"
     },
     {
-        "name": "IT TECH PACKAGING INC COM NEW",
+        "name": "IT TECH PACKAGING INC COM SHS",
         "symbol": "ITP"
     },
     {
@@ -19886,10 +19874,6 @@
     {
         "name": "RBB FD INC US TREAS 20YR BD",
         "symbol": "UTWY"
-    },
-    {
-        "name": "UTZ BRANDS INC COM CL A",
-        "symbol": "UTZ"
     },
     {
         "name": "INVESCO DB US DLR INDEX TR BULLISH FD",
