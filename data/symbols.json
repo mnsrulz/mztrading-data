@@ -1012,6 +1012,10 @@
         "symbol": "ANAB"
     },
     {
+        "name": "Leverage Shares 2X Short Anthropic Daily ETF",
+        "symbol": "ANDD"
+    },
+    {
         "name": "ANDERSONS INC COM",
         "symbol": "ANDE"
     },
@@ -1060,12 +1064,28 @@
         "symbol": "ANRO"
     },
     {
+        "name": "Leverage Shares 1X Short Anthropic Daily ETF",
+        "symbol": "ANSS"
+    },
+    {
         "name": "ANTHROPIC PBC COM SHS CL A",
         "symbol": "ANT"
     },
     {
+        "name": "Tradr 2X Long Anthropic Daily ETF",
+        "symbol": "ANTT"
+    },
+    {
         "name": "AN2 THERAPEUTICS INC COM",
         "symbol": "ANTX"
+    },
+    {
+        "name": "Tradr 2X Short Anthropic Daily ETF",
+        "symbol": "ANTZ"
+    },
+    {
+        "name": "Leverage Shares 2X Long Anthropic Daily ETF",
+        "symbol": "ANUU"
     },
     {
         "name": "ANNOVIS BIO INC COM",
@@ -1522,6 +1542,10 @@
     {
         "name": "AUTOHOME INC SP ADS RP CL A",
         "symbol": "ATHM"
+    },
+    {
+        "name": "2x Anthropic ETF",
+        "symbol": "ATHX"
     },
     {
         "name": "ATI INC COM",
@@ -2280,7 +2304,7 @@
         "symbol": "BIOX"
     },
     {
-        "name": "BROOKFIELD INFRASTRUCTURE PARTNERS INC",
+        "name": "BROOKFIELD INFRASTRUCTURE CLASS A SUB",
         "symbol": "BIP"
     },
     {
@@ -3610,6 +3634,10 @@
     {
         "name": "CLARUS CORP NEW COM",
         "symbol": "CLAR"
+    },
+    {
+        "name": "T-REX 2X Long Anthropic Daily Target ETF",
+        "symbol": "CLAU"
     },
     {
         "name": "CORE LABORATORIES INC COM",
@@ -12150,6 +12178,10 @@
     {
         "name": "METHANEX CORP COM",
         "symbol": "MEOH"
+    },
+    {
+        "name": "MERCER INTL INC COM",
+        "symbol": "MERCQ"
     },
     {
         "name": "MESOBLAST LTD SPONS ADR",
