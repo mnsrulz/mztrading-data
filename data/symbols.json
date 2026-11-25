@@ -1072,12 +1072,36 @@
         "symbol": "ANT"
     },
     {
+        "name": "TIDAL TRUST II DEFIANCE 2X ANT",
+        "symbol": "ANTC"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DAILY ANTHROPIC",
+        "symbol": "ANTD"
+    },
+    {
+        "name": "DIREXION SHARES ETF TRUST DAILY ANTHROPIC",
+        "symbol": "ANTO"
+    },
+    {
+        "name": "TIDAL TRUST II DEFIANCE 2X ANT",
+        "symbol": "ANTQ"
+    },
+    {
         "name": "Tradr 2X Long Anthropic Daily ETF",
         "symbol": "ANTT"
     },
     {
+        "name": "PROSHARES TR ULTRA ANTHROPIC",
+        "symbol": "ANTU"
+    },
+    {
         "name": "AN2 THERAPEUTICS INC COM",
         "symbol": "ANTX"
+    },
+    {
+        "name": "PROSHARES TR ULTRASHORT ANTH",
+        "symbol": "ANTY"
     },
     {
         "name": "Tradr 2X Short Anthropic Daily ETF",
@@ -2194,6 +2218,10 @@
     {
         "name": "BREAD FINANCIAL HOLDINGS INC COM",
         "symbol": "BFH"
+    },
+    {
+        "name": "BLUEFLARE INC COM",
+        "symbol": "BFLR"
     },
     {
         "name": "BUTTERFLY NETWORK INC COM CL A",
@@ -7126,10 +7154,6 @@
     {
         "name": "DIREXION SHARES ETF TRUST DAILY NYSE FANG",
         "symbol": "FNGG"
-    },
-    {
-        "name": "FINGERMOTION INC COM",
-        "symbol": "FNGR"
     },
     {
         "name": "BANK OF MONTREAL NT LKD 38",
