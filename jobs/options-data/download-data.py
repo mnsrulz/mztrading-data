@@ -60,9 +60,9 @@ with open(BATCH_FILE_NAME, "r") as file:
     symbols = json.load(file)
     print(f"Loaded {len(symbols)} symbols from batch: {MATRIX_ID}", flush=True)
 
-with open("data/cboe-exception-symbols.json", "r") as file:
-    exception_symbols = json.load(file)
-    print(f"Loaded {len(exception_symbols)} exception symbols: {exception_symbols}", flush=True)
+# with open("data/cboe-exception-symbols.json", "r") as file:
+#     exception_symbols = json.load(file)
+#     print(f"Loaded {len(exception_symbols)} exception symbols: {exception_symbols}", flush=True)
 # exception_symbols = ['VIX', 'SPX', 'NDX', 'RUT']    # Symbols that need to be prefixed with "_" Perhaps load it from a file
 
 # symbols = ['SPX', 'XSP', 'ZI', 'AAPL']
@@ -75,8 +75,8 @@ for symbol in symbols:
                 print(f"Fetching data for symbol: {symbol}", flush=True)
                 # if the symbol is one of the exception_symbols, then prefix it with _                
                 url_to_fetch = f"https://www-api.cboe.com/delayed_quote/api/v2/options/{symbol}"
-                if symbol in exception_symbols:
-                    url_to_fetch = f"https://www-api.cboe.com/delayed_quote/api/v2/options/_{symbol}"
+                # if symbol in exception_symbols:
+                #     url_to_fetch = f"https://www-api.cboe.com/delayed_quote/api/v2/options/_{symbol}"
                 response = requests.get(url_to_fetch, headers=headers)
                 response.raise_for_status()
                 json_data = response.json()
