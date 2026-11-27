@@ -1,4 +1,6 @@
 import { Hono } from "https://esm.sh/hono@4.12";
+import type { Context, Next } from "https://esm.sh/hono@4.12";
+
 import { RateLimiterMemory } from "https://esm.sh/rate-limiter-flexible@11.5.0";
 import { HTTPException } from "https://esm.sh/hono@4.12/http-exception";
 import { handle } from "https://esm.sh/hono@4.12/netlify";
@@ -44,6 +46,12 @@ const rateLimiter = new RateLimiterMemory({
   duration: 60, // per 1 minute
 });
 
+const [MAX_TTL, SHORT_TTL] = [60 * 60, 30]; // 1HOUR AND 30SECOND INTERVAL
+const cdnCache = (seconds: number) =>
+    async (c: Context, next: Next) => {
+        await next();
+        c.header("Netlify-CDN-Cache-Control", `public, max-age=${seconds}`);
+    };
 
 app.use("*", async (c, next) => {
     const start = performance.now();
@@ -76,17 +84,17 @@ app.options("*", (c) => {
 
 app.get("/", (c) => c.text("hello"));
 
-app.get("/symbols", (c) => {
+app.get("/symbols", cdnCache(MAX_TTL), (c) => {
     const q = c.req.query("q") ?? "";
     return c.json(searchTicker(q));
 });
 
-app.get("/api/symbols", (c) => {
+app.get("/api/symbols", cdnCache(MAX_TTL), (c) => {
     const q = c.req.query("q") ?? "";
     return c.json(searchTicker(q));
 });
 
-app.get("/api/symbols/all", (c) => c.json(allTickerSymbols));
+app.get("/api/symbols/all", cdnCache(MAX_TTL), (c) => c.json(allTickerSymbols));
 
 app.get("/api/stocks/:symbol/indicators", async (c) => {
     const symbol = c.req.param("symbol");
@@ -105,11 +113,11 @@ app.post("/api/options/exposure/calculate", async (c) => {
     return c.json(calculateExpsoure(body.spotPrice, body.data, body.spotDate, new Date()));
 });
 
-app.get("/api/options/exposures/dates", (c) => c.json(AvailableDates));
+app.get("/api/options/exposures/dates", cdnCache(MAX_TTL), (c) => c.json(AvailableDates));
 
-app.get("/api/options/exposures/snapshot-dates", (c) => c.json(AvailableSnapshotDates));
+app.get("/api/options/exposures/snapshot-dates", cdnCache(MAX_TTL), (c) => c.json(AvailableSnapshotDates));
 
-app.get("/api/options/exposures/snapshots", (c) => {
+app.get("/api/options/exposures/snapshots", cdnCache(MAX_TTL), (c) => {
     const dt = c.req.query("dt");
     if (!dt) {
         throw new HTTPException(400, { message: "dt parameter is missing!" });
@@ -119,7 +127,7 @@ app.get("/api/options/exposures/snapshots", (c) => {
     return c.json(sortBy(results, (it) => it.symbol));
 });
 
-app.get("/api/options/report/greeks", async (c) => {
+app.get("/api/options/report/greeks", cdnCache(MAX_TTL), async (c) => {
     const dt = c.req.query("dt");
     const dte = c.req.query("dte");
     if (!dt) {
@@ -130,7 +138,7 @@ app.get("/api/options/report/greeks", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/report/exposure-walls", async (c) => {
+app.get("/api/options/report/exposure-walls", cdnCache(MAX_TTL), async (c) => {
     const dt = c.req.query("dt");
     const dte = c.req.query("dte");
     const symbol = c.req.query("symbol");
@@ -138,7 +146,7 @@ app.get("/api/options/report/exposure-walls", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/report/oi-anomaly", async (c) => {
+app.get("/api/options/report/oi-anomaly", cdnCache(MAX_TTL), async (c) => {
     const dt = c.req.query("dt") ?? "";
     const dteFrom = c.req.query("dteFrom") ?? "";
     const dteTo = c.req.query("dteTo") ?? "";
@@ -171,7 +179,7 @@ app.post("/api/search/oi-anomaly/facet", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/report/greeks.txt", async (c) => {
+app.get("/api/options/report/greeks.txt", cdnCache(MAX_TTL), async (c) => {
     const dt = c.req.query("dt");
     const dte = c.req.query("dte");
     const result = await getHistoricalGreeksSummaryDataFromParquet(dt, Number(dte));
@@ -182,7 +190,7 @@ app.get("/api/options/report/greeks.txt", async (c) => {
     return c.text(stringify(result, { columns: Object.keys(result.at(0) || {}) }));
 });
 
-app.get("/api/options/:symbol/exposure", async (c, next)=> {
+app.get("/api/options/:symbol/exposure", cdnCache(SHORT_TTL),  async (c, next)=> {
     try {
       const req = c.req.raw;
       const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "unknown";
@@ -197,13 +205,13 @@ app.get("/api/options/:symbol/exposure", async (c, next)=> {
     return c.json(data);
 });
 
-app.get("/api/options/:symbol/exposure/historical-dates", (c) => {
+app.get("/api/options/:symbol/exposure/historical-dates", cdnCache(MAX_TTL), (c) => {
     const symbol = c.req.param("symbol");
     const dates = getDatesForSymbol(symbol);
     return c.json(dates);
 });
 
-app.get("/api/options/:symbol/exposure/historical", async (c) => {
+app.get("/api/options/:symbol/exposure/historical", cdnCache(MAX_TTL), async (c) => {
     const symbol = c.req.param("symbol");
     const dt = c.req.query("dt");
     if (!dt) {
@@ -214,7 +222,7 @@ app.get("/api/options/:symbol/exposure/historical", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/:symbol/pricing", async (c) => {
+app.get("/api/options/:symbol/pricing", cdnCache(SHORT_TTL), async (c) => {
     const symbol = c.req.param("symbol");
     const data = await getLiveCboeOptionsPricingData(symbol);
     return c.json(data);
@@ -226,19 +234,19 @@ app.get("/api/options/:symbol/pricing", async (c) => {
 //     return c.json(data);
 // });
 
-app.get("/api/options/:symbol/exposures/snapshots", (c) => {
+app.get("/api/options/:symbol/exposures/snapshots", cdnCache(MAX_TTL), cdnCache(MAX_TTL), (c) => {
     const symbol = c.req.param("symbol");
     const results = getSnapshotsAvailableForSymbol(symbol);
     return c.json(sortBy(results, (it) => it.date, { order: "desc" }));
 });
 
-app.get("/api/options/:symbol/report/greeks", async (c) => {
+app.get("/api/options/:symbol/report/greeks", cdnCache(MAX_TTL), async (c) => {
     const symbol = c.req.param("symbol");
     const data = await getHistoricalGreeksSummaryDataBySymbolFromParquet(symbol);
     return c.json(data);
 });
 
-app.get("/api/options/:symbol/report/oi", async (c) => {
+app.get("/api/options/:symbol/report/oi", cdnCache(MAX_TTL), async (c) => {
     const symbol = c.req.param("symbol");
     const expirationDates = c.req.query("expirationDates") ?? "";
     const expirations = expirationDates.split(",").map((k) => k.trim()).filter(Boolean);
@@ -246,13 +254,13 @@ app.get("/api/options/:symbol/report/oi", async (c) => {
     return c.json(data);
 });
 
-app.get("/api/options/contracts/:contractId/historical-data", async (c) => {
+app.get("/api/options/contracts/:contractId/historical-data", cdnCache(MAX_TTL), async (c) => {
     const contractId = c.req.param("contractId");
     const data = await getHistoricalDataForOptionContractFromParquet(contractId);
     return c.json(data);
 });
 
-app.get("/api/options/contracts/:contractId/ohlc", async (c) => {
+app.get("/api/options/contracts/:contractId/ohlc", cdnCache(MAX_TTL), async (c) => {
     const contractId = c.req.param("contractId");
     const n = c.req.query("n") ? Number(c.req.query("n")) : 365;
     try {
@@ -264,7 +272,7 @@ app.get("/api/options/contracts/:contractId/ohlc", async (c) => {
     }
 });
 
-app.get("/api/options/:symbol/report/greeks/expirations", async (c) => {
+app.get("/api/options/:symbol/report/greeks/expirations", cdnCache(MAX_TTL), async (c) => {
     const symbol = c.req.param("symbol");
     const data = await getHistoricalGreeksAvailableExpirationsBySymbolFromParquet(symbol);
     return c.json(data);
