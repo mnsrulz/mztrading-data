@@ -234,7 +234,7 @@ app.get("/api/options/:symbol/pricing", cdnCache(SHORT_TTL), async (c) => {
 //     return c.json(data);
 // });
 
-app.get("/api/options/:symbol/exposures/snapshots", cdnCache(MAX_TTL), cdnCache(MAX_TTL), (c) => {
+app.get("/api/options/:symbol/exposures/snapshots", cdnCache(MAX_TTL), (c) => {
     const symbol = c.req.param("symbol");
     const results = getSnapshotsAvailableForSymbol(symbol);
     return c.json(sortBy(results, (it) => it.date, { order: "desc" }));
