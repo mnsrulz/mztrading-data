@@ -50,6 +50,7 @@ const [MAX_TTL, SHORT_TTL] = [60 * 60, 30]; // 1HOUR AND 30SECOND INTERVAL
 const cdnCache = (seconds: number) =>
     async (c: Context, next: Next) => {
         await next();
+        c.header("Netlify-Vary", "query");
         c.header("Netlify-CDN-Cache-Control", `public, max-age=${seconds}`);
     };
 
