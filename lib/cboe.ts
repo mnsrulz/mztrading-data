@@ -1,5 +1,4 @@
 import ky from "https://esm.sh/ky@1.8.2";
-const isDenoDeploy = Deno.env.get("DENO_DEPLOY") === "true";
 
 const client = ky.create({
     headers: {
@@ -14,32 +13,14 @@ const client = ky.create({
     cache: 'no-cache'
 });
 
-const kvindexmap = 'cboe-options-index-map';
 const kvcboeanalytics = 'cboe-options-analytics';
 
-// const kv = await Deno.openKv(":memory:");
-const kv = await (isDenoDeploy ? Deno.openKv() : null);
-const indexMap = new Set<string>(['SPX', 'NDX']);    //store the symbols which requires _ to be prefixed in the url. Add a job later on which will fetch the list of symbols from the kv store and persist in json file.
-if (kv) {
-    for await (const res of kv.list<string>({ prefix: [kvindexmap] })) indexMap.add(res.value);
-}
-
 const fetchOptionChainFromCboe = async (symbol: string) => {
-    const url = `https://www-api.cboe.com/delayed_quote/api/v2/options/${indexMap.has(symbol) ? '_' : ''}${symbol}`;
+    const url = `https://www-api.cboe.com/delayed_quote/api/v2/options/${symbol}`;
 
     let response = await client(url);
-    if (response.status == 403 && !indexMap.has(symbol)) {
-        console.log(`403 response recieved for symbol: ${symbol}. Trying with _ prefix`);
-        response = await client(`https://www-api.cboe.com/delayed_quote/api/v2/options/_${symbol}`);
-        if (response.ok) {
-            indexMap.add(symbol);
-            await kv?.set([kvindexmap, symbol], symbol);
-        }
-    }
-
+    
     if (!response.ok) throw new Error('error fetching options data');
-
-    await kv?.atomic().sum([kvcboeanalytics, symbol], 1n).commit();
 
     return await response.json<{
         data: {
@@ -86,14 +67,4 @@ export const getOptionsChain = async (symbol: string) => {
     });
     console.timeEnd(`getOptionsChain-mapping-${symbol}`)
     return { data: mappedOptions, currentPrice, timestamp: ts };
-}
-
-export const getOptionsAnalytics = async () => {
-    if (!kv) return [];
-    const data = new Map<string, number>();
-    for await (const res of kv.list<number>({ prefix: [kvcboeanalytics] })) {
-        const k = res.key.at(-1);
-        k && data.set(k.toString(), Number(res.value));
-    }
-    return Object.fromEntries(data);
 }
