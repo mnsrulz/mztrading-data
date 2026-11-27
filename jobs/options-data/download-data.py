@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 import time
 from http import HTTPStatus
 from requests.exceptions import HTTPError
-DATA_STALE_THRESHOLD = 60  # minutes
+# DATA_STALE_THRESHOLD = 60  # minutes
 MATRIX_ID = os.getenv("MATRIX_ID")
 BATCH_FILE_NAME = os.getenv("BATCH_FILE")
 
@@ -74,9 +74,9 @@ for symbol in symbols:
             try:
                 print(f"Fetching data for symbol: {symbol}", flush=True)
                 # if the symbol is one of the exception_symbols, then prefix it with _                
-                url_to_fetch = f"https://cdn-api.cboe.com/api/global/delayed_quotes/options/{symbol}.json"
+                url_to_fetch = f"https://www-api.cboe.com/delayed_quote/api/v2/options/{symbol}"
                 if symbol in exception_symbols:
-                    url_to_fetch = f"https://cdn-api.cboe.com/api/global/delayed_quotes/options/_{symbol}.json"
+                    url_to_fetch = f"https://www-api.cboe.com/delayed_quote/api/v2/options/_{symbol}"
                 response = requests.get(url_to_fetch, headers=headers)
                 response.raise_for_status()
                 json_data = response.json()
@@ -87,25 +87,25 @@ for symbol in symbols:
                 time_difference = (current_time - timestamp).total_seconds()    # Calculate the difference in minutes
 
                 time_difference_minutes = time_difference / 60
-                # print(f"Time difference in minutes: {time_difference_minutes}")
+                print(f"Time difference in minutes: {time_difference_minutes}")
 
-                if(time_difference_minutes > DATA_STALE_THRESHOLD):
-                    print(f"Timestamp {timestamp_str} is older than {DATA_STALE_THRESHOLD} minutes. Fetching latest data for symbol: {symbol}", flush=True)
-                    # Call the latest data API
-                    url_to_fetch = f"https://www.cboe.com/delayed_quote/api/options/{symbol}"
-                    if symbol in exception_symbols:
-                        url_to_fetch = f"https://www.cboe.com/delayed_quote/api/options/^{symbol}"
-                    response = requests.get(url_to_fetch)
-                    response.raise_for_status()                    
-                    # Only sleep if this is the last element in the list
-                    if symbol == symbols[-1]:
-                        sleep_time = 10   # retry after 10 seconds
-                        print(f"Sleeping for {sleep_time} seconds before retrying...", flush=True)
-                        time.sleep(sleep_time)
-                    # Push the symbol to the end of the list for later processing
-                    symbols.append(symbol)
-                    print(f"Pushed symbol {symbol} to the end of the list for later processing.", flush=True)
-                    break  # Exit the retry loop for this symbol
+                # if(time_difference_minutes > DATA_STALE_THRESHOLD):
+                #     print(f"Timestamp {timestamp_str} is older than {DATA_STALE_THRESHOLD} minutes. Fetching latest data for symbol: {symbol}", flush=True)
+                #     # Call the latest data API
+                #     url_to_fetch = f"https://www.cboe.com/delayed_quote/api/options/{symbol}"
+                #     if symbol in exception_symbols:
+                #         url_to_fetch = f"https://www.cboe.com/delayed_quote/api/options/^{symbol}"
+                #     response = requests.get(url_to_fetch)
+                #     response.raise_for_status()                    
+                #     # Only sleep if this is the last element in the list
+                #     if symbol == symbols[-1]:
+                #         sleep_time = 10   # retry after 10 seconds
+                #         print(f"Sleeping for {sleep_time} seconds before retrying...", flush=True)
+                #         time.sleep(sleep_time)
+                #     # Push the symbol to the end of the list for later processing
+                #     symbols.append(symbol)
+                #     print(f"Pushed symbol {symbol} to the end of the list for later processing.", flush=True)
+                #     break  # Exit the retry loop for this symbol
                 
                 # Parse stock and options data
                 stock_data = parse_stock_data(json_data)
